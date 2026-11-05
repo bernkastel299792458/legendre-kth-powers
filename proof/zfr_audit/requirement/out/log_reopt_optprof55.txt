@@ -1,0 +1,47 @@
+    [optprof55] step 0: ok=19.62 fail=20.31  (88s)
+    [optprof55] step 1: ok=19.62 fail=19.965  (126s)
+    [optprof55] step 2: ok=19.7925 fail=19.965  (139s)
+    [optprof55] step 3: ok=19.7925 fail=19.87875  (178s)
+    [optprof55] step 4: ok=19.835625 fail=19.87875  (195s)
+    [optprof55] step 5: ok=19.857188 fail=19.87875  (216s)
+    [optprof55] step 6: ok=19.857188 fail=19.867969  (335s)
+{
+ "fam": "optprof55",
+ "status": "thr",
+ "ok": 19.857188,
+ "fail": 19.867969,
+ "holes_at_fail": [
+  [
+   3981.8857421875,
+   3995.046875
+  ]
+ ],
+ "bad_at_fail": [
+  [
+   3832.3798828125,
+   4076.3798828125
+  ],
+  [
+   6989.94384765625,
+   7548.0
+  ],
+  [
+   7595.0,
+   7736.0
+  ]
+ ],
+ "confirm": {
+  "all_delta_lt_1": true,
+  "contiguous_L1_to_1e8": true,
+  "max_delta": 0.999986948581743,
+  "max_at_L": 3954.3798828125,
+  "max_kind": "S"
+ },
+ "cover_file": "cover_optprof55_19.857188.csv",
+ "cover_pieces": 3636,
+ "cover_S_range": [
+  2040.6298828125,
+  7736.0
+ ],
+ "cover_max_delta": 0.999986948581743
+}

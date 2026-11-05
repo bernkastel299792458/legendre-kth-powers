@@ -1,0 +1,17 @@
+../zfr_audit/lean/BTYSkeleton.lean:117:53: warning: Variable name `hA0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hA0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+'ZFRAudit.BTY.region_of_iteration' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.final_contradiction_55' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.final_contradiction_76' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.iteration_of_chain' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.classical_region_4896_from_thesis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.classical_region_4896_BTY' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.cross_1962' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.cross_21233' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.logH_ge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.logK_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0

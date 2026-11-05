@@ -1,0 +1,1 @@
+k=66 [thesis]: covered [2009.1807, 3361.5166] of window up to L0=7335.0444; 514 pieces; max delta=0.9999997740283227; stuck at 3361.5166015625

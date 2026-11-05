@@ -1,0 +1,23 @@
+$ python tail.py 100000000 68
+Lemma T check: k = 68, L_inf = 100000000, c = 101/100, Z3 = 54.004
+  C1: a*Linf > 1               margin lower bound = 514705  OK
+  C2a: log(mu*Linf) > 1        margin lower bound = 13.2111  OK
+  C2b: w(1-1/log u) >= 9/a2    margin lower bound = 45.2215  OK
+  C3: b*Linf > 4/5             margin lower bound = 14705.1  OK
+  C4: a2 > 0                   margin lower bound = 0.960392  OK
+  P1: Linf >= 1000             margin lower bound = 9.9999e+07  OK
+  P2a: mu > 1/k                margin lower bound = 0.000147059  OK
+  P2b: mu < 1/10               margin lower bound = 0.0851471  OK
+  P3a: T >= H_R                margin lower bound = inf  OK
+  P3b: T > 51                  margin lower bound = inf  OK
+  P3c: T > L^2                 margin lower bound = inf  OK
+  P3d: mu > 2/Linf             margin lower bound = 0.0148529  OK
+  P4: 4T+2 < e^{L/10}          margin lower bound = inf  OK
+  P5: lambda >= 1              margin lower bound = 9.60392e+07  OK
+  U_triv <= 0.000e+00, U_K <= 3.813e-05, U_tr <= 0.000e+00, U_pp <= 0.000e+00
+  U(L_inf) <= 3.813e-05  ->  LEMMA T VERIFIED
+$ python check_certificate.py --zfr r2008 --expect-range 8519 100000000 ../results/cert_hyb_v3_k68_r2008.csv
+[zfr=r2008, KLN=JY(17.418,2.231), sigma1=0.98] k=68: certificate OK. 1883 pieces cover [8519.000000, 100000000.0] exactly; max delta_upper = 0.7298667
+$ python check_smooth_chain.py --pure-arb --zfr r2008 --expect-range 2121825/1024 8519 ../results/cert_smooth_v3_k68_r2008.csv
+[zfr=r2008, full_table=True, pure_arb=True] chain OK: 2326 pieces cover [2072.094727, 8519.000000] exactly; M used = [2, 3]; max delta_upper = 0.929121
+[k68_r2008] ALL CHECKS PASSED

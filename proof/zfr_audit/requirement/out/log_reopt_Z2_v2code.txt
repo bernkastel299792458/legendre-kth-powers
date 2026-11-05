@@ -1,0 +1,20 @@
+    [Z2] step 0: ok=19.76 fail=19.9  (78s)
+    [Z2] step 1: ok=19.83 fail=19.9  (98s)
+    [Z2] step 2: ok=19.83 fail=19.865  (245s)
+    [Z2] step 3: ok=19.8475 fail=19.865  (266s)
+    [Z2] step 4: ok=19.8475 fail=19.85625  (292s)
+    [Z2] step 5: ok=19.851875 fail=19.85625  (317s)
+Traceback (most recent call last):
+  File "D:\UGit\AI4Math\legendre_k67\proof\zfr_audit\requirement\reopt.py", line 73, in <module>
+    res = run(fam, strong, weak, steps)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\UGit\AI4Math\legendre_k67\proof\zfr_audit\requirement\reopt.py", line 45, in run
+    r = RP.repair(C.family_model(fam, fmt(m)))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\UGit\AI4Math\legendre_k67\proof\zfr_audit\requirement\repair.py", line 164, in repair
+    S = C.load_smooth()
+        ^^^^^^^^^^^^^^^
+  File "D:\UGit\AI4Math\legendre_k67\proof\zfr_audit\requirement\common.py", line 13, in load_smooth
+    rows = list(csv.DictReader(open(os.path.join(ZM.CERT, 'cert_smooth_full_k67_lw_jy.csv'))))
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'D:\\UGit\\AI4Math\\legendre_k67\\proof\\certificates\\cert_smooth_full_k67_lw_jy.csv'

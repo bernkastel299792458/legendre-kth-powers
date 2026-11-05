@@ -1,0 +1,85 @@
+SHA256 of certificates:
+  bb4b8f87e61d6e0c2fd678bb85556f210b54400b4ebea4f0d75b7665670628ec  cert_hyb_v3_k70_bty_pub.csv
+  56eb5035339df2eda89b847d490a47bafb7d045752eaf5f9af2d91dad52a4021  cert_hyb_v3_k74_pub.csv
+  5b65f2d081fdcf2ee028cc7f60ffa1b737da2bccd95fb24f794f9582b79df502  cert_smooth_v3_k70_bty_pub.csv
+  e801230995b5bd2caf85b0f4fd024801676d2a0932f3915f5881e88560b4ba73  cert_smooth_v3_k74_pub.csv
+SHA256 of code:
+  610dcf2e9b8bbb728c42adb07b6261cd31a8399aff8cc33c078d40c5111d5c72  bound.py
+  77dcdcde6f9a237834468b497bd08a142b931eec37c62d4722bc7bb58442a1a3  check_certificate.py
+  bee9e4ff6eaa7e36600780e3fc671938d7fd779000a2b199c1c625d844f4bcad  check_smooth_chain.py
+  61d34807e5cb4905bd456d6d1a814f6f5f0c1be20194db2ce01f537f66664b68  kln_lemma32_check.py
+  61a571a4435106c0932fdd8eeeb8e3c9be83fc1267e2f5dbc90d9bda25ebf7ba  make_chain.py
+  cd723260799a7a0e6fd23cbc4d634116180a4b1505f4e9f322a04093a8900684  numeric_facts.py
+  76342fe3b77b65bb249fd38bc101d680ed07e0a76d1f0720efcf685804b602ed  rigorous_hyb.py
+  3ce3d8009def71689a77982d232fabeb5abdd1784dbeac0818c2c37482bf0780  rigorous_smooth.py
+  ecb160dc368d28ee28c40bac32b97f3ff3f8289c053fb2983652fc3355eb8853  scan_min_k.py
+  defbd3f2a729744f4e21121288fb45e85c4acf974a7e358d61ac1fa4375a60fa  tail.py
+  24c1eb830b0c2596432a047947c95dab61fd0cb692ecc90523f372a2e405d9b4  verify_all.py
+
+$ python kln_lemma32_check.py
+target = a2 - 6 a1/e = [1.4604157123719480243689201487896779211 +/- 6.65e-38]
+|zeta(1/2)| = [1.4603545088095868128894991525152980125 +/- 3.29e-38]
+max over [0,3] of |zeta(1/2+it)| <= 1.4604150485247373580932617187500000000  (1313 ball evaluations)
+KLN LEMMA 3.2 SMALL-T CASE VERIFIED
+
+$ python numeric_facts.py 70 2186309/1024
+num1: exp(600/70) <= 70*(39097000-1): margin = [2736784651.3346431252475296022508038161800393073793014133067 +/- 2.13e-50]  OK
+num2: exp(L1/70) <= 70*(251949000000-1), L1=2186309/1024: margin = [443611691.061781424070765014157990373746681496271646878 +/- 5.47e-46]  OK
+NUMERIC FACTS VERIFIED
+
+$ python tail.py 100000000 70
+Lemma T check: k = 70, L_inf = 100000000, c = 101/100, Z3 = 54.004
+  C1: a*Linf > 1               margin lower bound = 557142  OK
+  C2a: log(mu*Linf) > 1        margin lower bound = 13.1821  OK
+  C2b: w(1-1/log u) >= 9/a2    margin lower bound = 46.3271  OK
+  C3: b*Linf > 4/5             margin lower bound = 14284.9  OK
+  C4: a2 > 0                   margin lower bound = 0.961524  OK
+  P1: Linf >= 1000             margin lower bound = 9.9999e+07  OK
+  P2a: mu > 1/k                margin lower bound = 0.000142857  OK
+  P2b: mu < 1/10               margin lower bound = 0.0855714  OK
+  P3a: T >= H_R                margin lower bound = inf  OK
+  P3b: T > 51                  margin lower bound = inf  OK
+  P3c: T > L^2                 margin lower bound = inf  OK
+  P3d: mu > 2/Linf             margin lower bound = 0.0144286  OK
+  P4: 4T+2 < e^{L/10}          margin lower bound = inf  OK
+  P5: lambda >= 1              margin lower bound = 9.61524e+07  OK
+  U_triv <= 0.000e+00, U_K <= 1.044e-05, U_tr <= 0.000e+00, U_pp <= 0.000e+00
+  U(L_inf) <= 1.044e-05  ->  LEMMA T VERIFIED
+
+$ python check_certificate.py --zfr bty_pub --expect-range 9521 100000000 cert_hyb_v3_k70_bty_pub.csv
+[zfr=bty_pub, KLN=JY(17.418,2.231), sigma1=0.98] k=70: certificate OK. 1858 pieces cover [9521.000000, 100000000.0] exactly; max delta_upper = 0.8597529
+
+$ python check_smooth_chain.py --pure-arb --zfr bty_pub --expect-range 2186309/1024 9521 cert_smooth_v3_k70_bty_pub.csv
+[zfr=bty_pub, full_table=True, pure_arb=True] chain OK: 2109 pieces cover [2135.067383, 9521.000000] exactly; M used = [2, 3]; max delta_upper = 0.819962
+
+$ python numeric_facts.py 74 578863/256
+num1: exp(600/74) <= 74*(39097000-1): margin = [2893174604.7114366291658266040260364814525246150106685610477 +/- 2.78e-50]  OK
+num2: exp(L1/74) <= 74*(251949000000-1), L1=578863/256: margin = [420712433.447724377444090876681032636753027079918469053 +/- 8.29e-46]  OK
+NUMERIC FACTS VERIFIED
+
+$ python tail.py 100000000 74
+Lemma T check: k = 74, L_inf = 100000000, c = 101/100, Z3 = 54.004
+  C1: a*Linf > 1               margin lower bound = 635134  OK
+  C2a: log(mu*Linf) > 1        margin lower bound = 13.1266  OK
+  C2b: w(1-1/log u) >= 9/a2    margin lower bound = 48.5074  OK
+  C3: b*Linf > 4/5             margin lower bound = 13512.7  OK
+  C4: a2 > 0                   margin lower bound = 0.963603  OK
+  P1: Linf >= 1000             margin lower bound = 9.9999e+07  OK
+  P2a: mu > 1/k                margin lower bound = 0.000135135  OK
+  P2b: mu < 1/10               margin lower bound = 0.0863514  OK
+  P3a: T >= H_R                margin lower bound = inf  OK
+  P3b: T > 51                  margin lower bound = inf  OK
+  P3c: T > L^2                 margin lower bound = inf  OK
+  P3d: mu > 2/Linf             margin lower bound = 0.0136486  OK
+  P4: 4T+2 < e^{L/10}          margin lower bound = inf  OK
+  P5: lambda >= 1              margin lower bound = 9.63603e+07  OK
+  U_triv <= 0.000e+00, U_K <= 8.143e-07, U_tr <= 0.000e+00, U_pp <= 0.000e+00
+  U(L_inf) <= 8.143e-07  ->  LEMMA T VERIFIED
+
+$ python check_certificate.py --zfr pub --expect-range 7343 100000000 cert_hyb_v3_k74_pub.csv
+[zfr=pub, KLN=JY(17.418,2.231), sigma1=0.98] k=74: certificate OK. 1911 pieces cover [7343.000000, 100000000.0] exactly; max delta_upper = 0.8849243
+
+$ python check_smooth_chain.py --pure-arb --zfr pub --expect-range 578863/256 7343 cert_smooth_v3_k74_pub.csv
+[zfr=pub, full_table=True, pure_arb=True] chain OK: 2539 pieces cover [2261.183594, 7343.000000] exactly; M used = [2, 3]; max delta_upper = 0.933001
+
+ALL CHECKS PASSED

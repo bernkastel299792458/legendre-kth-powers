@@ -1,0 +1,64 @@
+== 1. Lemma 3.6 constants ==
+eps2 = (pi/log(H1/2))^2 = 0.00316901782729   [thesis: < 2.5e-3]   ** FALSE **
+  sigma=0.500000: true constant >= 0.618978451939  thesis C3 = 0.618764124979   too small (by 0.000346 relative)
+  sigma=0.714286: true constant >= 1.54844771310  thesis C3 = 1.54823446767   too small (by 0.000138 relative)
+  n>=4: 1.546*(1+eps2)^(1/2) = 1.54844771310 <= 1.549 : True
+  (effect of the C3 shortfall on c(t) is < 1e-4; ignored below, i.e. thesis C3 is used)
+
+== 2. Domain of Lemma 3.6/3.7: sigma*-lambda* must lie in [sigma_n, sigma_{n+1}] (and >= 1/2) ==
+  log t = 56.5  : sigma*-lambda*(n=3 formula) = 0.49682689  (needs >= 0.5)
+  log t = 56.8  : sigma*-lambda*(n=3 formula) = 0.49879592  (needs >= 0.5)
+  log t = 57.0  : sigma*-lambda*(n=3 formula) = 0.50009158  (needs >= 0.5)
+  log t = 57.1  : sigma*-lambda*(n=3 formula) = 0.50073438  (needs >= 0.5)
+  log t = 216   : sigma*-lambda*(n=4 formula) = 0.71304532  (needs >= 5/7 = 0.71428571)
+  log t = 217   : sigma*-lambda*(n=4 formula) = 0.71392327  (needs >= 5/7 = 0.71428571)
+  log t = 217.4 : sigma*-lambda*(n=4 formula) = 0.71427142  (needs >= 5/7 = 0.71428571)
+  log t = 217.5 : sigma*-lambda*(n=4 formula) = 0.71435818  (needs >= 5/7 = 0.71428571)
+
+== 3. Thesis's reduced bound (3.21): (1.7761 d_n E_n + 0.0244) + E(t) L2/L1 ==
+  n=3: max E_thesis L2/L1 = 0.871536 at log t = 111.12  [thesis: 0.87153 near 111.12];  total = 3.28380
+        max E_correct L2/L1 = 1.13353 at log t = 96.64;  total = 3.54580  > 3.4431 !!
+  n=4: max E_thesis L2/L1 = 1.03196 at log t = 222.76  [thesis: 1.0319 near 222.75];  total = 3.44309
+        max E_correct L2/L1 = 0.959893 at log t = 225.40;  total = 3.37102  <= 3.4431
+
+== 4. Direct coefficient c(t), thesis lambda*, A = A1 (no rounding) ==
+  log t = 56.5   : c = 3.3742316
+  log t = 60     : c = 3.4112944
+  log t = 70     : c = 3.4800732
+  log t = 80     : c = 3.5135333
+  log t = 90     : c = 3.5264818
+  log t = 95.5   : c = 3.5279818
+  log t = 100    : c = 3.5270856
+  log t = 111.12 : c = 3.5189833
+  log t = 130    : c = 3.4938229
+  log t = 150    : c = 3.4602134
+  log t = 160    : c = 3.4424557
+  log t = 170    : c = 3.4245684
+  log t = 200    : c = 3.3720349
+  log t = 216    : c = 3.3453849
+  log t = 216    : c = 3.3449629  (n = 3 data, since sigma*-lambda* = 0.7130453)
+  log t = 217    : c = 3.3420480  (n = 3 data, since sigma*-lambda* = 0.7139233)
+  log t = 220    : c = 3.3411565  (n = 4 data, since sigma*-lambda* = 0.7164931)
+  log t = 222.75 : c = 3.3413088  (n = 4 data, since sigma*-lambda* = 0.7187679)
+  log t = 225.4  : c = 3.3413514  (n = 4 data, since sigma*-lambda* = 0.7208906)
+  RIGOROUS POINT CHECK: at log t = 95.5, c = [3.52798175278331 +/- 3.37e-15]  (lower end [3.527981753 +/- 2.17e-10])
+    > 3.4431 (claimed): True ;  > 3.4465 (largest value the final slack can absorb): True
+
+   rigorous cell scan of c(t) over [56.5, 225.4] (cells of width 1/8 in log t):
+   sup over cells (upper bound) = 3.5347246 on cell (94.375, 94.5)
+   cells where Lemma 3.6 does not apply (sigma*-lambda* < 1/2): [(56.5, 56.625), (56.625, 56.75), (56.75, 56.875)] ...  count=4
+   c(t) > 3.4431 for log t in about [63.9, 159.6] (thesis lambda*)
+
+== 5. Best possible lambda per t (same ingredients; lambda in (0.2779, 0.5), sigma*-lambda >= 1/2) ==
+   sup_t min_lambda c(t, lambda) ~= 3.49501 at log t = 129 (lambda = 0.3712)  [grid; indicative]
+     log t = 60  : min_lambda c = 3.38425 at lambda = 0.4966
+     log t = 100 : min_lambda c = 3.44872 at lambda = 0.4976
+     log t = 120 : min_lambda c = 3.48205 at lambda = 0.4980
+     log t = 126 : min_lambda c = 3.49193 at lambda = 0.4980
+     log t = 129 : min_lambda c = 3.49501 at lambda = 0.3712
+     log t = 132 : min_lambda c = 3.48797 at lambda = 0.2840
+     log t = 140 : min_lambda c = 3.46532 at lambda = 0.2840
+     log t = 200 : min_lambda c = 3.35867 at lambda = 0.2844
+
+== 6. Lemma 3.9 (t >= H2): direct coefficient with the (1 - sigma*) term the thesis drops ==
+   sup over log t in [225.4, 1e7] (rigorous cells, ratio 1.0005) = 3.3578957 near log t = 225.4 <= 3.4431 OK

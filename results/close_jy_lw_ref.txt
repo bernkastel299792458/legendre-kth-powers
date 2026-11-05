@@ -1,0 +1,1 @@
+k=67 [lw_ref]: covered [2040.6299, 2050.8604] of window up to L0=6989.9438; 13 pieces; max delta=0.9999645410473459; stuck at 2050.8603515625

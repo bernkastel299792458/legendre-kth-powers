@@ -1,0 +1,2 @@
+[zfr=thesis, full_table=True, pure_arb=True] chain OK: 1241 pieces cover [2040.629883, 6989.942383] exactly; M used = [3]; max delta_upper = 0.936926
+[zfr=littlewood_thesis, full_table=True, pure_arb=True] chain OK: 1241 pieces cover [2040.629883, 6989.942383] exactly; M used = [2, 3]; max delta_upper = 0.999796

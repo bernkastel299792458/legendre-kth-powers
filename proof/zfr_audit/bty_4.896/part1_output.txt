@@ -1,0 +1,49 @@
+==============================================================================
+PART 1: Section 3 (w, f, parameters), Lemmas 3, 4, 5
+==============================================================================
+[OK  ] w(0): definition == closed form sec^2(th tan th + 3 th cot th - 3)  --  w(0) = 5.67278759886160
+[OK  ] w(0) = 5.672787598...  --  5.67278759886160
+[OK  ] support d = 2 th cot th = 1.05923293...  --  1.05923293888
+[INFO] tan(theta) (Lemma 4 needs r > tan theta)  --  2.140794453
+[OK  ] w'(0) = 0  --  [+/- 4.56e-58]
+[OK  ] w(d) = 0  --  [+/- 6.97e-58]
+[OK  ] w'(d) = 0  --  [+/- 1.89e-57]
+[OK  ] w''(d) = 0  --  [+/- 5.60e-57]
+[INFO] w''(0) < 0 and w'''(d) < 0 (so w' < 0 near both ends)  --  w''(0)=-50.0697, w'''(d)=-117.265
+[OK  ] w'' < 0 on [0,0.2]  (=> w' < 0 on (0,0.2])
+[OK  ] w' < 0 on [0.2, d-0.2]
+[OK  ] w''' < 0 on [d-0.2, d] (with w'(d)=w''(d)=0 => w'' > 0, w' < 0 there)
+[OK  ] Hence w is decreasing on [0,d] and w >= 0 (Lemma 3, Lemma 11 use this)
+[INFO] table: A0 = 1/4.896  --  eta0 = 0.007109327263, sigma0 = 0.9935164251
+[INFO] table: A0 = 1/4.8596 (as printed)  --  eta0 = 0.007162578459, sigma0 = 0.9934678610
+[INFO] table: A0 = 1/4.8594  --  eta0 = 0.007162873252, sigma0 = 0.9934675922
+[OK  ] table entries eta0=0.0071093.., sigma0=0.9935164.. correspond to A0=1/4.896 (the printed '(4.8596)^-1' is a typo)  --  eta0=0.007109327263, sigma0=0.9935164251
+[OK  ] Lemma-2 column matches A0=1/4.8594
+[OK  ] kappa = sum kappa_m = 433/859  --  433/859
+[OK  ] sum |kappa_m| = 3243/859 = 3.7753...  --  3.775320
+[INFO] sum m kappa_m  --  -216/859 = -0.251455
+[OK  ] Lemma 3: p(x)=sum kappa_m x^m has no root in (0,1] (Sturm, exact)  --  #roots in (0,1] = 0, p(1) = 433/859
+[OK  ] Lemma 3: p(0) = 1 > 0 too, so p > 0 on [0,1]
+[INFO] min_{[0,1]} p (grid, info)  --  0.504075
+[OK  ] Ford closed form W_0(z) = c0(c2[(z+1)^2 e^{-2 th cot th z} + z^2-1] - c1 z - c3 z^3)/(z^2(z^2+tan^2 th)^2) with c0 = 1/(sin th cos^3 th) matches quadrature (6 points)
+[INFO] BTY prints c0 = csc th sec^2 th; Ford/MTY have csc th sec^3 th (factor sec th = 2.3628375)  --  printed c0 = 6.1620693, correct c0 = 14.559968
+[OK  ] asymptotics: C(nu,r) -> c0 c3 must be >= |w''(0)| = lim |W_0(z) z^3|  --  c0 c3 = 50.0697014947 (correct c0) vs 21.190498 (printed); |w''(0)| = 50.0697014947
+[OK  ] Lemma 4 bound |W0(z)| <= C(Re z,|z|)|z|^-3 at 40 test points, correct c0  --  max ratio = 0.997629
+[INFO] Lemma 4 bound |W0(z)| <= C(Re z,|z|)|z|^-3 at 40 test points, printed c0  --  max ratio = 2.35724
+[OK  ] C(nu, R) decreasing in R (spot check) so sup over |z|>=r is at |z|=r
+[OK  ] Heath-Brown property Re W(iy) >= 0 (spot check, 13 points)  --  min lower bound = [3.2090256311087845400078063978239075089914196044205660207187e-8 +/- 3.48e-67]
+[OK  ] Lemma 5: (2 sigma0 - 1)/eta0 > 138  --  138.83632
+[OK  ] Lemma 5: eta0^2 C(138,138)/((2s0-1)^2 w(0)) < eps0 = 1/2000  [correct c0]  --  value = 0.000466120, C(138,138) = 50.968384 (printed c0 would give 21.5708)
+[OK  ] Lemma 5: c0 = 151/153 < 2 sigma0 - 1  --  0.98692810 < 0.9870328503
+[INFO] b_m = kappa_m + kappa_{m-1}  --  [1, 8/859, -71/859, 255/859, -354/859, 199/859, -1/859, -29/859]
+[OK  ] Lemma 5: recomputed numerator of B(y) == paper's p(y) (exact, all 7 coefficients)
+[OK  ] Lemma 5: denominator factors (y^2+1)(y^2+9)(y^2+25)(y^2+4c0^2)...(y^2+49c0^2)
+[OK  ] Lemma 5: N(Y) has no root in Y >= 0 and N(0) > 0  =>  B(y) > 0 for all real y (Sturm)  --  #roots of N in (0,inf) = 0
+[OK  ] Lemma 5: paper's p(y) has no real root (Sturm on degree-12 poly)
+[OK  ] Large-|Im z| behaviour: Re[F(x+iT)+F(2s-1-x+iT)] ~ (eta w0 (2s-1)/T^2) * sum m b_m, sum m b_m = kappa + 2 sum m kappa_m  --  sum m b_m = 1/859
+[INFO] NOTE: paper says Re F(x+iT) = eta w0 (kappa+o(1))/T^2 > 0; actually Re F(x+iT) ~ eta w0 (kappa x + (2s-1) sum m kappa_m)/T^2, which is < 0 for small x. The needed statement (for the SUM F(z)+F(2s-1-z)) is true: coefficient (2s-1)*sum m b_m = (2s-1)/859 > 0.
+[OK  ] Lemma 5 (22): w(0) + (C(-1,T0/eta0)+C(0,T0/eta0)) eta0^2/T0 < 5.7  --  5.672787599
+[OK  ] Lemma 5 (22): 2 * 5.7 * sum|kappa_m| < 44  --  43.038650
+[INFO] NOTE (22) is stated for -eta <= Re z <= 1, but the proof only covers Re z in [-eta, 2s-1+eta] (via symmetry).  Lemma 6 only needs Re z in (s-1, s) and s-1 >= -eta, so this suffices.
+
+SUMMARY: 32 OK, 0 FAIL, 0 ISSUE (false as stated, harmless downstream), 12 INFO

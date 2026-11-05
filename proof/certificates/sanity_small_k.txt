@@ -1,0 +1,10 @@
+Sanity check (2026-11-06, corrected inputs: JY KLN constants, sigma1 = 0.98, zfr set 'lw', full Bellotti table).
+Same Proposition S machinery, rigorous Arb evaluation at 5 sample values of L in (max(L_low(k),300), 4000), best of M in {3,4}.
+Expected: failure (delta >= 1) for small k.
+
+k=  3: max rigorous delta_S at samples = 1.439e+127 -> FAILS (as expected)
+k= 10: max rigorous delta_S at samples = 1.125e+141 -> FAILS (as expected)
+k= 30: max rigorous delta_S at samples = 1.881e+24 -> FAILS (as expected)
+k= 50: max rigorous delta_S at samples = 40.29 -> FAILS (as expected)
+k= 64: max rigorous delta_S at samples = 1.759 -> FAILS (as expected)
+k= 66: max rigorous delta_S at samples = 1.103 -> FAILS (as expected)

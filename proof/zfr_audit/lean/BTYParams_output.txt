@@ -1,0 +1,12 @@
+'ZFRAudit.BTY.kappa_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.kappa_abs_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.b_msum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.a_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.a_one' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.a_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.a_nonneg' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.lemma3' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.N_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.B_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ZFRAudit.BTY.paper_p_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+exit=0

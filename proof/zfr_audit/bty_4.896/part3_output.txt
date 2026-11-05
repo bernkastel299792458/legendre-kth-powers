@@ -1,0 +1,67 @@
+==============================================================================
+PART 3: Lemmas 10 and 11
+==============================================================================
+[OK  ] Lemma 11: h(0) = 0 exactly (so the claim is tight at u = 0)  --  [+/- 5.60e-58]
+[OK  ] Lemma 11: h'(0) = -w(0) sum d_m kappa_m > 0  --  1.2038026
+[OK  ] Lemma 11: h' > 0 on [0, 0.5] (interval arithmetic, 2000 cells) => h > 0 on (0, 0.5]
+[OK  ] Lemma 11: h > 0 on [0.5, 59] (interval arithmetic, 20000 cells)  --  min lower bound = 1.3373e-02
+[INFO] Lemma 11: margin at u = 59 (and h(60) for reference)  --  h(59) = 0.0139062, h(60) = -0.0531646
+[OK  ] Lemma 10: dG_p/dsigma = -(log p) sum_m m p^{-m sigma} P(mx) <= 0 because P >= 0 (the paper's Mathematica check is unnecessary)
+[OK  ] Table 1, p =  2: G_p(1,x) > m_p = 0.23416332 for all x  --  float min = 0.234201508199, 528 cells
+
+[OK  ] Table 1, p =  3: G_p(1,x) > m_p = 0.05006283 for all x  --  float min = 0.050075546122, 524 cells
+
+[ISSUE] Table 1, p =  5: m_p = 0.00735709 is a lower bound for min_x G_p(1,x)  --  counterexample: G_5(1, 1.649524236946) = 0.00735649189978 < m_p (rigorous point value)
+[OK  ]            replacement certified lower bound for p = 5  --  G_5(1,x) > 0.00735649089978 (590 cells)
+
+[OK  ] Table 1, p =  7: G_p(1,x) > m_p = 0.00205251 for all x  --  float min = 0.002052774086, 550 cells
+
+[OK  ] Table 1, p = 11: G_p(1,x) > m_p = 0.00039742 for all x  --  float min = 0.000397738297, 540 cells
+
+[OK  ] Table 1, p = 13: G_p(1,x) > m_p = 0.00022273 for all x  --  float min = 0.000222993849, 544 cells
+
+[OK  ] Table 1, p = 17: G_p(1,x) > m_p = 0.00009071 for all x  --  float min = 0.000090881407, 546 cells
+
+[OK  ] Table 1, p = 19: G_p(1,x) > m_p = 0.00006314 for all x  --  float min = 0.000063280767, 546 cells
+
+[OK  ] Table 1, p = 23: G_p(1,x) > m_p = 0.00003427 for all x  --  float min = 0.000034365972, 550 cells
+
+[OK  ] Table 1, p = 29: G_p(1,x) > m_p = 0.00001656 for all x  --  float min = 0.000016622762, 552 cells
+
+[OK  ] Table 1, p = 31: G_p(1,x) > m_p = 0.00001346 for all x  --  float min = 0.000013516736, 552 cells
+
+[OK  ] Table 1, p = 37: G_p(1,x) > m_p = 7.8e-6 for all x  --  float min = 0.000007833086, 552 cells
+
+[OK  ] Table 1, p = 41: G_p(1,x) > m_p = 5.69e-6 for all x  --  float min = 0.000005716870, 560 cells
+
+[OK  ] Table 1, p = 43: G_p(1,x) > m_p = 4.91e-6 for all x  --  float min = 0.000004941199, 556 cells
+
+[OK  ] Table 1, p = 47: G_p(1,x) > m_p = 3.74e-6 for all x  --  float min = 0.000003764936, 558 cells
+
+[OK  ] Table 1, p = 53: G_p(1,x) > m_p = 2.59e-6 for all x (uses m <= 14; the paper uses m <= 15 although p^m > e^59 for m > 14)  --  float min = 0.000002609809, 564 cells
+
+[OK  ] Table 1, p = 59: G_p(1,x) > m_p = 1.87e-6 for all x (uses m <= 14; the paper uses m <= 15 although p^m > e^59 for m > 14)  --  float min = 0.000001882950, 572 cells
+
+[OK  ] Table 1, p = 61: G_p(1,x) > m_p = 1.69e-6 for all x (uses m <= 14; the paper uses m <= 15 although p^m > e^59 for m > 14)  --  float min = 0.000001701473, 570 cells
+
+[OK  ] Table 1, p = 67: G_p(1,x) > m_p = 1.27e-6 for all x (uses m <= 14; the paper uses m <= 15 although p^m > e^59 for m > 14)  --  float min = 0.000001279673, 572 cells
+
+[OK  ] Table 1, p = 71: G_p(1,x) > m_p = 1.06e-6 for all x (uses m <= 13; the paper uses m <= 15 although p^m > e^59 for m > 13)  --  float min = 0.000001073337, 568 cells
+
+[OK  ] Table 1, p = 73: G_p(1,x) > m_p = 9.7e-7 for all x (uses m <= 13; the paper uses m <= 15 although p^m > e^59 for m > 13)  --  float min = 0.000000986700, 558 cells
+
+[OK  ] Table 1, p = 79: G_p(1,x) > m_p = 7.7e-7 for all x (uses m <= 13; the paper uses m <= 15 although p^m > e^59 for m > 13)  --  float min = 0.000000776920, 576 cells
+
+[OK  ] Table 1, p = 83: G_p(1,x) > m_p = 6.6e-7 for all x (uses m <= 13; the paper uses m <= 15 although p^m > e^59 for m > 13)  --  float min = 0.000000669207, 572 cells
+
+[OK  ] Table 1, p = 89: G_p(1,x) > m_p = 5.3e-7 for all x (uses m <= 13; the paper uses m <= 15 although p^m > e^59 for m > 13)  --  float min = 0.000000542141, 568 cells
+
+[OK  ] Table 1, p = 97: G_p(1,x) > m_p = 4.1e-7 for all x (uses m <= 12; the paper uses m <= 15 although p^m > e^59 for m > 12)  --  float min = 0.000000418399, 572 cells
+
+[OK  ] Lemma 10: sum_{p<100} (log p) m_p > 0.23545 with the printed table  --  0.2354522511
+[OK  ] Lemma 10: sum_{p<100} (log p) m_p > 0.23545 with the CERTIFIED values (p = 5 replaced)  --  0.2354512869
+[OK  ] Lemma 10: 0.23545 * kappa > 0.1186  --  0.11868434
+[INFO] Lemma 10 NOTE: here 'f(0)' means eta*w(0) (the paper's f(0) = eta*w(0)*kappa is used inconsistently; the final step treats f(0) as eta*w(0)).  With f(0) := eta w(0) the chain Lemma 11 -> Lemma 10 is correct.
+
+SUMMARY: 33 OK, 0 FAIL, 1 ISSUE (false as stated, harmless downstream), 2 INFO
+   ISSUE: Table 1, p =  5: m_p = 0.00735709 is a lower bound for min_x G_p(1,x) -- counterexample: G_5(1, 1.649524236946) = 0.00735649189978 < m_p (rigorous point value)

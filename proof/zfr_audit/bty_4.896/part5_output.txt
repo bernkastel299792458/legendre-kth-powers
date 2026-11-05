@@ -1,0 +1,36 @@
+==============================================================================
+PART 5: Lemma 15 and the final contradiction
+==============================================================================
+[INFO] a kappa w(0)/2 = 5.0391...  --  5.03905010405
+[OK  ] log(K + T0/H) <= 2.78 (used for mu > 1 - 2.78/log t)  --  2.7727970
+[OK  ] C2 eta-coefficient: 3.909 + (0.1186+1.568) w(0) - 1e-10 >= 13.47  --  13.476724
+[OK  ] C2 eta^2: 26 - 187 = -161
+[OK  ] C2 eta^3: 3897 + 8013 = 11910 > 11896 (slip of 14 eta^3), compensated by the linear slack (3.909 + 1.6866 w0 - 13.47) eta >= 14 eta^3 for eta <= eta0  --  linear slack 0.006724 vs 14 eta0^2 = 0.0007076
+[OK  ] C1(1-2.78/L) + C2(1/(6L)) - 1e-7 > 1.00582 + 1.86088/L - 4.4106/L^2 - 55.0584/L^3 (grid of 481 points on [log H, 76.47])
+[OK  ] value at L = 76.47 is 1.02928...  --  1.029277395
+[OK  ] PRINTED final step: 1.02928.../(a kappa w0/2) > A0 + eps with A0 = 1/4.896  --  1.02928.../5.0391 = 0.2042602026 vs A0 = 0.2042483660;  margin = 5.965e-5 (relative 5.80e-5)
+[INFO] (with the printed table value A0 = 1/4.8596 this step would FAIL: needs 1.0369269)
+[OK  ] corrected Phi is increasing in eta on [0, eta0] (so lower bounds for eta may be used)  --  d Phi/d eta >= 9.74593
+[OK  ] corrected C1 increasing on [mu0, 1]  --  0.137081
+[OK  ] coupled route: d/dA [Phi(A/L, mu) - Kc (A+eps)] < 0 for L >= log H, so worst case is A = A0  --  -4.56994
+[OK  ] L = log t = 28.7296: margins (decoupled, coupled)  --  decoupled 0.035519 (rel 0.0345), coupled 0.048860 (rel 0.0475)
+[OK  ] L = log t = 40.0000: margins (decoupled, coupled)  --  decoupled 0.020499 (rel 0.0199), coupled 0.031163 (rel 0.0303)
+[OK  ] L = log t = 55.0100: margins (decoupled, coupled)  --  decoupled 0.0092627 (rel 0.00900), coupled 0.017492 (rel 0.0170)
+[OK  ] L = log t = 60.0000: margins (decoupled, coupled)  --  decoupled 0.0066947 (rel 0.00650), coupled 0.014329 (rel 0.0139)
+[OK  ] L = log t = 76.4700: margins (decoupled, coupled)  --  decoupled 0.00049427 (rel 0.000480), coupled 0.0066421 (rel 0.00645)
+[INFO] corrected constants, decoupled final step: Lemma 1 range extends to log t <=  --  78.159831
+[INFO] corrected constants, coupled final step: Lemma 1 range extends to log t <=  --  99.414075
+[OK  ] margin (decoupled) is decreasing in L on [log H, 76.47] (grid of 1001 points)
+[OK  ] corrected constants, decoupled (paper's route): contradiction for ALL log t in [log H, 55.010] (4000 L-balls)  --  min margin = 9.2462e-03
+[OK  ] corrected constants, decoupled (paper's route): contradiction for ALL log t in [log H, 76.470] (4000 L-balls)  --  min margin = 4.7273e-04
+[OK  ] corrected constants, coupled: contradiction for ALL log t in [log H, 55.010] (4000 L-balls)  --  min margin = 1.7475e-02
+[OK  ] corrected constants, coupled: contradiction for ALL log t in [log H, 76.470] (4000 L-balls)  --  min margin = 6.6204e-03
+[INFO] best classical constant 1/A0 provable this way for t <= exp(55.010)  --  decoupled 1/A0 = 4.85233, coupled 1/A0 = 4.81059
+[INFO] best classical constant 1/A0 provable this way for t <= exp(76.470)  --  decoupled 1/A0 = 4.89365, coupled 1/A0 = 4.86357
+[INFO] NOTE: for the coupled bound one also needs eta <= eta0 = A0/log H; at A = A0 and t >= H this holds. For other A the hypotheses of Lemmas 6, 8, 9 (eta <= A0/log t) need A + eps <= A0, i.e. the iteration should be run with A <= A0 - eps (cosmetic).
+[OK  ] Littlewood 21.233 (Yang JMAA 2024) beats 1/(4.896 log t) iff log t >= exp(21.233/4.896)  --  exp(21.233/4.896) = 76.462892 (paper: 76.463)
+[INFO] with the thesis constant 19.62 the crossover is at log t = exp(19.62/4.896)  --  55.001087
+[OK  ] t < H: RH verified (Platt-Trudgian) and 1 - 1/(4.896 log 3) > 1/2
+[OK  ] iteration start: an existing region with c > 1/6, e.g. Kadiri 2005: 1/5.69693 > 1/6
+
+SUMMARY: 23 OK, 0 FAIL, 0 ISSUE (false as stated, harmless downstream), 8 INFO

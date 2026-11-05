@@ -1,0 +1,58 @@
+== Lemma 2.7 (error term of Kadiri's explicit formula), as used in Ch. 3 ==
+  int U(y)/(x0^2+y^2)^(3/2) dy with x0 = 0.4934710854 (thesis Ch.2 sigma0): 34.58456918   [thesis Lemma 2.7: < 36 -> OK;  BTY Lemma 8 claims < 24 -> ** FAIL **]
+  int U(y)/(x0^2+y^2)^(3/2) dy with x0 = 0.496489768685499276 (Ch.3 sigma1): 34.10726525   [thesis Lemma 2.7: < 36 -> OK;  BTY Lemma 8 claims < 24 -> ** FAIL **]
+  U(0) = 5.3862944 > log 100 = 4.6051702   -> 'U(x) < log(100 - x) for x <= 2' is false near x = 0 (harmless: I_1 is still < 1e-10)
+  theta=1.1272: C(x0/eta1, x0/eta1) = 46.692837  [Lemma 2.7 uses 52 for theta=1.1338] OK
+  theta=1.1272: C(s1/eta1, s1/eta1)/x0^3 = 378.04741  [Lemma 2.7: < 425] OK
+  NOTE: Lemma 2.7 assumes eta <= A0/log t (A0 = 1/4.862).  In Ch. 3 only eta <= (A1+eps) L2/L1 holds,
+  so eta*log t <= (A1+eps) loglog t, which exceeds A0 for log t > ~56.6.  Redoing T1 without that hypothesis:
+     T1 <= (C/2pi) eta^3 (2 log t / x0^2 + 2e-10) <= (C/pi)(A1+eps) L2/x0^2 * eta^2 (+ tiny)
+     (C/pi)(A1+eps)/x0^2 = 3.07313  so  sum_k a_k |E(s_k)| <= a*( 3.073 L2 + 1.376 ) eta^2
+  Lemma 3.19 claims sum a_k|E(s_k)| <= 55 eta^2 <= 2.9 eta L2/L1.  Corrected: <= c_E(t) eta L2/L1 with
+     log t = 56.5   : c_E = 2.4742  (thesis 2.9)
+     log t = 100    : c_E = 2.7894  (thesis 2.9)
+     log t = 112    : c_E = 2.8519  (thesis 2.9)
+     log t = 200    : c_E = 3.1720  (thesis 2.9)
+     log t = 1144.7 : c_E = 4.1351  (thesis 2.9)
+     log t = 1e4    : c_E = 5.3316  (thesis 2.9)
+  -> 2.9 is exceeded for log t > ~122; effect on (3.50) C3max: see check_corrected_constant.py (< 1e-5).
+  Lemma 3.20: E(sigma) <= (C/2pi*34.59 + C'/x0^3) eta^3 = 635.099 eta^3;  * eta1^2 = 0.00841144 < 0.01 : OK
+  Lemma 3.20: f(0)(-log(pi)/2 + digamma(3/2)/2)/eta = -2.9450675 ; + 0.01 + 1e-10 < -2.9 : OK
+
+== Lemma 3.18: Re F*(s_k - 1) <= 0 ==
+  The proof uses Re(cot z - 1/z) = sin2x/(cosh2y - cos2x) <= 0; this drops -Re(1/z) = -x/|z|^2 > 0 for x < 0.
+  Correct identity: F*(z) = F0(z) + f(0)(pi/2l) cot(pi z/2l), so Re F*(s_k-1) <= |W0((s_k-1)/eta)| + (exp. small)
+  <= C(-1, H1/eta1) eta^3/(kt)^3 < 1e-70.  Conclusion holds up to a negligible term (cosmetic).
+
+== Lemma 3.12 / 3.13 counting constants (Rosser R0) ==
+  log T = 56.500: Lemma 3.12 sum <= 53.1624 < log T = 56.5000 OK;  |S| <= 39.6308 < 0.71 log T = 40.1150 OK
+  log T = 100.00: Lemma 3.12 sum <= 84.9353 < log T = 100.000 OK;  |S| <= 65.9022 < 0.71 log T = 71.0000 OK
+  log T = 1000.0: Lemma 3.12 sum <= 725.455 < log T = 1000.00 OK;  |S| <= 601.021 < 0.71 log T = 710.000 OK
+  (both bounds are a fixed multiple of log T plus lower-order terms, so log T = log H1 is the worst case)
+
+== Lemma 3.11 (local zero density) ==
+  min of Re cot(pi xi/2beta) on boundary (grid 4002 pts) = 0.193232  [>= 0.1933] ** FAIL **
+  (minimum is at the corners xi = alpha +- 1.01i; (3.32) is false by ~4e-4 relative.  Using the true minimum m = 0.19323 instead of 0.1933 below -- the rounded constants 7.6, 1.7, 16 still hold.)
+  1/(m pi) = 1.64731 <= 1.7 OK ;  4.576/(m pi) = 7.53809 <= 7.6 OK
+  (2beta/alpha + log1.549 - 0.3)/(m pi) = 15.3542 <= 16 OK
+  (3.29): gamma(alpha+beta)lambda2 - log(alpha+beta) = -0.307008 < -0.3 OK
+  (3.27) k-choice: the printed justification mixes floor and ceiling (k/2^k >= (1+loglogphi/logphi)/(phi log2)
+  needs k >= (log phi+loglog phi)/log2, while 2^k <= phi log phi needs the floor).  Direct check instead:
+  largest admissible k satisfies both conditions for every delta in (0, lambda2]  (k = 3..79; asymptotically ratio -> 0.36): OK
+
+== (3.39) and Lemma 3.14 ==
+  min over lambda-grid in (0, lambda2] of [int_l^l2 dx/(x^3 log x) - (6.86 + 0.75/(l^2 log l))] = 0.115147 OK
+  J(lambda2)*0.71 = 15.1830 < 15.4 (J = half-sum, as needed) OK
+  combined log T coefficient: -22.8*6.86 + 15.4 = -141.008 (thesis -140);  -22.8*0.75 = -17.1 (thesis -17.09: rounding in the wrong direction, compensated by -141 -> -140 only while lambda^2|log lambda| >= 0.0099; negligible because of the 0.2-vs-0.0754 margin below)
+  max of C2(lambda*(T),T) L2^4/L1^3 over log T in [225.4, 1e7] (float grid) = 1.25323 at log T = 912.49   [thesis 1.2532 at 912.82]
+  1.26 C(-1,nu)(A1+eps)^2 1.013^3 = 0.175535 < 0.2 : OK ; sum a_k*0.2 = 0.70488 <= 0.71
+
+== Lemma 3.6 base case: |(z-1)zeta(z)| <= c_j |Q+z|^(1+mu_j) |log(Q+z)| for |Im z| <= 3, Q = 3 ==
+  (the printed argument 'c_j > 1/2 and |(s-1)zeta(s)| < Q' does not imply this: 0.5*3.5*log 3.5 = 2.19 < 3;
+   direct check on a grid of 601 heights per line instead)
+  sigma = 0.500000: min ratio rhs/lhs on grid = 3.7797  OK
+  sigma = 0.714286: min ratio rhs/lhs on grid = 8.0277  OK
+  sigma = 0.833333: min ratio rhs/lhs on grid = 7.4870  OK
+  sigma = 0.903226: min ratio rhs/lhs on grid = 7.2426  OK
+  sigma = 0.944444: min ratio rhs/lhs on grid = 7.1236  OK
+  sigma = 0.968504: min ratio rhs/lhs on grid = 7.0637  OK

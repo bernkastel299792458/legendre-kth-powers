@@ -1,0 +1,72 @@
+== Parameters (3.10)-(3.11), Definition 3.3 ==
+theta                                                      = 1.12720000000   [thesis: 1.1272]
+w(0) = sec^2 th (th tan th + 3 th cot th - 3)              = 5.31485547279
+A1 = 1/19.62                                               = 0.0509683995923   [thesis: 0.05096...]
+sigma1 = sigma*(H1)                                        = 0.996489768685   [thesis: 0.99648...]   OK
+eta1 = (A1+eps) loglog H1 / log H1                         = 0.00363927059994   [thesis: 0.00363...]   OK
+lambda1 = lambda*(H1)                                      = 0.499662875934   [thesis: 0.49966...]   OK
+lambda2 = lambda*(H2) (t>=H2 formula)                      = 0.292752500818   [thesis: 0.29275...]   OK
+lambda*(H2-) (n=4 formula, min over [H1,H2))               = 0.277896464932   [thesis: 0.27789...]   OK
+nu = 0.27789.../eta1  (p. 72 says lambda1/eta1 = nu = 76.36) = 76.3604841411   [thesis: 76.36...]   OK
+   (lambda1/eta1 itself)                                   = 137.297533177   [thesis: text says = nu; it is not, but 76.36 is the valid (smaller) choice]
+sigma*(H2) - lambda*(H2) (t>=H2 formula)                   = 0.706034541807   [thesis: 0.94475... in [s3,s4]]   ** FAIL **
+   -> true value lies in [sigma_3, sigma_4] = [0.5, 0.714]: the printed 0.94475 is a typo (cosmetic)
+
+== Trigonometric polynomial ==
+a0                                                         = 1.00000000000   [thesis: 1]
+a1                                                         = 1.74124032598   [thesis: 865534/497079]
+a = sum_{k>=1} a_k                                         = 3.52441805025   [thesis: 2919857/828465]
+   a = 2919857/828465 exactly: True
+   all a_k > 0: True
+S = sum a_k log k                                          = 1.56024796094
+(a + S/log H1)/2   [coefficient in (3.21)]                 = 1.77601652920   [thesis: 1.7761]   OK
+0.0069 * a                                                 = 0.0243184845467   [thesis: 0.0244]   OK
+
+== Ford constants C(nu, r) (Lemma 2.3) with theta = 1.1272 ==
+tan(theta)                                                 = 2.10445950488
+C(-1, 76.36)                                               = 51.5897375446
+C(0, 76.36)                                                = 48.8390923055
+   C(-1,nu) > C(0,nu) (needed p. 73): True
+C(-1, H/eta1)  [Lemma 3.20 claims < 46]                    = 45.8677320182   [thesis: < 46]   OK
+C(-1, H1/eta1) [Lemma 3.18]                                = 45.8677320182
+
+== Lemma 3.17: 18.6 C(-1,nu)(A1+eps)^2 L2'^2 log T / L1'^2 ... < 2.56 (loglog t)^2/log t ==
+0.355(l^-3 + (2 s1 - 1 - l)^-3) + 1 at l = 0.27789         = 18.5125325130   [thesis: <= 18.6]   OK
+   same at l = lambda1 = 0.49966                           = 6.80275015280   [thesis: <= 18.6]   OK
+18.6 C(-1,nu)(A1+eps)^2 1.012^2  [needs < 2.56]            = 2.55293220300   [thesis: 2.56]   OK
+sum_k a_k (2.56 + 1e-10 L1/L2^2 ...) vs 0.75  (2.56*a/ L2^2*L1... see note) = 9.02251020864
+   note: p. 73 passes from eta*sum a_k(2.56 L2^2/L1) to 0.75 eta L1/L2^2; this needs
+   2.56 a L2^4/L1^2 <= 0.75, i.e. it is checked on a grid below.
+max over [H1,H2] grid of 2.56 a L2^4/L1^2 (+1e-10 term)    = 0.748648029711   [thesis: <= 0.75]   OK
+
+== c_n, C4(mu0) (p. 78), theta = 1.1272 ==
+2 theta cot theta                                          = 1.07124893341
+c0                                                         = 0.821990134333   [thesis: 0.8219901343]
+c1                                                         = 0.111864357739   [thesis: 0.1118643577]
+c2                                                         = 0.0182350945659   [thesis: 0.0182350945]
+c3                                                         = -0.000382977096624   [thesis: -0.0003829770]
+c* = int u^3 |a1 e^-u - a0| w                              = 0.0188374573600   [thesis: 0.0188374573]
+mu0 = (1 - sigma1)/eta1                                    = 0.964542541727   [thesis: 0.96454...]
+C4(mu0) (thesis polynomial)                                = 0.937374124064   [thesis: > 0.9376]   ** FAIL **
+exact a1 W(1-mu0) - a0 W(-mu0)                             = 0.938123515402   [thesis: > 0.9376]   OK
+   d/dmu of the exact integral > 0 on [mu0,1] (64 mu-balls): True
+
+== (3.50): C3(eta,t) = (0.75 L1/L2^2 + 2.9 L2/L1 - 2.9) eta,  eta <= (A1+eps) L2/L1 ==
+max C3 over grid log t in [56.5, 2e4]                      = 0.00452382531691   [thesis: 0.00452... at log t = 1144.7]
+   at log t                                                = 1144.80376137
+   (for log t > 2e4 the bound is < 0.75 A1/L2 < 0.0039)
+
+== (3.51): F*(sigma*-beta0) >= F(sigma*-beta0) - 1e-6 ==
+sigma*-beta0 upper bound at t = H1                         = 0.000129039285440
+x = pi(sigma*-beta0)/(2 lambda*) at H1                     = 0.000405662388270   [thesis: < eps0 = 7e-5]   ** FAIL **
+   -> the printed bound uses (L2(Kt)/L1(Kt) - loglog t/log t), which is negative;
+      the correct difference has the opposite sign and is ~1.3e-4.
+max over grid of f(0)(pi/2l)(1/x - cot x)  [thesis: < 1e-6] = 8.22227683901e-6   [thesis: < 1e-6]   ** FAIL **
+   corresponding loss a1*max                               = 1.43169600035e-5
+
+== Final inequality (p. 78) ==
+(0.9376 - 1e-6 a1 - 0.00452)/(3.4431 w(0))                 = 0.0509890563582   [thesis: >= 0.05098 > A1+eps]   OK
+same with exact integral, corrected (3.51) loss, exact C3max = 0.0510167681634
+A1 + eps                                                   = 0.0509683995923
+relative slack  lhs/(A1+eps) - 1                           = 0.000405285747030
+largest main-term coefficient c allowed by the slack       = 3.44449543936

@@ -1,0 +1,1 @@
+chain OK: 1241 pieces cover [2040.629883, 6989.942383] exactly; M used = [3]; max delta_upper = 0.936926

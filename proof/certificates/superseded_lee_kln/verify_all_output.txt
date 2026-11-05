@@ -1,0 +1,15 @@
+SHA256 of certificates:
+  e2925b738faeaf9a93e4b7f9f5b7f2ff663ea6eb2cfe49c2b9b464b22401b29a  cert_hyb_k67.csv
+  b333091ddc0a430e71b314e7d69001fdd3b79697f3926be7946cc015b1e45253  cert_smooth_full_k67_littlewood_thesis.csv
+  ecab6b523ab28ab57ef04add76e0b3783602397bf5a48594cccfc37a34b0904f  cert_smooth_full_k67_thesis.csv
+
+$ python check_certificate.py cert_hyb_k67.csv
+k=67: certificate OK. 1760 pieces cover [6989.942383, 37420887.0] exactly; max delta_upper = 0.9999995
+
+$ python check_smooth_chain.py --zfr thesis cert_smooth_full_k67_thesis.csv
+[zfr=thesis, full_table=True, pure_arb=False] chain OK: 1241 pieces cover [2040.629883, 6989.942383] exactly; M used = [3]; max delta_upper = 0.936926
+
+$ python check_smooth_chain.py --zfr littlewood_thesis cert_smooth_full_k67_littlewood_thesis.csv
+[zfr=littlewood_thesis, full_table=True, pure_arb=False] chain OK: 1241 pieces cover [2040.629883, 6989.942383] exactly; M used = [2, 3]; max delta_upper = 0.999796
+
+ALL CHECKS PASSED

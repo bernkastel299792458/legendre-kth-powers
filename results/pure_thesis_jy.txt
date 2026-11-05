@@ -1,0 +1,1 @@
+[zfr=thesis, full_table=True, pure_arb=True] chain OK: 1241 pieces cover [2040.629883, 6989.943848] exactly; M used = [3]; max delta_upper = 0.936926

@@ -1,0 +1,2 @@
+k=67: verified [6989.9438, 100000000] with 1959 pieces; max delta_upper = 0.999999
+thesis 6989.94384765625 14315405/2048 1959

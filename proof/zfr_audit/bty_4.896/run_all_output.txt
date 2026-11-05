@@ -1,0 +1,8 @@
+source sha256: b162c07333ae1b080d8af278c482020b55331ada14f403f29586efc3b8128a3c
+check_part1_sec3_lemma5.py: exit 0; SUMMARY: 32 OK, 0 FAIL, 0 ISSUE (false as stated, harmless downstream), 12 INFO
+check_part2_lemmas6_8_9_12_13.py: exit 0; SUMMARY: 26 OK, 0 FAIL, 3 ISSUE (false as stated, harmless downstream), 6 INFO
+check_part3_lemmas10_11.py: exit 0; SUMMARY: 33 OK, 0 FAIL, 1 ISSUE (false as stated, harmless downstream), 2 INFO
+check_part4_lemma14.py: exit 0; SUMMARY: 23 OK, 0 FAIL, 2 ISSUE (false as stated, harmless downstream), 6 INFO
+check_part5_lemma15_final.py: exit 0; SUMMARY: 23 OK, 0 FAIL, 0 ISSUE (false as stated, harmless downstream), 8 INFO
+ALL BTY CHECKS PASSED (ISSUE items are paper misstatements handled downstream)
+exit=0

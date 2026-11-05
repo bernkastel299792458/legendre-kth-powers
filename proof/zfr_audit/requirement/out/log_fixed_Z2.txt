@@ -1,0 +1,10 @@
+family Z2: 3200 pieces, 2079 with finite threshold in [19.62,60.0], 0 failing already at the strong end, time 295s
+  H L=[6989.9438,6989.9553] params=(Fraction(1065266341, 1000000000), Fraction(197, 200))  threshold ~ 19.6200000
+  H L=[6989.9553,6989.9668] params=(Fraction(1065266341, 1000000000), Fraction(197, 200))  threshold ~ 19.6200000
+  H L=[6989.9668,6989.9783] params=(Fraction(1065266341, 1000000000), Fraction(197, 200))  threshold ~ 19.6200000
+  H L=[6989.9897,6990.0127] params=(Fraction(1065266341, 1000000000), Fraction(197, 200))  threshold ~ 19.6200000
+  H L=[6990.0586,6990.1045] params=(Fraction(1065266341, 1000000000), Fraction(197, 200))  threshold ~ 19.6200000
+  H L=[6989.9783,6989.9897] params=(Fraction(1065266341, 1000000000), Fraction(197, 200))  threshold ~ 19.6200193
+  H L=[6990.0127,6990.0356] params=(Fraction(1065266341, 1000000000), Fraction(197, 200))  threshold ~ 19.6200193
+  H L=[6990.1045,6990.1504] params=(Fraction(1065265341, 1000000000), Fraction(197, 200))  threshold ~ 19.6200193
+  CONFIRM Z2 = 19.620000: all 3200 pieces rigorously delta<1: True; max delta 0.9999989 at L=6990.0586 (H)

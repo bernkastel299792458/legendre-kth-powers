@@ -1,0 +1,43 @@
+==============================================================================
+PART 2: Lemmas 6, 8, 9, 12, 13
+==============================================================================
+[OK  ] Lemma 6 (26): 88 eta0 log(T0)/T0 < 1e-8 (Lehman Lemma 2: sum_{g>T0} g^-2 < log T0/T0)  --  1.44055e-9
+[ISSUE] Lemma 6 (27): int phi log(x/2pi) < 1e-10 (log t + 1)?  The bound as derived gives 1e-10 (log t + c) with c below  --  c = 1.0777520  (with the dropped term kept: c = 1.0009992); harmless: corrected final bound checked next
+[OK  ] Lemma 6, k != 0: 44 eta [ (1/2pi) B27 + 4 B28 + 2 B29 ] < 1e-8 with corrected (27) (worst case t = H)  --  1.48397e-10
+[OK  ] Lemma 6 (29): int_{T0}^inf (x^-2 + (2H+x)^-2) dx/x < 1e-10  --  5.000e-21
+[OK  ] Lemma 6: sum over k of a_k * 1e-8 < 1e-7  (needed for (47))  --  sum a_k = 4.524418
+[INFO] NOTE Lemma 6: the far-zero sum must be paired rho <-> 1-conj(rho) (not rho <-> conj(rho)) to apply (22); doing so gives -22 eta sum(...), so the printed -44 eta is conservative. (25): 'F(2s-1+beta0)' is a typo for F(s-1+beta0); (47) omits the factor a_1.
+[OK  ] Lemma 8: C(x0/eta0, x0/eta0) < 52  [correct c0]  --  51.954367  (printed c0: 21.9881)
+[OK  ] Lemma 8 (31): |Re psi(1/4 + iy/2)| <= U(y) for 0 <= y <= 1000 (arb digamma on 4701 intervals)  --  min slack = 1.662e-04
+[INFO] Lemma 8 (31) for y >= 1000: from Binet's formula |Re psi(1/4+iy/2) - log(y/2)| <= 0.8/y^2 while U(y) >= log(y/2) + 2/(3y) - 2/(1+4y^2); holds (hand argument, see REPORT)
+[ISSUE] Lemma 8: claim 'U(x) < log(100 - x) for x <= 2' at x = 0  --  U(0) = 5.38629 > log 100 = 4.60517  (fails for |x| < ~0.33)
+[OK  ] Lemma 8: with U(x) <= 6 + log(1+|x|) instead, I_1 < 1e-10 still holds  --  3.970e-24
+[OK  ] Lemma 8: U(x) <= log x for x in [2, 1e4] (intervals); beyond: U(x) <= log x - log 2 + 2/(3x) + 1/(8x^2) < log x
+[ISSUE] Lemma 8 (32) AS STATED: int U(y)/(x0^2+y^2)^{3/2} dy < 24  --  rigorous upper bound = 34.590403; the true value is about 34.577 (mpmath), so (32) is false
+[OK  ] Lemma 8 (32) AS NEEDED for T1: int |Re psi((1/2+iy)/2)| (x0^2+y^2)^{-3/2} dy < 24 (rigorous upper sum, monotonicity of Re psi in |y|)  --  upper bound = 23.599981
+[OK  ] Lemma 8 (33): (52/2pi) * 24 < 199  --  198.62537
+[OK  ] Lemma 8 (33), t >= H: (52/2pi)(2/x0^2) A0 < 14  --  (52/2pi)(2/x0^2) = 67.959511;  times A0 = 13.880619
+[OK  ] Lemma 8 (34): C(s0/eta0, s0/eta0)/x0^3 < 424  [correct c0]  --  423.93084 (dividing by sigma0^3 instead would give 51.9607; printed c0: 179.416)
+[INFO] Lemma 8 ISSUE: in Lemma 15 it is applied at s = s_k + delta_m with Im s = kt (k <= 16), but its hypothesis eta <= A0/log(Im s) is only known with log t. Correct bound: T1 <= 14 eta^2 + alpha*log(k)*eta^3,  alpha = (52/2pi)(2/x0^2)  --  alpha = 67.9595
+[OK  ] Lemma 9: 623 sum|kappa_m| < 2353  --  2352.024
+[OK  ] Lemma 9: 14 sum|kappa_m| < 53  --  52.85448
+[OK  ] Lemma 9: 424 sum|kappa_m| < 1601  --  1600.736
+[INFO] Lemma 9 typos: proof says 'apply Lemma 9' (should be Lemma 7) and 'g(d)=g'(0)=g'(d)=g''(d)' (missing '=0')
+[OK  ] (48): sum_{k>=1} a_k 53 < 187 and a 1601 + a0 2353 < 8013 (as printed)  --  186.7942, 7995.593
+[INFO] (48) corrected for the log k issue: eta^3 coefficient  --  8395.904  (= printed 7995.59 + 400.311)
+[OK  ] a = sum_{k>=1} a_k = 2919857/828465 (exact)  --  2919857/828465
+[OK  ] a0 = 1, a1 = 865534/497079 (exact)  --  865534/497079
+[OK  ] all a_k >= 0  --  [1.0, 1.741240325984401, 1.1282131545824037, 0.5064565860423259, 0.1253351412283896, 2.8030420382541475e-05, 4.2515039527586826e-05, 0.012053617231868576, 0.006946581931644668, 0.00014980851467607094, 0.0002372526969220855, 0.0018801840351332483, 0.0012479572328208059, 0.00014296855563535507, 6.303491664973441e-05, 0.00025267613397468006, 0.00012821570280243852]
+[OK  ] Lemma 12: error terms of (36) < 1e-10 for 1 <= x <= (M+3)/2, y >= H/2  --  5.556e-14
+[OK  ] Lemma 12 (38): (1/2) sum kappa_m psi((s+delta_m)/2+1) <= -0.041  --  -0.041050503
+[OK  ] Lemma 12: total constant <= -1.568  --  -1.5688824
+[INFO] Lemma 12 NOTE: the O*(1e-10) error multiplies sum|kappa_m|, not kappa (included above)
+[OK  ] Lemma 13: C(-1, 1e10) < 51  [correct c0]  --  50.069702 (printed c0: 21.1905)
+[OK  ] Lemma 13: H/eta0 > 1e10  --  4.21981e+14
+[OK  ] Lemma 13: w(0) M/H^2 + 51/H^3 < 1e-12 (per eta)  --  3.782e-24
+[OK  ] Lemma 13: sum_k a_k * sum|kappa| * 1e-12 < 1e-10
+
+SUMMARY: 26 OK, 0 FAIL, 3 ISSUE (false as stated, harmless downstream), 6 INFO
+   ISSUE: Lemma 6 (27): int phi log(x/2pi) < 1e-10 (log t + 1)?  The bound as derived gives 1e-10 (log t + c) with c below -- c = 1.0777520  (with the dropped term kept: c = 1.0009992); harmless: corrected final bound checked next
+   ISSUE: Lemma 8: claim 'U(x) < log(100 - x) for x <= 2' at x = 0 -- U(0) = 5.38629 > log 100 = 4.60517  (fails for |x| < ~0.33)
+   ISSUE: Lemma 8 (32) AS STATED: int U(y)/(x0^2+y^2)^{3/2} dy < 24 -- rigorous upper bound = 34.590403; the true value is about 34.577 (mpmath), so (32) is false

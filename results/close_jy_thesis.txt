@@ -1,0 +1,1 @@
+k=67 [thesis]: covered [2040.6299, 6989.9438] of window up to L0=6989.9438; 1241 pieces; max delta=0.9369261238906641; CLOSED

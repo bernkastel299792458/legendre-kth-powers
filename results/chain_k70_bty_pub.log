@@ -1,0 +1,5 @@
+[k70_bty_pub] L1 = 2186309/1024 (2135.0674); num1 margin = 2.737e+09; num2 margin = 4.436e+08; first pair reaches log x <= 1521.10 (need >= 600)
+[k70_bty_pub] Lemma T verified for L >= 1e8
+[k70_bty_pub] H: verified down to L0_H = 8706.2717; using [9521, 1e8], 1858 pieces, max delta = 0.859753
+[k70_bty_pub] S: 2109 pieces cover [2186309/1024, 9521], max delta (float-accum) = 0.819962
+[k70_bty_pub] CHAIN GENERATED: L1 = 2186309/1024, L2 = 9521, L3 = 1e8

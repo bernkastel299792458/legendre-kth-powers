@@ -1,0 +1,5 @@
+[k68_r2008] L1 = 2121825/1024 (2072.0947); num1 margin = 2.659e+09; num2 margin = 3.247e+08; first pair reaches log x <= 1475.67 (need >= 600)
+[k68_r2008] Lemma T verified for L >= 1e8
+[k68_r2008] H: verified down to L0_H = 7303.3140; using [8519, 1e8], 1883 pieces, max delta = 0.729867
+[k68_r2008] S: 2326 pieces cover [2121825/1024, 8519], max delta (float-accum) = 0.929121
+[k68_r2008] CHAIN GENERATED: L1 = 2121825/1024, L2 = 8519, L3 = 1e8

@@ -1,0 +1,38 @@
+==============================================================================
+PART 4: Lemma 14
+==============================================================================
+[OK  ] mu0 = (1 - sigma0)/eta0 - 1e-10 = 0.91198...  --  0.9119814885
+[OK  ] S1 = -0.689736127...  --  -35549/51540 = -0.6897361273
+[OK  ] S2 = -0.818779265...  --  -2531993/3092400 = -0.8187792653
+[OK  ] 1126 (x=-mu, printed choices x0=mu0, x1=(2s0-1)m-mu0 eta0, C(x1,x1))  --  1016.0863
+[OK  ] 1188 (x=1-mu, printed choices)  --  1071.6075
+[INFO] ISSUE: C(x1,x1) needs x1 > tan(theta) = 2.14, false for m = 1, 2 (x1 ~ 0.98, 1.97); and for x = -mu one needs x0 = 1 (|x| = mu <= 1), not mu0.  Valid version below (uses C(x1/eta0, x1/eta0), since Re z = (delta_m + x eta)/eta >= x1/eta0).
+[INFO] valid error constants (x=-mu: x0=1, x1=(2s0-1)m-eta0; x=1-mu: x0=1-mu0, x1=(2s0-1)m)  --  E_a = 67.7817, E_b = 59.8870  (printed 1126, 1188)
+[OK  ] (41) eta coefficient: w0 (a1-a0) S1/(2 s0 - 1) > -2.939  --  -2.9383730
+[OK  ] (41) eta^2 coefficient as printed: -w0((a1-a0)mu0+a1) S2 >= 11  --  11.227491
+[ISSUE] (41) eta^3 coefficient as printed: a0*1126 + a1*1188 <= 3193?  --  3194.5935 (paper writes 3188 then 3193)
+[INFO] ISSUE (41): expansion W(d/eta + x) = w0 eta/d - x w0 eta^2/d^2 + E gives the eta^2 term -(a1(1-mu) + a0 mu) w0 S2/(2s-1)^2, not -((a1-a0)mu + a1) w0 S2/(2s-1)^2 (sign of mu). Correct worst-case coefficient (mu=1):  --  4.6447609 instead of >= 11
+[OK  ] c_0 = 0.8763706262...  --  0.876370626206
+[OK  ] c_1 = 0.1200272738...  --  0.120027273850
+[OK  ] c_2 = 0.0203537951...  --  0.0203537951785
+[OK  ] c_3 = 0.0004382722...  --  0.000438272226419
+[OK  ] c* = int u^3 |a1 e^-u - a0| w = 0.0190417514...  --  0.0190417514668
+[OK  ] e^x - T3(x) < x^4/18 on [0, d]  ((e^x-T3)/x^k is increasing, so check x = d)  --  0.052323031
+[OK  ] e^x - T3(x) < x^3/18 on [0, d]  (what the bound with c* = int u^3|..|w actually needs)  --  0.055422278 vs 1/18 = 0.055555556
+[ISSUE] C1 cubic coefficient: c3/6 - c*/18 >= -0.00073 ?  --  -0.00098482971
+[OK  ] C1 cubic coefficient with remainder (mu u)^4/18 <= mu^3 u^4/18: c3/6 - c4*/18 >= -0.00073  --  -0.00050284894 (c4* = int u^4|a1e^-u - a0|w = 0.01036609754)
+[INFO] => C1(x) = 0.87637 + 0.12002x + 0.01017x^2 - 0.00073x^3 is valid if c* is read with u^4 (and mu <= 1); with c* as printed (u^3) the cubic term should be -0.000985
+[OK  ] C1 constant, linear, quadratic coefficients are rounded down correctly
+[OK  ] T_1', T_2' > 0 on [sigma0, 1] (ball enclosure)  --  T1'(ball) = [0.3 +/- 0.0522], T2'(ball) = [0.3 +/- 0.0281]
+[OK  ] T_2(sigma0) > 0 (needed to use (1+mu) >= 1+mu0)  --  0.82114385
+[OK  ] a1 w0 T1(sigma0) > 6.848  --  6.8481254
+[OK  ] a1 w0 (1+mu0) T2(sigma0) > 15  --  15.508085
+[OK  ] a1 sum|kappa_m| |E1| bound < 708 (printed form, '/m' typo dropped)  --  405.10405; valid form (1+d_m)^2, 1+d_m-2 eta0: 396.00244
+[INFO] Lemma 14 eta^3 total: 3193 + 708 = 3901 (paper writes 3897)  --  3901
+[INFO] CORRECTED Lemma 14: LHS >= C1'(mu) + b1 eta + b2 eta^2 - b3 eta^3, C1' with cubic term c3/6 - c4*/18 (remainder (mu u)^4/18, mu <= 1)  --  b1 = 3.909752, b2 = 20.15285, b3 = 568.0618   (printed: 3.909, 26, 3897)
+[OK  ] Lemma 14 printed bound holds at all grid points (direct rigorous quadrature of the LHS)  --  min(LHS - printed bound) = 5.836e-04
+[OK  ] Lemma 14 corrected bound holds at all grid points  --  min(LHS - corrected bound) = 3.910e-04
+
+SUMMARY: 23 OK, 0 FAIL, 2 ISSUE (false as stated, harmless downstream), 6 INFO
+   ISSUE: (41) eta^3 coefficient as printed: a0*1126 + a1*1188 <= 3193? -- 3194.5935 (paper writes 3188 then 3193)
+   ISSUE: C1 cubic coefficient: c3/6 - c*/18 >= -0.00073 ? -- -0.00098482971

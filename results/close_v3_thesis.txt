@@ -1,0 +1,1 @@
+[thesis] 2401 pieces cover [2040.6298828125, 7219.0]; max delta (float-accum) = 0.905745; M=2 pieces: 2399

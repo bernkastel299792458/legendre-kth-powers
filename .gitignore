@@ -1,0 +1,16 @@
+# Third-party papers and sources (copyright belongs to their authors).
+# See SOURCES.md for links.
+papers/
+proof/input_verification/sources_*/
+proof/zfr_audit/**/source/
+*.pdf
+
+# Lee's code is a separate public repository (see SOURCES.md).
+code/lee_code/
+
+# Build and cache directories
+**/.lake/
+**/__pycache__/
+*.pyc
+.DS_Store
+Thumbs.db

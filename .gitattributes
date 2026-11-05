@@ -1,0 +1,3 @@
+# Keep LF everywhere: verify_all.py prints SHA-256 hashes of certificates and code,
+# which must match certificates/verify_all_output.txt on every platform.
+* text=auto eol=lf
