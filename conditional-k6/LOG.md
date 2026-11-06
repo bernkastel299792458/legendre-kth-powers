@@ -55,3 +55,10 @@ All 28 PDF pages were rendered and inspected. A final cross-platform
 reproducibility fix made the generator explicitly preserve CRLF bytes on all
 platforms; its read-only check matched all 29 generated Lean files and the
 Pratt JSON without changing any compiled source.
+
+The first Linux CI run (42152323034) passed the lower, 94-cell, and 60-cell
+modules but failed the historical tail replay's whole-record equality. Its
+runner selected Python 3.12.16, whereas the frozen tail metadata records
+3.12.10. The CI setup now pins Python 3.12.10 and runs the tail check first,
+with visible diagnostics. No mathematical source or certificate bytes were
+changed for this infrastructure correction. The failed run remains public.

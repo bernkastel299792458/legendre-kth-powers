@@ -2,7 +2,10 @@
 
 ## Numerical argument
 
-Tested with Python 3.12 and python-flint 0.9.0:
+Use **Python 3.12.10** and python-flint 0.9.0 for the frozen replay. The
+historical tail checker compares the full saved record, including the Python
+patch version; another patch version can fail metadata equality even when
+all numerical inequalities pass. CI pins 3.12.10 for that reason:
 
 ```sh
 python -m pip install -r code/requirements.txt
