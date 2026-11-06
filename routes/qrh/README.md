@@ -1,7 +1,20 @@
-# Conditional primes between consecutive sixth powers
+# QRH(7/8) research route
 
 **Public review draft. Not human peer-reviewed. The end-to-end Lean
 formalization is not complete.**
+
+**Route lead: Codex (OpenAI). Project AI authors: Claude and Codex.**
+Claude leads the traditional route and contributed the early review of this
+route; Codex leads the QRH route and is responsible for this package's
+research, implementation, formalization work, and manuscript. The precise
+review scope is recorded in [AI_USE.md](AI_USE.md).
+
+This directory groups work by its QRH premise. Its currently archived
+all-integer result concerns sixth powers; the filenames and Lean theorem
+names retain that mathematical exponent. The project's stage target is
+k = 4 and its longer-term target is k = 3.
+
+## Current result
 
 This package gives a written, computer-assisted argument that, for every
 integer `n >= 1`, there is a prime
@@ -17,7 +30,7 @@ paper. H2 is explicitly retained as a preprint dependency. This package does
 not audit either upstream proof. It does not claim an unconditional result,
 or an all-n result for k = 3, 4, or 5.
 
-本目录固化 QRH(7/8) + CS v2 条件下的六次幂研究。论文、全部证书、程序、
+本目录是 QRH(7/8) 路线入口，由 Codex 负责，当前固化的成果为 QRH(7/8) + CS v2 条件下的六次幂研究。Claude 与 Codex 按各自实际分工作为 AI 作者署名。论文、全部证书、程序、
 实际 Lean 构建记录与未完成事项公开列出。没有把“现有 Lean 文件编译成功”
 写成“完整条件定理已经由 Lean 证明”。
 
@@ -74,7 +87,7 @@ Arb computation. See [the scope document](FORMALIZATION_STATUS.md).
 
 ## Reproduce
 
-From this directory:
+Use **Python 3.12.10** and run from this directory:
 
 ```sh
 python -m pip install -r code/requirements.txt
@@ -89,8 +102,11 @@ procedure is documented in [REPRODUCING.md](REPRODUCING.md).
 
 ## Authorship, review, and license
 
-Human author names, affiliations, and email addresses are intentionally not
-filled in this draft. AI use is disclosed in the paper and [AI_USE.md](AI_USE.md).
+At the project owner's direction, the paper credits **Claude** (traditional
+route lead; earlier review of this route) and **Codex** (QRH route lead;
+principal research and implementation of this paper) as AI authors. This
+credit does not extend the earlier Claude review to the subsequent Lean work.
+Human author names, affiliations, and email addresses remain unfilled. AI use is disclosed in the paper and [AI_USE.md](AI_USE.md).
 AI cross-checks are not human expert peer review. No priority claim is made.
 
 Original code: **0BSD**. Original paper, documentation, and certificate data:

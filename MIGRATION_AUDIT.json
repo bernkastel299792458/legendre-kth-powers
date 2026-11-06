@@ -1,0 +1,3161 @@
+{
+  "base_commit": "10116cdf508dad9cd5a3aec53e0bf0ccf1ac816a",
+  "scope": "All previously tracked files accounted for. New protocol/navigation/workflow files are not part of the original inventory.",
+  "original_file_count": 394,
+  "unchanged_byte_count": 373,
+  "protected_unchanged_count": 246,
+  "files": [
+    {
+      "old_path": ".gitattributes",
+      "new_path": ".gitattributes",
+      "old_sha256": "2d179cb5085122f4459264ec33413ca3976bf5aeaaebe81a91796099ed7c7f09",
+      "new_sha256": "2d179cb5085122f4459264ec33413ca3976bf5aeaaebe81a91796099ed7c7f09",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": ".github/workflows/conditional-k6.yml",
+      "new_path": ".github/workflows/qrh.yml",
+      "old_sha256": "98d4d01235ba5526ada46b4f8c9abe3d8ec00696b5d6c492b34c763d58f27b81",
+      "new_sha256": "d58ee0bc3e9f6ebee37b255efb696bea7172256437efbbb41eec79d0b56b15a6",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": ".gitignore",
+      "new_path": ".gitignore",
+      "old_sha256": "e05cf7e31711ec38bc025f98b2f0f95c0f05acb39d0fa1fdd2631d8cb30e8814",
+      "new_sha256": "fefe71186bdc2bcc7dc66a4747e913e9a8d3457f9f411fcb574748b8caa2f63d",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "LICENSE",
+      "new_path": "LICENSE",
+      "old_sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+      "new_sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "LOG.md",
+      "new_path": "routes/traditional/LOG.md",
+      "old_sha256": "baf60fdfb8474edfffa6c648ad322cdd2106038f6287419e86c06a9011f7f78d",
+      "new_sha256": "63325327f128af119bcef2b08eb05524926d3d475344b2c33a983710dbbb21c7",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "README.md",
+      "new_path": "README.md",
+      "old_sha256": "957dc88c0cdfe870315830ee718e5d7e4674699f7741461ab6c003cba68c0013",
+      "new_sha256": "8647870cf4947f8e494f8416f7e73b0dbe7a10584b73ddc10baf3ea1b3b9818d",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "README.zh-CN.md",
+      "new_path": "README.zh-CN.md",
+      "old_sha256": "dd80dee2d16c784f04fa37ed2972850c493e73ec41d875b638deeaa3d8032fdb",
+      "new_sha256": "b6be52aca0948a8f11b8f18f7c31d8744bef28889696f6fdfca9752995967e53",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "ROADMAP.md",
+      "new_path": "routes/traditional/ROADMAP.md",
+      "old_sha256": "ca78b48f4f296d1a0ae718db7c4896356d2997a7aac5fa55ba2d7489cfac5e82",
+      "new_sha256": "ca78b48f4f296d1a0ae718db7c4896356d2997a7aac5fa55ba2d7489cfac5e82",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "SOURCES.md",
+      "new_path": "routes/traditional/SOURCES.md",
+      "old_sha256": "618b7adcacccdc05d964e0de8e986468711abef1d7bc43dbfcc9718a2e31f9d2",
+      "new_sha256": "618b7adcacccdc05d964e0de8e986468711abef1d7bc43dbfcc9718a2e31f9d2",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "code/README.md",
+      "new_path": "routes/traditional/code/README.md",
+      "old_sha256": "ac0d204a185e93a569b51164e17c95c39b1245bfaf15d99d916bfcc80e03d490",
+      "new_sha256": "ac0d204a185e93a569b51164e17c95c39b1245bfaf15d99d916bfcc80e03d490",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "code/all_k.py",
+      "new_path": "routes/traditional/code/all_k.py",
+      "old_sha256": "0d9a3b99eeb8c264927a7e3d55d1b7861ab8161a1027659f78d87fb3ee279a4b",
+      "new_sha256": "0d9a3b99eeb8c264927a7e3d55d1b7861ab8161a1027659f78d87fb3ee279a4b",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/bound.py",
+      "new_path": "routes/traditional/code/bound.py",
+      "old_sha256": "c407e3d8a697efb85dbdd333066b80644044e66ba172866e7b69a5b615ef1d76",
+      "new_sha256": "c407e3d8a697efb85dbdd333066b80644044e66ba172866e7b69a5b615ef1d76",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/check_certificate.py",
+      "new_path": "routes/traditional/code/check_certificate.py",
+      "old_sha256": "3b5034eea85784e3844212493b2f78d229aa8c29a9187ee0eef23db23997c6c6",
+      "new_sha256": "3b5034eea85784e3844212493b2f78d229aa8c29a9187ee0eef23db23997c6c6",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/check_cond_certificate.py",
+      "new_path": "routes/traditional/code/check_cond_certificate.py",
+      "old_sha256": "3a538ca7c256471cf189a9f75bd1fa0c3c7325fcb219ce6faba4cedb6547946f",
+      "new_sha256": "3a538ca7c256471cf189a9f75bd1fa0c3c7325fcb219ce6faba4cedb6547946f",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/check_smooth_chain.py",
+      "new_path": "routes/traditional/code/check_smooth_chain.py",
+      "old_sha256": "b649a1528a2522c5ef4d8465b8d88fbe69d875919f82a862ad541bf1cf9b0958",
+      "new_sha256": "b649a1528a2522c5ef4d8465b8d88fbe69d875919f82a862ad541bf1cf9b0958",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/close_gap.py",
+      "new_path": "routes/traditional/code/close_gap.py",
+      "old_sha256": "5cd62217d814a8845a8022478b22daadfdc68c3ac3c14993a4f0bd04e4ff3f49",
+      "new_sha256": "5cd62217d814a8845a8022478b22daadfdc68c3ac3c14993a4f0bd04e4ff3f49",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/close_gap_v3.py",
+      "new_path": "routes/traditional/code/close_gap_v3.py",
+      "old_sha256": "d4cdb2172f628e9e49d6c5eb733a13fb6d743f3559bf72684c7fb1f2501f9390",
+      "new_sha256": "d4cdb2172f628e9e49d6c5eb733a13fb6d743f3559bf72684c7fb1f2501f9390",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/ideal_trunc.py",
+      "new_path": "routes/traditional/code/ideal_trunc.py",
+      "old_sha256": "b65d2fa6c3c069b572b0408aca331b1efb0410826f68730460f27c71960e89d5",
+      "new_sha256": "b65d2fa6c3c069b572b0408aca331b1efb0410826f68730460f27c71960e89d5",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/kln_lemma32_check.py",
+      "new_path": "routes/traditional/code/kln_lemma32_check.py",
+      "old_sha256": "61d34807e5cb4905bd456d6d1a814f6f5f0c1be20194db2ce01f537f66664b68",
+      "new_sha256": "61d34807e5cb4905bd456d6d1a814f6f5f0c1be20194db2ce01f537f66664b68",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/make_chain.py",
+      "new_path": "routes/traditional/code/make_chain.py",
+      "old_sha256": "61a571a4435106c0932fdd8eeeb8e3c9be83fc1267e2f5dbc90d9bda25ebf7ba",
+      "new_sha256": "61a571a4435106c0932fdd8eeeb8e3c9be83fc1267e2f5dbc90d9bda25ebf7ba",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/make_hyb_jy.py",
+      "new_path": "routes/traditional/code/make_hyb_jy.py",
+      "old_sha256": "6ba42ece95f759decb2178a1e4ac475283144ee4c0b7a9e577e4b4bd6da1a487",
+      "new_sha256": "6ba42ece95f759decb2178a1e4ac475283144ee4c0b7a9e577e4b4bd6da1a487",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/numeric_facts.py",
+      "new_path": "routes/traditional/code/numeric_facts.py",
+      "old_sha256": "5135bca672ca267e9373dd4bdc732c334c19177b5a310784ba79984f4f110514",
+      "new_sha256": "5135bca672ca267e9373dd4bdc732c334c19177b5a310784ba79984f4f110514",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/req_density.py",
+      "new_path": "routes/traditional/code/req_density.py",
+      "old_sha256": "2061f98dffd070eaa313468101dd5be775abca5031998ecdeae6f7d7f4970e73",
+      "new_sha256": "2061f98dffd070eaa313468101dd5be775abca5031998ecdeae6f7d7f4970e73",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/req_density2.py",
+      "new_path": "routes/traditional/code/req_density2.py",
+      "old_sha256": "7e3f3ee5003452a176ecbe6abcfd21bdb5b16779872d574fa1b570f964da6dc8",
+      "new_sha256": "7e3f3ee5003452a176ecbe6abcfd21bdb5b16779872d574fa1b570f964da6dc8",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/rh_height.py",
+      "new_path": "routes/traditional/code/rh_height.py",
+      "old_sha256": "0982866a61d03eabe24578cb04b7e21dbd381733cc30983a3b4425499f86f808",
+      "new_sha256": "0982866a61d03eabe24578cb04b7e21dbd381733cc30983a3b4425499f86f808",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/rigorous_cond.py",
+      "new_path": "routes/traditional/code/rigorous_cond.py",
+      "old_sha256": "d9a7a4b5cba1d1ba3a03d98944221c5fbda58130e575e7756f5cc8c322f12acb",
+      "new_sha256": "d9a7a4b5cba1d1ba3a03d98944221c5fbda58130e575e7756f5cc8c322f12acb",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/rigorous_hyb.py",
+      "new_path": "routes/traditional/code/rigorous_hyb.py",
+      "old_sha256": "01051fd6fc7ac34df6c02578bcd049c5f80f1dc47ac1e6b263de373fa53e987b",
+      "new_sha256": "01051fd6fc7ac34df6c02578bcd049c5f80f1dc47ac1e6b263de373fa53e987b",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/rigorous_smooth.py",
+      "new_path": "routes/traditional/code/rigorous_smooth.py",
+      "old_sha256": "4af1a245b80fd2abed547e52ccf12335d82b807f665f1b16c846a17ce5252b74",
+      "new_sha256": "4af1a245b80fd2abed547e52ccf12335d82b807f665f1b16c846a17ce5252b74",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/run_all_k.py",
+      "new_path": "routes/traditional/code/run_all_k.py",
+      "old_sha256": "01f8cdd8ce2fd1d72f4a6e14a4b8b074cb682ac55dcf67cb0723e57de4a7ea83",
+      "new_sha256": "01f8cdd8ce2fd1d72f4a6e14a4b8b074cb682ac55dcf67cb0723e57de4a7ea83",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/run_small_k.py",
+      "new_path": "routes/traditional/code/run_small_k.py",
+      "old_sha256": "4b767afe7d33f24a1780822ed1fd0878c047cf0076d99f0b051cd70f8b4e3baa",
+      "new_sha256": "4b767afe7d33f24a1780822ed1fd0878c047cf0076d99f0b051cd70f8b4e3baa",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/scan_dense.py",
+      "new_path": "routes/traditional/code/scan_dense.py",
+      "old_sha256": "2bf80cd3bd32f1b25716162c8a604fcbc57fe4af181fe36bbbce8ee2711f2f06",
+      "new_sha256": "2bf80cd3bd32f1b25716162c8a604fcbc57fe4af181fe36bbbce8ee2711f2f06",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/scan_k67.py",
+      "new_path": "routes/traditional/code/scan_k67.py",
+      "old_sha256": "7e3065d88ad1360e0a3c9fdfe533a85b3d63404eca4bc59aec5b8f33e7abb5b8",
+      "new_sha256": "7e3065d88ad1360e0a3c9fdfe533a85b3d63404eca4bc59aec5b8f33e7abb5b8",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/scan_min_k.py",
+      "new_path": "routes/traditional/code/scan_min_k.py",
+      "old_sha256": "ecb160dc368d28ee28c40bac32b97f3ff3f8289c053fb2983652fc3355eb8853",
+      "new_sha256": "ecb160dc368d28ee28c40bac32b97f3ff3f8289c053fb2983652fc3355eb8853",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/scan_small_k.py",
+      "new_path": "routes/traditional/code/scan_small_k.py",
+      "old_sha256": "8531381988ba30a4cedb9b6b13233414cf674a92adefe11c1b0e2282da7dfc76",
+      "new_sha256": "8531381988ba30a4cedb9b6b13233414cf674a92adefe11c1b0e2282da7dfc76",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/smooth.py",
+      "new_path": "routes/traditional/code/smooth.py",
+      "old_sha256": "6951297331d4b15c58aaa53e82eb80084ae80566c5e5e8b91db60fb442217aad",
+      "new_sha256": "6951297331d4b15c58aaa53e82eb80084ae80566c5e5e8b91db60fb442217aad",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/tail.py",
+      "new_path": "routes/traditional/code/tail.py",
+      "old_sha256": "41fd3454e7d61f5d8dea884245a451ff76e0d02dbf46a67205c224d980674a54",
+      "new_sha256": "41fd3454e7d61f5d8dea884245a451ff76e0d02dbf46a67205c224d980674a54",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/validate_lee.py",
+      "new_path": "routes/traditional/code/validate_lee.py",
+      "old_sha256": "4ed25957a10e462438dfa0bc01b4980847ab6fd867b6cd23214fd5c4d92875c9",
+      "new_sha256": "4ed25957a10e462438dfa0bc01b4980847ab6fd867b6cd23214fd5c4d92875c9",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/verify_chains.py",
+      "new_path": "routes/traditional/code/verify_chains.py",
+      "old_sha256": "bf2c8557e841d44dad5baa9952d5b3f1ca95177a05e739031dcab020fa431e33",
+      "new_sha256": "bf2c8557e841d44dad5baa9952d5b3f1ca95177a05e739031dcab020fa431e33",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "code/window_req.py",
+      "new_path": "routes/traditional/code/window_req.py",
+      "old_sha256": "e081995431646c2be044a537e866f7975bf8ed75a2a3d4969a26cff2b5bedd5c",
+      "new_sha256": "e081995431646c2be044a537e866f7975bf8ed75a2a3d4969a26cff2b5bedd5c",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/.gitattributes",
+      "new_path": "routes/qrh/.gitattributes",
+      "old_sha256": "becac6c925cb00f269a71528b3f053359c6d0e8452e438f05d9e5082938ae60e",
+      "new_sha256": "becac6c925cb00f269a71528b3f053359c6d0e8452e438f05d9e5082938ae60e",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/.gitignore",
+      "new_path": "routes/qrh/.gitignore",
+      "old_sha256": "bbc24c7df2b6c711abadbc13bebe20004d6159e37371083a129e025d017018b9",
+      "new_sha256": "bbc24c7df2b6c711abadbc13bebe20004d6159e37371083a129e025d017018b9",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/AI_USE.md",
+      "new_path": "routes/qrh/AI_USE.md",
+      "old_sha256": "ca7bd60984b7b6179490bae48ea458a2f1d342e8b4153c92513bcd2738a54f85",
+      "new_sha256": "2861233f532c7a264e06937b040b0a1c7bebc8ceb0be390987c35ff0f9f8481b",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/FORMALIZATION_STATUS.md",
+      "new_path": "routes/qrh/FORMALIZATION_STATUS.md",
+      "old_sha256": "da1ab2f0b523382e1c45f1c9d16c4dea08021a8d484142e4f559bae117be6288",
+      "new_sha256": "da1ab2f0b523382e1c45f1c9d16c4dea08021a8d484142e4f559bae117be6288",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/LICENSE",
+      "new_path": "routes/qrh/LICENSE",
+      "old_sha256": "a4e65bf9271458477cd0dde5ddbfe2c29dd41d1fb2003c100cbf679db8429b5a",
+      "new_sha256": "a4e65bf9271458477cd0dde5ddbfe2c29dd41d1fb2003c100cbf679db8429b5a",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/LICENSES/0BSD.txt",
+      "new_path": "routes/qrh/LICENSES/0BSD.txt",
+      "old_sha256": "a107aa5b84ce3f2999ce1ae124f08ef30b7322b6025f695e9bb14d6c7c622c3a",
+      "new_sha256": "a107aa5b84ce3f2999ce1ae124f08ef30b7322b6025f695e9bb14d6c7c622c3a",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/LICENSES/CC0-1.0.txt",
+      "new_path": "routes/qrh/LICENSES/CC0-1.0.txt",
+      "old_sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "new_sha256": "a2010f343487d3f7618affe54f789f5487602331c0a8d03f49e9a7c547cf0499",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/LOG.md",
+      "new_path": "routes/qrh/LOG.md",
+      "old_sha256": "6208f23f2abd140f717bfe5f5c928a3b458c3fb0e97bac840fd7b7d572009645",
+      "new_sha256": "e7b971dcd62b29ac90b277b960dc34279ece8513928768b983b598f86278e4cb",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/MANIFEST.json",
+      "new_path": "routes/qrh/MANIFEST.json",
+      "old_sha256": "1f6aa5d8f1500e0f8d48b50139bbe0b8d78e54464381eafa58454ebb887d9d86",
+      "new_sha256": "8a3ce7db1adfdae5273a4e7a85684ca942709a497dc2afb0b584de5abc7ffece",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/README.md",
+      "new_path": "routes/qrh/README.md",
+      "old_sha256": "73bf775af9764e6203f42ff571b37d30904502fe78a55cc7d26d94bf1f5cc30b",
+      "new_sha256": "3f195f185819cd9d5dc455ac5c2186d4c66aee6a6378895bcbaf5b6acac2e469",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/REPRODUCING.md",
+      "new_path": "routes/qrh/REPRODUCING.md",
+      "old_sha256": "44dfc2b45bdeccb95d285fb5ba0de9dea4138f9decfc56a4be101c6e89ba8483",
+      "new_sha256": "44dfc2b45bdeccb95d285fb5ba0de9dea4138f9decfc56a4be101c6e89ba8483",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/audit/FINITE_LEAN_REVIEW.md",
+      "new_path": "routes/qrh/audit/FINITE_LEAN_REVIEW.md",
+      "old_sha256": "283e9b149f5a9994ea24e92555493bae6525479fec8a02f20e41bdc13f733a92",
+      "new_sha256": "283e9b149f5a9994ea24e92555493bae6525479fec8a02f20e41bdc13f733a92",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/audit/PUBLICATION_SCOPE_REVIEW.md",
+      "new_path": "routes/qrh/audit/PUBLICATION_SCOPE_REVIEW.md",
+      "old_sha256": "20bce16ad266bed71ff85b9983ce1a4589d0d15d8d4f62cd292085ec800f318a",
+      "new_sha256": "20bce16ad266bed71ff85b9983ce1a4589d0d15d8d4f62cd292085ec800f318a",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/audit/derived_sources.json",
+      "new_path": "routes/qrh/audit/derived_sources.json",
+      "old_sha256": "729ea42b613ae8355b43bcb29b9bd7cc84bfe7b495db408b2a294a0acceefa2f",
+      "new_sha256": "729ea42b613ae8355b43bcb29b9bd7cc84bfe7b495db408b2a294a0acceefa2f",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/audit/finite_kernel_axioms.txt",
+      "new_path": "routes/qrh/audit/finite_kernel_axioms.txt",
+      "old_sha256": "d299af24d7350296e7e9929d6c6c7a5572d83cdf8e962400f140205111b0c09b",
+      "new_sha256": "d299af24d7350296e7e9929d6c6c7a5572d83cdf8e962400f140205111b0c09b",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/audit/kernel_axioms.txt",
+      "new_path": "routes/qrh/audit/kernel_axioms.txt",
+      "old_sha256": "ac69021472c3a3a51b3bd08d4ad8844b05fa48fd3f0f4816abca0b64c35997ae",
+      "new_sha256": "ac69021472c3a3a51b3bd08d4ad8844b05fa48fd3f0f4816abca0b64c35997ae",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/audit/lean_build.log",
+      "new_path": "routes/qrh/audit/lean_build.log",
+      "old_sha256": "753c8d9a79afd87ab6152d1e0eb8e7228095dc4580a47573b282ccbc0276f79f",
+      "new_sha256": "753c8d9a79afd87ab6152d1e0eb8e7228095dc4580a47573b282ccbc0276f79f",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/audit/lean_build_report.json",
+      "new_path": "routes/qrh/audit/lean_build_report.json",
+      "old_sha256": "acfba7456779036075450d4b4f08a7f786058f10fc3e87fd0ae5c39d5d71f85d",
+      "new_sha256": "acfba7456779036075450d4b4f08a7f786058f10fc3e87fd0ae5c39d5d71f85d",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/audit/pdf_build_report.json",
+      "new_path": "routes/qrh/audit/pdf_build_report.json",
+      "old_sha256": "61941b1187ef01df8723821248a44bccb093a45694724776e5739b0f513c7f10",
+      "new_sha256": "ea009cb327e50903dc43d59c188f1da7a08e7b92b6d5cd27b8252bb395753c24",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/audit/source_reviews/Claude_K6_proof_review_2026-11-06.md",
+      "new_path": "routes/qrh/audit/source_reviews/Claude_K6_proof_review_2026-11-06.md",
+      "old_sha256": "b8f4265c0fc9669859e57ad19f6effa248d10d6b1d367d729f3b91e8a26e6abf",
+      "new_sha256": "b8f4265c0fc9669859e57ad19f6effa248d10d6b1d367d729f3b91e8a26e6abf",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/audit/source_reviews/K6_manuscript_revision_review_2026-11-06.md",
+      "new_path": "routes/qrh/audit/source_reviews/K6_manuscript_revision_review_2026-11-06.md",
+      "old_sha256": "4a2e72d61b07d38abdfdaaa0d1a9de056fd0d6870660c3cb0b1e129303fc4f8e",
+      "new_sha256": "4a2e72d61b07d38abdfdaaa0d1a9de056fd0d6870660c3cb0b1e129303fc4f8e",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/audit/source_reviews/K6_revision_numeric_audit_2026-11-06.md",
+      "new_path": "routes/qrh/audit/source_reviews/K6_revision_numeric_audit_2026-11-06.md",
+      "old_sha256": "0b1e8e7e4424cd1448df5026c7ecba58de8310ff57fbcfe9744c9069f61d8be1",
+      "new_sha256": "0b1e8e7e4424cd1448df5026c7ecba58de8310ff57fbcfe9744c9069f61d8be1",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/audit/source_reviews/README.md",
+      "new_path": "routes/qrh/audit/source_reviews/README.md",
+      "old_sha256": "32f36351a989b52240d90ba4180c1d5114637ef41b8d9892369e80c6b0eb34f0",
+      "new_sha256": "32f36351a989b52240d90ba4180c1d5114637ef41b8d9892369e80c6b0eb34f0",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/audit/source_reviews/Response_to_Claude_K6_2026-11-06.md",
+      "new_path": "routes/qrh/audit/source_reviews/Response_to_Claude_K6_2026-11-06.md",
+      "old_sha256": "0936b325c4bf68287f03e70ead3d9c8c14422a94cf75149e756d6f5d515c39de",
+      "new_sha256": "0936b325c4bf68287f03e70ead3d9c8c14422a94cf75149e756d6f5d515c39de",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/audit/source_snapshot_manifest.json",
+      "new_path": "routes/qrh/audit/source_snapshot_manifest.json",
+      "old_sha256": "f0c3e88ecfd0a172eba57c6726320137ee9a9179c207311fc5551972f7e48158",
+      "new_sha256": "f0c3e88ecfd0a172eba57c6726320137ee9a9179c207311fc5551972f7e48158",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/ci/github-actions.yml",
+      "new_path": "routes/qrh/ci/github-actions.yml",
+      "old_sha256": "98d4d01235ba5526ada46b4f8c9abe3d8ec00696b5d6c492b34c763d58f27b81",
+      "new_sha256": "d58ee0bc3e9f6ebee37b255efb696bea7172256437efbbb41eec79d0b56b15a6",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/code/build_lean.py",
+      "new_path": "routes/qrh/code/build_lean.py",
+      "old_sha256": "4ad7b2680ec18828c498088287d94b6d1a758d809a860b12f5a2b5c3d0e82437",
+      "new_sha256": "4ad7b2680ec18828c498088287d94b6d1a758d809a860b12f5a2b5c3d0e82437",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/code/certify_lower_range_k6.py",
+      "new_path": "routes/qrh/code/certify_lower_range_k6.py",
+      "old_sha256": "0d7149060506aa6b18c9c25a14b0e64ba9bbdeade42ba44888c24de6154b2d93",
+      "new_sha256": "0d7149060506aa6b18c9c25a14b0e64ba9bbdeade42ba44888c24de6154b2d93",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/code/certify_smooth_k6.py",
+      "new_path": "routes/qrh/code/certify_smooth_k6.py",
+      "old_sha256": "529444f426560c2e2f9523d1f393bff43a5fa8cf46e2c891d0296343c294355e",
+      "new_sha256": "529444f426560c2e2f9523d1f393bff43a5fa8cf46e2c891d0296343c294355e",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/code/certify_smooth_segment.py",
+      "new_path": "routes/qrh/code/certify_smooth_segment.py",
+      "old_sha256": "ec7e6d218e09967d9161f44074c35ecdce09eb6a3a3a3d307db1e5b36083d21e",
+      "new_sha256": "ec7e6d218e09967d9161f44074c35ecdce09eb6a3a3a3d307db1e5b36083d21e",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/code/certify_tail_cs.py",
+      "new_path": "routes/qrh/code/certify_tail_cs.py",
+      "old_sha256": "162e880b9ad62f6ae47dd16a6b7ea75bce0a34cab35fff2975c169430ee77cb6",
+      "new_sha256": "162e880b9ad62f6ae47dd16a6b7ea75bce0a34cab35fff2975c169430ee77cb6",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/code/generate_lean_certificates.py",
+      "new_path": "routes/qrh/code/generate_lean_certificates.py",
+      "old_sha256": "a6c6a9a465e8e00d590ddb2569fb15186119b22d74673f59cdd56517561a98f5",
+      "new_sha256": "a6c6a9a465e8e00d590ddb2569fb15186119b22d74673f59cdd56517561a98f5",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/code/release_manifest.py",
+      "new_path": "routes/qrh/code/release_manifest.py",
+      "old_sha256": "dab1340f25f26934a553fdf9d3efdbf9f1e220a5b7ece80ca125290f5ba9721d",
+      "new_sha256": "dab1340f25f26934a553fdf9d3efdbf9f1e220a5b7ece80ca125290f5ba9721d",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/code/requirements.txt",
+      "new_path": "routes/qrh/code/requirements.txt",
+      "old_sha256": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+      "new_sha256": "4cef508304e84c21f73cf412712165dc26e40978cb784bc08a876948b559d90d",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/code/review_smooth_k6_refined.py",
+      "new_path": "routes/qrh/code/review_smooth_k6_refined.py",
+      "old_sha256": "2a13aaa4bacc9f3d79fc245348711efd737d1e65e9f09a7210309ca4b0cc9a90",
+      "new_sha256": "2a13aaa4bacc9f3d79fc245348711efd737d1e65e9f09a7210309ca4b0cc9a90",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/code/run_lean.ps1",
+      "new_path": "routes/qrh/code/run_lean.ps1",
+      "old_sha256": "f0a8ece0e22ea543d8b5a289b0867fe09eab59d4de52260bf330a4e0e8c3545d",
+      "new_sha256": "f0a8ece0e22ea543d8b5a289b0867fe09eab59d4de52260bf330a4e0e8c3545d",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/code/verify_k6.py",
+      "new_path": "routes/qrh/code/verify_k6.py",
+      "old_sha256": "7db8e76e2866304a6280105e63f70551269f06ac50e4d992c6f4253b9c12a5eb",
+      "new_sha256": "7db8e76e2866304a6280105e63f70551269f06ac50e4d992c6f4253b9c12a5eb",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6.lean",
+      "new_path": "routes/qrh/lean/LegendreK6.lean",
+      "old_sha256": "b593a9906920765732c180b2d7daeb209d091aacb5ac4ced90fdccb39b704c71",
+      "new_sha256": "b593a9906920765732c180b2d7daeb209d091aacb5ac4ced90fdccb39b704c71",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/AnalyticBounds.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/AnalyticBounds.lean",
+      "old_sha256": "358ee8890545235abdfa1a3506a808bfa39079753e71886688bb54932b11cf66",
+      "new_sha256": "358ee8890545235abdfa1a3506a808bfa39079753e71886688bb54932b11cf66",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Assembly.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Assembly.lean",
+      "old_sha256": "e862e4484f224258f5f0a8c9a3dc251c20b9501227c84486e62ac4d436cd5cf6",
+      "new_sha256": "e862e4484f224258f5f0a8c9a3dc251c20b9501227c84486e62ac4d436cd5cf6",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Audit.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Audit.lean",
+      "old_sha256": "a06d03e695006264be5fbb8cc0ab9cc12aaa30523b1071fc1f3c39916ab99d97",
+      "new_sha256": "a06d03e695006264be5fbb8cc0ab9cc12aaa30523b1071fc1f3c39916ab99d97",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/CHL.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/CHL.lean",
+      "old_sha256": "1b30f370040ceadfeffc325036f0ce0cdd9dc2f4376998dcb8b6deafd452ee4e",
+      "new_sha256": "1b30f370040ceadfeffc325036f0ce0cdd9dc2f4376998dcb8b6deafd452ee4e",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/CHLRange.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/CHLRange.lean",
+      "old_sha256": "4c4e7c0a8a3950a071cd86b698beca2aeefe8959fa93f9a7c43fd32fce9239dd",
+      "new_sha256": "4c4e7c0a8a3950a071cd86b698beca2aeefe8959fa93f9a7c43fd32fce9239dd",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/CertificateData.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/CertificateData.lean",
+      "old_sha256": "0ebf5322751fbd5e09a877f89fea7fb56c22e84b7e3f8b3778574722659a02f7",
+      "new_sha256": "0ebf5322751fbd5e09a877f89fea7fb56c22e84b7e3f8b3778574722659a02f7",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Certificates.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Certificates.lean",
+      "old_sha256": "47418f58ac24fc5d7533ad537a8523c6e6c3432e7a41aeac73d375770a7a6b52",
+      "new_sha256": "47418f58ac24fc5d7533ad537a8523c6e6c3432e7a41aeac73d375770a7a6b52",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/CoreAudit.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/CoreAudit.lean",
+      "old_sha256": "5ac85e4ff20a47b5fa6383a493e76824ced35ff26d8e50a6b2baecc14c413f47",
+      "new_sha256": "5ac85e4ff20a47b5fa6383a493e76824ced35ff26d8e50a6b2baecc14c413f47",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Definitions.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Definitions.lean",
+      "old_sha256": "41eb5d0dd3e5debfb2821c9ecf9eb6b71d0f3df1737d9b3316fbda0f373056ac",
+      "new_sha256": "41eb5d0dd3e5debfb2821c9ecf9eb6b71d0f3df1737d9b3316fbda0f373056ac",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/FiniteAudit.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/FiniteAudit.lean",
+      "old_sha256": "55b0b3f58b4b61415470c43f0dbc43affe684aabd233f9636e956b2b7a4a916c",
+      "new_sha256": "55b0b3f58b4b61415470c43f0dbc43affe684aabd233f9636e956b2b7a4a916c",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/LowerRange.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/LowerRange.lean",
+      "old_sha256": "50a9b13f8f82200a8fe998fe3d996751569ea3267c2498241b063c9c38b2494f",
+      "new_sha256": "50a9b13f8f82200a8fe998fe3d996751569ea3267c2498241b063c9c38b2494f",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block000.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block000.lean",
+      "old_sha256": "78c96f39af019bf1b039ef047e199f3a5222ec29c81337742cd18d35dd6d6dcd",
+      "new_sha256": "78c96f39af019bf1b039ef047e199f3a5222ec29c81337742cd18d35dd6d6dcd",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block001.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block001.lean",
+      "old_sha256": "7d2534a65037db24f277a94987af2060c5182d54f4a21deb76f3f3030af2b598",
+      "new_sha256": "7d2534a65037db24f277a94987af2060c5182d54f4a21deb76f3f3030af2b598",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block002.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block002.lean",
+      "old_sha256": "d801675347dbbed78b0450e3f562fab53118a336c9c501f62a401f53691a27cf",
+      "new_sha256": "d801675347dbbed78b0450e3f562fab53118a336c9c501f62a401f53691a27cf",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block003.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block003.lean",
+      "old_sha256": "925ac1f356b5a9c391c8317bf5fc4ba3b8b4339cfb9af8d11674a352ff4f9863",
+      "new_sha256": "925ac1f356b5a9c391c8317bf5fc4ba3b8b4339cfb9af8d11674a352ff4f9863",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block004.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block004.lean",
+      "old_sha256": "0a985899bc07e20865d810bbfcbb127a4fb0f7a1ba197ee036e789b922526529",
+      "new_sha256": "0a985899bc07e20865d810bbfcbb127a4fb0f7a1ba197ee036e789b922526529",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block005.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block005.lean",
+      "old_sha256": "328af25bb9162a68e7711438a278ce59ccfa57b7cec2bf198aa9bd428ddbda8e",
+      "new_sha256": "328af25bb9162a68e7711438a278ce59ccfa57b7cec2bf198aa9bd428ddbda8e",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block006.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block006.lean",
+      "old_sha256": "0ba106cbaf6a4bcbebdd727cbd39349ce7dacc1b45456b4e3755c23d1c48a1bf",
+      "new_sha256": "0ba106cbaf6a4bcbebdd727cbd39349ce7dacc1b45456b4e3755c23d1c48a1bf",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block007.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block007.lean",
+      "old_sha256": "6e810aa11abaa66da078b84284ca0af147d624ae62748357e19de653da2f3563",
+      "new_sha256": "6e810aa11abaa66da078b84284ca0af147d624ae62748357e19de653da2f3563",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block008.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block008.lean",
+      "old_sha256": "95d37f923d77b4b3b7f3508ce6757aa363fb8bc224fa3d1a9d688bd1b58ca17a",
+      "new_sha256": "95d37f923d77b4b3b7f3508ce6757aa363fb8bc224fa3d1a9d688bd1b58ca17a",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block009.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block009.lean",
+      "old_sha256": "34ecdcf6b3003c39c7d514561ef8aeee063087bf15434a3bb049a9c373df8d93",
+      "new_sha256": "34ecdcf6b3003c39c7d514561ef8aeee063087bf15434a3bb049a9c373df8d93",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block010.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block010.lean",
+      "old_sha256": "583db80ddebcc7430059294a2ad617cf35c806fc133c57efc1e4322dd9d19211",
+      "new_sha256": "583db80ddebcc7430059294a2ad617cf35c806fc133c57efc1e4322dd9d19211",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block011.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block011.lean",
+      "old_sha256": "bdfb73ff11248d52fec85f200a13f180794099ab687ce4dc7e00303ab8c37f50",
+      "new_sha256": "bdfb73ff11248d52fec85f200a13f180794099ab687ce4dc7e00303ab8c37f50",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block012.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block012.lean",
+      "old_sha256": "6d2691662a26154c648f2bd93e2c716524966e68f00ea2fc0b1a35654b1fec79",
+      "new_sha256": "6d2691662a26154c648f2bd93e2c716524966e68f00ea2fc0b1a35654b1fec79",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block013.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block013.lean",
+      "old_sha256": "142f6f90b8860fe0bc87b599946a419e3c240f0a3076f0d4b7b3bb268db9898f",
+      "new_sha256": "142f6f90b8860fe0bc87b599946a419e3c240f0a3076f0d4b7b3bb268db9898f",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block014.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block014.lean",
+      "old_sha256": "f8b1555bd82b4372090d30a594f6365704ff88a58b5a7e1d7732e3ed15f52895",
+      "new_sha256": "f8b1555bd82b4372090d30a594f6365704ff88a58b5a7e1d7732e3ed15f52895",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block015.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block015.lean",
+      "old_sha256": "f173cf9430c26ebec20988c4fcf210780851fb2f82f9a7d2ab9c49d2fcac5b82",
+      "new_sha256": "f173cf9430c26ebec20988c4fcf210780851fb2f82f9a7d2ab9c49d2fcac5b82",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block016.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block016.lean",
+      "old_sha256": "452c54677029a3257596e491be9494f947d2cdba11d2b92a46ff3495f26a8ee1",
+      "new_sha256": "452c54677029a3257596e491be9494f947d2cdba11d2b92a46ff3495f26a8ee1",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block017.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block017.lean",
+      "old_sha256": "18b7433088576dc463e67905f5f7fd076dd7bf620cf6bce8a2bf1a7fae16d53a",
+      "new_sha256": "18b7433088576dc463e67905f5f7fd076dd7bf620cf6bce8a2bf1a7fae16d53a",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block018.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block018.lean",
+      "old_sha256": "dd8bd04046c5749088e572a40538865e9ee950e181530a4f02cf5ce5753dade0",
+      "new_sha256": "dd8bd04046c5749088e572a40538865e9ee950e181530a4f02cf5ce5753dade0",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block019.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block019.lean",
+      "old_sha256": "3cffd813536dd652e1ff582597460cdcba30d64f65d74d8f119ecf6490cd18e0",
+      "new_sha256": "3cffd813536dd652e1ff582597460cdcba30d64f65d74d8f119ecf6490cd18e0",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block020.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block020.lean",
+      "old_sha256": "4c4c4cba60920ba173cbcdb9ed59518fa3827fc99fffd69f520b0c05a90605dd",
+      "new_sha256": "4c4c4cba60920ba173cbcdb9ed59518fa3827fc99fffd69f520b0c05a90605dd",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block021.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block021.lean",
+      "old_sha256": "9a431199b002728385778d490777634fd5db632a31cb8a7640c88a577c7770d6",
+      "new_sha256": "9a431199b002728385778d490777634fd5db632a31cb8a7640c88a577c7770d6",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block022.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block022.lean",
+      "old_sha256": "edfe4697dd479eb3999604b7fefe1c7e2c57e84dab73d31e543e1c97151319b2",
+      "new_sha256": "edfe4697dd479eb3999604b7fefe1c7e2c57e84dab73d31e543e1c97151319b2",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block023.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block023.lean",
+      "old_sha256": "771e02015ed0fcd4e7c4fe832e9eed96f1549b38662ad1392655f192e344b237",
+      "new_sha256": "771e02015ed0fcd4e7c4fe832e9eed96f1549b38662ad1392655f192e344b237",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block024.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block024.lean",
+      "old_sha256": "07ecf806ec7ce40c1d2048cd57b9a2eaef2c7aaf703a0e84a76164ab71d69027",
+      "new_sha256": "07ecf806ec7ce40c1d2048cd57b9a2eaef2c7aaf703a0e84a76164ab71d69027",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block025.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block025.lean",
+      "old_sha256": "e0883698b8c05f5867af1477b3a3ec7db06684a26f6ab164c5bb76c0e9dbbd80",
+      "new_sha256": "e0883698b8c05f5867af1477b3a3ec7db06684a26f6ab164c5bb76c0e9dbbd80",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Pratt/Block026.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Pratt/Block026.lean",
+      "old_sha256": "ecc47abfc206910ddf238d48ae529a3ccf232cf99bab24d808784103214ba3ea",
+      "new_sha256": "ecc47abfc206910ddf238d48ae529a3ccf232cf99bab24d808784103214ba3ea",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/PrimeExtraction.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/PrimeExtraction.lean",
+      "old_sha256": "713c77688d31d4e43eee9afb6f03eaaeecf246b54343b1e833de37ac08195d15",
+      "new_sha256": "713c77688d31d4e43eee9afb6f03eaaeecf246b54343b1e833de37ac08195d15",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/PrimeWitnesses.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/PrimeWitnesses.lean",
+      "old_sha256": "930ae7f08c0033e64156087d889ab4d4089677cd8f94b7c49db2888a528c0f32",
+      "new_sha256": "930ae7f08c0033e64156087d889ab4d4089677cd8f94b7c49db2888a528c0f32",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Reduction.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Reduction.lean",
+      "old_sha256": "b9cb1ebad378ba363b3b9a69d49b12b558957950303540009a08592ded3468f4",
+      "new_sha256": "b9cb1ebad378ba363b3b9a69d49b12b558957950303540009a08592ded3468f4",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/TailArithmetic.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/TailArithmetic.lean",
+      "old_sha256": "26c495f768f6402a020d91dcc5bca230ff2b63b46955f0593a93a1526bb15c72",
+      "new_sha256": "26c495f768f6402a020d91dcc5bca230ff2b63b46955f0593a93a1526bb15c72",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/TailMonotonic.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/TailMonotonic.lean",
+      "old_sha256": "a42b8f02c149ad809148f0f109a6c75f117a0f787f54a1132924b865a3876d48",
+      "new_sha256": "a42b8f02c149ad809148f0f109a6c75f117a0f787f54a1132924b865a3876d48",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/TailResult.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/TailResult.lean",
+      "old_sha256": "5b78fae5f93f1288540d24ad3cae620f5b119bcfdf9c284ad0806a938b6d1ac5",
+      "new_sha256": "5b78fae5f93f1288540d24ad3cae620f5b119bcfdf9c284ad0806a938b6d1ac5",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/LegendreK6/Thresholds.lean",
+      "new_path": "routes/qrh/lean/LegendreK6/Thresholds.lean",
+      "old_sha256": "fe7e55b7672d77042b76b40a7cccd54d9e839733739ec507f99debe7dceb601d",
+      "new_sha256": "fe7e55b7672d77042b76b40a7cccd54d9e839733739ec507f99debe7dceb601d",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/lake-manifest.json",
+      "new_path": "routes/qrh/lean/lake-manifest.json",
+      "old_sha256": "1a2552df9acfbb7ff8f41bf877975acfcbff176531b82f3e41a6761f3cb77d23",
+      "new_sha256": "1a2552df9acfbb7ff8f41bf877975acfcbff176531b82f3e41a6761f3cb77d23",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/lean/lakefile.toml",
+      "new_path": "routes/qrh/lean/lakefile.toml",
+      "old_sha256": "2e3997cb49ae58034ce5881f3ea36d38db24751b8eb94a2bb3b2a218cf91bcb4",
+      "new_sha256": "2e3997cb49ae58034ce5881f3ea36d38db24751b8eb94a2bb3b2a218cf91bcb4",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/lean/lean-toolchain",
+      "new_path": "routes/qrh/lean/lean-toolchain",
+      "old_sha256": "11c697aebe5b539d74f5069e497a588e7dfab1c4eeb74313f28357e351c55ca3",
+      "new_sha256": "11c697aebe5b539d74f5069e497a588e7dfab1c4eeb74313f28357e351c55ca3",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/paper/README.md",
+      "new_path": "routes/qrh/paper/README.md",
+      "old_sha256": "02b4922732a54b646424e9bf2bb6d24e64f849830f585ff48b96d0c988c860a3",
+      "new_sha256": "02b4922732a54b646424e9bf2bb6d24e64f849830f585ff48b96d0c988c860a3",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/paper/build_tex.py",
+      "new_path": "routes/qrh/paper/build_tex.py",
+      "old_sha256": "5f5de00ab712bf548b9f540eb0b8824ded222d3ed3a3be90a296dfb066bcbb27",
+      "new_sha256": "168fec5511569c9e94658872e88a926cf9501049558379e1d4c96656cbc255bb",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/paper/main.pdf",
+      "new_path": "routes/qrh/paper/main.pdf",
+      "old_sha256": "afa4f74b7699ae1e7268c41c0659bce8b1baa16788fc80974313ed525111047d",
+      "new_sha256": "39f0f0bd9a83816527974c1e1394564efd8c6dad79e00bd5b2c1d2272079400f",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/paper/main.tex",
+      "new_path": "routes/qrh/paper/main.tex",
+      "old_sha256": "a07b8bf367f8a05fe2055c4eb7f7b83154de2addf92b5e5d2c438354363674e1",
+      "new_sha256": "7ef0a62ebd78f442c8203e1194a33489cba1fd83a5299177bf21d4ce9630d38f",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/paper/manuscript.md",
+      "new_path": "routes/qrh/paper/manuscript.md",
+      "old_sha256": "c5bc5224c34267f2733de261b6485fc2a34a0bcdb02c8728660db9916c50e30a",
+      "new_sha256": "74084d1b194177f89c04153b8e486aa0dfeb2eedab485855bfbb802bbb49a35a",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/paper/references.bib",
+      "new_path": "routes/qrh/paper/references.bib",
+      "old_sha256": "6c676e6e7c3937ebb8ae5dfc4e5718ffdd6a67ef6a334f3ed9d20d6d858f776d",
+      "new_sha256": "6c676e6e7c3937ebb8ae5dfc4e5718ffdd6a67ef6a334f3ed9d20d6d858f776d",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "conditional-k6/results/k6_verification_summary.json",
+      "new_path": "routes/qrh/results/k6_verification_summary.json",
+      "old_sha256": "f5a9f56acf4c73b85b436a1dc6b0f03be5786d0e2f1e927f6e8b5bfb784f31b2",
+      "new_sha256": "f5a9f56acf4c73b85b436a1dc6b0f03be5786d0e2f1e927f6e8b5bfb784f31b2",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/results/lower_range_k6_certificate.json",
+      "new_path": "routes/qrh/results/lower_range_k6_certificate.json",
+      "old_sha256": "a108bd9166c0c8c137ee5299e1b5a135e825efa6514894be5054872299fd60fc",
+      "new_sha256": "a108bd9166c0c8c137ee5299e1b5a135e825efa6514894be5054872299fd60fc",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/results/pratt_certificate_data.json",
+      "new_path": "routes/qrh/results/pratt_certificate_data.json",
+      "old_sha256": "4dbd7513fb98eaf9e24f17ee4e86c1af62af22544aa3da5ec025c80459a29932",
+      "new_sha256": "4dbd7513fb98eaf9e24f17ee4e86c1af62af22544aa3da5ec025c80459a29932",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/results/smooth_k6_certificate.json",
+      "new_path": "routes/qrh/results/smooth_k6_certificate.json",
+      "old_sha256": "65dbfce3f0caa99f71f3bc74d9e2f61cfc7501ee28cdfe5ae584696c60429b95",
+      "new_sha256": "65dbfce3f0caa99f71f3bc74d9e2f61cfc7501ee28cdfe5ae584696c60429b95",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/results/smooth_segment_certificate.json",
+      "new_path": "routes/qrh/results/smooth_segment_certificate.json",
+      "old_sha256": "7e3768054da03709927d63a3f2d5766b7d0b26a7f600d4a8005621413e1a2a7f",
+      "new_sha256": "7e3768054da03709927d63a3f2d5766b7d0b26a7f600d4a8005621413e1a2a7f",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "conditional-k6/results/tail_cs_certificate.json",
+      "new_path": "routes/qrh/results/tail_cs_certificate.json",
+      "old_sha256": "d579daae45c617416d14282b69aa727e0f4b7e10699e73678bfebc6b2b743e84",
+      "new_sha256": "d579daae45c617416d14282b69aa727e0f4b7e10699e73678bfebc6b2b743e84",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "docs/HYB_theorem.md",
+      "new_path": "routes/traditional/docs/HYB_theorem.md",
+      "old_sha256": "8c14c344347edaa5bbfd328c49c1ff53544451835e37a630229356db6a8a5d08",
+      "new_sha256": "8c14c344347edaa5bbfd328c49c1ff53544451835e37a630229356db6a8a5d08",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "docs/README.md",
+      "new_path": "routes/traditional/docs/README.md",
+      "old_sha256": "284c607a3d4b9ca1cb3fc6010e5a5523a6e395f6e5e545672be17c8614f85379",
+      "new_sha256": "284c607a3d4b9ca1cb3fc6010e5a5523a6e395f6e5e545672be17c8614f85379",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "docs/k67_theorem.md",
+      "new_path": "routes/traditional/docs/k67_theorem.md",
+      "old_sha256": "1f609444c82eba4bd5b754e6465f1017af3fbecf1ed3d5ea0e55a64405e31ec2",
+      "new_sha256": "1f609444c82eba4bd5b754e6465f1017af3fbecf1ed3d5ea0e55a64405e31ec2",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "docs/smoothing.md",
+      "new_path": "routes/traditional/docs/smoothing.md",
+      "old_sha256": "3b9d0f85483e7656d5d742ed7579051d1a4fa950f0385abbe5d12163882064e7",
+      "new_sha256": "3b9d0f85483e7656d5d742ed7579051d1a4fa950f0385abbe5d12163882064e7",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/LegendreK67/.gitignore",
+      "new_path": "routes/traditional/proof/lean/.gitignore",
+      "old_sha256": "b3ad09fc93f83fdbd0bee771258dd4a58d3798fd7e6048611dde5a804bb43f1e",
+      "new_sha256": "b3ad09fc93f83fdbd0bee771258dd4a58d3798fd7e6048611dde5a804bb43f1e",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/LegendreK67/LegendreK67.lean",
+      "new_path": "routes/traditional/proof/lean/LegendreK67.lean",
+      "old_sha256": "727b484d21886a47c4cc7518f38ca1e8d615dca6ca1c0a937eb3c9d81f8c4360",
+      "new_sha256": "727b484d21886a47c4cc7518f38ca1e8d615dca6ca1c0a937eb3c9d81f8c4360",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/LegendreK67/LegendreK67/Abel.lean",
+      "new_path": "routes/traditional/proof/lean/LegendreK67/Abel.lean",
+      "old_sha256": "6951d3177c0958c695f181489876bcf9ad96d2d9e9163b7a57b582a4893785dd",
+      "new_sha256": "6951d3177c0958c695f181489876bcf9ad96d2d9e9163b7a57b582a4893785dd",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/LegendreK67/LegendreK67/Assembly.lean",
+      "new_path": "routes/traditional/proof/lean/LegendreK67/Assembly.lean",
+      "old_sha256": "656ecc74a353497891570d33b4fac4b8b32341504dd7d6ef0650a6b06593d9b5",
+      "new_sha256": "656ecc74a353497891570d33b4fac4b8b32341504dd7d6ef0650a6b06593d9b5",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/LegendreK67/LegendreK67/Audit.lean",
+      "new_path": "routes/traditional/proof/lean/LegendreK67/Audit.lean",
+      "old_sha256": "75e29f45283baa807bcfdf6b56f62165793977b95d09ad759c818533a19a1763",
+      "new_sha256": "75e29f45283baa807bcfdf6b56f62165793977b95d09ad759c818533a19a1763",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/LegendreK67/LegendreK67/CHL.lean",
+      "new_path": "routes/traditional/proof/lean/LegendreK67/CHL.lean",
+      "old_sha256": "698036d060d239894f4b9459a817faae5e87c4e7a4c461a1a9e53d7051c14f78",
+      "new_sha256": "698036d060d239894f4b9459a817faae5e87c4e7a4c461a1a9e53d7051c14f78",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/LegendreK67/LegendreK67/ChebyshevPrime.lean",
+      "new_path": "routes/traditional/proof/lean/LegendreK67/ChebyshevPrime.lean",
+      "old_sha256": "7bf907ea61e65762b732b32b9ce6d784d2cca36cb8d071ecd7688a1fc408f803",
+      "new_sha256": "7bf907ea61e65762b732b32b9ce6d784d2cca36cb8d071ecd7688a1fc408f803",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/LegendreK67/LegendreK67/Combination.lean",
+      "new_path": "routes/traditional/proof/lean/LegendreK67/Combination.lean",
+      "old_sha256": "cdffcea65ce743a687c45314ba5a80dfce0dfb8c6f9438d02b84f931c7ce5a2f",
+      "new_sha256": "cdffcea65ce743a687c45314ba5a80dfce0dfb8c6f9438d02b84f931c7ce5a2f",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/LegendreK67/LegendreK67/Integrals.lean",
+      "new_path": "routes/traditional/proof/lean/LegendreK67/Integrals.lean",
+      "old_sha256": "7d0d7c0afd41863e18f1ebcdca8b6206803f67290e3e4b1003d3f023bfa526a4",
+      "new_sha256": "7d0d7c0afd41863e18f1ebcdca8b6206803f67290e3e4b1003d3f023bfa526a4",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/LegendreK67/LegendreK67/Reduction.lean",
+      "new_path": "routes/traditional/proof/lean/LegendreK67/Reduction.lean",
+      "old_sha256": "e892887c35bb77f01da38cec9e36ccbe364ec35a6637544372f818c1c9a06697",
+      "new_sha256": "e892887c35bb77f01da38cec9e36ccbe364ec35a6637544372f818c1c9a06697",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/LegendreK67/README.md",
+      "new_path": "routes/traditional/proof/lean/README.md",
+      "old_sha256": "71022f91f9c6a584dcf373ac174dc9294d8d2fab2e70a277ff1fcc95a8ab4ea2",
+      "new_sha256": "1a112512e56e49f17885a6c5f9f8237ef5e75656e1d2b6a4f6225c21245ff16d",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/LegendreK67/lake-manifest.json",
+      "new_path": "routes/traditional/proof/lean/lake-manifest.json",
+      "old_sha256": "4c87330ad72abcef7e155e062d48de29024bc7c0760c7e9c0a662ea10d4a4988",
+      "new_sha256": "4c87330ad72abcef7e155e062d48de29024bc7c0760c7e9c0a662ea10d4a4988",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/LegendreK67/lakefile.toml",
+      "new_path": "routes/traditional/proof/lean/lakefile.toml",
+      "old_sha256": "b242df5161daad2545d526b166d9ce5bb353d0bbc1a3f66d34914fdebc0fd65a",
+      "new_sha256": "b242df5161daad2545d526b166d9ce5bb353d0bbc1a3f66d34914fdebc0fd65a",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/LegendreK67/lean-toolchain",
+      "new_path": "routes/traditional/proof/lean/lean-toolchain",
+      "old_sha256": "11c697aebe5b539d74f5069e497a588e7dfab1c4eeb74313f28357e351c55ca3",
+      "new_sha256": "11c697aebe5b539d74f5069e497a588e7dfab1c4eeb74313f28357e351c55ca3",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/README.md",
+      "new_path": "routes/traditional/proof/README.md",
+      "old_sha256": "813119e0ef3d4a61ffaea791992d25406530fe215bb426551e57cf9379c9cc30",
+      "new_sha256": "a537dd5102c86a31be5428521a5f29f8655d2d818d4518e5b6a75eb83cc8821e",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/REVIEW_CHECKLIST.md",
+      "new_path": "routes/traditional/proof/REVIEW_CHECKLIST.md",
+      "old_sha256": "2604ead562fd91614e8a91529fd749900d51abad1fa84e8bf3b7e1a45d01da4c",
+      "new_sha256": "9679b2ee303923ad4f2b086ec625ee94544967829177c5cf3007e26a57a1bf87",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/certificates/cert_hyb_v3_k70_bty_pub.csv",
+      "new_path": "routes/traditional/proof/certificates/cert_hyb_v3_k70_bty_pub.csv",
+      "old_sha256": "8beaeacdd9e8c232255594a766c28dca420390529279fcad41d5bb9eb7285412",
+      "new_sha256": "8beaeacdd9e8c232255594a766c28dca420390529279fcad41d5bb9eb7285412",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/certificates/cert_hyb_v3_k74_pub.csv",
+      "new_path": "routes/traditional/proof/certificates/cert_hyb_v3_k74_pub.csv",
+      "old_sha256": "2be7f34060850d0135aaa8f34601151e86f30c7ffdf292a23001a69289a3b6aa",
+      "new_sha256": "2be7f34060850d0135aaa8f34601151e86f30c7ffdf292a23001a69289a3b6aa",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/certificates/cert_smooth_v3_k70_bty_pub.csv",
+      "new_path": "routes/traditional/proof/certificates/cert_smooth_v3_k70_bty_pub.csv",
+      "old_sha256": "894422d0a58db0cca0121e7473bc1cf566dc7a0bd73b49110ea9e2879cd4c756",
+      "new_sha256": "894422d0a58db0cca0121e7473bc1cf566dc7a0bd73b49110ea9e2879cd4c756",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/certificates/cert_smooth_v3_k74_pub.csv",
+      "new_path": "routes/traditional/proof/certificates/cert_smooth_v3_k74_pub.csv",
+      "old_sha256": "e2272b2e103101b5732ac1f512d4a82b2b05286cdac432cfe8b05ee0165b69a6",
+      "new_sha256": "e2272b2e103101b5732ac1f512d4a82b2b05286cdac432cfe8b05ee0165b69a6",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/certificates/sanity_small_k.txt",
+      "new_path": "routes/traditional/proof/certificates/sanity_small_k.txt",
+      "old_sha256": "938e65875c38778338ee7c7217c5bb5eb4dec72b6fe3b5c8978be187dad32ca4",
+      "new_sha256": "938e65875c38778338ee7c7217c5bb5eb4dec72b6fe3b5c8978be187dad32ca4",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/certificates/sensitivity_output.txt",
+      "new_path": "routes/traditional/proof/certificates/sensitivity_output.txt",
+      "old_sha256": "33aa694ee2f24b73191a7cc2818b741047dfa3260ead241b5d30085df8a19eef",
+      "new_sha256": "33aa694ee2f24b73191a7cc2818b741047dfa3260ead241b5d30085df8a19eef",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/certificates/superseded_lee_kln/README.md",
+      "new_path": "routes/traditional/proof/certificates/superseded_lee_kln/README.md",
+      "old_sha256": "d7e169a3a02e23a5b4b3e7aec9fa7bc2a74d7ffd01992a9c1e73a27671860efd",
+      "new_sha256": "d7e169a3a02e23a5b4b3e7aec9fa7bc2a74d7ffd01992a9c1e73a27671860efd",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/certificates/superseded_lee_kln/cert_hyb_k67.csv",
+      "new_path": "routes/traditional/proof/certificates/superseded_lee_kln/cert_hyb_k67.csv",
+      "old_sha256": "a42a4dad2539cc98f941d1e56d888b5a1d3fb8ad05284d42c44bb7b6271b61bf",
+      "new_sha256": "a42a4dad2539cc98f941d1e56d888b5a1d3fb8ad05284d42c44bb7b6271b61bf",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/certificates/superseded_lee_kln/cert_smooth_full_k67_littlewood_thesis.csv",
+      "new_path": "routes/traditional/proof/certificates/superseded_lee_kln/cert_smooth_full_k67_littlewood_thesis.csv",
+      "old_sha256": "4eb1db2a6494a8c2df90bced8f434a407cd09c139f493a9a7b7e35e1a40da94d",
+      "new_sha256": "4eb1db2a6494a8c2df90bced8f434a407cd09c139f493a9a7b7e35e1a40da94d",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/certificates/superseded_lee_kln/cert_smooth_full_k67_thesis.csv",
+      "new_path": "routes/traditional/proof/certificates/superseded_lee_kln/cert_smooth_full_k67_thesis.csv",
+      "old_sha256": "424a26297801e6ae3c76d3c99cf57f2adfa246fdf3af75a8e225cc713e88c509",
+      "new_sha256": "424a26297801e6ae3c76d3c99cf57f2adfa246fdf3af75a8e225cc713e88c509",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/certificates/superseded_lee_kln/verify_all_output.txt",
+      "new_path": "routes/traditional/proof/certificates/superseded_lee_kln/verify_all_output.txt",
+      "old_sha256": "f6920aa13cfb5380bf1daf7954355004c3c14c5a17c57e00aa125a4f0ae18909",
+      "new_sha256": "f6920aa13cfb5380bf1daf7954355004c3c14c5a17c57e00aa125a4f0ae18909",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/certificates/superseded_lee_kln/verify_pure_arb_output.txt",
+      "new_path": "routes/traditional/proof/certificates/superseded_lee_kln/verify_pure_arb_output.txt",
+      "old_sha256": "1f6417571ef0def4ab24a8bb2ae5b068c292e2aefedacc012fd833d617670940",
+      "new_sha256": "1f6417571ef0def4ab24a8bb2ae5b068c292e2aefedacc012fd833d617670940",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/certificates/superseded_v2/README.md",
+      "new_path": "routes/traditional/proof/certificates/superseded_v2/README.md",
+      "old_sha256": "5c18b6cc9a5e187c74220854c74e2a2b1209666674d4cce93ef87a23c9b19412",
+      "new_sha256": "5c18b6cc9a5e187c74220854c74e2a2b1209666674d4cce93ef87a23c9b19412",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/certificates/superseded_v2/cert_hyb_jy_k67_lw.csv",
+      "new_path": "routes/traditional/proof/certificates/superseded_v2/cert_hyb_jy_k67_lw.csv",
+      "old_sha256": "752aa1ed9ed9012fd06821423880afeb855225c75aaca2509019a2a894b25516",
+      "new_sha256": "752aa1ed9ed9012fd06821423880afeb855225c75aaca2509019a2a894b25516",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/certificates/superseded_v2/cert_hyb_jy_k67_thesis.csv",
+      "new_path": "routes/traditional/proof/certificates/superseded_v2/cert_hyb_jy_k67_thesis.csv",
+      "old_sha256": "03358fa29696a062a67368a52189c560490046a9dd2a42ca5d4dbac8d1fb0b2c",
+      "new_sha256": "03358fa29696a062a67368a52189c560490046a9dd2a42ca5d4dbac8d1fb0b2c",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/certificates/superseded_v2/cert_smooth_full_k67_lw_jy.csv",
+      "new_path": "routes/traditional/proof/certificates/superseded_v2/cert_smooth_full_k67_lw_jy.csv",
+      "old_sha256": "0faf355cbccab91f470815fc4e85ae8c44266095df34ecaa542bb02cf48039c1",
+      "new_sha256": "0faf355cbccab91f470815fc4e85ae8c44266095df34ecaa542bb02cf48039c1",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/certificates/superseded_v2/cert_smooth_full_k67_thesis_jy.csv",
+      "new_path": "routes/traditional/proof/certificates/superseded_v2/cert_smooth_full_k67_thesis_jy.csv",
+      "old_sha256": "bb84cdcaf0893069318bf792509a96a40dcd4edf5d63bfd40ba9bc8929e8fe1e",
+      "new_sha256": "bb84cdcaf0893069318bf792509a96a40dcd4edf5d63bfd40ba9bc8929e8fe1e",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/certificates/superseded_v2/verify_all_output.txt",
+      "new_path": "routes/traditional/proof/certificates/superseded_v2/verify_all_output.txt",
+      "old_sha256": "f8ad36f64599be2bcbdb2fee3f439fbb222b04722d007d2abf2734f95ad698e7",
+      "new_sha256": "f8ad36f64599be2bcbdb2fee3f439fbb222b04722d007d2abf2734f95ad698e7",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/certificates/verify_all_output.txt",
+      "new_path": "routes/traditional/proof/certificates/verify_all_output.txt",
+      "old_sha256": "d5b2609a49bce1da71566bbca870fdee9aedf598fb57e3bc366ff25e9429155a",
+      "new_sha256": "d5b2609a49bce1da71566bbca870fdee9aedf598fb57e3bc366ff25e9429155a",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/certificates/withdrawn_k67/README.md",
+      "new_path": "routes/traditional/proof/certificates/withdrawn_k67/README.md",
+      "old_sha256": "93753522829384130d351fa8cefe14656fa74ff098bf7543f4838d358872be88",
+      "new_sha256": "93753522829384130d351fa8cefe14656fa74ff098bf7543f4838d358872be88",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/certificates/withdrawn_k67/cert_hyb_v3_k67_lw.csv",
+      "new_path": "routes/traditional/proof/certificates/withdrawn_k67/cert_hyb_v3_k67_lw.csv",
+      "old_sha256": "b2b39705422bcd195a25468632ce65b3f567965e156ccecef6d672341514e454",
+      "new_sha256": "b2b39705422bcd195a25468632ce65b3f567965e156ccecef6d672341514e454",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/certificates/withdrawn_k67/cert_hyb_v3_k67_thesis.csv",
+      "new_path": "routes/traditional/proof/certificates/withdrawn_k67/cert_hyb_v3_k67_thesis.csv",
+      "old_sha256": "c3f019d8d7ad9f9540072385b23299542a6ace715dcef29065ac192f17fb0909",
+      "new_sha256": "c3f019d8d7ad9f9540072385b23299542a6ace715dcef29065ac192f17fb0909",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/certificates/withdrawn_k67/cert_smooth_v3_k67_lw.csv",
+      "new_path": "routes/traditional/proof/certificates/withdrawn_k67/cert_smooth_v3_k67_lw.csv",
+      "old_sha256": "fcb994a2803711110902fe2c7c1b0efc101d35d517a8cf31a6ca64bff816340b",
+      "new_sha256": "fcb994a2803711110902fe2c7c1b0efc101d35d517a8cf31a6ca64bff816340b",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/certificates/withdrawn_k67/cert_smooth_v3_k67_thesis.csv",
+      "new_path": "routes/traditional/proof/certificates/withdrawn_k67/cert_smooth_v3_k67_thesis.csv",
+      "old_sha256": "61fafa1af6cd8681c72dd60b224a522bae68c072995836fff1061f98d6bad3fb",
+      "new_sha256": "61fafa1af6cd8681c72dd60b224a522bae68c072995836fff1061f98d6bad3fb",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/code/bound.py",
+      "new_path": "routes/traditional/proof/code/bound.py",
+      "old_sha256": "c407e3d8a697efb85dbdd333066b80644044e66ba172866e7b69a5b615ef1d76",
+      "new_sha256": "c407e3d8a697efb85dbdd333066b80644044e66ba172866e7b69a5b615ef1d76",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/code/check_certificate.py",
+      "new_path": "routes/traditional/proof/code/check_certificate.py",
+      "old_sha256": "3b5034eea85784e3844212493b2f78d229aa8c29a9187ee0eef23db23997c6c6",
+      "new_sha256": "3b5034eea85784e3844212493b2f78d229aa8c29a9187ee0eef23db23997c6c6",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/code/check_smooth_chain.py",
+      "new_path": "routes/traditional/proof/code/check_smooth_chain.py",
+      "old_sha256": "b649a1528a2522c5ef4d8465b8d88fbe69d875919f82a862ad541bf1cf9b0958",
+      "new_sha256": "b649a1528a2522c5ef4d8465b8d88fbe69d875919f82a862ad541bf1cf9b0958",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/code/kln_lemma32_check.py",
+      "new_path": "routes/traditional/proof/code/kln_lemma32_check.py",
+      "old_sha256": "61d34807e5cb4905bd456d6d1a814f6f5f0c1be20194db2ce01f537f66664b68",
+      "new_sha256": "61d34807e5cb4905bd456d6d1a814f6f5f0c1be20194db2ce01f537f66664b68",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/code/make_chain.py",
+      "new_path": "routes/traditional/proof/code/make_chain.py",
+      "old_sha256": "61a571a4435106c0932fdd8eeeb8e3c9be83fc1267e2f5dbc90d9bda25ebf7ba",
+      "new_sha256": "61a571a4435106c0932fdd8eeeb8e3c9be83fc1267e2f5dbc90d9bda25ebf7ba",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/code/numeric_facts.py",
+      "new_path": "routes/traditional/proof/code/numeric_facts.py",
+      "old_sha256": "cd723260799a7a0e6fd23cbc4d634116180a4b1505f4e9f322a04093a8900684",
+      "new_sha256": "cd723260799a7a0e6fd23cbc4d634116180a4b1505f4e9f322a04093a8900684",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/code/requirements.txt",
+      "new_path": "routes/traditional/proof/code/requirements.txt",
+      "old_sha256": "4dd812c97601eb8479418912d5e6dde73c9c8f963ce59b9d747b757036880d68",
+      "new_sha256": "4dd812c97601eb8479418912d5e6dde73c9c8f963ce59b9d747b757036880d68",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/code/rigorous_hyb.py",
+      "new_path": "routes/traditional/proof/code/rigorous_hyb.py",
+      "old_sha256": "01051fd6fc7ac34df6c02578bcd049c5f80f1dc47ac1e6b263de373fa53e987b",
+      "new_sha256": "01051fd6fc7ac34df6c02578bcd049c5f80f1dc47ac1e6b263de373fa53e987b",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/code/rigorous_smooth.py",
+      "new_path": "routes/traditional/proof/code/rigorous_smooth.py",
+      "old_sha256": "4af1a245b80fd2abed547e52ccf12335d82b807f665f1b16c846a17ce5252b74",
+      "new_sha256": "4af1a245b80fd2abed547e52ccf12335d82b807f665f1b16c846a17ce5252b74",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/code/scan_min_k.py",
+      "new_path": "routes/traditional/proof/code/scan_min_k.py",
+      "old_sha256": "ecb160dc368d28ee28c40bac32b97f3ff3f8289c053fb2983652fc3355eb8853",
+      "new_sha256": "ecb160dc368d28ee28c40bac32b97f3ff3f8289c053fb2983652fc3355eb8853",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/code/sensitivity.py",
+      "new_path": "routes/traditional/proof/code/sensitivity.py",
+      "old_sha256": "81d6a4b0075c9f35af1334c9369a0ba071b608dc0bcc51db0bb25cf949d5efef",
+      "new_sha256": "81d6a4b0075c9f35af1334c9369a0ba071b608dc0bcc51db0bb25cf949d5efef",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/code/tail.py",
+      "new_path": "routes/traditional/proof/code/tail.py",
+      "old_sha256": "41fd3454e7d61f5d8dea884245a451ff76e0d02dbf46a67205c224d980674a54",
+      "new_sha256": "41fd3454e7d61f5d8dea884245a451ff76e0d02dbf46a67205c224d980674a54",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/code/verify_all.py",
+      "new_path": "routes/traditional/proof/code/verify_all.py",
+      "old_sha256": "24c1eb830b0c2596432a047947c95dab61fd0cb692ecc90523f372a2e405d9b4",
+      "new_sha256": "24c1eb830b0c2596432a047947c95dab61fd0cb692ecc90523f372a2e405d9b4",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/conversation/conversation_en.md",
+      "new_path": "routes/traditional/proof/conversation/conversation_en.md",
+      "old_sha256": "49f9e18263a01886c05b068a82764a028e627c72eb4a47c31f6a6f90d8444f9f",
+      "new_sha256": "49f9e18263a01886c05b068a82764a028e627c72eb4a47c31f6a6f90d8444f9f",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/conversation/conversation_zh.md",
+      "new_path": "routes/traditional/proof/conversation/conversation_zh.md",
+      "old_sha256": "3513b9a9ddf52f78106a2c6352636dfc12451bd3fab1f5c7551286f466dd5516",
+      "new_sha256": "3513b9a9ddf52f78106a2c6352636dfc12451bd3fab1f5c7551286f466dd5516",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/conversation/export_to_md.py",
+      "new_path": "routes/traditional/proof/conversation/export_to_md.py",
+      "old_sha256": "9d67e67287ca174ac693b0a986afce37e20dbcc5f6c2611e6e8ae262d185dd2b",
+      "new_sha256": "9d67e67287ca174ac693b0a986afce37e20dbcc5f6c2611e6e8ae262d185dd2b",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/input_verification/report_density.md",
+      "new_path": "routes/traditional/proof/input_verification/report_density.md",
+      "old_sha256": "b2541be1be9e69ff05d2a8a9373b7b3fcbdf17aebda09533b3901f2d174d94f8",
+      "new_sha256": "b2541be1be9e69ff05d2a8a9373b7b3fcbdf17aebda09533b3901f2d174d94f8",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/input_verification/report_explicit.md",
+      "new_path": "routes/traditional/proof/input_verification/report_explicit.md",
+      "old_sha256": "0a863ae4d934d5a5fb92480d90d8cab12df1af00d5548f0cdd15c3fe0b896fc6",
+      "new_sha256": "0a863ae4d934d5a5fb92480d90d8cab12df1af00d5548f0cdd15c3fe0b896fc6",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/input_verification/report_zfr_lee32.md",
+      "new_path": "routes/traditional/proof/input_verification/report_zfr_lee32.md",
+      "old_sha256": "e4821e1eb1407710ba92334ef8b2c59ea2511391411807a2ff31c970f8bb862b",
+      "new_sha256": "e4821e1eb1407710ba92334ef8b2c59ea2511391411807a2ff31c970f8bb862b",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/manuscript.md",
+      "new_path": "routes/traditional/proof/manuscript.md",
+      "old_sha256": "6bff4a673cd3efb33167013dfd8ca7c615acabda946971de590ccce27219b943",
+      "new_sha256": "dde2b34dd461351a569da38e53ea2b0072fe35badd18033cdd2b1c92f040e94d",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/README.md",
+      "new_path": "routes/traditional/proof/zfr_audit/README.md",
+      "old_sha256": "14e8a3d522ac3d70c76a853602f7e9861ab618391dadc0ea2d68b78563b2e961",
+      "new_sha256": "bf668f169c0ee23d010062e19551cc6e4f64472492c914b16e7901a2763656d8",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/bty_4.896/REPORT.md",
+      "new_path": "routes/traditional/proof/zfr_audit/bty_4.896/REPORT.md",
+      "old_sha256": "4b224f8b23e7f74a9588574df74dd7371873ec31ab298c3eeaa28c8b77d77ad2",
+      "new_sha256": "4b224f8b23e7f74a9588574df74dd7371873ec31ab298c3eeaa28c8b77d77ad2",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/bty_4.896/bty_common.py",
+      "new_path": "routes/traditional/proof/zfr_audit/bty_4.896/bty_common.py",
+      "old_sha256": "bfa4348783193372ea6d1a7d08083095c35a923a6b81b84b30ba9dd7378ebb6d",
+      "new_sha256": "bfa4348783193372ea6d1a7d08083095c35a923a6b81b84b30ba9dd7378ebb6d",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/bty_4.896/check_part1_sec3_lemma5.py",
+      "new_path": "routes/traditional/proof/zfr_audit/bty_4.896/check_part1_sec3_lemma5.py",
+      "old_sha256": "a4bc73a60fef8d95c2c07894cfe5c0a3882a943935c13f126661bd2e481aa86f",
+      "new_sha256": "a4bc73a60fef8d95c2c07894cfe5c0a3882a943935c13f126661bd2e481aa86f",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/bty_4.896/check_part2_lemmas6_8_9_12_13.py",
+      "new_path": "routes/traditional/proof/zfr_audit/bty_4.896/check_part2_lemmas6_8_9_12_13.py",
+      "old_sha256": "aedfbac98651a3365ed795d9db3abef13bccda9de2d2b451ef7a9b0eefdee670",
+      "new_sha256": "aedfbac98651a3365ed795d9db3abef13bccda9de2d2b451ef7a9b0eefdee670",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/bty_4.896/check_part3_lemmas10_11.py",
+      "new_path": "routes/traditional/proof/zfr_audit/bty_4.896/check_part3_lemmas10_11.py",
+      "old_sha256": "663f323e8bff06d41681c8ef056eb171dce10c6fa881f9bf908e2f86cbc2bdbc",
+      "new_sha256": "663f323e8bff06d41681c8ef056eb171dce10c6fa881f9bf908e2f86cbc2bdbc",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/bty_4.896/check_part4_lemma14.py",
+      "new_path": "routes/traditional/proof/zfr_audit/bty_4.896/check_part4_lemma14.py",
+      "old_sha256": "fafcdfe28ae0c20340a10a5a1ecab53411c3b35787043a35e42caf6316496ab2",
+      "new_sha256": "fafcdfe28ae0c20340a10a5a1ecab53411c3b35787043a35e42caf6316496ab2",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/bty_4.896/check_part5_lemma15_final.py",
+      "new_path": "routes/traditional/proof/zfr_audit/bty_4.896/check_part5_lemma15_final.py",
+      "old_sha256": "bdc0c981014010f9ed160dc4dfd0cdabd3eb7cdbb4a555ea7bac7a46cb51c5ea",
+      "new_sha256": "bdc0c981014010f9ed160dc4dfd0cdabd3eb7cdbb4a555ea7bac7a46cb51c5ea",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/bty_4.896/check_part6_combo.py",
+      "new_path": "routes/traditional/proof/zfr_audit/bty_4.896/check_part6_combo.py",
+      "old_sha256": "58efa8d458e9bfb889d3c1e99331a1fcfd5f29f76bf48bcddc43617606e0da51",
+      "new_sha256": "58efa8d458e9bfb889d3c1e99331a1fcfd5f29f76bf48bcddc43617606e0da51",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/bty_4.896/lemma14_corrected.json",
+      "new_path": "routes/traditional/proof/zfr_audit/bty_4.896/lemma14_corrected.json",
+      "old_sha256": "4d4075519b8ae460a169abf9d4355325f65cc1c41fa4af933de6981ba2a16474",
+      "new_sha256": "4d4075519b8ae460a169abf9d4355325f65cc1c41fa4af933de6981ba2a16474",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/bty_4.896/part1_output.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/bty_4.896/part1_output.txt",
+      "old_sha256": "fc8c610f35a35b1fa2a5de746ab87fbc198c309b854abd40daa3bc4db3462712",
+      "new_sha256": "fc8c610f35a35b1fa2a5de746ab87fbc198c309b854abd40daa3bc4db3462712",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/bty_4.896/part2_output.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/bty_4.896/part2_output.txt",
+      "old_sha256": "8e8e604fdd4ddf0a1140017aeb500cdbc277b316a1616f299ab4a23e08bb0c1a",
+      "new_sha256": "8e8e604fdd4ddf0a1140017aeb500cdbc277b316a1616f299ab4a23e08bb0c1a",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/bty_4.896/part3_output.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/bty_4.896/part3_output.txt",
+      "old_sha256": "fc5b46852bf3df30bc876161708718680ea478262b3b9f6b81e029deb64065d8",
+      "new_sha256": "fc5b46852bf3df30bc876161708718680ea478262b3b9f6b81e029deb64065d8",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/bty_4.896/part4_output.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/bty_4.896/part4_output.txt",
+      "old_sha256": "e796d78f087272542c935bcc1dddfa95a608bd082ee10157208a36407a267545",
+      "new_sha256": "e796d78f087272542c935bcc1dddfa95a608bd082ee10157208a36407a267545",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/bty_4.896/part5_output.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/bty_4.896/part5_output.txt",
+      "old_sha256": "bfd2401ddfede50aa96708aeb11e748cd45bf196899338c34e27670fe8eede21",
+      "new_sha256": "bfd2401ddfede50aa96708aeb11e748cd45bf196899338c34e27670fe8eede21",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/bty_4.896/part6_output.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/bty_4.896/part6_output.txt",
+      "old_sha256": "5b86dae34d2ec1599b3799e4bce01048e3d9831b4a794e7e35aaa4897509978a",
+      "new_sha256": "5b86dae34d2ec1599b3799e4bce01048e3d9831b4a794e7e35aaa4897509978a",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/bty_4.896/polyq.py",
+      "new_path": "routes/traditional/proof/zfr_audit/bty_4.896/polyq.py",
+      "old_sha256": "e183267d4e0a2363fc6c06ef9d13d92fcd563f53615c8677fa6e24f4767633bd",
+      "new_sha256": "e183267d4e0a2363fc6c06ef9d13d92fcd563f53615c8677fa6e24f4767633bd",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/bty_4.896/run_all.py",
+      "new_path": "routes/traditional/proof/zfr_audit/bty_4.896/run_all.py",
+      "old_sha256": "fc16832dea004faed4405353eb8a5aaebab76e4c77c365cd11750c195e38d598",
+      "new_sha256": "fc16832dea004faed4405353eb8a5aaebab76e4c77c365cd11750c195e38d598",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/bty_4.896/run_all_output.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/bty_4.896/run_all_output.txt",
+      "old_sha256": "9f27590bd21df14ad5d4b213a505ca0304f312f7330c9f67c955cb9e484d6d72",
+      "new_sha256": "9f27590bd21df14ad5d4b213a505ca0304f312f7330c9f67c955cb9e484d6d72",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/lean/BTYParams.lean",
+      "new_path": "routes/traditional/proof/zfr_audit/lean/BTYParams.lean",
+      "old_sha256": "4edebecbda107115b69a0da0f905d5ecd812662c93fa4c2cbc7b6dfe6900c9b4",
+      "new_sha256": "4edebecbda107115b69a0da0f905d5ecd812662c93fa4c2cbc7b6dfe6900c9b4",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/lean/BTYParams_output.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/lean/BTYParams_output.txt",
+      "old_sha256": "86f6ee507cfb02d3b77d00bc33f549dbb29adff3347608bb1073b475aea2484b",
+      "new_sha256": "86f6ee507cfb02d3b77d00bc33f549dbb29adff3347608bb1073b475aea2484b",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/lean/BTYSkeleton.lean",
+      "new_path": "routes/traditional/proof/zfr_audit/lean/BTYSkeleton.lean",
+      "old_sha256": "40d811deec899cdf5c4674b5ceca988b3cff454bb5bc690698292f20fb35047c",
+      "new_sha256": "40d811deec899cdf5c4674b5ceca988b3cff454bb5bc690698292f20fb35047c",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/lean/BTYSkeleton_output.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/lean/BTYSkeleton_output.txt",
+      "old_sha256": "0d7016f903fddbb0dd1e51627c4466e5591dbe667252ca69ddb11253391a062f",
+      "new_sha256": "0d7016f903fddbb0dd1e51627c4466e5591dbe667252ca69ddb11253391a062f",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/lean/README.md",
+      "new_path": "routes/traditional/proof/zfr_audit/lean/README.md",
+      "old_sha256": "676b39f48701bd7a04ba4d1b16ffe1ecf02d0f0bb21d2c15909c4fb8bf36c7b9",
+      "new_sha256": "8006e7f53d95884c23cc8a69e97f3b3f08dc1f91bdb6b70c41d8732be9e7b461",
+      "bytes_unchanged": false,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/lean/bty_skeleton_partD.lean.in",
+      "new_path": "routes/traditional/proof/zfr_audit/lean/bty_skeleton_partD.lean.in",
+      "old_sha256": "ac29ea0838a8fc9747dd7759966313823e3dd7519c5a2dc44d5e8b8f5296284a",
+      "new_sha256": "ac29ea0838a8fc9747dd7759966313823e3dd7519c5a2dc44d5e8b8f5296284a",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/lean/gen_bty_params.py",
+      "new_path": "routes/traditional/proof/zfr_audit/lean/gen_bty_params.py",
+      "old_sha256": "79ea7e28aa22a0866ec3ac8c0ca5c0bf737547dfbf1301b9f18d2efdeda881d6",
+      "new_sha256": "79ea7e28aa22a0866ec3ac8c0ca5c0bf737547dfbf1301b9f18d2efdeda881d6",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/lean/gen_bty_skeleton.py",
+      "new_path": "routes/traditional/proof/zfr_audit/lean/gen_bty_skeleton.py",
+      "old_sha256": "6a45ee78a957567174bbbd7da4bb57fb2c974264865edae8af6927a8789f2dc5",
+      "new_sha256": "6a45ee78a957567174bbbd7da4bb57fb2c974264865edae8af6927a8789f2dc5",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/REPORT.md",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/REPORT.md",
+      "old_sha256": "35bf5e13621856c2f7e39b3b2483369adc1c9bef1e042ab1eaf4d27fe0e772d8",
+      "new_sha256": "35bf5e13621856c2f7e39b3b2483369adc1c9bef1e042ab1eaf4d27fe0e772d8",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/bands.py",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/bands.py",
+      "old_sha256": "426038e928f3e8f3ff0460eadb1bd1267c3b9afdb16612f449b2d4942c0b774a",
+      "new_sha256": "426038e928f3e8f3ff0460eadb1bd1267c3b9afdb16612f449b2d4942c0b774a",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/bands_z2.py",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/bands_z2.py",
+      "old_sha256": "be8391cdd9cbefbc2a594c3498654a90eb4feb5883801b039d0c6b2b214cb938",
+      "new_sha256": "be8391cdd9cbefbc2a594c3498654a90eb4feb5883801b039d0c6b2b214cb938",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/check_base.py",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/check_base.py",
+      "old_sha256": "cba180317e0591def2c4dfcc11e49f1b589a49cd6f663fea14dde7932533f334",
+      "new_sha256": "cba180317e0591def2c4dfcc11e49f1b589a49cd6f663fea14dde7932533f334",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/common.py",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/common.py",
+      "old_sha256": "bac7e5c84df95239f6843f0fd0116795413744bdbed4d2b9ec27c9d722bd98c4",
+      "new_sha256": "bac7e5c84df95239f6843f0fd0116795413744bdbed4d2b9ec27c9d722bd98c4",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/fixed_hyb_v3.py",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/fixed_hyb_v3.py",
+      "old_sha256": "566c6dd778407c12fe165c0607f189dfe7b03bf627ba9d03f15f5d3f4ccdd4c2",
+      "new_sha256": "566c6dd778407c12fe165c0607f189dfe7b03bf627ba9d03f15f5d3f4ccdd4c2",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/fixed_thresholds.py",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/fixed_thresholds.py",
+      "old_sha256": "533fa1043c5c7f86354b16c3dd355494bec15769b8a1c65527e2d10351351dc3",
+      "new_sha256": "533fa1043c5c7f86354b16c3dd355494bec15769b8a1c65527e2d10351351dc3",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/bands.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/bands.csv",
+      "old_sha256": "03d87d67d56ddd85cb48f0b06d70cdbe94a3aafbffc48582782dde304bead3a0",
+      "new_sha256": "03d87d67d56ddd85cb48f0b06d70cdbe94a3aafbffc48582782dde304bead3a0",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/bands.json",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/bands.json",
+      "old_sha256": "27f76a72d15b521d2f468ccccbc65d832addc1a8335dcc2afffcc7f37d305cd5",
+      "new_sha256": "27f76a72d15b521d2f468ccccbc65d832addc1a8335dcc2afffcc7f37d305cd5",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/bands_z2.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/bands_z2.csv",
+      "old_sha256": "6f969c19b58f50af936700d88e225706ab23d9c5ee40c8644bb351dd5c2201e4",
+      "new_sha256": "6f969c19b58f50af936700d88e225706ab23d9c5ee40c8644bb351dd5c2201e4",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/bands_z2.json",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/bands_z2.json",
+      "old_sha256": "913f1aeb085eb13268a982a9ff4a4de7d155123389594e029b4fcecdf1b02963",
+      "new_sha256": "913f1aeb085eb13268a982a9ff4a4de7d155123389594e029b4fcecdf1b02963",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_GRID_lamstar.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_GRID_lamstar.csv",
+      "old_sha256": "dc11f7e564fd8a3e176642ddc124d3dd2e421d93efba4ec27eb200c8c70104fa",
+      "new_sha256": "dc11f7e564fd8a3e176642ddc124d3dd2e421d93efba4ec27eb200c8c70104fa",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_GRID_lamstar_noLW.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_GRID_lamstar_noLW.csv",
+      "old_sha256": "baf44e8cf07e072d3b30ccfebce06797d26abb24fe0e6f1d736384542bd12e63",
+      "new_sha256": "baf44e8cf07e072d3b30ccfebce06797d26abb24fe0e6f1d736384542bd12e63",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_GRID_opt.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_GRID_opt.csv",
+      "old_sha256": "47d3f81f187fbaaba7b75bc84fb76d1bc54a9f4a8af9b28cede0732893fa8986",
+      "new_sha256": "47d3f81f187fbaaba7b75bc84fb76d1bc54a9f4a8af9b28cede0732893fa8986",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_GRID_opt_noLW.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_GRID_opt_noLW.csv",
+      "old_sha256": "4e80a8dacf469f22c1c1a6363f051ee131a87556071a46263b7f5232e9f6d2f7",
+      "new_sha256": "4e80a8dacf469f22c1c1a6363f051ee131a87556071a46263b7f5232e9f6d2f7",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_PROF_lamstar_but_6080_opt.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_PROF_lamstar_but_6080_opt.csv",
+      "old_sha256": "a3240a6982723e41647776a26ea5fae6c3d3c829ad944f586778ba193c7c4f92",
+      "new_sha256": "a3240a6982723e41647776a26ea5fae6c3d3c829ad944f586778ba193c7c4f92",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_PROF_lamstar_interp.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_PROF_lamstar_interp.csv",
+      "old_sha256": "666f04546a79f3e119b6329cbeaaa0ef935a5bb49ade2dfcb4a7b3419ba61484",
+      "new_sha256": "666f04546a79f3e119b6329cbeaaa0ef935a5bb49ade2dfcb4a7b3419ba61484",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_PROF_opt.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_PROF_opt.csv",
+      "old_sha256": "b04ff0fb0f776cb6823421ac3b390c0d71fd80073c5eb5af73533919ebee3581",
+      "new_sha256": "b04ff0fb0f776cb6823421ac3b390c0d71fd80073c5eb5af73533919ebee3581",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_PROF_opt_v2code.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_PROF_opt_v2code.csv",
+      "old_sha256": "1c12b0d1a9137690d805c0e773148fdf2984ec5731a8d924b7ff030e640506f6",
+      "new_sha256": "1c12b0d1a9137690d805c0e773148fdf2984ec5731a8d924b7ff030e640506f6",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_Z1_4.815_Z2_20.08.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_Z1_4.815_Z2_20.08.csv",
+      "old_sha256": "5f996838771060af2d40d61152f37165e630c8838e0d3796ab7a493d1345ce6e",
+      "new_sha256": "5f996838771060af2d40d61152f37165e630c8838e0d3796ab7a493d1345ce6e",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_Z1_4.81_Z2_19.90.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_Z1_4.81_Z2_19.90.csv",
+      "old_sha256": "b88abb460862e8c7221b07cf93ecb9e64f3d1776a41161c7fa6e4325716be7dc",
+      "new_sha256": "b88abb460862e8c7221b07cf93ecb9e64f3d1776a41161c7fa6e4325716be7dc",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_Z1_4.81_Z2_20.08.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_Z1_4.81_Z2_20.08.csv",
+      "old_sha256": "566e94d8e9407d2152bd3fb526fb23f0a6a137c5998205df052fd9e1c889b5fb",
+      "new_sha256": "566e94d8e9407d2152bd3fb526fb23f0a6a137c5998205df052fd9e1c889b5fb",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_Z1_4.825_Z2_20.08.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_Z1_4.825_Z2_20.08.csv",
+      "old_sha256": "6d976a1c544fe49cd8bd72fa481ff945195a052ec9dabc1ee65c29aa267a551d",
+      "new_sha256": "6d976a1c544fe49cd8bd72fa481ff945195a052ec9dabc1ee65c29aa267a551d",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_Z1_4.82_Z2_20.08.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_Z1_4.82_Z2_20.08.csv",
+      "old_sha256": "9fa7a016063cd6337a342ad3c7eeddfed972d92307e2975fe83e93ce06348f0b",
+      "new_sha256": "9fa7a016063cd6337a342ad3c7eeddfed972d92307e2975fe83e93ce06348f0b",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_Z1_4.835_Z2_19.90.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_Z1_4.835_Z2_19.90.csv",
+      "old_sha256": "913095746f8c58ad2d56ab348343268bf28e6ecc384b018cb1a4c1124180d7e5",
+      "new_sha256": "913095746f8c58ad2d56ab348343268bf28e6ecc384b018cb1a4c1124180d7e5",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_Z1_4.83_Z2_19.90.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_Z1_4.83_Z2_19.90.csv",
+      "old_sha256": "e50290851b47843c6ad4b6f59d25172c142adefdbd460cd9dfa05feb7777acc6",
+      "new_sha256": "e50290851b47843c6ad4b6f59d25172c142adefdbd460cd9dfa05feb7777acc6",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_Z1_4.908750.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_Z1_4.908750.csv",
+      "old_sha256": "663c3358ebdb10fb8208677f233cee701cf9a6ba1a7e6a1b4ae49a246e110d85",
+      "new_sha256": "663c3358ebdb10fb8208677f233cee701cf9a6ba1a7e6a1b4ae49a246e110d85",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_Z1_pubLW_4.634250.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_Z1_pubLW_4.634250.csv",
+      "old_sha256": "1710d29a8d6d728d73e2dee940eeb25b7accddbfd83b046a25f4e13ac63fd25f",
+      "new_sha256": "1710d29a8d6d728d73e2dee940eeb25b7accddbfd83b046a25f4e13ac63fd25f",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_Z2_19.853906.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_Z2_19.853906.csv",
+      "old_sha256": "78f3f8fb48267df48f8aa12ba83a97ffc71a73f97ab1e68ed990605c0e55a6c8",
+      "new_sha256": "78f3f8fb48267df48f8aa12ba83a97ffc71a73f97ab1e68ed990605c0e55a6c8",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/cover_optprof55_19.857188.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/cover_optprof55_19.857188.csv",
+      "old_sha256": "d3cf2267146258866709cb2171dca88e5d9baab4319a4bcfea50161b5129e5d2",
+      "new_sha256": "d3cf2267146258866709cb2171dca88e5d9baab4319a4bcfea50161b5129e5d2",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/fixed_Z1.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/fixed_Z1.csv",
+      "old_sha256": "bdf1be976bb4c1047dc79c3500eef464e13d5596de13ecaeeab9a73635697f50",
+      "new_sha256": "bdf1be976bb4c1047dc79c3500eef464e13d5596de13ecaeeab9a73635697f50",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/fixed_Z2.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/fixed_Z2.csv",
+      "old_sha256": "e0ae32f94b35451841423c231e4361b5b9a8c1c3851efe49cc634e80887b411b",
+      "new_sha256": "e0ae32f94b35451841423c231e4361b5b9a8c1c3851efe49cc634e80887b411b",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/fixed_hyb_v3.csv",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/fixed_hyb_v3.csv",
+      "old_sha256": "2c2a4a20c6945c64485145395f790cce5b2d2ee3f173236a42d08d82a3f66909",
+      "new_sha256": "2c2a4a20c6945c64485145395f790cce5b2d2ee3f173236a42d08d82a3f66909",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/fixed_thresholds.svg",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/fixed_thresholds.svg",
+      "old_sha256": "46c7773d57d9d2a9927f3c4bd9149be4c1c6970ad74b9f68df3748658e926d2d",
+      "new_sha256": "46c7773d57d9d2a9927f3c4bd9149be4c1c6970ad74b9f68df3748658e926d2d",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/log_bands_z1.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/log_bands_z1.txt",
+      "old_sha256": "3dd28033e95682bd367cf7dc4dbcfe440b5d6225ae8ccd622a2def66251334c3",
+      "new_sha256": "3dd28033e95682bd367cf7dc4dbcfe440b5d6225ae8ccd622a2def66251334c3",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/log_bands_z2.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/log_bands_z2.txt",
+      "old_sha256": "e43c48ad117877db5f4e2f5b79060f24934c8fcb773f584c93df718b916c7997",
+      "new_sha256": "e43c48ad117877db5f4e2f5b79060f24934c8fcb773f584c93df718b916c7997",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/log_fixed_Z2.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/log_fixed_Z2.txt",
+      "old_sha256": "dacf93b67947ad2200fccd91eeca84435e555dfb7125cb1980fc21e0849ac073",
+      "new_sha256": "dacf93b67947ad2200fccd91eeca84435e555dfb7125cb1980fc21e0849ac073",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/log_priority_combo.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/log_priority_combo.txt",
+      "old_sha256": "21f27a116ea7038db132ab35c68802fb95e2bc6b97ded872a7af9ea43b5d722d",
+      "new_sha256": "21f27a116ea7038db132ab35c68802fb95e2bc6b97ded872a7af9ea43b5d722d",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/log_priority_grid.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/log_priority_grid.txt",
+      "old_sha256": "6d70763d5db33191531f2f6680b10942f35166c720c3f97f0d145bd01c3b4cf8",
+      "new_sha256": "6d70763d5db33191531f2f6680b10942f35166c720c3f97f0d145bd01c3b4cf8",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/log_priority_v3.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/log_priority_v3.txt",
+      "old_sha256": "9f3467c74faef5900e92a7f3ed41a164e88a237f4fee69489b185cb7bd41f7db",
+      "new_sha256": "9f3467c74faef5900e92a7f3ed41a164e88a237f4fee69489b185cb7bd41f7db",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/log_reopt_Z1.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/log_reopt_Z1.txt",
+      "old_sha256": "2e95a3f7537cbaeb18c5de8b9e39b89a590274f75c264fb5ec6bd5394a2ee106",
+      "new_sha256": "2e95a3f7537cbaeb18c5de8b9e39b89a590274f75c264fb5ec6bd5394a2ee106",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/log_reopt_Z1_pubLW.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/log_reopt_Z1_pubLW.txt",
+      "old_sha256": "231447d7c9c01090d991f8c9f18df80c55e78aafb8cab212215d273c7e822b07",
+      "new_sha256": "231447d7c9c01090d991f8c9f18df80c55e78aafb8cab212215d273c7e822b07",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/log_reopt_Z1_v2code.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/log_reopt_Z1_v2code.txt",
+      "old_sha256": "6ab8d03227b1c7eae95b61926193caa5b676c7dab2064bfe5067d8f7a533714b",
+      "new_sha256": "6ab8d03227b1c7eae95b61926193caa5b676c7dab2064bfe5067d8f7a533714b",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/log_reopt_Z2.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/log_reopt_Z2.txt",
+      "old_sha256": "343061365aae9746f0885a80172112c2d5965a093784a5b08bd0961d503cb5f0",
+      "new_sha256": "343061365aae9746f0885a80172112c2d5965a093784a5b08bd0961d503cb5f0",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/log_reopt_Z2_v2code.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/log_reopt_Z2_v2code.txt",
+      "old_sha256": "99cf4de4d50de7964882f38e135602c9d9e431011f5b8d02773b1755e4356098",
+      "new_sha256": "99cf4de4d50de7964882f38e135602c9d9e431011f5b8d02773b1755e4356098",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/log_reopt_optprof55.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/log_reopt_optprof55.txt",
+      "old_sha256": "22abefd1d2e2929d711945f06ea76708cf31f397b876384e58a5f36d166d6950",
+      "new_sha256": "22abefd1d2e2929d711945f06ea76708cf31f397b876384e58a5f36d166d6950",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/priority_combo.json",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/priority_combo.json",
+      "old_sha256": "d26100769cf9442eb172437bc3b5b898bc976c11e79f235692d94d6f32060e88",
+      "new_sha256": "d26100769cf9442eb172437bc3b5b898bc976c11e79f235692d94d6f32060e88",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/priority_grid.json",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/priority_grid.json",
+      "old_sha256": "7406de10b90a7165363f8466b760caf101324aaa522be3e4f3cc4eefd66368be",
+      "new_sha256": "7406de10b90a7165363f8466b760caf101324aaa522be3e4f3cc4eefd66368be",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/priority_z2.json",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/priority_z2.json",
+      "old_sha256": "575d450a17de13a73de8202ea860cba553d0013233f41f0a9fa31f806b4809e0",
+      "new_sha256": "575d450a17de13a73de8202ea860cba553d0013233f41f0a9fa31f806b4809e0",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/priority_z2_v2code.json",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/priority_z2_v2code.json",
+      "old_sha256": "ab6883bf1a041aa41e89c59126b5117343d80f5a5d94e227612a26a312fba011",
+      "new_sha256": "ab6883bf1a041aa41e89c59126b5117343d80f5a5d94e227612a26a312fba011",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/reopt_Z1.json",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/reopt_Z1.json",
+      "old_sha256": "e3e3394abb1a59d10b7ac97533263b55d8003e932f6979aec67057e6ac1f2d66",
+      "new_sha256": "e3e3394abb1a59d10b7ac97533263b55d8003e932f6979aec67057e6ac1f2d66",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/reopt_Z1_pubLW.json",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/reopt_Z1_pubLW.json",
+      "old_sha256": "ef71e555a6f8e459f6a96571d4e155272ab4094822859c12248ab9f5ec701b63",
+      "new_sha256": "ef71e555a6f8e459f6a96571d4e155272ab4094822859c12248ab9f5ec701b63",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/reopt_Z2.json",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/reopt_Z2.json",
+      "old_sha256": "9a5a79ddfb7cb4fb10f677921b5158264b878210a8af092bf7d15d114a25f0f8",
+      "new_sha256": "9a5a79ddfb7cb4fb10f677921b5158264b878210a8af092bf7d15d114a25f0f8",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/reopt_optprof55.json",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/reopt_optprof55.json",
+      "old_sha256": "a206bb7078381a079e59d57af6ed8ece023429bf0b39a42035cd0e8348ad0aab",
+      "new_sha256": "a206bb7078381a079e59d57af6ed8ece023429bf0b39a42035cd0e8348ad0aab",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/requirement_bands.svg",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/requirement_bands.svg",
+      "old_sha256": "70401f0a729a9c8e04e7ef883dbd4ade4ebace6a49ec7cf58831228131f3a5c5",
+      "new_sha256": "70401f0a729a9c8e04e7ef883dbd4ade4ebace6a49ec7cf58831228131f3a5c5",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/requirement_z2_bands.svg",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/requirement_z2_bands.svg",
+      "old_sha256": "61497bf42093fddf02e5b191fd63553ef318257bc80d6973a0240a195ceaa4f7",
+      "new_sha256": "61497bf42093fddf02e5b191fd63553ef318257bc80d6973a0240a195ceaa4f7",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/spot_check_output.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/spot_check_output.txt",
+      "old_sha256": "44ea902633dc6c875076c5ee353fda202da031e512f9dad651cd04ddd4e63da1",
+      "new_sha256": "44ea902633dc6c875076c5ee353fda202da031e512f9dad651cd04ddd4e63da1",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/out/summary.md",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/out/summary.md",
+      "old_sha256": "9aed0d01a1659515e23c022b475e312b1e04af4e17a36e59e2e5083753bde92e",
+      "new_sha256": "9aed0d01a1659515e23c022b475e312b1e04af4e17a36e59e2e5083753bde92e",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/plot_svg.py",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/plot_svg.py",
+      "old_sha256": "03da05dbfca23cc3fca25e89d7086637427824e1bdb51515dee7b57ae2fa2d9e",
+      "new_sha256": "03da05dbfca23cc3fca25e89d7086637427824e1bdb51515dee7b57ae2fa2d9e",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/priority_combo.py",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/priority_combo.py",
+      "old_sha256": "675930f6528b65974c92d5f9e298b3dca7c6b906ec052898fd66c464ff45d307",
+      "new_sha256": "675930f6528b65974c92d5f9e298b3dca7c6b906ec052898fd66c464ff45d307",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/priority_grid.py",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/priority_grid.py",
+      "old_sha256": "a240e5e8c6306d390a358b58e083da25825c7fff4411908fbb252fd84a0042df",
+      "new_sha256": "a240e5e8c6306d390a358b58e083da25825c7fff4411908fbb252fd84a0042df",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/priority_z2.py",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/priority_z2.py",
+      "old_sha256": "f5eb3965c15a6faee85cc123ad69e868f44f19870f2f16b2c0a7f41465966db3",
+      "new_sha256": "f5eb3965c15a6faee85cc123ad69e868f44f19870f2f16b2c0a7f41465966db3",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/reopt.py",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/reopt.py",
+      "old_sha256": "3759db3bb27d9770b935cff952572372048108118bf2365d81e0883997f0c3be",
+      "new_sha256": "3759db3bb27d9770b935cff952572372048108118bf2365d81e0883997f0c3be",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/repair.py",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/repair.py",
+      "old_sha256": "ba6d68dd7989922682f398c3db008bfaaa3c3c9b90379a4d6d4680c930408960",
+      "new_sha256": "ba6d68dd7989922682f398c3db008bfaaa3c3c9b90379a4d6d4680c930408960",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/spot_check.py",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/spot_check.py",
+      "old_sha256": "35a0a041bd3813dee0922d7f02240bdbd5cab5f6d32bf9a5ddaae07b631f84b6",
+      "new_sha256": "35a0a041bd3813dee0922d7f02240bdbd5cab5f6d32bf9a5ddaae07b631f84b6",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/summarize.py",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/summarize.py",
+      "old_sha256": "f6386d9ad25044a099f54368ca7f16a107e0cd1fb07921ef3b0a68d065e3cd82",
+      "new_sha256": "f6386d9ad25044a099f54368ca7f16a107e0cd1fb07921ef3b0a68d065e3cd82",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/requirement/zfr_model.py",
+      "new_path": "routes/traditional/proof/zfr_audit/requirement/zfr_model.py",
+      "old_sha256": "4fae5c75ed75adfbb89130e2859d3af1e9d3d89b660b20559448b8b6c149eafa",
+      "new_sha256": "4fae5c75ed75adfbb89130e2859d3af1e9d3d89b660b20559448b8b6c149eafa",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/thesis_19.62/REPORT.md",
+      "new_path": "routes/traditional/proof/zfr_audit/thesis_19.62/REPORT.md",
+      "old_sha256": "3dbbf4defc817b15385a229171dcaee0b48ba8307b4ebaa7fb219141b499fb69",
+      "new_sha256": "3dbbf4defc817b15385a229171dcaee0b48ba8307b4ebaa7fb219141b499fb69",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/thesis_19.62/check_constants.py",
+      "new_path": "routes/traditional/proof/zfr_audit/thesis_19.62/check_constants.py",
+      "old_sha256": "992204b30466e678d3483d0f4e6f5ecd5c6358d2c2eec4c59977ce09f1dc995e",
+      "new_sha256": "992204b30466e678d3483d0f4e6f5ecd5c6358d2c2eec4c59977ce09f1dc995e",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/thesis_19.62/check_constants_output.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/thesis_19.62/check_constants_output.txt",
+      "old_sha256": "e078bf2daaaab6899488a07947a83e899e8cce0e8d3eafddb8c2cef4e234a268",
+      "new_sha256": "e078bf2daaaab6899488a07947a83e899e8cce0e8d3eafddb8c2cef4e234a268",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/thesis_19.62/check_corrected_constant.py",
+      "new_path": "routes/traditional/proof/zfr_audit/thesis_19.62/check_corrected_constant.py",
+      "old_sha256": "f920858b738ee0278464890ce200830e6c0bd9f64bbe2a0e9f3cc8561f2eba05",
+      "new_sha256": "f920858b738ee0278464890ce200830e6c0bd9f64bbe2a0e9f3cc8561f2eba05",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/thesis_19.62/check_corrected_constant_output.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/thesis_19.62/check_corrected_constant_output.txt",
+      "old_sha256": "128311f84f92b6116fa345df6d190beb23be43fa26c551d7fc6eaa61653ab27b",
+      "new_sha256": "128311f84f92b6116fa345df6d190beb23be43fa26c551d7fc6eaa61653ab27b",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/thesis_19.62/check_error_terms.py",
+      "new_path": "routes/traditional/proof/zfr_audit/thesis_19.62/check_error_terms.py",
+      "old_sha256": "3923b9df45378a77f57dbd15d211e80e126a3e3118dbb9f7587f07dba5d0f420",
+      "new_sha256": "3923b9df45378a77f57dbd15d211e80e126a3e3118dbb9f7587f07dba5d0f420",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/thesis_19.62/check_error_terms_output.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/thesis_19.62/check_error_terms_output.txt",
+      "old_sha256": "9e30d48b52be4a42d92be1df87bd3f05eb9592f6e8117cac537440ee63b87c54",
+      "new_sha256": "9e30d48b52be4a42d92be1df87bd3f05eb9592f6e8117cac537440ee63b87c54",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/thesis_19.62/check_ford_W0.py",
+      "new_path": "routes/traditional/proof/zfr_audit/thesis_19.62/check_ford_W0.py",
+      "old_sha256": "c42c6ea91ac3787de320c25694f884405aedfbda7f6ed467471e1506f8f3c99a",
+      "new_sha256": "c42c6ea91ac3787de320c25694f884405aedfbda7f6ed467471e1506f8f3c99a",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/thesis_19.62/check_ford_W0_output.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/thesis_19.62/check_ford_W0_output.txt",
+      "old_sha256": "d17ea5f5bc1fcd5a6668c06d2b22bb0e73f7d23d77b108140585628cf37b0ba9",
+      "new_sha256": "d17ea5f5bc1fcd5a6668c06d2b22bb0e73f7d23d77b108140585628cf37b0ba9",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/thesis_19.62/check_main_term.py",
+      "new_path": "routes/traditional/proof/zfr_audit/thesis_19.62/check_main_term.py",
+      "old_sha256": "5cd315f13e893659cf0837e867c166824cbc3b85018c78c918d7fc648dde7d14",
+      "new_sha256": "5cd315f13e893659cf0837e867c166824cbc3b85018c78c918d7fc648dde7d14",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "proof/zfr_audit/thesis_19.62/check_main_term_output.txt",
+      "new_path": "routes/traditional/proof/zfr_audit/thesis_19.62/check_main_term_output.txt",
+      "old_sha256": "7c61d59e63857d06ffad8e170c3d2f89215dfbb76e5477b2d4ffc8be4a1f1ee8",
+      "new_sha256": "7c61d59e63857d06ffad8e170c3d2f89215dfbb76e5477b2d4ffc8be4a1f1ee8",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "proof/zfr_audit/thesis_19.62/common.py",
+      "new_path": "routes/traditional/proof/zfr_audit/thesis_19.62/common.py",
+      "old_sha256": "1e65699e4d4d8acd1b01978e68fa0f050fddad8832046a45fcb1e660ce07e548",
+      "new_sha256": "1e65699e4d4d8acd1b01978e68fa0f050fddad8832046a45fcb1e660ce07e548",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/README.md",
+      "new_path": "routes/traditional/results/README.md",
+      "old_sha256": "68343e4d1ac2c4cc13c242b556ab0113695064b44a791fb5d2016391a56442f7",
+      "new_sha256": "68343e4d1ac2c4cc13c242b556ab0113695064b44a791fb5d2016391a56442f7",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/all_k_hyb.txt",
+      "new_path": "routes/traditional/results/all_k_hyb.txt",
+      "old_sha256": "485585ef1373e065bc063affaea1088de0295ed08677d79a52895f5f74ce72a0",
+      "new_sha256": "485585ef1373e065bc063affaea1088de0295ed08677d79a52895f5f74ce72a0",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/cert_cond_k67.csv",
+      "new_path": "routes/traditional/results/cert_cond_k67.csv",
+      "old_sha256": "e1bb90f1a95a95fac654b0bb3feae3acc35ca6a306f301984f12d48cbe037cd7",
+      "new_sha256": "e1bb90f1a95a95fac654b0bb3feae3acc35ca6a306f301984f12d48cbe037cd7",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_cond_k70.csv",
+      "new_path": "routes/traditional/results/cert_cond_k70.csv",
+      "old_sha256": "4c7920f11e03ce5063fd13e9a7ba4e31d1b14fb4bbb71a297ecb8aa68550e7f0",
+      "new_sha256": "4c7920f11e03ce5063fd13e9a7ba4e31d1b14fb4bbb71a297ecb8aa68550e7f0",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_cond_k75.csv",
+      "new_path": "routes/traditional/results/cert_cond_k75.csv",
+      "old_sha256": "cdca29e0f954537ca826de2a63977495e6c97c2393a5fe99151a6ef964f48241",
+      "new_sha256": "cdca29e0f954537ca826de2a63977495e6c97c2393a5fe99151a6ef964f48241",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_cond_k80.csv",
+      "new_path": "routes/traditional/results/cert_cond_k80.csv",
+      "old_sha256": "30ceee4dc54b100943b629f8cb4eb65648851646063a2277ae68ad8dccf52044",
+      "new_sha256": "30ceee4dc54b100943b629f8cb4eb65648851646063a2277ae68ad8dccf52044",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_cond_k85.csv",
+      "new_path": "routes/traditional/results/cert_cond_k85.csv",
+      "old_sha256": "bd3dfe5f386583e94ecb6ee5543dc65792afb69ee0a51e841f7d3261f1a2e177",
+      "new_sha256": "bd3dfe5f386583e94ecb6ee5543dc65792afb69ee0a51e841f7d3261f1a2e177",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_full_k68_r2008.csv",
+      "new_path": "routes/traditional/results/cert_hyb_full_k68_r2008.csv",
+      "old_sha256": "ec67f0a2699957c0adbc01f7b6fcc5406a6c3d97229eb5a5fbecea2c0898f8c5",
+      "new_sha256": "ec67f0a2699957c0adbc01f7b6fcc5406a6c3d97229eb5a5fbecea2c0898f8c5",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_full_k70_bty_pub.csv",
+      "new_path": "routes/traditional/results/cert_hyb_full_k70_bty_pub.csv",
+      "old_sha256": "fa8ea4c7ab3ac62c492c7b9614b968fa256f5c975ab3cc02e7d3be9fefe276eb",
+      "new_sha256": "fa8ea4c7ab3ac62c492c7b9614b968fa256f5c975ab3cc02e7d3be9fefe276eb",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_full_k74_pub.csv",
+      "new_path": "routes/traditional/results/cert_hyb_full_k74_pub.csv",
+      "old_sha256": "154bbcdbccc1c066204ba476f8cc77133f26b9974f57caec425c70755a43d561",
+      "new_sha256": "154bbcdbccc1c066204ba476f8cc77133f26b9974f57caec425c70755a43d561",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_jy_k67_lw.csv",
+      "new_path": "routes/traditional/results/cert_hyb_jy_k67_lw.csv",
+      "old_sha256": "752aa1ed9ed9012fd06821423880afeb855225c75aaca2509019a2a894b25516",
+      "new_sha256": "752aa1ed9ed9012fd06821423880afeb855225c75aaca2509019a2a894b25516",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_jy_k67_lw_v3.csv",
+      "new_path": "routes/traditional/results/cert_hyb_jy_k67_lw_v3.csv",
+      "old_sha256": "b2b39705422bcd195a25468632ce65b3f567965e156ccecef6d672341514e454",
+      "new_sha256": "b2b39705422bcd195a25468632ce65b3f567965e156ccecef6d672341514e454",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_jy_k67_thesis.csv",
+      "new_path": "routes/traditional/results/cert_hyb_jy_k67_thesis.csv",
+      "old_sha256": "03358fa29696a062a67368a52189c560490046a9dd2a42ca5d4dbac8d1fb0b2c",
+      "new_sha256": "03358fa29696a062a67368a52189c560490046a9dd2a42ca5d4dbac8d1fb0b2c",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_jy_k67_thesis_v3.csv",
+      "new_path": "routes/traditional/results/cert_hyb_jy_k67_thesis_v3.csv",
+      "old_sha256": "c3f019d8d7ad9f9540072385b23299542a6ace715dcef29065ac192f17fb0909",
+      "new_sha256": "c3f019d8d7ad9f9540072385b23299542a6ace715dcef29065ac192f17fb0909",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k65.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k65.csv",
+      "old_sha256": "adf3722fb6058f1a99273a688e5a1b180e51e825840ef11e4065f7faeedf599e",
+      "new_sha256": "adf3722fb6058f1a99273a688e5a1b180e51e825840ef11e4065f7faeedf599e",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k66.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k66.csv",
+      "old_sha256": "649ae5dc0c188a88e6162821e544ce7c5f93ed931919ff2c85f51392d65a6c5c",
+      "new_sha256": "649ae5dc0c188a88e6162821e544ce7c5f93ed931919ff2c85f51392d65a6c5c",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k67.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k67.csv",
+      "old_sha256": "a42a4dad2539cc98f941d1e56d888b5a1d3fb8ad05284d42c44bb7b6271b61bf",
+      "new_sha256": "a42a4dad2539cc98f941d1e56d888b5a1d3fb8ad05284d42c44bb7b6271b61bf",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k68.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k68.csv",
+      "old_sha256": "e0a9d29a8a4addc43c403999c842cffbe10746520f9be5eef161eedc022e0caf",
+      "new_sha256": "e0a9d29a8a4addc43c403999c842cffbe10746520f9be5eef161eedc022e0caf",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k69.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k69.csv",
+      "old_sha256": "ef51219b58089a4c3d424691a1a1b5a4ad01d5a3cdbed0399e717de8214562c3",
+      "new_sha256": "ef51219b58089a4c3d424691a1a1b5a4ad01d5a3cdbed0399e717de8214562c3",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k70.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k70.csv",
+      "old_sha256": "fd7874b3f4caecf92255a9e86540b9190cc67dc9f43ac9a411fd18d1c12bc185",
+      "new_sha256": "fd7874b3f4caecf92255a9e86540b9190cc67dc9f43ac9a411fd18d1c12bc185",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k71.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k71.csv",
+      "old_sha256": "72267bbcf5e269ee8c9b53b5b53e3e3d08076a4866655ddbdaf2b1b921e9a65b",
+      "new_sha256": "72267bbcf5e269ee8c9b53b5b53e3e3d08076a4866655ddbdaf2b1b921e9a65b",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k72.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k72.csv",
+      "old_sha256": "7315dce28088b5e54fc383b3f6f989d697f26c0b2c0be8f2ddd4e73a1d457d8b",
+      "new_sha256": "7315dce28088b5e54fc383b3f6f989d697f26c0b2c0be8f2ddd4e73a1d457d8b",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k73.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k73.csv",
+      "old_sha256": "b5790b77e4e1f7cc879c19ff4b80b78e2adcf817f38ef175bed53d96eb9b9ac2",
+      "new_sha256": "b5790b77e4e1f7cc879c19ff4b80b78e2adcf817f38ef175bed53d96eb9b9ac2",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k74.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k74.csv",
+      "old_sha256": "b0a550c7b018a3676bb0cb0deb44f9ffc9f06d053a94cef4188956276e00b6ee",
+      "new_sha256": "b0a550c7b018a3676bb0cb0deb44f9ffc9f06d053a94cef4188956276e00b6ee",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k75.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k75.csv",
+      "old_sha256": "8c3ff82d1a86f3256110faaefb9518fb1cb131de1ae3467e2dd5025991bce3bb",
+      "new_sha256": "8c3ff82d1a86f3256110faaefb9518fb1cb131de1ae3467e2dd5025991bce3bb",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k76.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k76.csv",
+      "old_sha256": "496b26a8956e2b857b8a4f9408d87043e0bda33e685e1215d2795c3bf0b5eefe",
+      "new_sha256": "496b26a8956e2b857b8a4f9408d87043e0bda33e685e1215d2795c3bf0b5eefe",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k77.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k77.csv",
+      "old_sha256": "b93bb220dfbf7206da62920548c4d0de1865741ed973cebfc262dfb7ca234d36",
+      "new_sha256": "b93bb220dfbf7206da62920548c4d0de1865741ed973cebfc262dfb7ca234d36",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k78.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k78.csv",
+      "old_sha256": "dacc7252c1fb85c28060bf90b23d198183c66f4fa77a8460f3d85f0539029af9",
+      "new_sha256": "dacc7252c1fb85c28060bf90b23d198183c66f4fa77a8460f3d85f0539029af9",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k79.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k79.csv",
+      "old_sha256": "80f87d7dc656f051de95efed30d0b58634260136d2e73861c453f02cae1ff9c2",
+      "new_sha256": "80f87d7dc656f051de95efed30d0b58634260136d2e73861c453f02cae1ff9c2",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k80.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k80.csv",
+      "old_sha256": "cb2e8db4f103cafa8b1d62e51550389737581a6000ddc4c0c0c85a760a093f88",
+      "new_sha256": "cb2e8db4f103cafa8b1d62e51550389737581a6000ddc4c0c0c85a760a093f88",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k81.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k81.csv",
+      "old_sha256": "262a63fee6d80c9ce6ef4ac7a6d8745ed7309a56cb0a66530204416d6490b8a7",
+      "new_sha256": "262a63fee6d80c9ce6ef4ac7a6d8745ed7309a56cb0a66530204416d6490b8a7",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k82.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k82.csv",
+      "old_sha256": "3eb1bfdd214cf18487c56a130c6c6ae2b3742b55c9820d152ad9049cecfb2cda",
+      "new_sha256": "3eb1bfdd214cf18487c56a130c6c6ae2b3742b55c9820d152ad9049cecfb2cda",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k83.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k83.csv",
+      "old_sha256": "d4debc7f15d861903245d1c4711845edc14d61bb34dd9bfdf90569bd2e6da763",
+      "new_sha256": "d4debc7f15d861903245d1c4711845edc14d61bb34dd9bfdf90569bd2e6da763",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k84.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k84.csv",
+      "old_sha256": "be11d7efd53927fe49e842cbca45b1344bba1c834bdebba9d2a56999349b6a13",
+      "new_sha256": "be11d7efd53927fe49e842cbca45b1344bba1c834bdebba9d2a56999349b6a13",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_k85.csv",
+      "new_path": "routes/traditional/results/cert_hyb_k85.csv",
+      "old_sha256": "34f14e993d6877ed68be2b8a8d586f347b1494525e7cb10d2b89e6afb826f2c8",
+      "new_sha256": "34f14e993d6877ed68be2b8a8d586f347b1494525e7cb10d2b89e6afb826f2c8",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_v3_k68_r2008.csv",
+      "new_path": "routes/traditional/results/cert_hyb_v3_k68_r2008.csv",
+      "old_sha256": "91a79fec40faefef4f2d96cb8d031dd5f9ea8affb496bff6a4f68981401577c4",
+      "new_sha256": "91a79fec40faefef4f2d96cb8d031dd5f9ea8affb496bff6a4f68981401577c4",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_v3_k70_bty_pub.csv",
+      "new_path": "routes/traditional/results/cert_hyb_v3_k70_bty_pub.csv",
+      "old_sha256": "8beaeacdd9e8c232255594a766c28dca420390529279fcad41d5bb9eb7285412",
+      "new_sha256": "8beaeacdd9e8c232255594a766c28dca420390529279fcad41d5bb9eb7285412",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_hyb_v3_k74_pub.csv",
+      "new_path": "routes/traditional/results/cert_hyb_v3_k74_pub.csv",
+      "old_sha256": "2be7f34060850d0135aaa8f34601151e86f30c7ffdf292a23001a69289a3b6aa",
+      "new_sha256": "2be7f34060850d0135aaa8f34601151e86f30c7ffdf292a23001a69289a3b6aa",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_smooth_full_k67_littlewood_thesis.csv",
+      "new_path": "routes/traditional/results/cert_smooth_full_k67_littlewood_thesis.csv",
+      "old_sha256": "4eb1db2a6494a8c2df90bced8f434a407cd09c139f493a9a7b7e35e1a40da94d",
+      "new_sha256": "4eb1db2a6494a8c2df90bced8f434a407cd09c139f493a9a7b7e35e1a40da94d",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_smooth_full_k67_lw_jy.csv",
+      "new_path": "routes/traditional/results/cert_smooth_full_k67_lw_jy.csv",
+      "old_sha256": "0faf355cbccab91f470815fc4e85ae8c44266095df34ecaa542bb02cf48039c1",
+      "new_sha256": "0faf355cbccab91f470815fc4e85ae8c44266095df34ecaa542bb02cf48039c1",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_smooth_full_k67_lw_ref_jy.csv",
+      "new_path": "routes/traditional/results/cert_smooth_full_k67_lw_ref_jy.csv",
+      "old_sha256": "3bd94380d0e0ab14885b92487c85425a3de8cf3776a01754ad92122a40e2e1e0",
+      "new_sha256": "3bd94380d0e0ab14885b92487c85425a3de8cf3776a01754ad92122a40e2e1e0",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_smooth_full_k67_thesis.csv",
+      "new_path": "routes/traditional/results/cert_smooth_full_k67_thesis.csv",
+      "old_sha256": "424a26297801e6ae3c76d3c99cf57f2adfa246fdf3af75a8e225cc713e88c509",
+      "new_sha256": "424a26297801e6ae3c76d3c99cf57f2adfa246fdf3af75a8e225cc713e88c509",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_smooth_full_k67_thesis_jy.csv",
+      "new_path": "routes/traditional/results/cert_smooth_full_k67_thesis_jy.csv",
+      "old_sha256": "bb84cdcaf0893069318bf792509a96a40dcd4edf5d63bfd40ba9bc8929e8fe1e",
+      "new_sha256": "bb84cdcaf0893069318bf792509a96a40dcd4edf5d63bfd40ba9bc8929e8fe1e",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_smooth_v3_k67_lw.csv",
+      "new_path": "routes/traditional/results/cert_smooth_v3_k67_lw.csv",
+      "old_sha256": "fcb994a2803711110902fe2c7c1b0efc101d35d517a8cf31a6ca64bff816340b",
+      "new_sha256": "fcb994a2803711110902fe2c7c1b0efc101d35d517a8cf31a6ca64bff816340b",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_smooth_v3_k67_thesis.csv",
+      "new_path": "routes/traditional/results/cert_smooth_v3_k67_thesis.csv",
+      "old_sha256": "61fafa1af6cd8681c72dd60b224a522bae68c072995836fff1061f98d6bad3fb",
+      "new_sha256": "61fafa1af6cd8681c72dd60b224a522bae68c072995836fff1061f98d6bad3fb",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_smooth_v3_k68_r2008.csv",
+      "new_path": "routes/traditional/results/cert_smooth_v3_k68_r2008.csv",
+      "old_sha256": "6a1f554b02dc947698fe1d5a3ee1d1c001c5b0ab52ee9f22ff346a8211100a68",
+      "new_sha256": "6a1f554b02dc947698fe1d5a3ee1d1c001c5b0ab52ee9f22ff346a8211100a68",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_smooth_v3_k70_bty_pub.csv",
+      "new_path": "routes/traditional/results/cert_smooth_v3_k70_bty_pub.csv",
+      "old_sha256": "894422d0a58db0cca0121e7473bc1cf566dc7a0bd73b49110ea9e2879cd4c756",
+      "new_sha256": "894422d0a58db0cca0121e7473bc1cf566dc7a0bd73b49110ea9e2879cd4c756",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/cert_smooth_v3_k74_pub.csv",
+      "new_path": "routes/traditional/results/cert_smooth_v3_k74_pub.csv",
+      "old_sha256": "e2272b2e103101b5732ac1f512d4a82b2b05286cdac432cfe8b05ee0165b69a6",
+      "new_sha256": "e2272b2e103101b5732ac1f512d4a82b2b05286cdac432cfe8b05ee0165b69a6",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/chain_k68_r2008.log",
+      "new_path": "routes/traditional/results/chain_k68_r2008.log",
+      "old_sha256": "e0fe8de9908ab51ceb9139585a081022b1fbc93898419074c01f36ac4c074cfc",
+      "new_sha256": "e0fe8de9908ab51ceb9139585a081022b1fbc93898419074c01f36ac4c074cfc",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/chain_k70_bty_pub.log",
+      "new_path": "routes/traditional/results/chain_k70_bty_pub.log",
+      "old_sha256": "3d0ebd1ede02d0644514956d0d28949a569a389740458ad07852cb2483af5c78",
+      "new_sha256": "3d0ebd1ede02d0644514956d0d28949a569a389740458ad07852cb2483af5c78",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/chain_k74_pub.log",
+      "new_path": "routes/traditional/results/chain_k74_pub.log",
+      "old_sha256": "4e388d46770b19890fe74c846a460074d032f9b9c8ae4f92ffe37be015f9376f",
+      "new_sha256": "4e388d46770b19890fe74c846a460074d032f9b9c8ae4f92ffe37be015f9376f",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/close_jy_lw_ref.txt",
+      "new_path": "routes/traditional/results/close_jy_lw_ref.txt",
+      "old_sha256": "6bbd5429754753c9037f61c0ca64a569eb69e5cd4241cb7487dce5e48227d682",
+      "new_sha256": "6bbd5429754753c9037f61c0ca64a569eb69e5cd4241cb7487dce5e48227d682",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/close_jy_thesis.txt",
+      "new_path": "routes/traditional/results/close_jy_thesis.txt",
+      "old_sha256": "e058d24985f79e7333b9603744e718a03de689723bd565a8d199b0e593d4d723",
+      "new_sha256": "e058d24985f79e7333b9603744e718a03de689723bd565a8d199b0e593d4d723",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/close_v3_thesis.txt",
+      "new_path": "routes/traditional/results/close_v3_thesis.txt",
+      "old_sha256": "9b83d472faeaf54a8204dc66ab11cc218a4cc468b1f8d1823c35e89a18db9fb6",
+      "new_sha256": "9b83d472faeaf54a8204dc66ab11cc218a4cc468b1f8d1823c35e89a18db9fb6",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/k67_hyb_scan.csv",
+      "new_path": "routes/traditional/results/k67_hyb_scan.csv",
+      "old_sha256": "bf00365151dc8aa6e7fca894d97b58d2011d493a0ca02ed80592c38220169330",
+      "new_sha256": "bf00365151dc8aa6e7fca894d97b58d2011d493a0ca02ed80592c38220169330",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/make_hyb_jy_thesis.txt",
+      "new_path": "routes/traditional/results/make_hyb_jy_thesis.txt",
+      "old_sha256": "ee14f43052bbde364246027a89c6c31f182f237432925b75e7af7f355bb69859",
+      "new_sha256": "ee14f43052bbde364246027a89c6c31f182f237432925b75e7af7f355bb69859",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/min_k_conservative.md",
+      "new_path": "routes/traditional/results/min_k_conservative.md",
+      "old_sha256": "10a2b35da8af0b598b9a8e76c65d94aa7d9934c91bfa97a454926285a1428d05",
+      "new_sha256": "10a2b35da8af0b598b9a8e76c65d94aa7d9934c91bfa97a454926285a1428d05",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/mk_68_r2008.txt",
+      "new_path": "routes/traditional/results/mk_68_r2008.txt",
+      "old_sha256": "ee729cedb558ce7235d44741d99f65dc46fe85ef594db5d8257d3c8f388c3682",
+      "new_sha256": "ee729cedb558ce7235d44741d99f65dc46fe85ef594db5d8257d3c8f388c3682",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/mk_74_pub.txt",
+      "new_path": "routes/traditional/results/mk_74_pub.txt",
+      "old_sha256": "4e388d46770b19890fe74c846a460074d032f9b9c8ae4f92ffe37be015f9376f",
+      "new_sha256": "4e388d46770b19890fe74c846a460074d032f9b9c8ae4f92ffe37be015f9376f",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/pure_lw_jy.txt",
+      "new_path": "routes/traditional/results/pure_lw_jy.txt",
+      "old_sha256": "c2ebcc4a663b12c46172aab1bb1bd82c631780f123690d957e002dec75872971",
+      "new_sha256": "c2ebcc4a663b12c46172aab1bb1bd82c631780f123690d957e002dec75872971",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/pure_thesis_jy.txt",
+      "new_path": "routes/traditional/results/pure_thesis_jy.txt",
+      "old_sha256": "16c3ab1ad3afdf3fcc2d4646c3837664ca57b7def7f7766f2e096db4d9affa92",
+      "new_sha256": "16c3ab1ad3afdf3fcc2d4646c3837664ca57b7def7f7766f2e096db4d9affa92",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/rigorous_thresholds.md",
+      "new_path": "routes/traditional/results/rigorous_thresholds.md",
+      "old_sha256": "f1d8f1522255b495cd655cb971e42ae16bce0426b1927407ab95e436cd922954",
+      "new_sha256": "f1d8f1522255b495cd655cb971e42ae16bce0426b1927407ab95e436cd922954",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/small_k_scan.tsv",
+      "new_path": "routes/traditional/results/small_k_scan.tsv",
+      "old_sha256": "f1c008544b96a97f825f8a733ef75a17f4c9e675fe0ae3e64e0fd1e4ab644776",
+      "new_sha256": "f1c008544b96a97f825f8a733ef75a17f4c9e675fe0ae3e64e0fd1e4ab644776",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/small_k_table.md",
+      "new_path": "routes/traditional/results/small_k_table.md",
+      "old_sha256": "03278c1a17a69d2095181ed9221b2fcae3141e728ee0f9f28f8fd405d8ac488f",
+      "new_sha256": "03278c1a17a69d2095181ed9221b2fcae3141e728ee0f9f28f8fd405d8ac488f",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/superseded/cert_smooth_k67_down_M12_from5547p9268.csv",
+      "new_path": "routes/traditional/results/superseded/cert_smooth_k67_down_M12_from5547p9268.csv",
+      "old_sha256": "e707f8f440cc98edfc7d70f3b020a657d9937397687565b10522bdc17f749cb2",
+      "new_sha256": "e707f8f440cc98edfc7d70f3b020a657d9937397687565b10522bdc17f749cb2",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/superseded/cert_smooth_k67_down_M3_from6989p9424.csv",
+      "new_path": "routes/traditional/results/superseded/cert_smooth_k67_down_M3_from6989p9424.csv",
+      "old_sha256": "cbaec8dfe4b4ceb1be8e2fea240142236a679bd47a19559925bdb519c4450f69",
+      "new_sha256": "cbaec8dfe4b4ceb1be8e2fea240142236a679bd47a19559925bdb519c4450f69",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/superseded/cert_smooth_k67_down_M8_from5576p2861.csv",
+      "new_path": "routes/traditional/results/superseded/cert_smooth_k67_down_M8_from5576p2861.csv",
+      "old_sha256": "3ab91a667a2681aa5ca2926509dffce3860528714ad33967c195103d90bdf3a0",
+      "new_sha256": "3ab91a667a2681aa5ca2926509dffce3860528714ad33967c195103d90bdf3a0",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/superseded/cert_smooth_k67_up_M2_from2330p1633.csv",
+      "new_path": "routes/traditional/results/superseded/cert_smooth_k67_up_M2_from2330p1633.csv",
+      "old_sha256": "ee53932e791c7ba889c70471a07be7356fe067380bd93be9fb520372d6357499",
+      "new_sha256": "ee53932e791c7ba889c70471a07be7356fe067380bd93be9fb520372d6357499",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/superseded/cert_smooth_k67_up_M3_from2040p0227.csv",
+      "new_path": "routes/traditional/results/superseded/cert_smooth_k67_up_M3_from2040p0227.csv",
+      "old_sha256": "a431d1011bb1d5ad378e129ebe0a44e9d3f17bf9a635479d29a758f2c08405f7",
+      "new_sha256": "a431d1011bb1d5ad378e129ebe0a44e9d3f17bf9a635479d29a758f2c08405f7",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/superseded/check_smooth_full_k67.txt",
+      "new_path": "routes/traditional/results/superseded/check_smooth_full_k67.txt",
+      "old_sha256": "2b6674746c3fac84a359558d7e51de075b891aa2bf922eb424ac70e4954fdf24",
+      "new_sha256": "2b6674746c3fac84a359558d7e51de075b891aa2bf922eb424ac70e4954fdf24",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/superseded/close_k65.txt",
+      "new_path": "routes/traditional/results/superseded/close_k65.txt",
+      "old_sha256": "fbdc4fbbf7ef79286c9b09ccf32250e82fcccc94eed3b58add950f1666498c31",
+      "new_sha256": "fbdc4fbbf7ef79286c9b09ccf32250e82fcccc94eed3b58add950f1666498c31",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/superseded/close_k66.txt",
+      "new_path": "routes/traditional/results/superseded/close_k66.txt",
+      "old_sha256": "a9af6cabd818a5dd9107358c71ceec413cb61bd3cd7c272ee017ccaa9b610cd1",
+      "new_sha256": "a9af6cabd818a5dd9107358c71ceec413cb61bd3cd7c272ee017ccaa9b610cd1",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/superseded/partial_cert_smooth_full_k65_thesis_upto2050.csv",
+      "new_path": "routes/traditional/results/superseded/partial_cert_smooth_full_k65_thesis_upto2050.csv",
+      "old_sha256": "1a453ef6a59f40cfd677975edc3f71481e30cdda7cccb7dbee024962b05d4829",
+      "new_sha256": "1a453ef6a59f40cfd677975edc3f71481e30cdda7cccb7dbee024962b05d4829",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/superseded/partial_cert_smooth_full_k66_thesis_upto3361.csv",
+      "new_path": "routes/traditional/results/superseded/partial_cert_smooth_full_k66_thesis_upto3361.csv",
+      "old_sha256": "9e2a296f5e227829b3337fdfb4f9163d57360016060997771c5a89715099c145",
+      "new_sha256": "9e2a296f5e227829b3337fdfb4f9163d57360016060997771c5a89715099c145",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "results/vc_k68.txt",
+      "new_path": "routes/traditional/results/vc_k68.txt",
+      "old_sha256": "7c8da4adc6903587d5fa5a5ae24fa7b5868c2785d18c49b79d53d3f00f3a7b61",
+      "new_sha256": "7c8da4adc6903587d5fa5a5ae24fa7b5868c2785d18c49b79d53d3f00f3a7b61",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/vc_k70.txt",
+      "new_path": "routes/traditional/results/vc_k70.txt",
+      "old_sha256": "6fadb877768159fcdba0b06d5acc16b8ff501f8b4f4c13a87aedaf924681d789",
+      "new_sha256": "6fadb877768159fcdba0b06d5acc16b8ff501f8b4f4c13a87aedaf924681d789",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "results/vc_k74.txt",
+      "new_path": "routes/traditional/results/vc_k74.txt",
+      "old_sha256": "69535944a97a5901e0836644bca06acea49f003dcd02cb719121b230cace3ad9",
+      "new_sha256": "69535944a97a5901e0836644bca06acea49f003dcd02cb719121b230cace3ad9",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "review/Claude_review_k67_proof_2026-11-06.md",
+      "new_path": "routes/traditional/review/Claude_review_k67_proof_2026-11-06.md",
+      "old_sha256": "e063318e6e72ab1fee9db3966a69b03252826755838c684ff8d135adf39e6bbf",
+      "new_sha256": "e063318e6e72ab1fee9db3966a69b03252826755838c684ff8d135adf39e6bbf",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "review/Claude_review_k67_scripts/README.md",
+      "new_path": "routes/traditional/review/Claude_review_k67_scripts/README.md",
+      "old_sha256": "dca67a671d981c568f1cb0393051121ab9c0b08d9fd8bf13ea866b7f12d123eb",
+      "new_sha256": "dca67a671d981c568f1cb0393051121ab9c0b08d9fd8bf13ea866b7f12d123eb",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "review/Claude_review_k67_scripts/check_propS.py",
+      "new_path": "routes/traditional/review/Claude_review_k67_scripts/check_propS.py",
+      "old_sha256": "b9c6750d83a29b458b54a153ba50c754a7aa1608c3d3e03b48f54347339e17e4",
+      "new_sha256": "b9c6750d83a29b458b54a153ba50c754a7aa1608c3d3e03b48f54347339e17e4",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "review/Claude_review_k67_scripts/check_rj_and_propH.py",
+      "new_path": "routes/traditional/review/Claude_review_k67_scripts/check_rj_and_propH.py",
+      "old_sha256": "b9b41219bad690316c4be304cf0c14af9730534aa665b5a0d868bdec7e3a5825",
+      "new_sha256": "b9b41219bad690316c4be304cf0c14af9730534aa665b5a0d868bdec7e3a5825",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "review/Claude_review_k67_scripts/indep_check.py",
+      "new_path": "routes/traditional/review/Claude_review_k67_scripts/indep_check.py",
+      "old_sha256": "d3dfbd2177e41997d2838a47e8de8eb1cf008038104730090356ea15fc5398b7",
+      "new_sha256": "d3dfbd2177e41997d2838a47e8de8eb1cf008038104730090356ea15fc5398b7",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "review/Claude_review_k67_scripts/misc_checks.py",
+      "new_path": "routes/traditional/review/Claude_review_k67_scripts/misc_checks.py",
+      "old_sha256": "2ad93d135daf0b6b8687aaccef51b36acfe627b5dc20ac496eaca86f6107780f",
+      "new_sha256": "2ad93d135daf0b6b8687aaccef51b36acfe627b5dc20ac496eaca86f6107780f",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "review/Claude_review_k67_scripts/scan_sensitivity.py",
+      "new_path": "routes/traditional/review/Claude_review_k67_scripts/scan_sensitivity.py",
+      "old_sha256": "bf55fb63d6cf777eeca1c50755c7ce0d966f55db5e64d84becb3c31aaef50f67",
+      "new_sha256": "bf55fb63d6cf777eeca1c50755c7ce0d966f55db5e64d84becb3c31aaef50f67",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": true
+    },
+    {
+      "old_path": "review/GPT_review_OpenAI_QRH_and_k8_2026-11-06.md",
+      "new_path": "routes/traditional/review/GPT_review_OpenAI_QRH_and_k8_2026-11-06.md",
+      "old_sha256": "eb41a873aa55f58ab2f969a718171b82d5c3bed7c3279d4d844a1994051b05a3",
+      "new_sha256": "eb41a873aa55f58ab2f969a718171b82d5c3bed7c3279d4d844a1994051b05a3",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "review/GPT_review_k67_proof_2026-11-06.md",
+      "new_path": "routes/traditional/review/GPT_review_k67_proof_2026-11-06.md",
+      "old_sha256": "90fb287f6075cd87227839a6bc140ec4e9677e2e82b3a4d3dd4bf6b4e3a68438",
+      "new_sha256": "90fb287f6075cd87227839a6bc140ec4e9677e2e82b3a4d3dd4bf6b4e3a68438",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    },
+    {
+      "old_path": "review/response_to_reviews_2026-11-06.md",
+      "new_path": "routes/traditional/review/response_to_reviews_2026-11-06.md",
+      "old_sha256": "9487a64e6e03e35a82eeff6f515847b990b7369817d91ccda865740f1c1131ef",
+      "new_sha256": "9487a64e6e03e35a82eeff6f515847b990b7369817d91ccda865740f1c1131ef",
+      "bytes_unchanged": true,
+      "protected_mathematical_file": false
+    }
+  ]
+}

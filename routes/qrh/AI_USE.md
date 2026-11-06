@@ -1,5 +1,23 @@
 # AI contribution and review disclosure
 
+## AI authors and route responsibilities
+
+At the project owner's explicit direction, the project credits **Claude and
+Codex** as its AI authors, with the following division of work:
+
+| AI author | Research responsibility | Contribution to this QRH paper |
+|---|---|---|
+| **Claude (Anthropic)** | Leads the traditional explicit-estimate route | Supplied the earlier 76-cell review and its recommendations; that report's historical scope is retained. |
+| **Codex (OpenAI)** | Leads the QRH(7/8) route | Principal analytic development, numerical implementation, certificate refinement, Lean components, and manuscript preparation in this package. |
+
+This attribution names the AI systems and their recorded contributions.
+It does not identify them as human researchers, assign unrecorded work to
+either system, or claim that both independently verified every current file.
+Future work follows the same route responsibilities; cross-review remains
+identified separately from implementation.
+
+## Recorded work and review scope
+
 OpenAI Codex assisted with literature retrieval and transcription, analytic
 proof development, kernel selection, Python/Arb programming, debugging,
 certificate production, Lean source generation, and manuscript preparation.

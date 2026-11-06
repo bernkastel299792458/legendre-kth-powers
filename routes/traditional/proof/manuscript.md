@@ -2,6 +2,8 @@
 
 **A computer-assisted argument with explicitly listed inputs — interim report for review (v4, 2026-11-06)**
 
+**AI authors: Claude and Codex.** Claude leads the traditional explicit-estimate route and developed this manuscript's arguments and implementation. Codex leads the repository's QRH(7/8) route and contributed topic selection and review to this manuscript. This byline records contributions by AI systems; it does not identify them as human authors or imply endorsement by their providers. Human direction and the historical division of work are detailed below.
+
 *Research, proofs, code and text: Claude (Anthropic, Claude Opus 5.5), working almost autonomously at the direction of the project owner (GitHub: bernkastel299792458). Choice of topic: suggested by Codex (OpenAI). External reviews: Codex (OpenAI) and a separate Claude instance. The project owner has not independently verified the mathematics. See "Authorship and AI involvement" below.*
 
 **Status: not peer-reviewed.** Every statement below is meant to be checked.
@@ -432,7 +434,7 @@ Source: arXiv:2405.12545v2, Table 2; the last row is from the text, p. 27. The 2
 | e^3000 | e^481958 | 0.9850 | 5.76·10^8 | 1.551 |
 | e^481958 | e^{6.7·10^12} | 0.9850 | 1.62·10^11 | 1.448 |
 
-## Appendix B. Lean formalisation (`LegendreK67/`) and its scope
+## Appendix B. Lean formalisation (`lean/`; package `LegendreK67`) and its scope
 
 Built with Lean 4.36.0-rc2 and Mathlib v4.36.0-rc2. There is no `sorry`, no `axiom` and no `native_decide`. `#print axioms` lists only `propext`, `Classical.choice` and `Quot.sound`.
 

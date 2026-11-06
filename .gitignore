@@ -1,12 +1,12 @@
 # Third-party papers and sources (copyright belongs to their authors).
-# See SOURCES.md for links.
-papers/
-proof/input_verification/sources_*/
-proof/zfr_audit/**/source/
+# See routes/traditional/SOURCES.md for links.
+**/papers/
+routes/traditional/proof/input_verification/sources_*/
+routes/traditional/proof/zfr_audit/**/source/
 *.pdf
 
 # Lee's code is a separate public repository (see SOURCES.md).
-code/lee_code/
+routes/traditional/code/lee_code/
 
 # Build and cache directories
 **/.lake/

@@ -2,13 +2,15 @@
 
 **状态：待审查，尚未经过同行评审。** 这是一个计算机辅助的论证，并且以若干文献输入为前提。
 
+**AI 作者：Claude、Codex。** Claude 负责传统显式估计路线；Codex 负责仓库的 QRH(7/8) 路线，并在本稿中贡献选题与审阅。这里的署名记录 AI 系统贡献，不是人类作者身份或供应商背书。
+
 **AI 参与：**
 - 本项目几乎完全由 AI 自主完成。
   - 选题由 Codex（OpenAI）帮助筛出；
   - Claude（Anthropic，Opus 5.5）完成了全部推导、代码、证书、Lean 和文稿；
   - 评审由 Codex 与另一个 Claude 实例完成。
 - 项目发起人负责提出问题、确定方向和质量要求，**没有独立核验数学内容**。
-- 详见手稿开头的"Authorship and AI involvement"。英文总览见仓库根目录 `README.md`。
+- 详见手稿开头的"Authorship and AI involvement"。路线入口见 [传统路线 README](../README.md)，双路线总览见 [仓库主页](../../../README.md)。
 
 ## 阶段性成果
 
@@ -36,14 +38,16 @@
 |---|---|
 | `manuscript.md` | **主手稿（英文，v4）** |
 | `REVIEW_CHECKLIST.md` | 审查清单 |
-| `input_verification/` | 文献核对报告（第三方原文没有随仓库上传，见 `SOURCES.md`） |
+| `input_verification/` | 文献核对报告（第三方原文没有随仓库上传，见 [`../SOURCES.md`](../SOURCES.md)） |
 | `zfr_audit/` | 对 4.896 与 19.62 的独立核验（报告、复算脚本、部分 Lean） |
 | `certificates/` | k = 70、74 的证书，`verify_all_output.txt`，`sanity_small_k.txt`，`sensitivity_output.txt`（输入敏感性）；`withdrawn_k67/`、`superseded_*` 是旧证书 |
 | `code/` | 严格验证代码；运行 `verify_all.py` 一键复核；`make_chain.py` 生成证书链；`scan_min_k.py` 扫描最小 k；`sensitivity.py` 做输入敏感性分析 |
-| `LegendreK67/` | Lean 4 + Mathlib 形式化（只覆盖记账部分） |
+| `lean/` | Lean 4 + Mathlib 形式化（只覆盖记账部分；内部包名保留 `LegendreK67`） |
 | `conversation/` | 研究对话记录（中文原文与英文翻译） |
 
 ## 如何复核
+
+以下两组命令均分别从本审查包 `routes/traditional/proof/` 出发。
 
 **数值部分**（全程纯 Arb，约 15 分钟）：
 
@@ -56,7 +60,7 @@ python verify_all.py
 **Lean 部分：**
 
 ```bash
-cd LegendreK67
+cd lean
 lake exe cache get
 lake build
 lake env lean LegendreK67/Audit.lean

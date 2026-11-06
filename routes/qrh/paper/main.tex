@@ -1,10 +1,30 @@
-# QRH(7/8) 与显式零点密度假设下相邻六次幂之间的素数
+% !TEX program = xelatex
+% Generated from manuscript.md by build_tex.py; edit manuscript.md first.
+\documentclass[UTF8,zihao=-4,fontset=fandol]{ctexart}
+\usepackage[a4paper,margin=23mm]{geometry}
+\usepackage{amsmath,amssymb,mathtools,booktabs,longtable,array}
+\usepackage{fvextra}
+\usepackage{xcolor}
+\usepackage[unicode,colorlinks=true,linkcolor=blue!45!black,citecolor=blue!45!black,urlcolor=blue!45!black]{hyperref}
+\usepackage{xurl}
+\allowdisplaybreaks
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.25em}
+\emergencystretch=3em
+\hypersetup{pdftitle={QRH(7/8) 与显式零点密度假设下相邻六次幂之间的素数},pdfauthor={Claude; Codex}}
+\title{QRH(7/8) 与显式零点密度假设下\\相邻六次幂之间的素数}
+\author{Claude（传统路线负责人；本路线早期审阅）\\[0.3em]Codex（QRH 路线负责人；本稿主要研究与实现）}
+\date{公开审查稿，2026年11月6日}
+\begin{document}
+\maketitle
+
+\textbf{AI 作者：Claude（传统路线负责人；本路线早期审阅）与 Codex（QRH 路线负责人；本稿主要研究与实现）。}
 
 公开审查稿，2026-11-06。本文给出解析论证、有限整数计算和区间算术共同组成的条件性证明。人类作者署名、单位与联系邮箱本版暂不填写。研究前提为下文明确陈述的 H1 与 H2；本文不审核它们的上游证明。AI 辅助贡献及形式化状态在第 11、12 节单列。
 
-## 摘要
+\begin{abstract}
 
-假定黎曼 ζ 函数的每个非平凡零点的实部不超过 \(7/8\)，并假定 Chourasiya–Simonič 预印本 arXiv:2507.15184v2 的推论 1 在本文列明的参数域成立。证明对每个整数 \(n\ge1\)，存在素数
+假定黎曼 \(\zeta\) 函数的每个非平凡零点的实部不超过 \(7/8\)，并假定 Chourasiya–Simonič 预印本 arXiv:2507.15184v2 的推论 1 在本文列明的参数域成立。证明对每个整数 \(n\ge1\)，存在素数
 
 \[
 n^6<p<n^6+6n^5<(n+1)^6.
@@ -12,7 +32,10 @@ n^6<p<n^6+6n^5<(n+1)^6.
 
 证明用已知显式短区间定理和 1259 个确定性素性见证处理下端，以非负梯形权和积分显式公式处理 \(167\le\log x\le400\)，以多项式权处理 \(400\le\log x\le700\)，最后以共同截断高度的显式公式和解析单调性覆盖无限尾部。梯形权的二阶导数作为有限变差测度处理，包含所有端点原子；每个闭区间先建立统一的逐零点包络，再计算正的 Stieltjes 上和。精化后的中段证书包含 94 个闭单元，总扣除的最大认证上界为 \(0.939735996783828324763044<1\)。在固定包络下，全部密度表常数同时放大 \(6\%\)，这 94 个单元仍严格通过。
 
-## 1. 定理、记号和输入的地位
+\end{abstract}
+\noindent\textbf{关键词：}素数短区间；零点密度；准黎曼假设；区间算术；计算辅助证明。
+\tableofcontents\newpage
+\section{定理、记号和输入的地位}
 
 令
 
@@ -35,9 +58,9 @@ H=3\cdot10^{12},\qquad
 p(\sigma)=\frac{3(1-\sigma)}{2-\sigma}.
 \]
 
-**假设 H1（QRH(7/8)）。** 每个非平凡零点均满足 \(\beta\le7/8\)。这是本项目按研究约定接受的假设；本文不从上游 QRH 稿件重新导出它；H1 作为本条件定理的明确前提使用。
+\textbf{假设 H1（QRH(7/8)）。} 每个非平凡零点均满足 \(\beta\le7/8\)。这是本项目按研究约定接受的假设；本文不从上游 QRH 稿件重新导出它；H1 作为本条件定理的明确前提使用。
 
-**假设 H2（固定版本的显式密度输入）。** 对 \(T\ge H\)、\(16\le i\le27\) 及整个闭区间 \(i/32\le\sigma\le(i+1)/32\)，有
+\textbf{假设 H2（固定版本的显式密度输入）。} 对 \(T\ge H\)、\(16\le i\le27\) 及整个闭区间 \(i/32\le\sigma\le(i+1)/32\)，有
 
 \[
 N(\sigma,T)\le B_{1,i}T^{p(\sigma)}(\log T)^{p(\sigma)+2}
@@ -46,22 +69,31 @@ N(\sigma,T)\le B_{1,i}T^{p(\sigma)}(\log T)^{p(\sigma)+2}
 
 所用常数全部如下；有限十进制数按其精确十进制值使用。
 
-| \(i\) | \(B_{1,i}\) | \(B_{2,i}\) | \(B_{3,i}\) |
-|---:|---:|---:|---:|
-|16|5.069|9.461|167.8|
-|17|6.046|9.168|162.6|
-|18|7.077|8.875|157.4|
-|19|8.185|8.582|152.2|
-|20|9.387|8.290|147.0|
-|21|10.70|7.997|141.9|
-|22|12.11|7.704|136.7|
-|23|13.66|7.411|131.5|
-|24|15.35|7.118|126.3|
-|25|17.21|6.826|121.1|
-|26|19.31|6.533|115.9|
-|27|21.77|6.240|110.7|
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.2576\textwidth}>{\raggedright\arraybackslash}p{0.1840\textwidth}>{\raggedright\arraybackslash}p{0.1932\textwidth}>{\raggedright\arraybackslash}p{0.2484\textwidth}}
+\toprule
+\(i\) & \(B_{1,i}\) & \(B_{2,i}\) & \(B_{3,i}\) \\
+\midrule\endfirsthead
+\toprule
+\(i\) & \(B_{1,i}\) & \(B_{2,i}\) & \(B_{3,i}\) \\
+\midrule\endhead
+\bottomrule\endfoot
+16 & 5.069 & 9.461 & 167.8 \\
+17 & 6.046 & 9.168 & 162.6 \\
+18 & 7.077 & 8.875 & 157.4 \\
+19 & 8.185 & 8.582 & 152.2 \\
+20 & 9.387 & 8.290 & 147.0 \\
+21 & 10.70 & 7.997 & 141.9 \\
+22 & 12.11 & 7.704 & 136.7 \\
+23 & 13.66 & 7.411 & 131.5 \\
+24 & 15.35 & 7.118 & 126.3 \\
+25 & 17.21 & 6.826 & 121.1 \\
+26 & 19.31 & 6.533 & 115.9 \\
+27 & 21.77 & 6.240 & 110.7 \\
+\end{longtable}
+\endgroup
 
-这正是 [Chourasiya–Simonič v2，推论 1、表 1 的前 12 行](https://arxiv.org/html/2507.15184v2)。固定版本日期为 2025-09-30；核查时 arXiv 未列期刊发表信息，因此本文将它单列为未经本文重证的预印本假设。这里的对数指数是
+这正是 \href{https://arxiv.org/html/2507.15184v2}{Chourasiya–Simonič v2，推论 1、表 1 的前 12 行}~\cite{CSv2}。固定版本日期为 2025-09-30；核查时 arXiv 未列期刊发表信息，因此本文将它单列为未经本文重证的预印本假设。这里的对数指数是
 
 \[
 p(\sigma)+2=\frac{7-5\sigma}{2-\sigma},
@@ -69,7 +101,7 @@ p(\sigma)+2=\frac{7-5\sigma}{2-\sigma},
 
 不能替换成 v1 的统一三次幂并继续沿用数值结论。只有第 7 节在特定实部范围内明确放大后才使用 \((\log T)^3\)。
 
-**主定理。** 在 H1、H2 下，对每个整数 \(n\ge1\)，存在素数 \(p\) 满足
+\textbf{主定理。} 在 H1、H2 下，对每个整数 \(n\ge1\)，存在素数 \(p\) 满足
 
 \[
 n^6<p<n^6+6n^5<(n+1)^6. \tag{2}
@@ -77,11 +109,13 @@ n^6<p<n^6+6n^5<(n+1)^6. \tag{2}
 
 除 H1、H2 外，证明引用以下经典公式、已发表定理及其明确指定的更正版；它们不是本文的新假设，也没有在本文重证其全部上游分析或计算。
 
-1. Platt–Trudgian 的有限高度 RH 核验给出 \(0<\gamma\le3\,000\,175\,332\,800\) 的零点均在临界线上。因此在 \(0<\gamma\le H\) 可使用 \(\beta=1/2\)。[原文定理 1](https://arxiv.org/abs/2004.09765)
-2. 第 2 节明确陈述的总零点计数辅助界，以及第 3 节的经典积分显式公式。
-3. Cully-Hugill–Lee 的显式短区间定理，采用 [arXiv:2103.05986v3 的定理 1、修正表 2](https://arxiv.org/html/2103.05986v3)；本文在第 8 节列出用到的全部 12 行及覆盖计算。
-4. Cully-Hugill–Johnston II 的共同高度短区间公式，采用 [arXiv:2402.04272v3，定理 1.3、表 1](https://arxiv.org/html/2402.04272v3)；本文第 7 节给出完整适用域和常数。
-5. 原 Python 路线引用 Sorenson–Webster 的有限范围强伪素数定理验证 1259 个素数见证；严格截断值和验证规则见第 8 节。[原文定理 1.1](https://arxiv.org/abs/1509.00864) 本公开版本另为同一批见证给出全部经过 Lean 内核检查的递归 Lucas/Pratt 素性证明，因此可用这条已完成的替代路线去除该项外部素性定理依赖。
+\begin{enumerate}
+\item Platt–Trudgian 的有限高度 RH 核验给出 \(0<\gamma\le3\,000\,175\,332\,800\) 的零点均在临界线上。因此在 \(0<\gamma\le H\) 可使用 \(\beta=1/2\)。\href{https://arxiv.org/abs/2004.09765}{原文定理 1}~\cite{PT}
+\item 第 2 节明确陈述的总零点计数辅助界，以及第 3 节的经典积分显式公式。
+\item Cully-Hugill–Lee 的显式短区间定理，采用 \href{https://arxiv.org/html/2103.05986v3}{arXiv:2103.05986v3 的定理 1、修正表 2}~\cite{CHL}；本文在第 8 节列出用到的全部 12 行及覆盖计算。
+\item Cully-Hugill–Johnston II 的共同高度短区间公式，采用 \href{https://arxiv.org/html/2402.04272v3}{arXiv:2402.04272v3，定理 1.3、表 1}~\cite{CHJ}；本文第 7 节给出完整适用域和常数。
+\item 原 Python 路线引用 Sorenson–Webster 的有限范围强伪素数定理验证 1259 个素数见证；严格截断值和验证规则见第 8 节。\href{https://arxiv.org/abs/1509.00864}{原文定理 1.1}~\cite{SW} 本公开版本另为同一批见证给出全部经过 Lean 内核检查的递归 Lucas/Pratt 素性证明，因此可用这条已完成的替代路线去除该项外部素性定理依赖。
+\end{enumerate}
 
 定义 \(x=n^6\)、\(L=\log x\)、\(h_6=6x^{5/6}\)。只需证明 \((x,x+h_6)\) 含素数，因为
 
@@ -92,16 +126,25 @@ n^6<p<n^6+6n^5<(n+1)^6. \tag{2}
 
 本文各部分覆盖如下。
 
-| 范围 | 实际证明的区间 | 方法 |
-|---|---|---|
-|整数 \(1\le n\le1242317999994\)|\((n^6,n^6+6n^5)\)|素数见证与 CHL 覆盖链|
-|实数 \(167\le L\le400\)|\((x,x+6x^{5/6})\)|梯形权，94 个闭单元|
-|实数 \(400\le L\le700\)|\((x,x+4x^{3/4})\)|多项式权，60 个闭单元|
-|实数 \(L\ge700\)|\((x,x+4x^{3/4})\)|共同高度公式与单调性|
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.3128\textwidth}>{\raggedright\arraybackslash}p{0.3128\textwidth}>{\raggedright\arraybackslash}p{0.2576\textwidth}}
+\toprule
+范围 & 实际证明的区间 & 方法 \\
+\midrule\endfirsthead
+\toprule
+范围 & 实际证明的区间 & 方法 \\
+\midrule\endhead
+\bottomrule\endfoot
+整数 \(1\le n\le1242317999994\) & \((n^6,n^6+6n^5)\) & 素数见证与 CHL 覆盖链 \\
+实数 \(167\le L\le400\) & \((x,x+6x^{5/6})\) & 梯形权，94 个闭单元 \\
+实数 \(400\le L\le700\) & \((x,x+4x^{3/4})\) & 多项式权，60 个闭单元 \\
+实数 \(L\ge700\) & \((x,x+4x^{3/4})\) & 共同高度公式与单调性 \\
+\end{longtable}
+\endgroup
 
-## 2. 两个辅助估计
+\section{两个辅助估计}
 
-### 2.1 总零点计数
+\subsection{总零点计数}
 
 本证明需要且仅需要
 
@@ -117,7 +160,7 @@ N(T)\le T\log T\qquad(T\ge H). \tag{4}
 \le0.137\log T+0.443\log\log T+1.588. \tag{4a}
 \]
 
-所核查的发表来源是 Dusart，*Estimates of \(\psi,\theta\) for large values of \(x\) without the Riemann hypothesis*，Mathematics of Computation 85 (2016)，第 877 页式 (10)、(11)；该文明确将此界归于 Rosser 1941 的定理 19、第 223 页。核对途径为出版商索引的原文提取；[作者本人公开的 HDR 第 34 页式 (2.2)、(2.3)](https://www.unilim.fr/pages_perso/pierre.dusart/Documents/HDR_Dusart.pdf#page=44)还给出相同公式，可用于交叉核查。[Dusart 出版版原文](https://www.ams.org/mcom/2016-85-298/S0025-5718-2015-03005-1/S0025-5718-2015-03005-1.pdf)
+所核查的发表来源是 Dusart，\emph{Estimates of \(\psi,\theta\) for large values of \(x\) without the Riemann hypothesis}，Mathematics of Computation 85 (2016)，第 877 页式 (10)、(11)；该文明确将此界归于 Rosser 1941 的定理 19、第 223 页。核对途径为出版商索引的原文提取；\href{https://www.unilim.fr/pages_perso/pierre.dusart/Documents/HDR_Dusart.pdf\#page=44}{作者本人公开的 HDR 第 34 页式 (2.2)、(2.3)}还给出相同公式，可用于交叉核查。\href{https://www.ams.org/mcom/2016-85-298/S0025-5718-2015-03005-1/S0025-5718-2015-03005-1.pdf}{Dusart 出版版原文}~\cite{Dusart}
 
 在本文使用的 \(T\ge H\) 上，\(\log T\ge1\)、\(\log\log T\le\log T\)，且
 
@@ -134,7 +177,7 @@ N(T)<\left(\frac T2+0.137+0.443+\frac78+1.588\right)\log T
 
 若源计数在零点恰位于截断高度时采用平均边界约定，对稍大的非零点高度取右极限即可得到本文的含边界上界；最终宽松不等式 (4) 不受影响。此辅助引理独立于 H2，因此本文不另行假设 CS v2 的式 (11)。以下所有使用 (4) 的地方均要求 \(T\ge H\)，不将它错误延伸到有限 RH 分段以下。
 
-### 2.2 高次素数幂
+\subsection{高次素数幂}
 
 对 \(Y\ge2\)，
 
@@ -152,9 +195,9 @@ Y^{1/r}\frac{\log Y}{r}\le\frac{\sqrt Y\log Y}{2}.
 
 层数不超过 \(\log Y/\log2\)，相乘即得 (5)。这不使用素数定理。
 
-## 3. 积分显式公式与梯形权
+\section{积分显式公式与梯形权}
 
-### 3.1 从绝对收敛的公式出发
+\subsection{从绝对收敛的公式出发}
 
 置
 
@@ -172,7 +215,7 @@ Y^{1/r}\frac{\log Y}{r}\le\frac{\sqrt Y\log Y}{2}.
 -\sum_{j\ge1}\frac{t^{1-2j}}{2j(2j-1)}. \tag{6}
 \]
 
-该公式可见 Ingham 的经典专著 *The Distribution of Prime Numbers* 中积分显式公式的论述。它也由对 \(-\zeta'(s)/\zeta(s)\) 的 Mellin–Perron 积分除以 \(s(s+1)\) 后移线得到；极点 \(s=1,\rho,0,-1,-2j\) 分别贡献上述各项。本文只使用其二阶差分或紧支撑权作用，所以仿射项的具体常数最终全部消去。
+该公式可见 Ingham 的经典专著 \emph{The Distribution of Prime Numbers} 中积分显式公式的论述。它也由对 \(-\zeta'(s)/\zeta(s)\) 的 Mellin–Perron 积分除以 \(s(s+1)\) 后移线得到；极点 \(s=1,\rho,0,-1,-2j\) 分别贡献上述各项。本文只使用其二阶差分或紧支撑权作用，所以仿射项的具体常数最终全部消去。
 
 在任一固定紧区间 \([x,Y]\subset(1,\infty)\)，零点项的模由常数乘 \(|\gamma|^{-2}\) 控制。由 \(N(T)=O(T\log T)\)，例如按 \(2^r<|\gamma|\le2^{r+1}\) 分组，得到
 
@@ -183,7 +226,7 @@ Y^{1/r}\frac{\log Y}{r}\le\frac{\sqrt Y\log Y}{2}.
 
 因此 (6) 的零点级数在 \([x,Y]\) 绝对一致收敛；平凡零点级数亦如此。这使下面的有限差分、与 \(L^1\) 函数积分交换合法，避开了直接微分未平滑零点级数的问题。
 
-### 3.2 梯形的四点恒等式
+\subsection{梯形的四点恒等式}
 
 令
 
@@ -243,7 +286,7 @@ F(m)=\frac{(x-m)_+-(x+\alpha h-m)_+-(x+bh-m)_++(Y-m)_+}{\alpha b h}.
 
 这里没有把梯形假称为 \(C^1\) 权；(7) 中四个原子正是二阶分部积分的边界和内部转折贡献。
 
-### 3.3 Mellin 包络
+\subsection{Mellin 包络}
 
 置 \(q=Y/h\)、\(R_1=64/31\)、\(R_2=4096/31\)。对每个零点，直接积分以及一次、二次分部积分分别给出
 
@@ -262,7 +305,7 @@ t^{\beta+j-1}=t^{\beta-1}t^j\le x^{\beta-1}Y^j,
 
 再用 (7) 及缩放关系即得 (10)。函数 \(g_q\) 连续、非增，对 \(q\) 非减；它在 \(T\le R_1q\) 为 1，在 \(T\ge(R_2/R_1)q=64q\) 等于二次衰减项。其二次衰减与总零点计数保证 (9) 中变换后的零点和绝对收敛。
 
-## 4. 对整个闭单元有效的零点上界
+\section{对整个闭单元有效的零点上界}
 
 以下先以梯形权及 \(h=h_6=6x^{5/6}\) 为例。此时
 
@@ -270,7 +313,7 @@ t^{\beta+j-1}=t^{\beta-1}t^j\le x^{\beta-1}Y^j,
 q(L)=1+\frac{e^{L/6}}6.
 \]
 
-### 4.1 先固定包络，再做 Stieltjes 积分
+\subsection{先固定包络，再做 Stieltjes 积分}
 
 取任意闭单元 \([a,c]\subset[167,400]\)，置 \(q_+=q(c)\)。对其中每个 \(L\) 和每个零点，因 \(\beta<1\)，
 
@@ -293,7 +336,7 @@ Z_{a,c}=2\int_0^\infty A_a(T)(-dg_{q_+}(T)). \tag{12}
 
 分部积分在零端的边界项为零；无穷端因 \(A_a(T)\le N(T)=O(T\log T)\) 及二次衰减也为零。(11) 是逐项统一界；并未比较不同参数对应的导数测度 \(-dg_{q(L)}\)。
 
-### 4.2 实部层积分与精确指数权
+\subsection{实部层积分与精确指数权}
 
 当 \(\beta\ge1/2\)，恒等式
 
@@ -333,7 +376,7 @@ A_a(e^u)\le\Phi_a(u)
 
 源表仅在左端 \(s_j\) 处调用，且整个小格都在其行域内。无需假设离散源常数在表格间可插值。
 
-### 4.3 有限 RH、正高度上和和高度起点
+\subsection{有限 RH、正高度上和和高度起点}
 
 若 \(0<T\le H\)，有限高度 RH 给出 \(A_a(T)=e^{-a/2}N(T)\le e^{-a/2}H\log H\)。因此该段对 (12) 的贡献至多
 
@@ -360,7 +403,7 @@ u_*=
 
 每个质量差都严格认证非负。这里用的是实际累积计数的单调性，并不需要另行证明上界函数 \(\Phi_a\) 单调。
 
-### 4.4 保留密度结构的解析高度尾部
+\subsection{保留密度结构的解析高度尾部}
 
 将
 
@@ -401,9 +444,9 @@ D\left(\frac{U^2}{2}+\frac U2+\frac14\right)
 
 因此 \(Z_{a,c}\le Z_{\rm low}+Z_{\rm finite}+Z_{\rm tail}\)，其中 \(Z_{\rm finite}\) 为 (17) 之和。(19) 是 Stieltjes 积分的尾部，包含低于 \(e^U\) 的零点尚未分配的残余权重；它不能解释成仅对 \(\gamma>e^U\) 的零点求和后丢弃边界项。
 
-## 5. 六次幂中段的认证
+\section{六次幂中段的认证}
 
-### 5.1 素数幂和平凡零点扣除
+\subsection{素数幂和平凡零点扣除}
 
 对于闭单元 \([a,c]\)，置 \(\epsilon=6e^{-a/6}\)。由 \(Y=x(1+6x^{-1/6})\)、(5) 及 \(\max\phi=32/31\)，归一化高次素数幂贡献至多
 
@@ -427,21 +470,30 @@ V_a=\frac{e^{-3a}}{1-e^{-2a}}. \tag{21}
 
 则从 (9) 中扣去全部高次素数幂后仍有正量，故存在素数 \(p\) 满足 \(F(p)>0\)。因梯形非负且在端点为零，得到严格的 \(x<p<x+6x^{5/6}\)。
 
-### 5.2 可独立重建的网格和计算规则
+\subsection{可独立重建的网格和计算规则}
 
 采用 256-bit Arb 球算术，实部步长 \(1/4096\)，共 1536 个实部格；高度步长 \(1/64\)。初始 \(L\) 划分如下，所有端点均为精确有理数。
 
-| \(L\) 范围 | 初始单元宽度 |
-|---|---:|
-| \([167,176]\) | \(1\) |
-| \([176,182]\) | \(1/4\) |
-| \([182,190]\) | \(1\) |
-| \([190,220]\) | \(2\) |
-| \([220,400]\) | \(5\) |
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.3312\textwidth}>{\raggedright\arraybackslash}p{0.5520\textwidth}}
+\toprule
+\(L\) 范围 & 初始单元宽度 \\
+\midrule\endfirsthead
+\toprule
+\(L\) 范围 & 初始单元宽度 \\
+\midrule\endhead
+\bottomrule\endfoot
+\([167,176]\) & \(1\) \\
+\([176,182]\) & \(1/4\) \\
+\([182,190]\) & \(1\) \\
+\([190,220]\) & \(2\) \\
+\([220,400]\) & \(5\) \\
+\end{longtable}
+\endgroup
 
 对每一格依次计算 (14)–(22)。只有认证上界严格小于 \(47/50\) 才接受；否则在有理中点二分继续计算。函数、指数、对数及最小值均以球区间计算；常数不经过二进制浮点解析。每个成功格再将其整个球向上取到分母 \(10^{24}\) 的有理数。若任一取整不能确定唯一整数、质量差符号不确定、尾部分母非正、行域检查失败或严格不等式未认证，程序停止或继续细分，而不会将近似小数当作证据。
 
-最终得到 **94 个闭单元**，精确拼接覆盖 \([167,400]\)。最坏单元为
+最终得到 \textbf{94 个闭单元}，精确拼接覆盖 \([167,400]\)。最坏单元为
 
 \[
 \left[\frac{715}{4},179\right]=[178.75,179],
@@ -456,9 +508,9 @@ V_a=\frac{e^{-3a}}{1-e^{-2a}}. \tag{21}
 <\frac{47}{50}<1. \tag{23}
 \]
 
-最小认证余量因此为 \(0.060264003216171675236956\)，约 \(6.0264\%\)。这些数字是对闭单元的共同上界，不是对有限采样点的观测极值。每格完整参数、球区间和精确有理上界随 [中段证书](../results/smooth_k6_certificate.json) 保存；[生成与只读验证程序](../code/certify_smooth_k6.py) 是上述有限算法的实现。
+最小认证余量因此为 \(0.060264003216171675236956\)，约 \(6.0264\%\)。这些数字是对闭单元的共同上界，不是对有限采样点的观测极值。每格完整参数、球区间和精确有理上界随 \href{../results/smooth_k6_certificate.json}{中段证书} 保存；\href{../code/certify_smooth_k6.py}{生成与只读验证程序} 是上述有限算法的实现。
 
-### 5.3 对密度常数的敏感性
+\subsection{对密度常数的敏感性}
 
 固定每格的所有网格与包络参数后，(22) 对 CS 三列常数是仿射的。将来自第一列的贡献记为 \(D_1>0\)，第二、三列之和记为 \(D_{23}\ge0\)，其余项记为 \(E_0\ge0\)，则
 
@@ -482,7 +534,7 @@ c_{{\rm all},*}=\frac{1-E_0}{D_1+D_{23}}. \tag{24}
 
 全部三列统一放大的最小临界因子约为 \(1.0641286525390327\)，仅放大第一列时约为 \(1.0641288908404036\)。严谨的包围区间在证书中，严格通过要求 \(c<c_*\)。这项测试描述本中段固定证书的常数余量；它既不宣称 CS 常数有统计误差，也不自动代表全部四个模块或所有其他证明方法的最大容许放大。
 
-**全链的保守 \(6\%\) 放大检验。** 第 6、7 节中来自 CS 常数的分量以及其余扣除均非负。因此对 \(c\ge1\)，将全部三列常数乘以 \(c\) 后，有 \(\delta_{\rm poly}(c)\le c\delta_{\rm poly}(1)\)、\(F_{\rm tail}(c)\le cF_{\rm tail}(1)\)。利用 (31)、(43)，
+\textbf{全链的保守 \(6\%\) 放大检验。} 第 6、7 节中来自 CS 常数的分量以及其余扣除均非负。因此对 \(c\ge1\)，将全部三列常数乘以 \(c\) 后，有 \(\delta_{\rm poly}(c)\le c\delta_{\rm poly}(1)\)、\(F_{\rm tail}(c)\le cF_{\rm tail}(1)\)。利用 (31)、(43)，
 
 \[
 \delta_{\rm poly}(53/50)
@@ -497,11 +549,11 @@ F_{\rm tail}(53/50)<\frac{53}{50}\cdot\frac{14}{25}
 
 早期 76 格、较粗网格的证书最坏上界为 \(0.991127253158798120355446\)。本文使用 (23) 的精化结果；旧数值仅作修订历史记录，不参与当前最小余量的结论。Claude 的跨模型 AI 审查指出改用 CS v1 时旧最紧格约为 \(9.08\)，那是特定证书失效，不是对待证素数命题的反例。
 
-## 6. \(400\le\log x\le700\) 的多项式权模块
+\section{\(400\le\log x\le700\) 的多项式权模块}
 
 本节证明更短的区间 \((x,x+4x^{3/4})\) 含素数，并给出其全部解析归约。虽然这项计算最初用于四次幂研究，其结论是对实数 \(x\) 的陈述，因而可在第 9 节通过区间包含关系使用。
 
-### 6.1 权函数和端点贡献
+\subsection{权函数和端点贡献}
 
 令 \(h=4x^{3/4}\)、\(Y=x+h\)、\(F(t)=\phi((t-x)/h)\)，其中
 
@@ -555,7 +607,7 @@ g_q(T)=\min\left\{1,\frac{15q}{4T},24\left(\frac qT\right)^2,
 
 它在 \(T\le15q/4\) 为 1，在 \(T\ge25q/2\) 为三次段。
 
-### 6.2 闭单元的正上和及三次高度尾部
+\subsection{闭单元的正上和及三次高度尾部}
 
 对 \([a,c]\subset[400,700]\) 置 \(q_+=1+e^{c/4}/4\)。逐零点统一界 (11)、累积层积分 (13) 和 Stieltjes 表达式 (12) 原样适用，只须换成 (27) 的核。
 
@@ -608,7 +660,7 @@ e^{-a/4}. \tag{30}
 
 平凡零点仍用 (21)。若 \(Z_{\rm finite}+Z_{\rm tail}+P_{a,c}+V_a<1\)，(26) 即给出所需严格开区间素数。
 
-### 6.3 有限认证结果
+\subsection{有限认证结果}
 
 用 160-bit Arb 对 60 个宽为 5 的闭单元
 
@@ -622,11 +674,11 @@ e^{-a/4}. \tag{30}
 \delta\le\frac{862339984538098379495241}{10^{24}}<1. \tag{31}
 \]
 
-[完整数据](../results/smooth_segment_certificate.json) 与 [实现](../code/certify_smooth_segment.py) 保存源表、每格参数及严格比较。源代码中的早期文字若称 CS 为已发表输入，应按第 1 节的 H2 地位解读；数值调用从始至终固定为 v2 的 (1)。这不影响所认证的算式，但其发表状态不能由代码注释决定。
+\href{../results/smooth_segment_certificate.json}{完整数据} 与 \href{../code/certify_smooth_segment.py}{实现} 保存源表、每格参数及严格比较。源代码中的早期文字若称 CS 为已发表输入，应按第 1 节的 H2 地位解读；数值调用从始至终固定为 v2 的 (1)。这不影响所认证的算式，但其发表状态不能由代码注释决定。
 
-## 7. \(\log x\ge700\) 的无限尾部
+\section{\(\log x\ge700\) 的无限尾部}
 
-### 7.1 共同截断高度公式及适用域
+\subsection{共同截断高度公式及适用域}
 
 CHJII 定理 1.3、表 1 在参数 \(\alpha=1/2,\omega=0\) 下给出 \(M=2.894=1447/500\)：若 \(\log x\ge40\)、\(h\ge0\) 且
 
@@ -645,7 +697,7 @@ CHJII 定理 1.3、表 1 在参数 \(\alpha=1/2,\omega=0\) 下给出 \(M=2.894=1
 |E|\le\frac M T\bigl((x+h)\log(x+h)+x\log x\bigr). \tag{33}
 \]
 
-采用的是该短区间定理本身，不能用两个各自选择不同截断高度的单点公式相减替代。[CHJII v3](https://arxiv.org/html/2402.04272v3)
+采用的是该短区间定理本身，不能用两个各自选择不同截断高度的单点公式相减替代。\href{https://arxiv.org/html/2402.04272v3}{CHJII v3}~\cite{CHJ}
 
 以下固定
 
@@ -680,7 +732,7 @@ u=\log U=\mu L+\log2,\qquad
 
 分别保证 \(y<2x\)、\(\log y<L+1\) 以及下面的积分分母为正；前者左侧递减，后者导数为 \(1/4\)。这些判断均在 \(L=700\) 用区间算术严格认证。
 
-### 7.2 零点和的三个显式项
+\subsection{零点和的三个显式项}
 
 从 (1) 的 \(20\le i\le27\) 行可统一取
 
@@ -739,7 +791,7 @@ Z_2(L)=2\left(\frac{829}{100}u^2+147u\right)e^{-L/8}. \tag{38}
 
 例如第一积分恰等于 \((e^{-\lambda_0/8}-e^{-3\lambda_0/8})/\lambda_0\)；第二积分同理。故 \(Z_0+Z_1+Z_2\) 控制全部归一化零点和。
 
-### 7.3 六项判据和开端点
+\subsection{六项判据和开端点}
 
 由 (33)、\(y\le2x\)、\(\log y\le L+1\)，归一化截断余项至多
 
@@ -773,7 +825,7 @@ F_{\rm tail}(L)=Z_0(L)+Z_1(L)+Z_2(L)+R(L)+P(L)+B(L). \tag{42}
 
 如果开区间 \((x,y)\) 内没有素数，左侧至多为右端点的 \(\log y\)，矛盾。因此结论对所有实数 \(x\) 都是严格开区间结论。
 
-### 7.4 一次阈值认证覆盖全部无限范围
+\subsection{一次阈值认证覆盖全部无限范围}
 
 在 \(L\ge700\)，六项均正，且都严格递减。具体地，
 
@@ -814,11 +866,11 @@ F_{\rm tail}(700)
 \end{aligned} \tag{43}
 \]
 
-严格性来自球区间与有理数 \(14/25\) 的比较，显示的小数不承担舍入方向。由单调性，(43) 对所有 \(L\ge700\) 保持。[尾部证书](../results/tail_cs_certificate.json) 与 [实现](../code/certify_tail_cs.py) 记录上述参数和全部阈值检查；无限范围来自本节解析论证，不能由有限扫描替代。
+严格性来自球区间与有理数 \(14/25\) 的比较，显示的小数不承担舍入方向。由单调性，(43) 对所有 \(L\ge700\) 保持。\href{../results/tail_cs_certificate.json}{尾部证书} 与 \href{../code/certify_tail_cs.py}{实现} 记录上述参数和全部阈值检查；无限范围来自本节解析论证，不能由有限扫描替代。
 
-## 8. 下端整数范围的完全覆盖
+\section{下端整数范围的完全覆盖}
 
-### 8.1 CHL 表的方向、阈值和严格端点
+\subsection{CHL 表的方向、阈值和严格端点}
 
 CHL 的定理及修正表 2 给出下述陈述：对于表中每对 \((x_0,\Delta)\)，所有实数 \(y\ge x_0\) 的区间
 
@@ -850,20 +902,29 @@ y(1-1/\Delta)-n^6
 
 全部有效行如下；首行给出 \(x_0\)，其余行给出 \(\log x_0\)。
 
-| \(x_0\) 或 \(\log x_0\) | \(\Delta\) | 最小 \(n\) | 最大 \(n\) |
-|---|---:|---:|---:|
-|\(x_0=4\cdot10^{18}\)|39097000|1260|234581994|
-|\(\log x_0=43\)|41816800|1296|250900794|
-|\(46\)|163940000|2136|983639994|
-|\(50\)|1061200000|4161|6367199994|
-|\(55\)|10288400000|9573|61730399994|
-|\(60\)|76918400000|22027|461510399994|
-|\(75\)|174043000000|268338|1044257999994|
-|\(90\)|184304000000|3269018|1105823999994|
-|\(105\)|191886000000|39824785|1151315999994|
-|\(120\)|197917000000|485165196|1187501999994|
-|\(135\)|202553000000|5910522064|1215317999994|
-|\(150\)|207053000000|72004899338|1242317999994|
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.2576\textwidth}>{\raggedright\arraybackslash}p{0.1840\textwidth}>{\raggedright\arraybackslash}p{0.1932\textwidth}>{\raggedright\arraybackslash}p{0.2484\textwidth}}
+\toprule
+\(x_0\) 或 \(\log x_0\) & \(\Delta\) & 最小 \(n\) & 最大 \(n\) \\
+\midrule\endfirsthead
+\toprule
+\(x_0\) 或 \(\log x_0\) & \(\Delta\) & 最小 \(n\) & 最大 \(n\) \\
+\midrule\endhead
+\bottomrule\endfoot
+\(x_0=4\cdot10^{18}\) & 39097000 & 1260 & 234581994 \\
+\(\log x_0=43\) & 41816800 & 1296 & 250900794 \\
+\(46\) & 163940000 & 2136 & 983639994 \\
+\(50\) & 1061200000 & 4161 & 6367199994 \\
+\(55\) & 10288400000 & 9573 & 61730399994 \\
+\(60\) & 76918400000 & 22027 & 461510399994 \\
+\(75\) & 174043000000 & 268338 & 1044257999994 \\
+\(90\) & 184304000000 & 3269018 & 1105823999994 \\
+\(105\) & 191886000000 & 39824785 & 1151315999994 \\
+\(120\) & 197917000000 & 485165196 & 1187501999994 \\
+\(135\) & 202553000000 & 5910522064 & 1215317999994 \\
+\(150\) & 207053000000 & 72004899338 & 1242317999994 \\
+\end{longtable}
+\endgroup
 
 这里采用原文修正表的精确有限十进制数据，未使用经过更粗舍入的摘要表。原表另两行 \(\log x_0=300,600\) 对本次六次幂转换给出空范围，未用于覆盖。每一新行的最小值不超过此前覆盖终点加 1，故 12 行构成从 1260 到 1242317999994 的连续整数覆盖链。
 
@@ -877,7 +938,7 @@ y(1-1/\Delta)-n^6
 
 其余最小值用 256-bit Arb 包围 \(e^{j/6}\)，严格证实它位于相邻两整数之间，再用对应对数不等式交叉核验；最大值用精确有理数取整。表中每项均可由这些有限运算直接重建。
 
-### 8.2 \(1\le n\le1259\) 的确定性见证与内核素性证明
+\subsection{\(1\le n\le1259\) 的确定性见证与内核素性证明}
 
 原 Python 搜索与重放路线使用以下确定性检验。Sorenson–Webster 定理给出：小于
 
@@ -915,17 +976,15 @@ n^6<p_n<n^6+6n^5. \tag{46}
 
 最大偏移 \(\max_n(p_n-n^6)=238\)。最初几个见证为 \(2,67,733,4099,15629\)，最后一个即上述最大值。完整列表保存在证书中，按 JSON 紧凑数组的 ASCII 字节计算的 SHA256 为
 
-```text
-8dfee8570d4e49fa59b94bed4b82d56d38746be59eeb1576713b08a32594a182
-```
+\begin{quote}{\ttfamily\scriptsize 8dfee8570d4e49fa\allowbreak{}59b94bed4b82d56d\allowbreak{}38746be59eeb1576\allowbreak{}713b08a32594a182}\end{quote}
 
 查找程序以迭代平方执行 MR；验证程序另行按 (45) 直接模幂，不调用查找函数。两者共享同一发表的截断定理，因此只能称为两个实现的交叉检查，不能称为两套独立素性定理。将列表逐个送入 FLINT 的严格素性检验是已有 AI 审查的额外核验；这些程序途径保留以便重放原计算记录。
 
-本公开版本还完成了另一条素性证明：对每个待证素数 \(q\)，完全分解 \(q-1\)，并递归证明其素因子的素性。对非平凡节点给出模 \(q\) 下阶恰为 \(q-1\) 的元素，即核验 \(a^{q-1}\equiv1\pmod q\)，并对 \(q-1\) 的每个素因子 \(r\) 核验 \(a^{(q-1)/r}\not\equiv1\pmod q\)。由 [Mathlib 的 Lucas 素性判据](https://github.com/leanprover-community/mathlib4/blob/9d581dfff2e41de989072ea63abf3daf69311520/Mathlib/NumberTheory/LucasPrimality.lean)得到 \(q\) 为素数；分解恒等式、模幂和阶条件均生成 Lean 内核可检查的证明项。较小的节点由内核检查的有限算术处理。Python/FLINT 仅用于搜索候选分解与底数，其“素数”返回值没有成为证明前提。
+本公开版本还完成了另一条素性证明：对每个待证素数 \(q\)，完全分解 \(q-1\)，并递归证明其素因子的素性。对非平凡节点给出模 \(q\) 下阶恰为 \(q-1\) 的元素，即核验 \(a^{q-1}\equiv1\pmod q\)，并对 \(q-1\) 的每个素因子 \(r\) 核验 \(a^{(q-1)/r}\not\equiv1\pmod q\)。由 \href{https://github.com/leanprover-community/mathlib4/blob/9d581dfff2e41de989072ea63abf3daf69311520/Mathlib/NumberTheory/LucasPrimality.lean}{Mathlib 的 Lucas 素性判据}~\cite{Mathlib}得到 \(q\) 为素数；分解恒等式、模幂和阶条件均生成 Lean 内核可检查的证明项。较小的节点由内核检查的有限算术处理。Python/FLINT 仅用于搜索候选分解与底数，其“素数”返回值没有成为证明前提。
 
-全部 1259 个见证共使用 **5349 个递归素数节点**，分成 27 个源码块。相应的 [PrimeWitnesses.lean](../lean/LegendreK6/PrimeWitnesses.lean) 给出每个见证的实际素性与严格整数区间关系，并证明所有 \(1\le n\le1259\) 的 (46)。这条路线不依赖 Sorenson–Webster，不使用未经内核验证的本机布尔计算接受素性，也不只检查文件散列。完整范围与实际执行记录见[有限 Lean 核验报告](../audit/FINITE_LEAN_REVIEW.md)。因此可以在本条件性证明中以该内核素性结果代替原来的有限基定理；保留 (45) 是为了说明原数值产物如何产生与重放。
+全部 1259 个见证共使用 \textbf{5349 个递归素数节点}，分成 27 个源码块。相应的 \href{../lean/LegendreK6/PrimeWitnesses.lean}{PrimeWitnesses.lean} 给出每个见证的实际素性与严格整数区间关系，并证明所有 \(1\le n\le1259\) 的 (46)。这条路线不依赖 Sorenson–Webster，不使用未经内核验证的本机布尔计算接受素性，也不只检查文件散列。完整范围与实际执行记录见\href{../audit/FINITE_LEAN_REVIEW.md}{有限 Lean 核验报告}。因此可以在本条件性证明中以该内核素性结果代替原来的有限基定理；保留 (45) 是为了说明原数值产物如何产生与重放。
 
-### 8.3 与连续中段的重叠
+\subsection{与连续中段的重叠}
 
 由前两小节，对所有 \(1\le n\le1242317999994\)，(46) 成立。Arb 进一步严格认证
 
@@ -941,9 +1000,9 @@ n^6<p_n<n^6+6n^5. \tag{46}
 =1224230174416<1242317999994. \tag{47}
 \]
 
-因此所有满足 \(6\log n\le167\) 的整数都已覆盖。下端模块本身不使用 H1 或 H2。[下端完整证书](../results/lower_range_k6_certificate.json) 与 [确定性生成、验证程序](../code/certify_lower_range_k6.py) 包含 12 行覆盖链、整数见证和阈值包围。
+因此所有满足 \(6\log n\le167\) 的整数都已覆盖。下端模块本身不使用 H1 或 H2。\href{../results/lower_range_k6_certificate.json}{下端完整证书} 与 \href{../code/certify_lower_range_k6.py}{确定性生成、验证程序} 包含 12 行覆盖链、整数见证和阈值包围。
 
-## 9. 全范围拼接与主定理的证明
+\section{全范围拼接与主定理的证明}
 
 任取整数 \(n\ge1\)，令 \(x=n^6\)、\(L=6\log n\)。若 \(L\le167\)，第 8 节给出 (46)。若 \(167\le L\le400\)，第 5 节给出实数区间 \((x,x+6x^{5/6})\) 中的素数。
 
@@ -959,9 +1018,9 @@ n^6<p_n<n^6+6n^5. \tag{46}
 
 本结论没有证明所有整数的四次幂或五次幂命题。它所用远段虽然已给出四次幂对应长度的区间，四次幂全范围仍需独立处理较低的中间区间；不能由六次幂结论反向推出。
 
-### 方法定位
+\subsection{方法定位}
 
-Visser 的条件性八次幂工作从全局 \(\psi(x)-x\) 的显式误差界出发，在区间两端分别估计，再扣除素数幂。本稿对短区间先加非负权，在零点层面保留实部密度信息，再控制每个闭单元的全部高度贡献。两条路线使用的显式输入不同；本稿的 H2 不能因为同样接受 H1 而省略。[Visser，*Primes between 8th powers?*，第 2–5 节](https://arxiv.org/html/2610.20058v1)
+Visser 的条件性八次幂工作从全局 \(\psi(x)-x\) 的显式误差界出发，在区间两端分别估计，再扣除素数幂。本稿对短区间先加非负权，在零点层面保留实部密度信息，再控制每个闭单元的全部高度贡献。两条路线使用的显式输入不同；本稿的 H2 不能因为同样接受 H1 而省略。\href{https://arxiv.org/html/2610.20058v1}{Visser，\emph{Primes between 8th powers?}，第 2–5 节}~\cite{Visser}
 
 密度指数也解释了为何 \(k=6\) 并非预期的渐近终点：若区间长度形式上写成 \(x^\vartheta\)、主要高度尺度写成 \(x^{1-\vartheta}\)，忽略对数因子后，层积分主项含有指数
 
@@ -972,9 +1031,9 @@ Visser 的条件性八次幂工作从全局 \(\psi(x)-x\) 的显式误差界出�
 
 在 \(1/2\le\sigma\le7/8\) 上，\(\vartheta>5/8\) 使括号一致为负。这是既有 Ingham 型密度结构的渐近解释，不是本文证明了新的密度定理，也不直接解决任何指定有限阈值或 \(k=3,4\) 的全范围问题。本文完成的是特定显式常数下的六次幂全范围拼接；不据这一方法比较主张优先权或全领域最优纪录。
 
-## 10. 计算证据的范围与复现
+\section{计算证据的范围与复现}
 
-### 10.1 严格运算与有限数据
+\subsection{严格运算与有限数据}
 
 所有整数覆盖、MR 模幂、端点和有理网格使用精确整数或有理数。超越函数使用 python-flint 0.9.0 提供的 Arb 球算术；本次环境为 Python 3.12.10。下端与尾部使用 256-bit，精化中段使用 256-bit，保留的 \(400\le L\le700\) 模块使用 160-bit。任何严格比较只有在整个球落于指定一侧时才接受；未知符号或取整不唯一会使认证失败。
 
@@ -982,69 +1041,91 @@ Visser 的条件性八次幂工作从全局 \(\psi(x)-x\) 的显式误差界出�
 
 这些有限数据与程序是计算辅助证明的组成部分；它们不代替本文的解析推导。SHA256 用于识别版本，不证明数学正确性。重新生成时，时间戳、耗时等元数据会改变 JSON 散列，即使所有数学值相同。
 
-### 10.2 只读重放命令
+\subsection{只读重放命令}
 
 在本公开包根目录（paper、code、results、lean 的共同父目录）下，四个主模块可分别只读重放；最后一条命令统一重放全链且不改写汇总文件：
 
-```powershell
+\begin{Verbatim}[fontsize=\small,breaklines=true]
 python -X utf8 code/certify_lower_range_k6.py --verify
 python -X utf8 code/certify_smooth_k6.py --verify
 python -X utf8 code/certify_smooth_segment.py --verify
 python -X utf8 code/certify_tail_cs.py --verify
 python -X utf8 code/verify_k6.py --dry-run
-```
+\end{Verbatim}
 
 这些命令验证已保存的证书，不需重新写入证书。总装程序还检查精确范围拼接和实区间包含关系；本轮四模块统一重放已全部通过。总装程序在不带只读选项时可写出 JSON 汇总，它属于可重新生成的记录。解析等式的正确性仍由本文的证明负责，验证程序不是自动验证全部数学的形式化内核。
 
-### 10.3 本稿对应的核心产物
+\subsection{本稿对应的核心产物}
 
-| 产物 | SHA256 |
-|---|---|
-|`code/certify_lower_range_k6.py`|`0d7149060506aa6b18c9c25a14b0e64ba9bbdeade42ba44888c24de6154b2d93`|
-|`results/lower_range_k6_certificate.json`|`a108bd9166c0c8c137ee5299e1b5a135e825efa6514894be5054872299fd60fc`|
-|`code/certify_smooth_k6.py`|`529444f426560c2e2f9523d1f393bff43a5fa8cf46e2c891d0296343c294355e`|
-|`results/smooth_k6_certificate.json`|`65dbfce3f0caa99f71f3bc74d9e2f61cfc7501ee28cdfe5ae584696c60429b95`|
-|`code/certify_smooth_segment.py`|`ec7e6d218e09967d9161f44074c35ecdce09eb6a3a3a3d307db1e5b36083d21e`|
-|`results/smooth_segment_certificate.json`|`7e3768054da03709927d63a3f2d5766b7d0b26a7f600d4a8005621413e1a2a7f`|
-|`code/certify_tail_cs.py`|`162e880b9ad62f6ae47dd16a6b7ea75bce0a34cab35fff2975c169430ee77cb6`|
-|`results/tail_cs_certificate.json`|`d579daae45c617416d14282b69aa727e0f4b7e10699e73678bfebc6b2b743e84`|
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.3312\textwidth}>{\raggedright\arraybackslash}p{0.5520\textwidth}}
+\toprule
+产物 & SHA256 \\
+\midrule\endfirsthead
+\toprule
+产物 & SHA256 \\
+\midrule\endhead
+\bottomrule\endfoot
+\nolinkurl{code/certify_lower_range_k6.py} & {\ttfamily\scriptsize 0d7149060506aa6b\allowbreak{}18c9c25a14b0e64b\allowbreak{}a9bbdeade42ba448\allowbreak{}88c24de6154b2d93} \\
+\nolinkurl{results/lower_range_k6_certificate.json} & {\ttfamily\scriptsize a108bd9166c0c8c1\allowbreak{}37ee5299e1b5a135\allowbreak{}e825efa6514894be\allowbreak{}5054872299fd60fc} \\
+\nolinkurl{code/certify_smooth_k6.py} & {\ttfamily\scriptsize 529444f426560c2e\allowbreak{}2f9523d1f393bff4\allowbreak{}3a5fa8cf46e2c891\allowbreak{}d0296343c294355e} \\
+\nolinkurl{results/smooth_k6_certificate.json} & {\ttfamily\scriptsize 65dbfce3f0caa99f\allowbreak{}71f3bc74d9e2f61c\allowbreak{}fc7501ee28cdfe5a\allowbreak{}e584696c60429b95} \\
+\nolinkurl{code/certify_smooth_segment.py} & {\ttfamily\scriptsize ec7e6d218e09967d\allowbreak{}9161f44074c35ecd\allowbreak{}ce09eb6a3a3a3d30\allowbreak{}7db1e5b36083d21e} \\
+\nolinkurl{results/smooth_segment_certificate.json} & {\ttfamily\scriptsize 7e3768054da03709\allowbreak{}927d63a3f2d5766b\allowbreak{}7d0b26a7f600d4a8\allowbreak{}005621413e1a2a7f} \\
+\nolinkurl{code/certify_tail_cs.py} & {\ttfamily\scriptsize 162e880b9ad62f6a\allowbreak{}e47dd16a6b7ea75b\allowbreak{}ce0a34cab35fff29\allowbreak{}75c169430ee77cb6} \\
+\nolinkurl{results/tail_cs_certificate.json} & {\ttfamily\scriptsize d579daae45c61741\allowbreak{}6d14282b69aa727e\allowbreak{}0f4b7e10699e7367\allowbreak{}8bfebc6b2b743e84} \\
+\end{longtable}
+\endgroup
 
 原 76 格版本及其审查已另行归档，避免将旧证书的散列与当前精化证书混用。已有同系统代理复核及 Claude 跨模型审查，都属于 AI 辅助审查；“小修后可接受”是该审查报告的意见，不代表期刊接收或外部人类同行评议。本文不据此作首创性、全领域最优性或上游 QRH 已被数学界接受的声明。
 
-## 11. 结论的适用范围、依赖和形式化状态
+\section{结论的适用范围、依赖和形式化状态}
 
 主定理的量词是所有整数 \(n\ge1\)，指数固定为 \(k=6\)，结论为严格开区间 \((n^6,(n+1)^6)\) 中存在素数；本文还证明更强的右端 \(n^6+6n^5\)。这是 H1、H2 及已列经典公式、文献定理下的计算辅助证明。第 5、6、7 节的实变量区间结论明确只在各自的 \(\log x\) 范围成立。没有得出无条件结论，没有以 H1 代替完整 RH，也没有证明全范围 \(k=3,4,5\)。
 
 以下依赖表区分数学前提和证据的性质。
 
-| 项目 | 本文接受或证明的内容 | 核查边界 |
-|---|---|---|
-| H1 | 所有非平凡零点的实部不超过 \(7/8\) | 明确研究前提；不审核上游证明 |
-| H2 | CS v2 推论 1 在第 1 节域内成立，采用全部所列常数 | 明确预印本输入；不是本文重新证明的定理 |
-| 经典公式和辅助文献 | 第 1 节清单中的精确陈述及明确更正版 | 引用输入；没有重跑上游所有计算 |
-| 本文解析推导 | 第 2--9 节的权函数、上界、单调性及拼接 | 人类可逐式审查的数学证明 |
-| 有限数值证书 | 整数见证、94 与 60 个闭单元、尾部阈值 | Arb / 整数程序重放；依赖实现与硬件正确运行 |
-| Lean 形式化 | 随包公布的已编译模块及各自明确的定理参数 | 以实际构建和公理审计记录为准；范围见下段 |
+\begingroup\small\setlength{\tabcolsep}{3pt}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.3128\textwidth}>{\raggedright\arraybackslash}p{0.3128\textwidth}>{\raggedright\arraybackslash}p{0.2576\textwidth}}
+\toprule
+项目 & 本文接受或证明的内容 & 核查边界 \\
+\midrule\endfirsthead
+\toprule
+项目 & 本文接受或证明的内容 & 核查边界 \\
+\midrule\endhead
+\bottomrule\endfoot
+H1 & 所有非平凡零点的实部不超过 \(7/8\) & 明确研究前提；不审核上游证明 \\
+H2 & CS v2 推论 1 在第 1 节域内成立，采用全部所列常数 & 明确预印本输入；不是本文重新证明的定理 \\
+经典公式和辅助文献 & 第 1 节清单中的精确陈述及明确更正版 & 引用输入；没有重跑上游所有计算 \\
+本文解析推导 & 第 2--9 节的权函数、上界、单调性及拼接 & 人类可逐式审查的数学证明 \\
+有限数值证书 & 整数见证、94 与 60 个闭单元、尾部阈值 & Arb / 整数程序重放；依赖实现与硬件正确运行 \\
+Lean 形式化 & 随包公布的已编译模块及各自明确的定理参数 & 以实际构建和公理审计记录为准；范围见下段 \\
+\end{longtable}
+\endgroup
 
-**本版尚未完成从 H1、H2 和所引文献定理出发的端到端 Lean 形式化。** 数学正文、Arb 证书与 Lean 内核证明是不同的证据层次。当前已有实质的内核验证部分，具体包括：
+\textbf{本版尚未完成从 H1、H2 和所引文献定理出发的端到端 Lean 形式化。} 数学正文、Arb 证书与 Lean 内核证明是不同的证据层次。当前已有实质的内核验证部分，具体包括：
 
-1. 六次幂的代数归约、严格端点以及实变量四次幂长度向六次幂长度的区间包含关系。
-2. 第 8.2 节全部 1259 个见证的 Lucas/Pratt 素性证明和严格区间关系，不再需要 Sorenson–Webster 作为这条路线的前提。
-3. 给定明确列出的 CHL 文献行，12 行整数归约、11 个指数阈值和 \(L=167\) 接点全部完成内核验证，从而得到直到 \(n=1242317999994\) 的下端覆盖。[LowerRange.lean](../lean/LegendreK6/LowerRange.lean) 中没有再把这一整段局部结论作为额外假设。
-4. 94 个新单元和 60 个继承单元的精确有理端点、每个实参数的闭区间覆盖、保存的最大有理上界、余量和 6% 放大后的有理比较。[Certificates.lean](../lean/LegendreK6/Certificates.lean) 只证明这些数值之间的关系，不把保存值本身解释成已经在 Lean 中求出的零点积分上界。
-5. 四点二次与仿射恒等式、实部网格的精确指数权积分、共同参数零点权的放大、CS 指数的代数比较和非负系数放大规则。[AnalyticBounds.lean](../lean/LegendreK6/AnalyticBounds.lean)
-6. 使用实际 von Mangoldt 函数的有限加权和，在明确的支撑条件及加权下界、非素数扣除上界下提取开区间中的素数。[PrimeExtraction.lean](../lean/LegendreK6/PrimeExtraction.lean) 没有把未知的加权下界证明掉。
-7. 第 7 节六项标量函数的阈值数值界和整个 \(L\ge700\) 范围上的衰减，得到 \(F_{\rm tail}(L)<14/25\) 以及 \((53/50)F_{\rm tail}(L)<1\)。[TailResult.lean](../lean/LegendreK6/TailResult.lean) 使用经内核检查的指数、对数界和解析单调性；此结果尚未连接到实际 ζ 零点与 CHJII 公式。
+\begin{enumerate}
+\item 六次幂的代数归约、严格端点以及实变量四次幂长度向六次幂长度的区间包含关系。
+\item 第 8.2 节全部 1259 个见证的 Lucas/Pratt 素性证明和严格区间关系，不再需要 Sorenson–Webster 作为这条路线的前提。
+\item 给定明确列出的 CHL 文献行，12 行整数归约、11 个指数阈值和 \(L=167\) 接点全部完成内核验证，从而得到直到 \(n=1242317999994\) 的下端覆盖。\href{../lean/LegendreK6/LowerRange.lean}{LowerRange.lean} 中没有再把这一整段局部结论作为额外假设。
+\item 94 个新单元和 60 个继承单元的精确有理端点、每个实参数的闭区间覆盖、保存的最大有理上界、余量和 6\% 放大后的有理比较。\href{../lean/LegendreK6/Certificates.lean}{Certificates.lean} 只证明这些数值之间的关系，不把保存值本身解释成已经在 Lean 中求出的零点积分上界。
+\item 四点二次与仿射恒等式、实部网格的精确指数权积分、共同参数零点权的放大、CS 指数的代数比较和非负系数放大规则。\href{../lean/LegendreK6/AnalyticBounds.lean}{AnalyticBounds.lean}
+\item 使用实际 von Mangoldt 函数的有限加权和，在明确的支撑条件及加权下界、非素数扣除上界下提取开区间中的素数。\href{../lean/LegendreK6/PrimeExtraction.lean}{PrimeExtraction.lean} 没有把未知的加权下界证明掉。
+\item 第 7 节六项标量函数的阈值数值界和整个 \(L\ge700\) 范围上的衰减，得到 \(F_{\rm tail}(L)<14/25\) 以及 \((53/50)F_{\rm tail}(L)<1\)。\href{../lean/LegendreK6/TailResult.lean}{TailResult.lean} 使用经内核检查的指数、对数界和解析单调性；此结果尚未连接到实际 \(\zeta\) 零点与 CHJII 公式。
+\end{enumerate}
 
-尚缺的关键环节是从实际 ζ 函数的零点、H1、H2、有限高度 RH 和所引显式公式出发，在 Lean 内建立三个连续区间的素数结论。具体包括含重数的零点计数接口，积分显式公式及其与非光滑权的合法交换，端点原子、Mellin 包络、实部层积分、Stieltjes 上和及高度尾部，对全部 94/60 个单元的完整超越表达式进行内核可检查的上界计算，以及将素数幂、平凡零点与 CHJII 截断误差预算连接到实际加权素数和。外部 Arb 对这些算式的重放，不能代替缺少的 Lean 证明项。
+尚缺的关键环节是从实际 \(\zeta\) 函数的零点、H1、H2、有限高度 RH 和所引显式公式出发，在 Lean 内建立三个连续区间的素数结论。具体包括含重数的零点计数接口，积分显式公式及其与非光滑权的合法交换，端点原子、Mellin 包络、实部层积分、Stieltjes 上和及高度尾部，对全部 94/60 个单元的完整超越表达式进行内核可检查的上界计算，以及将素数幂、平凡零点与 CHJII 截断误差预算连接到实际加权素数和。外部 Arb 对这些算式的重放，不能代替缺少的 Lean 证明项。
 
-最终 [Assembly.lean](../lean/LegendreK6/Assembly.lean) 的定理名为 sixth_powers_of_segment_inputs，其完整类型可概括为 CHLRows → AnalyticSegmentInputs → SixthPowerConclusion。AnalyticSegmentInputs 明确含有中段、远段、无限尾部这三个尚未由 H1/H2 在 Lean 中导出的局部素数结论。因此这一装配定理不能改称为“仅以 H1/H2 为前提的全量形式化证明”。这些未完成部分没有被重命名为 QRH/CS，没有被隐藏在公理、sorry 或一个笼统的“证书正确性”假设中。逐项状态和剩余义务见[形式化状态清单](../FORMALIZATION_STATUS.md)。
+最终 \href{../lean/LegendreK6/Assembly.lean}{Assembly.lean} 的定理名为 sixth\_powers\_of\_segment\_inputs，其完整类型可概括为 CHLRows \(\to\) AnalyticSegmentInputs \(\to\) SixthPowerConclusion。AnalyticSegmentInputs 明确含有中段、远段、无限尾部这三个尚未由 H1/H2 在 Lean 中导出的局部素数结论。因此这一装配定理不能改称为“仅以 H1/H2 为前提的全量形式化证明”。这些未完成部分没有被重命名为 QRH/CS，没有被隐藏在公理、sorry 或一个笼统的“证书正确性”假设中。逐项状态和剩余义务见\href{../FORMALIZATION_STATUS.md}{形式化状态清单}。
 
 公理审计需要同时检查 theorem 的完整类型和证明项依赖。仅看到标准公理列表、没有 sorry，不能排除 theorem 参数中仍含有未证明的局部结论。构建日志确认的是本次被实际编译的源码，不应对未覆盖模块作全量声明。此形式化边界随最终构建记录公开；若将来补齐，将以新版本逐项记录差异。
 
-CS 常数统一增加 6% 的认证仅在密度指数、零点计数定义和适用域固定时成立。它不能代替 H2 的分析证明，也不能解释为 H2 有某种已量化的统计可信度。
+CS 常数统一增加 6\% 的认证仅在密度指数、零点计数定义和适用域固定时成立。它不能代替 H2 的分析证明，也不能解释为 H2 有某种已量化的统计可信度。
 
-## 12. AI 辅助使用、贡献与审阅声明
+\section{AI 辅助使用、贡献与审阅声明}
+
+按项目发起人的明确要求，本项目以 Claude 与 Codex 作为 AI 作者署名：Claude 负责传统显式估计路线，并对本路线早期版本提供审阅；Codex 负责 QRH(7/8) 路线及本稿主要研究、实现与写作。该署名按实际贡献划分，不将旧版审阅扩写为对后续全部成果的认证，也不将 AI 系统表述为人类作者。
 
 本文及所附程序在 OpenAI Codex 辅助下形成。AI 参与了文献检索与陈述转录、证明组织、核函数和上界方案探索、Python/Arb 实现、错误定位、测试、数值证书生成、Lean 源码编写，以及论文编辑。多个代理上下文之间进行了交叉核对，但它们共享同一研究任务和部分材料；这种安排不是人类研究者的独立重复实验，也不是期刊同行评议。
 
@@ -1056,27 +1137,26 @@ CS 常数统一增加 6% 的认证仅在密度指数、零点计数定义和适�
 
 AI 使用不改变数学证明的接受标准。引用的来源应能独立取得，数值应能按公开命令复算，推导应允许逐式检查，形式化声称应能由指定 Lean 工具链核验。任何由 AI 生成但尚未核实的环节，都必须明确标示，不能因多个模型同意而自动升级为已证明结果。
 
-## 13. 公开材料和版本约定
+\section{公开材料和版本约定}
 
 本论文、LaTeX 源码、参考文献、认证程序、冻结的 JSON 证书、Lean 源码及实际构建记录共同组成公开审查包。论文中八个核心源码/证书散列标识已核验的数学计算版本；完整发布清单另列所有随包文件及散列。元数据、排版或文档链接修改与数学公式、源常数或算法修改应分别记录。
 
-论文可读稿为同目录 manuscript.md，排版稿为 main.tex，参考文献库为 references.bib。build_tex.py 从可读稿确定性生成 LaTeX 源码。生成 PDF 所用引擎和构建日志随发布材料保留。数学数据位于包根目录下 results，认证程序位于 code；论文链接采用相对于 paper 的路径，避免依赖本地绝对磁盘位置。
+论文可读稿为同目录 manuscript.md，排版稿为 main.tex，参考文献库为 references.bib。build\_tex.py 从可读稿确定性生成 LaTeX 源码。生成 PDF 所用引擎和构建日志随发布材料保留。数学数据位于包根目录下 results，认证程序位于 code；论文链接采用相对于 paper 的路径，避免依赖本地绝对磁盘位置。
 
 按公开命令执行时，单模块的验证模式只读取现有证书并重新计算。重新生成证书可能改变时间戳和耗时，进而改变 JSON 散列；这本身不说明数学值变化。读者应同时比对精确参数、单元覆盖、有理上界和最终结论。对来源错误、覆盖缺口、实现错误或形式化缺口的反馈，应定位到文件版本、公式编号或最小可重复命令。
 
-## 参考文献
-
-1. S. Chourasiya, A. Simonič, *An explicit form of Ingham's zero density estimate*, [arXiv:2507.15184v2](https://arxiv.org/abs/2507.15184v2), 2025-09-30。本文将其推论 1 与表 1 的指定部分列为 H2。
-2. D. J. Platt, T. S. Trudgian, *The Riemann hypothesis is true up to \(3\cdot10^{12}\)*, Bulletin of the London Mathematical Society 53 (2021), 792–797，[arXiv:2004.09765](https://arxiv.org/abs/2004.09765)。
-3. A. E. Ingham, *The Distribution of Prime Numbers*, Cambridge University Press, 1932；1990 重印。[出版社书目信息](https://assets.cambridge.org/97805213/97896/frontmatter/9780521397896_frontmatter.pdf)。引用的是经典积分显式公式 (6)，其在本权函数上的交换与分部积分已在本文证明。
-4. M. Cully-Hugill, E. S. Lee, *Explicit interval estimates for prime numbers*, Mathematics of Computation 91 (2022), 1955–1970；本文数值表固定采用 [arXiv:2103.05986v3 更正版](https://arxiv.org/abs/2103.05986v3)；期刊正文 DOI 10.1090/mcom/3719，订正 DOI 10.1090/mcom/3884。
-5. M. Cully-Hugill, D. R. Johnston, *On the error term in the explicit formula of Riemann–von Mangoldt II*，[arXiv:2402.04272v3](https://arxiv.org/abs/2402.04272v3)，采用定理 1.3 与表 1；相关期刊版本发表于 Functiones et Approximatio，2025。
-6. J. Sorenson, J. Webster, *Strong pseudoprimes to twelve prime bases*, Mathematics of Computation 86 (2017), 985–1003，[arXiv:1509.00864](https://arxiv.org/abs/1509.00864)。
-7. P. Dusart, *Estimates of \(\psi,\theta\) for large values of \(x\) without the Riemann hypothesis*, Mathematics of Computation 85 (2016), 875–888，[出版版](https://www.ams.org/mcom/2016-85-298/S0025-5718-2015-03005-1/S0025-5718-2015-03005-1.pdf)，第 877 页式 (10)、(11) 明确重述本文所用的 Rosser 总零点计数界。
-8. J. B. Rosser, *Explicit bounds for some functions of prime numbers*, American Journal of Mathematics 63 (1941), 211–232，定理 19。本文经文献 7 核对其陈述，而未将较新的零点计数结果或 CS 的辅助式作为额外假设。
-9. M. Visser, *Primes between 8th powers?*，[arXiv:2610.20058v1](https://arxiv.org/abs/2610.20058v1)，2026-10-14。仅用于方法比较，不是本证明链的输入。
-
-
-10. F. Johansson, *Arb: Efficient Arbitrary-Precision Midpoint-Radius Interval Arithmetic*, IEEE Transactions on Computers 66(8) (2017), 1281--1292，DOI 10.1109/TC.2017.2690633，[作者预印本](https://arxiv.org/abs/1611.02831)。本文使用其经 python-flint 暴露的球算术。
-11. L. de Moura, S. Ullrich, *The Lean 4 Theorem Prover and Programming Language*, Automated Deduction -- CADE 28 (2021), 625--635，[出版社 DOI](https://doi.org/10.1007/978-3-030-79876-5_37)。本引用不表示本文已经完成全部形式化。
-12. The Mathlib Community, *Mathlib4*, 固定版本 v4.36.0-rc2，提交 9d581dfff2e41de989072ea63abf3daf69311520。[LucasPrimality 源码](https://github.com/leanprover-community/mathlib4/blob/9d581dfff2e41de989072ea63abf3daf69311520/Mathlib/NumberTheory/LucasPrimality.lean)。完整依赖固定于本包 lean/lake-manifest.json。
+\begingroup\small\begin{thebibliography}{99}
+\bibitem{CSv2} S. Chourasiya, A. Simonič, \emph{An explicit form of Ingham's zero density estimate}, \href{https://arxiv.org/abs/2507.15184v2}{arXiv:2507.15184v2}, 2025-09-30。本文将其推论 1 与表 1 的指定部分列为 H2。
+\bibitem{PT} D. J. Platt, T. S. Trudgian, \emph{The Riemann hypothesis is true up to \(3\cdot10^{12}\)}, Bulletin of the London Mathematical Society 53 (2021), 792–797，\href{https://arxiv.org/abs/2004.09765}{arXiv:2004.09765}。
+\bibitem{Ingham} A. E. Ingham, \emph{The Distribution of Prime Numbers}, Cambridge University Press, 1932；1990 重印。\href{https://assets.cambridge.org/97805213/97896/frontmatter/9780521397896_frontmatter.pdf}{出版社书目信息}。引用的是经典积分显式公式 (6)，其在本权函数上的交换与分部积分已在本文证明。
+\bibitem{CHL} M. Cully-Hugill, E. S. Lee, \emph{Explicit interval estimates for prime numbers}, Mathematics of Computation 91 (2022), 1955–1970；本文数值表固定采用 \href{https://arxiv.org/abs/2103.05986v3}{arXiv:2103.05986v3 更正版}；期刊正文 DOI 10.1090/mcom/3719，订正 DOI 10.1090/mcom/3884。
+\bibitem{CHJ} M. Cully-Hugill, D. R. Johnston, \emph{On the error term in the explicit formula of Riemann–von Mangoldt II}，\href{https://arxiv.org/abs/2402.04272v3}{arXiv:2402.04272v3}，采用定理 1.3 与表 1；相关期刊版本发表于 Functiones et Approximatio，2025。
+\bibitem{SW} J. Sorenson, J. Webster, \emph{Strong pseudoprimes to twelve prime bases}, Mathematics of Computation 86 (2017), 985–1003，\href{https://arxiv.org/abs/1509.00864}{arXiv:1509.00864}。
+\bibitem{Dusart} P. Dusart, \emph{Estimates of \(\psi,\theta\) for large values of \(x\) without the Riemann hypothesis}, Mathematics of Computation 85 (2016), 875–888，\href{https://www.ams.org/mcom/2016-85-298/S0025-5718-2015-03005-1/S0025-5718-2015-03005-1.pdf}{出版版}，第 877 页式 (10)、(11) 明确重述本文所用的 Rosser 总零点计数界。
+\bibitem{Rosser} J. B. Rosser, \emph{Explicit bounds for some functions of prime numbers}, American Journal of Mathematics 63 (1941), 211–232，定理 19。本文经文献 7 核对其陈述，而未将较新的零点计数结果或 CS 的辅助式作为额外假设。
+\bibitem{Visser} M. Visser, \emph{Primes between 8th powers?}，\href{https://arxiv.org/abs/2610.20058v1}{arXiv:2610.20058v1}，2026-10-14。仅用于方法比较，不是本证明链的输入。
+\bibitem{Arb} F. Johansson, \emph{Arb: Efficient Arbitrary-Precision Midpoint-Radius Interval Arithmetic}, IEEE Transactions on Computers 66(8) (2017), 1281--1292，DOI 10.1109/TC.2017.2690633，\href{https://arxiv.org/abs/1611.02831}{作者预印本}。本文使用其经 python-flint 暴露的球算术。
+\bibitem{Lean} L. de Moura, S. Ullrich, \emph{The Lean 4 Theorem Prover and Programming Language}, Automated Deduction -- CADE 28 (2021), 625--635，\href{https://doi.org/10.1007/978-3-030-79876-5_37}{出版社 DOI}。本引用不表示本文已经完成全部形式化。
+\bibitem{Mathlib} The Mathlib Community, \emph{Mathlib4}, 固定版本 v4.36.0-rc2，提交 9d581dfff2e41de989072ea63abf3daf69311520。\href{https://github.com/leanprover-community/mathlib4/blob/9d581dfff2e41de989072ea63abf3daf69311520/Mathlib/NumberTheory/LucasPrimality.lean}{LucasPrimality 源码}。完整依赖固定于本包 lean/lake-manifest.json。
+\end{thebibliography}\endgroup
+\end{document}

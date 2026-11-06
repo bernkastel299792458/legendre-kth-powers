@@ -1,29 +1,29 @@
-# Install as .github/workflows/conditional-k6.yml in the publication repository.
-# The published package lives at conditional-k6/.
+# Install as .github/workflows/qrh.yml in the publication repository.
+# The published package lives at routes/qrh/.
 # Official action inputs checked on 2026-11-06:
 # https://github.com/leanprover/lean-action/blob/fe408643ea7367d8c0404a8be3975bb145f5fb64/action.yml
 # All action revisions below are full commit SHAs resolved from their official repositories.
 # A green run verifies the stated computational/partial-formalization scope.
 # It does NOT certify an end-to-end theorem from QRH(7/8) and CS v2 alone.
 
-name: Conditional k6 review package
+name: QRH route verification (current k6)
 
 on:
   push:
     paths:
-      - "conditional-k6/**"
-      - ".github/workflows/conditional-k6.yml"
+      - "routes/qrh/**"
+      - ".github/workflows/qrh.yml"
   pull_request:
     paths:
-      - "conditional-k6/**"
-      - ".github/workflows/conditional-k6.yml"
+      - "routes/qrh/**"
+      - ".github/workflows/qrh.yml"
   workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: conditional-k6-${{ github.workflow }}-${{ github.ref }}
+  group: qrh-${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 env:
@@ -38,7 +38,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: conditional-k6
+        working-directory: routes/qrh
     steps:
       - name: Check out the exact revision
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -100,7 +100,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: conditional-k6-numerical-${{ github.run_id }}-${{ github.run_attempt }}
+          name: qrh-numerical-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
             ${{ runner.temp }}/k6-manifest-before.log
             ${{ runner.temp }}/k6-tail-preflight.log
@@ -120,7 +120,7 @@ jobs:
     defaults:
       run:
         shell: bash
-        working-directory: conditional-k6
+        working-directory: routes/qrh
     steps:
       - name: Check out the exact revision
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
@@ -142,7 +142,7 @@ jobs:
       - name: Build the Lake library with its pinned toolchain and Mathlib revision
         uses: leanprover/lean-action@fe408643ea7367d8c0404a8be3975bb145f5fb64 # v1
         with:
-          lake-package-directory: conditional-k6/lean
+          lake-package-directory: routes/qrh/lean
           use-mathlib-cache: "true"
           use-github-cache: "true"
           auto-config: "false"
@@ -200,7 +200,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: conditional-k6-lean-${{ github.run_id }}-${{ github.run_attempt }}
+          name: qrh-lean-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
             ${{ runner.temp }}/k6-lean-manifest-before.log
             ${{ runner.temp }}/k6-lean-driver.log

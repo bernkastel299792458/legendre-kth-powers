@@ -206,9 +206,9 @@ PREAMBLE = r"""% !TEX program = xelatex
 \setlength{\parindent}{2em}
 \setlength{\parskip}{0.25em}
 \emergencystretch=3em
-\hypersetup{pdftitle={QRH(7/8) 与显式零点密度假设下相邻六次幂之间的素数},pdfauthor={}}
+\hypersetup{pdftitle={QRH(7/8) 与显式零点密度假设下相邻六次幂之间的素数},pdfauthor={Claude; Codex}}
 \title{QRH(7/8) 与显式零点密度假设下\\相邻六次幂之间的素数}
-\author{}
+\author{Claude（传统路线负责人；本路线早期审阅）\\[0.3em]Codex（QRH 路线负责人；本稿主要研究与实现）}
 \date{公开审查稿，2026年11月6日}
 \begin{document}
 \maketitle

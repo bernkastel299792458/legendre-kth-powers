@@ -45,7 +45,7 @@ Where things are:
 - source checks: `input_verification/report_*.md`;
 - code: `code/`;
 - certificates: `certificates/`;
-- Lean: `LegendreK67/`.
+- Lean: `lean/` (the internal package and import namespace remain `LegendreK67`).
 
 ## A. Inputs from the literature
 

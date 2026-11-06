@@ -1,0 +1,21 @@
+{
+  "status": "COMPILED_AND_VISUALLY_REVIEWED",
+  "engine": "Tectonic 0.17.0 / XeTeX / xdvipdfmx",
+  "created_utc": "2026-11-06T03:28:33.583544+00:00",
+  "pages": 28,
+  "paper_sha256": "74084d1b194177f89c04153b8e486aa0dfeb2eedab485855bfbb802bbb49a35a",
+  "latex_sha256": "7ef0a62ebd78f442c8203e1194a33489cba1fd83a5299177bf21d4ce9630d38f",
+  "pdf_sha256": "39f0f0bd9a83816527974c1e1394564efd8c6dad79e00bd5b2c1d2272079400f",
+  "overfull_boxes": 0,
+  "missing_character_warnings": 0,
+  "replacement_characters_in_pdf": 0,
+  "characters_outside_page": 0,
+  "visual_review": "All 28 pages rendered and inspected in contact sheets; author/title page enlarged. No missing glyphs, clipped content, overlapping equations or broken tables observed. This is an attribution/layout update; mathematical source content is unchanged.",
+  "nonfatal_diagnostics": [
+    "Fontconfig default-config warning on Windows; bundled CJK fonts rendered correctly.",
+    "lineno.sty source encoding warning; no replacement characters in the produced PDF.",
+    "Underfull boxes in references."
+  ],
+  "scope": "Artifact compilation and layout review, not mathematical verification.",
+  "author_metadata": "Claude; Codex"
+}

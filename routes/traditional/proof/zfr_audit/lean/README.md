@@ -1,9 +1,9 @@
 # Lean: zero-free-region audit (BTY 4.896)
 
-Two standalone Lean 4 files. They are compiled against the Mathlib of the existing project `../../LegendreK67` (Lean 4.36.0-rc2, Mathlib v4.36.0-rc2) **without modifying that project**:
+Two standalone Lean 4 files. They are compiled against the Mathlib of the existing project `../../lean` (Lean 4.36.0-rc2, Mathlib v4.36.0-rc2) **without modifying that project**:
 
 ```bash
-cd ../../LegendreK67
+cd ../../lean
 lake env lean ../zfr_audit/lean/BTYParams.lean
 lake env lean ../zfr_audit/lean/BTYSkeleton.lean
 ```

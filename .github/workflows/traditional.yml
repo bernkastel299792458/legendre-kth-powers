@@ -1,0 +1,194 @@
+# Traditional explicit-estimate route; current review package gives k >= 70 / 74.
+# A green run replays the published numerical chains and builds the Lean assembly.
+# It does not prove the analytic estimates or the certificates inside Lean.
+# The action revisions match the QRH workflow's pinned official commits.
+
+name: Traditional route verification
+
+on:
+  push:
+    paths:
+      - "routes/traditional/**"
+      - ".github/workflows/traditional.yml"
+  pull_request:
+    paths:
+      - "routes/traditional/**"
+      - ".github/workflows/traditional.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: traditional-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  PYTHONDONTWRITEBYTECODE: "1"
+  PYTHONUTF8: "1"
+
+jobs:
+  numerical-certificates:
+    name: Traditional numerical certificate chains
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    defaults:
+      run:
+        shell: bash
+        working-directory: routes/traditional/proof/code
+    steps:
+      - name: Check out the exact revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Python 3.12.10
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12.10"
+
+      - name: Install the review package dependencies
+        run: python -m pip install --requirement requirements.txt
+        # requirements.txt pins python-flint==0.9.0 and declares NumPy.
+
+      - name: Record the current numerical environment
+        run: |
+          set -euo pipefail
+          {
+            git rev-parse HEAD
+            python --version
+            python -m pip freeze
+          } | tee "$RUNNER_TEMP/traditional-numerical-environment.log"
+
+      # verify_all.py replays the two main chains, exact coverage checks,
+      # numerical facts and the analytic-tail numerical premises. It locates
+      # resources relative to __file__ and runs child checks from this directory.
+      # Historical BTY run_all.py is deliberately not run: it requires a
+      # third-party source file that is not distributed with the repository.
+      - name: Replay the current k70 and k74 certificate chains
+        run: |
+          set -euo pipefail
+          python -B verify_all.py 2>&1 | tee "$RUNNER_TEMP/traditional-numerical-replay.log"
+
+      - name: Record the numerical verification scope
+        run: |
+          cat >> "$GITHUB_STEP_SUMMARY" <<'EOF'
+          The traditional route's current numerical chains for k >= 70 and k >= 74 passed.
+
+          These are computer-assisted arguments under the literature inputs and analytic lemmas stated in the manuscript.
+          This run does not audit the upstream literature proofs or certify an end-to-end Lean theorem.
+          Historical exploratory and withdrawn certificates are outside this workflow's scope.
+          EOF
+
+      - name: Upload only this run's numerical logs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: traditional-numerical-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/traditional-numerical-environment.log
+            ${{ runner.temp }}/traditional-numerical-replay.log
+          if-no-files-found: warn
+          retention-days: 30
+
+  lean-assembly:
+    name: Traditional Lean assembly and explicit-hypothesis audit
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    env:
+      LEAN_NUM_THREADS: "2"
+    defaults:
+      run:
+        shell: bash
+        working-directory: routes/traditional/proof/lean
+    steps:
+      - name: Check out the exact revision
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Set up Python 3.12.10 for checking the audit output
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12.10"
+
+      - name: Build the relocated Lean project
+        uses: leanprover/lean-action@fe408643ea7367d8c0404a8be3975bb145f5fb64 # v1
+        with:
+          lake-package-directory: routes/traditional/proof/lean
+          use-mathlib-cache: "true"
+          use-github-cache: "true"
+          auto-config: "false"
+          build: "true"
+          test: "false"
+          lint: "false"
+          mk_all-check: "false"
+
+      - name: Record the current Lean environment
+        run: |
+          set -euo pipefail
+          {
+            git rev-parse HEAD
+            lean --version
+            lake --version
+            git -C .lake/packages/mathlib rev-parse HEAD
+          } | tee "$RUNNER_TEMP/traditional-lean-environment.log"
+
+      - name: Run the published axiom audit
+        run: |
+          set -euo pipefail
+          lake env lean LegendreK67/Audit.lean 2>&1 | tee "$RUNNER_TEMP/traditional-lean-axioms.log"
+
+      # Keep this generated inspection file outside the checked-in source tree.
+      # Axioms alone do not show the analytic conclusions assumed as parameters.
+      - name: Display the complete theorem parameters and their hypothesis structure
+        run: |
+          set -euo pipefail
+          cat > "$RUNNER_TEMP/traditional-scope.lean" <<'LEAN'
+          import LegendreK67
+          #check LegendreK67.primes_between_consecutive_powers
+          #check LegendreK67.main_k70
+          #check LegendreK67.main_k74
+          #print LegendreK67.Hypotheses
+          LEAN
+          lake env lean "$RUNNER_TEMP/traditional-scope.lean" 2>&1 | tee "$RUNNER_TEMP/traditional-lean-scope.log"
+
+      - name: Check the audit and explain its limited scope
+        run: |
+          python -B - <<'PY'
+          import os
+          from pathlib import Path
+          import re
+
+          temp = Path(os.environ["RUNNER_TEMP"])
+          axioms = (temp / "traditional-lean-axioms.log").read_text(encoding="utf-8")
+          scope = (temp / "traditional-lean-scope.log").read_text(encoding="utf-8")
+          allowed = {"propext", "Classical.choice", "Quot.sound"}
+          rows = re.findall(r"depends on axioms:\s*\[([^\]]*)\]", axioms)
+          assert rows, "No axiom audit results were produced"
+          for row in rows:
+              names = {name.strip() for name in row.split(",") if name.strip()}
+              assert names <= allowed, f"Unexpected axioms: {names - allowed}"
+          assert "sorryAx" not in axioms and "Lean.ofReduceBool" not in axioms
+          for name in ("main_k70", "main_k74", "Hypotheses", "Hsmooth", "Hhyb", "Htail"):
+              assert name in scope, f"Missing theorem or hypothesis in audit output: {name}"
+          with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as summary:
+              summary.write("The relocated traditional Lean project built, and the axiom/type audit passed.\n\n")
+              summary.write("**Scope: logical assembly with explicit analytic and certificate hypotheses.**\n")
+              summary.write("The fields of `Hypotheses`, including `Hsmooth`, `Hhyb` and `Htail`, are not proved here.\n")
+              summary.write("This is not an end-to-end formalization of the manuscript's analytic argument.\n")
+          print("TRADITIONAL_ASSEMBLY_AUDITED; END_TO_END_ANALYTIC_FORMALIZATION=false")
+          PY
+
+      # Never upload checked-in reports as evidence of a new run.
+      - name: Upload only this run's Lean audit logs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: traditional-lean-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            ${{ runner.temp }}/traditional-lean-environment.log
+            ${{ runner.temp }}/traditional-lean-axioms.log
+            ${{ runner.temp }}/traditional-lean-scope.log
+          if-no-files-found: warn
+          retention-days: 30

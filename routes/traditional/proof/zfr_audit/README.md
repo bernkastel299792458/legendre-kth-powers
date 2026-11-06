@@ -141,7 +141,7 @@ python -I spot_check.py
 
 ## 4. Lean
 
-详见 [`lean/README.md`](lean/README.md)。在 `proof/LegendreK67/` 下运行：
+详见 [`lean/README.md`](lean/README.md)。从仓库的 `routes/traditional/proof/lean/` 下运行：
 
 ```bash
 lake env lean ../zfr_audit/lean/BTYParams.lean
