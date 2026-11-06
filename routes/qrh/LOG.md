@@ -187,3 +187,41 @@ including the six strict shortfalls. Existing release bytes differ only in
 the five explanatory documents; the other 336 existing files, including
 all 241 Lean sources, are unchanged. New JSON records and local document
 links were checked, and release hashes were regenerated and verified.
+
+## Full QRH archival manuscript, local owner-review draft, 2026-11-06
+
+Following the owner's approval of the archival structure, Codex prepared a
+new self-contained twelve-chapter Chinese manuscript with two appendices,
+14 references, and a 57-page reviewed PDF under `paper/current/`. It follows
+the actual accepted trapezoid/continuous-propagation Lean proof. The original
+paper, certificates and mathematical sources remain byte-preserved.
+
+New materials include the seven-input statement/provenance register, 150
+paper-to-Lean declaration mappings, bilingual route entry points, citation
+metadata, contribution disclosure, and a staged research narrative. A
+177-file, 3,782,882-byte snapshot preserves original research records;
+parallel k=4 R3–R5 explorations retain their own assumptions and are not
+included in the k=6 mathematical acceptance. Historical missing links and
+three records containing session identifiers are identified for owner review.
+
+Chapter cross-review resolved three explicit-domain/notation issues. The
+PDF was rendered and every page visually inspected; the bibliography style
+fetch failure and missing Lean-reference separators were fixed before the
+final review. Bibliography style provenance and third-party license material
+are bundled separately. The citation metadata's mixed-license expression
+was corrected to reflect component-specific terms.
+
+Additional verification used a clean git-archive export of baseline
+37b7fbcbb3b900b86600996642eccdfe465d8fdd. All 241 Lean modules rebuilt in a
+previously absent project output tree in 3525.235 seconds, with the pinned
+dependency cache borrowed read-only. The matching final dependency audit
+passed; four historical numerical certificates also replayed successfully.
+628 protected files, including all Lean sources, original code/certificates,
+old paper and traditional-route files, match the baseline byte for byte.
+The new evidence is under `audit/builds/archive-review-20261106/` and is
+summarized in `audit/archive_review_2026-11-06.json`.
+
+This is an editorial/archival consolidation of the seven-input downstream
+k=6 proof, not a new upstream theorem or an all-range k=4 result. It remains
+local on branch `codex/qrh-archive-review-20261106` for the owner's review.
+No push has been performed; publication waits for that review.

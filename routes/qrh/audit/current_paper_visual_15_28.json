@@ -1,0 +1,147 @@
+{
+  "schema": "qrh-current-paper-visual-review-v1",
+  "date": "2026-11-06",
+  "reviewer": "Codex collaboration agent /root/credibility_classical",
+  "review_kind": "Actual visual inspection of each assigned rendered page; author self-review for chapters 4–7, not independent mathematical peer review",
+  "pdf": "paper/current/main.pdf",
+  "pdf_sha256": "500fa769a0933774b677264fab06ecfa403cdc2bb67575f6e485f4ddaa3b446f",
+  "pdf_page_count": 57,
+  "rendering": {
+    "tool": "pdftoppm",
+    "dpi": 110,
+    "directory": "tmp/paper-visual-final",
+    "image_view_tool": "view_image",
+    "detail": "original"
+  },
+  "requested_pages": [
+    15,
+    28
+  ],
+  "reviewed_pages_count": 14,
+  "status": "PASS_ASSIGNED_PAGES",
+  "scope_limit": "Only pages 15–28 of this exact PDF were visually reviewed here; not a claim about other pages, source mathematics, Lean rebuild, or upstream inputs.",
+  "checks": [
+    "Chinese and Latin glyphs, mathematical glyphs and superscripts/subscripts",
+    "formula and table clipping, equation-number alignment",
+    "overlap, margins and paragraph flow",
+    "visible page number and running header",
+    "resolved numeric references and readable Lean file :: declaration separators"
+  ],
+  "pages": [
+    {
+      "page": 15,
+      "image": "tmp/paper-visual-final/page-15.png",
+      "image_sha256": "4b0ef4461b3f92949415cea027ca45e2cc7f716a1b4e40e00b87b1cc66c1be7e",
+      "actually_viewed": true,
+      "status": "PASS",
+      "notes": "梯形权分段式、两个差分式、引理与证明均完整；式号 12–17、页码清楚。"
+    },
+    {
+      "page": 16,
+      "image": "tmp/paper-visual-final/page-16.png",
+      "image_sha256": "f5bf0a5f864311df9e32e5c726083aeaeb899970343c6d9beb5eee5aa88c5bf0",
+      "actually_viewed": true,
+      "status": "PASS",
+      "notes": "三种核界、双重积分和最小核表达式无裁切；Lean :: 分隔可见，长声明正常换行。"
+    },
+    {
+      "page": 17,
+      "image": "tmp/paper-visual-final/page-17.png",
+      "image_sha256": "03c38572ffda35e55b28418e2d9737528452d89291c011062ade72ce70e6a0bb",
+      "actually_viewed": true,
+      "status": "PASS",
+      "notes": "积分显式公式、平凡零点级数和截断极限完整；式号 23–27 及交叉引用清晰。"
+    },
+    {
+      "page": 18,
+      "image": "tmp/paper-visual-final/page-18.png",
+      "image_sha256": "fa35730785473c29155535d949d79521fc9b0eadc514b8f1d57b7da1e1226457",
+      "actually_viewed": true,
+      "status": "PASS",
+      "notes": "素数幂公式与较长的 P_k(A,C)、V_A 表达式均在版心内；中文及上下标清楚。"
+    },
+    {
+      "page": 19,
+      "image": "tmp/paper-visual-final/page-19.png",
+      "image_sha256": "8c5b7adbf7b4bc7bec59fee8bde153349868aabd65da4cfa7e613ca7bc230571",
+      "actually_viewed": true,
+      "status": "PASS",
+      "notes": "素数提取命题、第五节标题和零点计数定义布局正常；页底 CS 适用域未触及页码。"
+    },
+    {
+      "page": 20,
+      "image": "tmp/paper-visual-final/page-20.png",
+      "image_sha256": "d825850e07b93a38bd0b3d816a1d5a157e1c7619fe71b6c22e7337f8ba422752",
+      "actually_viewed": true,
+      "status": "PASS",
+      "notes": "CS 十二行常数表所有列、表题及数字可读；Rosser 推导与文献引用 [13,5] 正常。"
+    },
+    {
+      "page": 21,
+      "image": "tmp/paper-visual-final/page-21.png",
+      "image_sha256": "c8397f708af96bdc47b920b9980d20da17abca0a2c4fdf594ca078ff8a09fb88",
+      "actually_viewed": true,
+      "status": "PASS",
+      "notes": "阶梯界、带权计数和 Phi 定义无重叠；节标题、引理及式号 35–40 可读。"
+    },
+    {
+      "page": 22,
+      "image": "tmp/paper-visual-final/page-22.png",
+      "image_sha256": "8924867c8179adc76b1f7da3b390ae9cc8555b50af09dbcdcf38fce3c9515374",
+      "actually_viewed": true,
+      "status": "PASS",
+      "notes": "高度网格、有限差分质量及完整余项公式显示完整；强调文字没有缺字，页码清楚。"
+    },
+    {
+      "page": 23,
+      "image": "tmp/paper-visual-final/page-23.png",
+      "image_sha256": "e42bb448166bf0c216f72d41a8e6d0d29437badff6e1f9bdf7e55eecf19f0517",
+      "actually_viewed": true,
+      "status": "PASS",
+      "notes": "几何余项证明、多行不等式及完整高度预算均未越界；式号 46–48 与引用清晰。"
+    },
+    {
+      "page": 24,
+      "image": "tmp/paper-visual-final/page-24.png",
+      "image_sha256": "1b423d51d1ff09364f8a61f20d9eb8b46426b2781836e70e5baa3a2bdc6cff7b",
+      "actually_viewed": true,
+      "status": "PASS",
+      "notes": "第六节标题、M>=1 条件、主辅拆分的三组长公式布局正常；式号 49–52 可读。"
+    },
+    {
+      "page": 25,
+      "image": "tmp/paper-visual-final/page-25.png",
+      "image_sha256": "3bf38dda69f1f7cca2e94d7b9851bffbe929fcb739b195953ecad7472731bda3",
+      "actually_viewed": true,
+      "status": "PASS",
+      "notes": "Taylor 余项、移位分解和较长低秩矩界完整；阶乘及上下标清楚，Lean 引用正常换行。"
+    },
+    {
+      "page": 26,
+      "image": "tmp/paper-visual-final/page-26.png",
+      "image_sha256": "97aac2fb5786eef932796a79ab7094d49aeaeb1c1d174ea4844f54ad6d0682a2",
+      "actually_viewed": true,
+      "status": "PASS",
+      "notes": "48 位有理包围、整数矩、精确有理和与示例整数完整；无字形缺失、裁切或重叠。"
+    },
+    {
+      "page": 27,
+      "image": "tmp/paper-visual-final/page-27.png",
+      "image_sha256": "28fabcc617f2a22fe1452ccfa99ceefca039eda85440ffd551cd8ee5ea423d11",
+      "actually_viewed": true,
+      "status": "PASS",
+      "notes": "中段和远段两个参数组及整数证书界完整；页底参数组与页码分离，区间标题可读。"
+    },
+    {
+      "page": 28,
+      "image": "tmp/paper-visual-final/page-28.png",
+      "image_sha256": "971fdffca2c4cc73fea30921dacc512ea4314d827a12bedb9554d3dbc8f61f7d",
+      "actually_viewed": true,
+      "status": "PASS",
+      "notes": "远段主界、辅助项双指数上界和小项预算完整；中文、数学符号、式号 66–69 正常。"
+    }
+  ],
+  "issues": [],
+  "resolved_prior_issue": "The prior PDF concatenated Lean filenames and declaration names; the current rendering visibly separates them with ::.",
+  "mutations": "Only this JSON report was added during the final visual review. No manuscript source or shared PDF was modified or rebuilt."
+}

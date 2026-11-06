@@ -1,0 +1,75 @@
+{
+  "status": "ALL_K6_MODULES_VERIFIED",
+  "k": 6,
+  "conditional_all_positive_integers_covered": true,
+  "theorem": "Assuming H1: QRH(7/8), H2: Chourasiya-Simonic arXiv:2507.15184v2 Corollary 1 with Table 1 rows 16-27, and the explicitly listed auxiliary inputs, every integer n>=1 has a prime n^6<p<(n+1)^6.",
+  "explicit_hypotheses": [
+    {
+      "id": "H1",
+      "statement": "All nontrivial zeta zeros have real part at most 7/8"
+    },
+    {
+      "id": "H2",
+      "statement": "CS v2 Corollary 1 and the first 12 rows of Table 1 hold for T>=3e12",
+      "source": "https://arxiv.org/html/2507.15184v2",
+      "status": "Preprint input; not independently proved in this project"
+    }
+  ],
+  "created": "2026-11-06T09:49:47.690997+08:00",
+  "proof_document": "research/K6_PROOF.md",
+  "scope": "Numerical module replay and exact coverage checks for the written analytic proof; not a formal proof checker or external peer review.",
+  "lower_n_max": 1242317999994,
+  "new_real_x_log_interval": [
+    "167",
+    "400"
+  ],
+  "inherited_real_x_log_interval": [
+    "400",
+    "infinity"
+  ],
+  "cs_uniform_scale_check": {
+    "scale": "53/50",
+    "all_three_columns": true,
+    "new_segment_upper": "124515019573857253031103/125000000000000000000000",
+    "old_segment_upper": "45704019180519214113247773/50000000000000000000000000",
+    "infinite_tail_upper": "371/625",
+    "all_passed": true,
+    "scope": "Only coefficients B1/B2/B3 are scaled; exponents, source domains and all other inputs stay fixed."
+  },
+  "uncovered_log_x_intervals": [],
+  "runs": [
+    {
+      "script": "certify_lower_range_k6.py",
+      "certificate": "lower_range_k6_certificate.json",
+      "passed": true,
+      "output": "{\n  \"verified\": true,\n  \"k\": 6,\n  \"small_witnesses_verified\": 1259,\n  \"effective_CHL_rows\": 12,\n  \"n_max_inclusive\": 1242317999994,\n  \"target_L\": \"167\",\n  \"target_n_max_inclusive\": 1224230174416,\n  \"max_witness\": 3982487126873086493,\n  \"max_p_minus_n6\": 238,\n  \"witness_sha256\": \"8dfee8570d4e49fa59b94bed4b82d56d38746be59eeb1576713b08a32594a182\",\n  \"scope\": \"finite lower range only, conditional on cited literature inputs\",\n  \"elapsed_seconds\": 0.344\n}",
+      "script_sha256": "0d7149060506aa6b18c9c25a14b0e64ba9bbdeade42ba44888c24de6154b2d93",
+      "certificate_sha256": "a108bd9166c0c8c137ee5299e1b5a135e825efa6514894be5054872299fd60fc"
+    },
+    {
+      "script": "certify_smooth_k6.py",
+      "certificate": "smooth_k6_certificate.json",
+      "passed": true,
+      "output": "Verified 20/94\nVerified 40/94\nVerified 60/94\nVerified 80/94\n{\n  \"status\": \"VERIFIED\",\n  \"k\": 6,\n  \"number_of_cells\": 94,\n  \"log_x_interval\": [\n    \"167\",\n    \"400\"\n  ],\n  \"worst_upper_rational\": \"234933999195957081190761/250000000000000000000000\",\n  \"minimum_margin_rational\": \"15066000804042918809239/250000000000000000000000\",\n  \"sensitivity_summary\": {\n    \"tested_scale\": \"53/50\",\n    \"scope\": \"Uniform changes to CS Table 1 B1 alone or B1/B2/B3 together, with every other input and envelope parameter fixed.\",\n    \"B1_only_critical_factor_interval\": [\n      \"212825778168080728637493/200000000000000000000000\",\n      \"532064445420201821593733/500000000000000000000000\"\n    ],\n    \"B1_only_scaled_maximum_upper\": \"996119947068715889127513/1000000000000000000000000\",\n    \"B1_only_all_passed\": true,\n    \"all_three_critical_factor_interval\": [\n      \"53206432626951634879589/50000000000000000000000\",\n      \"1064128652539032697591781/1000000000000000000000000\"\n    ],\n    \"all_three_scaled_maximum_upper\": \"124515019573857253031103/125000000000000000000000\",\n    \"all_three_all_passed\": true\n  },\n  \"script_sha256\": \"529444f426560c2e2f9523d1f393bff43a5fa8cf46e2c891d0296343c294355e\",\n  \"certificate_sha256\": \"65dbfce3f0caa99f71f3bc74d9e2f61cfc7501ee28cdfe5ae584696c60429b95\"\n}",
+      "script_sha256": "529444f426560c2e2f9523d1f393bff43a5fa8cf46e2c891d0296343c294355e",
+      "certificate_sha256": "65dbfce3f0caa99f71f3bc74d9e2f61cfc7501ee28cdfe5ae584696c60429b95"
+    },
+    {
+      "script": "certify_smooth_segment.py",
+      "certificate": "smooth_segment_certificate.json",
+      "passed": true,
+      "output": "{\n  \"status\": \"VERIFIED\",\n  \"number_of_cells\": 60,\n  \"log_x_interval\": [\n    \"400\",\n    \"700\"\n  ],\n  \"script_sha256\": \"ec7e6d218e09967d9161f44074c35ecdce09eb6a3a3a3d307db1e5b36083d21e\",\n  \"certificate_sha256\": \"7e3768054da03709927d63a3f2d5766b7d0b26a7f600d4a8005621413e1a2a7f\",\n  \"worst_upper_rational\": \"862339984538098379495241/1000000000000000000000000\",\n  \"elapsed_seconds\": 7.453000000037719\n}",
+      "script_sha256": "ec7e6d218e09967d9161f44074c35ecdce09eb6a3a3a3d307db1e5b36083d21e",
+      "certificate_sha256": "7e3768054da03709927d63a3f2d5766b7d0b26a7f600d4a8005621413e1a2a7f"
+    },
+    {
+      "script": "certify_tail_cs.py",
+      "certificate": "tail_cs_certificate.json",
+      "passed": true,
+      "output": "PASS: saved certificate exactly matches read-only recomputation\nL0=700; total: [0.557220462408670948864420999882333777436735925799936356303329 +/- 2.06e-61]\nStrict rational envelope: total < 14/25 < 1; checks: 21",
+      "script_sha256": "162e880b9ad62f6ae47dd16a6b7ea75bce0a34cab35fff2975c169430ee77cb6",
+      "certificate_sha256": "d579daae45c617416d14282b69aa727e0f4b7e10699e73678bfebc6b2b743e84"
+    }
+  ],
+  "script_sha256": "7b3ae02ea2f1af710b75c10394206395d6bbdbbd3797ed98a47710d499dc1109"
+}

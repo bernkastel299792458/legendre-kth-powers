@@ -1,0 +1,41 @@
+{
+  "status": "PARTIAL_MODULES_VERIFIED_NOT_FULL_K4",
+  "full_k4_proved": false,
+  "created": "2026-11-06T04:19:33.902869+08:00",
+  "scope": "Numerical verification of documented analytic lemmas under QRH and cited literature inputs; not Lean or external peer review.",
+  "verified_small_n_max": 767543999996,
+  "verified_real_x_lower_log": "400",
+  "verified_large_n_lower_log": "100",
+  "conservative_uncovered_log_x_intervals": [
+    [
+      "5473/50",
+      "400"
+    ]
+  ],
+  "runs": [
+    {
+      "script": "certify_lower_range.py",
+      "passed": true,
+      "script_sha256": "e6301fde3f607ea7f6eaea43c6293820c4af0334a1e5ad0c8c0ef71c21343d74",
+      "output": "{\n  \"verified\": true,\n  \"small_witnesses_verified\": 44721,\n  \"effective_CHL_rows\": 9,\n  \"n_max_inclusive\": 767543999996,\n  \"target_L\": \"5473/50\",\n  \"target_n_max_inclusive\": 766422943598,\n  \"max_witness\": 3999871365034201301,\n  \"max_p_minus_n4\": 382,\n  \"witness_sha256\": \"c946f02f2bc03bd1e8bed5b707a92e6a36c7eafbcf99f5ca6a5d30504fa3d75c\",\n  \"scope\": \"finite lower range only, conditional on cited literature inputs\",\n  \"elapsed_seconds\": 6.248\n}"
+    },
+    {
+      "script": "certify_tail_cs.py",
+      "passed": true,
+      "script_sha256": "162e880b9ad62f6ae47dd16a6b7ea75bce0a34cab35fff2975c169430ee77cb6",
+      "output": "PASS: saved certificate exactly matches read-only recomputation\nL0=700; total: [0.557220462408670948864420999882333777436735925799936356303329 +/- 2.06e-61]\nStrict rational envelope: total < 14/25 < 1; checks: 21"
+    },
+    {
+      "script": "certify_smooth_segment.py",
+      "passed": true,
+      "script_sha256": "ec7e6d218e09967d9161f44074c35ecdce09eb6a3a3a3d307db1e5b36083d21e",
+      "output": "{\n  \"status\": \"VERIFIED\",\n  \"number_of_cells\": 60,\n  \"log_x_interval\": [\n    \"400\",\n    \"700\"\n  ],\n  \"script_sha256\": \"ec7e6d218e09967d9161f44074c35ecdce09eb6a3a3a3d307db1e5b36083d21e\",\n  \"certificate_sha256\": \"7e3768054da03709927d63a3f2d5766b7d0b26a7f600d4a8005621413e1a2a7f\",\n  \"worst_upper_rational\": \"862339984538098379495241/1000000000000000000000000\",\n  \"elapsed_seconds\": 7.375\n}"
+    }
+  ],
+  "certificate_hashes": {
+    "lower_range_certificate.json": "7ddb2ef9a5c4eaad359e0b5584afca49df2a6d20f6ac6dab4cfecb1b8a2fc410",
+    "tail_cs_certificate.json": "d579daae45c617416d14282b69aa727e0f4b7e10699e73678bfebc6b2b743e84",
+    "smooth_segment_certificate.json": "7e3768054da03709927d63a3f2d5766b7d0b26a7f600d4a8005621413e1a2a7f"
+  },
+  "script_sha256": "5943afb4728cb5b048c65b3db53274806037674898280fbb4f148e219dd31692"
+}

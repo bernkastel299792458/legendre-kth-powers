@@ -1,0 +1,178 @@
+{
+  "status": "PASS: numerical premises of the documented analytic tail proof",
+  "scope": "Conditional on QRH beta<=7/8 and the explicitly listed literature inputs; not a full k=4 proof and not Lean verification.",
+  "statement": "For every real x>=exp(800), a prime lies strictly between x and x+4*x^(3/4). Hence consecutive fourth powers contain a prime for integer n>=exp(200).",
+  "arithmetic": {
+    "library": "python-flint / Arb",
+    "python_flint_version": "0.9.0",
+    "precision_bits": 256,
+    "python_version": "3.12.10"
+  },
+  "parameters_exact": {
+    "L0": "800",
+    "mu": "9/32",
+    "h": "4*x^(3/4)",
+    "T": "x^(9/32)",
+    "U": "2*T",
+    "CHJ_alpha": "1/2",
+    "CHJ_omega": "0",
+    "CHJ_M": "1447/500",
+    "FKS_c1": "87097/5000",
+    "FKS_c2": "26477/5000"
+  },
+  "auxiliary_balls": {
+    "log_2": "[0.693147180559945309417232121458176568075500134360255254120680 +/- 9.51e-63]",
+    "u": "[225.693147180559945309417232121458176568075500134360255254121 +/- 3.21e-58]",
+    "lambda": "[187.313254876810001511930085297558889516421462499897853082003 +/- 3.74e-58]"
+  },
+  "normalized_error_term_balls": {
+    "low_real_part_zeros": "[2.41820002425855385843292802949302424674396117687623503447523e-30 +/- 3.02e-90]",
+    "density_main": "[0.116011397745695471358896951562596070543187137552897059736611 +/- 4.27e-61]",
+    "density_log_term": "[2.00686113120520507449933586717218817905111235890128182841684e-38 +/- 1.50e-98]",
+    "CHJ_remainder": "[2.41351215818961282983711621408458060211674923774582152307018e-8 +/- 6.49e-69]",
+    "prime_powers": "[4.43954697725408768200862335739618856619640365938295458512176e-82 +/- 4.98e-143]",
+    "right_endpoint_charge": "[5.30741909739113240971820559315733935981200783126135259390127e-259 +/- 2.35e-319]"
+  },
+  "normalized_total_ball": "[0.116011421880817053255025249936176411433320323890874415969313 +/- 4.02e-62]",
+  "positive_margin_ball": "[0.883988578119182946744974750063823588566679676109125584030687 +/- 4.02e-62]",
+  "rational_total_upper_bound": "117/1000",
+  "checks": {
+    "log_x_above_40": {
+      "positive_expression_ball": "760.000000000000000000000000000000000000000000000000000000000",
+      "passed": true,
+      "explanation": "The CHJII Table 1 row starts at log(x)=40."
+    },
+    "log_2_above_half": {
+      "positive_expression_ball": "[0.193147180559945309417232121458176568075500134360255254120680 +/- 9.51e-63]",
+      "passed": true,
+      "explanation": "Used in the elementary prime-power bound."
+    },
+    "log_2_below_one": {
+      "positive_expression_ball": "[0.306852819440054690582767878541823431924499865639744745879320 +/- 9.52e-63]",
+      "passed": true,
+      "explanation": "Gives log(x+h) <= L+1 once h<=x."
+    },
+    "h_less_than_x": {
+      "positive_expression_ball": "[1.00000000000000000000000000000000000000000000000000000000000 +/- 3e-65]",
+      "passed": true,
+      "explanation": "h/x decreases for L>=L0."
+    },
+    "height_above_51": {
+      "positive_expression_ball": "[221.068174367275674228355220145204347759764306429591505760968 +/- 6.80e-59]",
+      "passed": true,
+      "explanation": "log(T)>log(51), increasing in L."
+    },
+    "height_above_endpoint_log_squared": {
+      "positive_expression_ball": "[211.628278105863281557783387970970198742600716994443083464848 +/- 1.73e-58]",
+      "passed": true,
+      "explanation": "Stronger than T>L^2: also T>(log(x+h))^2 because log(x+h)<=L+1."
+    },
+    "height_log_squared_margin_increases": {
+      "positive_expression_ball": "[0.278753121098626716604244694132334581772784019975031210986267 +/- 1.67e-61]",
+      "passed": true,
+      "explanation": "Derivative of mu*L-2*log(L+1) is positive and increases."
+    },
+    "height_upper_bound": {
+      "positive_expression_ball": "[1.00000000000000000000000000000000000000000000000000000000000 +/- 3e-65]",
+      "passed": true,
+      "explanation": "Equivalent to T<(sqrt(x)-2)/4; both subtracted terms decrease."
+    },
+    "density_height_above_H0": {
+      "positive_expression_ball": "[196.963513775963287409806089428323280372214791712992230089986 +/- 5.09e-59]",
+      "passed": true,
+      "explanation": "U=2T exceeds the FKS height H0."
+    },
+    "counting_height_above_20": {
+      "positive_expression_ball": "[222.697414907005954315982008545315635792398898511371227023967 +/- 3.28e-58]",
+      "passed": true,
+      "explanation": "The elementary relaxation N(U)<=U*log(U) applies."
+    },
+    "lambda_positive": {
+      "positive_expression_ball": "[187.313254876810001511930085297558889516421462499897853082003 +/- 3.74e-58]",
+      "passed": true,
+      "explanation": "Lambda increases because lambda'=1/4-9/(16u)>0."
+    },
+    "lambda_increases": {
+      "positive_expression_ball": "[0.247507677982132144788781186761198697319356496882925245219216 +/- 2.52e-61]",
+      "passed": true,
+      "explanation": "Its derivative increases with u."
+    },
+    "count_term_decreases": {
+      "positive_expression_ball": "[0.0925038389910660723943905933805993486596782484414626226096081 +/- 2.59e-62]",
+      "passed": true,
+      "explanation": "Negative logarithmic derivative of 4*u*exp(-3L/32)."
+    },
+    "u_exceeds_e": {
+      "positive_expression_ball": "[4.41917632084840549814531452260965315102193523757073312017111 +/- 3.61e-60]",
+      "passed": true,
+      "explanation": "Ensures lambda'*L-lambda>0, hence L/lambda decreases."
+    },
+    "density_core_decreases": {
+      "positive_expression_ball": "[0.0271999767209647352817694284869478831439543074347535234812264 +/- 9.13e-63]",
+      "passed": true,
+      "explanation": "Negative logarithmic derivative of u^3*exp(-lambda/8)."
+    },
+    "density_log_term_decreases": {
+      "positive_expression_ball": "[0.122507677982132144788781186761198697319356496882925245219216 +/- 2.52e-61]",
+      "passed": true,
+      "explanation": "Negative logarithmic derivative of u^2*exp(-L/8)."
+    },
+    "CHJ_remainder_decreases": {
+      "positive_expression_ball": "[0.0300010407993338884263114071606994171523730224812656119900083 +/- 2.64e-62]",
+      "passed": true,
+      "explanation": "Negative logarithmic derivative of (3L+2)*exp(-L/32)."
+    },
+    "prime_power_term_decreases": {
+      "positive_expression_ball": "[0.247503121098626716604244694132334581772784019975031210986267 +/- 1.67e-61]",
+      "passed": true,
+      "explanation": "Negative logarithmic derivative of (L+1)^2*exp(-L/4)."
+    },
+    "right_endpoint_charge_decreases": {
+      "positive_expression_ball": "[0.748751560549313358302122347066167290886392009987515605493134 +/- 4.17e-61]",
+      "passed": true,
+      "explanation": "Negative logarithmic derivative of (L+1)*exp(-3L/4)."
+    },
+    "total_less_than_one": {
+      "positive_expression_ball": "[0.883988578119182946744974750063823588566679676109125584030687 +/- 4.02e-62]",
+      "passed": true,
+      "explanation": "Combined with analytic monotonicity, proves the infinite tail."
+    },
+    "total_less_than_117_over_1000": {
+      "positive_expression_ball": "[0.000988578119182946744974750063823588566679676109125584030686960 +/- 1.54e-64]",
+      "passed": true,
+      "explanation": "A convenient rational envelope for the numerical result."
+    }
+  },
+  "source_inputs": [
+    {
+      "name": "QRH",
+      "assumption": "Every nontrivial zeta zero has real part beta<=7/8; accepted research premise, not independently reverified here."
+    },
+    {
+      "name": "FKS",
+      "url": "https://arxiv.org/html/2204.02588v3",
+      "location": "Theorem 2.7, Corollary 2.9, Table 8 (the a1=0.77 block)",
+      "assumption": "Uniform density bound for sigma in [5/8,7/8], U>=3*10^12, using c1=17.4194 and c2=5.2954."
+    },
+    {
+      "name": "CHJII",
+      "url": "https://arxiv.org/html/2402.04272v3",
+      "location": "Theorem 1.3 and Table 1",
+      "assumption": "A common T* in [T,2T] in the short-interval formula, with log(x)>=40, alpha=1/2, omega=0, M=2.894."
+    },
+    {
+      "name": "Zero count",
+      "url": "https://arxiv.org/html/2204.02588v3",
+      "location": "Lemma 2.1 and Remark 2.2",
+      "assumption": "Rosser total-zero count with 0.137, 0.443, 1.588; relaxed analytically to N(U)<=U*log(U) for U>=20."
+    }
+  ],
+  "proof_document": "research/TAIL_BOUND.md",
+  "script_sha256": "550330b35cf717213ff8854e0bf7c8eb44894896784f39007f737ed3c7aa961b",
+  "limitations": [
+    "The literature statements and their numerical constants are accepted inputs, not rederived by this script.",
+    "The unbounded range is covered by the symbolic monotonicity proof in TAIL_BOUND.md, not by sampling.",
+    "This certificate covers only x>=exp(800), leaving the lower range to separate arguments.",
+    "Decimal ball strings are enclosures; the pass/fail decisions use Arb interval comparisons directly."
+  ]
+}

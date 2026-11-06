@@ -1,0 +1,72 @@
+{
+  "status": "EXPLORATORY",
+  "created": "2026-11-06T04:09:29.594007+08:00",
+  "arguments": {
+    "ks": "4",
+    "degrees": "2,3,4,6,8",
+    "ls": "109.46,120,200,400",
+    "output": "no_bv_cs2",
+    "height_order": 16,
+    "sigma_order": 12,
+    "max_step": 3,
+    "density": "cs2",
+    "no_bv": true,
+    "no_symmetry": false,
+    "check_only": false
+  },
+  "python": "3.12.10",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "code_sha256": "32029e46ab6431420fd7a843476b5fb3b6ca0fd5598d0e952246b4e77c7a8d7b",
+  "csv_sha256": "5246a84a7260733ba42c6c3763daa7beeda3f7a838722d6f958b91bef74a0c7b",
+  "checks": {
+    "kernel_M2": [
+      1.0,
+      3.75,
+      23.094010767585036,
+      299.99999999999994
+    ],
+    "quadrature_relative_difference": 6.056094066029682e-10,
+    "note": "Numerical consistency checks only; not proof certification"
+  },
+  "summary": [
+    {
+      "k": 4,
+      "sampled_failing_L": [
+        109.46,
+        120.0,
+        200.0
+      ],
+      "worst_sample": {
+        "k": 4,
+        "L": 120.0,
+        "M": 2,
+        "bv": false,
+        "density": "cs2",
+        "symmetry": true,
+        "baseline": 2.173536821092572e-12,
+        "density_layers": 3017.4524582600484,
+        "height_tail": 5.929499766763728e-25,
+        "prime_powers": 4.5563162349342344e-10,
+        "trivial_zeros": 4.508027065606742e-157,
+        "delta": 3017.4524582605063,
+        "margin": -3016.4524582605063,
+        "height_end": 105.36698458754086,
+        "height_order": 16,
+        "sigma_order": 12,
+        "max_height_step": 3,
+        "status": "EXPLORATORY"
+      },
+      "note": "Sampling does not certify any continuous range"
+    }
+  ],
+  "sources": [
+    "https://arxiv.org/html/2507.15184v2"
+  ],
+  "limitations": [
+    "Floating-point Jacobi roots and quadrature",
+    "No interval proof",
+    "Analytic height-tail expression evaluated in floating point",
+    "No claims between sampled L values"
+  ]
+}

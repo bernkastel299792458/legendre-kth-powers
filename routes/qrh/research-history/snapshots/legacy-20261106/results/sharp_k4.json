@@ -1,0 +1,20 @@
+{
+  "status": "EXPLORATORY",
+  "arguments": {
+    "ks": "4",
+    "ls": "60,75,90,100,109.46,110,120,130,150,200,300,400,450,500,600,700,800",
+    "output": "sharp_k4"
+  },
+  "source_sha256": {
+    "sharp_scan.py": "50b708cf8f804153b8219955c0a95a8488aaa0acf73bbffc64a95d340b2bf0cf",
+    "smooth_scan.py": "96bcb3738feddc6229325b6d01970a7a299c3267d1d38e7a521465ecd702545b"
+  },
+  "csv_sha256": "947a95f93e370c00c65e073d0b4cc875a23689c4082d8cc0d44519411fbcebfe",
+  "note": "No interval certification, no between-sample or infinite-tail inference",
+  "inputs": [
+    "CHJII 2402.04272v3 Thm1.3/Table1",
+    "CS 2507.15184v1 Cor1/Table1",
+    "QRH beta<=7/8",
+    "RH verified to 3e12"
+  ]
+}

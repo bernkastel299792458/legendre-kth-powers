@@ -28,11 +28,12 @@ metadata. It does not independently re-integrate all 94 cells.
 
 Install elan/Lean using the official Lean instructions. The pinned version is
 `leanprover/lean4:v4.36.0-rc2`; the Mathlib commit and all transitive revisions
-are recorded in `lean/lake-manifest.json`.
+are recorded in `lean/lake-manifest.json`. Preserve this lock file: do not run
+`lake update` as part of reproducing the fixed revision. Dependency download
+and cache retrieval must retain the recorded revisions.
 
 ```sh
 cd lean
-lake update
 lake exe cache get
 lake build
 lake env lean LegendreK6/Audit.lean
@@ -90,19 +91,26 @@ factorizations and modular witnesses; Lean checks their use in the actual
 primality proofs. The Python generator is not a primality oracle trusted by
 the theorem. To intentionally regenerate the checked files, omit `--check`. The generator explicitly preserves CRLF in its generated source/data on all platforms; `.gitattributes` preserves exact release bytes.
 
-## Paper
+## Current paper and reading map
+
+The current paper is authored directly in `paper/current/main.tex`, its twelve
+chapter files and `references.bib`. To compile it with Tectonic:
 
 ```sh
-cd paper
-python -X utf8 build_tex.py
-xelatex -interaction=nonstopmode -halt-on-error main.tex
-xelatex -interaction=nonstopmode -halt-on-error main.tex
+python -X utf8 paper/current/build.py --engine /absolute/path/to/tectonic
+python -X utf8 paper/current/build.py --check
+python -X utf8 code/build_reading_map.py --check
 ```
 
-Alternatively, Tectonic 0.17.0 with XeTeX-compatible packages can compile the
-same source using `tectonic -X compile main.tex --keep-logs`. A CJK-capable
-installation with ctex and Fandol fonts is required. PDF layout checks are
-recorded separately; TeX compilation is not mathematical verification.
+Omit `--engine` if `tectonic` is on PATH. The builder keeps intermediate files
+under ignored `tmp/paper-builds/`, checks that sources did not change during
+compilation, and writes the PDF plus a source-bound build report. The reading
+map checks declared Lean references, LaTeX labels and bibliography keys; it
+does not certify equality of mathematical statements. Visual review is
+recorded separately in `audit/current_paper_visual_review.json`.
+
+The old paper remains frozen in `paper/`; its historical reproduction
+instructions are in [paper/README.md](paper/README.md).
 
 ## Frozen sources and publication edits
 
@@ -203,3 +211,22 @@ checkpoint and release manifest distinguish the completed seven-input
 proof from the stronger, unclaimed QRH/CS-only scope. Manifest checks are
 portable and do not require the publisher's absolute Windows paths or
 local compiled artifacts to exist on the reproducing machine.
+
+## Research archive and external-input diagnostics
+
+From the repository root, `python routes/qrh/research-history/snapshot_legacy.py
+--verify-only` verifies the stored snapshot bytes without executing historical
+programs. The original source directory is not required for this read-only
+archive check. Missing historical links and excluded dependencies are listed
+in `research-history/dependency_gaps.md`.
+
+The H6 scalar constant check and H7 rounded-parameter diagnostic are separate
+from the full source proofs; see `audit/inputs_4_6_7_review_2026-11-06.md`.
+The H7 computation checks the printed-parameter-to-Δ mapping, not a complete
+interval certification of repaired analytic witnesses.
+
+The additional local archival replay is recorded in
+`audit/archive_review_2026-11-06.json`. It uses a clean export of the accepted
+mathematical source and a fresh project output directory, while borrowing the
+matching dependency cache read-only. It supplements the original acceptance
+record without replacing it.

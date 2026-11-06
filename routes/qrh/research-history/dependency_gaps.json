@@ -1,0 +1,301 @@
+{
+  "scope": "Static Markdown-link and Python-import inventory; no historical code executed.",
+  "limitations": [
+    "Markdown scan does not parse arbitrary HTML, nested parentheses, reference-style links, or headings.",
+    "Python imports are inspected syntactically; dynamic runpy/Path construction is not fully resolved.",
+    "Preserved links to missing material are not rewritten into claims of archival completeness."
+  ],
+  "preserved_relative_link_count": 144,
+  "missing_relative_links": [
+    {
+      "referrer": "README.md",
+      "original_target": "../.publication/legendre-kth-powers/routes/qrh/README.md",
+      "resolved_source_relative_target": "../.publication/legendre-kth-powers/routes/qrh/README.md",
+      "reason": "outside_selected_source_root",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "README.md",
+      "original_target": "../RESEARCH_PROTOCOL.md",
+      "resolved_source_relative_target": "../RESEARCH_PROTOCOL.md",
+      "reason": "outside_selected_source_root",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "README.md",
+      "original_target": "proof/FORMALIZATION_STATUS.md",
+      "resolved_source_relative_target": "proof/FORMALIZATION_STATUS.md",
+      "reason": "exists_in_original_but_not_selected",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "README.md",
+      "original_target": "manuscript/K6_conditional_primes.md",
+      "resolved_source_relative_target": "manuscript/K6_conditional_primes.md",
+      "reason": "exists_in_original_but_not_selected",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "README.md",
+      "original_target": "review/Response_to_Claude_K6_2026-11-06.md",
+      "resolved_source_relative_target": "review/Response_to_Claude_K6_2026-11-06.md",
+      "reason": "exists_in_original_but_not_selected",
+      "current_repository_reference": "../audit/source_reviews/Response_to_Claude_K6_2026-11-06.md"
+    },
+    {
+      "referrer": "RUNBOOK.md",
+      "original_target": "manuscript/K6_conditional_primes.md",
+      "resolved_source_relative_target": "manuscript/K6_conditional_primes.md",
+      "reason": "exists_in_original_but_not_selected",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "RUNBOOK.md",
+      "original_target": "review/K6_revision_numeric_audit_2026-11-06.md",
+      "resolved_source_relative_target": "review/K6_revision_numeric_audit_2026-11-06.md",
+      "reason": "exists_in_original_but_not_selected",
+      "current_repository_reference": "../audit/source_reviews/K6_revision_numeric_audit_2026-11-06.md"
+    },
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/README.md",
+      "original_target": "research/SESSION_2026-11-06_ROUND2.md",
+      "resolved_source_relative_target": "archive/k6_before_claude_revision_2026-11-06/research/SESSION_2026-11-06_ROUND2.md",
+      "reason": "not_found_at_original_relative_path",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/README.md",
+      "original_target": "research/SESSION_2026-11-06.md",
+      "resolved_source_relative_target": "archive/k6_before_claude_revision_2026-11-06/research/SESSION_2026-11-06.md",
+      "reason": "not_found_at_original_relative_path",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/README.md",
+      "original_target": "results/verification_summary.json",
+      "resolved_source_relative_target": "archive/k6_before_claude_revision_2026-11-06/results/verification_summary.json",
+      "reason": "not_found_at_original_relative_path",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/README.md",
+      "original_target": "ROADMAP.md",
+      "resolved_source_relative_target": "archive/k6_before_claude_revision_2026-11-06/ROADMAP.md",
+      "reason": "not_found_at_original_relative_path",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/README.md",
+      "original_target": "LOG.md",
+      "resolved_source_relative_target": "archive/k6_before_claude_revision_2026-11-06/LOG.md",
+      "reason": "not_found_at_original_relative_path",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/README.md",
+      "original_target": "research/SMOOTH_MODEL.md",
+      "resolved_source_relative_target": "archive/k6_before_claude_revision_2026-11-06/research/SMOOTH_MODEL.md",
+      "reason": "not_found_at_original_relative_path",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/README.md",
+      "original_target": "research/LOWER_RANGE.md",
+      "resolved_source_relative_target": "archive/k6_before_claude_revision_2026-11-06/research/LOWER_RANGE.md",
+      "reason": "not_found_at_original_relative_path",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/README.md",
+      "original_target": "research/SMOOTH_EXTENSION.md",
+      "resolved_source_relative_target": "archive/k6_before_claude_revision_2026-11-06/research/SMOOTH_EXTENSION.md",
+      "reason": "not_found_at_original_relative_path",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/README.md",
+      "original_target": "research/SMOOTH_CERTIFICATE.md",
+      "resolved_source_relative_target": "archive/k6_before_claude_revision_2026-11-06/research/SMOOTH_CERTIFICATE.md",
+      "reason": "not_found_at_original_relative_path",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/README.md",
+      "original_target": "research/TAIL_BOUND_CS.md",
+      "resolved_source_relative_target": "archive/k6_before_claude_revision_2026-11-06/research/TAIL_BOUND_CS.md",
+      "reason": "not_found_at_original_relative_path",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/research/K6_PROOF.md",
+      "original_target": "LOWER_RANGE_K6.md",
+      "resolved_source_relative_target": "archive/k6_before_claude_revision_2026-11-06/research/LOWER_RANGE_K6.md",
+      "reason": "not_found_at_original_relative_path",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/research/K6_PROOF.md",
+      "original_target": "../results/lower_range_k6_certificate.json",
+      "resolved_source_relative_target": "archive/k6_before_claude_revision_2026-11-06/results/lower_range_k6_certificate.json",
+      "reason": "not_found_at_original_relative_path",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/research/K6_PROOF.md",
+      "original_target": "LOWER_RANGE_K6_REVIEW.md",
+      "resolved_source_relative_target": "archive/k6_before_claude_revision_2026-11-06/research/LOWER_RANGE_K6_REVIEW.md",
+      "reason": "not_found_at_original_relative_path",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/research/K6_PROOF.md",
+      "original_target": "SMOOTH_CERTIFICATE.md",
+      "resolved_source_relative_target": "archive/k6_before_claude_revision_2026-11-06/research/SMOOTH_CERTIFICATE.md",
+      "reason": "not_found_at_original_relative_path",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/research/K6_PROOF.md",
+      "original_target": "TAIL_BOUND_CS.md",
+      "resolved_source_relative_target": "archive/k6_before_claude_revision_2026-11-06/research/TAIL_BOUND_CS.md",
+      "reason": "not_found_at_original_relative_path",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/research/K6_PROOF.md",
+      "original_target": "LOWER_RANGE_K6_REVIEW.md",
+      "resolved_source_relative_target": "archive/k6_before_claude_revision_2026-11-06/research/LOWER_RANGE_K6_REVIEW.md",
+      "reason": "not_found_at_original_relative_path",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/research/K6_PROOF.md",
+      "original_target": "K6_DENSITY_INPUT.md",
+      "resolved_source_relative_target": "archive/k6_before_claude_revision_2026-11-06/research/K6_DENSITY_INPUT.md",
+      "reason": "not_found_at_original_relative_path",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/research/K6_PROOF.md",
+      "original_target": "K6_KERNEL_EXPLORATION.md",
+      "resolved_source_relative_target": "archive/k6_before_claude_revision_2026-11-06/research/K6_KERNEL_EXPLORATION.md",
+      "reason": "not_found_at_original_relative_path",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "research/INPUTS.md",
+      "original_target": "../review/Claude_K6_proof_review_2026-11-06.md",
+      "resolved_source_relative_target": "review/Claude_K6_proof_review_2026-11-06.md",
+      "reason": "exists_in_original_but_not_selected",
+      "current_repository_reference": "../audit/source_reviews/Claude_K6_proof_review_2026-11-06.md"
+    },
+    {
+      "referrer": "research/K6_ASSEMBLY_REVIEW.md",
+      "original_target": "../review/K6_revision_numeric_audit_2026-11-06.md",
+      "resolved_source_relative_target": "review/K6_revision_numeric_audit_2026-11-06.md",
+      "reason": "exists_in_original_but_not_selected",
+      "current_repository_reference": "../audit/source_reviews/K6_revision_numeric_audit_2026-11-06.md"
+    },
+    {
+      "referrer": "research/K6_ASSEMBLY_REVIEW.md",
+      "original_target": "../review/K6_manuscript_revision_review_2026-11-06.md",
+      "resolved_source_relative_target": "review/K6_manuscript_revision_review_2026-11-06.md",
+      "reason": "exists_in_original_but_not_selected",
+      "current_repository_reference": "../audit/source_reviews/K6_manuscript_revision_review_2026-11-06.md"
+    },
+    {
+      "referrer": "research/K6_DEPENDENCIES.md",
+      "original_target": "../review/Claude_K6_proof_review_2026-11-06.md",
+      "resolved_source_relative_target": "review/Claude_K6_proof_review_2026-11-06.md",
+      "reason": "exists_in_original_but_not_selected",
+      "current_repository_reference": "../audit/source_reviews/Claude_K6_proof_review_2026-11-06.md"
+    },
+    {
+      "referrer": "research/K6_FORMALIZATION_NEXT.md",
+      "original_target": "../proof/FORMALIZATION_STATUS.md",
+      "resolved_source_relative_target": "proof/FORMALIZATION_STATUS.md",
+      "reason": "exists_in_original_but_not_selected",
+      "current_repository_reference": null
+    },
+    {
+      "referrer": "research/K6_PROOF.md",
+      "original_target": "../review/Claude_K6_proof_review_2026-11-06.md",
+      "resolved_source_relative_target": "review/Claude_K6_proof_review_2026-11-06.md",
+      "reason": "exists_in_original_but_not_selected",
+      "current_repository_reference": "../audit/source_reviews/Claude_K6_proof_review_2026-11-06.md"
+    },
+    {
+      "referrer": "research/K6_PROOF.md",
+      "original_target": "../review/K6_revision_numeric_audit_2026-11-06.md",
+      "resolved_source_relative_target": "review/K6_revision_numeric_audit_2026-11-06.md",
+      "reason": "exists_in_original_but_not_selected",
+      "current_repository_reference": "../audit/source_reviews/K6_revision_numeric_audit_2026-11-06.md"
+    },
+    {
+      "referrer": "research/K6_REFINED_CERTIFICATE.md",
+      "original_target": "../review/Claude_K6_proof_review_2026-11-06.md",
+      "resolved_source_relative_target": "review/Claude_K6_proof_review_2026-11-06.md",
+      "reason": "exists_in_original_but_not_selected",
+      "current_repository_reference": "../audit/source_reviews/Claude_K6_proof_review_2026-11-06.md"
+    },
+    {
+      "referrer": "research/SMOOTH_K6_REVIEW.md",
+      "original_target": "../review/K6_revision_numeric_audit_2026-11-06.md",
+      "resolved_source_relative_target": "review/K6_revision_numeric_audit_2026-11-06.md",
+      "reason": "exists_in_original_but_not_selected",
+      "current_repository_reference": "../audit/source_reviews/K6_revision_numeric_audit_2026-11-06.md"
+    }
+  ],
+  "mathematical_syntax_false_positives": [
+    {
+      "referrer": "archive/k6_before_claude_revision_2026-11-06/research/INPUTS.md",
+      "pattern_target": "logT",
+      "reason": "Manually inspected mathematical bracket/product syntax, not a file link."
+    },
+    {
+      "referrer": "research/INPUTS.md",
+      "pattern_target": "logT",
+      "reason": "Manually inspected mathematical bracket/product syntax, not a file link."
+    },
+    {
+      "referrer": "research/SMOOTH_REVIEW.md",
+      "pattern_target": "log T",
+      "reason": "Manually inspected mathematical bracket/product syntax, not a file link."
+    }
+  ],
+  "external_python_imports_not_bundled": [
+    "flint",
+    "numpy",
+    "scipy"
+  ],
+  "known_unbundled_dependencies": [
+    {
+      "path": "code/requirements.txt",
+      "reason": "Outside requested MD/PY/JSON/CSV scope; old environment is not reconstructed."
+    },
+    {
+      "path": "manuscript/",
+      "reason": "Old manuscript not copied in this research-data snapshot; see current paper and separate archive index."
+    },
+    {
+      "path": "proof/",
+      "reason": "Old publication/build/dependency tree deliberately excluded."
+    },
+    {
+      "path": "review/",
+      "reason": "Review Markdown already present in repository; linked separately."
+    },
+    {
+      "path": "computation_branch/",
+      "reason": "Separate active computation work excluded by task scope."
+    },
+    {
+      "path": "algorithm_only/",
+      "reason": "Separate active algorithm work excluded by task scope."
+    },
+    {
+      "path": "*.pdf and third-party source/dependency trees",
+      "reason": "Third-party works and executable/dependency caches are not redistributed."
+    }
+  ]
+}

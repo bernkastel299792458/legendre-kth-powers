@@ -1,0 +1,417 @@
+\section{连续平移覆盖与有限 RH 下的中段比较}\label{sec:coverage}
+
+两个试点不是仅在有限网格采样点成立的数值观察。
+本节证明它们如何覆盖两个完整的实数区间。
+向上覆盖通过密度预算的连续平移不等式完成；
+向下覆盖 $167\leq\log x\leq715/4$ 时，另使用有限高度 RH
+和一个复用原有因子包围的重加权证书。
+这样，每一个实数 $\log x$ 都由一条明确的不等式链覆盖，
+而不是靠网格点之间的插值假设。
+
+\subsection{实部权和高度项的联合平移}
+
+固定实部网格，并假定
+\begin{equation}\label{cover:translation-domain}
+ A\geq167,\quad u\geq28,\quad k\geq4,\quad d\geq0,\quad
+ \frac12\leq\sigma_j\leq\sigma_{j+1}\leq\frac78,\quad
+ \sigma_{j+1}-\sigma_j\leq\frac1{1024}.
+\end{equation}
+先研究把左端点从 $A$ 改为 $A+d$，
+同时把对数高度从 $u$ 改为 $u+d/k$ 的作用。
+
+\begin{lemma}[权的平移界]\label{cover:weight-shift}
+在上述条件下，
+\begin{equation}\label{cover:weight-shift-eq}
+ W_j(A+d)\leq
+  \e^{(1/A+\sigma_{j+1}-1)d}W_j(A).
+\end{equation}
+\end{lemma}
+\begin{proof}
+由定义，
+\[
+ W_j(A)=\int_{\sigma_j}^{\sigma_{j+1}}
+                         A\e^{(\beta-1)A}\,\dd\beta .
+\]
+对积分中的每个 $\beta$，利用
+$(A+d)/A=1+d/A\leq\e^{d/A}$ 和
+$\e^{(\beta-1)d}\leq\e^{(\sigma_{j+1}-1)d}$，
+可逐点比较两个非负被积函数。积分后即得结论。
+\end{proof}
+
+另一方面，对 $p,r\geq0$，
+\begin{equation}\label{cover:height-rate}
+ \e^{p(u+d/k)}(u+d/k)^r
+ \leq
+ \e^{(p+r/u)d/k}\e^{pu}u^r.
+\end{equation}
+这由 $\log(1+d/(ku))\leq d/(ku)$ 得到。
+与 \eqref{cover:weight-shift-eq} 相乘，
+一个密度项的总增长指数不超过
+\[
+ \frac1A+\sigma_{j+1}-1+\frac{p+r/u}{k}.
+\]
+对于 CS 主项 $p=p_j$、$r=p_j+2$，有
+$p_j\leq(8/3)(1-\sigma_j)$、$r\leq3$。
+辅助项 $(p,r)=(0,2),(0,1)$ 也满足同样的宽界。
+因此在 \eqref{cover:translation-domain} 下，
+\begin{align}
+ \frac1A+\sigma_{j+1}-1+\frac{p+r/u}{k}
+ &\leq\frac1{167}
+       -\frac{1-\sigma_{j+1}}3
+       +\frac23(\sigma_{j+1}-\sigma_j)+\frac3{112}\notag\\
+ &\leq\frac1{167}-\frac1{24}+\frac1{1536}+\frac3{112}<0.
+                                                     \label{cover:rate-negative}
+\end{align}
+这里的严格负上界是一个有限有理不等式；
+它解释了为什么限制网格宽度和最低高度后，平移能够覆盖连续参数。
+
+基线项也不会增长。其比值满足
+\[
+ \frac{\e^{-(A+d)/2+(u+d/k)}(u+d/k)}
+      {\e^{-A/2+u}u}
+ \leq
+ \e^{[-1/2+(1+1/u)/k]d}\leq1.
+\]
+逐项相加即得以下结论。
+
+\begin{lemma}[密度预算的联合平移]\label{cover:Phi-shift}
+在 \eqref{cover:translation-domain} 下，
+\begin{equation}\label{cover:Phi-shift-eq}
+ \Phi_{A+d}(u+d/k)\leq\Phi_A(u).
+\end{equation}
+\end{lemma}
+对应
+\leanref{DensityGridTranslation}{sigmaGridWeight_translation_le}、
+\leanref{DensityGridTranslation}{grid_translation_rate_nonpos}
+和 \leanref{DensityGridTranslation}{densityGridPhi_translation_le}。
+上述证明对实数 $d\geq0$ 直接成立，没有要求 $d$
+为某个网格步长的整数倍。
+
+\subsection{完整高度预算的平移不变部分}
+
+令
+\begin{equation}\label{cover:shift-parameters}
+ q'=q\e^{d/k},\qquad u_i'=u_i+d/k,\qquad U'=U+d/k.
+\end{equation}
+因为 $q'\e^{-u_i'}=q\e^{-u_i}$，
+\begin{equation}\label{cover:kernel-invariant}
+ g_{q'}(\e^{u_i'})=g_q(\e^{u_i}),\qquad
+ q'^2\e^{-2U'}=q^2\e^{-2U}.
+\end{equation}
+故高度质量 $\mu_i$ 和余项系数均保持不变。
+再用引理 \ref{cover:Phi-shift} 逐项比较
+式 \eqref{dens:B}，得到
+\begin{proposition}[完整预算向上平移]\label{cover:B-shift}
+若实部网格宽度不超过 $1/1024$，$A\geq167$、
+所有 $u_i\geq28$、$k\geq4$，且原高度网格合法，则
+\begin{equation}\label{cover:B-shift-eq}
+ \mathcal B(A+d,q\e^{d/k};\boldsymbol u+d/k)
+ \leq\mathcal B(A,q;\boldsymbol u)\qquad(d\geq0).
+\end{equation}
+平移后的高度网格仍满足
+\eqref{dens:height-conditions}。
+\end{proposition}
+\begin{proof}
+高度下界、单调性和 $U\geq6$ 在非负平移后保持；
+初始核等于 $1$ 由 \eqref{cover:kernel-invariant} 保持。
+式 \eqref{dens:B} 的所有系数非负，
+而每个 $\Phi$ 因子由 \eqref{cover:Phi-shift-eq} 不增，
+故包含余项的完整和不增。
+\end{proof}
+对应
+\leanref{TrapezoidBudgetTranslation}{trapezoidHeightBudget_translation_le}。
+
+还必须验证 $q'$ 足够大，不能只平移一个与实际区间无关的核。
+由 \eqref{tr:domains}，
+\begin{equation}\label{cover:q-valid}
+ q_k(C+d)=1+\frac{\e^{(C+d)/k}}k
+ \leq\e^{d/k}\left(1+\frac{\e^{C/k}}k\right)=q_k(C)\e^{d/k}.
+\end{equation}
+若目标点 $L=A+d$ 且试点右端点 $C\geq A$，
+则 $q_k(L)\leq q_k(C+d)\leq q'$。
+所以命题 \ref{dens:zero-budget} 对真实长度 $h_k(L)$ 适用。
+我们只要求核参数是一个上界，并不要求恰好等于 $q_k(L)$。
+
+\subsection{上中段与远段的连续覆盖}
+
+对第 \ref{sec:certificates} 节的中段试点，
+令 $A_0=715/4$。给定
+$A_0\leq L\leq400$，取 $d=L-A_0$，
+将试点高度网格平移 $d/6$，并令 $q'=q\e^{d/6}$。
+由命题 \ref{cover:B-shift} 和式 \eqref{cert:middle-main}、
+\eqref{cert:middle-aux}，
+\begin{equation}\label{cover:upper-zero}
+ \frac{|Z_T(\e^L,h_6(L))|}{h_6(L)}
+ \leq2\mathcal B(A_0,q;\boldsymbol u)
+ \leq\frac{93977}{100000}.
+\end{equation}
+此式对所有 $T$、所有该范围内的实数 $L$ 都成立。
+取单元端点 $A=L$、$C=L+1/4$，
+有 $C\leq401$。在这一范围，
+\begin{equation}\label{cover:upper-small}
+ P_6(L,L+1/4)\leq10^{-6},\qquad V_L\leq10^{-6}.
+\end{equation}
+例如用 $\epsilon_6(L)\leq1$、
+$\sqrt{1+\epsilon_6(L)}\leq2$、
+$\log(1+\epsilon_6(L))\leq1$ 和 $\log2\geq1/2$，
+式 \eqref{tr:Pcell} 的指数前因子不超过 $200000$。
+又有 $\e^{-L/3}\leq\e^{-55}\leq10^{-18}$，
+已足以证明第一式。第二式由平凡零点预算的单调性得到。
+所以 $Z+P+V\leq0.939772<1$，
+覆盖整个 $715/4\leq L\leq400$。
+
+对远段试点，令 $A_0=400$。给定 $400\leq L\leq700$，
+取 $d=L-400$，高度平移 $d/4$，
+其余步骤相同，得到
+\[
+ \frac{|Z_T(\e^L,h_4(L))|}{h_4(L)}
+ \leq\frac{22501}{50000}.
+\]
+这次 $C=L+1/4\leq701$，并且
+$P_4(L,L+1/4),V_L\leq10^{-6}$。
+例如指数前因子可放大到 $500000$，而
+$\e^{-L/4}\leq\e^{-100}\leq10^{-18}$。
+因此完整预算不超过 $0.450022<1$。
+
+\begin{proposition}[两个向上覆盖区间]\label{cover:upper-ranges}
+在 QRH$(7/8)$、CS v2、Rosser 零点计数和积分显式公式下，对每个 $x>0$，
+\begin{align*}
+ \frac{715}{4}\leq\log x\leq400
+ &\Longrightarrow\exists p\text{ 为素数},\
+                         x<p<x+6x^{5/6},\\
+ 400\leq\log x\leq700
+ &\Longrightarrow\exists p\text{ 为素数},\
+                         x<p<x+4x^{3/4}.
+\end{align*}
+\end{proposition}
+由前面的预算和命题 \ref{tr:prime-criterion} 即得。
+对应
+\leanref{M3MiddleUpper}{middle_upper_short_interval_from_inputs}
+和 \leanref{M3FarUpper}{far_short_interval_from_inputs}。
+后一个结论是四次幂长度在一个有限的对数范围内成立，
+不应改写为四次勒让德问题的全范围结论。
+
+\subsection{有限 RH 怎样改善下中段的核}
+
+向下平移时 \eqref{cover:Phi-shift-eq} 的方向不能直接反用。
+我们改用有限 RH 输入 \cite{PlattTrudgian}：
+$0<|\gamma|\leq H$ 的非平凡零点均有 $\beta=1/2$。
+设 $0\leq r\leq1$、$q\leq rQ$，并且
+\begin{equation}\label{cover:linear-threshold}
+ \frac{c_1q}{H}\leq r.
+\end{equation}
+则对于 $t\geq H$，
+\begin{equation}\label{cover:scaled-kernel}
+ g_q(t)\leq r g_Q(t).
+\end{equation}
+确实，$g_q(t)\leq c_1q/t\leq r$；
+又分别有 $c_1q/t\leq r c_1Q/t$ 和
+$c_2q^2/t^2\leq r^2c_2Q^2/t^2\leq r c_2Q^2/t^2$。
+这三个上界一起给出 \eqref{cover:scaled-kernel}。
+仅有 $q\leq rQ$ 并不足以缩放核的常数分支 $1$；
+条件 \eqref{cover:linear-threshold} 是必要的额外检查。
+
+把正高度零点分成 $0<\gamma\leq H$ 与 $\gamma>H$。
+第一部分由有限 RH 和 $g_q\leq1$ 控制；
+第二部分用 \eqref{cover:scaled-kernel}，再扩大为全部正高度的非负和。
+由 Rosser 上界 $N(H)\leq H\log H$ 及
+式 \eqref{dens:positive-final}，
+\begin{equation}\label{cover:low-high}
+ \sum_{0<\gamma\leq T}m_\rho\e^{(\beta-1)L}g_q(\gamma)
+ \leq\e^{-L/2}H\log H
+             +r\mathcal B(L,Q;\boldsymbol u).
+\end{equation}
+因此完整零点预算可取
+\begin{equation}\label{cover:lower-Z}
+ Z_{\text{低中}}(L)=
+ 2\e^{-L/2}H\log H+2r\mathcal B(L,Q;\boldsymbol u).
+\end{equation}
+有限 RH 只用于第一项；高于 $H$ 的零点仍使用 QRH 和 CS 密度估计。
+对应
+\leanref{TrapezoidLowHeight}{norm_truncatedTrapezoidZeroSum_le_scaled_heightBudget}。
+
+\subsection{缩放参数的合法性}
+
+现在限制
+$167\leq L\leq A_0=715/4$，保留中段试点的固定 $Q=q$ 和高度网格，
+并取
+\[
+ r=\e^{(L-A_0)/6},\qquad q=q_6(L).
+\]
+显然 $0<r\leq1$。为避免同名混淆，本小节的 $Q$ 始终是
+试点常数 $1+\e^{179/6}/6$，$q$ 则随 $L$ 变化。
+由直接恒等变形，
+\[
+ \frac{q_6(L)}r
+   =\e^{(A_0-L)/6}+\frac{\e^{A_0/6}}6
+   \leq \e^{47/24}+\frac{\e^{715/24}}6 .
+\]
+以下两个标量不等式已用有理区间核对：
+\begin{equation}\label{cover:cap}
+ \e^{47/24}+\frac{\e^{715/24}}6
+ \leq Q,\qquad
+ \e^{47/24}+\frac{\e^{715/24}}6
+ \leq1453125000000=\frac{H}{c_1}.
+\end{equation}
+因此 $q_6(L)\leq rQ$ 且 $c_1q_6(L)/H\leq r$，
+正好满足 \eqref{cover:linear-threshold}。
+这些并非渐近比较，而是包含下端点 $L=167$ 的统一界。
+对应 \leanref{M3LowerConstants}{middleQ_le_scaling_q}
+和 \leanref{M3LowerConstants}{middleQ_linear_le_scaling}。
+
+\subsection{三档重加权，而非把全主项乘以粗常数}
+
+还需控制 \eqref{cover:lower-Z} 中的
+$2r\mathcal B(L,Q;\boldsymbol u)$。
+直接将试点主项整体乘以 $64$ 会失去结论，
+所以必须保留各个实部单元的差异。
+
+记 $d=A_0-L\in[0,47/4]$。由实部权的积分表示，
+\begin{equation}\label{cover:weight-down}
+ rW_j(L)\leq
+       \e^{(5/6-\sigma_j)d}W_j(A_0).
+\end{equation}
+证明如下：将 $rL\e^{(\beta-1)L}$ 与
+$A_0\e^{(\beta-1)A_0}$ 相比，前者与后者的比为
+$(L/A_0)\e^{(5/6-\beta)d}$。因 $L/A_0\leq1$、
+$\beta\geq\sigma_j$，该比不超过
+$\e^{(5/6-\sigma_j)d}$；积分即得。
+
+在中段的 $1536$ 个实部单元上，定义
+\begin{equation}\label{cover:multiplier}
+ \lambda_j=
+ \begin{cases}
+ 64,&0\leq j<1229,\\
+ 3/2,&1229\leq j<1366,\\
+ 1,&1366\leq j<1536.
+ \end{cases}
+\end{equation}
+这些分界由左端点决定：
+$j\geq1229$ 蕴含 $\sigma_j\geq4/5$，
+$j\geq1366$ 蕴含 $\sigma_j\geq5/6$。
+在第一档，$5/6-\sigma_j\leq1/3$，
+所以指数因子不超过 $\e^{47/12}\leq64$；
+在第二档不超过 $\e^{47/120}\leq3/2$；
+在第三档不超过 $1$。
+故
+\begin{equation}\label{cover:weighted-bound}
+ rW_j(L)\leq\lambda_jW_j(A_0).
+\end{equation}
+越过 $4/5$ 或 $5/6$ 的单元仍按它的左端点处理，
+不会把跨界单元错误地分到较小系数一侧。
+基线满足
+\[
+ r\e^{-L/2+u}u
+  =\e^{(A_0-L)/3}\e^{-A_0/2+u}u
+  \leq64\e^{-A_0/2+u}u.
+\]
+CS 的两个辅助部分也可统一乘以 $64$，
+因为其原试点预算已很小。
+
+在式 \eqref{cert:main} 中只把实部系数 $c_j$
+替换为 $\lambda_jc_j$，记所得主项为
+\begin{equation}\label{cover:weighted-main}
+ \mathcal M_{\lambda}
+   =\sum_{j,i}\lambda_jc_jd_i\e^{p_jv_i}.
+\end{equation}
+这里 $c_j,d_i,p_j,v_i$ 全部保持中段试点在 $A_0$ 的原值。
+由精确拆分 \eqref{cert:decomposition}、非负性及
+\eqref{cover:weighted-bound}，可逐项得到
+\begin{equation}\label{cover:scaled-B}
+ 2r\mathcal B(L,Q;\boldsymbol u)
+     \leq\mathcal M_\lambda+64\mathcal A_{\text{中}}.
+\end{equation}
+这是下中段重加权的关键表达式。
+对应 \leanref{M3LowerComparison}{scaled_sigma_weight_le}
+和 \leanref{M3LowerExpression}{scaled_heightBudget_le}。
+
+\subsection{复用整数表的第三个有限算术检查}
+
+式 \eqref{cover:weighted-main} 使用的 $a_j,b_i,g_i$
+及原有实数包围全部不变，仅将 $f_j$ 乘以 $\lambda_j$。
+因此第 \ref{sec:certificates} 节的 Taylor 矩论证仍然适用。
+令
+\[
+ m_j=2\lambda_j=
+ \begin{cases}
+ 128,&j<1229,\\
+ 3,&1229\leq j<1366,\\
+ 2,&j\geq1366.
+ \end{cases}
+\]
+在中段整数表中，把每个实部行 $(F_j,A_j)$ 改为
+$(m_jF_j,A_j)$；高度行 $(G_i,B_i)$ 完全不动。
+这仍是一个纯整数表，且其低秩算式是
+$2\mathcal M_\lambda$ 的上界。精确有理检查给出
+\begin{equation}\label{cover:weighted-certificate}
+ \mathcal R_{\text{加倍重权}}\leq\frac{193}{100},
+ \qquad
+ \mathcal M_\lambda\leq\frac{193}{200}=0.965.
+\end{equation}
+第二式使用低秩矩算式对第一组系数的一次齐次性。
+不需要重新信任一个浮点运行，也没有新增外部解析输入。
+对应 \leanref{M3LowerIntegerCertificate}{rational_double_budget}、
+\leanref{M3LowerInteger}{weighted_lowRank_le}
+和 \leanref{M3LowerMainBound}{weightedMain_le}。
+
+对 $L\geq167$，有限 RH 低零点预算满足
+\begin{equation}\label{cover:low-small}
+ 2\e^{-L/2}H\log H\leq10^{-6}.
+\end{equation}
+例如 $\e^{-L/2}\leq\e^{-80}$、$\log H\leq H$，
+而 $2H^2\e^{-80}\leq10^{-6}$；这是一个很宽的有理区间检查。
+在 $167\leq L\leq715/4$ 上，
+$P_6(L,L)\leq10^{-6}$ 和 $V_L\leq10^{-6}$，
+可由第 \ref{sec:trapezoid} 节的公式直接推出。
+结合 \eqref{cover:scaled-B}、\eqref{cover:weighted-certificate}
+和 $\mathcal A_{\text{中}}\leq1/50000$，完整预算为
+\begin{equation}\label{cover:lower-complete}
+ Z_{\text{低中}}(L)+P_6(L,L)+V_L
+ \leq\frac{193}{200}+\frac{64}{50000}+\frac3{10^6}
+ =0.966283<1.
+\end{equation}
+三份 $10^{-6}$ 分别是低高度零点、真素数幂和平凡零点，
+并非重复计入同一个误差项。
+
+\begin{proposition}[下中段覆盖]\label{cover:lower-range}
+在 QRH$(7/8)$、CS v2、Rosser 零点计数、积分显式公式和
+有限 RH 到 $H=3\cdot10^{12}$ 五个输入下，对每个 $x>0$，
+\[
+ 167\leq\log x\leq\frac{715}{4}
+ \quad\Longrightarrow\quad
+ \exists p\text{ 为素数},\quad x<p<x+6x^{5/6}.
+\]
+\end{proposition}
+\begin{proof}
+式 \eqref{cover:lower-Z} 是对任意截断高度成立的零点预算；
+式 \eqref{cover:lower-complete} 验证三项判据。
+用命题 \ref{tr:prime-criterion} 即得。
+\end{proof}
+对应 \leanref{M3LowerResult}{lower_middle_short_interval_from_inputs}。
+
+\subsection{本节的适用范围及其与全范围结论的衔接}
+
+合并命题 \ref{cover:upper-ranges} 与
+\ref{cover:lower-range}，当前证明得到
+\[
+ \begin{array}{c|c|c}
+ \log x\text{ 的闭区间}&\text{保证含素数的开区间}
+                                  &\text{是否使用有限 RH}\\ \hline
+ {[167,715/4]}&(x,x+6x^{5/6})&\text{是}\\
+ {[715/4,400]}&(x,x+6x^{5/6})&\text{否}\\
+ {[400,700]}&(x,x+4x^{3/4})&\text{否}
+ \end{array}
+\]
+公共端点在相邻论证中均被包含，所以不存在接缝空隙。
+远段中 $x>1$，故 $4x^{3/4}<6x^{5/6}$，
+其结论也足以提供六次幂短区间所需的素数。
+小于 $\e^{167}$ 的范围及大于等于 $\e^{700}$ 的无穷尾段
+由后续章节的独立分支处理；本节不把有限区间证明扩张为全范围
+$k=4$ 结论。
+
+历史上逐单元认证的记录仍有复现和研究价值，但当前数学覆盖的核心是
+本节的连续参数不等式以及两个试点、一次重加权的有限算术检查。
+因此，早期证书的敏感度数字不能自动作为当前证书的统一余量。
+当前可以直接从正文核对的三段上界分别为
+$0.966283$、$0.939772$ 和 $0.450022$；
+它们仅描述本节这些固定输入和固定证书下的预算。

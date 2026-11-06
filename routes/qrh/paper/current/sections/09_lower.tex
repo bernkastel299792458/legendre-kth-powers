@@ -1,0 +1,294 @@
+\section{整数下段：素数证书、CHL 十二行与指数拼接}
+\label{sec:lower}
+
+解析方法覆盖的是以实变量 $x$ 表示的巨大区间；要得到所有正整数 $n$
+的结论，还必须填满 $x=n^6$ 的较小范围。本节在唯一外部输入 H7 下证明
+\begin{equation}\label{lower:target}
+ 1\leq n\leq N_*:=1242317999994
+ \quad\Longrightarrow\quad
+ \exists p\text{ 为素数},\quad n^6<p<n^6+6n^5.
+\end{equation}
+其中 $1\leq n\leq1259$ 完全由本库的实际素性证明处理；
+其余范围使用 H7 中明确列出的十二条 CHL 短区间结论。
+本节不使用 QRH、CS、Rosser 或有限 RH。
+
+这一区分对理解证明的可信基础很重要。历史数值文件曾记录一种有限基素性测试；
+当前 Lean 证明的这些素数已另由递归 Lucas 证书证明，因此该测试及其适用范围
+并不是当前定理的额外文献输入。另一方面，CHL 行仍是 H7，
+不能因为它们的整数转换已经形式化，就声称 CHL 的上游解析定理也已形式化。
+
+\subsection{1259 个小区间的确定素数见证}
+
+对每个整数 $1\leq n\leq1259$，保存一个具体自然数 $p_n$。
+形式化需要分别证明三件事：
+\begin{equation}\label{lower:witness-obligations}
+ \operatorname{Prime}(p_n),\qquad n^6<p_n,\qquad
+ p_n<n^6+6n^5.
+\end{equation}
+后两项是整数算术命题，不能由“$p_n$ 大致在 $n^6$ 附近”代替。
+前几项及末项如下，完整列表由随附数据与源文件提供：
+\begin{center}
+\begin{tabular}{r|r|r}
+$n$ & $n^6$ & $p_n$\\\hline
+1 & 1 & 2\\
+2 & 64 & 67\\
+3 & 729 & 733\\
+4 & 4096 & 4099\\
+5 & 15625 & 15629\\
+1259 & 3982487126873086441 & 3982487126873086493
+\end{tabular}
+\end{center}
+完整见证列表在 \texttt{results/lower\_range\_k6\_certificate.json} 中；
+与其对应的定理是 \texttt{PrimeWitnesses.lean} 中的
+\texttt{small\_prime\_1} 至 \texttt{small\_prime\_1259}。
+每条定理引用一个已经证明的素性命题，并直接证明两个严格整数不等式。
+
+\begin{lemma}[本项目使用的 Lucas 素性准则]\label{lower:lucas}
+设整数 $P\geq2$，并已知 $P-1$ 的完整素因数分解。
+若存在模 $P$ 的元素 $a$，满足
+\begin{equation}\label{lower:lucas-congruences}
+ a^{P-1}\equiv1\pmod P,
+ \qquad
+ a^{(P-1)/q}\not\equiv1\pmod P
+ \quad\text{对每个素因子 }q\mid P-1,
+\end{equation}
+则 $P$ 为素数。
+\end{lemma}
+
+\begin{proof}
+第一个同余保证 $a$ 是模 $P$ 的可逆元，其阶整除 $P-1$。
+如果该阶是 $P-1$ 的真因子，则 $(P-1)/\operatorname{ord}(a)$
+有某个素因子 $q$，从而该阶整除 $(P-1)/q$，与第二个同余条件矛盾。
+因此 $a$ 的阶恰为 $P-1$。由有限单位群的阶关系，
+$P-1\leq\varphi(P)$；而 $P\geq2$ 时 $\varphi(P)\leq P-1$，
+等号只可能在 $P$ 为素数时成立。
+\end{proof}
+
+实际实现使用 Mathlib 的 \texttt{lucas\_primality}。
+给出 $P-1=\prod_iq_i^{e_i}$ 时，既检查乘法恒等式，
+也递归引用每个 $q_i$ 的已证明素性；然后对所有这些素因子检查
+式~\eqref{lower:lucas-congruences}。由于 $q_i<P$，依赖关系严格向较小整数
+下降，形成可复用节点的有向无环证书。完整数据共有
+\emph{5349 个素数节点}，分为 27 个源文件
+\texttt{Pratt/Block000.lean} 至 \texttt{Pratt/Block026.lean}。
+小于 $1000$ 的节点由 \texttt{norm\_num} 的有限算术素性证明处理，
+其余节点用上述 Lucas 准则。
+
+例如，对于见证 $P=15629$，采用
+\[
+ P-1=2^2\cdot3907,\qquad a=2.
+\]
+在已经证明 $2$ 与 $3907$ 为素数之后，需检查
+\[
+ 2^{15628}\equiv1,\qquad
+ 2^{7814}\equiv15628\ne1,\qquad
+ 2^4\equiv16\ne1\pmod{15629}.
+\]
+这条证书可在 \leanref{Pratt/Block005}{prime_15629} 中直接核查。
+其它较大的见证遵循同一逻辑，不要求读者相信一个外部程序输出的
+\texttt{is\_prime=true}。
+
+Python/FLINT 负责寻找因数分解和模幂见证并生成候选 Lean 源码。
+这些候选只有在整数乘法、模幂和递归素性证明均通过内核检查后才能使用。
+模幂计算由 \texttt{reduce\_mod\_char} 生成证明项；这里没有采用
+\texttt{native\_decide} 作为捷径，也没有把 Python 的返回值注册成数学公理。
+
+\begin{proposition}[小整数范围]\label{lower:small}
+对每个 $1\leq n\leq1259$，存在素数 $p$ 满足
+$n^6<p<n^6+6n^5$。
+\end{proposition}
+
+\begin{proof}
+对有限个整数 $n$ 分情形，每个叶节点使用已经证明的
+式~\eqref{lower:witness-obligations}。
+实际源文件用二分情形树组织这些叶节点，以控制证明深度；
+二分组织方式不改变被穷尽的整数集合。
+\end{proof}
+
+对应定理为 \leanref{PrimeWitnesses}{small_range_prime}。
+特别地，$n=1$ 由 $p=2$ 处理，故后面要求 $n\geq2$ 的合数端点论证
+不会遗漏这个最小正整数。
+
+\subsection{CHL 的区间方向与严格端点转换}
+
+H7 的每一行采用下列准确的方向和端点约定：给定 $\Delta>1$ 与 $X$，
+\begin{equation}\label{lower:CHL-input}
+ y\geq X\quad\Longrightarrow\quad
+ \exists p\text{ 为素数},\quad
+ y\left(1-\frac1\Delta\right)<p\leq y.
+\end{equation}
+源文为 \cite{CHL,CHLcorr} 的修订结论及指定表行。
+这是左开右闭的区间；不能直接将右端点的不严格不等式抄成严格不等式。
+接口 \leanref{Definitions}{CHLInterval} 保留了这一差别。
+
+\begin{lemma}[单行 CHL 到六次幂短区间]\label{lower:CHL-conversion}
+假设式~\eqref{lower:CHL-input} 成立。若整数 $n\geq2$ 满足
+\begin{equation}\label{lower:row-conditions}
+ X\leq n^6,\qquad n\leq6(\Delta-1),
+\end{equation}
+则存在素数 $p$，使 $n^6<p<n^6+6n^5$。
+\end{lemma}
+
+\begin{proof}
+令 $y=n^6+6n^5=n^5(n+6)$。
+因 $y\geq n^6\geq X$，可对 $y$ 使用 H7 的对应行。
+关键的左端点比较为
+\begin{align}
+ y\left(1-\frac1\Delta\right)-n^6
+ &=\frac{n^5}{\Delta}\bigl(6(\Delta-1)-n\bigr)\geq0.
+ \label{lower:left-comparison}
+\end{align}
+于是源文给出的素数满足
+$p>y(1-1/\Delta)\geq n^6$。
+右端仅有 $p\leq y$，但 $n\geq2$ 时两个整数因子
+$n^5$ 和 $n+6$ 都严格大于 $1$，所以 $y=n^5(n+6)$ 是合数。
+由于 $p$ 是素数，$p\ne y$，因此 $p<y$。
+\end{proof}
+
+这两个步骤分别对应
+\leanref{CHL}{nat_sixth_short_of_CHL} 与
+\leanref{Reduction}{sixth_right_endpoint_not_prime}。
+注意式~\eqref{lower:row-conditions} 容许等号：即使
+$n=6(\Delta-1)$，左端仍由 CHL 的严格不等式保证 $p>n^6$。
+
+\subsection{全部十二行及整数阈值}
+
+下表列出当前 \leanref{CHLRange}{CHLRows} 的全部输入行，
+并给出本项目使用的整数覆盖区间 $[a_j,b_j]$。
+这里 $a_j$ 是已核验的安全下阈值，不声称是最小可能阈值；
+$b_j=6(\Delta_j-1)$ 是精确整数。
+
+\begin{center}
+\small
+\begin{tabular}{c|r|r|r}
+$X_j$ & $\Delta_j$ & $a_j$ & $b_j=6(\Delta_j-1)$\\\hline
+$4\cdot10^{18}$ & $39097000$ & $1260$ & $234581994$\\
+$\e^{43}$ & $41816800$ & $1296$ & $250900794$\\
+$\e^{46}$ & $163940000$ & $2136$ & $983639994$\\
+$\e^{50}$ & $1061200000$ & $4161$ & $6367199994$\\
+$\e^{55}$ & $10288400000$ & $9573$ & $61730399994$\\
+$\e^{60}$ & $76918400000$ & $22027$ & $461510399994$\\
+$\e^{75}$ & $174043000000$ & $268338$ & $1044257999994$\\
+$\e^{90}$ & $184304000000$ & $3269018$ & $1105823999994$\\
+$\e^{105}$ & $191886000000$ & $39824785$ & $1151315999994$\\
+$\e^{120}$ & $197917000000$ & $485165196$ & $1187501999994$\\
+$\e^{135}$ & $202553000000$ & $5910522064$ & $1215317999994$\\
+$\e^{150}$ & $207053000000$ & $72004899338$ & $1242317999994$
+\end{tabular}
+\end{center}
+
+每行使用两类不同的证据。$\Delta_j$ 和源域 $X_j$ 是 H7 的文献输入；
+而将其转换为 $[a_j,b_j]$ 所需的
+\begin{equation}\label{lower:threshold-checks}
+ X_j\leq a_j^6,\qquad b_j\leq6(\Delta_j-1)
+\end{equation}
+均在本库中证明，未再假设一个整数区间结论。
+第一行的下界是直接的整数计算：
+\[
+ 1260^6=4001504141376000000>4\cdot10^{18}.
+\]
+其余十一条指数不等式完整列为
+\begin{alignat}{2}
+ \e^{43}&\leq1296^6,&\qquad \e^{46}&\leq2136^6,\notag\\
+ \e^{50}&\leq4161^6,& \e^{55}&\leq9573^6,\notag\\
+ \e^{60}&\leq22027^6,& \e^{75}&\leq268338^6,\notag\\
+ \e^{90}&\leq3269018^6,& \e^{105}&\leq39824785^6,\notag\\
+ \e^{120}&\leq485165196^6,&
+ \e^{135}&\leq5910522064^6,\notag\\
+ \e^{150}&\leq72004899338^6.&&
+ \label{lower:eleven-exp-thresholds}
+\end{alignat}
+这些比较由 \texttt{Thresholds.lean} 中
+\texttt{chl\_threshold\_43} 至 \texttt{chl\_threshold\_150}
+的反射式二进区间证明验证，设置的工作精度为 40 位。
+指数的数值包围本身生成内核可检查的证明，
+并非先在外部取 $\lceil\e^{j/6}\rceil$ 再把这个整数当作正确答案。
+
+如果 $a_j\leq n\leq b_j$，幂函数在非负实轴的单调性给出
+$X_j\leq a_j^6\leq n^6$，同时 $n\leq6(\Delta_j-1)$。
+因此引理~\ref{lower:CHL-conversion} 对该行覆盖的每个整数都适用。
+形式化把这个共同步骤封装成
+\leanref{CHLRange}{nat_short_of_CHL_integer_row}。
+
+\begin{proposition}[CHL 行之间没有整数空隙]\label{lower:CHL-coverage}
+在 H7 下，对每个整数
+$1260\leq n\leq1242317999994$，存在素数 $p$ 满足
+$n^6<p<n^6+6n^5$。
+\end{proposition}
+
+\begin{proof}
+按表中顺序记十二个区间为 $[a_j,b_j]$，$0\leq j\leq11$。
+表内精确整数满足
+\[
+ a_0=1260,\qquad b_0<b_1<\cdots<b_{11}=N_*,
+ \qquad a_{j+1}\leq b_j+1\quad(0\leq j<11).
+\]
+所以 $[a_0,b_0]$ 与其后逐行增加的区间覆盖整个整数区间
+$[1260,N_*]$。等价地，对给定的 $n$，取第一个满足 $n\leq b_j$ 的行；
+若 $j>0$，前一行未覆盖便给出 $n\geq b_{j-1}+1\geq a_j$，
+从而这一行的上下条件都成立。
+每个比较都可从表中整数直接验证；无需关于素数分布的进一步输入。
+\end{proof}
+
+对应定理为 \leanref{CHLRange}{chl_integer_coverage}。
+与命题~\ref{lower:small} 拼接即得
+\leanref{LowerRange}{lower_range_complete}，也就是式~\eqref{lower:target}。
+这里的 $1259/1260$ 接口是连续的；我们没有以“有限多个剩余例外可计算”
+结束论证，而是给出了这些例外的实际素数证明。
+
+\subsection{与 \texorpdfstring{$L=167$}{L=167} 的精确拼接}
+
+要与后面的实变量中段相接，还需证明式~\eqref{lower:target} 至少覆盖
+所有满足 $\log(n^6)\leq167$ 的正整数。这依赖一条另外验证的超越不等式：
+\begin{equation}\label{lower:join-exp}
+ \e^{167}<(1242317999994)^6=N_*^6.
+\end{equation}
+\leanref{Thresholds}{lower_join_exp} 使用 20 位反射式二进区间证明建立该式。
+它与上一组十一条阈值检查一样，是 Lean 中的实数不等式证明。
+
+\begin{lemma}[指数接口]\label{lower:log-join}
+设 $n\in\N$ 且 $n\geq1$。若 $\log((n:\R)^6)\leq167$，则 $n\leq N_*$。
+\end{lemma}
+
+\begin{proof}
+由 $n>0$，指数函数的单调性给出
+\[
+ n^6=\exp(\log(n^6))\leq\e^{167}<N_*^6.
+\]
+若 $n>N_*$，非负整数的六次幂保持序关系，将与最后一个严格不等式矛盾。
+所以所需的非严格上界 $n\leq N_*$ 成立。
+\end{proof}
+
+\begin{theorem}[完整整数下段]\label{lower:log-theorem}
+在 H7 下，对每个 $n\in\N$，若 $n\geq1$ 且
+$\log((n:\R)^6)\leq167$，则存在素数 $p$ 满足
+\[
+ n^6<p<n^6+6n^5.
+\]
+\end{theorem}
+
+\begin{proof}
+先由引理~\ref{lower:log-join} 得 $n\leq N_*$，再使用
+小范围证书与 CHL 行已经拼成的式~\eqref{lower:target}。
+\end{proof}
+
+对应实现为 \leanref{CHLRange}{lower_join_of_log} 和
+\leanref{LowerRange}{lower_log_range}。
+式~\eqref{lower:join-exp} 为严格不等式，说明两个范围有重叠；
+并不需要猜测 $\e^{167/6}$ 位于哪两个相邻整数之间。
+
+\subsection{H7 的来源状态与本节证明的边界}
+
+CHL 原文与勘误均有正式期刊发表记录。当前十二行与作者 arXiv v3 修订本的
+数值、定义域以及左右端点约定相符；但是，这与独立验证其全部上游计算不是同一件事。
+源文复核发现，公开的有限位辅助参数在
+$\log X=50,60,75,90,105,135$ 六行生成的 $\Delta$
+略小于表中目标值。该方向差异已经用以印刷十进制数为有理输入的 Arb 计算确认。
+由于较大的 $\Delta$ 对应较短的区间，不能用略小的生成值直接证明表中较强的行。
+小幅调整辅助参数后能够达到目标的数值观察，也不代替完整严格认证。
+
+本节因此明确接受的是 H7 中的十二条\emph{区间命题}，
+不是声称已由公开舍入见证在本库重证这些命题。
+本节对它们之后的步骤——整数阈值、各行覆盖、素数证书、严格端点和指数拼接——
+给出了完整证明。正式勘误正文的精确表格比对以及 CHL 判据的完整独立认证仍列在来源审查中。
+这一限制应与定理同时阅读，而不能被“所有下游模块编译通过”一句话覆盖。

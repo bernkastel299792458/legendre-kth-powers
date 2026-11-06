@@ -1,0 +1,290 @@
+\section{零点密度网格与完整高度余项}\label{sec:density}
+
+本节从 QRH$(7/8)$、CS v2 和 Rosser 零点计数输入推出
+第 \ref{sec:trapezoid} 节所需的统一零点预算。
+核心是两次正权离散化：先沿零点实部方向使用密度计数，
+再沿高度方向使用递减核。每一次离散化的误差方向都是向上；
+高度网格之外的贡献由一个明确的几何级数估计，不能省略。
+
+\subsection{重数约定与 CS v2 的精确使用方式}
+
+只对非平凡零点 $\rho=\beta+\ii\gamma$ 计数，并始终乘重数
+$m_\rho$。令
+\[
+ N(T)=\sum_{0<\gamma\leq T}m_\rho,\qquad
+ N(\sigma,T)=\sum_{\substack{0<\gamma\leq T\\\beta\geq\sigma}}m_\rho,
+ \qquad H=3\cdot10^{12}.
+\]
+这里 $N(T)$ 与前文的 $N_+(T)$ 是同一计数的简写，
+不是包含正、负高度的总和；$N$ 的第一参数省略时表示全部正高度零点。
+闭条件 $\gamma\leq T$ 与 $\beta\geq\sigma$ 均与当前 Lean 输入一致。
+若文献采用一个更大的零点集合，限制到本文集合只会减小计数。
+共轭对称和重数保持允许把正、负高度的范数和合并为正高度的两倍。
+非平凡实零点不存在，故没有 $\gamma=0$ 的剩余项。
+
+对 $r=0,\ldots,11$，CS v2 输入 \cite{CSv2} 在
+\[
+ \frac{16+r}{32}\leq\sigma\leq\frac{17+r}{32},\qquad T\geq H
+\]
+上给出
+\begin{equation}\label{dens:CS}
+ N(\sigma,T)\leq
+ B_{1,r}T^{p(\sigma)}(\log T)^{p(\sigma)+2}
+ +B_{2,r}(\log T)^2+B_{3,r}\log T,
+ \qquad p(\sigma)=\frac{3(1-\sigma)}{2-\sigma}.
+\end{equation}
+表 \ref{dens:constants} 的有限小数都按所写的精确有理数使用，
+不是再次拟合所得的浮点常数。本文承认此条预印本输入；
+本节不证明它的上游推导。
+
+\begin{table}[htbp]
+\centering
+\caption{当前证明实际使用的 CS v2 前十二行常数。}\label{dens:constants}
+\begin{tabular}{c|rrr@{\qquad}c|rrr}
+$r$&$B_{1,r}$&$B_{2,r}$&$B_{3,r}$
+ &$r$&$B_{1,r}$&$B_{2,r}$&$B_{3,r}$\\ \hline
+0&5.069&9.461&167.8&6&12.11&7.704&136.7\\
+1&6.046&9.168&162.6&7&13.66&7.411&131.5\\
+2&7.077&8.875&157.4&8&15.35&7.118&126.3\\
+3&8.185&8.582&152.2&9&17.21&6.826&121.1\\
+4&9.387&8.290&147.0&10&19.31&6.533&115.9\\
+5&10.70&7.997&141.9&11&21.77&6.240&110.7
+\end{tabular}
+\end{table}
+
+式 \eqref{dens:CS} 中对数的指数是 $p(\sigma)+2$，
+其恒等式形式为 $(7-5\sigma)/(2-\sigma)$。
+在有限网格证书里不能把它任意换成旧版本的指数；
+后文若使用 $\log^3T$，只能作为由
+$p(\sigma)+2\leq3$ 和 $\log T\geq1$ 推出的较粗上界。
+精确输入和这个代数等式分别见
+\leanref{DensityInput}{CSv2} 和
+\leanref{DensityInput}{cs_log_exponent_eq}。
+
+Rosser 输入在本文所用高度上蕴含简便估计
+\begin{equation}\label{dens:rosser-simple}
+ N(\e^u)\leq\e^u u\qquad(\e^u\geq H,\ u\geq1).
+\end{equation}
+具体地，记源文闭矩形计数为 $N_R(T)$，则 $N(T)\leq N_R(T)$。
+由 Rosser 上界、$\log T\geq1$、$\log\log T\leq\log T$ 和
+$\pi\geq1$，丢弃负项后有
+\[
+ N(T)\leq\frac T2\log T+0.580\log T+2.463
+       \leq\left(\frac T2+4\right)\log T
+       \leq T\log T.
+\]
+最后一步只需 $T\geq8$，在本文高度域内自动满足。
+这里未把 $N(T)\leq T\log T$ 作为第八个外部输入；
+对应 \leanref{LiteratureInputs}{totalZeroCount_le_mul_log}。
+原始零点计数来源为 \cite{Rosser1941,Dusart2016}。
+
+\subsection{实部网格：从单个指数到密度计数}
+
+设
+\[
+ \frac12=\sigma_0\leq\sigma_1\leq\cdots\leq\sigma_J=\frac78
+\]
+是有限网格。每个左端点 $\sigma_j$ 指定一个适用的 CS 行
+$r(j)$，即 $\sigma_j$ 属于该行的闭区间。
+对 $A\geq0$ 定义
+\begin{equation}\label{dens:weights}
+ W_j(A)=\e^{(\sigma_{j+1}-1)A}
+             -\e^{(\sigma_j-1)A}\geq0.
+\end{equation}
+
+\begin{lemma}[向上的阶梯界]\label{dens:staircase}
+若 $\beta\leq7/8$，则
+\begin{equation}\label{dens:staircase-eq}
+ \e^{(\beta-1)A}\leq
+ \e^{-A/2}+
+ \sum_{j=0}^{J-1}\mathbf{1}_{\{\sigma_j\leq\beta\}}W_j(A).
+\end{equation}
+\end{lemma}
+\begin{proof}
+若 $\beta<\sigma_0$，右边至少为 $\e^{-A/2}$，结论由单调性得到。
+否则，取最后一个满足 $\sigma_j\leq\beta$ 的网格位置。
+右边的增量和望远镜相消，等于一个不小于
+$\e^{(\beta-1)A}$ 的右端点值。若 $\beta=\sigma_J$，
+所有增量都被计入，右边恰等于 $\e^{(\sigma_J-1)A}$。
+在内部网格端点使用闭条件可能多计一个增量，但仍为上界。
+\end{proof}
+
+定义正高度的带权累积计数
+\[
+ F_A(T)=\sum_{0<\gamma\leq T}m_\rho\e^{(\beta-1)A}.
+\]
+QRH$(7/8)$ 使引理 \ref{dens:staircase} 可用于每一个零点。
+将其乘以重数并求和，得到
+\begin{equation}\label{dens:weighted-count}
+ F_A(T)\leq\e^{-A/2}N(T)+
+              \sum_{j=0}^{J-1}W_j(A)N(\sigma_j,T).
+\end{equation}
+这里无需零点恰好落在某个半开网格单元内；
+使用累积计数已处理所有边界重合。
+
+把 $T=\e^u$ 代入，记 $p_j=p(\sigma_j)$，并定义
+\begin{align}
+ C_j(u)&=
+ B_{1,r(j)}\e^{p_ju}u^{p_j+2}
+       +B_{2,r(j)}u^2+B_{3,r(j)}u,\label{dens:C}\\
+ \Phi_A(u)&=\e^{-A/2+u}u+
+                     \sum_{j=0}^{J-1}W_j(A)C_j(u).
+                                                   \label{dens:Phi}
+\end{align}
+当 $\e^u\geq H$、$u\geq1$ 时，
+\begin{equation}\label{dens:F-Phi}
+ F_A(\e^u)\leq\Phi_A(u).
+\end{equation}
+至此，所有零点位置都已被一个显式的、有限项的实函数替换。
+对应 \leanref{FiniteDensityGrid}{exp_le_grid_staircase}、
+\leanref{FiniteDensityGrid}{positiveZeroWeight_le_density_grid}
+和 \leanref{FiniteDensityGrid}{positiveZeroWeight_le_gridPhi}。
+
+\subsection{密度上界沿高度方向的增长率}
+
+为了控制无限余项，先证明一个不依赖任何数值采样的增长界。
+\begin{lemma}\label{dens:growth}
+若 $U\geq6$、$v\geq0$，则
+\begin{equation}\label{dens:growth-eq}
+ \Phi_A(U+v)\leq\e^{3v/2}\Phi_A(U).
+\end{equation}
+\end{lemma}
+\begin{proof}
+对 $u>0$、$v\geq0$、$r\geq0$，由
+$\log(1+v/u)\leq v/u$ 得
+\[
+ \e^{p(u+v)}(u+v)^r
+ \leq \e^{(p+r/u)v}\e^{pu}u^r.
+\]
+在 $1/2\leq\sigma_j\leq7/8$ 上，$0\leq p_j\leq1$，
+且 $2\leq p_j+2\leq3$。
+因此 $p_j+(p_j+2)/U\leq1+3/6=3/2$。
+同样的估计也适用于 $u^2$、$u$ 和基线 $\e^u u$：
+相应的 $(p,r)$ 分别为 $(0,2)$、$(0,1)$、$(1,1)$。
+式 \eqref{dens:Phi} 中的系数均非负，逐项相加即得结论。
+\end{proof}
+特别地，将高度乘以 $4$ 时，对数高度增加 $\log4$，
+从而 $\Phi_A(U+\log4)\leq8\Phi_A(U)$。
+该界对应 \leanref{DensityGridGrowth}{densityGridPhi_shift_le}。
+
+\subsection{高度网格及其不能遗漏的剩余权}
+
+选择单调对数高度网格
+$u_0\leq u_1\leq\cdots\leq u_M=U$，并要求
+\begin{equation}\label{dens:height-conditions}
+ \e^{u_0}\geq H,\qquad u_0\geq1,\qquad U\geq6,\qquad
+ g_q(\e^{u_0})=1.
+\end{equation}
+记 $t_i=\e^{u_i}$、$R=\e^U$，并定义非负质量
+\begin{equation}\label{dens:mu}
+ \mu_i=g_q(t_i)-g_q(t_{i+1})\geq0,\qquad 0\leq i<M.
+\end{equation}
+对于任意 $t>0$，有
+\begin{equation}\label{dens:height-staircase}
+ g_q(t)\leq
+ \sum_{i=0}^{M-1}\mu_i\mathbf{1}_{\{t\leq t_{i+1}\}}
+        +g_q(\max\{t,R\}).
+\end{equation}
+若 $t\leq t_0$，右边望远镜相消为 $1$；
+若 $t_i<t\leq t_{i+1}$，右边不小于 $g_q(t_i)$；
+若 $t>R$，右边等于 $g_q(t)$。
+这证明了 \eqref{dens:height-staircase}，并说明余项具有明确的含义：
+\emph{即使一个零点位于 $R$ 以下，它在有限高度和之外仍留下
+$g_q(R)$ 这一份权。}
+因此，仅估计 $\gamma>R$ 的零点尾和不足以完成本证明。
+
+对任意有限截断 $T$，将 \eqref{dens:height-staircase}
+乘以 $m_\rho\e^{(\beta-1)A}$ 并对正高度零点求和，
+有限网格部分不超过
+\[
+ \sum_{i=0}^{M-1}\mu_i F_A(t_{i+1})
+ \leq\sum_{i=0}^{M-1}\mu_i\Phi_A(u_{i+1}).
+\]
+剩余部分使用
+\begin{equation}\label{dens:quadratic-residual}
+ g_q(\max\{t,R\})\leq
+             \frac{c_2q^2}{\max\{t,R\}^2}.
+\end{equation}
+
+\begin{lemma}[完整二次余项]\label{dens:residual}
+在 \eqref{dens:height-conditions} 的条件下，对每个 $T$，
+\begin{equation}\label{dens:residual-eq}
+ \sum_{0<\gamma\leq T}
+ \frac{m_\rho\e^{(\beta-1)A}c_2q^2}{\max\{\gamma,R\}^2}
+ \leq16c_2q^2\e^{-2U}\Phi_A(U).
+\end{equation}
+\end{lemma}
+\begin{proof}
+若截断集合为空，结论显然。否则选取整数 $N\geq0$，
+使集合内所有高度均不超过 $R4^{N+1}$。
+对于这些高度，逐项有
+\[
+ \frac{c_2q^2}{\max\{t,R\}^2}
+ \leq\frac{c_2q^2}{R^2}
+       \sum_{k=0}^N16^{-k}\mathbf{1}_{\{t\leq R4^{k+1}\}}.
+\]
+若 $t\leq R$，右边的 $k=0$ 项已足够；
+若 $R4^k<t\leq R4^{k+1}$，右边第 $k$ 项已足够。
+对零点求和，并用 \eqref{dens:F-Phi} 与引理
+\ref{dens:growth}，得到
+\begin{align*}
+ \text{左边}
+ &\leq \frac{c_2q^2}{R^2}
+   \sum_{k=0}^N16^{-k}\Phi_A(U+(k+1)\log4)\\
+ &\leq \frac{c_2q^2}{R^2}\Phi_A(U)
+   \sum_{k=0}^N16^{-k}8^{k+1}\\
+ &\leq \frac{c_2q^2}{R^2}\Phi_A(U)\,
+          8\sum_{k=0}^{\infty}2^{-k}
+   =16c_2q^2\e^{-2U}\Phi_A(U).
+\end{align*}
+得到的常数与 $T$、$N$ 均无关。
+\end{proof}
+这给出常数 $16$ 的完整来源。它已经包含高度 $R$ 以下的剩余权，
+以及 $R$ 以上全部高度；后续不会再另留一个未定义的尾项。
+对应 \leanref{GeometricHeightTail}{finite_quadratic_residual_bound}
+和 \leanref{TrapezoidHeightBound}{positive_zero_quadratic_residual_le}。
+
+\subsection{从密度预算回到梯形零点和}
+
+定义可供数值认证的完整正高度预算
+\begin{equation}\label{dens:B}
+ \mathcal B(A,q;\boldsymbol u)=
+ \sum_{i=0}^{M-1}
+   \bigl[g_q(\e^{u_i})-g_q(\e^{u_{i+1}})\bigr]\Phi_A(u_{i+1})
+       +16c_2q^2\e^{-2U}\Phi_A(U).
+\end{equation}
+前面的论证表明，对任意 $T$，
+\begin{equation}\label{dens:positive-final}
+ \sum_{0<\gamma\leq T}m_\rho\e^{(\beta-1)A}g_q(\gamma)
+ \leq\mathcal B(A,q;\boldsymbol u).
+\end{equation}
+
+\begin{proposition}[完整零点预算]\label{dens:zero-budget}
+设 QRH$(7/8)$、CS v2 和 Rosser 输入成立。
+若 $x=\e^L$、$0\leq A\leq L$、$h>0$、
+$q\geq(x+h)/h$，网格满足以上条件，则对任意 $T$，
+\begin{equation}\label{dens:zero-budget-eq}
+ |Z_T(x,h)|\leq2h\,\mathcal B(A,q;\boldsymbol u).
+\end{equation}
+所以第 \ref{sec:trapezoid} 节的判据可取
+$Z=2\mathcal B(A,q;\boldsymbol u)$。
+\end{proposition}
+\begin{proof}
+由 QRH，$\beta\leq7/8<1$，故 $L\geq A$ 蕴含
+$\e^{(\beta-1)L}\leq\e^{(\beta-1)A}$。
+用引理 \ref{tr:three-kernels} 的合并界、三角不等式和共轭配对，
+\[
+ |Z_T(x,h)|
+ \leq2h\sum_{0<\gamma\leq T}
+                  m_\rho\e^{(\beta-1)A}g_q(\gamma).
+\]
+再用 \eqref{dens:positive-final} 即可。
+\end{proof}
+对应 \leanref{TrapezoidHeightBound}{positive_zero_envelope_le_heightBudget}
+和
+\leanref{TrapezoidHeightBound}{norm_truncatedTrapezoidZeroSum_le_heightBudget}。
+结合命题 \ref{tr:prime-criterion}，每个待认证单元的充分条件现为
+\[
+ 2\mathcal B(A,q;\boldsymbol u)+P_k(A,C)+V_A<1.
+\]
+下一节把这里的有限实数表达式转为可审阅、可逐项重放的有理证书。

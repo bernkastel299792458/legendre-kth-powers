@@ -1,5 +1,12 @@
 # Formalization status
 
+The current complete exposition is the [twelve-chapter paper](paper/current/main.pdf),
+with a [seven-input register](documentation/inputs.md) and a
+[paper-to-Lean guide](documentation/blueprint/README.md). The additional
+archival replay is recorded separately in
+[audit/archive_review_2026-11-06.json](audit/archive_review_2026-11-06.json).
+
+
 **Complete and accepted: the downstream k=6 Lean proof from seven individually
 named external inputs. All 241 modules passed an isolated whole-tree rebuild
 and its matching exact-input dependency audit.** All local analytic-segment

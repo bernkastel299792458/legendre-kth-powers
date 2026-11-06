@@ -1,0 +1,750 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-06",
+  "review_state": "local draft pending owner review; no push authorized",
+  "title": "Exact external inputs for the QRH-route sixth-power theorem",
+  "trust_labels_are_probabilities": false,
+  "formalization_scope": "Complete downstream derivation from seven explicit mathematical premises; none of the seven premises is reproved in this repository.",
+  "main_theorem": {
+    "file": "lean/LegendreK6/FinalResult.lean",
+    "declaration": "LegendreK6.sixth_powers_from_named_inputs",
+    "premise_order": [
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "H5",
+      "H6",
+      "H7"
+    ],
+    "conclusion": "For every n in Nat with n>=1, there exists a prime p with n^6<p<(n+1)^6.",
+    "source_sha256": "57b9148fbdd078083abf425c2d7fc552bff551a83c97ef79a539c63147a0ea24"
+  },
+  "notation": {
+    "zeta": "Mathlib riemannZeta",
+    "multiplicity": "analyticOrderNatAt riemannZeta rho",
+    "nontrivial_zeros": "zeta(rho)=0 and 0<Re(rho)<1; no height restriction",
+    "Z(T)": "Nontrivial zeros with abs(Im(rho))<=T",
+    "N_plus(T)": "Sum of analytic multiplicities over 0<Im(rho)<=T in the open strip",
+    "N(sigma,T)": "Sum of analytic multiplicities over sigma<=Re(rho), 0<Im(rho)<=T in the open strip",
+    "N_R(T)": "Sum of analytic multiplicities over the closed rectangle 0<=Re(rho)<=1, 0<=Im(rho)<=T",
+    "psi(x)": "Sum of von Mangoldt(n) over natural integers 1<=n<=floor(x), with full endpoint weight",
+    "positive_real_complex_power": "x^s=exp(s*log(x)) for x>0",
+    "logarithm": "natural",
+    "finite_decimal_semantics": "exact rational numbers"
+  },
+  "sources": {
+    "OpenAIQRH": {
+      "authors": [
+        "OpenAI"
+      ],
+      "title": "The Quasi-Riemann Hypothesis: A Zero-Free Half-Plane Re(s)>7/8",
+      "year": 2026,
+      "release_date": "2026-09-30",
+      "repository_commit": "4eaee87548250b2682affda7d05d947c05554bae",
+      "url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/README.md",
+      "formalization_scope_url": "https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/003.md",
+      "publication_kind": "official research release; no peer-review claim made here"
+    },
+    "CSv2": {
+      "authors": [
+        "Shashi Chourasiya",
+        "Aleksander Simonič"
+      ],
+      "title": "An explicit form of Ingham's zero density estimate",
+      "year": 2025,
+      "arxiv_version": "2507.15184v2",
+      "version_date": "2025-09-30",
+      "locator": "Corollary 1 and Table 1, source rows 16 through 27",
+      "url": "https://arxiv.org/abs/2507.15184v2",
+      "publication_kind": "preprint; peer-reviewed publication or acceptance not confirmed"
+    },
+    "Rosser1941": {
+      "authors": [
+        "Barkley Rosser"
+      ],
+      "title": "Explicit Bounds for Some Functions of Prime Numbers",
+      "journal": "American Journal of Mathematics",
+      "year": 1941,
+      "volume": "63",
+      "issue": "1",
+      "pages": "211-232",
+      "doi": "10.2307/2371291",
+      "locator": "Theorem 19, p.223; statement checked through Dusart restatements",
+      "url": "https://www.jstor.org/stable/2371291",
+      "metadata_evidence": [
+        "https://api.crossref.org/works/10.2307/2371291",
+        "https://www.jstor.org/stable/i340750"
+      ]
+    },
+    "Dusart2016": {
+      "authors": [
+        "Pierre Dusart"
+      ],
+      "title": "Estimates of psi, theta for large values of x without the Riemann hypothesis",
+      "journal": "Mathematics of Computation",
+      "year": 2016,
+      "volume": "85",
+      "issue": "298",
+      "pages": "875-888",
+      "doi": "10.1090/mcom/3005",
+      "online_date": "2015-07-20",
+      "locator": "p.877, equations (10)-(11)",
+      "url": "https://doi.org/10.1090/mcom/3005",
+      "metadata_evidence": [
+        "https://api.crossref.org/works/10.1090/mcom/3005"
+      ],
+      "counting_convention_auxiliary_source": {
+        "url": "https://www.unilim.fr/pages_perso/pierre.dusart/Documents/HDR_Dusart.pdf",
+        "locator": "printed p.34 equations (2.2)-(2.3), p.82 Theorem 86"
+      }
+    },
+    "GM2016": {
+      "authors": [
+        "Loïc Grenié",
+        "Giuseppe Molteni"
+      ],
+      "title": "Explicit smoothed prime ideals theorems under GRH",
+      "journal": "Mathematics of Computation",
+      "year": 2016,
+      "volume": "85",
+      "issue": "300",
+      "pages": "1875-1899",
+      "doi": "10.1090/mcom3039",
+      "arxiv_version": "1312.4465v5",
+      "url": "https://air.unimi.it/handle/2434/448119",
+      "locator": "Equation (1.3a), constants (3.8), Lemma 3.3; K=Q",
+      "inspected_version": "institutionally identified accepted manuscript and fixed arXiv v5",
+      "identity_requires_GRH": false
+    },
+    "PlattTrudgian": {
+      "authors": [
+        "Dave Platt",
+        "Tim Trudgian"
+      ],
+      "title": "The Riemann hypothesis is true up to 3*10^12",
+      "journal": "Bulletin of the London Mathematical Society",
+      "year": 2021,
+      "volume": "53",
+      "issue": "3",
+      "pages": "792-797",
+      "doi": "10.1112/blms.12460",
+      "online_date": "2021-01-22",
+      "print_date": "2021-06",
+      "arxiv_version": "2004.09765v1",
+      "url": "https://doi.org/10.1112/blms.12460",
+      "metadata_evidence": [
+        "https://api.crossref.org/works/10.1112/blms.12460"
+      ],
+      "source_theorem_height": 3000175332800,
+      "used_height": 3000000000000
+    },
+    "CHJII": {
+      "authors": [
+        "Michaela Cully-Hugill",
+        "Daniel R. Johnston"
+      ],
+      "title": "On the error term in the explicit formula of Riemann-von Mangoldt II",
+      "journal": "Functiones et Approximatio Commentarii Mathematici",
+      "year": 2025,
+      "volume": "73",
+      "issue": "2",
+      "pages": "223-242",
+      "doi": "10.7169/facm/241110-18-11",
+      "arxiv_version": "2402.04272v3",
+      "version_date": "2026-02-23",
+      "url": "https://arxiv.org/abs/2402.04272v3",
+      "locator": "Theorem 1.3 and Table 1, first row",
+      "journal_text_directly_compared": false
+    },
+    "CHL": {
+      "authors": [
+        "Michaela Cully-Hugill",
+        "Ethan S. Lee"
+      ],
+      "title": "Explicit interval estimates for prime numbers",
+      "journal": "Mathematics of Computation",
+      "year": 2022,
+      "volume": "91",
+      "issue": "336",
+      "pages": "1955-1970",
+      "doi": "10.1090/mcom/3719",
+      "arxiv_version": "2103.05986v3",
+      "version_date": "2022-09-14",
+      "url": "https://arxiv.org/abs/2103.05986v3",
+      "locator": "Theorem 1, printed p.2; corrected Table 2, printed p.12"
+    },
+    "CHLcorr": {
+      "authors": [
+        "Michaela Cully-Hugill",
+        "Ethan S. Lee"
+      ],
+      "title": "Corrigendum to 'Explicit interval estimates for prime numbers'",
+      "journal": "Mathematics of Computation",
+      "year": 2024,
+      "volume": "93",
+      "issue": "346",
+      "pages": "1019-1025",
+      "doi": "10.1090/mcom/3884",
+      "online_date": "2023-07-19",
+      "url": "https://doi.org/10.1090/mcom/3884",
+      "journal_table_directly_compared": false
+    },
+    "MontgomeryVaughan": {
+      "authors": [
+        "Hugh L. Montgomery",
+        "Robert C. Vaughan"
+      ],
+      "title": "Multiplicative Number Theory I: Classical Theory",
+      "publisher": "Cambridge University Press",
+      "year": 2006,
+      "series": "Cambridge Studies in Advanced Mathematics",
+      "volume": "97",
+      "doi": "10.1017/CBO9780511618314",
+      "url": "https://doi.org/10.1017/CBO9780511618314",
+      "locator": "Chapter 13, p.420, equations (13.6)-(13.7)",
+      "use": "Cross-check affine constants only; not a substitute for the exact trivial-zero series"
+    },
+    "Hildebrand": {
+      "authors": [
+        "A. J. Hildebrand"
+      ],
+      "title": "Introduction to Analytic Number Theory",
+      "year": 2013,
+      "publication_kind": "Math 531 lecture notes",
+      "version": "2013.01.07",
+      "locator": "Theorem 5.18, equation (5.32), p.166; (5.34), p.167",
+      "url": "https://eclass-b.uoa.gr/modules/document/file.php/MATH717/04.%20%CE%92%CE%BF%CE%B7%CE%B8%CE%AE%CE%BC%CE%B1%CF%84%CE%B1/Analytic-number-theory-Hildebrand.pdf",
+      "use": "Historical source in Lean comments; supplemented by published GM2016"
+    }
+  },
+  "inputs": [
+    {
+      "id": "H1",
+      "name": "QRH(7/8)",
+      "lean": {
+        "file": "lean/LegendreK6/DensityInput.lean",
+        "declaration": "LegendreK6.QRHSevenEighths",
+        "source_sha256": "990d6e27408ddfd9e69db0fad1c0c6580460d96c15f99a44cceb8a6b581146a9",
+        "exact_source_statement": "def QRHSevenEighths : Prop :=\n  ∀ ρ : NontrivialZero, ρ.val.re ≤ (7 / 8 : ℝ)\n",
+        "external_parameter": true,
+        "proved_in_this_repository": false
+      },
+      "mathematical_statement": "For every rho with zeta(rho)=0 and 0<Re(rho)<1, Re(rho)<=7/8.",
+      "sources": [
+        "OpenAIQRH"
+      ],
+      "evidence": {
+        "publication_status": "Official OpenAI preprint/proof release; peer review is not asserted.",
+        "exact_version_mapping": "Official fixed-commit scope states the zeta 7/8 zero-free half-plane; used as a named premise.",
+        "numerical_reproduction": "No finite numerical scan is substituted for this infinite-domain input.",
+        "repository_lean_reproof": "Not reproved or imported from the upstream project.",
+        "trust_basis": "Accepted under the project owner rule for the OpenAI proof release.",
+        "outstanding": [
+          "Independently rebuild upstream formalization.",
+          "Formally connect the upstream theorem and this repository interface."
+        ]
+      },
+      "local_downstream": [
+        "QRH support restriction and all later zero-sum uses"
+      ]
+    },
+    {
+      "id": "H2",
+      "name": "CS v2 zero density",
+      "lean": {
+        "file": "lean/LegendreK6/DensityInput.lean",
+        "declaration": "LegendreK6.CSv2",
+        "source_sha256": "990d6e27408ddfd9e69db0fad1c0c6580460d96c15f99a44cceb8a6b581146a9",
+        "exact_source_statement": "def CSv2 : Prop :=\n  ∀ (i : Fin 12) (σ T : ℝ),\n    (16 + (i.val : ℝ)) / 32 ≤ σ → σ ≤ (17 + (i.val : ℝ)) / 32 →\n    3000000000000 ≤ T →\n    (densityZeroCount σ T : ℝ) ≤\n      csB1 i * T ^ csExponent σ * (Real.log T) ^ csLogExponent σ +\n      csB2 i * (Real.log T) ^ 2 + csB3 i * Real.log T\n",
+        "external_parameter": true,
+        "proved_in_this_repository": false
+      },
+      "mathematical_statement": "For each row j=16,...,27, all real sigma in [j/32,(j+1)/32], and all real T>=3000000000000: N(sigma,T)<=B1*T^(3*(1-sigma)/(2-sigma))*log(T)^((7-5*sigma)/(2-sigma))+B2*log(T)^2+B3*log(T).",
+      "minimum_height": 3000000000000,
+      "decimal_coefficients_are_exact_rationals": true,
+      "rows": [
+        {
+          "lean_index": 0,
+          "source_row": 16,
+          "sigma_lower_rational": "16/32",
+          "sigma_upper_rational": "17/32",
+          "both_sigma_endpoints_included": true,
+          "B1_exact_decimal": "5.069",
+          "B2_exact_decimal": "9.461",
+          "B3_exact_decimal": "167.8"
+        },
+        {
+          "lean_index": 1,
+          "source_row": 17,
+          "sigma_lower_rational": "17/32",
+          "sigma_upper_rational": "18/32",
+          "both_sigma_endpoints_included": true,
+          "B1_exact_decimal": "6.046",
+          "B2_exact_decimal": "9.168",
+          "B3_exact_decimal": "162.6"
+        },
+        {
+          "lean_index": 2,
+          "source_row": 18,
+          "sigma_lower_rational": "18/32",
+          "sigma_upper_rational": "19/32",
+          "both_sigma_endpoints_included": true,
+          "B1_exact_decimal": "7.077",
+          "B2_exact_decimal": "8.875",
+          "B3_exact_decimal": "157.4"
+        },
+        {
+          "lean_index": 3,
+          "source_row": 19,
+          "sigma_lower_rational": "19/32",
+          "sigma_upper_rational": "20/32",
+          "both_sigma_endpoints_included": true,
+          "B1_exact_decimal": "8.185",
+          "B2_exact_decimal": "8.582",
+          "B3_exact_decimal": "152.2"
+        },
+        {
+          "lean_index": 4,
+          "source_row": 20,
+          "sigma_lower_rational": "20/32",
+          "sigma_upper_rational": "21/32",
+          "both_sigma_endpoints_included": true,
+          "B1_exact_decimal": "9.387",
+          "B2_exact_decimal": "8.290",
+          "B3_exact_decimal": "147.0"
+        },
+        {
+          "lean_index": 5,
+          "source_row": 21,
+          "sigma_lower_rational": "21/32",
+          "sigma_upper_rational": "22/32",
+          "both_sigma_endpoints_included": true,
+          "B1_exact_decimal": "10.70",
+          "B2_exact_decimal": "7.997",
+          "B3_exact_decimal": "141.9"
+        },
+        {
+          "lean_index": 6,
+          "source_row": 22,
+          "sigma_lower_rational": "22/32",
+          "sigma_upper_rational": "23/32",
+          "both_sigma_endpoints_included": true,
+          "B1_exact_decimal": "12.11",
+          "B2_exact_decimal": "7.704",
+          "B3_exact_decimal": "136.7"
+        },
+        {
+          "lean_index": 7,
+          "source_row": 23,
+          "sigma_lower_rational": "23/32",
+          "sigma_upper_rational": "24/32",
+          "both_sigma_endpoints_included": true,
+          "B1_exact_decimal": "13.66",
+          "B2_exact_decimal": "7.411",
+          "B3_exact_decimal": "131.5"
+        },
+        {
+          "lean_index": 8,
+          "source_row": 24,
+          "sigma_lower_rational": "24/32",
+          "sigma_upper_rational": "25/32",
+          "both_sigma_endpoints_included": true,
+          "B1_exact_decimal": "15.35",
+          "B2_exact_decimal": "7.118",
+          "B3_exact_decimal": "126.3"
+        },
+        {
+          "lean_index": 9,
+          "source_row": 25,
+          "sigma_lower_rational": "25/32",
+          "sigma_upper_rational": "26/32",
+          "both_sigma_endpoints_included": true,
+          "B1_exact_decimal": "17.21",
+          "B2_exact_decimal": "6.826",
+          "B3_exact_decimal": "121.1"
+        },
+        {
+          "lean_index": 10,
+          "source_row": 26,
+          "sigma_lower_rational": "26/32",
+          "sigma_upper_rational": "27/32",
+          "both_sigma_endpoints_included": true,
+          "B1_exact_decimal": "19.31",
+          "B2_exact_decimal": "6.533",
+          "B3_exact_decimal": "115.9"
+        },
+        {
+          "lean_index": 11,
+          "source_row": 27,
+          "sigma_lower_rational": "27/32",
+          "sigma_upper_rational": "28/32",
+          "both_sigma_endpoints_included": true,
+          "B1_exact_decimal": "21.77",
+          "B2_exact_decimal": "6.240",
+          "B3_exact_decimal": "110.7"
+        }
+      ],
+      "supporting_lean_definitions": {
+        "csB1": "def csB1 (i : Fin 12) : ℝ :=\n  ![5.069, 6.046, 7.077, 8.185, 9.387, 10.70,\n    12.11, 13.66, 15.35, 17.21, 19.31, 21.77] i\n",
+        "csB2": "def csB2 (i : Fin 12) : ℝ :=\n  ![9.461, 9.168, 8.875, 8.582, 8.290, 7.997,\n    7.704, 7.411, 7.118, 6.826, 6.533, 6.240] i\n",
+        "csB3": "def csB3 (i : Fin 12) : ℝ :=\n  ![167.8, 162.6, 157.4, 152.2, 147.0, 141.9,\n    136.7, 131.5, 126.3, 121.1, 115.9, 110.7] i\n",
+        "csExponent": "noncomputable def csExponent (σ : ℝ) : ℝ := 3 * (1 - σ) / (2 - σ)\nnoncomputable def csLogExponent (σ : ℝ) : ℝ := (7 - 5 * σ) / (2 - σ)\n",
+        "csLogExponent": "noncomputable def csLogExponent (σ : ℝ) : ℝ := (7 - 5 * σ) / (2 - σ)\n"
+      },
+      "sources": [
+        "CSv2"
+      ],
+      "evidence": {
+        "publication_status": "Fixed preprint; peer-reviewed publication or acceptance has not been confirmed.",
+        "exact_version_mapping": "Fixed v2 Corollary 1 and Table 1; open-strip nonnegative count restricts the source count.",
+        "numerical_reproduction": "Downstream certificates use the specified constants; their provenance is not independently proved by those certificates.",
+        "repository_lean_reproof": "CSv2 remains a parameter; row selection and the weaker tail bound are proved.",
+        "trust_basis": "Additional explicitly accepted research premise; no claim that the project owner peer-review or local-reproof criterion has been met.",
+        "outstanding": [
+          "Independent review of the v2 derivation and constants is assigned to separate work.",
+          "Do not replace b(sigma) by the v1 uniform log-cubed exponent."
+        ]
+      },
+      "audit_records": [
+        "audit/source_reviews/Response_to_Claude_K6_2026-11-06.md"
+      ],
+      "local_downstream": [
+        "LegendreK6.cs_tail_row_exists",
+        "LegendreK6.cs_tail_constants",
+        "LegendreK6.cs_tail_density"
+      ]
+    },
+    {
+      "id": "H3",
+      "name": "Rosser full zero count",
+      "lean": {
+        "file": "lean/LegendreK6/LiteratureInputs.lean",
+        "declaration": "LegendreK6.RosserZeroCount",
+        "source_sha256": "feb8446dcfb232adedec2937a271ed010e35f8addeec240a60f75c2c74c8df78",
+        "exact_source_statement": "def RosserZeroCount : Prop :=\n  ∀ T : ℝ, 2 ≤ T →\n    |(rosserCount T : ℝ) -\n      (T / (2 * Real.pi) * Real.log (T / (2 * Real.pi)) -\n        T / (2 * Real.pi) + 7 / 8)| ≤\n      (137 / 1000 : ℝ) * Real.log T +\n      (443 / 1000 : ℝ) * Real.log (Real.log T) + 397 / 250\n",
+        "external_parameter": true,
+        "proved_in_this_repository": false
+      },
+      "mathematical_statement": "For every real T>=2, abs(N_R(T)-(T/(2*pi)*log(T/(2*pi))-T/(2*pi)+7/8)) <= (137/1000)*log(T)+(443/1000)*log(log(T))+397/250.",
+      "count": "N_R(T) counts zeta zeros with 0<=Re(rho)<=1 and 0<=Im(rho)<=T, with analytic multiplicity.",
+      "domain": {
+        "T_minimum": "2",
+        "minimum_included": true
+      },
+      "error_coefficients_rational": [
+        "137/1000",
+        "443/1000",
+        "397/250"
+      ],
+      "supporting_lean_definitions": {
+        "rosserZeroSet": "def rosserZeroSet (T : ℝ) : Set ℂ :=\n  {ρ | riemannZeta ρ = 0 ∧ 0 ≤ ρ.re ∧ ρ.re ≤ 1 ∧ 0 ≤ ρ.im ∧ ρ.im ≤ T}\n",
+        "rosserCount": "noncomputable def rosserCount (T : ℝ) : ℕ :=\n  ∑ ρ ∈ rosserZeros T, zetaMultiplicity ρ\n"
+      },
+      "sources": [
+        "Rosser1941",
+        "Dusart2016"
+      ],
+      "evidence": {
+        "publication_status": "Published classical theorem, with published restatement.",
+        "exact_version_mapping": "Coefficients checked through Dusart2016 p.877; closed-rectangle convention retained from author HDR pp.34,82. Original Rosser proof not independently rechecked line by line.",
+        "numerical_reproduction": "No sampled-height computation is used to assert the full domain.",
+        "repository_lean_reproof": "Original count bound is a parameter; restriction to N_+ and coarse T log T bound are proved.",
+        "trust_basis": "Published literature under the project owner rule.",
+        "outstanding": [
+          "Formalize the upstream count theorem in this repository."
+        ]
+      },
+      "local_downstream": [
+        "LegendreK6.totalZeroCount_le_rosserCount",
+        "LegendreK6.totalZeroCount_le_mul_log"
+      ]
+    },
+    {
+      "id": "H4",
+      "name": "Integrated explicit formula",
+      "lean": {
+        "file": "lean/LegendreK6/IntegratedExplicitFormula.lean",
+        "declaration": "LegendreK6.IntegratedExplicitFormula",
+        "source_sha256": "9dfad65f0a4a3849e4f89f6aca7b0f25511a2958466e1bd2712845d8e368aced",
+        "exact_source_statement": "def IntegratedExplicitFormula : Prop :=\n  ∀ t : ℝ, 1 < t → Tendsto (integratedZeroSum t) atTop (𝓝 (integratedFormulaValue t))\n",
+        "external_parameter": true,
+        "proved_in_this_repository": false
+      },
+      "mathematical_statement": "For each real x>1, lim_{T->+infinity} sum_{rho in Z(T)} m(rho)*x^(rho+1)/(rho*(rho+1)) = x^2/2-(zeta_prime(0)/zeta(0))*x+zeta_prime(-1)/zeta(-1)-V(x)-Psi1(x), as a complex limit.",
+      "definitions": {
+        "Psi1(x)": "sum_{1<=n<=floor(x)} Lambda(n)*(x-n)",
+        "V(x)": "sum_{j=1}^infinity x^(1-2*j)/(2*j*(2*j-1))",
+        "Z(T)": "All nontrivial open-strip zeros with abs(Im(rho))<=T, including zero height in the definition."
+      },
+      "supporting_lean_definitions": {
+        "integratedZeroSum": "noncomputable def integratedZeroSum (t T : ℝ) : ℂ :=\n  ∑ ρ ∈ allZetaZeros T, (zetaMultiplicity ρ : ℂ) * zeroPrimitive ρ t\n",
+        "trivialZeroPrimitiveSum": "noncomputable def trivialZeroPrimitiveSum (t : ℝ) : ℂ :=\n  ∑' j : ℕ, zeroPrimitive (-2 * ((j + 1 : ℕ) : ℂ)) t\n",
+        "integratedFormulaValue": "noncomputable def integratedFormulaValue (t : ℝ) : ℂ :=\n  (t : ℂ) ^ 2 / 2 - (deriv riemannZeta 0 / riemannZeta 0) * (t : ℂ) +\n    deriv riemannZeta (-1) / riemannZeta (-1) - trivialZeroPrimitiveSum t -\n    (integratedPsi t : ℂ)\n"
+      },
+      "sources": [
+        "GM2016",
+        "MontgomeryVaughan",
+        "Hildebrand"
+      ],
+      "evidence": {
+        "publication_status": "Exact identity follows from a published GM2016 formula; no GRH is needed for this identity.",
+        "exact_version_mapping": "Institutional accepted manuscript and arXiv v5 checked; specialize K=Q in (1.3a),(3.8),Lemma 3.3, with absolute convergence for the closed-height limit.",
+        "numerical_reproduction": "Analytic source specialization; finite numerical sampling is not a proof of this identity.",
+        "repository_lean_reproof": "Classical identity remains a parameter; finite four-point application and cancellation of affine terms are proved.",
+        "trust_basis": "Published literature, reinforced by accepted-manuscript source review.",
+        "outstanding": [
+          "Formalize upstream Perron/residue argument and full formula."
+        ],
+        "observed_source_issue": "Accepted-manuscript residue derivation has a local s=-1 coefficient typo; main formula and Lean use the correct +zeta_prime(-1)/zeta(-1)."
+      },
+      "audit_records": [
+        "audit/input4_source_review_2026-11-06.md",
+        "audit/input4_source_provenance_2026-11-06.json"
+      ],
+      "local_downstream": [
+        "LegendreK6.integratedFormulaValue_four_point",
+        "LegendreK6.trapezoid_zero_sum_tendsto"
+      ]
+    },
+    {
+      "id": "H5",
+      "name": "Finite RH through 3e12",
+      "lean": {
+        "file": "lean/LegendreK6/FiniteRHInput.lean",
+        "declaration": "LegendreK6.FiniteRH3e12",
+        "source_sha256": "d502c92b71fe95655c23d0e6d6a8d7de2e8376d707e6eeeb62d2d8bd2460a266",
+        "exact_source_statement": "def FiniteRH3e12 : Prop :=\n  ∀ ρ : NontrivialZero, 0 < ρ.val.im → ρ.val.im ≤ 3000000000000 →\n    ρ.val.re = 1/2\n",
+        "external_parameter": true,
+        "proved_in_this_repository": false
+      },
+      "mathematical_statement": "For every nontrivial open-strip zeta zero rho, if 0<Im(rho)<=3000000000000 then Re(rho)=1/2.",
+      "used_height": 3000000000000,
+      "source_theorem_height": 3000175332800,
+      "upper_endpoint_included": true,
+      "simplicity_assumed": false,
+      "sources": [
+        "PlattTrudgian"
+      ],
+      "evidence": {
+        "publication_status": "Published in Bulletin of the London Mathematical Society 53(3),792-797 (2021).",
+        "exact_version_mapping": "Publisher abstract expressly includes the closed 3e12 upper endpoint; fixed arXiv v1 Theorem 1 reaches the higher stated height.",
+        "numerical_reproduction": "Source theorem uses rigorous interval arithmetic; upstream computation not rerun in this project.",
+        "repository_lean_reproof": "FiniteRH3e12 remains a parameter; low-height weighted-zero consequences are proved.",
+        "trust_basis": "Published rigorous computational theorem under the project owner rule.",
+        "outstanding": [
+          "Rebuild or import an independently verified upstream computational proof."
+        ]
+      },
+      "local_downstream": [
+        "LegendreK6.positiveZeroWeight_eq_finiteRH",
+        "LegendreK6.positiveZeroWeight_finiteRH_le"
+      ]
+    },
+    {
+      "id": "H6",
+      "name": "CHJII shared-truncation explicit formula",
+      "lean": {
+        "file": "lean/LegendreK6/LiteratureInputs.lean",
+        "declaration": "LegendreK6.CHJIIShortInterval",
+        "source_sha256": "feb8446dcfb232adedec2937a271ed010e35f8addeec240a60f75c2c74c8df78",
+        "exact_source_statement": "def CHJIIShortInterval : Prop :=\n  ∀ (x h T : ℝ), 0 < x → 40 ≤ Real.log x → 0 ≤ h →\n    max 51 ((Real.log x) ^ 2) < T → T < (Real.sqrt x - 2) / 4 →\n    ∃ Tstar : ℝ, T ≤ Tstar ∧ Tstar ≤ 2 * T ∧\n      ‖((Chebyshev.psi (x + h) - Chebyshev.psi x - h : ℝ) : ℂ) +\n        truncatedZeroIncrement x (x + h) Tstar‖ ≤\n        (1447 / 500 : ℝ) / T * ((x + h) * Real.log (x + h) + x * Real.log x)\n",
+        "external_parameter": true,
+        "proved_in_this_repository": false
+      },
+      "mathematical_statement": "For real x,h,T with x>0, log(x)>=40, h>=0, max(51,log(x)^2)<T<(sqrt(x)-2)/4, there exists real Tstar in [T,2*T] with norm(psi(x+h)-psi(x)-h+sum_{rho in Z(Tstar)} m(rho)*((x+h)^rho-x^rho)/rho) <= (1447/500)/T*((x+h)*log(x+h)+x*log(x)).",
+      "conditions": {
+        "x_positive": true,
+        "log_x_minimum": "40",
+        "h_nonnegative": true,
+        "T_lower_strict": "max(51,log(x)^2)",
+        "T_upper_strict": "(sqrt(x)-2)/4"
+      },
+      "constant_exact_rational": "1447/500",
+      "source_parameters": {
+        "alpha": "1/2",
+        "omega": "0",
+        "lambda_internal": "0.43",
+        "M_exact_decimal": "2.894"
+      },
+      "single_shared_Tstar": true,
+      "error_denominator": "T, not Tstar",
+      "supporting_lean_definitions": {
+        "truncatedZeroIncrement": "noncomputable def truncatedZeroIncrement (x y T : ℝ) : ℂ :=\n  ∑ ρ ∈ allZetaZeros T, (zetaMultiplicity ρ : ℂ) *\n    (((y : ℂ) ^ ρ - (x : ℂ) ^ ρ) / ρ)\n"
+      },
+      "sources": [
+        "CHJII"
+      ],
+      "evidence": {
+        "publication_status": "Published in Functiones et Approximatio Commentarii Mathematici 73(2),223-242 (2025).",
+        "exact_version_mapping": "Fixed v3 Theorem 1.3 and Table 1 first row match Lean. Relevant theorem, table and proof spans match v2/v3; journal text has not been directly compared.",
+        "numerical_reproduction": "Nine scalar comparisons independently certified with 256-bit Arb, including M<2.894; paper checks endpoint reductions. This does not certify the full analytic theorem.",
+        "repository_lean_reproof": "CHJIIShortInterval remains a parameter; tail application is proved.",
+        "trust_basis": "Published literature, with the exact journal-to-arXiv mapping gap explicitly retained.",
+        "outstanding": [
+          "Obtain and compare journal text or identified accepted manuscript.",
+          "Formalize the upstream analytic theorem."
+        ]
+      },
+      "audit_records": [
+        "audit/input6_source_review_2026-11-06.md",
+        "audit/input6_source_review_2026-11-06.json",
+        "audit/input6_constant_check_2026-11-06.json"
+      ],
+      "local_downstream": [
+        "LegendreK6.tail_short_interval_from_inputs"
+      ]
+    },
+    {
+      "id": "H7",
+      "name": "CHL twelve prime-interval rows",
+      "lean": {
+        "file": "lean/LegendreK6/CHLRange.lean",
+        "declaration": "LegendreK6.CHLRows",
+        "source_sha256": "4c4e7c0a8a3950a071cd86b698beca2aeefe8959fa93f9a7c43fd32fce9239dd",
+        "exact_source_statement": "structure CHLRows : Prop where\n  row0 : CHLInterval 39097000 (4 * 10 ^ 18)\n  row43 : CHLInterval 41816800 (Real.exp 43)\n  row46 : CHLInterval 163940000 (Real.exp 46)\n  row50 : CHLInterval 1061200000 (Real.exp 50)\n  row55 : CHLInterval 10288400000 (Real.exp 55)\n  row60 : CHLInterval 76918400000 (Real.exp 60)\n  row75 : CHLInterval 174043000000 (Real.exp 75)\n  row90 : CHLInterval 184304000000 (Real.exp 90)\n  row105 : CHLInterval 191886000000 (Real.exp 105)\n  row120 : CHLInterval 197917000000 (Real.exp 120)\n  row135 : CHLInterval 202553000000 (Real.exp 135)\n  row150 : CHLInterval 207053000000 (Real.exp 150)\n",
+        "external_parameter": true,
+        "proved_in_this_repository": false
+      },
+      "mathematical_statement": "For every listed pair (X,Delta), for all real y>=X, there exists a natural prime p satisfying y*(1-1/Delta)<p<=y.",
+      "rows": [
+        {
+          "lean_field": "row0",
+          "X": {
+            "kind": "integer",
+            "value": 4000000000000000000
+          },
+          "Delta_integer": 39097000
+        },
+        {
+          "lean_field": "row43",
+          "X": {
+            "kind": "real_exp",
+            "exponent_integer": 43
+          },
+          "Delta_integer": 41816800
+        },
+        {
+          "lean_field": "row46",
+          "X": {
+            "kind": "real_exp",
+            "exponent_integer": 46
+          },
+          "Delta_integer": 163940000
+        },
+        {
+          "lean_field": "row50",
+          "X": {
+            "kind": "real_exp",
+            "exponent_integer": 50
+          },
+          "Delta_integer": 1061200000
+        },
+        {
+          "lean_field": "row55",
+          "X": {
+            "kind": "real_exp",
+            "exponent_integer": 55
+          },
+          "Delta_integer": 10288400000
+        },
+        {
+          "lean_field": "row60",
+          "X": {
+            "kind": "real_exp",
+            "exponent_integer": 60
+          },
+          "Delta_integer": 76918400000
+        },
+        {
+          "lean_field": "row75",
+          "X": {
+            "kind": "real_exp",
+            "exponent_integer": 75
+          },
+          "Delta_integer": 174043000000
+        },
+        {
+          "lean_field": "row90",
+          "X": {
+            "kind": "real_exp",
+            "exponent_integer": 90
+          },
+          "Delta_integer": 184304000000
+        },
+        {
+          "lean_field": "row105",
+          "X": {
+            "kind": "real_exp",
+            "exponent_integer": 105
+          },
+          "Delta_integer": 191886000000
+        },
+        {
+          "lean_field": "row120",
+          "X": {
+            "kind": "real_exp",
+            "exponent_integer": 120
+          },
+          "Delta_integer": 197917000000
+        },
+        {
+          "lean_field": "row135",
+          "X": {
+            "kind": "real_exp",
+            "exponent_integer": 135
+          },
+          "Delta_integer": 202553000000
+        },
+        {
+          "lean_field": "row150",
+          "X": {
+            "kind": "real_exp",
+            "exponent_integer": 150
+          },
+          "Delta_integer": 207053000000
+        }
+      ],
+      "left_endpoint_strict": true,
+      "right_endpoint_included": true,
+      "extra_QRH_condition": false,
+      "supporting_lean_definitions": {
+        "CHLInterval": "def CHLInterval (Δ X : ℝ) : Prop :=\n  ∀ y : ℝ, X ≤ y →\n    ∃ p : ℕ, p.Prime ∧ y * (1 - 1 / Δ) < (p : ℝ) ∧ (p : ℝ) ≤ y\n"
+      },
+      "sources": [
+        "CHL",
+        "CHLcorr"
+      ],
+      "evidence": {
+        "publication_status": "Original article (2022) and formal corrigendum (2024 issue; online 2023-07-19) are published.",
+        "exact_version_mapping": "Author v3 Theorem 1 and Table 2 visually checked; all twelve Delta/X rows exactly match Lean. Published corrigendum exact table has not yet been directly compared.",
+        "numerical_reproduction": "Author-code replay yields positive criterion values for all twelve rows. Separate rigorous Arb evaluation of printed auxiliary parameters certifies six generated Delta values strictly below reported table values. Nearby adjusted witnesses have positive non-rigorous criterion values; full CHL criterion has not been independently certified.",
+        "repository_lean_reproof": "CHLRows remains a parameter; lower-range covering and endpoint conversion are proved.",
+        "trust_basis": "Published original/corrigendum with unresolved exact-version and witness-certification questions retained, not erased by transcription success.",
+        "outstanding": [
+          "Directly compare the published corrigendum table.",
+          "Fix exact witness parameters and rigorously certify the full CHL criterion."
+        ]
+      },
+      "rounded_parameter_diagnostic": {
+        "rigorous_map_only": true,
+        "certifies_CHL_theorem": false,
+        "below_reported_log_X": [
+          "50",
+          "60",
+          "75",
+          "90",
+          "105",
+          "135"
+        ],
+        "maximum_relative_shortfall_approx": "3.36e-6",
+        "arithmetics": "Arb, 256 bits, exact rational inputs"
+      },
+      "audit_records": [
+        "audit/input7_source_review_2026-11-06.md",
+        "audit/input7_source_provenance_2026-11-06.json",
+        "audit/chl_rounded_deltas_arb_2026-11-06.json"
+      ]
+    }
+  ]
+}

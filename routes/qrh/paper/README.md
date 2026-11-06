@@ -1,20 +1,17 @@
-# 论文源码
+# 论文与版本
 
-manuscript.md 是可读中文稿，保留全部证明公式、常数表和计算证据范围。main.tex 由 build_tex.py 生成，用于 XeLaTeX 排版。references.bib 提供相同文献的 BibTeX 记录；main.tex 内置参考文献，因此其编译不依赖另跑 BibTeX。
+当前完整论文是 **[《相邻六次幂之间的素数：显式条件证明及 Lean 形式化》](current/main.pdf)**。它由十二章正文、版本附录和参考文献组成，从七项精确输入推导最终全范围结论，对应已验收的实际 Lean 证明。
 
-从本目录运行：
+- [当前论文源码及构建说明](current/README.md)
+- [七项输入及来源登记](../documentation/inputs.md)
+- [论文—Lean 对应表](../documentation/blueprint/theorem_map.md)
+- [研究过程与原始档案](../research-history/README.md)
+- [形式化验收范围](../FORMALIZATION_STATUS.md)
 
-    python -X utf8 build_tex.py
-    xelatex -interaction=nonstopmode -halt-on-error main.tex
-    xelatex -interaction=nonstopmode -halt-on-error main.tex
+## 保留的早期稿件
 
-需要支持中文的 XeLaTeX / TeX Live，含 ctex、Fandol、amsmath、longtable、fvextra、hyperref 和 xurl。第二遍用于更新目录与交叉引用。PDF 是否成功生成与实际排版检查记录，以发布包 audit 中的构建记录为准。
+[原中文稿](manuscript.md)、[原 PDF](main.pdf)、[原 TeX](main.tex) 和 [原参考文献](references.bib) 按原字节保留，记录数值认证阶段的证明，包含后来被新的梯形远段替代的多项式权方法。原稿第 11 节反映当时尚未完成形式化的阶段，不代表当前状态。
 
-编辑数学正文时先改 manuscript.md，再运行 build_tex.py。该脚本只作排版转换，不计算证书，不改变数学数据。改变数学陈述时应相应重新核验源码、证书与引用；不要将 TeX 编译成功等同于数学正确。
+[形式化补充稿](lean_formalization_addendum.md) 记录 M1—M3 完成后的方法变更；新十二章论文将这些推导组织为自洽正文。历史原稿不再作为当前稿的编辑源。
 
-原稿明确承认 H1：QRH(7/8) 与 H2：CS v2 推论1及指定常数，另列经典文献输入。
-原稿第11节保留当时的形式化范围，不代表后续版本的状态。当前实际使用的证明方法、
-七项明确输入及新增推导见[形式化补充稿](lean_formalization_addendum.md)；
-构建验收状态见[FORMALIZATION_STATUS.md](../FORMALIZATION_STATUS.md)及其对应记录。
-新远段采用梯形权，原多项式稿件与证书继续保留。人类署名、单位、邮箱暂不填写；
-原稿 AI 使用声明在第12节，后续实现与审查范围另见[AI_USE.md](../AI_USE.md)。
+如需复现历史排版，可在本目录运行 `python -X utf8 build_tex.py` 再用支持 ctex/Fandol 的 XeLaTeX 编译两次。这会重写历史 TeX，不应在核对冻结清单前运行。新稿使用独立的 [current/build.py](current/build.py)，不会覆盖旧稿。

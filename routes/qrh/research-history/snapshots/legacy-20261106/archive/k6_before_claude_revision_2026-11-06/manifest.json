@@ -1,0 +1,15 @@
+{
+  "code/certify_smooth_k6.py": "9555c1ad6dfb713b84b2d9c3b28938fb353f551d8e517be200a4f8ea4e563ede",
+  "code/verify_k6.py": "8a2c87b084b80487a13a313c9fd35c5277daba35d3b7f5fe3586f01973c28ad4",
+  "code/review_smooth_k6.py": "dcf8cfb782cfdd1e4045417a30e633831de30c1b288f20c26742860236f783e2",
+  "results/smooth_k6_certificate.json": "165988b5642582864ba39bf6415c43776f45a94501a280da8692fe3ae48d69d0",
+  "results/k6_verification_summary.json": "2168677712671806097dc5294ab8e3c351a21b0dd643ad4de6cbe095a64da680",
+  "research/K6_PROOF.md": "58d6405f72e20dacfda06fb693b4522005c1b7c7232691b5d0256669100da034",
+  "research/SMOOTH_K6_CERTIFICATE.md": "8d293530b5304036cabcd59c3d476389fec755144c36f70e2ecdcc1d0ce55bdc",
+  "research/SMOOTH_K6_REVIEW.md": "c73cf8d39a2a5973d82d4ae12bd460b2d0a35f4532542fe46536f25754ccf4f1",
+  "research/K6_ASSEMBLY_REVIEW.md": "dac7f8aee5593fadf9b71927d7432007310fb251396b81549f8454ca5fe05981",
+  "research/INPUTS.md": "0914dd78b251598701543fc55e278a3b23a7e13d9b3ecabebd974f6795190a97",
+  "README.md": "134e0358b85505e58de5f616562ff962a55ea5fd5ab332d29ae82d44abb81efc",
+  "RUNBOOK.md": "9808998480df053633038a8272cb71b73d80f21f868c6b343829aadb09fd8efb",
+  "review/Claude_K6_proof_review_2026-11-06.md": "b8f4265c0fc9669859e57ad19f6effa248d10d6b1d367d729f3b91e8a26e6abf"
+}

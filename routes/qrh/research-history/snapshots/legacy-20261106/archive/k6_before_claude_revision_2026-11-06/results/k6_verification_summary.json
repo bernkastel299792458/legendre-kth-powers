@@ -1,0 +1,54 @@
+{
+  "status": "ALL_K6_MODULES_VERIFIED",
+  "k": 6,
+  "conditional_all_positive_integers_covered": true,
+  "theorem": "Assuming QRH(7/8) and the stated published inputs, every integer n>=1 has a prime n^6<p<(n+1)^6.",
+  "created": "2026-11-06T08:29:04.955307+08:00",
+  "proof_document": "research/K6_PROOF.md",
+  "scope": "Numerical module replay and exact coverage checks for the written analytic proof; not a formal proof checker or external peer review.",
+  "lower_n_max": 1242317999994,
+  "new_real_x_log_interval": [
+    "167",
+    "400"
+  ],
+  "inherited_real_x_log_interval": [
+    "400",
+    "infinity"
+  ],
+  "uncovered_log_x_intervals": [],
+  "runs": [
+    {
+      "script": "certify_lower_range_k6.py",
+      "certificate": "lower_range_k6_certificate.json",
+      "passed": true,
+      "output": "{\n  \"verified\": true,\n  \"k\": 6,\n  \"small_witnesses_verified\": 1259,\n  \"effective_CHL_rows\": 12,\n  \"n_max_inclusive\": 1242317999994,\n  \"target_L\": \"167\",\n  \"target_n_max_inclusive\": 1224230174416,\n  \"max_witness\": 3982487126873086493,\n  \"max_p_minus_n6\": 238,\n  \"witness_sha256\": \"8dfee8570d4e49fa59b94bed4b82d56d38746be59eeb1576713b08a32594a182\",\n  \"scope\": \"finite lower range only, conditional on cited literature inputs\",\n  \"elapsed_seconds\": 0.344\n}",
+      "script_sha256": "0d7149060506aa6b18c9c25a14b0e64ba9bbdeade42ba44888c24de6154b2d93",
+      "certificate_sha256": "a108bd9166c0c8c137ee5299e1b5a135e825efa6514894be5054872299fd60fc"
+    },
+    {
+      "script": "certify_smooth_k6.py",
+      "certificate": "smooth_k6_certificate.json",
+      "passed": true,
+      "output": "Verified 20/76\nVerified 40/76\nVerified 60/76\n{\n  \"status\": \"VERIFIED\",\n  \"k\": 6,\n  \"number_of_cells\": 76,\n  \"log_x_interval\": [\n    \"167\",\n    \"400\"\n  ],\n  \"worst_upper_rational\": \"495563626579399060177723/500000000000000000000000\",\n  \"script_sha256\": \"9555c1ad6dfb713b84b2d9c3b28938fb353f551d8e517be200a4f8ea4e563ede\",\n  \"certificate_sha256\": \"165988b5642582864ba39bf6415c43776f45a94501a280da8692fe3ae48d69d0\"\n}",
+      "script_sha256": "9555c1ad6dfb713b84b2d9c3b28938fb353f551d8e517be200a4f8ea4e563ede",
+      "certificate_sha256": "165988b5642582864ba39bf6415c43776f45a94501a280da8692fe3ae48d69d0"
+    },
+    {
+      "script": "certify_smooth_segment.py",
+      "certificate": "smooth_segment_certificate.json",
+      "passed": true,
+      "output": "{\n  \"status\": \"VERIFIED\",\n  \"number_of_cells\": 60,\n  \"log_x_interval\": [\n    \"400\",\n    \"700\"\n  ],\n  \"script_sha256\": \"ec7e6d218e09967d9161f44074c35ecdce09eb6a3a3a3d307db1e5b36083d21e\",\n  \"certificate_sha256\": \"7e3768054da03709927d63a3f2d5766b7d0b26a7f600d4a8005621413e1a2a7f\",\n  \"worst_upper_rational\": \"862339984538098379495241/1000000000000000000000000\",\n  \"elapsed_seconds\": 7.75\n}",
+      "script_sha256": "ec7e6d218e09967d9161f44074c35ecdce09eb6a3a3a3d307db1e5b36083d21e",
+      "certificate_sha256": "7e3768054da03709927d63a3f2d5766b7d0b26a7f600d4a8005621413e1a2a7f"
+    },
+    {
+      "script": "certify_tail_cs.py",
+      "certificate": "tail_cs_certificate.json",
+      "passed": true,
+      "output": "PASS: saved certificate exactly matches read-only recomputation\nL0=700; total: [0.557220462408670948864420999882333777436735925799936356303329 +/- 2.06e-61]\nStrict rational envelope: total < 14/25 < 1; checks: 21",
+      "script_sha256": "162e880b9ad62f6ae47dd16a6b7ea75bce0a34cab35fff2975c169430ee77cb6",
+      "certificate_sha256": "d579daae45c617416d14282b69aa727e0f4b7e10699e73678bfebc6b2b743e84"
+    }
+  ],
+  "script_sha256": "8a2c87b084b80487a13a313c9fd35c5277daba35d3b7f5fe3586f01973c28ad4"
+}

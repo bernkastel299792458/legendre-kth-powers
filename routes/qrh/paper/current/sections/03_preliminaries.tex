@@ -1,0 +1,124 @@
+\section{基本对象、零点约定与算术工具}\label{sec:preliminaries}
+
+\subsection{计数函数与端点}
+所有对数均为自然对数。对实数 $y\ge0$，定义
+\[
+\psi(y)=\sum_{1\le m\le\lfloor y\rfloor}\Lambda(m),\qquad
+\theta(y)=\sum_{\substack{p\le y\\p\text{ prime}}}\log p,\qquad
+\Psi_1(y)=\sum_{1\le m\le\lfloor y\rfloor}\Lambda(m)(y-m).
+\]
+von Mangoldt 函数满足 $\Lambda(p^a)=\log p$（$a\ge1$），对其余正整数为零。因而 $\psi$ 的增量计入素数和高次素数幂，$\theta$ 的增量只计素数。两者都采用右连续的 $m\le y$ 约定。由于 $\Psi_1$ 在整数端点处的新增项权为零，其定义也等于 $\int_0^y\psi(t)\dd t$，没有半权端点差异。
+
+\subsection{真实零点、重数与有限截断}
+本文的非平凡零点是满足 $\zeta(\rho)=0$、$0<\Rea\rho<1$ 的复数。写 $\rho=\beta+\ii\gamma$，以 $m(\rho)$ 记解析零点阶数。所有零点和都带重数，且不假定零点简单。对任意实数 $T$，记
+\[
+\mathcal Z_T=\{\rho:0<\beta<1,\ |\gamma|\le T,\ \zeta(\rho)=0\},
+\quad
+\mathcal Z_T^+=\{\rho\in\mathcal Z_T:0<\gamma\le T\}.
+\]
+这些集合有限：在有界矩形中，亚纯函数的零点是离散的；$s=1$ 的极点附近也不产生零点的聚集。Lean 使用 Mathlib 的紧集零点有限性结论，把实际集合转成有限集合后求和。计数函数为
+\[
+N(T)=\sum_{\rho\in\mathcal Z_T^+}m(\rho),\qquad
+N(\sigma,T)=\sum_{\substack{\rho\in\mathcal Z_T^+\\\beta\ge\sigma}}m(\rho).
+\]
+这里 $N(T)=N_+(T)$，与第~\ref{sec:inputs} 节的记号相同。
+若将截断定义延伸到 $T<0$，相应集合为空、计数为零；本文的解析估计均在各自注明的非负高度范围使用。
+增大 $T$ 只添加非负重数项；增大 $\sigma$ 只删除这些项。这给出随后分层求和使用的单调性。
+
+共轭恒等式 $\zeta(\overline s)=\overline{\zeta(s)}$ 同时保持零点与重数。为把两侧高度的和写成正高度和的两倍，还要排除实轴上的非平凡零点。这一步在本项目中有独立证明，不额外列为第八项输入。
+
+\begin{lemma}[实轴无非平凡零点]\label{pre:real-axis}
+对 $0<s<1$，有 $\zeta(s)\ne0$。
+\end{lemma}
+\begin{proof}
+给出与形式化实现一致的 theta 核证明。设
+\[
+\Theta(t)=\sum_{n\in\mathbb Z}\e^{-\pi n^2t},\qquad t>0.
+\]
+由 theta 变换 $\Theta(t)=t^{-1/2}\Theta(1/t)$，经去除主项的核可取为
+\[
+K(t)=
+\begin{cases}
+t^{-1/2}(\Theta(1/t)-1),&0<t<1,\\
+\Theta(t)-1,&t>1.
+\end{cases}
+\]
+在 $t=1$ 的定义不影响积分。每项均非负，而且在两端有足够衰减。令
+\[
+F(s)=\frac12\int_0^\infty t^{s/2-1}K(t)\dd t.
+\]
+Mathlib 中的完成 zeta 函数给出已形式化的 Mellin 恒等式
+\[
+\pi^{-s/2}\Gamma(s/2)\zeta(s)
+=F(s)-\frac1s-\frac1{1-s},\qquad F(1-s)=F(s).
+\]
+对 $0\le s\le1$，当 $t\ge1$ 时 $t^{s/2-1}\le1$；当 $0<t<1$ 时 $t^{s/2-1}\le t^{-3/2}$。乘以非负的 $K(t)$ 并积分得
+\[
+F(s)\le F(2)+F(-1)=2F(2).
+\]
+由 $\zeta(2)=\pi^2/6$ 和 $\Gamma(1)=1$，有 $F(2)=\pi/6-1/2$。若 $\zeta(s)=0$，上述恒等式将迫使
+\[
+4\le\frac1{s(1-s)}=\frac1s+\frac1{1-s}=F(s)
+\le\frac\pi3-1<\frac13,
+\]
+矛盾。这里 $s(1-s)\le1/4$，且 $\pi<4$，所有分母均正。
+\end{proof}
+\leanref{ZetaZeros}{riemannZeta_ne_zero_real_strip; zetaMultiplicity_conj}
+
+因此，对共轭不变的实函数 $f$，
+\begin{equation}\label{eq:positive-pair}
+\sum_{\rho\in\mathcal Z_T}m(\rho)f(\rho)
+=2\sum_{\rho\in\mathcal Z_T^+}m(\rho)f(\rho).
+\end{equation}
+这是有限集合的配对恒等式，不要求先讨论条件收敛的无限和。
+\leanref{ZetaZeros}{sum_allZetaZeros_eq_twice; all_zero_multiplicities_eq_twice_total}
+
+\subsection{正实底数的复幂}
+对 $t>0$，统一规定 $t^z=\exp(z\log t)$。其模为 $|t^{\beta+\ii\gamma}|=t^\beta$，导数为 $zt^{z-1}$。若 $x>0$、$h\ge0$、$0<\beta<1$ 且 $\rho\ne0$，积分导数后取模得
+\begin{equation}\label{eq:cpow-short}
+\left|\frac{(x+h)^\rho-x^\rho}{\rho}\right|
+\le\int_x^{x+h}t^{\beta-1}\dd t
+\le h x^{\beta-1}.
+\end{equation}
+最后一步利用 $\beta-1<0$。将它乘以自然数重数并求有限和即可用于截断公式，不需要交换无限求和与积分。
+\leanref{CpowInterval}{norm_cpow_sub_div_le}
+
+\subsection{素数幂贡献与严格开区间}
+对 $Y\ge1$，Mathlib 已证明无条件估计
+\begin{equation}\label{eq:psi-theta-sqrt}
+0\le\psi(Y)-\theta(Y)\le2\sqrt Y\log Y.
+\end{equation}
+若 $S\subseteq\{1,\ldots,\lfloor Y\rfloor\}$，权函数满足 $w(m)\le W$、$W\ge0$，则由 $\Lambda(m)\ge0$，
+\[
+\sum_{\substack{m\in S\\m\text{ 非素数}}}\Lambda(m)w(m)
+\le W(\psi(Y)-\theta(Y))\le2W\sqrt Y\log Y.
+\]
+此估计不要求事先把所有素数幂逐一枚举。当 $\log Y\ge4\log2$ 时，也得到方便与原始证书对齐的较弱形式
+\begin{equation}\label{eq:prime-power-log-square}
+\sum_{\substack{m\in S\\m\text{ 非素数}}}\Lambda(m)w(m)
+\le\frac{W\sqrt Y(\log Y)^2}{2\log2}.
+\end{equation}
+\leanref{PrimePowerBudget}{weightedNonprime_le_sqrt_log; weightedNonprime_le_manuscript_budget}
+
+加权证明中，若正权的支持严格位于 $(x,y)$，且扣除非素数贡献后总和仍正，那么有限和中至少有一项来自严格内部的素数。未加权的 $\psi(y)-\psi(x)$ 则含右端点，必须另外留出端点贡献。
+
+\begin{lemma}[未加权的严格端点提取]\label{pre:endpoint}
+设 $0\le x\le y$、$y\ge1$、$\log y\ge4\log2$。若
+\[
+\psi(y)-\psi(x)>
+\frac{\sqrt y(\log y)^2}{2\log2}+\log y,
+\]
+则 $(x,y)$ 内含有素数。
+\end{lemma}
+\begin{proof}
+假设开区间内没有素数。在 $(x,y]$ 中至多可能有右端点 $y$ 自身这一个素数，所以 $\theta(y)-\theta(x)\le\log y$。又因 $\theta(x)\le\psi(x)$，由式\eqref{eq:prime-power-log-square}（$W=1$），
+\[
+\psi(y)-\psi(x)
+\le(\psi(y)-\theta(y))+(\theta(y)-\theta(x))
+\le\frac{\sqrt y(\log y)^2}{2\log2}+\log y,
+\]
+与假设矛盾。
+\end{proof}
+\leanref{PrimePowerBudget}{theta_sub_le_log_of_no_prime; prime_of_psi_sub_gt_manuscript_budget}
+
+这些准备将后文的解析任务固定为：找到一个严格正的素数贡献下界。梯形权通过零端点支持处理边界，尾部通过额外的 $\log y$ 预算处理边界；二者均得出真正的开区间结论。

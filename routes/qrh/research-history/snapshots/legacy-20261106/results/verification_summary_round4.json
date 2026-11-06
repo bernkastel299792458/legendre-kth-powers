@@ -1,0 +1,81 @@
+{
+  "status": "PARTIAL_MODULES_VERIFIED_NOT_FULL_K4",
+  "full_k4_proved": false,
+  "created": "2026-11-06T12:05:28.244793+08:00",
+  "scope": "Numerical verification of documented analytic lemmas under QRH and cited literature inputs; not Lean or external peer review.",
+  "verified_small_n_max": 1904041788883,
+  "original_lower_n_max": 767543999996,
+  "verified_lower_real_x_log_interval": [
+    "5473/50",
+    "1131/10"
+  ],
+  "verified_real_x_lower_log": "372",
+  "verified_large_n_lower_log": "93",
+  "conservative_uncovered_log_x_intervals": [
+    [
+      "1131/10",
+      "372"
+    ]
+  ],
+  "runs": [
+    {
+      "script": "certify_lower_range.py",
+      "passed": true,
+      "script_sha256": "e6301fde3f607ea7f6eaea43c6293820c4af0334a1e5ad0c8c0ef71c21343d74",
+      "output": "{\n  \"verified\": true,\n  \"small_witnesses_verified\": 44721,\n  \"effective_CHL_rows\": 9,\n  \"n_max_inclusive\": 767543999996,\n  \"target_L\": \"5473/50\",\n  \"target_n_max_inclusive\": 766422943598,\n  \"max_witness\": 3999871365034201301,\n  \"max_p_minus_n4\": 382,\n  \"witness_sha256\": \"c946f02f2bc03bd1e8bed5b707a92e6a36c7eafbcf99f5ca6a5d30504fa3d75c\",\n  \"scope\": \"finite lower range only, conditional on cited literature inputs\",\n  \"elapsed_seconds\": 24.461\n}"
+    },
+    {
+      "script": "k4_bandlimited_round3.py",
+      "passed": true,
+      "script_sha256": "924c95379de0cafd32a086372e6ef53f319680952ac0ffd19e8b995b4ecc7f62",
+      "output": "VERIFIED (read-only): 19 strict scalar checks\n{\n  \"pole_lower\": \"[123571131220.8359269137173493343148892002423124258038678 +/- 1.99e-44]\",\n  \"low_zeros_upper\": \"[2016.037085442557819967761272075031801818591547313394963 +/- 4.03e-52]\",\n  \"high_zeros_upper\": \"[1.594767404087137882577954747206731077418084458667232566e-395 +/- 3.19e-450]\",\n  \"archimedean_absolute_upper\": \"[67.16311301882980081438374432670555922834027813492364428 +/- 3.51e-54]\",\n  \"positive_prime_powers_upper\": \"[9129.554555650142433599667639466159284638597160645922059 +/- 9.15e-53]\",\n  \"all_costs_upper\": \"[11212.75475411153005438181265586789664568552898609424067 +/- 3.41e-51]\",\n  \"positive_margin_lower\": \"[123571120008.0811728021872949525022333323456667402748817 +/- 1.42e-44]\",\n  \"relative_cost_upper\": \"[9.073927416002236264856516489801222679760401080693417172e-8 +/- 1.25e-63]\"\n}"
+    },
+    {
+      "script": "k4_selberg_round4.py",
+      "passed": true,
+      "script_sha256": "1278dfc72f3b4891e5c537b20dbb878d9f9a8a23443a81a6a0fa0aec83d4468a",
+      "output": "VERIFIED (read-only): 19 strict scalar checks\n{\n  \"pole_lower\": \"[17186412735.48421235155791773008345206831868356621279088 +/- 4.27e-45]\",\n  \"low_zeros_upper\": \"[781.7625901253178284322184114474637847883412711003987043 +/- 3.20e-53]\",\n  \"high_zeros_upper\": \"[5.113911097929380727445529977941128952989984156352933104e-395 +/- 2.02e-450]\",\n  \"archimedean_absolute_upper\": \"[159.6235059267396702898474179937611334575136065098270253 +/- 1.20e-53]\",\n  \"positive_prime_powers_upper\": \"[9227.196156004495617237193806857512134775176774596964243 +/- 1.45e-52]\",\n  \"all_costs_upper\": \"[10168.58225205655311595925963629873705302103165220718997 +/- 2.42e-51]\",\n  \"positive_margin_lower\": \"[17186402566.90196029500480177082381576958163054518113867 +/- 1.46e-45]\",\n  \"relative_cost_upper\": \"[5.916640318466122350905226762518050964598245015280986513e-7 +/- 2.98e-62]\"\n}"
+    },
+    {
+      "script": "certify_k4_monotone_round3.py",
+      "passed": true,
+      "script_sha256": "f59fae3d37ecbd31c2ac294864deda731d7ff0150763bead0d0fcec013959e11",
+      "output": "VERIFIED_ANALYTIC_TAIL: L >= 372; upper = 991573975668198449189201/1000000000000000000000000"
+    },
+    {
+      "script": "certify_k4_round3.py",
+      "passed": true,
+      "script_sha256": "665413028150b9eafa96d51071e2864da5408086393b91d6ea8e956798e7ea16",
+      "output": "Verified 8/20\nVerified 16/20\n{\n  \"status\": \"VERIFIED\",\n  \"k\": 4,\n  \"number_of_cells\": 20,\n  \"log_x_interval\": [\n    \"372\",\n    \"375\"\n  ],\n  \"worst_upper_rational\": \"62337124625748305918831/62500000000000000000000\",\n  \"minimum_margin_rational\": \"162875374251694081169/62500000000000000000000\",\n  \"sensitivity_summary\": {\n    \"tested_scale\": \"1001/1000\",\n    \"scope\": \"Uniform CS Table 1 coefficient changes with all exponents, domains and envelope parameters fixed.\",\n    \"B1_only_critical_factor_interval\": [\n      \"1002612814999561571955253/1000000000000000000000000\",\n      \"501306407499780785977627/500000000000000000000000\"\n    ],\n    \"B1_only_scaled_maximum_upper\": \"499195694002992433384359/500000000000000000000000\",\n    \"B1_only_all_passed\": true,\n    \"all_three_critical_factor_interval\": [\n      \"1002612814999561569788077/1000000000000000000000000\",\n      \"501306407499780784894039/500000000000000000000000\"\n    ],\n    \"all_three_scaled_maximum_upper\": \"499195694002992433797999/500000000000000000000000\",\n    \"all_three_all_passed\": true\n  },\n  \"script_sha256\": \"665413028150b9eafa96d51071e2864da5408086393b91d6ea8e956798e7ea16\",\n  \"certificate_sha256\": \"d49fc64e5f5ec703880bbbe0950a933b8f574a2aa8c01914fdd6ad13ed55689e\"\n}"
+    },
+    {
+      "script": "certify_smooth_extension.py",
+      "passed": true,
+      "script_sha256": "66835458d5104a0852225a729df2ff19b7409ed2b78af520a024c098bba32e17",
+      "output": "{\n  \"status\": \"VERIFIED\",\n  \"log_x_interval\": [\n    \"375\",\n    \"400\"\n  ],\n  \"number_of_cells\": 32,\n  \"worst_upper_rational\": \"997001584162892542329211/1000000000000000000000000\",\n  \"script_sha256\": \"66835458d5104a0852225a729df2ff19b7409ed2b78af520a024c098bba32e17\",\n  \"certificate_sha256\": \"648d23288e53bdd043ef3877c776416173231dff1809b5900b198dd922ca30ea\",\n  \"elapsed_seconds\": 82.07800000003772\n}"
+    },
+    {
+      "script": "certify_smooth_segment.py",
+      "passed": true,
+      "script_sha256": "ec7e6d218e09967d9161f44074c35ecdce09eb6a3a3a3d307db1e5b36083d21e",
+      "output": "{\n  \"status\": \"VERIFIED\",\n  \"number_of_cells\": 60,\n  \"log_x_interval\": [\n    \"400\",\n    \"700\"\n  ],\n  \"script_sha256\": \"ec7e6d218e09967d9161f44074c35ecdce09eb6a3a3a3d307db1e5b36083d21e\",\n  \"certificate_sha256\": \"7e3768054da03709927d63a3f2d5766b7d0b26a7f600d4a8005621413e1a2a7f\",\n  \"worst_upper_rational\": \"862339984538098379495241/1000000000000000000000000\",\n  \"elapsed_seconds\": 7.5\n}"
+    },
+    {
+      "script": "certify_tail_cs.py",
+      "passed": true,
+      "script_sha256": "162e880b9ad62f6ae47dd16a6b7ea75bce0a34cab35fff2975c169430ee77cb6",
+      "output": "PASS: saved certificate exactly matches read-only recomputation\nL0=700; total: [0.557220462408670948864420999882333777436735925799936356303329 +/- 2.06e-61]\nStrict rational envelope: total < 14/25 < 1; checks: 21"
+    }
+  ],
+  "certificate_hashes": {
+    "lower_range_certificate.json": "7ddb2ef9a5c4eaad359e0b5584afca49df2a6d20f6ac6dab4cfecb1b8a2fc410",
+    "tail_cs_certificate.json": "d579daae45c617416d14282b69aa727e0f4b7e10699e73678bfebc6b2b743e84",
+    "smooth_segment_certificate.json": "7e3768054da03709927d63a3f2d5766b7d0b26a7f600d4a8005621413e1a2a7f",
+    "smooth_extension_certificate.json": "648d23288e53bdd043ef3877c776416173231dff1809b5900b198dd922ca30ea",
+    "k4_bandlimited_round3.json": "061fb3598c66c6df6dfdac325d519db2b287d904eda92ed6ba32b2dd5f4b37d8",
+    "k4_monotone_round3_certificate.json": "d33d6472d5d4485226922b99c7872df430af90b86131475b20297a1058e3f75f",
+    "k4_round3_certificate.json": "d49fc64e5f5ec703880bbbe0950a933b8f574a2aa8c01914fdd6ad13ed55689e",
+    "k4_selberg_round4.json": "d365cab11ca44b277764010740b754fe863321ee4ac08233a4fcbeeba8466aa8"
+  },
+  "script_sha256": "28ebbc3ba1a353463b90faa73dedf0d27a3ef5783798b165e0bcbc98b57ab7f6"
+}

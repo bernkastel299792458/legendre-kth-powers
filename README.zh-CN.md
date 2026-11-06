@@ -21,7 +21,7 @@ Lean 定理，241 个模块的全新目录重建及对应依赖审计全部通�
 |---|---|---|---|
 | **A. 传统显式估计路线** | 所有整数 **k ≥ 70** | 列明的显式估计，包括 Bellotti–Trudgian–Yang 预印本的零点自由区域常数 **4.896**；不假定 QRH | [传统路线论文，英文](routes/traditional/proof/manuscript.md) |
 | **A. 传统路线，仅用经评审文献输入的版本** | 所有整数 **k ≥ 74** | 列明的经同行评审文献输入，以 **5.558691** 替代 4.896；不假定 QRH | [传统路线审查包](routes/traditional/proof/README.md) |
-| **B. 假定 QRH(7/8) 成立的路线** | 固定指数 **k = 6** | **H1：** 所有非平凡 ζ 零点的实部不超过 7/8；**H2：** CS **arXiv:2507.15184v2** 推论 1 及指定表格行，另加列明的辅助输入 | [QRH 路线审查包](routes/qrh/README.md) · [中文论文 PDF](routes/qrh/paper/main.pdf) |
+| **B. 假定 QRH(7/8) 成立的路线** | 固定指数 **k = 6** | **七项明确输入**，包括 QRH(7/8)、CS **arXiv:2507.15184v2** 推论 1 及指定表格行；见[完整陈述](routes/qrh/documentation/inputs.md) | [QRH 路线审查包](routes/qrh/README.md) · [中文论文 PDF](routes/qrh/paper/current/main.pdf) |
 
 “仅用经评审文献输入”描述的是所用文献的状态，不表示本项目的新证明已经通过同行评审。
 两条路线的数学前提不同，比较指数时必须同时说明这些前提。
@@ -62,67 +62,34 @@ Lean 项目保留的历史名称 `LegendreK67` 不代表当前仍声称证明了
 
 ## 路线 B：假定 QRH(7/8) 成立
 
-### 结论与显式前提
+本路线以 [OpenAI 官方 quasi-RH 发布](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/README.md)
+为研究起点，将其中 ζ 非平凡零点的 7/8 实部界作为明确输入。
+[Family 003](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/003.md)
+说明上游形式化范围，本项目研究其素数短区间推论。
 
-本路线选择接受 QRH(7/8) 作为研究起点，依据是 OpenAI 已在
-[官方 openai/math 仓库](https://github.com/openai/math)公开了署期 2026 年 9 月 30 日的
-[7/8 无零半平面证明论文](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/README.md)及配套 Lean 材料。
-我们将其中关于 ζ 非平凡零点实部不超过 7/8 的结果作为明确的上游输入，
-集中研究它对相邻幂之间素数问题的后续推论。
+在 **QRH(7/8)、CS v2、Rosser、积分显式公式、有限高度 RH、CHJII、CHL 七项精确输入**下，
+对每个整数 n≥1，存在素数 `n^6 < p < n^6+6n^5 < (n+1)^6`。
+[输入登记表](routes/qrh/documentation/inputs.md)列出命题、版本和证据依据。
+CS v2 仍是预印本依赖，全部七项仍明确保留在最终 Lean 定理中。
 
-OpenAI 的[Family 003 专项说明](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/003.md)明确列出了该 7/8 结果的形式化范围。
-我们尚未独立重建其完整证明依赖或运行上游 Comparator，因此在定理前提中继续显式保留 H1。
-上游 QRH 的形式化与本项目的素数区间后续推导是两件不同的事；本项目的完整输入和构建状态见下文。
+完整下游定理 `sixth_powers_from_named_inputs` 已通过 **241 个模块**的全新输出目录重建和对应依赖审计。
+本项目的解析区间与数值预算均有实际证明，不再列作额外前提。详见[形式化范围](routes/qrh/FORMALIZATION_STATUS.md)。
 
-此外，明确依赖 Chourasiya–Simonič 的 **v2** 密度结果，并将其作为预印本输入处理：
-推论 1、表 1 中编号 **16–27** 的行（即前 12 行），以及这些行规定的适用域。
-所引经典辅助定理另列于[论文](routes/qrh/paper/manuscript.md)。
+整理后的入口包括[新十二章中文论文](routes/qrh/paper/current/main.pdf)、
+[论文—Lean 导读](routes/qrh/documentation/blueprint/README.md)、
+[中英文路线主页](routes/qrh/README.zh-CN.md)和[研究档案](routes/qrh/research-history/README.md)。
+论文完整讲解最终采用的梯形权与连续平移证明；原多项式稿件及证书保留为历史版本。
+旧稿的 CS 系数 6% 灵敏度结果保留原适用范围。
 
-在这些前提下，书面论证给出：对每个整数 n ≥ 1，存在素数 p，使
-
-```text
-n^6 < p < n^6 + 6n^5 < (n+1)^6。
-```
-
-结论同时依赖 **H1 和 H2**，不能只写成“假定 QRH 即得”。
-本项目尚未得到 k = 4 或 k = 3 的全范围结论；两者分别仍是阶段目标和长期研究目标。
-
-### 证据与验证范围
-
-审查包结合了 1259 个小范围素数见证、CHL 区间表、**94** 个中段单元、
-**60** 个后续单元及解析无限尾部。
-加密后的中段上界不超过 `0.939735996783828324763044`。
-固定其他输入、指数和适用域后，CS 三列系数统一增大 **6%**，书面证明的全链仍能通过。
-这项敏感性检验不认证 CS 定理本身。
-
-最终 Lean 定理 `sixth_powers_from_named_inputs` 已编译，完整类型为
-
-```text
-QRHSevenEighths -> CSv2 -> RosserZeroCount -> IntegratedExplicitFormula ->
-  FiniteRH3e12 -> CHJIIShortInterval -> CHLRows -> SixthPowerConclusion
-```
-
-本项目的全部解析区间和数值预算已由实际证明提供，最终参数中不再含局部素数区间结论或证书正确性前提。
-证明覆盖原 94 个中段单元、60 个远段单元的全部点，以及整数下段和无限尾部。
-远段的新形式化改用梯形证书，原多项式证明保留；原稿 6% 系数灵敏度检验不自动成为新保守下段预算的形式化属性。
-
-参见[可读的形式化补充稿](routes/qrh/paper/lean_formalization_addendum.md)、
-[最终定理源码](routes/qrh/lean/LegendreK6/FinalResult.lean)和
-[准确形式化范围](routes/qrh/FORMALIZATION_STATUS.md)。
-[241 模块干净重建](routes/qrh/audit/builds/final-20261106/lean_build_report.json)与
-[对应依赖审计](routes/qrh/audit/builds/final-20261106/final_dependency_report.json)均已通过，公理仅为 Lean 标准三项。
-这是相对于七项列明输入的完整后续推导，
-不表示重证了所有经典文献，也不能缩写成“只假设 QRH 和 CS”。
-
-早先提交 `58521b6` 的[Linux CI](https://github.com/bernkastel299792458/legendre-kth-powers/actions/runs/42153017737)
-保留为当时部分形式化范围的历史证据，不冒充新源码的构建记录。
+当前全范围结论为 k=6；k=4 和 k=3 分别仍是阶段目标与长期目标。
+本次整理[先供本地审核](routes/qrh/REVIEW_THIS_RELEASE.md)，审核后再推送；传统路线数学材料未改。
 
 ## 阅读、复现与审查
 
 | 目的 | 传统路线 | QRH 路线 |
 |---|---|---|
-| 阅读论证 | [英文论文](routes/traditional/proof/manuscript.md) | [原论文](routes/qrh/paper/manuscript.md) · [形式化补充稿](routes/qrh/paper/lean_formalization_addendum.md) |
-| 检查输入 | [论文第 3 节](routes/traditional/proof/manuscript.md) · [文献来源](routes/traditional/SOURCES.md) | [论文第 1 节](routes/qrh/paper/manuscript.md) · [BibTeX](routes/qrh/paper/references.bib) |
+| 阅读论证 | [英文论文](routes/traditional/proof/manuscript.md) | [当前论文](routes/qrh/paper/current/main.pdf) · [证明导读](routes/qrh/documentation/blueprint/README.md) |
+| 检查输入 | [论文第 3 节](routes/traditional/proof/manuscript.md) · [文献来源](routes/traditional/SOURCES.md) | [七项输入](routes/qrh/documentation/inputs.md) · [BibTeX](routes/qrh/paper/current/references.bib) |
 | 复现计算 | [审查包复算说明](routes/traditional/proof/README.md#如何复核) | [复现说明](routes/qrh/REPRODUCING.md) |
 | 理解 Lean 范围 | [逻辑拼接的范围](routes/traditional/proof/README.md#lean-证明了什么) | [准确结论与验收证据](routes/qrh/FORMALIZATION_STATUS.md) |
 | 审查证据 | [清单](routes/traditional/proof/REVIEW_CHECKLIST.md) · [AI 审阅与答复](routes/traditional/review/) | [范围审阅](routes/qrh/audit/PUBLICATION_SCOPE_REVIEW.md) · [历史审阅](routes/qrh/audit/source_reviews/README.md) |

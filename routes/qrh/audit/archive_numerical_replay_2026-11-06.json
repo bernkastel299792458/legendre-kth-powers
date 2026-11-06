@@ -1,0 +1,11 @@
+{
+  "status": "ALL_FOUR_FROZEN_CERTIFICATES_REPLAYED",
+  "recorded_utc": "2026-11-06T11:41:58.234722+00:00",
+  "source_commit": "37b7fbcbb3b900b86600996642eccdfe465d8fdd",
+  "command": "python -u code/verify_k6.py --dry-run",
+  "working_directory": "Clean git-archive export under routes/qrh/tmp/replay/routes/qrh",
+  "exit_code": 0,
+  "observed_stdout": "PASS certify_lower_range_k6.py\nPASS certify_smooth_k6.py\nPASS certify_smooth_segment.py\nPASS certify_tail_cs.py\nRead-only replay: no summary written\nALL_K6_MODULES_VERIFIED\nConditional all-n coverage: true; uncovered intervals: []\n",
+  "recording_note": "Recorded from the completed tool session 43331; wall-clock duration was not recorded. The command is read-only and did not write a new numerical summary.",
+  "scope": "Replay of the four historical numerical certificates and their coverage/sensitivity checks, separate from the new Lean trapezoid argument."
+}

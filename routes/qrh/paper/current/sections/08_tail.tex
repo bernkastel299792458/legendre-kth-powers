@@ -1,0 +1,420 @@
+\section{无限尾部：\texorpdfstring{$L\geq700$}{L>=700}}
+\label{sec:tail}
+
+本节证明一个适用于所有充分大实数的严格短区间结论。它只使用
+H1（QRH）、H2（CS v2）、H3（Rosser 零点计数）和 H6（CHJII
+短区间显式公式）。H4 的积分显式公式、H5 的有限高度 RH 以及 H7
+的 CHL 行均不参与本节的推导。特别地，以下出现
+$3\cdot10^{12}$ 是为了满足 CS 密度估计的适用域，并非在尾部另用一次有限 RH。
+
+与有限解析段不同，本节直接估计未平滑的 $\psi$ 增量。需要完成的连接是：
+CHJII 的同一截断高度、实际零点和的复数模、密度积分、素数幂扣除，
+以及将右闭区间改为严格开区间。六项预算分别承担这些任务；其中任何一项
+都不是以一个未证的局部素数结论代替。
+
+\subsection{参数、定义域与同一截断高度}
+
+令
+\begin{equation}\label{tail:parameters}
+ x=\e^L,\qquad h=4\e^{3L/4},\qquad y=x+h,\qquad
+ T=\e^{9L/32},\qquad V=2T,
+\end{equation}
+并记
+\begin{equation}\label{tail:u-lambda}
+ u=\log V=\frac9{32}L+\log2,\qquad
+ \lambda=L-\frac83\log V=\frac14L-\frac83\log2.
+\end{equation}
+这里 $V$ 是一个确定的高度上界；CHJII 给出的实际截断高度将记为 $T^*$。
+二者不可混淆。以下所有估计均在 $L\geq700$ 上成立。
+
+\begin{lemma}[尾部参数的合法性]\label{tail:domain}
+上述参数满足
+\begin{align}
+ &\max\{51,L^2\}<T<\frac{\sqrt{x}-2}{4},\label{tail:T-domain}\\
+ &V\geq3\cdot10^{12},\qquad u>1,\qquad \lambda>0,\label{tail:density-domain}\\
+ &0<h\leq x,\qquad x<y\leq2x,\qquad
+ L\leq\log y\leq L+1,\qquad \sqrt y\leq2\sqrt x.
+ \label{tail:elementary-domain}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+由 $\e^t\geq1+t$，有 $T>51$。三阶指数下界给出
+\[
+ T\geq\frac{(9L/32)^3}{3!}
+ =\frac{729L^3}{196608}>L^2,
+\]
+最后一步用 $L\geq700$。另一方面，
+\[
+ \e^{L/2}=T\e^{7L/32},\qquad \e^{7L/32}>6.
+\]
+结合 $T>51$ 得 $\e^{L/2}>4T+2$，即式~\eqref{tail:T-domain}。
+由于 $9L/32\geq100$，再用
+$\e^{100}\geq100^{10}/10!>3\cdot10^{12}$ 即可验证高度下界。
+式~\eqref{tail:u-lambda} 与 $0<\log2<1$ 给出 $u>1$ 和 $\lambda>0$。
+
+由 $\e^{L/4}\geq4$ 得 $h\leq x$，因而 $y\leq2x$。
+取对数得到 $\log y\leq L+\log2\leq L+1$；下界来自 $y\geq x$。
+最后，$y\leq2x\leq4x$ 且平方根非负，故 $\sqrt y\leq2\sqrt x$。
+所有这些估计都是整个半直线上的不等式，并非基点处的数值观察。
+\end{proof}
+
+对应实现为 \leanref{TailDomains}{tail_log_sq_lt_T}、
+\leanref{TailDomains}{tail_T_lt_sqrt_limit}、
+\leanref{TailDomains}{tail_height_ge_RH} 和同文件的端点估计。
+
+以 $m_\rho$ 表示实际 $\zeta$ 零点 $\rho=\beta+\ii\gamma$ 的解析重数，定义
+\begin{equation}\label{tail:actual-sum}
+ S(x,y;W)=\sum_{\substack{\zeta(\rho)=0,\ 0<\beta<1\\|\gamma|\leq W}}
+ m_\rho\frac{y^\rho-x^\rho}{\rho}.
+\end{equation}
+这是有限和，截断条件为闭条件 $|\gamma|\leq W$。正实底数的复幂取
+$t^\rho=\exp(\rho\log t)$，所以不存在分支选择问题。
+
+H6 是 \cite{CHJII} 的定理 1.3 与表 1 首行的明确特例：
+$\log x_M=40$、$\alpha=1/2$、$\omega=0$、$M=2.894=1447/500$。
+由引理~\ref{tail:domain}，存在\emph{同一个}
+$T^*\in[T,2T]$，使
+\begin{equation}\label{tail:chjii}
+ \left|\psi(y)-\psi(x)-h+S(x,y;T^*)\right|
+ \leq\frac{1447}{500T}\bigl(y\log y+x\log x\bigr).
+\end{equation}
+不能把两个单点显式公式各自存在的截断高度直接合并成式~\eqref{tail:chjii}。
+这里采用的就是源文的短区间版本；其量词和复数模形式明确保存在
+\leanref{LiteratureInputs}{CHJIIShortInterval} 中。
+
+\subsection{从复数零点增量到带重数的正实和}
+
+\begin{lemma}[复幂增量]\label{tail:cpow-increment}
+若 $0<x\leq y$、$\rho\ne0$ 且 $\beta=\Re\rho\leq1$，则
+\begin{equation}\label{tail:cpow-bound}
+ \left|\frac{y^\rho-x^\rho}{\rho}\right|
+ \leq (y-x)x^{\beta-1}.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+函数 $t\mapsto t^\rho/\rho$ 在正实轴上的导数为 $t^{\rho-1}$，
+其模为 $t^{\beta-1}$。由于 $\beta-1\leq0$，在 $[x,y]$ 上该模
+不超过 $x^{\beta-1}$。对复值函数使用导数范数的区间估计，即得结论。
+有限求和后，三角不等式与 $m_\rho\geq0$ 保留不等号方向。
+\end{proof}
+
+这一论证见 \leanref{CpowInterval}{norm_cpow_sub_div_le} 和
+\leanref{CpowInterval}{norm_sum_cpow_sub_div_le}。于是
+\begin{equation}\label{tail:sum-reduction}
+ |S(x,y;T^*)|
+ \leq h\sum_{|\gamma|\leq T^*}m_\rho\e^{(\beta-1)L}
+ \leq h\sum_{|\gamma|\leq V}m_\rho\e^{(\beta-1)L}.
+\end{equation}
+第二个不等式只使用 $T^*\leq V$ 和各项非负，并没有要求所选的 $T^*$
+避开某个零点的高度。
+
+实际零点集合在共轭下不变，共轭零点的解析重数相等。
+本项目还证明了实轴 $0<\beta<1$ 上没有零点。因此
+\begin{equation}\label{tail:pairing}
+ \sum_{|\gamma|\leq V}m_\rho\e^{(\beta-1)L}
+ =2\sum_{0<\gamma\leq V}m_\rho\e^{(\beta-1)L}.
+\end{equation}
+这里的因子 $2$ 依赖这些已经证明的对称性与实轴非零性，
+不能仅由“通常零点成对”一句话隐去可能的实轴项。
+相应定理为 \leanref{ZetaZeros}{sum_allZetaZeros_eq_twice}。
+
+\subsection{分层积分、Rosser 计数与 CS 包围}
+
+用 $N(V)$ 表示 $0<\gamma\leq V$ 的带重数零点数，
+用 $N(\sigma,V)$ 表示其中还满足 $\sigma\leq\beta$ 的零点数。
+两处高度条件都是右闭的，实部条件也是闭的。
+
+\begin{lemma}[有限零点分层]\label{tail:layer}
+在 H1 下，对 $L\geq0$ 有
+\begin{equation}\label{tail:layer-formula}
+ \sum_{0<\gamma\leq V}m_\rho\e^{(\beta-1)L}
+ \leq N(V)\e^{-3L/8}
+ +\int_{5/8}^{7/8}L\e^{(\sigma-1)L}N(\sigma,V)\,\dd\sigma.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+H1 给出所有相关零点的 $\beta\leq7/8$。
+若 $\beta\leq5/8$，则 $\e^{(\beta-1)L}\leq\e^{-3L/8}$。
+若 $5/8\leq\beta\leq7/8$，则微积分基本定理给出
+\[
+ \e^{(\beta-1)L}=\e^{-3L/8}
+ +\int_{5/8}^{7/8}
+  \mathbf{1}_{\{\sigma\leq\beta\}}L\e^{(\sigma-1)L}\,\dd\sigma.
+\]
+乘以重数并对有限个零点求和即可。
+每个被积函数是连续函数乘以一个可测区间的示性函数，因而区间可积；
+这里只交换有限和与积分，不涉及未经说明的无穷交换。
+\end{proof}
+
+一般有限和版本见 \leanref{FiniteZeroLayer}{finite_exp_layer_bound}，
+实际零点版本见 \leanref{TailDensity}{positive_zero_exp_layer}。
+
+H3 保留了 Rosser 计数式的全部常数及原来的闭矩形计数约定
+\cite{Rosser1941,Dusart2016}。若该计数记为 $N_R(V)$，则
+\begin{align}
+ N(V)&\leq N_R(V),\notag\\
+ \left|N_R(V)-\left(\frac{V}{2\pi}\log\frac{V}{2\pi}
+       -\frac{V}{2\pi}+\frac78\right)\right|
+ &\leq0.137\log V+0.443\log\log V+1.588.
+ \label{tail:rosser}
+\end{align}
+前一个不等式是计数集合的包含关系；我们没有把外部计数集合默默改成另一集合。
+当 $V\geq3\cdot10^{12}$ 且 $\log V\geq1$ 时，由
+$\log\log V\leq\log V$、$\pi\geq1$ 等初等比较，得到
+\begin{equation}\label{tail:coarse-count}
+ N(V)\leq V\log V.
+\end{equation}
+例如，将式~\eqref{tail:rosser} 中负项丢去后，主项至多为
+$(V/2)\log V$，其余至多为
+$0.580\log V+2.463\leq3.043\log V$；在本域中这小于剩余的
+$(V/2)\log V$。因此式~\eqref{tail:coarse-count} 是从 H3 推出的粗界，
+不是第八项外部前提。
+Lean 对应为 \leanref{LiteratureInputs}{totalZeroCount_le_mul_log}。
+
+在 $5/8\leq\sigma\leq7/8$ 上，H2 的相关行具有
+\[
+ B_1\leq\frac{561}{25}=22.44,\qquad
+ B_2\leq\frac{829}{100}=8.29,\qquad B_3\leq147.
+\]
+若 $p(\sigma)=3(1-\sigma)/(2-\sigma)$，则
+\[
+ p(\sigma)\leq\frac83(1-\sigma),\qquad
+ \frac{7-5\sigma}{2-\sigma}=p(\sigma)+2\leq3.
+\]
+结合 $V\geq1$ 和 $\log V\geq1$，可从 CS v2 的原指数直接推出
+\begin{equation}\label{tail:cs-envelope}
+ N(\sigma,V)\leq
+ \frac{561}{25}V^{\frac83(1-\sigma)}u^3
+ +\frac{829}{100}u^2+147u.
+\end{equation}
+这里的 $\log^3 V$ 是本节\emph{由 v2 原式向上放宽后}的统一包围；
+它不把原始 CS 输入改写为另一个版本。
+所用行的存在性、常数比较及指数比较见
+\leanref{DensityInput}{cs_tail_density}。
+
+令 $C=(561/25)u^3$、$D=(829/100)u^2+147u$。
+由于
+\[
+ \e^{(\sigma-1)L}V^{\frac83(1-\sigma)}
+ =\e^{(\sigma-1)\lambda},
+\]
+式~\eqref{tail:cs-envelope} 对应的积分可以精确计算为
+\begin{align}
+ &\int_{5/8}^{7/8}L\e^{(\sigma-1)L}
+ \left(CV^{\frac83(1-\sigma)}+D\right)\,\dd\sigma\notag\\
+ &\quad=C\frac{L}{\lambda}
+      \left(\e^{-\lambda/8}-\e^{-3\lambda/8}\right)
+       +D\left(\e^{-L/8}-\e^{-3L/8}\right)\notag\\
+ &\quad\leq C\frac{L}{\lambda}\e^{-\lambda/8}+D\e^{-L/8}.
+ \label{tail:density-integral}
+\end{align}
+最后一步先用 $C,D,L\geq0$、$\lambda>0$ 确认系数非负，再舍去两个
+负的下端点项。对应定理为
+\leanref{TailDensity}{integral_cs_tail_envelope_le}。
+
+把式~\eqref{tail:coarse-count}、\eqref{tail:density-integral}
+代入分层界，并用式~\eqref{tail:pairing} 乘以 $2$，定义
+\begin{align}
+ Z_0(L)&=4u\e^{-3L/32},\label{tail:Z0}\\
+ Z_1(L)&=\frac{1122}{25}u^3\frac{L}{\lambda}\e^{-\lambda/8},
+ \label{tail:Z1}\\
+ Z_2(L)&=2\left(\frac{829}{100}u^2+147u\right)\e^{-L/8}.
+ \label{tail:Z2}
+\end{align}
+第一项的指数来自
+$2V u\e^{-3L/8}=4u\e^{-3L/32}$，其中 $V=2\e^{9L/32}$。
+于是对 CHJII 选择的任何合法 $T^*$ 都有
+\begin{equation}\label{tail:zero-bound}
+ |S(x,y;T^*)|\leq h\bigl(Z_0(L)+Z_1(L)+Z_2(L)\bigr).
+\end{equation}
+这条从实际零点和到三项实数预算的完整连接是
+\leanref{TailZeroSum}{tail_truncated_zero_bound}。
+
+\subsection{截断误差、素数幂与严格右端点}
+
+记后三项预算为
+\begin{align}
+ R(L)&=\frac{1447}{2000}(3L+2)\e^{-L/32},\label{tail:R}\\
+ P(L)&=\frac12(L+1)^2\e^{-L/4},\label{tail:P}\\
+ E(L)&=\frac14(L+1)\e^{-3L/4}.\label{tail:E}
+\end{align}
+由 $y\leq2x$ 及 $\log y\leq L+1$，
+\[
+ y\log y+x\log x\leq x(3L+2).
+\]
+除以区间长度 $h$ 后，CHJII 的右端满足
+\begin{equation}\label{tail:R-proof}
+ \frac{1447}{500T}(y\log y+x\log x)
+ \leq\frac{1447}{500T}x(3L+2)=hR(L).
+\end{equation}
+等号中的指数核算为 $x/T=\e^{23L/32}$ 和
+$h\e^{-L/32}=4\e^{23L/32}$。
+
+\begin{lemma}[素数幂与右端点的预算]\label{tail:arithmetic-errors}
+在式~\eqref{tail:parameters} 的参数域上，
+\begin{equation}\label{tail:arithmetic-estimates}
+ \psi(y)-\theta(y)\leq hP(L),\qquad \log y\leq hE(L).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Mathlib 已证明的无条件 Chebyshev 界给出
+$\psi(y)-\theta(y)\leq2\sqrt y\log y$。
+由引理~\ref{tail:domain}，
+\[
+ 2\sqrt y\log y\leq4\sqrt x(L+1)
+ \leq2\sqrt x(L+1)^2=hP(L).
+\]
+这里第二步只需 $L+1\geq2$。另一方面，式~\eqref{tail:E} 给出
+$hE(L)=L+1$，所以 $\log y\leq hE(L)$。
+\end{proof}
+
+这三条预算分别对应
+\leanref{TailErrorBudgets}{tail_truncation_error_le}、
+\leanref{TailErrorBudgets}{tail_prime_power_error_le} 和
+\leanref{TailErrorBudgets}{tail_endpoint_error_le}。
+此处采用实际 $\psi-\theta$ 的已证明上界，没有把“素数幂很少”当作直觉步骤。
+
+若 $0\leq x\leq y$、$y\geq1$ 且开区间 $(x,y)$ 中没有素数，
+则 $\theta(y)-\theta(x)$ 的和中至多只有右端点 $y$ 本身这一项，因而
+\begin{equation}\label{tail:open-extraction}
+ \theta(y)-\theta(x)\leq\log y.
+\end{equation}
+无论 $y$ 是整数、素数还是非整数，这个上界都成立。
+故严格不等式 $\theta(y)-\theta(x)>\log y$ 足以保证开区间内有素数。
+形式化中的对应引理为
+\leanref{PrimePowerBudget}{prime_of_theta_sub_gt_log}。
+
+\subsection{六项预算的基点证书与全域单调性}
+
+定义完整归一化预算
+\begin{equation}\label{tail:delta}
+ \mathcal D(L)=Z_0(L)+Z_1(L)+Z_2(L)+R(L)+P(L)+E(L).
+\end{equation}
+它就是 \leanref{TailArithmetic}{tailBound}，没有省略低高度零点、
+负高度零点、素数幂或严格端点费用。
+
+\begin{lemma}[基点的内核数值界]\label{tail:base-certificate}
+有 $\mathcal D(700)<14/25$。
+\end{lemma}
+
+\begin{proof}
+反射式区间证明首先建立
+$0.693147<\log2<0.693148$，进而得到
+\[
+ 197.568147<u(700)<197.568148,\qquad
+ 173.1516<\lambda(700)<173.1517.
+\]
+为避免直接对正分母作粗糙除法，将 $Z_1$ 之外的五项之和记为 $A$，
+并记
+\[
+ B=44.88\,u(700)^3\,700\,\e^{-\lambda(700)/8}.
+\]
+于是 $\mathcal D(700)=A+B/\lambda(700)$。
+源文件中的精确有理算术和 64 位二进区间反射证明验证
+\[
+ A\lambda(700)+B<0.56\lambda(700).
+\]
+因 $\lambda(700)>0$，除去该正因子便得到所述结论。
+这些有限小数均被解释为有理数；指数包围的证明项由 Lean 内核检查，
+不是读取 Python 或 Arb 的成功标志。
+\end{proof}
+
+对应定理为 \leanref{TailArithmetic}{log_two_bounds} 和
+\leanref{TailArithmetic}{tail_at_700}。
+基点计算本身还不足以证明整个无限尾部；以下单调性补全这一点。
+
+\begin{lemma}[连续单调性]\label{tail:monotone}
+$\mathcal D$ 在 $[700,\infty)$ 上单调不增，因此
+\begin{equation}\label{tail:global-budget}
+ L\geq700\quad\Longrightarrow\quad
+ \mathcal D(L)\leq\mathcal D(700)<\frac{14}{25}<1.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+对 $a,c\geq0$、整数 $m\geq1$，令
+$f(L)=(aL+b)^m\e^{-cL+d}$。在 $aL+b\geq0$ 时，
+\[
+ f'(L)=(aL+b)^{m-1}\e^{-cL+d}
+       \bigl(ma-c(aL+b)\bigr).
+\]
+所以，只要 $ma\leq c(700a+b)$，便有 $f'(L)\leq0$ 对所有 $L\geq700$
+成立。将 $b_0=\log2$，$0<b_0<1$，代入下表的因子，即可逐项验证这一条件：
+\begin{center}
+\begin{tabular}{c|c|c|c}
+所属项 & $aL+b$ & $m$ & $c$\\\hline
+$Z_0$ & $9L/32+b_0$ & $1$ & $3/32$\\
+$Z_1$ 的指数多项式因子 & $9L/32+b_0$ & $3$ & $1/32$\\
+$Z_2$ 的二次部分 & $9L/32+b_0$ & $2$ & $1/8$\\
+$Z_2$ 的一次部分 & $9L/32+b_0$ & $1$ & $1/8$\\
+$R$ & $3L+2$ & $1$ & $1/32$\\
+$P$ & $L+1$ & $2$ & $1/4$\\
+$E$ & $L+1$ & $1$ & $3/4$
+\end{tabular}
+\end{center}
+第二行用的是
+$\e^{-\lambda/8}=\e^{-L/32+b_0/3}$。
+它剩下的因子 $L/\lambda$ 也单调不增：
+\[
+ \frac{\dd}{\dd L}\frac{L}{L/4-(8/3)b_0}
+ =-\frac{(8/3)b_0}{(L/4-(8/3)b_0)^2}\leq0.
+\]
+由于相关因子均非负，乘积与非负线性组合仍单调不增。
+这证明了全域单调性，再结合基点界即得式~\eqref{tail:global-budget}。
+\end{proof}
+
+该导数判据、比例因子及组合步骤分别在
+\leanref{TailMonotonic}{affine_power_exp_antitone}、
+\leanref{TailMonotonic}{tail_ratio_antitone}、
+\leanref{TailResult}{tailBound_antitone} 中证明；
+全域结论为 \leanref{TailResult}{tail_bound_all}。
+
+\subsection{尾部素数定理}
+
+\begin{theorem}[无限尾部的严格短区间]\label{tail:prime-theorem}
+假设 H1、H2、H3、H6。对每个实数 $x>0$，若 $\log x\geq700$，
+则存在自然数素数 $p$ 满足
+\[
+ x<p<x+4x^{3/4}.
+\]
+\end{theorem}
+
+\begin{proof}
+先取 $x=\e^L$，$L\geq700$，并使用式~\eqref{tail:parameters}。
+将式~\eqref{tail:chjii} 的复数残差界与式~\eqref{tail:zero-bound} 相加，
+三角不等式给出
+\[
+ \psi(y)-\psi(x)
+ \geq h\bigl(1-Z_0-Z_1-Z_2-R\bigr).
+\]
+这里使用的是整个复数模，并未把可能的虚部误丢弃。
+再由 $\theta(x)\leq\psi(x)$ 及引理~\ref{tail:arithmetic-errors}，
+\[
+ \theta(y)-\theta(x)
+ \geq h\bigl(1-Z_0-Z_1-Z_2-R-P\bigr).
+\]
+式~\eqref{tail:global-budget} 说明括号内严格大于 $E$，从而
+\[
+ \theta(y)-\theta(x)>hE\geq\log y.
+\]
+应用式~\eqref{tail:open-extraction} 的逆否命题，得到严格开区间内的素数。
+最后，对任意满足条件的 $x>0$ 令 $L=\log x$；
+$\exp(\log x)=x$ 且 $h=4x^{3/4}$，结论随即成立。
+\end{proof}
+
+最终连接对应 \leanref{TailFromInputs}{tail_short_interval_exp} 和
+\leanref{TailFromInputs}{tail_short_interval_from_inputs}。
+后一个定理的外部参数恰是 H1、H2、H3、H6；
+零点预算、单调性、素数幂界和严格端点提取均已由本项目或 Mathlib 的证明项给出。
+
+\begin{remark}\label{tail:source-boundary}
+对 CHJII 的源文核查确认了当前输入与 arXiv v3 陈述一致，相关定理、表格
+和证明段落在 v2 与 v3 间未改；首行 $2.894$ 的构成及上游 $K$ 已作数值复算和
+Arb 标量包围。正式期刊正文的精确版本对照及完整上游解析证明的独立重证仍未完成。
+这些来源状态不影响以上条件推导的逻辑形式，也不能被上述 Lean 编译结果反向
+解释为 H6 已在本库中获得证明。
+\end{remark}

@@ -1,0 +1,130 @@
+{
+  "status": "EXPLORATORY",
+  "created": "2026-11-06T08:24:38.361470+08:00",
+  "fixed_width": "1/32",
+  "kernel": {
+    "R0": "1",
+    "R1": "64/31",
+    "R2": "4096/31",
+    "max_over_mass": "32/31"
+  },
+  "interval_sampled": [
+    "167",
+    "200"
+  ],
+  "number_of_points": 140,
+  "worst_sample": {
+    "k": 6,
+    "L": 178.77898196969699,
+    "a": "1/32",
+    "baseline": 2.4620756221929356e-25,
+    "density_layers": 0.909450568671171,
+    "height_tail": 5.549252731442706e-25,
+    "prime_powers": 5.2180237002496505e-23,
+    "trivial_zeros": 1.1798422681951466e-233,
+    "delta": 0.909450568671171,
+    "margin": 0.09054943132882898,
+    "height_end": 98.54588126746634,
+    "height_order": 32,
+    "sigma_order": 24,
+    "max_height_step": 1.0,
+    "status": "EXPLORATORY"
+  },
+  "contact_L": 178.77898196969699,
+  "refined_contact": {
+    "k": 6,
+    "L": 178.77898196969699,
+    "a": "1/32",
+    "baseline": 2.462075622192936e-25,
+    "density_layers": 0.9094505686692744,
+    "height_tail": 5.549252731442706e-25,
+    "prime_powers": 5.2180237002496505e-23,
+    "trivial_zeros": 1.1798422681951466e-233,
+    "delta": 0.9094505686692744,
+    "margin": 0.09054943133072557,
+    "height_end": 98.54588126746634,
+    "height_order": 48,
+    "sigma_order": 36,
+    "max_height_step": 0.5,
+    "status": "EXPLORATORY"
+  },
+  "quadrature_relative_difference": 2.08542834355724e-12,
+  "parameter_scan": [
+    {
+      "a": "1/200",
+      "contact_L": 178.93939890864334,
+      "contact_delta": 0.914196088069889,
+      "optimized_L": 178.93939763357022,
+      "optimized_delta": 0.914196042810331
+    },
+    {
+      "a": "1/100",
+      "contact_L": 178.90917214446355,
+      "contact_delta": 0.9117116764208696,
+      "optimized_L": 178.9091715144278,
+      "optimized_delta": 0.9117116537417472
+    },
+    {
+      "a": "1/50",
+      "contact_L": 178.8482579156794,
+      "contact_delta": 0.9096970881514732,
+      "optimized_L": 178.84825655896958,
+      "optimized_delta": 0.9096970381870351
+    },
+    {
+      "a": "3/100",
+      "contact_L": 178.78671891467624,
+      "contact_delta": 0.9094119834308616,
+      "optimized_L": 178.7867181648653,
+      "optimized_delta": 0.9094119552630253
+    },
+    {
+      "a": "1/32",
+      "contact_L": 178.77898196969699,
+      "contact_delta": 0.909450568671171,
+      "optimized_L": 178.77898023702673,
+      "optimized_delta": 0.909450503426813
+    },
+    {
+      "a": "1/20",
+      "contact_L": 178.66171439325907,
+      "contact_delta": 0.9113179234599322,
+      "optimized_L": 178.6617145419188,
+      "optimized_delta": 0.9113179157735833
+    },
+    {
+      "a": "3/40",
+      "contact_L": 178.50170491076602,
+      "contact_delta": 0.9162510407918407,
+      "optimized_L": 178.50170364729922,
+      "optimized_delta": 0.916250989532334
+    },
+    {
+      "a": "1/10",
+      "contact_L": 178.3373110656372,
+      "contact_delta": 0.9229184456525401,
+      "optimized_L": 178.33731037316963,
+      "optimized_delta": 0.9229184164329065
+    },
+    {
+      "a": "3/20",
+      "contact_L": 177.99436058259727,
+      "contact_delta": 0.9397503802773558,
+      "optimized_L": 177.99436020941133,
+      "optimized_delta": 0.9397503632779411
+    }
+  ],
+  "code_sha256": "5ad2c63093dd925f72cf863d492b4346473c4666a8f83244d5c45fea0656ef55",
+  "smooth_scan_sha256": "32029e46ab6431420fd7a843476b5fb3b6ca0fd5598d0e952246b4e77c7a8d7b",
+  "csv_sha256": "3e973939b21f811b2688e207434d3006285f8cafdb00266577587114275629f0",
+  "sources": [
+    "https://arxiv.org/html/2507.15184v2",
+    "https://arxiv.org/abs/2004.09765"
+  ],
+  "limitations": [
+    "Floating-point quadrature, not Arb certification",
+    "No proof between sampled L values or of an exact maximum",
+    "Finite-height RH input below H, CSv2 above H",
+    "The source derivation and kernel constants require analytic review"
+  ]
+}

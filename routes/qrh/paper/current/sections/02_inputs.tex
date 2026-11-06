@@ -1,0 +1,303 @@
+\section{七项精确外部输入}
+\label{sec:inputs}
+
+最终 Lean 定理将下表七项命题逐一列为参数。它们约束真实的黎曼
+$\zeta$ 函数及素数，而不预先假定本项目三个解析区间的结论。
+本库完成的是从这些输入到六次幂结论的下游推导；本节将输入的数学陈述
+与其来源证据分开。所称可信性依据是官方发布、发表记录、来源核对或实际
+形式化工作的类别，不是正确概率。
+
+\begin{table}[htbp]
+\centering\small
+\caption{最终定理的七项外部参数。全部保留在定理类型中。}
+\label{tab:inputs}
+\begin{tabular}{p{0.06\linewidth}p{0.28\linewidth}p{0.55\linewidth}}
+\toprule
+编号 & 数学输入 & 现有来源证据与边界 \\
+\midrule
+H1 & QRH$(7/8)$ & 按研究约定接受 OpenAI 官方证明发布；本库未重建上游。 \\
+H2 & CS v2 密度界 & 固定预印本的指定十二行；未确认同行评审发表或接受。 \\
+H3 & Rosser 计数界 & 已发表结果，经 Dusart 重述核对；保留来源闭矩形计数。 \\
+H4 & 积分显式公式 & 已发表公式的精确特化；大学机构库接受稿已核对。 \\
+H5 & 有限高度 RH & 已发表的严格计算结果；本项目未重跑上游零点验证。 \\
+H6 & CHJII 公式 & 已发表；所用 arXiv 陈述对应通过，期刊定稿比对待补。 \\
+H7 & CHL 十二行 & 原文及勘误已发表；修订表对应通过，仍有版本和见证认证待办。 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{共同记号}
+
+写 $\rho=\beta+\ii\gamma$，令
+\[
+\mathcal Z=\{\rho\in\C:\zeta(\rho)=0,\ 0<\Re\rho<1\},\qquad
+\mathcal Z(T)=\{\rho\in\mathcal Z:|\Im\rho|\le T\}.
+\]
+每个不同零点以真实解析重数 $m(\rho)$ 计入。
+截断参数取 $T\in\R$；当 $T<0$ 时截断集合为空，相关计数取零。
+Lean 中的对象分别为
+\leanref{ZetaZeros}{NontrivialZero}、
+\leanref{ZetaZeros}{allZetaZeros} 和
+\leanref{ZetaZeros}{zetaMultiplicity}。
+定义
+\begin{equation}
+\label{eq:zero-counts}
+N_+(T)=\sum_{\substack{\rho\in\mathcal Z\\0<\gamma\le T}}m(\rho),
+\qquad
+N(\sigma,T)=\sum_{\substack{\rho\in\mathcal Z\\\sigma\le\beta,\ 0<\gamma\le T}}m(\rho).
+\end{equation}
+这里高度上端与实部下端均含等号。$\mathcal Z(T)$ 在定义时保留零高度；
+实区间 $(0,1)$ 无零点是本库的另一个已证引理
+\leanref{ZetaZeros}{riemannZeta_ne_zero_real_strip}，没有暗中加入输入定义。
+所有对数都是自然对数。对正实数 $x$，复幂取
+$x^s=\exp(s\log x)$，与 Lean 使用的主支复幂一致。设
+\[
+\psi(x)=\sum_{1\le n\le\lfloor x\rfloor}\Lambda(n),\qquad
+H=3\cdot10^{12};
+\]
+$\Lambda$ 是通常的 von Mangoldt 函数，$\psi$ 的整数端点包含整项。
+
+\subsection{H1：QRH$(7/8)$}
+
+\begin{definition}[H1：八分之七零点界]
+\label{hyp:qrh}
+对每个 $\rho\in\mathcal Z$，都有 $\Re\rho\le7/8$。
+\end{definition}
+此处对应 \leanref{DensityInput}{QRHSevenEighths}。
+采用 H1 的研究依据是 OpenAI 于 2026 年 9 月 30 日公布的证明稿
+\cite{OpenAIQRH}，固定仓库提交为
+\nolinkurl{4eaee87548250b2682affda7d05d947c05554bae}。
+该提交的 Family 003 说明报告了 $\zeta$ 的 $7/8$ 无零半平面形式化；
+本项目只取其 $\zeta$ 部分，并未导入或独立重建该上游工程。
+这是按项目约定接受的无限域输入，不能用有限高度数值扫描替代，也不等同于 RH。
+
+\subsection{H2：固定版本 CS 密度界}
+
+\begin{definition}[H2：CS v2 的指定十二行]
+\label{hyp:cs}
+令
+\[
+a(\sigma)=\frac{3(1-\sigma)}{2-\sigma},\qquad
+b(\sigma)=\frac{7-5\sigma}{2-\sigma}=a(\sigma)+2.
+\]
+对表~\ref{tab:cs-input} 的任一行 $j$、所有
+$j/32\le\sigma\le(j+1)/32$ 以及所有实数 $T\ge H$，要求
+\begin{equation}
+\label{eq:cs-input}
+N(\sigma,T)\le
+B_1 T^{a(\sigma)}(\log T)^{b(\sigma)}
++B_2(\log T)^2+B_3\log T.
+\end{equation}
+\end{definition}
+
+\begin{table}[htbp]
+\centering\small
+\caption{H2 的全部系数；有限小数作为精确有理数。}
+\label{tab:cs-input}
+\begin{tabular}{ccrrr}
+\toprule
+来源行 $j$ & $\sigma$ 的闭区间 & $B_1$ & $B_2$ & $B_3$ \\
+\midrule
+16 & $[16/32,17/32]$ & 5.069 & 9.461 & 167.8 \\
+17 & $[17/32,18/32]$ & 6.046 & 9.168 & 162.6 \\
+18 & $[18/32,19/32]$ & 7.077 & 8.875 & 157.4 \\
+19 & $[19/32,20/32]$ & 8.185 & 8.582 & 152.2 \\
+20 & $[20/32,21/32]$ & 9.387 & 8.290 & 147.0 \\
+21 & $[21/32,22/32]$ & 10.70 & 7.997 & 141.9 \\
+22 & $[22/32,23/32]$ & 12.11 & 7.704 & 136.7 \\
+23 & $[23/32,24/32]$ & 13.66 & 7.411 & 131.5 \\
+24 & $[24/32,25/32]$ & 15.35 & 7.118 & 126.3 \\
+25 & $[25/32,26/32]$ & 17.21 & 6.826 & 121.1 \\
+26 & $[26/32,27/32]$ & 19.31 & 6.533 & 115.9 \\
+27 & $[27/32,28/32]$ & 21.77 & 6.240 & 110.7 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+该命题是 \leanref{DensityInput}{CSv2}；Lean 行号为
+$i=j-16\in\{0,\ldots,11\}$。所用来源为 Chourasiya--Simoni\v{c}
+的固定 arXiv v2（2025 年 9 月 30 日），Corollary 1 和 Table 1
+\cite{CSv2}。本库的开条带计数是来源计数的限制，因重数非负，限制只减小左端。
+现有核查尚未确认该精确输入已获同行评审发表或接受，所以 H2 始终是额外的
+预印本前提。其推导与常数来源的独立审查属于另项工作，本稿不代替该审查。
+原式中的 $b(\sigma)$ 不可改成 v1 的统一对数三次幂；尾段采用的较粗
+$(\log T)^3$ 界由 \leanref{DensityInput}{cs_tail_density}
+在明确子域内从 H2 推出。下游数值认证也不能代替 H2 的上游证明。
+
+\subsection{H3：完整 Rosser 计数界}
+
+为保持所引陈述的计数约定，另定义闭矩形计数
+\[
+N_R(T)=\sum_{\substack{\zeta(\rho)=0\\0\le\Re\rho\le1,\ 0\le\Im\rho\le T}}m(\rho).
+\]
+\begin{definition}[H3：Rosser 零点计数界]
+\label{hyp:rosser}
+对每个实数 $T\ge2$，
+\begin{equation}
+\label{eq:rosser-input}
+\begin{split}
+\left|N_R(T)-\left(\frac{T}{2\pi}\log\frac{T}{2\pi}
+-\frac{T}{2\pi}+\frac78\right)\right|
+\le{}&\frac{137}{1000}\log T\\
+&+\frac{443}{1000}\log\log T+\frac{397}{250}.
+\end{split}
+\end{equation}
+\end{definition}
+对应 \leanref{LiteratureInputs}{RosserZeroCount}。
+Rosser 的原文发表于 1941 年的 \emph{American Journal of Mathematics}
+\cite{Rosser1941}；本项目通过 Dusart 的正式重述第 877 页式 (10)--(11)
+核对系数 \cite{Dusart2016}，并通过作者 HDR 第 34 页和第 82 页
+核对闭矩形约定，未声称逐页重证原始论文。
+集合包含给出 $N_+(T)\le N_R(T)$，对应
+\leanref{LiteratureInputs}{totalZeroCount_le_rosserCount}。
+本库已从完整 H3 推出所需的较弱总计数界，而没有额外接受 CS 的总计数辅助式；
+Rosser 解析定理本身仍为外部输入。
+
+\subsection{H4：积分显式公式}
+
+令
+\[
+\Psi_1(x)=\sum_{1\le n\le\lfloor x\rfloor}\Lambda(n)(x-n),\qquad
+P(\rho,x)=\frac{x^{\rho+1}}{\rho(\rho+1)},
+\]
+以及
+\[
+V(x)=\sum_{j=1}^{\infty}\frac{x^{1-2j}}{2j(2j-1)}.
+\]
+这分别对应 \leanref{IntegratedPsi}{integratedPsi}、
+\leanref{TrapezoidKernel}{zeroPrimitive} 和
+\leanref{IntegratedExplicitFormula}{trivialZeroPrimitiveSum}。
+
+\begin{definition}[H4：高度截断的积分显式公式]
+\label{hyp:integrated}
+对每个实数 $x>1$，在复数域中有
+\begin{equation}
+\label{eq:integrated-input}
+\begin{split}
+\lim_{T\to+\infty}\sum_{\rho\in\mathcal Z(T)}m(\rho)P(\rho,x)
+={}&\frac{x^2}{2}-\frac{\zeta'(0)}{\zeta(0)}x
++\frac{\zeta'(-1)}{\zeta(-1)}\\
+&-V(x)-\Psi_1(x).
+\end{split}
+\end{equation}
+\end{definition}
+对应 \leanref{IntegratedExplicitFormula}{IntegratedExplicitFormula}。
+Greni\'e--Molteni 的已发表论文 \cite{GM2016} 给出所需精确恒等式：
+取数域为有理数域，结合 (1.3a)、(3.8) 和 Lemma 3.3，得到
+式~\eqref{eq:integrated-input}，绝对收敛支持这里的闭高度截断极限。
+虽然该文题名含 GRH，此一般恒等式不以 GRH 为前提。
+机构库接受稿及 arXiv v5 的关键页已经核对；接受稿留数推导中
+$s=-1$ 处的局部笔误已记录，其主公式及本库使用的常数符号正确。
+Montgomery--Vaughan 第 420 页提供常数项的交叉核对
+\cite{MontgomeryVaughan}。
+旧源码注释中的 Hildebrand 课件 \cite{Hildebrand} 保留为历史来源，
+并非现有文献依据的全部。本库从 H4 推导四点差分及其加权显式公式，
+没有把加权公式或误差预算另列为输入；上游复分析证明仍未在本库重建。
+
+\subsection{H5：有限高度 RH}
+
+\begin{definition}[H5：高度不超过 $H$ 的零点]
+\label{hyp:finite-rh}
+对每个 $\rho\in\mathcal Z$，
+\[
+0<\Im\rho\le H\quad\Longrightarrow\quad\Re\rho=\frac12.
+\]
+\end{definition}
+对应 \leanref{FiniteRHInput}{FiniteRH3e12}。
+Platt--Trudgian 的正式期刊摘要明确给出闭高度上端
+$3\cdot10^{12}$ \cite{PlattTrudgian}；arXiv v1 的 Theorem 1
+实际达到 $3{,}000{,}175{,}332{,}800$。
+本库只使用较小的闭截断，不使用来源另给出的简单性。
+该来源是采用区间算术的已发表计算定理，本项目未重跑其大规模零点计算；
+从 H5 化简低高度加权零点和的步骤则已在本库形式化。
+
+\subsection{H6：CHJII 的共同高度截断}
+
+\begin{definition}[H6：短区间显式公式]
+\label{hyp:chj}
+设 $x,h,T\in\R$ 满足
+\[
+x>0,\quad\log x\ge40,\quad h\ge0,\qquad
+\max\{51,(\log x)^2\}<T<\frac{\sqrt{x}-2}{4}.
+\]
+令 $y=x+h$。则存在一个实数 $T^*\in[T,2T]$，使
+\begin{equation}
+\label{eq:chj-input}
+\left|\psi(y)-\psi(x)-h+
+\sum_{\rho\in\mathcal Z(T^*)}m(\rho)\frac{y^\rho-x^\rho}{\rho}\right|
+\le\frac{1447}{500T}\bigl(y\log y+x\log x\bigr).
+\end{equation}
+绝对值表示复模。
+\end{definition}
+对应 \leanref{LiteratureInputs}{CHJIIShortInterval}。
+来源为 Cully-Hugill--Johnston II \cite{CHJII} 的固定 arXiv v3，
+Theorem 1.3 与 Table 1 首行
+$\alpha=1/2,\omega=0,M=2.894=1447/500$。
+两端使用同一个 $T^*$，误差分母是 $T$，并且 $T$ 的两侧限制均为严格不等式。
+来源内部的 $\lambda=0.43$ 不另构成使用条件。
+该论文的正式发表身份已核实，所引定理、表格及相关证明在 v2/v3 中相同；
+期刊定稿与 arXiv 的直接比对仍待补。
+本库的独立标量检查得到 $2.8933994128\ldots<2.894$，并用 Arb
+认证了九个相关比较；这不等于完整解析定理的重证。
+来源审查另检查了本行的纸面全域归约，本库从 H6 推出的无限尾段结论
+则属于下游 Lean 证明。
+
+\subsection{H7：CHL 十二行素数区间}
+
+\begin{definition}[H7：指定 CHL 区间结论]
+\label{hyp:chl}
+对表~\ref{tab:chl-input} 中的每一对 $(X,\Delta)$，以及每个实数
+$y\ge X$，存在自然数素数 $p$ 满足
+\begin{equation}
+\label{eq:chl-input}
+y(1-\Delta^{-1})<p\le y.
+\end{equation}
+\end{definition}
+这正是 \leanref{Definitions}{CHLInterval} 及
+\leanref{CHLRange}{CHLRows}，没有额外 QRH 条件。
+
+\begin{table}[htbp]
+\centering\small
+\caption{H7 的全部参数。来源表的第一列为 $\log X$，此处列出 $X$ 本身。}
+\label{tab:chl-input}
+\begin{tabular}{lcr}
+\toprule
+Lean 字段 & $X$ & $\Delta$ \\
+\midrule
+\texttt{row0} & $4\cdot10^{18}$ & 39097000 \\
+\texttt{row43} & $\e^{43}$ & 41816800 \\
+\texttt{row46} & $\e^{46}$ & 163940000 \\
+\texttt{row50} & $\e^{50}$ & 1061200000 \\
+\texttt{row55} & $\e^{55}$ & 10288400000 \\
+\texttt{row60} & $\e^{60}$ & 76918400000 \\
+\texttt{row75} & $\e^{75}$ & 174043000000 \\
+\texttt{row90} & $\e^{90}$ & 184304000000 \\
+\texttt{row105} & $\e^{105}$ & 191886000000 \\
+\texttt{row120} & $\e^{120}$ & 197917000000 \\
+\texttt{row135} & $\e^{135}$ & 202553000000 \\
+\texttt{row150} & $\e^{150}$ & 207053000000 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+CHL 原文及其正式勘误均已发表 \cite{CHL,CHLcorr}。
+本库实际采用的是作者固定 arXiv v3（2022 年 9 月 14 日）的 Theorem 1
+和修订 Table 2；十二行整数、适用域及左开右闭端点已与 Lean 逐项核对。
+正式勘误的出版记录及摘要已确认，但全文表格尚未直接比对。
+作者代码重放还暴露了一个不同层次的问题：Arb 的精确十进制区间计算
+严格确认，公开的已舍入辅助参数生成的 $\Delta$ 在
+$\log X=50,60,75,90,105,135$ 六行略低于所报表值，最大相对不足约
+$3.36\cdot10^{-6}$。微调辅助参数后，普通高精度计算仍给出正判据余量；
+这只是可行性佐证，尚非完整 CHL 判据的严格独立认证。
+因此我们保留 H7 的精确陈述，同时公开版本比对和见证认证的未完成项，
+不以表格抄录通过代替上游证明。下游从这些区间到六次幂开区间的转换
+已在 Lean 中完成。
+
+\begin{remark}[输入与结论的逻辑边界]
+七项输入的发表或可信性证据不会使其自动从形式化定理的参数中消失。
+本节没有给出七个外部命题在本库中的证明项；给出这些命题后，
+\leanref{FinalResult}{sixth_powers_from_named_inputs}
+才产生所有自然数 $n\ge1$ 的六次幂结论。
+逐项发表状态、来源链接、数值复现范围与未完成项还以机器可读形式保存在
+\texttt{documentation/inputs.json}，便于审查者将数学依赖与证明状态分别核查。
+\end{remark}

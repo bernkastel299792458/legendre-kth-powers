@@ -1,0 +1,106 @@
+{
+  "schema": "qrh-current-paper-visual-aggregate-v1",
+  "status": "ALL_57_PAGES_VISUALLY_REVIEWED",
+  "recorded_utc": "2026-11-06T11:52:44.548179+00:00",
+  "pdf": "paper/current/main.pdf",
+  "pdf_sha256": "500fa769a0933774b677264fab06ecfa403cdc2bb67575f6e485f4ddaa3b446f",
+  "page_count": 57,
+  "render_tool": "pdftoppm",
+  "render_dpi": 110,
+  "review_method": "All 57 rendered pages were directly viewed, divided between the root and three Codex contexts. This aggregate checks complete, nonduplicated page coverage and exact PDF bindings.",
+  "chunks": [
+    {
+      "path": "audit/current_paper_visual_01_14.json",
+      "sha256": "0b7de3f3f2996b43f18929cace887c40c172a5749bb690badba99197f9b36262",
+      "pages": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14
+      ]
+    },
+    {
+      "path": "audit/current_paper_visual_15_28.json",
+      "sha256": "4db69bc6af6626341c8b38300a810afc76eabcc0a226e46d9c8c78b62aa68057",
+      "pages": [
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28
+      ]
+    },
+    {
+      "path": "audit/current_paper_visual_29_42.json",
+      "sha256": "62ba377c4dbde208a1419d41f5dc2640754513bce1d7d1c0ff6b63687714d75c",
+      "pages": [
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42
+      ]
+    },
+    {
+      "path": "audit/current_paper_visual_43_57.json",
+      "sha256": "b08888165ddb0ba1fb26527c7f5887637381b39ed06b09dbbce372c8ad39483f",
+      "pages": [
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57
+      ]
+    }
+  ],
+  "resolved_issues": [
+    "The initial TeX run silently omitted the bibliography after a failed style fetch; a bundled unmodified style and build guards fixed this.",
+    "The first complete PDF joined Lean filenames and declaration names too closely; explicit :: separators were added and all pages rechecked."
+  ],
+  "unresolved_layout_issues": [],
+  "build_report": {
+    "path": "paper/current/build_report.json",
+    "sha256": "3b4b9b2529f25873e22ab8d849187efbcb537cdba707bf235e6ab32d5f2b8016",
+    "bibliography_entries": 14,
+    "unresolved_references": []
+  },
+  "scope": "Visual layout review by project AI contributors, not human peer review or a mathematical proof check."
+}

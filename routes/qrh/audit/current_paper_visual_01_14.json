@@ -1,0 +1,96 @@
+{
+  "schema": "qrh-paper-visual-chunk-v1",
+  "reviewer": "Codex root; manuscript editor",
+  "reviewed_utc": "2026-11-06T11:41:58.211217+00:00",
+  "pdf": "paper/current/main.pdf",
+  "pdf_sha256": "500fa769a0933774b677264fab06ecfa403cdc2bb67575f6e485f4ddaa3b446f",
+  "render_command": "pdftoppm -r 110 -png paper/current/main.pdf tmp/paper-visual-final/page",
+  "method": "Each listed rendered page was viewed directly with view_image. Visual review, not a mathematical proof audit.",
+  "pages": [
+    {
+      "page": 1,
+      "status": "PASS",
+      "observations": "Title, author roles, both abstracts and page number fit; Chinese and mathematical fonts render.",
+      "render_sha256": "87046ce2ed7361e7f412eb1575a07f996d08edaec531aa74a80d911094ea5789"
+    },
+    {
+      "page": 2,
+      "status": "PASS",
+      "observations": "Contents leaders, heading levels and right-aligned page numbers are legible.",
+      "render_sha256": "912addb8f07280c5fe52b71fe88ef8427c9f43ebf25e60990ecea3371755f839"
+    },
+    {
+      "page": 3,
+      "status": "PASS",
+      "observations": "Contents mathematical intervals and subsections render without overlap.",
+      "render_sha256": "a2e14640f732c9ac36cd25ecc7b8b4835ef0743f20bbc49e44800362cce02faa"
+    },
+    {
+      "page": 4,
+      "status": "PASS",
+      "observations": "Contents appendices and page numbers fit; unused lower page space is intentional.",
+      "render_sha256": "64c20465c25010f33698f5f3c2c6d53165af0fc1af5b706bac68df2ea929b37d"
+    },
+    {
+      "page": 5,
+      "status": "PASS",
+      "observations": "Main theorem and short-interval definitions fit within margins.",
+      "render_sha256": "e1773a84a4e9102400a66ffb4ed3b4745bcbb225328a3c7997064f5120a9158c"
+    },
+    {
+      "page": 6,
+      "status": "PASS",
+      "observations": "Coverage table and introduction fit; first integer bound wraps within its own cell.",
+      "render_sha256": "fde54041600aaadda838c4f621fd9ffa6e2259f237fa899c09b7171fd568fda0"
+    },
+    {
+      "page": 7,
+      "status": "PASS",
+      "observations": "Input summary and zero-count notation are clear; visible :: separates Lean file and declarations.",
+      "render_sha256": "4c618c827b25346592437d303c3e4a5640632d9e5015c8e68bff64b8466df43e"
+    },
+    {
+      "page": 8,
+      "status": "PASS",
+      "observations": "Twelve CS coefficient rows and density inequality render clearly.",
+      "render_sha256": "cd4a86be0298695c71ad6bbec22e649e419f30ec6b1ff4b271b1483b740a72fe"
+    },
+    {
+      "page": 9,
+      "status": "PASS",
+      "observations": "Rosser and integrated explicit formulas fit with numbered multiline displays.",
+      "render_sha256": "22717bdde5f3b7d3e881240eee8ecd6e3f0c614db379709acf6566e15957783c"
+    },
+    {
+      "page": 10,
+      "status": "PASS",
+      "observations": "Finite-height RH and shared-height CHJII formula render without clipping.",
+      "render_sha256": "9d738fd4898f295efda960859e476116b604d5c897e4c74941605e86e028def6"
+    },
+    {
+      "page": 11,
+      "status": "PASS",
+      "observations": "Twelve CHL rows and source-status paragraphs fit.",
+      "render_sha256": "53a71adb59588d9bbd64327704d9c15559dfdbdc889b798c8dd915280fca2b2f"
+    },
+    {
+      "page": 12,
+      "status": "PASS",
+      "observations": "Zero-count definitions and theta-kernel cases fit, including the lower display.",
+      "render_sha256": "b79696d7d72185957efff8e06c13897c3959bc3a4703b3b9bbe23e6092ded42b"
+    },
+    {
+      "page": 13,
+      "status": "PASS",
+      "observations": "Real-axis proof, complex-power estimate and prime-power bound are legible.",
+      "render_sha256": "b9619d6077366ec1be1db81c0cee7b01b2cf407bc58dbb80989a80250981fb00"
+    },
+    {
+      "page": 14,
+      "status": "PASS",
+      "observations": "Strict-endpoint extraction and chapter 4 opening fit; long Lean identifier wraps within margins.",
+      "render_sha256": "7a2f4f138ed18d5766386691a6fca8589cb12c0bf1bdeadbc701fa1e7a8f6c5f"
+    }
+  ],
+  "unresolved_layout_issues": []
+}

@@ -1,0 +1,46 @@
+\section{形式化对应、复现与研究贡献}\label{sec:formalization}
+
+\subsection{最终形式化命题}
+本项目使用 Lean 的实际自然数素性谓词与 Mathlib 的实际黎曼 zeta 函数。最终定理为
+\begin{Verbatim}[fontsize=\small,breaklines=true]
+theorem sixth_powers_from_named_inputs
+  (HQ : QRHSevenEighths) (HC : CSv2)
+  (HR : RosserZeroCount) (HI : IntegratedExplicitFormula)
+  (HFR : FiniteRH3e12) (HJ : CHJIIShortInterval)
+  (HCHL : CHLRows) : SixthPowerConclusion
+\end{Verbatim}
+其中 \repofile{SixthPowerConclusion} 展开即为对所有自然数 $n\ge1$，存在自然数素数 $p$ 严格位于相邻六次幂之间。更强的 \repofile{sixth_power_short_from_named_inputs} 给出 $p<n^6+6n^5$。
+
+七项输入在定理参数中显式出现。其后没有再假定“中段成立”“某个数值证书正确”或“加权零点和满足所需上界”。这些中间结论由前述数学构造及项目中的证明项给出。每章的形式化对应，以及仓库的证明导读，将人类表述连接到实际声明。声明名存在只能确认链接有效，数学含义的一致性仍须通过陈述与证明的逐项核对。
+
+\subsection{证书生成与证书检查}
+本项目的有限计算有三种不同角色。
+\begin{enumerate}
+\item 素性见证给出因数分解、模幂和递归 Lucas/Pratt 数据，Lean 检查这些数据确实证明每个所需整数为素数。
+\item 解析证书提供有理包围与有限整数矩。Lean 证明真实指数、对数及实幂落在这些包围内，再检查整数不等式。Python 或 Arb 的候选输出可以被更换，只要重新提交的数据仍通过同一检查。
+\item 文献来源审查中的 Arb\cite{Arb} 重放核验指定数值公式，其结果作为外部证据保存。它不自动成为 Lean 定理，也不能替代尚未重证的上游解析命题。
+\end{enumerate}
+这一划分解释了为什么仓库既保留数据，也保留生成器和证明理论：生成器使数据可重现，证明项说明数据为什么足够，实际内核检查确认指定数据满足形式化命题。
+
+\subsection{固定环境与验收记录}
+当前源码固定 Lean \repofile{v4.36.0-rc2}\cite{LeanPinned}，Mathlib\cite{MathlibPinned} 提交为
+\begin{center}\small\nolinkurl{9d581dfff2e41de989072ea63abf3daf69311520}\end{center}
+全部传递依赖由 \repofile{lean/lake-manifest.json} 记录。历史最终验收在一个原先不存在的输出目录中重建了 $241$ 个项目模块，全部通过，并在对应产物上执行最终依赖审计。该记录位于 \repofile{audit/builds/final-20261106/}，其源码与产物散列由验收检查点绑定。
+
+依赖审计同时打印最终定理的完整参数和证明项中实际使用的本地声明。最终公理报告仅含 \repofile{propext}、\repofile{Classical.choice}、\repofile{Quot.sound}。由于外部命题作为参数出现，单独观察公理列表不能说明它们已经得到证明；完整类型与依赖记录必须一起阅读。
+
+本次整理保留上述数学源码与原验收记录，同时在新的干净源码导出上执行独立输出目录的重建和原始证书重放。完成状态、执行环境、散列与耗时记录于 \repofile{audit/archive_review_2026-11-06.json}。它是整理版本的复现证据，不改写旧验收发生时的记录。
+
+\subsection{读者的复现顺序}
+从指定发行提交检出仓库后，先检查发布文件散列；再按 \repofile{REPRODUCING.md} 安装固定环境，验证原始证书和生成源码；随后重建全部 Lean 模块并运行最终依赖审计。论文在 \repofile{paper/current/} 中单独构建。排版编译只产生阅读版本，数学验证由上述证明和数值检查完成。
+
+发布包包含本项目全部 Lean 源码，包括生成的素性与数值证书证明文件。Mathlib 等第三方依赖按固定提交取得，缓存和机器专用产物不作为原创源码分发。原始证书、历史报告与本次整理后的文档之间通过散列和版本索引对应。
+
+\subsection{AI 研究贡献与审阅范围}
+按项目发起人的署名约定，Claude 与 Codex 作为 AI 系统贡献者列名。Codex 负责 QRH 路线的研究组织、解析推导、数值实现、证书细化、Lean 实现、来源核查及本稿整理。Claude 负责传统显式估计路线，并对 QRH 路线早期版本提供审阅；其意见推动了 CS v2 依赖显式化及中段网格细化。那份历史审阅的范围限于对应版本。
+
+项目发起人提出目标、决定路线与质量要求、要求公开完整材料，并审核发布。人类姓名、单位与联系信息暂未填写。Codex 的不同代理上下文参与实现和交叉检查，相关报告区分实现与复核角色；这些记录不等同于人类专家同行评审。
+
+部分交互、模型后端标识及随机性信息未完整保存，故研究过程按可核对的工作记录、源码和数学产物归档。可重复执行的是固定数学输入、程序、证书生成和指定工具链下的验证。完整贡献说明见 \repofile{AI_USE.md} 与根目录 \repofile{AUTHORS.md}。
+
+QRH 路线原创代码采用 0BSD，原创论文、说明和数据采用 CC0。被引用论文、软件依赖与作者原始代码保留各自许可。参考文献列出正式出版信息和精确版本；来源下载及历史版本定位信息另见输入登记与专项报告。

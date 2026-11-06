@@ -1,0 +1,28 @@
+{
+  "repository": "https://github.com/bernkastel299792458/legendre-kth-powers",
+  "package_directory": "conditional-k6",
+  "commit": "58521b66535af8c7d7bc4a3692d66b8d50939c5b",
+  "ci_run": "https://github.com/bernkastel299792458/legendre-kth-powers/actions/runs/42153017737",
+  "ci_conclusion": "success",
+  "jobs": [
+    {
+      "name": "Numerical certificates and generated-source consistency",
+      "conclusion": "success",
+      "url": "https://github.com/bernkastel299792458/legendre-kth-powers/actions/runs/42153017737/job/127680875030"
+    },
+    {
+      "name": "All Lean modules and explicit-parameter audit (partial formalization)",
+      "conclusion": "success",
+      "url": "https://github.com/bernkastel299792458/legendre-kth-powers/actions/runs/42153017737/job/127680875348"
+    }
+  ],
+  "local_lean_modules": 46,
+  "end_to_end_H1_H2_lean_formalization": false,
+  "pdf_sha256": "afa4f74b7699ae1e7268c41c0659bce8b1baa16788fc80974313ed525111047d",
+  "release_manifest_sha256": "1f6aa5d8f1500e0f8d48b50139bbe0b8d78e54464381eafa58454ebb887d9d86",
+  "license": {
+    "original_software": "0BSD",
+    "original_paper_documentation_data": "CC0-1.0"
+  },
+  "first_ci_note": "Initial numerical job passed three modules but strict tail metadata compared Python 3.12.16 with frozen 3.12.10. CI was pinned to 3.12.10; the second full run succeeded without mathematical-source or certificate changes."
+}

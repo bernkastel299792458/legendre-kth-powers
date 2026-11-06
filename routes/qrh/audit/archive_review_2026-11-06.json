@@ -1,0 +1,107 @@
+{
+  "schema": "qrh-archival-review-v1",
+  "status": "LOCAL_REVIEW_PACKAGE_VERIFIED",
+  "recorded_utc": "2026-11-06T12:09:45.811033+00:00",
+  "baseline_commit": "37b7fbcbb3b900b86600996642eccdfe465d8fdd",
+  "branch": "codex/qrh-archive-review-20261106",
+  "publication_status": "NOT_PUSHED_OWNER_REVIEW_PENDING",
+  "mathematical_scope": "For every natural n>=1, a prime satisfies n^6<p<n^6+6*n^5<(n+1)^6, relative to the seven named external mathematical inputs. This archival operation does not reprove them.",
+  "external_inputs": [
+    "QRHSevenEighths",
+    "CSv2",
+    "RosserZeroCount",
+    "IntegratedExplicitFormula",
+    "FiniteRH3e12",
+    "CHJIIShortInterval",
+    "CHLRows"
+  ],
+  "fresh_lean_build": {
+    "status": "ALL_PRESENT_LEAN_MODULES_COMPILED",
+    "modules": 241,
+    "elapsed_seconds": 3525.235,
+    "fresh_project_outputs": true,
+    "source": "Clean git-archive export of the baseline commit; every module hash also matches the current publication source.",
+    "dependency_cache_mode": "read-only external cache",
+    "dependency_sources_rebuilt": false
+  },
+  "matching_dependency_audit": {
+    "status": "FINAL_K6_DEPENDENCY_AUDIT_PASSED",
+    "elapsed_seconds": 25.5,
+    "standard_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "errors": []
+  },
+  "numerical_replay": {
+    "command": "python -u code/verify_k6.py --dry-run",
+    "exit_code": 0,
+    "modules_passed": 4,
+    "duration_recorded": false
+  },
+  "source_preservation": {
+    "protected_files": 628,
+    "all_still_match_baseline": true,
+    "traditional_readme_sections_still_identical": true
+  },
+  "paper": {
+    "pages": 57,
+    "references": 14,
+    "source_files_bound": 17,
+    "all_pages_visually_reviewed": true,
+    "overfull_boxes_in_final_tex_log": 0,
+    "build_check_stdout": "PAPER_SOURCE_PDF_BINDING_PASS 17"
+  },
+  "reading_map": {
+    "check_stdout": "READING_MAP_VERIFIED 150",
+    "scope": "Declaration/file resolution, TeX labels and bibliography keys; semantic cross-reading is recorded separately."
+  },
+  "research_snapshot": {
+    "files": 177,
+    "bytes": 3782882,
+    "check_stdout": "SNAPSHOT_BYTES_VERIFIED",
+    "historical_mathematics_rerun": false
+  },
+  "final_document_links": {
+    "documents": 18,
+    "relative_links": 508,
+    "missing": [],
+    "self_record_destination_created_by_this_write": true,
+    "historical_unresolved_links": "research-history/dependency_gaps.json"
+  },
+  "json_parser_check": {
+    "parsed_existing_json_files": 95,
+    "errors": []
+  },
+  "frozen_generator_checks": {
+    "rerun_this_archival_turn": false,
+    "reason": "The previously accepted six generator checks remain source-bound and all original mathematical code/data bytes are unchanged. This turn independently rebuilt all Lean proof terms and replayed the four historical numerical certificates.",
+    "record": "audit/final_source_regeneration.json"
+  },
+  "evidence_sha256": {
+    "audit/builds/archive-review-20261106/lean_build_report.json": "eec0fe171b5fcdedeedfe5be02b61c11ccfab26f36075fae5e43ebafe2e6a1ee",
+    "audit/builds/archive-review-20261106/final_dependency_report.json": "91d9aae8985ebfdbf6a386b6d912cf0b1f0b7fb8c6d117c414db5802e452d47e",
+    "audit/builds/archive-review-20261106/final_dependencies.txt": "430d823cb8ddbdbcba386d46ab77679d7d6fcf1147b9a89d2a2709636fe238aa",
+    "audit/builds/archive-review-20261106/kernel_axioms.txt": "aadb7440f10a0c64662d1545f98802de32aaeb169efad6f9355d73ca249a3de7",
+    "audit/archive_build_independent_check.json": "3cd3fb0f96a9683e4061ca9dcc5f6af3eb296688e36e3e0bdb8155ed7a820ea1",
+    "audit/archive_source_preservation.json": "d485b5671d663088edb21836663a60b0ffdc8348eac3f3245f877d1edd331300",
+    "audit/archive_numerical_replay_2026-11-06.json": "3cd3decd9ab53aec2e999ae5b2e51e34cf020424984d2e0d9444f243f7c92237",
+    "audit/current_paper_visual_review.json": "cd9f8f03c526f637b631ea2f6d141f496ea8aeb32b336a9a8e735d882eb57250",
+    "audit/current_package_navigation_review.json": "7f660ba119f18134006be2aac153451a161186e35578965930c6d50478c9db56",
+    "audit/current_document_tooling_review.md": "fe57e671786a9fcf932fd729f77a29dc7e5d2e8b22e708edd4d4dd3765b23d2a",
+    "audit/current_manuscript_analytic_crossreview.md": "a202c242eecb574c506c30163601172d6f57213a6f56e175fb1b4e887f41dea0",
+    "audit/current_manuscript_tail_crossreview.md": "76cc2c59864f4bef2ccf62b0b9480bfa257ebe699ca3d4a02c6d6df227a275b4",
+    "documentation/inputs.json": "95375797592b95270621849b5de8f65a93a2620ff16c52d2b06516b3aa623ff9",
+    "documentation/blueprint/reading_map.json": "bd2ea2937883cd11774d1fa7d752293e054e08ef5d5a389a06648ffe7381f157",
+    "paper/current/build_report.json": "3b4b9b2529f25873e22ab8d849187efbcb537cdba707bf235e6ab32d5f2b8016",
+    "paper/current/main.pdf": "500fa769a0933774b677264fab06ecfa403cdc2bb67575f6e485f4ddaa3b446f",
+    "research-history/snapshot_manifest.json": "b67c55782f61ebb180ceb8a5fea8db37f3492fab2dd99c5520f5719338d85e2b"
+  },
+  "release_binding": "MANIFEST.json is generated after this record and binds its exact bytes. Run python code/release_manifest.py --check for the full package.",
+  "limitations": [
+    "The seven upstream inputs remain explicit assumptions.",
+    "Human expert peer review has not been recorded.",
+    "The k=4 R3-R5 materials are historical snapshots with separate premises, not newly accepted k=6 proof inputs."
+  ]
+}

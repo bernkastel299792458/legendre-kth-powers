@@ -1,0 +1,235 @@
+{
+  "status": "EXPLORATORY",
+  "created": "2026-11-06T04:01:31.226803+08:00",
+  "arguments": {
+    "ks": "3,4,5,6,7,8",
+    "degrees": "2,3,4,6,8",
+    "ls": "60,75,90,100,105,109,110,120,130,140,150,175,200,250,300,400,500,600,700,800",
+    "output": "smooth_all_k",
+    "height_order": 16,
+    "sigma_order": 12,
+    "max_step": 3,
+    "density": "hybrid",
+    "no_bv": false,
+    "no_symmetry": false,
+    "check_only": false
+  },
+  "python": "3.12.10",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "code_sha256": "96bcb3738feddc6229325b6d01970a7a299c3267d1d38e7a521465ecd702545b",
+  "csv_sha256": "0a95246ac456dcef3bdd33e1704c98b8b37978875039d805997311eaa35dcaec",
+  "checks": {
+    "kernel_M2": [
+      1.0,
+      3.75,
+      23.094010767585036,
+      299.99999999999994
+    ],
+    "quadrature_relative_difference": 6.056094066029682e-10,
+    "note": "Numerical consistency checks only; not proof certification"
+  },
+  "summary": [
+    {
+      "k": 3,
+      "sampled_failing_L": [
+        90.0,
+        100.0,
+        105.0,
+        109.0,
+        110.0,
+        120.0,
+        130.0,
+        140.0,
+        150.0,
+        175.0,
+        200.0,
+        250.0,
+        300.0,
+        400.0,
+        500.0,
+        600.0,
+        700.0,
+        800.0
+      ],
+      "worst_sample": {
+        "k": 3,
+        "L": 200.0,
+        "M": 2,
+        "bv": true,
+        "density": "hybrid",
+        "symmetry": true,
+        "baseline": 2.0366447176917957e-13,
+        "density_layers": 5094335.267662276,
+        "height_tail": 4.983829792308602e-25,
+        "prime_powers": 6.020073890851487e-11,
+        "trivial_zeros": 2.6503965530043108e-261,
+        "delta": 5094335.267662276,
+        "margin": -5094334.267662276,
+        "height_end": 118.70397280432594,
+        "height_order": 16,
+        "sigma_order": 12,
+        "max_height_step": 3,
+        "status": "EXPLORATORY"
+      },
+      "note": "Sampling does not certify any continuous range"
+    },
+    {
+      "k": 4,
+      "sampled_failing_L": [
+        105.0,
+        109.0,
+        110.0,
+        120.0,
+        130.0,
+        140.0,
+        150.0,
+        175.0,
+        200.0,
+        250.0,
+        300.0,
+        400.0
+      ],
+      "worst_sample": {
+        "k": 4,
+        "L": 120.0,
+        "M": 2,
+        "bv": true,
+        "density": "hybrid",
+        "symmetry": true,
+        "baseline": 1.9506171721825885e-12,
+        "density_layers": 25638.376371424347,
+        "height_tail": 8.974348020410693e-28,
+        "prime_powers": 4.5563162349342344e-10,
+        "trivial_zeros": 4.508027065606742e-157,
+        "delta": 25638.376371424805,
+        "margin": -25637.376371424805,
+        "height_end": 71.1779148037568,
+        "height_order": 16,
+        "sigma_order": 12,
+        "max_height_step": 3,
+        "status": "EXPLORATORY"
+      },
+      "note": "Sampling does not certify any continuous range"
+    },
+    {
+      "k": 5,
+      "sampled_failing_L": [
+        140.0,
+        150.0,
+        175.0,
+        200.0,
+        250.0
+      ],
+      "worst_sample": {
+        "k": 5,
+        "L": 150.0,
+        "M": 2,
+        "bv": true,
+        "density": "hybrid",
+        "symmetry": true,
+        "baseline": 4.739138476365487e-19,
+        "density_layers": 435.4876119675011,
+        "height_tail": 1.6831950979262477e-29,
+        "prime_powers": 1.742234636508236e-16,
+        "trivial_zeros": 3.693883068487256e-196,
+        "delta": 435.4876119675011,
+        "margin": -434.4876119675011,
+        "height_end": 70.9547712524427,
+        "height_order": 16,
+        "sigma_order": 12,
+        "max_height_step": 3,
+        "status": "EXPLORATORY"
+      },
+      "note": "Sampling does not certify any continuous range"
+    },
+    {
+      "k": 6,
+      "sampled_failing_L": [
+        175.0,
+        200.0
+      ],
+      "worst_sample": {
+        "k": 6,
+        "L": 175.0,
+        "M": 2,
+        "bv": true,
+        "density": "hybrid",
+        "symmetry": true,
+        "baseline": 6.184626618657391e-25,
+        "density_layers": 10.527839986488246,
+        "height_tail": 2.6403016880952805e-31,
+        "prime_powers": 3.2005593474200354e-22,
+        "trivial_zeros": 9.894571719847004e-229,
+        "delta": 10.527839986488246,
+        "margin": -9.527839986488246,
+        "height_end": 69.93911636231623,
+        "height_order": 16,
+        "sigma_order": 12,
+        "max_height_step": 3,
+        "status": "EXPLORATORY"
+      },
+      "note": "Sampling does not certify any continuous range"
+    },
+    {
+      "k": 7,
+      "sampled_failing_L": [],
+      "worst_sample": {
+        "k": 7,
+        "L": 200.0,
+        "M": 2,
+        "bv": true,
+        "density": "hybrid",
+        "symmetry": true,
+        "baseline": 1.0618713047335837e-30,
+        "density_layers": 0.13616844975570297,
+        "height_tail": 5.4247878076427114e-33,
+        "prime_powers": 7.363314409474495e-28,
+        "trivial_zeros": 2.6503965530043108e-261,
+        "delta": 0.13616844975570297,
+        "margin": 0.863831550244297,
+        "height_end": 69.18972758725232,
+        "height_order": 16,
+        "sigma_order": 12,
+        "max_height_step": 3,
+        "status": "EXPLORATORY"
+      },
+      "note": "Sampling does not certify any continuous range"
+    },
+    {
+      "k": 8,
+      "sampled_failing_L": [],
+      "worst_sample": {
+        "k": 8,
+        "L": 250.0,
+        "M": 2,
+        "bv": true,
+        "density": "hybrid",
+        "symmetry": true,
+        "baseline": 2.044655797215666e-40,
+        "density_layers": 0.0017131466036789176,
+        "height_tail": 1.3833007115724337e-34,
+        "prime_powers": 2.036236262148579e-37,
+        "trivial_zeros": 0.0,
+        "delta": 0.0017131466036789176,
+        "margin": 0.9982868533963211,
+        "height_end": 71.7347676231967,
+        "height_order": 16,
+        "sigma_order": 12,
+        "max_height_step": 3,
+        "status": "EXPLORATORY"
+      },
+      "note": "Sampling does not certify any continuous range"
+    }
+  ],
+  "sources": [
+    "https://arxiv.org/html/2507.15184v1",
+    "https://arxiv.org/html/2204.02588v3"
+  ],
+  "limitations": [
+    "Floating-point Jacobi roots and quadrature",
+    "No interval proof",
+    "Analytic height-tail expression evaluated in floating point",
+    "No claims between sampled L values"
+  ]
+}

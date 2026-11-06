@@ -1,0 +1,80 @@
+{
+  "status": "EXPLORATORY",
+  "created": "2026-11-06T04:03:56.163757+08:00",
+  "arguments": {
+    "ks": "4",
+    "degrees": "2,3,4,6,8",
+    "ls": "109.46,115,120,130,150,300,400,440,450,460,470,480,500",
+    "output": "smooth_k4_refined",
+    "height_order": 28,
+    "sigma_order": 24,
+    "max_step": 1.0,
+    "density": "hybrid",
+    "no_bv": false,
+    "no_symmetry": false,
+    "check_only": false
+  },
+  "python": "3.12.10",
+  "numpy": "2.5.4",
+  "scipy": "1.18.1",
+  "code_sha256": "96bcb3738feddc6229325b6d01970a7a299c3267d1d38e7a521465ecd702545b",
+  "csv_sha256": "85091e899d4954cbd3d82bb1655c123e045409c319f14d1797b297ffa7a19671",
+  "checks": {
+    "kernel_M2": [
+      1.0,
+      3.75,
+      23.094010767585036,
+      299.99999999999994
+    ],
+    "quadrature_relative_difference": 6.056094066029682e-10,
+    "note": "Numerical consistency checks only; not proof certification"
+  },
+  "summary": [
+    {
+      "k": 4,
+      "sampled_failing_L": [
+        109.46,
+        115.0,
+        120.0,
+        130.0,
+        150.0,
+        300.0,
+        400.0,
+        440.0,
+        450.0,
+        460.0
+      ],
+      "worst_sample": {
+        "k": 4,
+        "L": 115.0,
+        "M": 2,
+        "bv": true,
+        "density": "hybrid",
+        "symmetry": true,
+        "baseline": 6.533099088070214e-12,
+        "density_layers": 26943.474064534137,
+        "height_tail": 4.719851378745091e-28,
+        "prime_powers": 1.4605456985216179e-09,
+        "trivial_zeros": 1.473681879304291e-150,
+        "delta": 26943.474064535603,
+        "margin": -26942.474064535603,
+        "height_end": 69.92791480375774,
+        "height_order": 28,
+        "sigma_order": 24,
+        "max_height_step": 1.0,
+        "status": "EXPLORATORY"
+      },
+      "note": "Sampling does not certify any continuous range"
+    }
+  ],
+  "sources": [
+    "https://arxiv.org/html/2507.15184v1",
+    "https://arxiv.org/html/2204.02588v3"
+  ],
+  "limitations": [
+    "Floating-point Jacobi roots and quadrature",
+    "No interval proof",
+    "Analytic height-tail expression evaluated in floating point",
+    "No claims between sampled L values"
+  ]
+}

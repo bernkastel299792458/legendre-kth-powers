@@ -25,7 +25,7 @@ and the new arguments in its manuscript.
 |---|---|---|---|
 | **A. Traditional explicit estimates** | Every integer **k >= 70** | The listed explicit estimates, including the **4.896** zero-free-region constant from the Bellotti–Trudgian–Yang preprint. No QRH assumption. | [Traditional manuscript, English](routes/traditional/proof/manuscript.md) |
 | **A. Traditional, refereed-input variant** | Every integer **k >= 74** | The listed refereed literature inputs, using **5.558691** in place of 4.896. No QRH assumption. | [Traditional review package](routes/traditional/proof/README.md) |
-| **B. Assuming QRH(7/8)** | Fixed exponent **k = 6** | **H1:** every nontrivial zeta zero has real part at most 7/8. **H2:** CS **arXiv:2507.15184v2**, Corollary 1 and the specified table rows, plus the cited auxiliary inputs. | [QRH route package](routes/qrh/README.md) · [Chinese paper, PDF](routes/qrh/paper/main.pdf) |
+| **B. Assuming QRH(7/8)** | Fixed exponent **k = 6** | **Seven named inputs**, including QRH(7/8), CS **arXiv:2507.15184v2** Corollary 1 and its specified rows; [complete statements](routes/qrh/documentation/inputs.md). | [QRH route package](routes/qrh/README.md) · [Chinese paper, PDF](routes/qrh/paper/current/main.pdf) |
 
 “Refereed-input” describes the sources used by that variant; it does not mean
 that this project's new proof has been peer-reviewed. The two tracks answer
@@ -74,79 +74,38 @@ The historical Lean package name `LegendreK67` is not a current k = 67 claim.
 
 ## Track B — assuming QRH(7/8)
 
-### Result and explicit premises
+This route accepts the zeta bound in [OpenAI's official quasi-RH release](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/README.md)
+as an explicit research premise. [Family 003](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/003.md)
+describes the upstream formalization; this project studies its prime-interval consequences.
 
-We adopt QRH(7/8) as this track's starting point because OpenAI has released
-its [September 30, 2026 proof manuscript on the 7/8 zero-free half-plane](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/README.md)
-and accompanying Lean materials in the [official openai/math repository](https://github.com/openai/math).
-We take its bound on nontrivial zeta zeros as an explicit upstream input and
-investigate the resulting prime intervals between consecutive powers.
+Under **seven precise inputs** — QRH(7/8), CS v2, Rosser, the integrated explicit
+formula, finite-height RH, CHJII and CHL — every integer n≥1 has a prime
+`n^6 < p < n^6+6n^5 < (n+1)^6`. The [input register](routes/qrh/documentation/inputs.md)
+gives exact statements, source versions and the evidence for each premise.
+CS v2 remains a preprint dependency; all seven inputs remain explicit in Lean.
 
-OpenAI's [Family 003 documentation](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/003.md) specifies the scope of its
-7/8 formalization. We have not independently rebuilt its complete dependencies
-or run the upstream Comparator, so H1 remains explicit in our theorem statements.
-That upstream formalization is distinct from this project's downstream
-prime-interval proof, whose exact inputs and build status are listed below.
+The complete downstream theorem, `sixth_powers_from_named_inputs`, passed a
+fresh **241-module** build and its matching proof-dependency audit. Project
+analytic intervals and numerical budgets are proved, not additional premises.
+See the [exact formalization status](routes/qrh/FORMALIZATION_STATUS.md).
 
-This track also explicitly assumes the
-Chourasiya–Simonič **v2** density result, treated as a preprint dependency:
-Corollary 1, Table 1 rows indexed **16–27** (the first 12 rows), on their
-specified domains. The cited classical auxiliary inputs are listed in the
-[paper](routes/qrh/paper/manuscript.md).
+The reorganized package provides a [new twelve-chapter Chinese paper](routes/qrh/paper/current/main.pdf),
+[paper-to-Lean guide](routes/qrh/documentation/blueprint/README.md),
+[bilingual route entry](routes/qrh/README.md), and a [research-history archive](routes/qrh/research-history/README.md).
+The paper explains the actual final trapezoid proof and continuous propagation;
+the original polynomial-weight paper and its certificates remain historical.
+The old 6% CS-coefficient sensitivity result retains its original scope.
 
-Under these inputs, the written argument gives, for every integer n >= 1, a prime
-
-```text
-n^6 < p < n^6 + 6n^5 < (n+1)^6.
-```
-
-The result is conditional on **both H1 and H2**, not on QRH alone. The project
-has not obtained an all-n result for k = 4 or k = 3; those remain the stage
-and longer-term research targets respectively.
-
-### Evidence and limits
-
-The package combines 1259 small-range prime witnesses and CHL interval rows,
-**94** middle cells, **60** further cells, and an analytic infinite tail.
-The refined middle bound is at most `0.939735996783828324763044`. With all
-other inputs, exponents, and domains fixed, uniformly increasing all three
-CS coefficient columns by **6%** still passes the written proof chain.
-That sensitivity check does not validate the CS theorem itself.
-
-The final Lean theorem `sixth_powers_from_named_inputs` has compiled with type
-
-```text
-QRHSevenEighths -> CSv2 -> RosserZeroCount -> IntegratedExplicitFormula ->
-  FiniteRH3e12 -> CHJIIShortInterval -> CHLRows -> SixthPowerConclusion
-```
-
-All project-specific analytic segments and numerical budgets are proved.
-There is no local prime-interval or certificate-correctness premise in this
-final type. The proof covers every point of the 94 middle and 60 far cells,
-plus the integer lower range and infinite tail. The far formal argument uses
-a new trapezoid certificate; the historical polynomial proof is preserved.
-The original 6% coefficient-sensitivity result is not automatically a property
-of the new conservative formal lower-range bound.
-
-See the [readable formalization addendum](routes/qrh/paper/lean_formalization_addendum.md),
-[final theorem source](routes/qrh/lean/LegendreK6/FinalResult.lean), and
-[exact formalization status](routes/qrh/FORMALIZATION_STATUS.md).
-The [clean 241-module build](routes/qrh/audit/builds/final-20261106/lean_build_report.json)
-and [matching proof-dependency audit](routes/qrh/audit/builds/final-20261106/final_dependency_report.json)
-both passed, with only the standard Lean axioms. This is
-a complete downstream proof relative to all seven named inputs, not a
-re-proof of the auxiliary literature or a QRH/CS-only theorem.
-
-The earlier [Linux CI run](https://github.com/bernkastel299792458/legendre-kth-powers/actions/runs/42153017737)
-at `58521b6` remains historical evidence for its original partial scope.
-It is not presented as a build of these new sources.
+The full-range result is k=6; k=4 and k=3 remain the stage and long-term targets.
+The current archival reorganization is [awaiting local review](routes/qrh/REVIEW_THIS_RELEASE.md)
+before push. The traditional route's mathematical materials are unchanged by it.
 
 ## Read, reproduce, and review
 
 | Purpose | Traditional track | QRH track |
 |---|---|---|
-| Read the argument | [English manuscript](routes/traditional/proof/manuscript.md) | [Original manuscript](routes/qrh/paper/manuscript.md) · [Formal proof addendum](routes/qrh/paper/lean_formalization_addendum.md) |
-| Inspect dependencies | [Manuscript §3](routes/traditional/proof/manuscript.md) · [Sources](routes/traditional/SOURCES.md) | [Paper §1](routes/qrh/paper/manuscript.md) · [BibTeX](routes/qrh/paper/references.bib) |
+| Read the argument | [English manuscript](routes/traditional/proof/manuscript.md) | [Current paper](routes/qrh/paper/current/main.pdf) · [Proof guide](routes/qrh/documentation/blueprint/README.md) |
+| Inspect dependencies | [Manuscript §3](routes/traditional/proof/manuscript.md) · [Sources](routes/traditional/SOURCES.md) | [Seven inputs](routes/qrh/documentation/inputs.md) · [BibTeX](routes/qrh/paper/current/references.bib) |
 | Reproduce computations | [Review package](routes/traditional/proof/README.md#如何复核) | [Reproduction instructions](routes/qrh/REPRODUCING.md) |
 | Understand Lean coverage | [Assembly scope](routes/traditional/proof/README.md#lean-证明了什么) | [Exact theorem and acceptance evidence](routes/qrh/FORMALIZATION_STATUS.md) |
 | Review the evidence | [Checklist](routes/traditional/proof/REVIEW_CHECKLIST.md) · [AI reviews and responses](routes/traditional/review/) | [Scope review](routes/qrh/audit/PUBLICATION_SCOPE_REVIEW.md) · [Historical reviews](routes/qrh/audit/source_reviews/README.md) |

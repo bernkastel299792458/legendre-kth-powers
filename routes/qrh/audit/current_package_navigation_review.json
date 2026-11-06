@@ -1,0 +1,352 @@
+{
+  "schema_version": 1,
+  "created_at_utc": "2026-11-06T11:37:09.248514+00:00",
+  "status": "CURRENT_PACKAGE_NAVIGATION_AND_INPUT_BINDINGS_PASSED",
+  "reviewer": "Codex child agent credibility_cs_finite; AI review with implementation overlap on input register and research-history archive; not independent human peer review.",
+  "publication_state": "LOCAL_OWNER_REVIEW_ONLY_NO_PUSH",
+  "scope": {
+    "pages": [
+      {
+        "path": "README.md",
+        "sha256": "67648aafb12e585f3c905d6d89e718dd7f43fb85066aed1119d0fce0d4bc0eb5"
+      },
+      {
+        "path": "README.zh-CN.md",
+        "sha256": "2ed503f588d98c265234c0b31b69325f30358414e3fa6b52777605f3bd152a8c"
+      },
+      {
+        "path": "REPRODUCING.md",
+        "sha256": "2588564d24ad1f8fe0c364e95d3d085e18eaaef310e91f5183144b352048fc2b"
+      },
+      {
+        "path": "paper/current/README.md",
+        "sha256": "114c5c7d45886014c66c779b2895588951e6815c3013f1008436caee122837bf"
+      },
+      {
+        "path": "documentation/inputs.md",
+        "sha256": "1efc5495ba14ea7bc00db361770c3d11e71dfbdc8ef79d5a414e690dd3d01d19"
+      },
+      {
+        "path": "documentation/README.md",
+        "sha256": "8349d3468768f428e3fc5daed2673fc539c56594870f77a3126d47d8f876a25f"
+      },
+      {
+        "path": "documentation/blueprint/README.md",
+        "sha256": "eed4c53069de9bf86ef33644056645e80c449f7d5c86f47dd5e7380fef025b46"
+      },
+      {
+        "path": "documentation/blueprint/theorem_map.md",
+        "sha256": "99e758317e2132680bed9e1e12e00ea3604102398f19ff36b8efd6902440ac2d"
+      },
+      {
+        "path": "research-history/chronological_review.md",
+        "sha256": "537ad8a68ecbd5365dd1784a39b4bf9e8571b2c89f983ac500ea52f3157e5285"
+      },
+      {
+        "path": "research-history/dependency_gaps.md",
+        "sha256": "362f2d2cad409764ef27e87cda106de23d10673941a19d8e2edc40c43194f553"
+      },
+      {
+        "path": "research-history/README.md",
+        "sha256": "fa7d092caccb11aefad842f852673afc64a8054446824de4defa1ece1f78a4db"
+      }
+    ],
+    "route_relative_paths": true,
+    "not_a_mathematical_reproof": true,
+    "pdf_visual_review": "Separate report; not included here."
+  },
+  "commands": [
+    {
+      "working_directory": "routes/qrh",
+      "command": "python -X utf8 code/build_reading_map.py --check",
+      "exit_code": 0,
+      "stdout": "READING_MAP_VERIFIED 150",
+      "last_rerun_at_utc": "2026-11-06T11:42:35.361706+00:00",
+      "reading_map_sha256": "bd2ea2937883cd11774d1fa7d752293e054e08ef5d5a389a06648ffe7381f157"
+    },
+    {
+      "working_directory": "repository root",
+      "command": "python -X utf8 -",
+      "execution": "Inline read-only Python checks using pathlib, hashlib, json, re and urllib.parse. Exact checks and results are itemized below; no standalone test file added."
+    },
+    {
+      "working_directory": "repository root",
+      "command": "python -X utf8 -",
+      "execution": "Inline Python runpy invocation of snapshot_legacy.py, with --verify-only and --source-root set to a nonexistent path, while an audit hook rejects open/os.listdir/os.scandir under the original Legendre_k8 source directory.",
+      "argv_relative": [
+        "routes/qrh/research-history/snapshot_legacy.py",
+        "--verify-only",
+        "--source-root",
+        "routes/qrh/tmp/definitely-absent-legacy-source-for-check"
+      ],
+      "forbidden_original_source_directory": "D:/UGit/AI4Math/Legendre_k8",
+      "nonexistent_source_argument_confirmed": true,
+      "stdout": {
+        "status": "SNAPSHOT_BYTES_VERIFIED",
+        "files": 177,
+        "bytes": 3782882,
+        "mathematical_revalidation": false
+      }
+    }
+  ],
+  "relative_link_check": {
+    "markdown_pages": 11,
+    "inline_relative_links": 343,
+    "missing_targets": [],
+    "explicitly_excluded_pending_targets": [
+      {
+        "referrer": "README.md",
+        "target": "REVIEW_THIS_RELEASE.md",
+        "exists_at_review": true
+      },
+      {
+        "referrer": "README.md",
+        "target": "REVIEW_THIS_RELEASE.md",
+        "exists_at_review": true
+      },
+      {
+        "referrer": "README.zh-CN.md",
+        "target": "REVIEW_THIS_RELEASE.md",
+        "exists_at_review": true
+      },
+      {
+        "referrer": "README.zh-CN.md",
+        "target": "REVIEW_THIS_RELEASE.md",
+        "exists_at_review": true
+      },
+      {
+        "referrer": "paper/current/README.md",
+        "target": "../../REVIEW_THIS_RELEASE.md",
+        "exists_at_review": true
+      },
+      {
+        "referrer": "paper/current/README.md",
+        "target": "../../audit/current_paper_visual_review.json",
+        "exists_at_review": false
+      },
+      {
+        "referrer": "documentation/README.md",
+        "target": "../REVIEW_THIS_RELEASE.md",
+        "exists_at_review": true
+      },
+      {
+        "referrer": "documentation/README.md",
+        "target": "../audit/archive_review_2026-11-06.json",
+        "exists_at_review": false
+      }
+    ],
+    "method": "Markdown inline [label](target) scan; URL-decode relative file/directory path, discard query and fragment, test target existence.",
+    "limitations": [
+      "Does not crawl the web or verify external URL availability.",
+      "Does not validate Markdown heading anchors, arbitrary HTML links, reference-style links, or nested parentheses.",
+      "Historical snapshot bodies retain known dead links; see research-history/dependency_gaps.json and not this navigation scan."
+    ]
+  },
+  "input_registry": {
+    "path": "documentation/inputs.json",
+    "sha256": "95375797592b95270621849b5de8f65a93a2620ff16c52d2b06516b3aa623ff9",
+    "input_count": 7,
+    "main_premise_order": [
+      "H1",
+      "H2",
+      "H3",
+      "H4",
+      "H5",
+      "H6",
+      "H7"
+    ],
+    "all_seven_marked_external_and_not_locally_reproved": true,
+    "source_bindings": [
+      {
+        "id": "main_theorem",
+        "file": "lean/LegendreK6/FinalResult.lean",
+        "sha256": "57b9148fbdd078083abf425c2d7fc552bff551a83c97ef79a539c63147a0ea24",
+        "hash_matches_registered_source": true,
+        "exact_source_statement_matches": null
+      },
+      {
+        "id": "H1",
+        "file": "lean/LegendreK6/DensityInput.lean",
+        "sha256": "990d6e27408ddfd9e69db0fad1c0c6580460d96c15f99a44cceb8a6b581146a9",
+        "hash_matches_registered_source": true,
+        "exact_source_statement_matches": true
+      },
+      {
+        "id": "H2",
+        "file": "lean/LegendreK6/DensityInput.lean",
+        "sha256": "990d6e27408ddfd9e69db0fad1c0c6580460d96c15f99a44cceb8a6b581146a9",
+        "hash_matches_registered_source": true,
+        "exact_source_statement_matches": true
+      },
+      {
+        "id": "H3",
+        "file": "lean/LegendreK6/LiteratureInputs.lean",
+        "sha256": "feb8446dcfb232adedec2937a271ed010e35f8addeec240a60f75c2c74c8df78",
+        "hash_matches_registered_source": true,
+        "exact_source_statement_matches": true
+      },
+      {
+        "id": "H4",
+        "file": "lean/LegendreK6/IntegratedExplicitFormula.lean",
+        "sha256": "9dfad65f0a4a3849e4f89f6aca7b0f25511a2958466e1bd2712845d8e368aced",
+        "hash_matches_registered_source": true,
+        "exact_source_statement_matches": true
+      },
+      {
+        "id": "H5",
+        "file": "lean/LegendreK6/FiniteRHInput.lean",
+        "sha256": "d502c92b71fe95655c23d0e6d6a8d7de2e8376d707e6eeeb62d2d8bd2460a266",
+        "hash_matches_registered_source": true,
+        "exact_source_statement_matches": true
+      },
+      {
+        "id": "H6",
+        "file": "lean/LegendreK6/LiteratureInputs.lean",
+        "sha256": "feb8446dcfb232adedec2937a271ed010e35f8addeec240a60f75c2c74c8df78",
+        "hash_matches_registered_source": true,
+        "exact_source_statement_matches": true
+      },
+      {
+        "id": "H7",
+        "file": "lean/LegendreK6/CHLRange.lean",
+        "sha256": "4c4e7c0a8a3950a071cd86b698beca2aeefe8959fa93f9a7c43fd32fce9239dd",
+        "hash_matches_registered_source": true,
+        "exact_source_statement_matches": true
+      }
+    ],
+    "supporting_definition_bindings": [
+      {
+        "input": "H2",
+        "definition": "csB1",
+        "file": "lean/LegendreK6/DensityInput.lean",
+        "exact_text_matches": true
+      },
+      {
+        "input": "H2",
+        "definition": "csB2",
+        "file": "lean/LegendreK6/DensityInput.lean",
+        "exact_text_matches": true
+      },
+      {
+        "input": "H2",
+        "definition": "csB3",
+        "file": "lean/LegendreK6/DensityInput.lean",
+        "exact_text_matches": true
+      },
+      {
+        "input": "H2",
+        "definition": "csExponent",
+        "file": "lean/LegendreK6/DensityInput.lean",
+        "exact_text_matches": true
+      },
+      {
+        "input": "H2",
+        "definition": "csLogExponent",
+        "file": "lean/LegendreK6/DensityInput.lean",
+        "exact_text_matches": true
+      },
+      {
+        "input": "H3",
+        "definition": "rosserZeroSet",
+        "file": "lean/LegendreK6/LiteratureInputs.lean",
+        "exact_text_matches": true
+      },
+      {
+        "input": "H3",
+        "definition": "rosserCount",
+        "file": "lean/LegendreK6/LiteratureInputs.lean",
+        "exact_text_matches": true
+      },
+      {
+        "input": "H4",
+        "definition": "integratedZeroSum",
+        "file": "lean/LegendreK6/IntegratedExplicitFormula.lean",
+        "exact_text_matches": true
+      },
+      {
+        "input": "H4",
+        "definition": "trivialZeroPrimitiveSum",
+        "file": "lean/LegendreK6/IntegratedExplicitFormula.lean",
+        "exact_text_matches": true
+      },
+      {
+        "input": "H4",
+        "definition": "integratedFormulaValue",
+        "file": "lean/LegendreK6/IntegratedExplicitFormula.lean",
+        "exact_text_matches": true
+      },
+      {
+        "input": "H6",
+        "definition": "truncatedZeroIncrement",
+        "file": "lean/LegendreK6/LiteratureInputs.lean",
+        "exact_text_matches": true
+      },
+      {
+        "input": "H7",
+        "definition": "CHLInterval",
+        "file": "lean/LegendreK6/Definitions.lean",
+        "exact_text_matches": true
+      }
+    ],
+    "cs_table": {
+      "rows": 12,
+      "coefficient_decimals_exactly_match_Lean_spelling": true,
+      "row_indices_and_closed_sigma_intervals_match": true
+    },
+    "chl_table": {
+      "rows": 12,
+      "Delta_integers_and_X_expressions_match": true
+    },
+    "line_endings_for_statement_comparison": "Python universal newline conversion; SHA256 comparison uses original bytes."
+  },
+  "proof_scope_crosscheck": {
+    "files": [
+      "lean/LegendreK6/FinalResult.lean",
+      "FORMALIZATION_STATUS.md",
+      "lean/LegendreK6/Definitions.lean",
+      "lean/LegendreK6/LowerRange.lean",
+      "lean/LegendreK6/M2PilotResult.lean",
+      "lean/LegendreK6/M3LowerResult.lean",
+      "lean/LegendreK6/M3MiddleUpper.lean",
+      "lean/LegendreK6/M3FarResult.lean",
+      "lean/LegendreK6/M3FarUpper.lean"
+    ],
+    "result": "Displayed seven inputs, positive-integer range n>=1, strict stronger endpoint n^6+6*n^5, analytic range joins and complete budgets agree with final declarations and recorded audits.",
+    "manual_evidence": [
+      "FinalResult supplies both finite analytic segments and the shared-truncation tail to the final integer assembly.",
+      "No local analytic-segment or numerical-budget proposition remains a final theorem parameter.",
+      "README budgets 0.939772, 0.966283, 0.450022 distinguish the new proof from historical 94-cell sensitivity.",
+      "History distinguishes archived-only k4 R3-R5 statements and changed CS Theorem 1/Corollary 5 inputs from the current H2."
+    ],
+    "fresh_build_record": {
+      "modules": 241,
+      "output_root_existed": false,
+      "elapsed_seconds": 2690.618,
+      "dependency_checked_modules": 241,
+      "dependency_seconds": 17.375,
+      "dependency_error_count": 0,
+      "note": "Read existing final-20261106 reports; this navigation check does not itself rebuild Lean."
+    }
+  },
+  "snapshot_independence_check": {
+    "result": {
+      "status": "SNAPSHOT_BYTES_VERIFIED",
+      "files": 177,
+      "bytes": 3782882,
+      "mathematical_revalidation": false
+    },
+    "source_access_guard_passed": true,
+    "original_source_was_not_renamed_or_moved": true,
+    "script_sha256": "6a04c7a609e0c9691b41d084de36375ec6cfc8586949c05a55c8f03cd8b5d271",
+    "script_hash_matches_manifest": true,
+    "manifest_sha256": "b67c55782f61ebb180ceb8a5fea8db37f3492fab2dd99c5520f5719338d85e2b",
+    "sum_of_file_bytes_matches_total": true,
+    "conclusion": "--verify-only requires the stored manifest and snapshot files, not the original Legendre_k8 source directory. It does not execute historical research programs.",
+    "boundary": "Guard rejects reads/directory listings of the original source during the run; the original active workspace was deliberately left in place."
+  },
+  "findings": [],
+  "body_files_modified": false,
+  "commit_or_push_performed": false,
+  "last_refreshed_at_utc": "2026-11-06T11:42:35.361706+00:00",
+  "refresh_note": "Refreshed all 11 page byte bindings and inline file/directory links after paper/current/README.md gained the bibliography-style provenance link; rechecked input source hashes unchanged and reran reading_map --check after final PDF rebuild."
+}

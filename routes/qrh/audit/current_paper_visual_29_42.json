@@ -1,0 +1,366 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-06",
+  "reviewer": "Codex subagent credibility_chj_chl",
+  "review_kind": "Visual layout review only",
+  "independence_disclosure": "The reviewer authored manuscript sections 08-10 and performed an analytic cross-review of sections 03-07. This visual review is not an independent full-paper mathematical review or human peer review.",
+  "pdf_path": "paper/current/main.pdf",
+  "pdf_sha256": "500fa769a0933774b677264fab06ecfa403cdc2bb67575f6e485f4ddaa3b446f",
+  "pdf_total_pages_as_supplied": 57,
+  "render_directory": "tmp/paper-visual-final",
+  "render_dpi_as_supplied": 110,
+  "page_scope": {
+    "first": 29,
+    "last": 42,
+    "count": 14
+  },
+  "all_assigned_pages_actually_viewed": true,
+  "summary": {
+    "pages_passed": 14,
+    "pages_failed": 0,
+    "open_layout_issues": 0,
+    "result": "pass",
+    "limitations": "Review applies only to the supplied 110 dpi rendering of pages 29-42 and the bound PDF hash. It does not validate hyperlinks, accessibility metadata, full mathematical correctness, or pages outside this range."
+  },
+  "prior_issue_history": [
+    {
+      "pdf_sha256": "6b29737f1a1e55c2cc5282d9505754afe5d735764f7b886bd4e8fc8869383512",
+      "old_pages_viewed": [
+        29,
+        30,
+        31,
+        32,
+        33,
+        34
+      ],
+      "issue": "The leanref macro displayed the filename and declaration with no visible separator, e.g. M2PilotResult.leanpilot_short_interval_from_inputs.",
+      "resolution": "The parent added visible :: separators. The new render was rechecked page by page; separators are now visible and long identifiers wrap within margins.",
+      "status": "resolved_in_reviewed_pdf"
+    }
+  ],
+  "pages": [
+    {
+      "pdf_page_one_based": 29,
+      "printed_page_number_observed": 29,
+      "image_path": "tmp/paper-visual-final/page-29.png",
+      "image_sha256": "6bac419695d3d53170ce8570a8d8bb9c293a8c7c0b687961934e75feacdac480",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "actually_viewed": true,
+      "view_method": "Individual full-page image via view_image; no text-only substitute",
+      "checks": {
+        "formula_clipping": "pass",
+        "table_clipping": "not_applicable",
+        "font_and_glyph_legibility": "pass",
+        "overlap": "pass",
+        "header_footer_and_page_number": "pass",
+        "visible_leanref_separator": "pass"
+      },
+      "result": "pass",
+      "notes": "Both pilot inequalities and their budget fractions fit. Section 7 heading and equation 70 fit; Lean file/declaration separators are visible.",
+      "issues": []
+    },
+    {
+      "pdf_page_one_based": 30,
+      "printed_page_number_observed": 30,
+      "image_path": "tmp/paper-visual-final/page-30.png",
+      "image_sha256": "3d7d876741227cd56b0dc6020dfb7c31dd19790251cb8cda553b0c3ce23a9cc7",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "actually_viewed": true,
+      "view_method": "Individual full-page image via view_image; no text-only substitute",
+      "checks": {
+        "formula_clipping": "pass",
+        "table_clipping": "not_applicable",
+        "font_and_glyph_legibility": "pass",
+        "overlap": "pass",
+        "header_footer_and_page_number": "pass",
+        "visible_leanref_separator": "pass"
+      },
+      "result": "pass",
+      "notes": "The aligned rate comparison (73), fractions, subsection heading and equations 75-76 are legible and remain within margins. Long Lean identifiers wrap without overlap.",
+      "issues": []
+    },
+    {
+      "pdf_page_one_based": 31,
+      "printed_page_number_observed": 31,
+      "image_path": "tmp/paper-visual-final/page-31.png",
+      "image_sha256": "13138faf811480897fe5acb50eebaf284e7f14c5538160507372abf7fe521b8c",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "actually_viewed": true,
+      "view_method": "Individual full-page image via view_image; no text-only substitute",
+      "checks": {
+        "formula_clipping": "pass",
+        "table_clipping": "not_applicable",
+        "font_and_glyph_legibility": "pass",
+        "overlap": "pass",
+        "header_footer_and_page_number": "pass",
+        "visible_leanref_separator": "pass"
+      },
+      "result": "pass",
+      "notes": "Proposition 7.3, translated-budget formula and upper-range inequalities are legible. Equation numbers and footer remain separated from the body.",
+      "issues": []
+    },
+    {
+      "pdf_page_one_based": 32,
+      "printed_page_number_observed": 32,
+      "image_path": "tmp/paper-visual-final/page-32.png",
+      "image_sha256": "a2d1c98d2b28428dfc1e9816651f71cfe99974b99399cc821563e64082147174",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "actually_viewed": true,
+      "view_method": "Individual full-page image via view_image; no text-only substitute",
+      "checks": {
+        "formula_clipping": "pass",
+        "table_clipping": "not_applicable",
+        "font_and_glyph_legibility": "pass",
+        "overlap": "pass",
+        "header_footer_and_page_number": "pass",
+        "visible_leanref_separator": "pass"
+      },
+      "result": "pass",
+      "notes": "Proposition 7.4 and the finite-RH kernel inequalities fit. The low/high zero sum and the two subsection headings are not clipped.",
+      "issues": []
+    },
+    {
+      "pdf_page_one_based": 33,
+      "printed_page_number_observed": 33,
+      "image_path": "tmp/paper-visual-final/page-33.png",
+      "image_sha256": "aa6239268ff69efc9779c1b5d5ad8e4d99bb9a26489b606f9ea416fb99034da1",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "actually_viewed": true,
+      "view_method": "Individual full-page image via view_image; no text-only substitute",
+      "checks": {
+        "formula_clipping": "pass",
+        "table_clipping": "not_applicable",
+        "font_and_glyph_legibility": "pass",
+        "overlap": "pass",
+        "header_footer_and_page_number": "pass",
+        "visible_leanref_separator": "pass"
+      },
+      "result": "pass",
+      "notes": "The scalar-cap line (85) and three-case multiplier display (87) fit. Equation 89 near the bottom remains clear of the footer.",
+      "issues": []
+    },
+    {
+      "pdf_page_one_based": 34,
+      "printed_page_number_observed": 34,
+      "image_path": "tmp/paper-visual-final/page-34.png",
+      "image_sha256": "e67a5958cca137f078bcce70349e40d8900382aa24fc92ff0dad60566de16d7c",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "actually_viewed": true,
+      "view_method": "Individual full-page image via view_image; no text-only substitute",
+      "checks": {
+        "formula_clipping": "pass",
+        "table_clipping": "not_applicable",
+        "font_and_glyph_legibility": "pass",
+        "overlap": "pass",
+        "header_footer_and_page_number": "pass",
+        "visible_leanref_separator": "pass"
+      },
+      "result": "pass",
+      "notes": "The integer multiplier cases, rational certificate, complete budget (93) and Proposition 7.5 render cleanly. The last Lean reference remains above the page number.",
+      "issues": []
+    },
+    {
+      "pdf_page_one_based": 35,
+      "printed_page_number_observed": 35,
+      "image_path": "tmp/paper-visual-final/page-35.png",
+      "image_sha256": "c7a33fd2d473c811a65fac12b1ec37eabad1fd6261d7acf7eb865d8240f9aafb",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "actually_viewed": true,
+      "view_method": "Individual full-page image via view_image; no text-only substitute",
+      "checks": {
+        "formula_clipping": "pass",
+        "table_clipping": "pass",
+        "font_and_glyph_legibility": "pass",
+        "overlap": "pass",
+        "header_footer_and_page_number": "pass",
+        "visible_leanref_separator": "not_applicable"
+      },
+      "result": "pass",
+      "notes": "The three-row range/RH table is aligned and complete. Section 8 title, tail parameter display and definitions of u and lambda fit.",
+      "issues": []
+    },
+    {
+      "pdf_page_one_based": 36,
+      "printed_page_number_observed": 36,
+      "image_path": "tmp/paper-visual-final/page-36.png",
+      "image_sha256": "18ad2400e8da653338b08440d2ed928b87b06f77a6d54680e3f40682f42ce03e",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "actually_viewed": true,
+      "view_method": "Individual full-page image via view_image; no text-only substitute",
+      "checks": {
+        "formula_clipping": "pass",
+        "table_clipping": "not_applicable",
+        "font_and_glyph_legibility": "pass",
+        "overlap": "pass",
+        "header_footer_and_page_number": "pass",
+        "visible_leanref_separator": "pass"
+      },
+      "result": "pass",
+      "notes": "Tail parameter inequalities (96)-(98), finite zero sum (99), CHJII formula (100) and increment inequality (101) are legible. The bottom display is clear of the footer.",
+      "issues": []
+    },
+    {
+      "pdf_page_one_based": 37,
+      "printed_page_number_observed": 37,
+      "image_path": "tmp/paper-visual-final/page-37.png",
+      "image_sha256": "133031c3a9f4c9443b8b7c69c80eab29b95d806e11a0bf812fd24d1a74c88dc7",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "actually_viewed": true,
+      "view_method": "Individual full-page image via view_image; no text-only substitute",
+      "checks": {
+        "formula_clipping": "pass",
+        "table_clipping": "not_applicable",
+        "font_and_glyph_legibility": "pass",
+        "overlap": "pass",
+        "header_footer_and_page_number": "pass",
+        "visible_leanref_separator": "pass"
+      },
+      "result": "pass",
+      "notes": "Conjugate pairing, layer integral and indicator function render correctly. The wide Rosser inequality (105), including its number, stays inside the page.",
+      "issues": []
+    },
+    {
+      "pdf_page_one_based": 38,
+      "printed_page_number_observed": 38,
+      "image_path": "tmp/paper-visual-final/page-38.png",
+      "image_sha256": "dad48e35a7460e7a29b762f0c0dcf091d217d84a4aaaa18b065bb2d0992fa36e",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "actually_viewed": true,
+      "view_method": "Individual full-page image via view_image; no text-only substitute",
+      "checks": {
+        "formula_clipping": "pass",
+        "table_clipping": "not_applicable",
+        "font_and_glyph_legibility": "pass",
+        "overlap": "pass",
+        "header_footer_and_page_number": "pass",
+        "visible_leanref_separator": "pass"
+      },
+      "result": "pass",
+      "notes": "CS exponents and coefficients are legible. The multiline density integral (108) and the three Z budgets (109)-(111) fit without overlap.",
+      "issues": []
+    },
+    {
+      "pdf_page_one_based": 39,
+      "printed_page_number_observed": 39,
+      "image_path": "tmp/paper-visual-final/page-39.png",
+      "image_sha256": "c90b52cc521197968602e4169cc765f81be6ae6fe5751a01182deb1e86a1a72f",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "actually_viewed": true,
+      "view_method": "Individual full-page image via view_image; no text-only substitute",
+      "checks": {
+        "formula_clipping": "pass",
+        "table_clipping": "not_applicable",
+        "font_and_glyph_legibility": "pass",
+        "overlap": "pass",
+        "header_footer_and_page_number": "pass",
+        "visible_leanref_separator": "pass"
+      },
+      "result": "pass",
+      "notes": "The R/P/E budget display, truncation comparison, prime-power estimates and endpoint inequality all fit. Long Lean names wrap visibly with :: separators.",
+      "issues": []
+    },
+    {
+      "pdf_page_one_based": 40,
+      "printed_page_number_observed": 40,
+      "image_path": "tmp/paper-visual-final/page-40.png",
+      "image_sha256": "2055d2cdc4c9c9180bb254b776601a0e2f286833103196c337327885aed77576",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "actually_viewed": true,
+      "view_method": "Individual full-page image via view_image; no text-only substitute",
+      "checks": {
+        "formula_clipping": "pass",
+        "table_clipping": "pass",
+        "font_and_glyph_legibility": "pass",
+        "overlap": "pass",
+        "header_footer_and_page_number": "pass",
+        "visible_leanref_separator": "pass"
+      },
+      "result": "pass",
+      "notes": "The six-term total, decimal base bounds, derivative formula and full seven-row monotonicity-factor table are legible. The table remains above footer 40.",
+      "issues": []
+    },
+    {
+      "pdf_page_one_based": 41,
+      "printed_page_number_observed": 41,
+      "image_path": "tmp/paper-visual-final/page-41.png",
+      "image_sha256": "aebf72ff4aa04355abe492bcffed5f5ee3fbb52c55be29e55767b05e6ceacb62",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "actually_viewed": true,
+      "view_method": "Individual full-page image via view_image; no text-only substitute",
+      "checks": {
+        "formula_clipping": "pass",
+        "table_clipping": "not_applicable",
+        "font_and_glyph_legibility": "pass",
+        "overlap": "pass",
+        "header_footer_and_page_number": "pass",
+        "visible_leanref_separator": "pass"
+      },
+      "result": "pass",
+      "notes": "The ratio derivative, tail theorem and three displayed lower-bound steps fit. The H6 source-status paragraph and Lean references render without clipping.",
+      "issues": []
+    },
+    {
+      "pdf_page_one_based": 42,
+      "printed_page_number_observed": 42,
+      "image_path": "tmp/paper-visual-final/page-42.png",
+      "image_sha256": "0db19618d8bc226223a48774e5a8b8f819817c6b84f1a31f34c62ba9875aa269",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "actually_viewed": true,
+      "view_method": "Individual full-page image via view_image; no text-only substitute",
+      "checks": {
+        "formula_clipping": "pass",
+        "table_clipping": "pass",
+        "font_and_glyph_legibility": "pass",
+        "overlap": "pass",
+        "header_footer_and_page_number": "pass",
+        "visible_leanref_separator": "not_applicable"
+      },
+      "result": "pass",
+      "notes": "Section 9 heading, lower-range target, six-row prime-witness table including the long final integers, and Lucas congruences (123) are complete and legible.",
+      "issues": []
+    }
+  ],
+  "mutations": "Only this JSON report was written; no source or PDF changes and no compilation, commit or push."
+}

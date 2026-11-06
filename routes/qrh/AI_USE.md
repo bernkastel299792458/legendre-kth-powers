@@ -57,3 +57,23 @@ Codex agents implemented and cross-reviewed these changes; each review
 distinguishes its author's implementation from independently read code.
 The Claude review retains its historical scope. The new method is described
 in `paper/lean_formalization_addendum.md`.
+
+## Current archival manuscript
+
+The twelve-chapter manuscript in `paper/current/` is a new exposition of the
+accepted final formal argument. Codex contexts wrote different chapters and
+cross-read chapters written by the other contexts. The reports
+`audit/current_manuscript_analytic_crossreview.md` and
+`audit/current_manuscript_tail_crossreview.md` identify their exact scopes
+and implementation overlap. This was project-internal AI cross-review.
+
+The new input register, declaration map, research narrative and byte-preserving
+177-file research snapshot were prepared with Codex. The historical Claude
+review was retained without expanding its scope. Original conversations were
+not fully captured; the research archive contains selected project records,
+not a claim of complete model-interaction reproducibility. Its original session
+identifiers remain available for the owner's local publication review.
+
+No new mathematical claim about another exponent is established by this
+archival work. The current k=6 paper, original proof sources, fresh replay
+records, and research history serve distinct review purposes.

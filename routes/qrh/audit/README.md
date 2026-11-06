@@ -1,5 +1,26 @@
 # Audit evidence index
 
+## Current manuscript and archival review
+
+- [Current complete paper](../paper/current/main.pdf), [seven-input register](../documentation/inputs.md),
+  and [paper-to-Lean guide](../documentation/blueprint/README.md).
+- [Archival verification record](archive_review_2026-11-06.json): additional clean-source
+  rebuild, matching dependency audit, preserved source hashes and numerical replay.
+- [Analytic chapter cross-review](current_manuscript_analytic_crossreview.md) and
+  [tail/lower-range/assembly cross-review](current_manuscript_tail_crossreview.md).
+  These identify reviewer implementation overlap.
+- [PDF build binding](../paper/current/build_report.json) and
+  [page-by-page visual review](current_paper_visual_review.json).
+- [Research-history archive](../research-history/README.md): 177 original-byte
+  snapshots with selection scope, hashes and historical dependency gaps.
+- [Source-preservation check](archive_source_preservation.json): 628 protected
+  files match the accepted baseline byte for byte, including the traditional tree.
+- [Independent check of the additional build](archive_build_independent_check.json):
+  38 checks of sources, artifacts, pinned dependencies and the exact audit binding.
+- [Document-tooling review](current_document_tooling_review.md) and
+  [navigation/input-register review](current_package_navigation_review.json).
+
+
 The accepted result is the complete downstream k=6 Lean proof from seven
 explicit external mathematical inputs. It proves an actual prime strictly
 between consecutive sixth powers for every integer n >= 1. The external

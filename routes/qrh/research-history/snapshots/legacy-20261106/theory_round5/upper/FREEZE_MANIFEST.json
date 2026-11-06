@@ -1,0 +1,55 @@
+{
+  "schema": "k4-log-kernel-candidate-freeze-v1",
+  "date": "2026-11-06",
+  "status": "FROZEN_CANDIDATE_AWAITING_INDEPENDENT_ANALYTIC_REVIEW",
+  "primary_range": "L >= 362 remains unchanged",
+  "candidate_range": "L >= 360 if the accompanying analytic derivation is accepted",
+  "full_k4_proved": false,
+  "independent_analytic_review": false,
+  "separate_numeric_implementation": false,
+  "read_only_replay": {
+    "passed": true,
+    "command": "python -B -X utf8 Legendre_k8/theory_round5/upper/log_kernel_candidate.py --L 360 --verify",
+    "output": "VERIFIED_CANDIDATE_NOT_PRIMARY",
+    "elapsed_seconds": 56.819556500006,
+    "ignored_fields": [
+      "elapsed_seconds"
+    ]
+  },
+  "saved_generation_seconds": 17.937032899993937,
+  "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "python_flint_version": "0.9.0",
+  "files": [
+    {
+      "path": "theory_round5/upper/log_kernel_candidate.py",
+      "sha256": "12a23040985865eb1a7eba26a8519459707129739e36b915843ac4e9d63f718a",
+      "bytes": 7615
+    },
+    {
+      "path": "theory_round5/upper/LOG_KERNEL_CANDIDATE.md",
+      "sha256": "aa429c49b956585a13521d06e23c4173c2a6178aa7a2fd961c96096896ccb735",
+      "bytes": 10030
+    },
+    {
+      "path": "theory_round5/upper/log_kernel_rebased_L360.json",
+      "sha256": "a5a2dad2ab103b2589d2593cb0bebcf32038fd2fe320b36f23c0c4f359861b04",
+      "bytes": 182498
+    },
+    {
+      "path": "theory_round5/rebase_density.py",
+      "sha256": "82f66c796daa445cf7e8acbe9d768029a733c9f15c0253f844e6cf8fc493cc5f",
+      "bytes": 7370
+    },
+    {
+      "path": "theory_round5/PROOF.md",
+      "sha256": "7496cf140b431b49dc9a4236bfedde8637d3ab1733d9306ea781c42fec329a14",
+      "bytes": 6098
+    },
+    {
+      "path": "code/certify_k4_round3.py",
+      "sha256": "665413028150b9eafa96d51071e2864da5408086393b91d6ea8e956798e7ea16",
+      "bytes": 18925
+    }
+  ],
+  "scope": "Point ball, complete interval step majorant and frozen dependencies; a same-program replay is not an independent audit. No subsequent parameter scan was performed."
+}

@@ -1,0 +1,234 @@
+\section{全范围拼接与六次幂结论}
+\label{sec:assembly}
+
+本节将各段的实际素数定理拼成关于所有正整数的结论。
+需要区分两个任务：前面各节已经证明具体范围中的素数存在性；本节再证明
+这些范围覆盖全部正整数，并核对实数幂、整数幂及所有严格端点。
+这一步没有再引入零点估计或数值假设。
+
+为与形式化接口一致，记
+\begin{align}
+ \mathcal S_6(x)&:\quad
+   \exists p\in\N,\quad p\text{ 为素数},\quad x<p<x+6x^{5/6},
+   \label{assembly:S6}\\
+ \mathcal S_4(x)&:\quad
+   \exists p\in\N,\quad p\text{ 为素数},\quad x<p<x+4x^{3/4},
+   \label{assembly:S4}\\
+ \mathcal N_6(n)&:\quad
+   \exists p\in\N,\quad p\text{ 为素数},\quad n^6<p<n^6+6n^5.
+   \label{assembly:N6}
+\end{align}
+前两个定义中的比较在 $\R$ 中进行，自然数 $p$ 通过标准嵌入视为实数；
+第三个定义中的幂与不等式都是自然数运算。
+对应定义分别是 \leanref{Definitions}{ShortInterval6}、
+\leanref{Definitions}{ShortInterval4} 和
+\leanref{Definitions}{NatSixthShort}。
+下标 $4$ 和 $6$ 在这里表示选用的短区间长度；
+它们本身不是某个全范围幂次猜想已经成立的声明。
+
+\subsection{已经获得的各段及其精确依赖}
+
+所有实变量段都以 $x>0$、$L=\log x$ 为前提。
+下表把用于最终拼接的五个结论放在一起。
+其中的每个区间端点均包含在相应定理中。
+
+\begin{center}
+\small
+\begin{tabular}{c|c|c|l}
+范围 & 变量及条件 & 结论 & 外部输入\\\hline
+整数下段 & $n\geq1$, $\log(n^6)\leq167$ & $\mathcal N_6(n)$ & H7\\
+下中段 & $167\leq L\leq715/4$ & $\mathcal S_6(x)$ & H1, H2, H3, H4, H5\\
+上中段 & $715/4\leq L\leq400$ & $\mathcal S_6(x)$ & H1, H2, H3, H4\\
+有限远段 & $400\leq L\leq700$ & $\mathcal S_4(x)$ & H1, H2, H3, H4\\
+无限尾部 & $700\leq L$ & $\mathcal S_4(x)$ & H1, H2, H3, H6
+\end{tabular}
+\end{center}
+
+整数下段是第~\ref{sec:lower} 节的定理~\ref{lower:log-theorem}。
+下中段与上中段分别由
+\leanref{M3LowerResult}{lower_middle_short_interval_from_inputs} 和
+\leanref{M3MiddleUpper}{middle_upper_short_interval_from_inputs} 给出。
+有限远段为
+\leanref{M3FarUpper}{far_short_interval_from_inputs}，
+无限尾部为第~\ref{sec:tail} 节的定理~\ref{tail:prime-theorem}。
+中段分点 $715/4=178.75$ 只决定采用哪一个已证明的解析估计，
+不会在最终定理中留下这个分点处的额外假设。
+
+以上依赖表也说明，H5 的使用仅在下中段，H6 仅在无限尾部，H7 仅在整数下段。
+最终定理统一接受七个输入，是因为它同时覆盖这些范围；
+这不表示每一个局部定理都使用了全部七个输入。
+
+\subsection{四次长度与六次长度的比较}
+
+\begin{lemma}[短区间长度的包含关系]\label{assembly:length-comparison}
+若 $x\geq1$，则
+\begin{equation}\label{assembly:length-inequality}
+ 4x^{3/4}\leq6x^{5/6}.
+\end{equation}
+因此 $\mathcal S_4(x)$ 蕴含 $\mathcal S_6(x)$。
+\end{lemma}
+
+\begin{proof}
+因为 $3/4\leq5/6$ 且 $x\geq1$，实数幂关于指数的单调性给出
+$x^{3/4}\leq x^{5/6}$。后者非负，故
+\[
+ 4x^{3/4}\leq4x^{5/6}\leq6x^{5/6}.
+\]
+若 $p$ 是 $\mathcal S_4(x)$ 的素数见证，则
+\[
+ x<p<x+4x^{3/4}\leq x+6x^{5/6}.
+\]
+严格不等式与非严格不等式的传递仍给出严格的最终右界。
+\end{proof}
+
+相应实现为 \leanref{Reduction}{four_length_le_six_length} 和
+\leanref{Reduction}{short_six_of_short_four}。
+这里必须说明 $x\geq1$；当 $0<x<1$ 时，单凭指数大小不能作同方向比较。
+在本证明的有限远段和无限尾部，$L\geq400$，所以这个条件自动满足；
+在最终应用 $x=n^6$ 中，它也由 $n\geq1$ 直接得到。
+
+\begin{proposition}[统一的解析上段]\label{assembly:analytic-range}
+在 H1 至 H6 下，对每个 $x>0$，若 $\log x\geq167$，则
+$\mathcal S_6(x)$ 成立。
+\end{proposition}
+
+\begin{proof}
+记 $L=\log x$。若 $L\leq400$，则在
+$L\leq715/4$ 与 $L>715/4$ 两种情况下，分别使用下中段与上中段的
+$\mathcal S_6(x)$ 结论。
+若 $L>400$，则 $x>1$；当 $L\leq700$ 时使用有限远段，
+当 $L>700$ 时使用无限尾部。后两种情况先得到 $\mathcal S_4(x)$，
+再由引理~\ref{assembly:length-comparison} 得到 $\mathcal S_6(x)$。
+每种情形均由某个闭区间定理覆盖，故 $167$、$715/4$、$400$、$700$
+这四个接口没有遗漏。
+\end{proof}
+
+中段的具体合并见
+\leanref{FinalResult}{middle_short_interval_from_inputs}。
+把三个已构造的解析段交给
+\leanref{Assembly}{real_short_above_167_of_segment_inputs}
+便得到命题~\ref{assembly:analytic-range} 的形式化版本。
+
+\subsection{从实变量区间回到整数六次幂}
+
+\begin{lemma}[实数幂与自然数幂的精确转换]\label{assembly:power-conversion}
+对每个自然数 $n$，有
+\begin{equation}\label{assembly:rpow-identity}
+ \bigl((n:\R)^6\bigr)^{5/6}=(n:\R)^5.
+\end{equation}
+若 $\mathcal S_6((n:\R)^6)$ 成立，则 $\mathcal N_6(n)$ 成立。
+\end{lemma}
+
+\begin{proof}
+自然数在实数中的像非负，故非负实底数的幂法则适用。
+由 $6(5/6)=5$，得到式~\eqref{assembly:rpow-identity}。
+将这个等式代入 $\mathcal S_6$ 的右端点后，见证素数满足
+\[
+ (n:\R)^6<(p:\R)<(n:\R)^6+6(n:\R)^5.
+\]
+自然数到实数的嵌入保持加法、乘法、整数幂和严格序关系，
+因此两条实数不等式恰给出式~\eqref{assembly:N6} 的两条自然数不等式。
+素数 $p$ 本身不发生改变。
+\end{proof}
+
+实现为 \leanref{Reduction}{sixth_rpow_five_sixths} 与
+\leanref{Reduction}{nat_short_of_real_short}。
+这一转换没有使用四舍五入，也不需要对实数端点先取整。
+
+\begin{lemma}[相邻六次幂之间的严格余量]\label{assembly:binomial-gap}
+对每个自然数 $n$，
+\begin{equation}\label{assembly:binomial}
+ n^6+6n^5<(n+1)^6.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+二项式展开给出
+\[
+ (n+1)^6-(n^6+6n^5)
+ =15n^4+20n^3+15n^2+6n+1>0.
+\]
+各幂非负，而常数项为 $1$，所以严格正性甚至对 $n=0$ 也成立。
+\end{proof}
+
+对应定理是 \leanref{Reduction}{sixth_binomial_gap}。
+不过最终的素数存在性定理仍只声明 $n\geq1$：$n=0$ 时区间 $(0,1)$
+没有素数，不能因为这个单独的二项式比较对 $n=0$ 成立便扩大主定理范围。
+
+\subsection{全范围条件定理}
+
+\begin{theorem}[七个明确输入下的六次幂短区间定理]
+\label{assembly:main-short}
+假设 H1 至 H7 成立。对每个自然数 $n\geq1$，存在自然数素数 $p$，使
+\begin{equation}\label{assembly:strong-chain}
+ n^6<p<n^6+6n^5<(n+1)^6.
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+固定 $n\geq1$，令 $x=(n:\R)^6>0$，$L=\log x$。
+若 $L\leq167$，由定理~\ref{lower:log-theorem} 直接得到
+$\mathcal N_6(n)$。
+若 $L>167$，则命题~\ref{assembly:analytic-range} 给出
+$\mathcal S_6(x)$，再由引理~\ref{assembly:power-conversion} 得
+$\mathcal N_6(n)$。
+两种情形已经穷尽所有 $n\geq1$，且各自均给出实际的自然数素数见证。
+最后附上引理~\ref{assembly:binomial-gap} 的严格比较，得到完整链式不等式。
+\end{proof}
+
+\begin{corollary}[六次幂之间的素数]\label{assembly:sixth-powers}
+在 H1 至 H7 下，对每个自然数 $n\geq1$，开区间
+$(n^6,(n+1)^6)$ 中至少有一个素数。
+\end{corollary}
+
+这两个结论分别由
+\leanref{FinalResult}{sixth_power_short_from_named_inputs} 及
+\leanref{FinalResult}{sixth_powers_from_named_inputs} 实现。
+后一个定理的目标
+\leanref{Definitions}{SixthPowerConclusion}
+直接量化所有 $n\in\N$ 并要求 $1\leq n$；它不是“所有已检查整数”的缩写。
+前一个定理保留了更强的内端点 $n^6+6n^5$，所以同时记录了
+式~\eqref{assembly:strong-chain} 中的额外余量。
+
+\subsection{中间接口已经构造，而非留下局部结论作为前提}
+
+证明库保留两个便于复用的中间接口。
+\leanref{Assembly}{AnalyticSegmentInputs} 的三个字段分别陈述
+中段、有限远段和尾部的素数结论；
+\leanref{AssemblyWithTail}{FiniteAnalyticSegmentInputs}
+只包含前两个有限段。
+如果仅证明“给定这些字段，就能推出六次幂结论”，那仍然只是一个拼接定理，
+因为困难的局部素数结论仍作为未证明字段存在。
+
+当前最终定理补齐了这一步。
+\leanref{FinalResult}{finite_analytic_segments_from_inputs}
+把已证明的中段与有限远段定理填入两个字段；
+\leanref{TailFromInputs}{tail_short_interval_from_inputs}
+再提供尾部字段。
+\leanref{FinalResult}{sixth_power_short_from_named_inputs}
+和 \leanref{FinalResult}{sixth_powers_from_named_inputs}
+的参数表因此只留下 H1 至 H7，并不再要求调用者提供
+一个局部素数结论、一个单元最大值不等式或一个未证明的解析段接口。
+
+这一点还可以在历史单元的对应关系中直接检查。
+\leanref{FinalCellCoverage}{all_94_cells_actual_prime_intervals}
+证明每个保存的中段细分单元内都有 $\mathcal S_6(x)$；
+\leanref{FinalCellCoverage}{all_60_far_cells_actual_prime_intervals}
+证明每个保存的远段单元内都有 $\mathcal S_4(x)$。
+它们先在内核中检查每个单元落入相应的全段，再调用实际的素数定理。
+因此保存的有理数最大值并不是这两个结论的额外解析前提。
+同时，当前远段的形式化使用梯形权函数。
+它覆盖历史六十个单元的目标区间，但不等于把历史多项式权函数手稿逐行翻译为 Lean。
+这两种研究记录应分别保留，避免将“目标范围已形式化”误写成
+“每一种历史证明实现均已形式化”。
+
+\begin{remark}[主定理的逻辑范围]\label{assembly:scope}
+本文完成的是七个明确数学输入之后的全范围推导。
+H1 是本路线承认的 QRH 假设；H2 至 H7 是精确定义的文献命题接口，
+其来源状态及独立审查程度须分别陈述。
+Lean 证明这些命题一旦成立，式~\eqref{assembly:strong-chain}
+便对每个 $n\geq1$ 成立；它不凭编译成功而证明七个输入本身。
+特别地，这不是只以 QRH 一项为参数的库内定理，也不是无条件六次幂定理。
+至于 $\mathcal S_4(x)$，本文已经在 $\log x\geq400$ 的实变量范围证明它，
+但没有据此宣称所有正整数的四次幂猜想已经解决。
+\end{remark}

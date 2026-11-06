@@ -1,0 +1,1163 @@
+{
+  "schema": "qrh-manuscript-reading-map-v1",
+  "scope": "File/declaration names, TeX labels and bibliography keys; not a semantic proof audit.",
+  "chapters": [
+    {
+      "source": "paper/current/sections/01_introduction.tex",
+      "title": "问题、主定理与证明路线",
+      "sha256": "63d3e9a4f0d67c5bd930ec6092c53a208701c16c0cf01fcdbb4accf55d4fcc4f",
+      "lean_mappings": [
+        {
+          "module": "FinalResult",
+          "declaration_as_cited": "sixth_powers_from_named_inputs",
+          "file": "lean/LegendreK6/FinalResult.lean",
+          "line": 46,
+          "source_sha256": "57b9148fbdd078083abf425c2d7fc552bff551a83c97ef79a539c63147a0ea24"
+        },
+        {
+          "module": "FinalResult",
+          "declaration_as_cited": "sixth_power_short_from_named_inputs",
+          "file": "lean/LegendreK6/FinalResult.lean",
+          "line": 35,
+          "source_sha256": "57b9148fbdd078083abf425c2d7fc552bff551a83c97ef79a539c63147a0ea24"
+        }
+      ]
+    },
+    {
+      "source": "paper/current/sections/02_inputs.tex",
+      "title": "七项外部输入",
+      "sha256": "eb88204088fb43700a563cb2bc30624a9360d2650d8acf73301294dcbe1d1457",
+      "lean_mappings": [
+        {
+          "module": "ZetaZeros",
+          "declaration_as_cited": "NontrivialZero",
+          "file": "lean/LegendreK6/ZetaZeros.lean",
+          "line": 17,
+          "source_sha256": "9fb065bdae1cc73f614f433628ad98e97f81ceec74e8ad093de9e1eb24c6de1d"
+        },
+        {
+          "module": "ZetaZeros",
+          "declaration_as_cited": "allZetaZeros",
+          "file": "lean/LegendreK6/ZetaZeros.lean",
+          "line": 63,
+          "source_sha256": "9fb065bdae1cc73f614f433628ad98e97f81ceec74e8ad093de9e1eb24c6de1d"
+        },
+        {
+          "module": "ZetaZeros",
+          "declaration_as_cited": "zetaMultiplicity",
+          "file": "lean/LegendreK6/ZetaZeros.lean",
+          "line": 20,
+          "source_sha256": "9fb065bdae1cc73f614f433628ad98e97f81ceec74e8ad093de9e1eb24c6de1d"
+        },
+        {
+          "module": "ZetaZeros",
+          "declaration_as_cited": "riemannZeta_ne_zero_real_strip",
+          "file": "lean/LegendreK6/ZetaZeros.lean",
+          "line": 391,
+          "source_sha256": "9fb065bdae1cc73f614f433628ad98e97f81ceec74e8ad093de9e1eb24c6de1d"
+        },
+        {
+          "module": "DensityInput",
+          "declaration_as_cited": "QRHSevenEighths",
+          "file": "lean/LegendreK6/DensityInput.lean",
+          "line": 18,
+          "source_sha256": "990d6e27408ddfd9e69db0fad1c0c6580460d96c15f99a44cceb8a6b581146a9"
+        },
+        {
+          "module": "DensityInput",
+          "declaration_as_cited": "CSv2",
+          "file": "lean/LegendreK6/DensityInput.lean",
+          "line": 37,
+          "source_sha256": "990d6e27408ddfd9e69db0fad1c0c6580460d96c15f99a44cceb8a6b581146a9"
+        },
+        {
+          "module": "DensityInput",
+          "declaration_as_cited": "cs_tail_density",
+          "file": "lean/LegendreK6/DensityInput.lean",
+          "line": 78,
+          "source_sha256": "990d6e27408ddfd9e69db0fad1c0c6580460d96c15f99a44cceb8a6b581146a9"
+        },
+        {
+          "module": "LiteratureInputs",
+          "declaration_as_cited": "RosserZeroCount",
+          "file": "lean/LegendreK6/LiteratureInputs.lean",
+          "line": 70,
+          "source_sha256": "feb8446dcfb232adedec2937a271ed010e35f8addeec240a60f75c2c74c8df78"
+        },
+        {
+          "module": "LiteratureInputs",
+          "declaration_as_cited": "totalZeroCount_le_rosserCount",
+          "file": "lean/LegendreK6/LiteratureInputs.lean",
+          "line": 60,
+          "source_sha256": "feb8446dcfb232adedec2937a271ed010e35f8addeec240a60f75c2c74c8df78"
+        },
+        {
+          "module": "IntegratedPsi",
+          "declaration_as_cited": "integratedPsi",
+          "file": "lean/LegendreK6/IntegratedPsi.lean",
+          "line": 18,
+          "source_sha256": "52a735da07c58adfaee31f0405079c55879ef63585bf60d7b43e4359ca658245"
+        },
+        {
+          "module": "TrapezoidKernel",
+          "declaration_as_cited": "zeroPrimitive",
+          "file": "lean/LegendreK6/TrapezoidKernel.lean",
+          "line": 16,
+          "source_sha256": "b970b79fe41f4afde356ce7598d28d377e10c4178791c0bff88f0125c89467a3"
+        },
+        {
+          "module": "IntegratedExplicitFormula",
+          "declaration_as_cited": "trivialZeroPrimitiveSum",
+          "file": "lean/LegendreK6/IntegratedExplicitFormula.lean",
+          "line": 32,
+          "source_sha256": "9dfad65f0a4a3849e4f89f6aca7b0f25511a2958466e1bd2712845d8e368aced"
+        },
+        {
+          "module": "IntegratedExplicitFormula",
+          "declaration_as_cited": "IntegratedExplicitFormula",
+          "file": "lean/LegendreK6/IntegratedExplicitFormula.lean",
+          "line": 45,
+          "source_sha256": "9dfad65f0a4a3849e4f89f6aca7b0f25511a2958466e1bd2712845d8e368aced"
+        },
+        {
+          "module": "FiniteRHInput",
+          "declaration_as_cited": "FiniteRH3e12",
+          "file": "lean/LegendreK6/FiniteRHInput.lean",
+          "line": 20,
+          "source_sha256": "d502c92b71fe95655c23d0e6d6a8d7de2e8376d707e6eeeb62d2d8bd2460a266"
+        },
+        {
+          "module": "LiteratureInputs",
+          "declaration_as_cited": "CHJIIShortInterval",
+          "file": "lean/LegendreK6/LiteratureInputs.lean",
+          "line": 27,
+          "source_sha256": "feb8446dcfb232adedec2937a271ed010e35f8addeec240a60f75c2c74c8df78"
+        },
+        {
+          "module": "Definitions",
+          "declaration_as_cited": "CHLInterval",
+          "file": "lean/LegendreK6/Definitions.lean",
+          "line": 35,
+          "source_sha256": "41eb5d0dd3e5debfb2821c9ecf9eb6b71d0f3df1737d9b3316fbda0f373056ac"
+        },
+        {
+          "module": "CHLRange",
+          "declaration_as_cited": "CHLRows",
+          "file": "lean/LegendreK6/CHLRange.lean",
+          "line": 16,
+          "source_sha256": "4c4e7c0a8a3950a071cd86b698beca2aeefe8959fa93f9a7c43fd32fce9239dd"
+        },
+        {
+          "module": "FinalResult",
+          "declaration_as_cited": "sixth_powers_from_named_inputs",
+          "file": "lean/LegendreK6/FinalResult.lean",
+          "line": 46,
+          "source_sha256": "57b9148fbdd078083abf425c2d7fc552bff551a83c97ef79a539c63147a0ea24"
+        }
+      ]
+    },
+    {
+      "source": "paper/current/sections/03_preliminaries.tex",
+      "title": "实际零点与算术准备",
+      "sha256": "824f14e4b861754c9ad0eeffe592a3dbe1109e011b26ed4b4da3091d9cb6e4d6",
+      "lean_mappings": [
+        {
+          "module": "ZetaZeros",
+          "declaration_as_cited": "riemannZeta_ne_zero_real_strip",
+          "file": "lean/LegendreK6/ZetaZeros.lean",
+          "line": 391,
+          "source_sha256": "9fb065bdae1cc73f614f433628ad98e97f81ceec74e8ad093de9e1eb24c6de1d"
+        },
+        {
+          "module": "ZetaZeros",
+          "declaration_as_cited": "zetaMultiplicity_conj",
+          "file": "lean/LegendreK6/ZetaZeros.lean",
+          "line": 145,
+          "source_sha256": "9fb065bdae1cc73f614f433628ad98e97f81ceec74e8ad093de9e1eb24c6de1d"
+        },
+        {
+          "module": "ZetaZeros",
+          "declaration_as_cited": "sum_allZetaZeros_eq_twice",
+          "file": "lean/LegendreK6/ZetaZeros.lean",
+          "line": 426,
+          "source_sha256": "9fb065bdae1cc73f614f433628ad98e97f81ceec74e8ad093de9e1eb24c6de1d"
+        },
+        {
+          "module": "ZetaZeros",
+          "declaration_as_cited": "all_zero_multiplicities_eq_twice_total",
+          "file": "lean/LegendreK6/ZetaZeros.lean",
+          "line": 453,
+          "source_sha256": "9fb065bdae1cc73f614f433628ad98e97f81ceec74e8ad093de9e1eb24c6de1d"
+        },
+        {
+          "module": "CpowInterval",
+          "declaration_as_cited": "norm_cpow_sub_div_le",
+          "file": "lean/LegendreK6/CpowInterval.lean",
+          "line": 18,
+          "source_sha256": "57f9334f94f50b16befcc1af6ab1ee4a0bd32b4858103f319da900a287947f35"
+        },
+        {
+          "module": "PrimePowerBudget",
+          "declaration_as_cited": "weightedNonprime_le_sqrt_log",
+          "file": "lean/LegendreK6/PrimePowerBudget.lean",
+          "line": 40,
+          "source_sha256": "4ba970c664d8eea921a92f9ad7a72b7282a2233e8450c3700e6c1bb7458a3d45"
+        },
+        {
+          "module": "PrimePowerBudget",
+          "declaration_as_cited": "weightedNonprime_le_manuscript_budget",
+          "file": "lean/LegendreK6/PrimePowerBudget.lean",
+          "line": 55,
+          "source_sha256": "4ba970c664d8eea921a92f9ad7a72b7282a2233e8450c3700e6c1bb7458a3d45"
+        },
+        {
+          "module": "PrimePowerBudget",
+          "declaration_as_cited": "theta_sub_le_log_of_no_prime",
+          "file": "lean/LegendreK6/PrimePowerBudget.lean",
+          "line": 70,
+          "source_sha256": "4ba970c664d8eea921a92f9ad7a72b7282a2233e8450c3700e6c1bb7458a3d45"
+        },
+        {
+          "module": "PrimePowerBudget",
+          "declaration_as_cited": "prime_of_psi_sub_gt_manuscript_budget",
+          "file": "lean/LegendreK6/PrimePowerBudget.lean",
+          "line": 130,
+          "source_sha256": "4ba970c664d8eea921a92f9ad7a72b7282a2233e8450c3700e6c1bb7458a3d45"
+        }
+      ]
+    },
+    {
+      "source": "paper/current/sections/04_trapezoid.tex",
+      "title": "梯形权与素数提取",
+      "sha256": "ede5884c3c69515046e3f65d7aaacce9b07ce05ec47a9ed9c89c97ebcdc4ca40",
+      "lean_mappings": [
+        {
+          "module": "IntegratedPsi",
+          "declaration_as_cited": "weightedMangoldt_trapezoid_eq",
+          "file": "lean/LegendreK6/IntegratedPsi.lean",
+          "line": 131,
+          "source_sha256": "52a735da07c58adfaee31f0405079c55879ef63585bf60d7b43e4359ca658245"
+        },
+        {
+          "module": "IntegratedPsi",
+          "declaration_as_cited": "trapezoidWeight_bounds",
+          "file": "lean/LegendreK6/IntegratedPsi.lean",
+          "line": 72,
+          "source_sha256": "52a735da07c58adfaee31f0405079c55879ef63585bf60d7b43e4359ca658245"
+        },
+        {
+          "module": "IntegratedPsi",
+          "declaration_as_cited": "trapezoidWeight_pos_support",
+          "file": "lean/LegendreK6/IntegratedPsi.lean",
+          "line": 123,
+          "source_sha256": "52a735da07c58adfaee31f0405079c55879ef63585bf60d7b43e4359ca658245"
+        },
+        {
+          "module": "TrapezoidKernel",
+          "declaration_as_cited": "norm_trapezoidKernel_le_base",
+          "file": "lean/LegendreK6/TrapezoidKernel.lean",
+          "line": 39,
+          "source_sha256": "b970b79fe41f4afde356ce7598d28d377e10c4178791c0bff88f0125c89467a3"
+        },
+        {
+          "module": "TrapezoidKernel",
+          "declaration_as_cited": "norm_trapezoidKernel_le_first",
+          "file": "lean/LegendreK6/TrapezoidKernel.lean",
+          "line": 119,
+          "source_sha256": "b970b79fe41f4afde356ce7598d28d377e10c4178791c0bff88f0125c89467a3"
+        },
+        {
+          "module": "TrapezoidKernel",
+          "declaration_as_cited": "norm_trapezoidKernel_le_second",
+          "file": "lean/LegendreK6/TrapezoidKernel.lean",
+          "line": 178,
+          "source_sha256": "b970b79fe41f4afde356ce7598d28d377e10c4178791c0bff88f0125c89467a3"
+        },
+        {
+          "module": "TrapezoidKernel",
+          "declaration_as_cited": "norm_trapezoidKernel_le_min",
+          "file": "lean/LegendreK6/TrapezoidKernel.lean",
+          "line": 220,
+          "source_sha256": "b970b79fe41f4afde356ce7598d28d377e10c4178791c0bff88f0125c89467a3"
+        },
+        {
+          "module": "IntegratedExplicitFormula",
+          "declaration_as_cited": "trapezoid_zero_sum_tendsto",
+          "file": "lean/LegendreK6/IntegratedExplicitFormula.lean",
+          "line": 113,
+          "source_sha256": "9dfad65f0a4a3849e4f89f6aca7b0f25511a2958466e1bd2712845d8e368aced"
+        },
+        {
+          "module": "TrapezoidTrivial",
+          "declaration_as_cited": "norm_trapezoidTrivialDifference_le",
+          "file": "lean/LegendreK6/TrapezoidTrivial.lean",
+          "line": 128,
+          "source_sha256": "7c9bfaae3b762dac8508e083a82bbe556051c1f173c3dad98885bde01f80868e"
+        },
+        {
+          "module": "PrimePowerBudget",
+          "declaration_as_cited": "weightedNonprime_le_psi_sub_theta",
+          "file": "lean/LegendreK6/PrimePowerBudget.lean",
+          "line": 16,
+          "source_sha256": "4ba970c664d8eea921a92f9ad7a72b7282a2233e8450c3700e6c1bb7458a3d45"
+        },
+        {
+          "module": "PrimePowerBudget",
+          "declaration_as_cited": "weightedNonprime_le_manuscript_budget",
+          "file": "lean/LegendreK6/PrimePowerBudget.lean",
+          "line": 55,
+          "source_sha256": "4ba970c664d8eea921a92f9ad7a72b7282a2233e8450c3700e6c1bb7458a3d45"
+        },
+        {
+          "module": "MiddleDomains",
+          "declaration_as_cited": "middle_prime_power_normalized_le",
+          "file": "lean/LegendreK6/MiddleDomains.lean",
+          "line": 131,
+          "source_sha256": "3d828ba99a09181bdc1b4c47c643bfa86129f38f0b7fb228977f2d98046c06c5"
+        },
+        {
+          "module": "MiddleDomains",
+          "declaration_as_cited": "middle_prime_power_le",
+          "file": "lean/LegendreK6/MiddleDomains.lean",
+          "line": 169,
+          "source_sha256": "3d828ba99a09181bdc1b4c47c643bfa86129f38f0b7fb228977f2d98046c06c5"
+        },
+        {
+          "module": "FarDomains",
+          "declaration_as_cited": "far_prime_power_le",
+          "file": "lean/LegendreK6/FarDomains.lean",
+          "line": 171,
+          "source_sha256": "85cc8f3d9c7e7d3aa6404edb9b8afc5637e743694eaed27a8fcb880e82d96459"
+        },
+        {
+          "module": "TrapezoidPrime",
+          "declaration_as_cited": "prime_of_trapezoid_budgets",
+          "file": "lean/LegendreK6/TrapezoidPrime.lean",
+          "line": 20,
+          "source_sha256": "646a9d2888d043f3b824ab1de5d702c9f2f66a755ed2653fa5fbbbbf8a5a4c3b"
+        }
+      ]
+    },
+    {
+      "source": "paper/current/sections/05_density.tex",
+      "title": "密度网格与完整高度余项",
+      "sha256": "d59ecc29c190784e9f5baf99331791bb89edc31daadaa046b691814229085c5b",
+      "lean_mappings": [
+        {
+          "module": "DensityInput",
+          "declaration_as_cited": "CSv2",
+          "file": "lean/LegendreK6/DensityInput.lean",
+          "line": 37,
+          "source_sha256": "990d6e27408ddfd9e69db0fad1c0c6580460d96c15f99a44cceb8a6b581146a9"
+        },
+        {
+          "module": "DensityInput",
+          "declaration_as_cited": "cs_log_exponent_eq",
+          "file": "lean/LegendreK6/DensityInput.lean",
+          "line": 45,
+          "source_sha256": "990d6e27408ddfd9e69db0fad1c0c6580460d96c15f99a44cceb8a6b581146a9"
+        },
+        {
+          "module": "LiteratureInputs",
+          "declaration_as_cited": "totalZeroCount_le_mul_log",
+          "file": "lean/LegendreK6/LiteratureInputs.lean",
+          "line": 80,
+          "source_sha256": "feb8446dcfb232adedec2937a271ed010e35f8addeec240a60f75c2c74c8df78"
+        },
+        {
+          "module": "FiniteDensityGrid",
+          "declaration_as_cited": "exp_le_grid_staircase",
+          "file": "lean/LegendreK6/FiniteDensityGrid.lean",
+          "line": 18,
+          "source_sha256": "e7788c6da80ab537a88156ac6c36296b3d8eca1949b6929359b65cfd70f8a572"
+        },
+        {
+          "module": "FiniteDensityGrid",
+          "declaration_as_cited": "positiveZeroWeight_le_density_grid",
+          "file": "lean/LegendreK6/FiniteDensityGrid.lean",
+          "line": 104,
+          "source_sha256": "e7788c6da80ab537a88156ac6c36296b3d8eca1949b6929359b65cfd70f8a572"
+        },
+        {
+          "module": "FiniteDensityGrid",
+          "declaration_as_cited": "positiveZeroWeight_le_gridPhi",
+          "file": "lean/LegendreK6/FiniteDensityGrid.lean",
+          "line": 152,
+          "source_sha256": "e7788c6da80ab537a88156ac6c36296b3d8eca1949b6929359b65cfd70f8a572"
+        },
+        {
+          "module": "DensityGridGrowth",
+          "declaration_as_cited": "densityGridPhi_shift_le",
+          "file": "lean/LegendreK6/DensityGridGrowth.lean",
+          "line": 73,
+          "source_sha256": "0aeba9712309446cab2eb070d02fca8cc350e101ad8e6844b59912074188ca87"
+        },
+        {
+          "module": "GeometricHeightTail",
+          "declaration_as_cited": "finite_quadratic_residual_bound",
+          "file": "lean/LegendreK6/GeometricHeightTail.lean",
+          "line": 97,
+          "source_sha256": "37506523d5c8384c77cd7adf51b7135d2b60e438afff52bb0ee4a6c9a07aec8f"
+        },
+        {
+          "module": "TrapezoidHeightBound",
+          "declaration_as_cited": "positive_zero_quadratic_residual_le",
+          "file": "lean/LegendreK6/TrapezoidHeightBound.lean",
+          "line": 30,
+          "source_sha256": "fcd0ba6678a162cbfbd6535bcb978947adc15651d2eeb5d8f201518966a8b152"
+        },
+        {
+          "module": "TrapezoidHeightBound",
+          "declaration_as_cited": "positive_zero_envelope_le_heightBudget",
+          "file": "lean/LegendreK6/TrapezoidHeightBound.lean",
+          "line": 86,
+          "source_sha256": "fcd0ba6678a162cbfbd6535bcb978947adc15651d2eeb5d8f201518966a8b152"
+        },
+        {
+          "module": "TrapezoidHeightBound",
+          "declaration_as_cited": "norm_truncatedTrapezoidZeroSum_le_heightBudget",
+          "file": "lean/LegendreK6/TrapezoidHeightBound.lean",
+          "line": 137,
+          "source_sha256": "fcd0ba6678a162cbfbd6535bcb978947adc15651d2eeb5d8f201518966a8b152"
+        }
+      ]
+    },
+    {
+      "source": "paper/current/sections/06_certificates.tex",
+      "title": "严格数值证书与整数矩",
+      "sha256": "6a52f0fbe32647099128cdb57079937e11ee2d9071d1e762f32044fa91f942c8",
+      "lean_mappings": [
+        {
+          "module": "M2PilotBudgetIdentity",
+          "declaration_as_cited": "weightedPhi_eq_twice_heightBudget",
+          "file": "lean/LegendreK6/M2PilotBudgetIdentity.lean",
+          "line": 42,
+          "source_sha256": "55295f85a8b204e3362c7b30307ff32d33e209eb0a229b2e6dc0288ce688250c"
+        },
+        {
+          "module": "M2PilotBudgetIdentity",
+          "declaration_as_cited": "weightedPhi_eq_main_add_aux",
+          "file": "lean/LegendreK6/M2PilotBudgetIdentity.lean",
+          "line": 72,
+          "source_sha256": "55295f85a8b204e3362c7b30307ff32d33e209eb0a229b2e6dc0288ce688250c"
+        },
+        {
+          "module": "LowRankTaylor",
+          "declaration_as_cited": "exp_le_taylor20",
+          "file": "lean/LegendreK6/LowRankTaylor.lean",
+          "line": 17,
+          "source_sha256": "899c71a212974dd6dd18bad7eb8636a7f0d0d0f426f66a160fa986f41c9269e5"
+        },
+        {
+          "module": "LowRankTaylor",
+          "declaration_as_cited": "shifted_exp_factorization",
+          "file": "lean/LegendreK6/LowRankTaylor.lean",
+          "line": 102,
+          "source_sha256": "899c71a212974dd6dd18bad7eb8636a7f0d0d0f426f66a160fa986f41c9269e5"
+        },
+        {
+          "module": "LowRankTaylor",
+          "declaration_as_cited": "shifted_exp_sum_le",
+          "file": "lean/LegendreK6/LowRankTaylor.lean",
+          "line": 110,
+          "source_sha256": "899c71a212974dd6dd18bad7eb8636a7f0d0d0f426f66a160fa986f41c9269e5"
+        },
+        {
+          "module": "LowRankTaylor",
+          "declaration_as_cited": "lowRankTaylor20_mono",
+          "file": "lean/LegendreK6/LowRankTaylor.lean",
+          "line": 150,
+          "source_sha256": "899c71a212974dd6dd18bad7eb8636a7f0d0d0f426f66a160fa986f41c9269e5"
+        },
+        {
+          "module": "LowRankInteger",
+          "declaration_as_cited": "lowRankTaylor20_eq_rational",
+          "file": "lean/LegendreK6/LowRankInteger.lean",
+          "line": 56,
+          "source_sha256": "7a40f7398f9b37e6cfb89065ce4b9eadd36d66477538deb8d55faf2ccb322c77"
+        },
+        {
+          "module": "M2PilotConstants",
+          "declaration_as_cited": "start_logKernel_eq_one",
+          "file": "lean/LegendreK6/M2PilotConstants.lean",
+          "line": 29,
+          "source_sha256": "46e4615d09e0ef8e84a0e26b881eb855385ed756f974f539ff6e708072d91c00"
+        },
+        {
+          "module": "M2PilotGrid",
+          "declaration_as_cited": "sigma_height_product_bounds",
+          "file": "lean/LegendreK6/M2PilotGrid.lean",
+          "line": 162,
+          "source_sha256": "676dc754c70e9ef926b8748faf03db726abd5ee739a9c6eebebfeebd737271ea"
+        },
+        {
+          "module": "M2PilotFactorBounds",
+          "declaration_as_cited": "sigmaDyadicBounds",
+          "file": "lean/LegendreK6/M2PilotFactorBounds.lean",
+          "line": 50,
+          "source_sha256": "7625778d79d2e11722125c556ff65bcd1a273fb7184a648693d5c9255432883b"
+        },
+        {
+          "module": "M2PilotFactorBounds",
+          "declaration_as_cited": "heightDyadicBounds",
+          "file": "lean/LegendreK6/M2PilotFactorBounds.lean",
+          "line": 74,
+          "source_sha256": "7625778d79d2e11722125c556ff65bcd1a273fb7184a648693d5c9255432883b"
+        },
+        {
+          "module": "M2PilotIntegerCertificate",
+          "declaration_as_cited": "rationalLowRank20_le",
+          "file": "lean/LegendreK6/M2PilotIntegerCertificate.lean",
+          "line": 13,
+          "source_sha256": "9f4daf3fb0cd397f6d2a851d46cc51a0f2b47b8808e177c56846dabc2f319df8"
+        },
+        {
+          "module": "M3FarGrid",
+          "declaration_as_cited": "sigma_height_product_bounds",
+          "file": "lean/LegendreK6/M3FarGrid.lean",
+          "line": 162,
+          "source_sha256": "d4d423b0a3e08931e2f31f4758a6584b9946573dc4847cba0c31fbac59b47e27"
+        },
+        {
+          "module": "M3FarIntegerCertificate",
+          "declaration_as_cited": "rationalLowRank20_le",
+          "file": "lean/LegendreK6/M3FarIntegerCertificate.lean",
+          "line": 13,
+          "source_sha256": "e69bbe4257af4fc6e122c6c8c5d93d5560cc452ff25bd14be949b04167605853"
+        },
+        {
+          "module": "M2PilotAuxiliary",
+          "declaration_as_cited": "auxiliaryBudget_le_small",
+          "file": "lean/LegendreK6/M2PilotAuxiliary.lean",
+          "line": 157,
+          "source_sha256": "458154518e8180d64adbfc5c8f4b9269b26661c653f2b0551619a7a3c0e83497"
+        },
+        {
+          "module": "M3FarAuxiliary",
+          "declaration_as_cited": "auxiliaryBudget_le_small",
+          "file": "lean/LegendreK6/M3FarAuxiliary.lean",
+          "line": 157,
+          "source_sha256": "a1556b9f4c7a8e0465867632e11fe39db8ac43ae8360f743a514b4e25cef4d2f"
+        },
+        {
+          "module": "M2PilotResult",
+          "declaration_as_cited": "pilot_short_interval_from_inputs",
+          "file": "lean/LegendreK6/M2PilotResult.lean",
+          "line": 28,
+          "source_sha256": "e3c045d6064d180117f6bb6b2010ecd084f83e0172c1c1969ec68b34d8400066"
+        },
+        {
+          "module": "M3FarResult",
+          "declaration_as_cited": "pilot_short_interval_from_inputs",
+          "file": "lean/LegendreK6/M3FarResult.lean",
+          "line": 28,
+          "source_sha256": "096699fca4a1f745cb93584463158cc010dc48b9591d29a631024902d45f6862"
+        }
+      ]
+    },
+    {
+      "source": "paper/current/sections/07_coverage.tex",
+      "title": "连续覆盖及有限高度 RH 比较",
+      "sha256": "db87b777ddc298b9551f284bc716a028e9be33efc482ae79dd755f4021cd096b",
+      "lean_mappings": [
+        {
+          "module": "DensityGridTranslation",
+          "declaration_as_cited": "sigmaGridWeight_translation_le",
+          "file": "lean/LegendreK6/DensityGridTranslation.lean",
+          "line": 46,
+          "source_sha256": "4d9bb4b3732565cfd9ab5c7ecbc1f6b4018cadd90bffda71622648f9084fddb2"
+        },
+        {
+          "module": "DensityGridTranslation",
+          "declaration_as_cited": "grid_translation_rate_nonpos",
+          "file": "lean/LegendreK6/DensityGridTranslation.lean",
+          "line": 62,
+          "source_sha256": "4d9bb4b3732565cfd9ab5c7ecbc1f6b4018cadd90bffda71622648f9084fddb2"
+        },
+        {
+          "module": "DensityGridTranslation",
+          "declaration_as_cited": "densityGridPhi_translation_le",
+          "file": "lean/LegendreK6/DensityGridTranslation.lean",
+          "line": 166,
+          "source_sha256": "4d9bb4b3732565cfd9ab5c7ecbc1f6b4018cadd90bffda71622648f9084fddb2"
+        },
+        {
+          "module": "TrapezoidBudgetTranslation",
+          "declaration_as_cited": "trapezoidHeightBudget_translation_le",
+          "file": "lean/LegendreK6/TrapezoidBudgetTranslation.lean",
+          "line": 37,
+          "source_sha256": "d2ffd1e40ee7d235dfd9f470a8ead8f0266068d8ba63a2bec6a9f6aa98f51c2c"
+        },
+        {
+          "module": "M3MiddleUpper",
+          "declaration_as_cited": "middle_upper_short_interval_from_inputs",
+          "file": "lean/LegendreK6/M3MiddleUpper.lean",
+          "line": 156,
+          "source_sha256": "74d1ab5007187d9d145ce6cfd6abb37c07a708d7afb28e70704053ab41688be5"
+        },
+        {
+          "module": "M3FarUpper",
+          "declaration_as_cited": "far_short_interval_from_inputs",
+          "file": "lean/LegendreK6/M3FarUpper.lean",
+          "line": 72,
+          "source_sha256": "e61e8a3d5e60a25686d47033b2d2eb146979b91ab137f1ece5516615efee329e"
+        },
+        {
+          "module": "TrapezoidLowHeight",
+          "declaration_as_cited": "norm_truncatedTrapezoidZeroSum_le_scaled_heightBudget",
+          "file": "lean/LegendreK6/TrapezoidLowHeight.lean",
+          "line": 111,
+          "source_sha256": "6c2ee3a4f62452ff8635a087bb05c1e1a22313db6286d5f113607a2b580bf57a"
+        },
+        {
+          "module": "M3LowerConstants",
+          "declaration_as_cited": "middleQ_le_scaling_q",
+          "file": "lean/LegendreK6/M3LowerConstants.lean",
+          "line": 63,
+          "source_sha256": "bf31279b134f1d46d0a1b5793b279f1fcaec964ebc53fd78ed5baa6cb5b64870"
+        },
+        {
+          "module": "M3LowerConstants",
+          "declaration_as_cited": "middleQ_linear_le_scaling",
+          "file": "lean/LegendreK6/M3LowerConstants.lean",
+          "line": 68,
+          "source_sha256": "bf31279b134f1d46d0a1b5793b279f1fcaec964ebc53fd78ed5baa6cb5b64870"
+        },
+        {
+          "module": "M3LowerComparison",
+          "declaration_as_cited": "scaled_sigma_weight_le",
+          "file": "lean/LegendreK6/M3LowerComparison.lean",
+          "line": 82,
+          "source_sha256": "68b15734a6ab800b49f48eb051575c4684c331f2a10aa2497d19b542cc19d5a7"
+        },
+        {
+          "module": "M3LowerExpression",
+          "declaration_as_cited": "scaled_heightBudget_le",
+          "file": "lean/LegendreK6/M3LowerExpression.lean",
+          "line": 96,
+          "source_sha256": "5a047aafc9fe44d6dce1539e74343ac193324af5e559a15501760821b09965c3"
+        },
+        {
+          "module": "M3LowerIntegerCertificate",
+          "declaration_as_cited": "rational_double_budget",
+          "file": "lean/LegendreK6/M3LowerIntegerCertificate.lean",
+          "line": 32,
+          "source_sha256": "7813bc1b451e798f5b720158ddbc41b91b5ac65cf49b1f6f3c9c95eb49be9bab"
+        },
+        {
+          "module": "M3LowerInteger",
+          "declaration_as_cited": "weighted_lowRank_le",
+          "file": "lean/LegendreK6/M3LowerInteger.lean",
+          "line": 55,
+          "source_sha256": "960519b8775e2167d4a8be5e32cc149571512beed371ba1cefc009aa74b35245"
+        },
+        {
+          "module": "M3LowerMainBound",
+          "declaration_as_cited": "weightedMain_le",
+          "file": "lean/LegendreK6/M3LowerMainBound.lean",
+          "line": 27,
+          "source_sha256": "c1b9c93b11322d7bb5f80ef3f7f557a0711df364d06fed9e010aa91d25d6f1ff"
+        },
+        {
+          "module": "M3LowerResult",
+          "declaration_as_cited": "lower_middle_short_interval_from_inputs",
+          "file": "lean/LegendreK6/M3LowerResult.lean",
+          "line": 11,
+          "source_sha256": "c342c0af5c7639208881e63647a40f360546acd43261ef503e35b6328af05279"
+        }
+      ]
+    },
+    {
+      "source": "paper/current/sections/08_tail.tex",
+      "title": "无限尾部",
+      "sha256": "b1e6e7eb90f17db819e9080d36573c0c17adf72ca1617699e759fb7195ea842a",
+      "lean_mappings": [
+        {
+          "module": "TailDomains",
+          "declaration_as_cited": "tail_log_sq_lt_T",
+          "file": "lean/LegendreK6/TailDomains.lean",
+          "line": 65,
+          "source_sha256": "a139a73c094378823953bb8e646f01facc80acf168d1020b4f823bea1fb1eaed"
+        },
+        {
+          "module": "TailDomains",
+          "declaration_as_cited": "tail_T_lt_sqrt_limit",
+          "file": "lean/LegendreK6/TailDomains.lean",
+          "line": 87,
+          "source_sha256": "a139a73c094378823953bb8e646f01facc80acf168d1020b4f823bea1fb1eaed"
+        },
+        {
+          "module": "TailDomains",
+          "declaration_as_cited": "tail_height_ge_RH",
+          "file": "lean/LegendreK6/TailDomains.lean",
+          "line": 99,
+          "source_sha256": "a139a73c094378823953bb8e646f01facc80acf168d1020b4f823bea1fb1eaed"
+        },
+        {
+          "module": "LiteratureInputs",
+          "declaration_as_cited": "CHJIIShortInterval",
+          "file": "lean/LegendreK6/LiteratureInputs.lean",
+          "line": 27,
+          "source_sha256": "feb8446dcfb232adedec2937a271ed010e35f8addeec240a60f75c2c74c8df78"
+        },
+        {
+          "module": "CpowInterval",
+          "declaration_as_cited": "norm_cpow_sub_div_le",
+          "file": "lean/LegendreK6/CpowInterval.lean",
+          "line": 18,
+          "source_sha256": "57f9334f94f50b16befcc1af6ab1ee4a0bd32b4858103f319da900a287947f35"
+        },
+        {
+          "module": "CpowInterval",
+          "declaration_as_cited": "norm_sum_cpow_sub_div_le",
+          "file": "lean/LegendreK6/CpowInterval.lean",
+          "line": 46,
+          "source_sha256": "57f9334f94f50b16befcc1af6ab1ee4a0bd32b4858103f319da900a287947f35"
+        },
+        {
+          "module": "ZetaZeros",
+          "declaration_as_cited": "sum_allZetaZeros_eq_twice",
+          "file": "lean/LegendreK6/ZetaZeros.lean",
+          "line": 426,
+          "source_sha256": "9fb065bdae1cc73f614f433628ad98e97f81ceec74e8ad093de9e1eb24c6de1d"
+        },
+        {
+          "module": "FiniteZeroLayer",
+          "declaration_as_cited": "finite_exp_layer_bound",
+          "file": "lean/LegendreK6/FiniteZeroLayer.lean",
+          "line": 90,
+          "source_sha256": "3dbe7a724f27c3dd0b80a278e5f86d650cd85b2e0802846f2c74f2f0ba656ab0"
+        },
+        {
+          "module": "TailDensity",
+          "declaration_as_cited": "positive_zero_exp_layer",
+          "file": "lean/LegendreK6/TailDensity.lean",
+          "line": 26,
+          "source_sha256": "7ca2f70d24c02b81755d23e2e4c17af23a8d3d4e8ed487050742c71d0d5b0ebf"
+        },
+        {
+          "module": "LiteratureInputs",
+          "declaration_as_cited": "totalZeroCount_le_mul_log",
+          "file": "lean/LegendreK6/LiteratureInputs.lean",
+          "line": 80,
+          "source_sha256": "feb8446dcfb232adedec2937a271ed010e35f8addeec240a60f75c2c74c8df78"
+        },
+        {
+          "module": "DensityInput",
+          "declaration_as_cited": "cs_tail_density",
+          "file": "lean/LegendreK6/DensityInput.lean",
+          "line": 78,
+          "source_sha256": "990d6e27408ddfd9e69db0fad1c0c6580460d96c15f99a44cceb8a6b581146a9"
+        },
+        {
+          "module": "TailDensity",
+          "declaration_as_cited": "integral_cs_tail_envelope_le",
+          "file": "lean/LegendreK6/TailDensity.lean",
+          "line": 72,
+          "source_sha256": "7ca2f70d24c02b81755d23e2e4c17af23a8d3d4e8ed487050742c71d0d5b0ebf"
+        },
+        {
+          "module": "TailZeroSum",
+          "declaration_as_cited": "tail_truncated_zero_bound",
+          "file": "lean/LegendreK6/TailZeroSum.lean",
+          "line": 28,
+          "source_sha256": "90d4d899ca8f79f5f09742beceab05d28f41c42f606d5cf2a2625e728906ef9c"
+        },
+        {
+          "module": "TailErrorBudgets",
+          "declaration_as_cited": "tail_truncation_error_le",
+          "file": "lean/LegendreK6/TailErrorBudgets.lean",
+          "line": 35,
+          "source_sha256": "aeda44ad034acf2ff2754fc5eb16e9a6c02620f2187837e0fd37b07d68c86cf3"
+        },
+        {
+          "module": "TailErrorBudgets",
+          "declaration_as_cited": "tail_prime_power_error_le",
+          "file": "lean/LegendreK6/TailErrorBudgets.lean",
+          "line": 66,
+          "source_sha256": "aeda44ad034acf2ff2754fc5eb16e9a6c02620f2187837e0fd37b07d68c86cf3"
+        },
+        {
+          "module": "TailErrorBudgets",
+          "declaration_as_cited": "tail_endpoint_error_le",
+          "file": "lean/LegendreK6/TailErrorBudgets.lean",
+          "line": 94,
+          "source_sha256": "aeda44ad034acf2ff2754fc5eb16e9a6c02620f2187837e0fd37b07d68c86cf3"
+        },
+        {
+          "module": "PrimePowerBudget",
+          "declaration_as_cited": "prime_of_theta_sub_gt_log",
+          "file": "lean/LegendreK6/PrimePowerBudget.lean",
+          "line": 110,
+          "source_sha256": "4ba970c664d8eea921a92f9ad7a72b7282a2233e8450c3700e6c1bb7458a3d45"
+        },
+        {
+          "module": "TailArithmetic",
+          "declaration_as_cited": "tailBound",
+          "file": "lean/LegendreK6/TailArithmetic.lean",
+          "line": 20,
+          "source_sha256": "26c495f768f6402a020d91dcc5bca230ff2b63b46955f0593a93a1526bb15c72"
+        },
+        {
+          "module": "TailArithmetic",
+          "declaration_as_cited": "log_two_bounds",
+          "file": "lean/LegendreK6/TailArithmetic.lean",
+          "line": 28,
+          "source_sha256": "26c495f768f6402a020d91dcc5bca230ff2b63b46955f0593a93a1526bb15c72"
+        },
+        {
+          "module": "TailArithmetic",
+          "declaration_as_cited": "tail_at_700",
+          "file": "lean/LegendreK6/TailArithmetic.lean",
+          "line": 37,
+          "source_sha256": "26c495f768f6402a020d91dcc5bca230ff2b63b46955f0593a93a1526bb15c72"
+        },
+        {
+          "module": "TailMonotonic",
+          "declaration_as_cited": "affine_power_exp_antitone",
+          "file": "lean/LegendreK6/TailMonotonic.lean",
+          "line": 14,
+          "source_sha256": "a42b8f02c149ad809148f0f109a6c75f117a0f787f54a1132924b865a3876d48"
+        },
+        {
+          "module": "TailMonotonic",
+          "declaration_as_cited": "tail_ratio_antitone",
+          "file": "lean/LegendreK6/TailMonotonic.lean",
+          "line": 47,
+          "source_sha256": "a42b8f02c149ad809148f0f109a6c75f117a0f787f54a1132924b865a3876d48"
+        },
+        {
+          "module": "TailResult",
+          "declaration_as_cited": "tailBound_antitone",
+          "file": "lean/LegendreK6/TailResult.lean",
+          "line": 33,
+          "source_sha256": "5b78fae5f93f1288540d24ad3cae620f5b119bcfdf9c284ad0806a938b6d1ac5"
+        },
+        {
+          "module": "TailResult",
+          "declaration_as_cited": "tail_bound_all",
+          "file": "lean/LegendreK6/TailResult.lean",
+          "line": 40,
+          "source_sha256": "5b78fae5f93f1288540d24ad3cae620f5b119bcfdf9c284ad0806a938b6d1ac5"
+        },
+        {
+          "module": "TailFromInputs",
+          "declaration_as_cited": "tail_short_interval_exp",
+          "file": "lean/LegendreK6/TailFromInputs.lean",
+          "line": 31,
+          "source_sha256": "456eb196a9af7a681d86df21293f781608bf10d01fcffaa9f0338fc04ab45bc4"
+        },
+        {
+          "module": "TailFromInputs",
+          "declaration_as_cited": "tail_short_interval_from_inputs",
+          "file": "lean/LegendreK6/TailFromInputs.lean",
+          "line": 71,
+          "source_sha256": "456eb196a9af7a681d86df21293f781608bf10d01fcffaa9f0338fc04ab45bc4"
+        }
+      ]
+    },
+    {
+      "source": "paper/current/sections/09_lower.tex",
+      "title": "整数下段",
+      "sha256": "ff25425ff7c2df64e51c68987591c53b04030fe41af991efaadd9f3e1b69ea4c",
+      "lean_mappings": [
+        {
+          "module": "Pratt/Block005",
+          "declaration_as_cited": "prime_15629",
+          "file": "lean/LegendreK6/Pratt/Block005.lean",
+          "line": 8,
+          "source_sha256": "328af25bb9162a68e7711438a278ce59ccfa57b7cec2bf198aa9bd428ddbda8e"
+        },
+        {
+          "module": "PrimeWitnesses",
+          "declaration_as_cited": "small_range_prime",
+          "file": "lean/LegendreK6/PrimeWitnesses.lean",
+          "line": 3786,
+          "source_sha256": "930ae7f08c0033e64156087d889ab4d4089677cd8f94b7c49db2888a528c0f32"
+        },
+        {
+          "module": "Definitions",
+          "declaration_as_cited": "CHLInterval",
+          "file": "lean/LegendreK6/Definitions.lean",
+          "line": 35,
+          "source_sha256": "41eb5d0dd3e5debfb2821c9ecf9eb6b71d0f3df1737d9b3316fbda0f373056ac"
+        },
+        {
+          "module": "CHL",
+          "declaration_as_cited": "nat_sixth_short_of_CHL",
+          "file": "lean/LegendreK6/CHL.lean",
+          "line": 14,
+          "source_sha256": "1b30f370040ceadfeffc325036f0ce0cdd9dc2f4376998dcb8b6deafd452ee4e"
+        },
+        {
+          "module": "Reduction",
+          "declaration_as_cited": "sixth_right_endpoint_not_prime",
+          "file": "lean/LegendreK6/Reduction.lean",
+          "line": 49,
+          "source_sha256": "b9cb1ebad378ba363b3b9a69d49b12b558957950303540009a08592ded3468f4"
+        },
+        {
+          "module": "CHLRange",
+          "declaration_as_cited": "CHLRows",
+          "file": "lean/LegendreK6/CHLRange.lean",
+          "line": 16,
+          "source_sha256": "4c4e7c0a8a3950a071cd86b698beca2aeefe8959fa93f9a7c43fd32fce9239dd"
+        },
+        {
+          "module": "CHLRange",
+          "declaration_as_cited": "nat_short_of_CHL_integer_row",
+          "file": "lean/LegendreK6/CHLRange.lean",
+          "line": 30,
+          "source_sha256": "4c4e7c0a8a3950a071cd86b698beca2aeefe8959fa93f9a7c43fd32fce9239dd"
+        },
+        {
+          "module": "CHLRange",
+          "declaration_as_cited": "chl_integer_coverage",
+          "file": "lean/LegendreK6/CHLRange.lean",
+          "line": 40,
+          "source_sha256": "4c4e7c0a8a3950a071cd86b698beca2aeefe8959fa93f9a7c43fd32fce9239dd"
+        },
+        {
+          "module": "LowerRange",
+          "declaration_as_cited": "lower_range_complete",
+          "file": "lean/LegendreK6/LowerRange.lean",
+          "line": 14,
+          "source_sha256": "50a9b13f8f82200a8fe998fe3d996751569ea3267c2498241b063c9c38b2494f"
+        },
+        {
+          "module": "Thresholds",
+          "declaration_as_cited": "lower_join_exp",
+          "file": "lean/LegendreK6/Thresholds.lean",
+          "line": 51,
+          "source_sha256": "fe7e55b7672d77042b76b40a7cccd54d9e839733739ec507f99debe7dceb601d"
+        },
+        {
+          "module": "CHLRange",
+          "declaration_as_cited": "lower_join_of_log",
+          "file": "lean/LegendreK6/CHLRange.lean",
+          "line": 80,
+          "source_sha256": "4c4e7c0a8a3950a071cd86b698beca2aeefe8959fa93f9a7c43fd32fce9239dd"
+        },
+        {
+          "module": "LowerRange",
+          "declaration_as_cited": "lower_log_range",
+          "file": "lean/LegendreK6/LowerRange.lean",
+          "line": 20,
+          "source_sha256": "50a9b13f8f82200a8fe998fe3d996751569ea3267c2498241b063c9c38b2494f"
+        }
+      ]
+    },
+    {
+      "source": "paper/current/sections/10_assembly.tex",
+      "title": "主定理总装",
+      "sha256": "2de4cefcc8e478f50d69693fbd20b3639e263cb40c84da92a5ff800169f7b9a9",
+      "lean_mappings": [
+        {
+          "module": "Definitions",
+          "declaration_as_cited": "ShortInterval6",
+          "file": "lean/LegendreK6/Definitions.lean",
+          "line": 19,
+          "source_sha256": "41eb5d0dd3e5debfb2821c9ecf9eb6b71d0f3df1737d9b3316fbda0f373056ac"
+        },
+        {
+          "module": "Definitions",
+          "declaration_as_cited": "ShortInterval4",
+          "file": "lean/LegendreK6/Definitions.lean",
+          "line": 23,
+          "source_sha256": "41eb5d0dd3e5debfb2821c9ecf9eb6b71d0f3df1737d9b3316fbda0f373056ac"
+        },
+        {
+          "module": "Definitions",
+          "declaration_as_cited": "NatSixthShort",
+          "file": "lean/LegendreK6/Definitions.lean",
+          "line": 27,
+          "source_sha256": "41eb5d0dd3e5debfb2821c9ecf9eb6b71d0f3df1737d9b3316fbda0f373056ac"
+        },
+        {
+          "module": "M3LowerResult",
+          "declaration_as_cited": "lower_middle_short_interval_from_inputs",
+          "file": "lean/LegendreK6/M3LowerResult.lean",
+          "line": 11,
+          "source_sha256": "c342c0af5c7639208881e63647a40f360546acd43261ef503e35b6328af05279"
+        },
+        {
+          "module": "M3MiddleUpper",
+          "declaration_as_cited": "middle_upper_short_interval_from_inputs",
+          "file": "lean/LegendreK6/M3MiddleUpper.lean",
+          "line": 156,
+          "source_sha256": "74d1ab5007187d9d145ce6cfd6abb37c07a708d7afb28e70704053ab41688be5"
+        },
+        {
+          "module": "M3FarUpper",
+          "declaration_as_cited": "far_short_interval_from_inputs",
+          "file": "lean/LegendreK6/M3FarUpper.lean",
+          "line": 72,
+          "source_sha256": "e61e8a3d5e60a25686d47033b2d2eb146979b91ab137f1ece5516615efee329e"
+        },
+        {
+          "module": "Reduction",
+          "declaration_as_cited": "four_length_le_six_length",
+          "file": "lean/LegendreK6/Reduction.lean",
+          "line": 35,
+          "source_sha256": "b9cb1ebad378ba363b3b9a69d49b12b558957950303540009a08592ded3468f4"
+        },
+        {
+          "module": "Reduction",
+          "declaration_as_cited": "short_six_of_short_four",
+          "file": "lean/LegendreK6/Reduction.lean",
+          "line": 43,
+          "source_sha256": "b9cb1ebad378ba363b3b9a69d49b12b558957950303540009a08592ded3468f4"
+        },
+        {
+          "module": "FinalResult",
+          "declaration_as_cited": "middle_short_interval_from_inputs",
+          "file": "lean/LegendreK6/FinalResult.lean",
+          "line": 18,
+          "source_sha256": "57b9148fbdd078083abf425c2d7fc552bff551a83c97ef79a539c63147a0ea24"
+        },
+        {
+          "module": "Assembly",
+          "declaration_as_cited": "real_short_above_167_of_segment_inputs",
+          "file": "lean/LegendreK6/Assembly.lean",
+          "line": 25,
+          "source_sha256": "e862e4484f224258f5f0a8c9a3dc251c20b9501227c84486e62ac4d436cd5cf6"
+        },
+        {
+          "module": "Reduction",
+          "declaration_as_cited": "sixth_rpow_five_sixths",
+          "file": "lean/LegendreK6/Reduction.lean",
+          "line": 22,
+          "source_sha256": "b9cb1ebad378ba363b3b9a69d49b12b558957950303540009a08592ded3468f4"
+        },
+        {
+          "module": "Reduction",
+          "declaration_as_cited": "nat_short_of_real_short",
+          "file": "lean/LegendreK6/Reduction.lean",
+          "line": 27,
+          "source_sha256": "b9cb1ebad378ba363b3b9a69d49b12b558957950303540009a08592ded3468f4"
+        },
+        {
+          "module": "Reduction",
+          "declaration_as_cited": "sixth_binomial_gap",
+          "file": "lean/LegendreK6/Reduction.lean",
+          "line": 12,
+          "source_sha256": "b9cb1ebad378ba363b3b9a69d49b12b558957950303540009a08592ded3468f4"
+        },
+        {
+          "module": "FinalResult",
+          "declaration_as_cited": "sixth_power_short_from_named_inputs",
+          "file": "lean/LegendreK6/FinalResult.lean",
+          "line": 35,
+          "source_sha256": "57b9148fbdd078083abf425c2d7fc552bff551a83c97ef79a539c63147a0ea24"
+        },
+        {
+          "module": "FinalResult",
+          "declaration_as_cited": "sixth_powers_from_named_inputs",
+          "file": "lean/LegendreK6/FinalResult.lean",
+          "line": 46,
+          "source_sha256": "57b9148fbdd078083abf425c2d7fc552bff551a83c97ef79a539c63147a0ea24"
+        },
+        {
+          "module": "Definitions",
+          "declaration_as_cited": "SixthPowerConclusion",
+          "file": "lean/LegendreK6/Definitions.lean",
+          "line": 31,
+          "source_sha256": "41eb5d0dd3e5debfb2821c9ecf9eb6b71d0f3df1737d9b3316fbda0f373056ac"
+        },
+        {
+          "module": "Assembly",
+          "declaration_as_cited": "AnalyticSegmentInputs",
+          "file": "lean/LegendreK6/Assembly.lean",
+          "line": 20,
+          "source_sha256": "e862e4484f224258f5f0a8c9a3dc251c20b9501227c84486e62ac4d436cd5cf6"
+        },
+        {
+          "module": "AssemblyWithTail",
+          "declaration_as_cited": "FiniteAnalyticSegmentInputs",
+          "file": "lean/LegendreK6/AssemblyWithTail.lean",
+          "line": 14,
+          "source_sha256": "a89e5068affa44f1bd5c2a2324f99c9e6c9fab4965d2f4ed39db8a46b012a3c3"
+        },
+        {
+          "module": "FinalResult",
+          "declaration_as_cited": "finite_analytic_segments_from_inputs",
+          "file": "lean/LegendreK6/FinalResult.lean",
+          "line": 27,
+          "source_sha256": "57b9148fbdd078083abf425c2d7fc552bff551a83c97ef79a539c63147a0ea24"
+        },
+        {
+          "module": "TailFromInputs",
+          "declaration_as_cited": "tail_short_interval_from_inputs",
+          "file": "lean/LegendreK6/TailFromInputs.lean",
+          "line": 71,
+          "source_sha256": "456eb196a9af7a681d86df21293f781608bf10d01fcffaa9f0338fc04ab45bc4"
+        },
+        {
+          "module": "FinalResult",
+          "declaration_as_cited": "sixth_power_short_from_named_inputs",
+          "file": "lean/LegendreK6/FinalResult.lean",
+          "line": 35,
+          "source_sha256": "57b9148fbdd078083abf425c2d7fc552bff551a83c97ef79a539c63147a0ea24"
+        },
+        {
+          "module": "FinalResult",
+          "declaration_as_cited": "sixth_powers_from_named_inputs",
+          "file": "lean/LegendreK6/FinalResult.lean",
+          "line": 46,
+          "source_sha256": "57b9148fbdd078083abf425c2d7fc552bff551a83c97ef79a539c63147a0ea24"
+        },
+        {
+          "module": "FinalCellCoverage",
+          "declaration_as_cited": "all_94_cells_actual_prime_intervals",
+          "file": "lean/LegendreK6/FinalCellCoverage.lean",
+          "line": 18,
+          "source_sha256": "af81a4c1efbdd568f994b8e4797572845b48e7e17be4f543bebaed02d8595e5b"
+        },
+        {
+          "module": "FinalCellCoverage",
+          "declaration_as_cited": "all_60_far_cells_actual_prime_intervals",
+          "file": "lean/LegendreK6/FinalCellCoverage.lean",
+          "line": 29,
+          "source_sha256": "af81a4c1efbdd568f994b8e4797572845b48e7e17be4f543bebaed02d8595e5b"
+        }
+      ]
+    },
+    {
+      "source": "paper/current/sections/11_methods.tex",
+      "title": "方法贡献与后续研究",
+      "sha256": "bdd8936894b436622f1db532a1ede4619c563bdb850f3572fdb9ec709315a297",
+      "lean_mappings": []
+    },
+    {
+      "source": "paper/current/sections/12_formalization.tex",
+      "title": "形式化、复现与 AI 贡献",
+      "sha256": "1c129e1311378e69d9acadf80eb803f6d26079b98e35eef5c3ebd4f4fe59ecd3",
+      "lean_mappings": []
+    },
+    {
+      "source": "paper/current/sections/appendix_versions.tex",
+      "title": "历史版本与材料索引",
+      "sha256": "cf53a2a456bc311b340582c7111150cf25af0309a27d443562210b287c143c45",
+      "lean_mappings": []
+    }
+  ],
+  "checked_lean_references": 150,
+  "unique_lean_files": 63,
+  "tex_labels": 200,
+  "bibliography_keys": [
+    "Arb",
+    "CHJII",
+    "CHL",
+    "CHLcorr",
+    "CSv2",
+    "Dusart2016",
+    "GM2016",
+    "Hildebrand",
+    "LeanPinned",
+    "MathlibPinned",
+    "MontgomeryVaughan",
+    "OpenAIQRH",
+    "PlattTrudgian",
+    "Rosser1941"
+  ]
+}

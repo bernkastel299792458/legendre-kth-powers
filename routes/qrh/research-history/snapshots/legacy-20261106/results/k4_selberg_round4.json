@@ -1,0 +1,168 @@
+{
+  "schema": "k4-selberg-gaussian-round4-v1",
+  "status": "PASS: uniform scalar premises of the documented analytic segment proof",
+  "statement": "For every real x with 112.5<=log(x)<=113.1, the open interval (x,x+4*x^(3/4)) contains a prime, using the stated classical and published literature inputs.",
+  "scope": "This local certificate makes no claim for log(x)>113.1; scalar verification is not a formalization of Selberg or Guinand-Weil.",
+  "precision_bits": 256,
+  "python_flint": "0.9.0",
+  "exact_parameters": {
+    "L_min": "225/2",
+    "L_max": "1131/10",
+    "H": "3000000000000",
+    "K": "2999999999872",
+    "Selberg_cycle_frequency": "K/(2*pi)",
+    "Gaussian_eta": "1",
+    "spectral_clearance": "128",
+    "clearance_used": "64",
+    "off_line_bound_used": "1/2",
+    "n_min_inclusive": "1638823955139",
+    "n_max_inclusive": "1904041788883",
+    "rational_relative_cost_upper": "1/1000000"
+  },
+  "auxiliary_balls": {
+    "d_at_L_min": "[1.220387335519575528979991038672898090848356549168492331e-12 +/- 2.50e-67]",
+    "d_at_L_max": "[1.050397114010000483971614947704549763084729037988558176e-12 +/- 3.92e-67]",
+    "c_at_L_min": "[112.5000000000012203873355195755289799910386728980908484 +/- 4.35e-53]",
+    "c_at_L_max": "[113.1000000000010503971140100004839716149477045497630847 +/- 2.91e-53]",
+    "Selberg_mass_min": "[6.399125537444617928878568955485280109324268561813428118e-15 +/- 2.32e-70]",
+    "spatial_L1_max": "[4.535169773521707407974333403799410427756846905752287585e-12 +/- 4.01e-67]",
+    "spectral_L1_max": "[27.21101863996924098582444332635503321516843236500797270 +/- 2.74e-55]",
+    "Gaussian_pole_mass_min": "[6.399125537444617928874933799325829018464341509425130216e-15 +/- 1.85e-70]"
+  },
+  "uniform_budget_balls": {
+    "pole_lower": "[17186412735.48421235155791773008345206831868356621279088 +/- 4.27e-45]",
+    "low_zeros_upper": "[781.7625901253178284322184114474637847883412711003987043 +/- 3.20e-53]",
+    "high_zeros_upper": "[5.113911097929380727445529977941128952989984156352933104e-395 +/- 2.02e-450]",
+    "archimedean_absolute_upper": "[159.6235059267396702898474179937611334575136065098270253 +/- 1.20e-53]",
+    "positive_prime_powers_upper": "[9227.196156004495617237193806857512134775176774596964243 +/- 1.45e-52]",
+    "all_costs_upper": "[10168.58225205655311595925963629873705302103165220718997 +/- 2.42e-51]",
+    "positive_margin_lower": "[17186402566.90196029500480177082381576958163054518113867 +/- 1.46e-45]",
+    "relative_cost_upper": "[5.916640318466122350905226762518050964598245015280986513e-7 +/- 2.98e-62]"
+  },
+  "checks": {
+    "positive_L_interval": {
+      "expression_ball": "[0.6000000000000000000000000000000000000000000000000000000 +/- 3e-60]",
+      "passed": true,
+      "reason": "Exact closed interval."
+    },
+    "d_decreases": {
+      "expression_ball": "[1.699902215095750450083760909683483277636275111799341551e-13 +/- 4.12e-68]",
+      "passed": true,
+      "reason": "d'(L)=-epsilon/[8(1+epsilon)]<0."
+    },
+    "c_increases": {
+      "expression_ball": "[0.5999999999998300097784904249549916239090316516722363725 +/- 1.12e-56]",
+      "passed": true,
+      "reason": "c'(L)>7/8 for all real L."
+    },
+    "center_exceeds_half_width": {
+      "expression_ball": "[112.5000000000000000000000000000000000000000000000000000 +/- 3e-57]",
+      "passed": true,
+      "reason": "For u>=0 the reflected term f(u+c) is nonpositive."
+    },
+    "positive_bandwidth": {
+      "expression_ball": "2999999999872.000000000000000000000000000000000000000000",
+      "passed": true,
+      "reason": "Selberg frequency parameter K/(2*pi)>0."
+    },
+    "clearance_above_64": {
+      "expression_ball": "64.00000000000000000000000000000000000000000000000000000",
+      "passed": true,
+      "reason": "Constant bandwidth K=H-128; Gaussian high tail uses clearance 64."
+    },
+    "Selberg_mass_min_positive": {
+      "expression_ball": "[6.399125537444617928878568955485280109324268561813428118e-15 +/- 2.32e-70]",
+      "passed": true,
+      "reason": "Exact Selberg mass 2d-2*pi/K is minimized at L_max."
+    },
+    "spatial_L1_upper_positive": {
+      "expression_ball": "[4.535169773521707407974333403799410427756846905752287585e-12 +/- 4.01e-67]",
+      "passed": true,
+      "reason": "||f||1<=2d+2*pi/K, maximized at L_min."
+    },
+    "spectral_L1_upper_positive": {
+      "expression_ball": "[27.21101863996924098582444332635503321516843236500797270 +/- 2.74e-55]",
+      "passed": true,
+      "reason": "Support[-K,K] and |G0|<=||f||1 imply ||G0||1<=2K||f||1."
+    },
+    "regularized_pole_mass_positive": {
+      "expression_ball": "[6.399125537444617928874933799325829018464341509425130216e-15 +/- 1.85e-70]",
+      "passed": true,
+      "reason": "Only the positive part loses mass under exp(-v^2)cosh(v/2); loss<=2d^3."
+    },
+    "counting_relaxation": {
+      "expression_ball": "[1499999999996.957000000000000000000000000000000000000000 +/- 3e-47]",
+      "passed": true,
+      "reason": "Classical Rosser bound implies N(T)<T*log(T) for every T>=H."
+    },
+    "counting_height_above_e": {
+      "expression_ball": "[27.72963340459665789961114269313489619586070842136802516 +/- 4.14e-54]",
+      "passed": true,
+      "reason": "All high-tail uses of log(T)<=T occur in the source domain T>=H."
+    },
+    "high_tail_below_1e_minus_300": {
+      "expression_ball": "[1.000000000000000000000000000000000000000000000000000000e-300 +/- 3e-359]",
+      "passed": true,
+      "reason": "Full Gaussian/Stieltjes tail over gamma>H."
+    },
+    "prime_extraction_margin": {
+      "expression_ball": "[17186402566.90196029500480177082381576958163054518113867 +/- 1.46e-45]",
+      "passed": true,
+      "reason": "Includes low/high zeros, absolute archimedean term and positive prime powers."
+    },
+    "relative_cost_below_1e_minus_6": {
+      "expression_ball": "[4.083359681533877649094773237481949035401754984719013487e-7 +/- 2.98e-62]",
+      "passed": true,
+      "reason": "Strict convenient rational envelope; no claim of optimality."
+    },
+    "integer_min_in_interval": {
+      "expression_ball": "[3.547252649307902771153579370573471240099594179647489732e-13 +/- 1.07e-68]",
+      "passed": true,
+      "reason": "Independent logarithmic check of the first included integer."
+    },
+    "preceding_integer_below_interval": {
+      "expression_ball": "[2.086049406111867692855914538802381702383412877478528213e-12 +/- 2.53e-67]",
+      "passed": true,
+      "reason": "Independent logarithmic check of the preceding integer."
+    },
+    "integer_max_in_interval": {
+      "expression_ball": "[1.514765437944359852112100137440765094249742004315017318e-12 +/- 2.59e-67]",
+      "passed": true,
+      "reason": "Independent logarithmic check of the last included integer."
+    },
+    "following_integer_above_interval": {
+      "expression_ball": "[5.860287900780916695990211378622181440900258708109601735e-13 +/- 3.56e-68]",
+      "passed": true,
+      "reason": "Independent logarithmic check of the following integer."
+    }
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/1309.1506v1",
+      "name": "Le-Vaaler, Sums of products of fractional parts",
+      "location": "Equations (3.1)-(3.7), Lemma 3.1, pp.6-7",
+      "use": "Selberg real entire L1 minorant, exact mass and Fourier support for every positive bandwidth; no integer-length assumption."
+    },
+    {
+      "url": "https://arxiv.org/pdf/1708.04122v2",
+      "location": "CMS Lemma 6, p.17",
+      "use": "Guinand-Weil with angular Fourier normalization stated in the proof."
+    },
+    {
+      "url": "https://arxiv.org/pdf/2004.09765v1",
+      "location": "Platt-Trudgian Theorem 1",
+      "use": "Finite RH beyond H=3e12."
+    },
+    {
+      "url": "https://arxiv.org/html/2204.02588v3",
+      "location": "FKS Lemma 2.1, Remark 2.2",
+      "use": "Classical Rosser total-count constants only; no density estimate."
+    }
+  ],
+  "QRH_assumption_used": false,
+  "CS_density_assumption_used": false,
+  "literature_inputs_independently_reproved": false,
+  "proof_document": "research/K4_SELBERG_ROUND4.md",
+  "proof_sha256": "17e960bf28b6507dbf6f07cb8da9d37b0b7ae50cb23c71c9c6347818450863a6",
+  "script_sha256": "1278dfc72f3b4891e5c537b20dbb878d9f9a8a23443a81a6a0fa0aec83d4468a"
+}

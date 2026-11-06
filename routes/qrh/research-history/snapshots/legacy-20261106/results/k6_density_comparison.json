@@ -1,0 +1,56 @@
+{
+  "status": "EXPLORATORY",
+  "created": "2026-11-06T08:21:53.104155+08:00",
+  "arguments": {
+    "ls": "167,168,170,172,173,174,175,176,177,178,180,182,185",
+    "degrees": "2,3",
+    "output": "k6_density_comparison"
+  },
+  "source": "https://arxiv.org/html/2507.15184v2",
+  "source_formula": "Corollary 1, Table 1; Appendix (119), Table 4",
+  "appendix_constants": [
+    [
+      "2.900",
+      "5.027"
+    ],
+    [
+      "3.474",
+      "4.789"
+    ],
+    [
+      "4.149",
+      "4.536"
+    ],
+    [
+      "4.940",
+      "4.296"
+    ],
+    [
+      "5.860",
+      "4.042"
+    ],
+    [
+      "6.925",
+      "3.800"
+    ],
+    [
+      "8.148",
+      "3.546"
+    ],
+    [
+      "9.543",
+      "3.301"
+    ]
+  ],
+  "height_order": 32,
+  "sigma_order": 32,
+  "max_step": 1,
+  "code_sha256": "03fcebef20ea529ea0757dfff2601d64ade9ab7cd27bd1e4b1dd767ccbedb24a",
+  "dependency_sha256": "32029e46ab6431420fd7a843476b5fb3b6ca0fd5598d0e952246b4e77c7a8d7b",
+  "csv_sha256": "9cd19bd6c8c1a54222fff377c6617806c99dfb35a560ba691ca22b4bc4d23cc7",
+  "limitations": [
+    "Floating quadrature, no outward rounding",
+    "Minimum introduces nonsmooth crossings; convergence must be checked",
+    "No continuous L certificate and no full k6 proof"
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "schema_version": 1,
+  "reviewed_at_utc": "2026-11-06T11:42:35.558708+00:00",
+  "status": "VISUAL_REVIEW_PASSED_PAGES_43_TO_57",
+  "reviewer": "Codex child agent credibility_cs_finite; AI visual review, not human peer review.",
+  "pdf": {
+    "path": "paper/current/main.pdf",
+    "sha256": "500fa769a0933774b677264fab06ecfa403cdc2bb67575f6e485f4ddaa3b446f",
+    "bytes": 794528,
+    "page_count": 57,
+    "hash_unchanged_between_initial_and_final_review": true
+  },
+  "scope": {
+    "first_page_1_based": 43,
+    "last_page_1_based": 57,
+    "pages_actually_viewed": [
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57
+    ],
+    "render_dpi": 110,
+    "renderer": "Poppler pdftoppm; final rendered images supplied by root agent",
+    "view_tool": "functions.exec tools.view_image",
+    "read_only_pdf_review": true,
+    "source_or_pdf_modified_by_this_review": false
+  },
+  "checks": [
+    "Chinese/Latin/math glyph legibility",
+    "Visible separation of Lean file names and declaration names",
+    "Displayed formula and table completeness within margins",
+    "No text/table/equation overlap or clipped footer",
+    "Section transitions and numbered references",
+    "Readable bibliography URL and DOI wrapping"
+  ],
+  "pages": [
+    {
+      "pdf_page_1_based": 43,
+      "printed_page": 43,
+      "image_path": "tmp/paper-visual-final/page-43.png",
+      "image_sha256": "56c2c1c5e8310700b38768a049819bd0cb668cf0c91f78f88bcb6d1e04c4e018",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "inspection": "Actually viewed through view_image after final :: macro rebuild.",
+      "status": "PASS_NO_VISUAL_DEFECT_OBSERVED",
+      "observations": "Lucas/Pratt example, congruences, Proposition 9.2 and CHL interval formula are legible. Lean file/declaration references now show a visible :: separator; no clipping or overlap."
+    },
+    {
+      "pdf_page_1_based": 44,
+      "printed_page": 44,
+      "image_path": "tmp/paper-visual-final/page-44.png",
+      "image_sha256": "4aab8ca8014983b22296abcedc25f9457d67a70176843f6472d0ecef9255aee1",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "inspection": "Actually viewed through view_image after final :: macro rebuild.",
+      "status": "PASS_NO_VISUAL_DEFECT_OBSERVED",
+      "observations": "CHL endpoint lemma and displayed identities remain inside the text block. All 12 table rows and four columns are visible and separated; no clipped digits or headings."
+    },
+    {
+      "pdf_page_1_based": 45,
+      "printed_page": 45,
+      "image_path": "tmp/paper-visual-final/page-45.png",
+      "image_sha256": "ee854def0d0b0bd071738bbe95f9cc87faa8a156c6caeb825cd0cb7d38a42485",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "inspection": "Actually viewed through view_image after final :: macro rebuild.",
+      "status": "PASS_NO_VISUAL_DEFECT_OBSERVED",
+      "observations": "Exponent-threshold array, coverage proposition and join section are visible. Long Lean names wrap within margins; equations and page number are not clipped."
+    },
+    {
+      "pdf_page_1_based": 46,
+      "printed_page": 46,
+      "image_path": "tmp/paper-visual-final/page-46.png",
+      "image_sha256": "8116366fc18ad1a9d98cf5c5f31b98b1f3ae98264c18e3c933d1a20d29736907",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "inspection": "Actually viewed through view_image after final :: macro rebuild.",
+      "status": "PASS_NO_VISUAL_DEFECT_OBSERVED",
+      "observations": "Integer join theorem, H7 evidence-status discussion and Section 10 heading are complete. Chinese and mathematical glyphs render; Lean :: separators remain visible."
+    },
+    {
+      "pdf_page_1_based": 47,
+      "printed_page": 47,
+      "image_path": "tmp/paper-visual-final/page-47.png",
+      "image_sha256": "63207e7d02ab95c05835340eac740912c7b0fac3840b74f90d62d10ea47b51f7",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "inspection": "Actually viewed through view_image after final :: macro rebuild.",
+      "status": "PASS_NO_VISUAL_DEFECT_OBSERVED",
+      "observations": "Definitions S6/S4/N6 and five-range dependency table fit the page. Row/column labels and all input lists are readable; long declaration references wrap without overlap."
+    },
+    {
+      "pdf_page_1_based": 48,
+      "printed_page": 48,
+      "image_path": "tmp/paper-visual-final/page-48.png",
+      "image_sha256": "e334ccaf59686ab20e32a106a92fd6935e97150b28760082c40c2774b5c499d3",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "inspection": "Actually viewed through view_image after final :: macro rebuild.",
+      "status": "PASS_NO_VISUAL_DEFECT_OBSERVED",
+      "observations": "Interval-length inequalities, unified analytic range proposition and real-to-integer formulas are complete. Equation numbers and proof-ending boxes remain clear."
+    },
+    {
+      "pdf_page_1_based": 49,
+      "printed_page": 49,
+      "image_path": "tmp/paper-visual-final/page-49.png",
+      "image_sha256": "b7fa7b0d51ab84a10f14866a29f5246aad75b215f85e5d48b6d602fa0cdda5ba",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "inspection": "Actually viewed through view_image after final :: macro rebuild.",
+      "status": "PASS_NO_VISUAL_DEFECT_OBSERVED",
+      "observations": "Binomial gap, strong final theorem and corollary are readable with strict endpoints. Lean references are visibly delimited; page transition within the final interface paragraph preserves content."
+    },
+    {
+      "pdf_page_1_based": 50,
+      "printed_page": 50,
+      "image_path": "tmp/paper-visual-final/page-50.png",
+      "image_sha256": "de988252b7362ae4ce2c2875ebad794710067d35a48ac15a47e327624a7659b0",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "inspection": "Actually viewed through view_image after final :: macro rebuild.",
+      "status": "PASS_NO_VISUAL_DEFECT_OBSERVED",
+      "observations": "Continuation of interface discussion and method chapter is readable. H1-H7 scope paragraph and long source names stay within margins; no missing glyphs or overlapping lines."
+    },
+    {
+      "pdf_page_1_based": 51,
+      "printed_page": 51,
+      "image_path": "tmp/paper-visual-final/page-51.png",
+      "image_sha256": "021c09c529bd29673bea6a22ff9629fb283aeb0905b34390f8ea75b3c1159c6b",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "inspection": "Actually viewed through view_image after final :: macro rebuild.",
+      "status": "PASS_NO_VISUAL_DEFECT_OBSERVED",
+      "observations": "Method reorganization, budget-margin discussion and smaller-exponent section render clearly. Decimal budget values and finite-height formulas are legible."
+    },
+    {
+      "pdf_page_1_based": 52,
+      "printed_page": 52,
+      "image_path": "tmp/paper-visual-final/page-52.png",
+      "image_sha256": "6427be1ee25f6349bcfc76d1f0cb16fe7ca5c774dfc3539cb5c38debab42d8a3",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "inspection": "Actually viewed through view_image after final :: macro rebuild.",
+      "status": "PASS_NO_VISUAL_DEFECT_OBSERVED",
+      "observations": "Continuation into Section 12 and the complete seven-input Lean theorem listing fit the page. Monospaced listing, Greek/math symbols and numbered items are clear."
+    },
+    {
+      "pdf_page_1_based": 53,
+      "printed_page": 53,
+      "image_path": "tmp/paper-visual-final/page-53.png",
+      "image_sha256": "5600cc4a4c57c9d75871a4a7cf69812466c4ef0cf4511ec5c58390d94eb70650",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "inspection": "Actually viewed through view_image after final :: macro rebuild.",
+      "status": "PASS_NO_VISUAL_DEFECT_OBSERVED",
+      "observations": "Numbered-list continuation, environment/commit information, reproduction sequence and AI contribution heading are legible. Long audit path wraps within margins."
+    },
+    {
+      "pdf_page_1_based": 54,
+      "printed_page": 54,
+      "image_path": "tmp/paper-visual-final/page-54.png",
+      "image_sha256": "363d94ba5a2acc43263cb48a4a6b6b50d4b667737f20e96791524a4ef6f731e2",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "inspection": "Actually viewed through view_image after final :: macro rebuild.",
+      "status": "PASS_NO_VISUAL_DEFECT_OBSERVED",
+      "observations": "AI disclosure/license continuation and Appendix A comparison table are complete. All three columns and row text fit; no table/footer collision or clipped text."
+    },
+    {
+      "pdf_page_1_based": 55,
+      "printed_page": 55,
+      "image_path": "tmp/paper-visual-final/page-55.png",
+      "image_sha256": "5afa5197cba889077238ff1507c8cf9ee36dfbbbca93db502a97f319daae997b",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "inspection": "Actually viewed through view_image after final :: macro rebuild.",
+      "status": "PASS_NO_VISUAL_DEFECT_OBSERVED",
+      "observations": "Appendix B begins with its heading and two complete paragraphs. Remaining whitespace before the separate bibliography is intentional and no content is missing."
+    },
+    {
+      "pdf_page_1_based": 56,
+      "printed_page": 56,
+      "image_path": "tmp/paper-visual-final/page-56.png",
+      "image_sha256": "a00a01a5fe2f1abb284ffa3aea720c63b99c9cb2855cc1a8a8deae5e99302e81",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "inspection": "Actually viewed through view_image after final :: macro rebuild.",
+      "status": "PASS_NO_VISUAL_DEFECT_OBSERVED",
+      "observations": "Bibliography entries 1-7 are legible. Accents, journal metadata, arXiv addresses and DOI strings render correctly; long URLs/DOIs wrap within the page. Entry 7 continues on page 57."
+    },
+    {
+      "pdf_page_1_based": 57,
+      "printed_page": 57,
+      "image_path": "tmp/paper-visual-final/page-57.png",
+      "image_sha256": "6fb33143e919d54bb7b401848eb189a3dbb4da5580a17883c9eea6c7f5c30f4d",
+      "image_dimensions_px": [
+        910,
+        1287
+      ],
+      "inspection": "Actually viewed through view_image after final :: macro rebuild.",
+      "status": "PASS_NO_VISUAL_DEFECT_OBSERVED",
+      "observations": "Continuation of entry 7 and entries 8-14 are complete. Encoded Hildebrand URL, fixed OpenAI commit URL, Platt-Trudgian/Rosser DOIs and mathlib commit URL remain readable through wrapping; final line is clear above the footer."
+    }
+  ],
+  "findings": [],
+  "nondefect_observations": [
+    "Long Lean identifiers may wrap across lines or page transitions; characters remain visible and the new :: delimiter separates file and declaration.",
+    "Appendix B on page 55 is short; whitespace precedes the separate bibliography.",
+    "Bibliography entry 7 continues from page 56 to page 57 without losing text."
+  ],
+  "superseded_check": {
+    "old_pdf_sha256": "6b29737f1a1e55c2cc5282d9505754afe5d735764f7b886bd4e8fc8869383512",
+    "reason": "Old rendering lacked visible Lean file/declaration separator; final review above is of the rebuilt PDF and all 15 pages were viewed again."
+  },
+  "limitations": [
+    "Only pages 43-57 are covered by this report; other pages are assigned to separate reviewers.",
+    "Visual review is not mathematical proof verification, source re-derivation, external URL availability testing or a new Lean build."
+  ],
+  "publication_state": "LOCAL_OWNER_REVIEW_ONLY_NO_PUSH"
+}

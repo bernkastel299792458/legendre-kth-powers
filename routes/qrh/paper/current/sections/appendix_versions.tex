@@ -1,0 +1,25 @@
+\section{证明版本与历史材料的对应}\label{app:versions}
+
+本附录帮助读者区分当前主证明与仍有研究价值的历史材料。历史文件保留其原文及当时结论；当前状态由新主稿和验收索引给出。
+
+\begingroup\small
+\begin{longtable}{p{0.20\linewidth}p{0.34\linewidth}p{0.34\linewidth}}
+\toprule
+事项 & 历史版本 & 当前论文对应\\
+\midrule\endfirsthead
+\toprule 事项 & 历史版本 & 当前论文对应\\\midrule\endhead
+远段权函数 & 原稿使用多项式权及 $60$ 个单元证书 & 第\ref{sec:trapezoid}--\ref{sec:coverage}节采用梯形权基准证书与连续传播\\
+中段组织 & 精化后的 $94$ 个闭单元逐一认证 & 基准区间、连续传播和有限高度 RH 比较；另有 Lean 定理覆盖历史所有单元\\
+数值余量 & 最坏旧单元预算约 $0.9397359968$；原证书支持统一 $6\%$ 系数试验 & 当前三类完整预算为 $0.939772$、$0.966283$、$0.450022$，各自按实际适用范围使用\\
+初始形式化 & 有限见证、部分数值与装配引理；仍有局部解析参数 & 当前最终定理仅保留 H1--H7，所有项目局部解析与数值义务已经供给证明\\
+积分公式来源 & Hildebrand 讲义作为直接出处 & 正式期刊论文接受稿的精确公式，详见 H4\\
+CHJII 与 CHL 来源核查 & 采用固定作者稿 & 后续报告补充版本对照、常数重放及 CHL 舍入见证诊断，详见 H6、H7\\
+\bottomrule
+\end{longtable}\endgroup
+
+对于复用历史结果的读者，关键是按其原来的参数、来源版本和检验范围解释记录。例如，旧多项式证书仍是原书面链的有效计算材料，却不是当前远段 Lean 证明使用的权函数；原 $6\%$ 试验不能仅因出现在同一仓库中，就归给新下中段比较。
+
+\section{材料索引与持久标识}
+当前阅读入口为 \repofile{README.zh-CN.md} 和 \repofile{documentation/README.md}；前提登记为 \repofile{documentation/inputs.md}；命题对应为 \repofile{documentation/blueprint/}；研究历史为 \repofile{research-history/}；完整复现为 \repofile{REPRODUCING.md}。原始论文位于上一层 \repofile{paper/main.pdf}，并在其索引中明确标为历史稿。
+
+每次正式发布以 Git 提交及标签固定全部内容，\repofile{MANIFEST.json} 固定路线包文件散列，原验收检查点固定其对应的源码与构建证据。用户审核后的发布说明应给出实际提交标识，不在待审核稿中预填尚未发生的发布编号。

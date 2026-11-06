@@ -1,0 +1,123 @@
+{
+  "status": "FINITE_CHECKS_FOR_MODEL_CONSTRUCTION_PASSED",
+  "meaning": "For each real L in [116,150], a different allowed model may be chosen. This is not a zeta-zero or prime-existence certificate.",
+  "precision_bits": 256,
+  "H": "3000000000000",
+  "W": "100000000",
+  "K": "100000000",
+  "beta": "8749/10000",
+  "interval": [
+    "116",
+    "150"
+  ],
+  "model_inputs": [
+    "QRH(7/8)",
+    "critical-line location below H",
+    "CS v2 Corollary 1 Table 1 cumulative density",
+    "CS v2 Eq(119) Table 4 cumulative density",
+    "Rosser total-count two-sided bound",
+    "CS v2 Eq(11) total-count upper bound",
+    "BW v2 Theorem 1.1 total-count two-sided bound and derived local caps",
+    "lower-sigma endpoint monotone envelopes of these bounds",
+    "conjugation and beta-to-1-minus-beta symmetry"
+  ],
+  "excluded_claims": [
+    "not actual zero existence",
+    "not an Euler product or zeta explicit formula",
+    "not a match to the actual low-zero ordinate list",
+    "not a single common model for all L",
+    "not a limitation of all methods"
+  ],
+  "first_pair_index": 6181201509833,
+  "checks": {
+    "CS_all_rows_allow_K": true,
+    "CS_119_all_rows_allow_K": true,
+    "beta_below_QRH": true,
+    "beta_below_34999_over_40000": true,
+    "Rosser_error_exceeds_four": true,
+    "CS_total_count_error_allows_model": true,
+    "BW_error_allows_modified_model_above_H": true,
+    "BW_error_allows_baseline_below_H": true,
+    "pair_spacing_derivative_lower": true,
+    "pair_spacing_derivative_upper": true,
+    "maximum_resonance_shift_below_point03": true,
+    "shift_intervals_are_disjoint": true,
+    "first_pair_index_is_unique": true,
+    "first_pair_after_H_plus_one": true,
+    "last_pair_before_G_minus_one": true,
+    "phase_arc_below_pi_on_whole_L_interval": true,
+    "positive_phase_at_L150": true,
+    "coherent_endpoint_116_exceeds_seven_fifths": true,
+    "coherent_endpoint_150_exceeds_seven_fifths": true,
+    "quadratic_background_cutoff_above_H": true,
+    "whole_background_below_1e_minus10": true,
+    "net_model_real_error_exceeds_one": true,
+    "Rosser_error_above_two_after_exp2": true,
+    "small_height_P_two_below_quarter": true,
+    "small_height_P_exp2_below_quarter": true,
+    "small_height_R_two_above_quarter": true,
+    "signed_L1_threshold_exceeds_eleven": true
+  },
+  "CS_uniform_allowed_capacity_floor": "[184813165.7301930421594486480142529374974509529574366066 +/- 4.33e-47]",
+  "CS_119_uniform_allowed_capacity_floor": "[185039150.9506868520811604314386805002708501365235530120 +/- 4.42e-47]",
+  "BW_error_H": "[7.413879892931559673049633968296103701847776149004092093 +/- 4.89e-55]",
+  "Rosser_R_H": "[7.011522373439475217421242281374479826057711554994363514 +/- 2.62e-55]",
+  "local_right_count_cap": "[213997937.1214363951006823177441069077816481170166585509 +/- 8.50e-48]",
+  "CS_last_row_density_H": "[793731475.0147818261378801182822749714569200546775590767 +/- 4.47e-47]",
+  "L120_pair_count_comparison": "[1954281.588815102839737838713439624298068489104217310114 +/- 1.89e-49]",
+  "L120_local_cap_over_comparison": "[109.5020995675373076205470026668098271421451727229402089 +/- 1.67e-53]",
+  "L120_CS_last_row_over_comparison": "[406.1500039490357233818889626994857358550103989303054846 +/- 4.75e-53]",
+  "L120_signed_kernel_L1_threshold": "[11.81128484811581617822093680210641186593477043664762322 +/- 2.58e-54]",
+  "points": [
+    {
+      "L": 116,
+      "phase_arc": "[3.052500523476649661136441610966279264179416314124028696 +/- 4.49e-55]",
+      "coherent_batch_lower": "[4.440050374095454442677581851397938467951394714651787939 +/- 4.99e-55]",
+      "M2_critical_background_upper": "[3.763672992602093278013617875215551645472943993406141302e-11 +/- 3.82e-66]",
+      "inverse_pair_weight": "[22522266.99575957323498692229072235549569564706863051862 +/- 2.44e-48]"
+    },
+    {
+      "L": 117,
+      "phase_arc": "[2.377289798009755555684446144468484532303680671648228889 +/- 2.25e-55]",
+      "coherent_batch_lower": "[32.80989128963771290289211738590980547212823807609335260 +/- 1.04e-55]",
+      "M2_critical_background_upper": "[2.955413777518466755757150344747437939135802254641617937e-11 +/- 3.69e-66]",
+      "inverse_pair_weight": "[3047861.363429229479953697486466450723000383237205089581 +/- 4.33e-49]"
+    },
+    {
+      "L": 120,
+      "phase_arc": "[1.122952186752486150024806255932427173394802264625402247 +/- 2.48e-55]",
+      "coherent_batch_lower": "[51.16969866181404832036205198913411008465139075995108687 +/- 4.33e-54]",
+      "M2_critical_background_upper": "[1.430420720227617771387979762346923781953104946200977428e-11 +/- 1.14e-66]",
+      "inverse_pair_weight": "[1954281.588815102839737838713439624298068489104217310114 +/- 1.89e-49]"
+    },
+    {
+      "L": 125,
+      "phase_arc": "[0.3217311881492702626202771091951376009442730723729362355 +/- 2.28e-56]",
+      "coherent_batch_lower": "[31.92319501113748727216848026479519781876726314939609931 +/- 1.00e-55]",
+      "M2_critical_background_upper": "[4.262401265595431368305836108347503303896383615609466033e-12 +/- 3.10e-67]",
+      "inverse_pair_weight": "[3132518.532844585722406906483222955392158030063321529863 +/- 1.47e-49]"
+    },
+    {
+      "L": 130,
+      "phase_arc": "[0.09217752870429780364994316302764145657172636863294070618 +/- 1.83e-57]",
+      "coherent_batch_lower": "[17.28372766023291339145549077605513201565223443941432143 +/- 8.56e-55]",
+      "M2_critical_background_upper": "[1.268235988957492935394002051918426988001077104882050869e-12 +/- 1.52e-67]",
+      "inverse_pair_weight": "[5785788.920412346527352141682993721405608878645525688553 +/- 5.57e-50]"
+    },
+    {
+      "L": 140,
+      "phase_arc": "[0.007566392316846783600944848831934553303498170706216191515 +/- 3.66e-58]",
+      "coherent_batch_lower": "[4.952144763072031653938399198332087431581495573890653378 +/- 1.27e-55]",
+      "M2_critical_background_upper": "[1.118253088238669086844959846875248486050738122119673152e-13 +/- 3.02e-68]",
+      "inverse_pair_weight": "[20193270.75123014640138923412296434389477213929538916555 +/- 1.65e-48]"
+    },
+    {
+      "L": 150,
+      "phase_arc": "[0.0006210873029162473673668402960881742951141535368252600666 +/- 1.10e-60]",
+      "coherent_batch_lower": "[1.417405200307849286725821430063771411727939310050587897 +/- 4.14e-55]",
+      "M2_critical_background_upper": "[9.813053765920241729885030607727602181155021901681630200e-15 +/- 3.76e-70]",
+      "inverse_pair_weight": "[70551455.55997733374224427091395109041271040466713317265 +/- 4.64e-49]"
+    }
+  ],
+  "script_sha256": "54fb20c63c0c2ded73d48f78cd0403ed63e6638e621ced3414e9081d88b6ae0a"
+}

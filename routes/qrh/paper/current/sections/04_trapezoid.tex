@@ -1,0 +1,307 @@
+\section{梯形权、积分显式公式与素数提取}\label{sec:trapezoid}
+
+本节把素数存在性归结为三个具有明确含义的非负上界之和小于
+主项。论证首先是一个有限和恒等式，然后才使用积分显式公式。
+这种顺序使端点、真素数幂和零点截断的处理均可单独核对。
+本节使用的显式公式是前述输入
+\texttt{IntegratedExplicitFormula}；它本身是经典的无条件恒等式，
+其精确来源及与本文约定的对应见文献 \cite{GM2016} 和输入审计。
+这里不额外假定 RH，也不把 QRH 用于推导该恒等式。
+
+\subsection{从有限 Mangoldt 和构造梯形权}
+
+对 $t>1$ 定义
+\begin{equation}\label{tr:psi1}
+ \Psi_1(t)=\sum_{1\leq m\leq\lfloor t\rfloor}\Lambda(m)(t-m).
+\end{equation}
+若 $t$ 是整数，最后一项为零；因此这一约定没有端点半权问题。
+对于任何 $Y\geq t$，也可以写成
+\[
+ \Psi_1(t)=
+ \sum_{1\leq m\leq\lfloor Y\rfloor}\Lambda(m)(t-m)_+,
+ \qquad v_+=\max\{v,0\}.
+\]
+因为新增的每一项均为零。这是下面交换四点差分与有限求和的依据。
+
+设 $x>1$、$h>0$，并设 $0<a\leq b$、$a+b=1$。定义
+\begin{align}
+ D_{x,h}F
+  &=\frac{F(x)-F(x+ah)-F(x+bh)+F(x+h)}{abh},
+       \label{tr:difference}\\
+ w_{x,h}(t)
+  &=\frac{(x-t)_+-(x+ah-t)_+-(x+bh-t)_++(x+h-t)_+}
+          {abh}. \label{tr:weight}
+\end{align}
+在不引起混淆时省略 $x,h$ 下标。逐段展开正部函数得到
+\begin{equation}\label{tr:piecewise}
+ w(t)=
+ \begin{cases}
+ 0,&t\leq x,\\
+ (t-x)/(abh),&x\leq t\leq x+ah,\\
+ 1/b,&x+ah\leq t\leq x+bh,\\
+ (x+h-t)/(abh),&x+bh\leq t\leq x+h,\\
+ 0,&t\geq x+h.
+ \end{cases}
+\end{equation}
+相邻公式在公共端点取相同值。特别地，
+\begin{equation}\label{tr:weight-properties}
+ 0\leq w(t)\leq \frac1b,\qquad
+ w(t)>0\Longrightarrow x<t<x+h,\qquad
+ \int_{\R}w(t)\,\dd t=h.
+\end{equation}
+面积归一化为 $h$，故后面的主项也是 $h$。
+本文固定
+\begin{equation}\label{tr:fixed-ab}
+ a=\frac1{32},\qquad b=\frac{31}{32}.
+\end{equation}
+该选择不表示在所有参数下都最优；它是当前证书实际采用的权。
+
+\begin{lemma}[有限和与四点差分]\label{tr:finite-identity}
+设 $Y=x+h$，并令
+\[
+ W(x,h)=\sum_{1\leq m\leq\lfloor Y\rfloor}\Lambda(m)w_{x,h}(m).
+\]
+则 $W(x,h)=D_{x,h}\Psi_1$。此外，
+$D_{x,h}(t^2/2)=h$，而 $D_{x,h}$ 消去一切仿射函数。
+\end{lemma}
+\begin{proof}
+将 \eqref{tr:psi1} 的四个截断统一扩展到 $Y$，
+并把四个有限和合并，其第 $m$ 项恰为
+$\Lambda(m)w_{x,h}(m)$。常数项的系数为 $1-1-1+1=0$；
+一次项的系数为 $x-(x+ah)-(x+bh)+(x+h)=0$。
+二次项的分子为 $abh^2$，除以 $abh$ 即为 $h$。
+\end{proof}
+
+这些有限和及支撑性质对应
+\leanref{IntegratedPsi}{weightedMangoldt_trapezoid_eq}、
+\leanref{IntegratedPsi}{trapezoidWeight_bounds}
+和 \leanref{IntegratedPsi}{trapezoidWeight_pos_support}。
+
+\subsection{零点核的三个互补上界}
+
+对 $\rho=\beta+\ii\gamma\notin\{0,-1\}$ 和 $t>0$，令
+\[
+ G_\rho(t)=\frac{t^{\rho+1}}{\rho(\rho+1)},\qquad
+ K_{x,h}(\rho)=D_{x,h}G_\rho,\qquad
+ t^\rho=\exp(\rho\log t).
+\]
+正实轴上的幂使用实对数，因而这里不存在复对数分支选择。
+直接求导得 $G_\rho'(t)=t^\rho/\rho$ 及
+$G_\rho''(t)=t^{\rho-1}$。
+
+\begin{lemma}[基本界、一次衰减界与二次衰减界]\label{tr:three-kernels}
+在上述条件下，若 $\beta\leq1$，则
+\begin{equation}\label{tr:base-kernel}
+ |K_{x,h}(\rho)|\leq h x^{\beta-1}.
+\end{equation}
+若另有 $\gamma\ne0$，则
+\begin{align}
+ |K_{x,h}(\rho)|
+ &\leq h x^{\beta-1}\frac{2}{b}
+                  \frac{x+h}{h|\gamma|},\label{tr:first-kernel}\\
+ |K_{x,h}(\rho)|
+ &\leq h x^{\beta-1}\frac{4}{ab}
+                  \frac{(x+h)^2}{h^2\gamma^2}. \label{tr:second-kernel}
+\end{align}
+\end{lemma}
+\begin{proof}
+两次微积分基本定理给出
+\[
+ K_{x,h}(\rho)=
+ \frac1{abh}\int_0^{ah}\int_0^{bh}
+       (x+u+v)^{\rho-1}\,\dd v\,\dd u.
+\]
+由于 $\beta-1\leq0$，被积函数的模不超过
+$x^{\beta-1}$，得到 \eqref{tr:base-kernel}。
+Lean 中使用两次导数范数的增量界证明同一估计。
+
+将分子分成两段长度为 $ah$ 的增量。
+在 $x\leq t\leq x+h$ 上，
+\[
+ |G_\rho'(t)|
+ =\frac{t^\beta}{|\rho|}
+ \leq \frac{(x+h)x^{\beta-1}}{|\gamma|}.
+\]
+两个增量的模之和除以 $abh$，得到
+\eqref{tr:first-kernel}。最后，
+$|\rho|\geq|\gamma|$、$|\rho+1|\geq|\gamma|$，且
+$t^{\beta+1}=t^2t^{\beta-1}\leq(x+h)^2x^{\beta-1}$。
+分别估计四个函数值即得 \eqref{tr:second-kernel}。
+\end{proof}
+
+令
+\begin{equation}\label{tr:height-kernel}
+ c_1=\frac{64}{31},\qquad c_2=\frac{4096}{31},\qquad
+ g_q(t)=\min\left\{1,\frac{c_1q}{t},\frac{c_2q^2}{t^2}\right\}
+ \quad(t>0,\ q\geq0).
+\end{equation}
+由 \eqref{tr:fixed-ab}，$c_1=2/b$，$c_2=4/(ab)$。
+若 $q\geq(x+h)/h$，三个界合并为
+\begin{equation}\label{tr:kernel-min}
+ |K_{x,h}(\rho)|\leq h x^{\beta-1}g_q(|\gamma|).
+\end{equation}
+$g_q$ 关于高度单调不增，关于 $q$ 单调不减，而且非负。
+其两个衰减分支具有不同用途：一次分支改善有限高度范围的估计，
+二次分支使无限高度余项可被几何级数控制。
+对应的形式化结果为
+\leanref{TrapezoidKernel}{norm_trapezoidKernel_le_base}、
+\leanref{TrapezoidKernel}{norm_trapezoidKernel_le_first}、
+\leanref{TrapezoidKernel}{norm_trapezoidKernel_le_second}
+及 \leanref{TrapezoidKernel}{norm_trapezoidKernel_le_min}。
+
+\subsection{积分显式公式的四点作用及极限}
+
+记 $m_\rho$ 为非平凡零点的重数。使用按
+$|\operatorname{Im}\rho|\leq T$ 截断的零点和，输入公式可写为
+\begin{equation}\label{tr:explicit}
+ \Psi_1(t)=\frac{t^2}{2}
+ -\lim_{T\to+\infty}
+   \sum_{|\operatorname{Im}\rho|\leq T}m_\rho G_\rho(t)
+ -\frac{\zeta'}{\zeta}(0)t+\frac{\zeta'}{\zeta}(-1)-Q(t),
+ \qquad t>1,
+\end{equation}
+其中
+\begin{equation}\label{tr:trivial-primitive}
+ Q(t)=\sum_{j=0}^{\infty}
+       \frac{t^{-2j-1}}{2(j+1)(2j+1)}
+     =\sum_{j=0}^{\infty}G_{-2(j+1)}(t).
+\end{equation}
+这里的两个仿射常数是精确常数，不能把未指定的 $O(t)$
+直接当作可消去的仿射函数。不过，一旦采用精确公式
+\eqref{tr:explicit}，其数值完全不进入后续预算，因为四点差分消去它们。
+
+定义
+\[
+ Z_T(x,h)=\sum_{|\operatorname{Im}\rho|\leq T}
+                  m_\rho K_{x,h}(\rho),\qquad E(x,h)=D_{x,h}Q .
+\]
+对四个大于 $1$ 的实数同时使用 \eqref{tr:explicit}，并对四个极限作有限线性组合，
+由引理 \ref{tr:finite-identity} 得
+\begin{equation}\label{tr:zero-limit}
+ Z_T(x,h)\longrightarrow h-W(x,h)-E(x,h).
+\end{equation}
+这一步只需要输入已经给出的高度截断极限；无需在四点操作中
+另行假定非平凡零点级数绝对收敛。
+因此，只要对每个 $T$ 证明 $|Z_T(x,h)|\leq hZ$，
+闭球对极限封闭就给出
+\begin{equation}\label{tr:weighted-lower}
+ W(x,h)\geq h(1-Z)-|E(x,h)|.
+\end{equation}
+本节以下所有零点预算都对任意截断高度成立，正是为了这一极限步骤。
+对应
+\leanref{IntegratedExplicitFormula}{trapezoid_zero_sum_tendsto}。
+
+\begin{lemma}[平凡零点的完整上界]\label{tr:trivial-bound}
+若 $x>1$，则
+\begin{equation}\label{tr:V}
+ |E(x,h)|\leq h V(x),\qquad
+ V(x)=\frac{x^{-3}}{1-x^{-2}}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+对 $t>1$，\eqref{tr:trivial-primitive} 中第 $j$ 项的模
+不超过 $t^{-1}(t^{-2})^j$，故其级数绝对收敛。
+对 $\rho=-2(j+1)$ 使用基本核界 \eqref{tr:base-kernel} 得
+\[
+ |K_{x,h}(-2(j+1))|
+ \leq h x^{-2j-3}=h x^{-3}(x^{-2})^j.
+\]
+此级数也绝对收敛。于是四个收敛级数的有限线性组合可以逐项进行，
+且几何级数求和给出 \eqref{tr:V}。
+\end{proof}
+对应 \leanref{TrapezoidTrivial}{norm_trapezoidTrivialDifference_le}。
+
+\subsection{真素数幂的显式预算}
+
+记 $\theta(Y)=\sum_{p\leq Y}\log p$、
+$\psi(Y)=\sum_{m\leq Y}\Lambda(m)$。由 $0\leq w\leq1/b$，
+非素数项的总贡献满足
+\begin{equation}\label{tr:nonprime}
+ \sum_{\substack{1\leq m\leq Y\\m\ \text{非素数}}}
+       \Lambda(m)w(m)
+ \leq\frac1b\bigl(\psi(Y)-\theta(Y)\bigr)
+ \leq\frac{\sqrt Y(\log Y)^2}{2b\log2}.
+\end{equation}
+后一界可以直接由真素数幂计数看出：
+若 $p^\ell\leq Y$ 且 $\ell\geq2$，则
+$\ell\leq\log Y/\log2$，每个指数对应的底数数量不超过 $\sqrt Y$，
+而 $\log p\leq(\log Y)/2$；对这些可能性求和只会多计。
+在本文使用范围内，Lean 另由
+$\psi(Y)-\theta(Y)\leq2\sqrt Y\log Y$ 和 $\log Y\geq4\log2$
+推出同一个较宽上界。
+两种推导都无须假定零点分布，也无须判定区间内有哪些素数幂。
+见 \leanref{PrimePowerBudget}{weightedNonprime_le_psi_sub_theta}
+及 \leanref{PrimePowerBudget}{weightedNonprime_le_manuscript_budget}。
+
+为了给出完全确定的单元预算，令 $k\in\{4,6\}$，
+\begin{equation}\label{tr:domains}
+ x=\e^L,\qquad h_k(L)=k\e^{(1-1/k)L},\qquad
+ \epsilon_k(A)=k\e^{-A/k},\qquad
+ q_k(L)=1+\frac{\e^{L/k}}{k}.
+\end{equation}
+于是 $x+h_k(L)=\e^L(1+\epsilon_k(L))$，且
+$q_k(L)=(x+h_k(L))/h_k(L)$。对 $0<A\leq L\leq C$ 定义
+\begin{equation}\label{tr:Pcell}
+ P_k(A,C)=
+ \frac{32}{31}\,
+ \frac{\sqrt{1+\epsilon_k(A)}
+       \bigl[C+\log(1+\epsilon_k(A))\bigr]^2}
+      {2k\log2}\,
+ \e^{-(1/2-1/k)A},
+ \qquad
+ V_A=\frac{\e^{-3A}}{1-\e^{-2A}}.
+\end{equation}
+这些是后文 $P$ 和 $V$ 的完整定义。特别是
+$P_6$ 的分母为 $12\log2$、指数为 $-A/3$；
+$P_4$ 的分母为 $8\log2$、指数为 $-A/4$。
+
+\begin{lemma}[单元内的统一小项界]\label{tr:cell-small}
+在本文的中段范围 $167\leq A\leq L\leq C$（$k=6$）
+或远段范围 $400\leq A\leq L\leq C$（$k=4$）内，
+非素数加权和不超过 $h_k(L)P_k(A,C)$，
+且 $|E(\e^L,h_k(L))|\leq h_k(L)V_A$。
+\end{lemma}
+\begin{proof}
+把 \eqref{tr:nonprime} 除以 $h_k(L)$，使用
+\[
+ \frac{\sqrt{x+h_k(L)}}{h_k(L)}
+ =\frac1k\sqrt{1+\epsilon_k(L)}
+           \e^{-(1/2-1/k)L}.
+\]
+函数 $\epsilon_k$ 递减，且 $1/2-1/k>0$。
+又有
+$\log(x+h_k(L))\leq C+\log(1+\epsilon_k(A))$。
+所有因子非负，逐因子放大即得 $P_k(A,C)$。
+对平凡零点，$\e^{-3L}\leq\e^{-3A}$，
+$1-\e^{-2L}\geq1-\e^{-2A}>0$，使用 \eqref{tr:V} 即可。
+\end{proof}
+此处分别对应
+\leanref{MiddleDomains}{middle_prime_power_normalized_le}、
+\leanref{MiddleDomains}{middle_prime_power_le}
+和 \leanref{FarDomains}{far_prime_power_le}。
+
+\subsection{严格不等式如何产生真正的素数}
+
+\begin{proposition}[三项预算判据]\label{tr:prime-criterion}
+设输入积分显式公式成立，$x>1$、$h>0$。
+若对任意实数 $T$ 均有 $|Z_T(x,h)|\leq hZ$，
+平凡零点差分满足 $|E(x,h)|\leq hV$，
+非素数加权和不超过 $hP$，且
+\begin{equation}\label{tr:criterion}
+ Z+P+V<1,
+\end{equation}
+则存在素数 $p$ 满足 $x<p<x+h$。
+\end{proposition}
+\begin{proof}
+由 \eqref{tr:weighted-lower}，
+$W(x,h)\geq h(1-Z-V)>hP$。
+减去不超过 $hP$ 的非素数项，剩下的素数加权和严格为正。
+这是有限个非负项的和，所以至少有一项
+$\log p\,w(p)>0$。由 \eqref{tr:weight-properties} 的支撑性质，
+$x<p<x+h$。由于两个端点权均为零，结论是严格开区间，
+不存在把端点素数误计入结论的问题。
+\end{proof}
+该结论对应 \leanref{TrapezoidPrime}{prime_of_trapezoid_budgets}。
+后续任务因此明确为：构造完整零点预算 $Z$，再与
+\eqref{tr:Pcell} 中已定义的 $P_k(A,C)$、$V_A$ 相加。
+本节没有把任何待证的素数存在命题作为输入。
