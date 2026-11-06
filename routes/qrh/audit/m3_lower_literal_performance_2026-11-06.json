@@ -1,0 +1,112 @@
+{
+  "schema": "qrh.m3-lower-literal-performance.v1",
+  "recorded_at_utc": "2026-11-06T06:30:42.636968+00:00",
+  "status": "REVERTED",
+  "conclusion": "The literal-table attempt did not establish a resource improvement. The first certificate build failed at dependent getter rewriting; the second attempt fixed that rewriting but was deliberately terminated after again exceeding the approximately 15 GiB resource threshold. Original accepted sources and object files were restored byte-for-byte.",
+  "baseline_provenance": "Root-agent observations, not remeasured in this experiment: original Certificate approximately 3 minutes/24 GB; Integer interpretation approximately 2 minutes/13 GB.",
+  "first_attempt": {
+    "status": "FAIL",
+    "rows": [
+      {
+        "module": "LegendreK6/M3LowerIntegerData.lean",
+        "source_sha256": "8b5ebf9a589e723f9b60074e86ab507995bc1cbb24c596afc99a08556f8c3c0a",
+        "exit_code": 0,
+        "seconds": 18.41969190002419,
+        "started_utc": "2026-11-06T06:22:47.421050+00:00",
+        "peak_working_set_bytes": 3415363584,
+        "peak_pagefile_bytes": 8612409344,
+        "memory_samples": 325,
+        "compiler_command": [
+          "C:\\Users\\Bernkastel\\.elan\\toolchains\\leanprover--lean4---v4.36.0-rc2\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-o",
+          "D:\\UGit\\AI4Math\\.worktrees\\qrh-full-lean\\routes\\qrh\\lean\\.lake\\build\\lib\\lean\\LegendreK6\\M3LowerIntegerData.olean",
+          "LegendreK6/M3LowerIntegerData.lean"
+        ],
+        "log": ""
+      },
+      {
+        "module": "LegendreK6/M3LowerIntegerCertificate.lean",
+        "source_sha256": "3b1a0d389ce688a642ff58b08d8e4ffe085ae3ed45b685db2d1ea0112352e748",
+        "exit_code": 1,
+        "seconds": 120.14846979995491,
+        "started_utc": "2026-11-06T06:23:05.842583+00:00",
+        "peak_working_set_bytes": 22987309056,
+        "peak_pagefile_bytes": 28243193856,
+        "memory_samples": 2219,
+        "compiler_command": [
+          "C:\\Users\\Bernkastel\\.elan\\toolchains\\leanprover--lean4---v4.36.0-rc2\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-o",
+          "D:\\UGit\\AI4Math\\.worktrees\\qrh-full-lean\\routes\\qrh\\lean\\.lake\\build\\lib\\lean\\LegendreK6\\M3LowerIntegerCertificate.olean",
+          "LegendreK6/M3LowerIntegerCertificate.lean"
+        ],
+        "log": "LegendreK6/M3LowerIntegerCertificate.lean:23:6: error: Tactic `rewrite` failed: motive is not type correct:\n  fun _a => ↑_a[↑j].1 / 2 ^ 48 = ↑(multiplierNat ↑j) * (↑sigmaRows[↑j].1 / 2 ^ 48)\nError: Application type mismatch: The argument\n  doubleRowIndex._proof_1 j\nhas type\n  ↑j < doubleSigmaRows.length\nbut is expected to have type\n  ↑j < _a.length\nin the application\n  ⟨↑j, ⋯⟩\n\nExplanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.\n\nPossible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).\n\nj : Fin 1536\n⊢ ↑doubleSigmaRows[↑j].1 / 2 ^ 48 = ↑(multiplierNat ↑j) * (↑sigmaRows[↑j].1 / 2 ^ 48)\nLegendreK6/M3LowerIntegerCertificate.lean:32:6: error: Tactic `rewrite` failed: motive is not type correct:\n  fun _a => ↑_a[↑j].2 / 2 ^ 48 = ↑sigmaRows[↑j].2 / 2 ^ 48\nError: Application type mismatch: The argument\n  doubleRowIndex._proof_1 j\nhas type\n  ↑j < doubleSigmaRows.length\nbut is expected to have type\n  ↑j < _a.length\nin the application\n  ⟨↑j, ⋯⟩\n\nExplanation: The rewrite tactic rewrites an expression 'e' using an equality 'a = b' by the following process. First, it looks for all 'a' in 'e'. Second, it tries to abstract these occurrences of 'a' to create a function 'm := fun _a => ...', called the *motive*, with the property that 'm a' is definitionally equal to 'e'. Third, we observe that 'congrArg' implies that 'm a = m b', which can be used with lemmas such as 'Eq.mpr' to change the goal. However, if 'e' depends on specific properties of 'a', then the motive 'm' might not typecheck.\n\nPossible solutions: use rewrite's 'occs' configuration option to limit which occurrences are rewritten, or use 'simp' or 'conv' mode, which have strategies for certain kinds of dependencies (these tactics can handle proofs and 'Decidable' instances whose types depend on the rewritten term, and 'simp' can apply user-defined '@[congr]' theorems as well).\n\nj : Fin 1536\n⊢ ↑doubleSigmaRows[↑j].2 / 2 ^ 48 = ↑sigmaRows[↑j].2 / 2 ^ 48\n"
+      }
+    ]
+  },
+  "second_attempt": {
+    "status": "FAIL",
+    "rows": [
+      {
+        "module": "LegendreK6/M3LowerIntegerCertificate.lean",
+        "source_sha256": "29ef7bf7b889778eab3868802dd701c78bf651ffbd5600f60042fa1b8d074706",
+        "exit_code": 4294967295,
+        "seconds": 122.79861639998853,
+        "started_utc": "2026-11-06T06:27:50.970528+00:00",
+        "peak_working_set_bytes": 22986604544,
+        "peak_pagefile_bytes": 28241813504,
+        "memory_samples": 2254,
+        "compiler_command": [
+          "C:\\Users\\Bernkastel\\.elan\\toolchains\\leanprover--lean4---v4.36.0-rc2\\bin\\lean.exe",
+          "-DautoImplicit=false",
+          "-o",
+          "D:\\UGit\\AI4Math\\.worktrees\\qrh-full-lean\\routes\\qrh\\lean\\.lake\\build\\lib\\lean\\LegendreK6\\M3LowerIntegerCertificate.olean",
+          "LegendreK6/M3LowerIntegerCertificate.lean"
+        ],
+        "log": ""
+      }
+    ]
+  },
+  "second_attempt_abort": {
+    "status": "ABORT_REQUESTED_RESOURCE_THRESHOLD",
+    "pid": 44632,
+    "command": "C:\\Users\\Bernkastel\\.elan\\toolchains\\leanprover--lean4---v4.36.0-rc2\\bin\\lean.exe -DautoImplicit=false -o D:\\UGit\\AI4Math\\.worktrees\\qrh-full-lean\\routes\\qrh\\lean\\.lake\\build\\lib\\lean\\LegendreK6\\M3LowerIntegerCertificate.olean LegendreK6/M3LowerIntegerCertificate.lean",
+    "working_set_bytes": 4414951424,
+    "peak_working_set_bytes": 22986604544,
+    "private_memory_bytes": 9628348416,
+    "cpu_seconds": 120.234375,
+    "observed_at_utc": "2026-11-06T06:29:53.0162353Z",
+    "reason": "Second literal attempt again exceeded the agreed approximately 15 GiB threshold; no completed proof or speedup is claimed."
+  },
+  "measurement": "Windows GetProcessMemoryInfo on the actual pinned lean.exe process, sampled every 50 ms; reports PeakWorkingSetSize and PeakPagefileUsage. No completed runtime is claimed for the terminated second attempt.",
+  "restored": [
+    {
+      "path": "lean/LegendreK6/M3LowerIntegerCertificate.lean",
+      "sha256": "7813bc1b451e798f5b720158ddbc41b91b5ac65cf49b1f6f3c9c95eb49be9bab",
+      "restored_byte_exact": true
+    },
+    {
+      "path": "lean/.lake/build/lib/lean/LegendreK6/M3LowerIntegerCertificate.olean",
+      "sha256": "b15c8e02c6ddc93293b6ab34460478090d3c04b5264e4abf66c3fc230f8ed357",
+      "restored_byte_exact": true
+    },
+    {
+      "path": "lean/LegendreK6/M3LowerInteger.lean",
+      "sha256": "960519b8775e2167d4a8be5e32cc149571512beed371ba1cefc009aa74b35245",
+      "restored_byte_exact": true
+    },
+    {
+      "path": "lean/.lake/build/lib/lean/LegendreK6/M3LowerInteger.olean",
+      "sha256": "8d04d6e7d203f2d0ad6b60677955682535cea58b8b17d9482de08e54e5006613",
+      "restored_byte_exact": true
+    }
+  ],
+  "removed_new_public_files": [
+    "lean/LegendreK6/M3LowerIntegerData.lean",
+    "code/generate_m3_lower_integer_data.py"
+  ],
+  "archived_candidates": "tmp/m3_lower_before_literal",
+  "mathematical_theorem_names_and_bounds_changed": false,
+  "new_proof_oracle": false
+}

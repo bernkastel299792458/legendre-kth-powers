@@ -1,0 +1,890 @@
+{
+  "schema": "qrh.m3-far.numeric-build.v1",
+  "recorded_at_utc": "2026-11-06T06:17:09.059698+00:00",
+  "scope": "New trapezoid pilot only: log x in [400,1601/4]. The historical polynomial proof/certificate remains unchanged. Continuous translation is a separate module.",
+  "build_scope": "Incremental native Lean build, not a clean build of all ancestors.",
+  "sigma_cells": 384,
+  "height_cells": 125,
+  "height_start": "795/8",
+  "height_end": "115",
+  "dyadic_bits": 48,
+  "height_factor_padding": 1048576,
+  "taylor_degree": 20,
+  "main_cap": "9/20",
+  "complete_cap": "225011/500000",
+  "source_manifest": [
+    {
+      "path": "lean/LegendreK6/AnalyticBounds.lean",
+      "bytes": 3283,
+      "sha256": "358ee8890545235abdfa1a3506a808bfa39079753e71886688bb54932b11cf66"
+    },
+    {
+      "path": "lean/LegendreK6/CpowInterval.lean",
+      "bytes": 2831,
+      "sha256": "57f9334f94f50b16befcc1af6ab1ee4a0bd32b4858103f319da900a287947f35"
+    },
+    {
+      "path": "lean/LegendreK6/Definitions.lean",
+      "bytes": 1519,
+      "sha256": "41eb5d0dd3e5debfb2821c9ecf9eb6b71d0f3df1737d9b3316fbda0f373056ac"
+    },
+    {
+      "path": "lean/LegendreK6/DensityGridGrowth.lean",
+      "bytes": 5263,
+      "sha256": "0aeba9712309446cab2eb070d02fca8cc350e101ad8e6844b59912074188ca87"
+    },
+    {
+      "path": "lean/LegendreK6/DensityInput.lean",
+      "bytes": 5031,
+      "sha256": "990d6e27408ddfd9e69db0fad1c0c6580460d96c15f99a44cceb8a6b581146a9"
+    },
+    {
+      "path": "lean/LegendreK6/FarDomains.lean",
+      "bytes": 7649,
+      "sha256": "85cc8f3d9c7e7d3aa6404edb9b8afc5637e743694eaed27a8fcb880e82d96459"
+    },
+    {
+      "path": "lean/LegendreK6/FarTrapezoidCell.lean",
+      "bytes": 5331,
+      "sha256": "26918e09e32df1e26a57a50e463fe5988a1640c82d7b04ac138df3e949d7adbb"
+    },
+    {
+      "path": "lean/LegendreK6/FarUniformBudgets.lean",
+      "bytes": 2614,
+      "sha256": "7280279af681b0c11f9b693812f02032ee74fb54bf287d3b0d038bb0b87cd3b3"
+    },
+    {
+      "path": "lean/LegendreK6/FiniteDensityGrid.lean",
+      "bytes": 7751,
+      "sha256": "e7788c6da80ab537a88156ac6c36296b3d8eca1949b6929359b65cfd70f8a572"
+    },
+    {
+      "path": "lean/LegendreK6/FiniteZeroLayer.lean",
+      "bytes": 5747,
+      "sha256": "3dbe7a724f27c3dd0b80a278e5f86d650cd85b2e0802846f2c74f2f0ba656ab0"
+    },
+    {
+      "path": "lean/LegendreK6/GeometricHeightTail.lean",
+      "bytes": 5387,
+      "sha256": "37506523d5c8384c77cd7adf51b7135d2b60e438afff52bb0ee4a6c9a07aec8f"
+    },
+    {
+      "path": "lean/LegendreK6/HeightGrid.lean",
+      "bytes": 3652,
+      "sha256": "eb181da69aaa4a7003af3182a3a313bddb240b33baa819a018ae22f4b5ce5c6c"
+    },
+    {
+      "path": "lean/LegendreK6/HeightKernel.lean",
+      "bytes": 277,
+      "sha256": "c893a43e9242f7a64b05903cd20a94f27f3a2e72157c25e221a3463c47742f6f"
+    },
+    {
+      "path": "lean/LegendreK6/IntegratedExplicitFormula.lean",
+      "bytes": 6701,
+      "sha256": "9dfad65f0a4a3849e4f89f6aca7b0f25511a2958466e1bd2712845d8e368aced"
+    },
+    {
+      "path": "lean/LegendreK6/IntegratedPsi.lean",
+      "bytes": 6558,
+      "sha256": "52a735da07c58adfaee31f0405079c55879ef63585bf60d7b43e4359ca658245"
+    },
+    {
+      "path": "lean/LegendreK6/LiteratureInputs.lean",
+      "bytes": 4738,
+      "sha256": "feb8446dcfb232adedec2937a271ed010e35f8addeec240a60f75c2c74c8df78"
+    },
+    {
+      "path": "lean/LegendreK6/LowRankInteger.lean",
+      "bytes": 2745,
+      "sha256": "7a40f7398f9b37e6cfb89065ce4b9eadd36d66477538deb8d55faf2ccb322c77"
+    },
+    {
+      "path": "lean/LegendreK6/LowRankTaylor.lean",
+      "bytes": 7958,
+      "sha256": "899c71a212974dd6dd18bad7eb8636a7f0d0d0f426f66a160fa986f41c9269e5"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/Enclosures/Height000.lean",
+      "bytes": 99424,
+      "sha256": "a572a672d2fd24614bd3a65a001c358fec3ff783cd606abc3e4ae348b99f7e08"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/Enclosures/Height001.lean",
+      "bytes": 98755,
+      "sha256": "2ed243f94b863e38d00696ffb32c777eacedb339ba15e281a4334a2bccd82e2b"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/Enclosures/Height002.lean",
+      "bytes": 97812,
+      "sha256": "21f9254f3429e9cf145ecccd76cb0147109f7cbc2a6649cf0255138728eb5a03"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/Enclosures/Height003.lean",
+      "bytes": 88156,
+      "sha256": "9f67f9e2d12c9ed05e6a1cf2702ec1bc34cbc132e90e48457b514bf7532d3bdc"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/Enclosures/Sigma000.lean",
+      "bytes": 18798,
+      "sha256": "93d6e0dfb59cb7769032f1ebd5fb305e44889364622ba9f2002beff5620f761e"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/Enclosures/Sigma001.lean",
+      "bytes": 18816,
+      "sha256": "dcdd45744c6dd1fd352e1137608bcdd24f5b4e3b8126cf914935728c671aba27"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/Enclosures/Sigma002.lean",
+      "bytes": 18833,
+      "sha256": "12cc234ca8a2b7442dfe7851f97a47130de3e8f93fa80dfa085ff73ea1ce42d9"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/Enclosures/Sigma003.lean",
+      "bytes": 18917,
+      "sha256": "d2c81c153d04be421ad69030ba795763e1622797d0c475db24247190337f8f18"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/Enclosures/Sigma004.lean",
+      "bytes": 18942,
+      "sha256": "e917ff4ddfc8c94edb3179de823959499b51196bd6bffac7840a9cf73b1c43ef"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/Enclosures/Sigma005.lean",
+      "bytes": 18855,
+      "sha256": "951b52d92c19b3e1c623728ff79df04b9fffc125969aba3162e1ce9b062221ba"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/Enclosures/Sigma006.lean",
+      "bytes": 18913,
+      "sha256": "12df48e4ea81006258d981ee5e09e3978214820e512e2600e5d9500a78183198"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/Enclosures/Sigma007.lean",
+      "bytes": 18828,
+      "sha256": "aefa24c6bd23e9e56882a0d404b7ac9f5f11283e565cd232b39a117986f89c47"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/Enclosures/Sigma008.lean",
+      "bytes": 18831,
+      "sha256": "0e9d5879c7069b9273e44f46a243e800bea52cb07aba2d5b4e0185960d9ba186"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/Enclosures/Sigma009.lean",
+      "bytes": 19012,
+      "sha256": "53c7aaa3f6f861f245164686075c049d3d94d396fe46f51e4a46be7f44c88c3c"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/Enclosures/Sigma010.lean",
+      "bytes": 19149,
+      "sha256": "f2b1b351d10db4c947136b315088f09b861a7d430b295abdd3349470e5dd14df"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/Enclosures/Sigma011.lean",
+      "bytes": 19244,
+      "sha256": "6754951e11a4647e9cbfc90963e87d027173824c6a34ef0d3f7d89b0c8dc2b2a"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/FactorBounds/Height000.lean",
+      "bytes": 14831,
+      "sha256": "712a484fe8343bab4e9058dc64cc20fd5ff21a6fb261fc2e3dfc1d54b33f4125"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/FactorBounds/Height001.lean",
+      "bytes": 14797,
+      "sha256": "18d0b7a9be1582bc888a593b11a35eb2b1de5d4ba514420b6766962a2fb35939"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/FactorBounds/Height002.lean",
+      "bytes": 14623,
+      "sha256": "6cbd454f6d99dd94c3687688b8c6b8fd48e245ef3df9544583ff7f7e21e675a2"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/FactorBounds/Height003.lean",
+      "bytes": 13200,
+      "sha256": "c98138844026fd78ca2447622313c4c4cd3a75509126b55bdc76704d784e7ead"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/FactorBounds/Sigma000.lean",
+      "bytes": 13624,
+      "sha256": "8901aecd03c756825c909b38765b7ab1ab135d6b7addcaffbf83c6e6fc87a0c6"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/FactorBounds/Sigma001.lean",
+      "bytes": 13655,
+      "sha256": "d090965c7dc1b2f4d5207c789fc452f42e030a49b3e838845b7f9a7fc41d3b84"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/FactorBounds/Sigma002.lean",
+      "bytes": 13646,
+      "sha256": "d2777301adf04fac3ad3e76ddf498b31bafb7a446fb8cad8e901b7fba9b79de8"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/FactorBounds/Sigma003.lean",
+      "bytes": 13736,
+      "sha256": "f27a5cacb57dad659f7e5b2c4fe3c3ca899438e55d8ecbb0c4b22aec04a6aba7"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/FactorBounds/Sigma004.lean",
+      "bytes": 13736,
+      "sha256": "3e0bf4b0925fe0dd1bbfca55bae6383f1ef224546c7f1da700f25772d05c8f7b"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/FactorBounds/Sigma005.lean",
+      "bytes": 13739,
+      "sha256": "eacc04313dd799f2d9c569e96ab167535946f82a25392a4e12a54083f60de999"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/FactorBounds/Sigma006.lean",
+      "bytes": 13729,
+      "sha256": "f4e8827d2d3305b9281484fc253f83fcf00fb193f9409fabf298cdfdca96e79e"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/FactorBounds/Sigma007.lean",
+      "bytes": 13692,
+      "sha256": "544bb90c2ce5e32421b3a97b595459603a09726b9694189fa43d6d552329ff3a"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/FactorBounds/Sigma008.lean",
+      "bytes": 13709,
+      "sha256": "9ab0964659b989e086a198b3149071a50ef3249973f9de68efdbde040ff95026"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/FactorBounds/Sigma009.lean",
+      "bytes": 13843,
+      "sha256": "1a1034d4d6e0122d0987d3f1843b5682a654f802beb93cf461c011af9f1c14bd"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/FactorBounds/Sigma010.lean",
+      "bytes": 13991,
+      "sha256": "d9859dd1bbd105a2b3fd0768a01ce87f5b815d7d7f64dd59e04f0b5400c589f2"
+    },
+    {
+      "path": "lean/LegendreK6/M3Far/FactorBounds/Sigma011.lean",
+      "bytes": 14089,
+      "sha256": "f1f2b0ec147b83b64f0287063604d297624a2e623264490404363e679165b92a"
+    },
+    {
+      "path": "lean/LegendreK6/M3FarAnalytic.lean",
+      "bytes": 1374,
+      "sha256": "7e2548debe21fd5800b2af05641503344124c2a670f65e1160a88cae2a145f4f"
+    },
+    {
+      "path": "lean/LegendreK6/M3FarAuxiliary.lean",
+      "bytes": 6957,
+      "sha256": "a1556b9f4c7a8e0465867632e11fe39db8ac43ae8360f743a514b4e25cef4d2f"
+    },
+    {
+      "path": "lean/LegendreK6/M3FarBudgetDefinitions.lean",
+      "bytes": 948,
+      "sha256": "20b01537bb108a96277e4e4c2ea5f3a96be70dee82ff0f282b918b593cdb26ca"
+    },
+    {
+      "path": "lean/LegendreK6/M3FarBudgetIdentity.lean",
+      "bytes": 3841,
+      "sha256": "9bb0fec89d2d37ea28b452c5410fc51ea66cd71b32012445a6501df1ae88c6f5"
+    },
+    {
+      "path": "lean/LegendreK6/M3FarConstants.lean",
+      "bytes": 1230,
+      "sha256": "8ecbc50401cb24db3f33a00718a694ab5d732b47455d0dff0b0bf1f8c6516d00"
+    },
+    {
+      "path": "lean/LegendreK6/M3FarDefinitions.lean",
+      "bytes": 4063,
+      "sha256": "dea2e75eb1b1a75d2285aa5e08faca118e6275c4df7798fbefaced6e11438135"
+    },
+    {
+      "path": "lean/LegendreK6/M3FarExpression.lean",
+      "bytes": 3741,
+      "sha256": "10cae09bbf80dde5eb2520d709c762217126fc3e8c020099d90a25debc4c836f"
+    },
+    {
+      "path": "lean/LegendreK6/M3FarFactorBounds.lean",
+      "bytes": 2852,
+      "sha256": "2e8981e1fb2f27794b56dffd04d60f4d0a602c27568c8ddc2225c9910f4e26ac"
+    },
+    {
+      "path": "lean/LegendreK6/M3FarGrid.lean",
+      "bytes": 6617,
+      "sha256": "d4d423b0a3e08931e2f31f4758a6584b9946573dc4847cba0c31fbac59b47e27"
+    },
+    {
+      "path": "lean/LegendreK6/M3FarIntegerCertificate.lean",
+      "bytes": 1019,
+      "sha256": "e69bbe4257af4fc6e122c6c8c5d93d5560cc452ff25bd14be949b04167605853"
+    },
+    {
+      "path": "lean/LegendreK6/M3FarIntegerData.lean",
+      "bytes": 15509,
+      "sha256": "47d0551885d8bb04a5565492030fe97bf2934eec80af98bbca34f8621b5153b2"
+    },
+    {
+      "path": "lean/LegendreK6/M3FarLowRankBound.lean",
+      "bytes": 902,
+      "sha256": "a43881e1bbd9388a7923b073fe15c5321445465d076eaeaa8f32b17be3110875"
+    },
+    {
+      "path": "lean/LegendreK6/M3FarResult.lean",
+      "bytes": 1390,
+      "sha256": "096699fca4a1f745cb93584463158cc010dc48b9591d29a631024902d45f6862"
+    },
+    {
+      "path": "lean/LegendreK6/M3FarSmallBudgets.lean",
+      "bytes": 3062,
+      "sha256": "9e98d17c77d2b3aeda5b978f8a938f0dfeebdc0ef3f86e4ecdb1da2556d46d02"
+    },
+    {
+      "path": "lean/LegendreK6/MiddleDomains.lean",
+      "bytes": 7788,
+      "sha256": "3d828ba99a09181bdc1b4c47c643bfa86129f38f0b7fb228977f2d98046c06c5"
+    },
+    {
+      "path": "lean/LegendreK6/PrimeExtraction.lean",
+      "bytes": 2763,
+      "sha256": "713c77688d31d4e43eee9afb6f03eaaeecf246b54343b1e833de37ac08195d15"
+    },
+    {
+      "path": "lean/LegendreK6/PrimePowerBudget.lean",
+      "bytes": 6236,
+      "sha256": "4ba970c664d8eea921a92f9ad7a72b7282a2233e8450c3700e6c1bb7458a3d45"
+    },
+    {
+      "path": "lean/LegendreK6/TrapezoidCell.lean",
+      "bytes": 2432,
+      "sha256": "be9f5069f595423f3b808fc84b68aa3637ccdc643229056cfaad88e1a6eecc86"
+    },
+    {
+      "path": "lean/LegendreK6/TrapezoidHeightBound.lean",
+      "bytes": 8508,
+      "sha256": "fcd0ba6678a162cbfbd6535bcb978947adc15651d2eeb5d8f201518966a8b152"
+    },
+    {
+      "path": "lean/LegendreK6/TrapezoidKernel.lean",
+      "bytes": 11755,
+      "sha256": "b970b79fe41f4afde356ce7598d28d377e10c4178791c0bff88f0125c89467a3"
+    },
+    {
+      "path": "lean/LegendreK6/TrapezoidPrime.lean",
+      "bytes": 3285,
+      "sha256": "646a9d2888d043f3b824ab1de5d702c9f2f66a755ed2653fa5fbbbbf8a5a4c3b"
+    },
+    {
+      "path": "lean/LegendreK6/TrapezoidTrivial.lean",
+      "bytes": 6650,
+      "sha256": "7c9bfaae3b762dac8508e083a82bbe556051c1f173c3dad98885bde01f80868e"
+    },
+    {
+      "path": "lean/LegendreK6/TrapezoidZeroBound.lean",
+      "bytes": 5491,
+      "sha256": "7780c830dda9d4164172395d60031f25ef1e8c56da66e2c3e98eb4163701b27f"
+    },
+    {
+      "path": "lean/LegendreK6/ZetaZeros.lean",
+      "bytes": 21081,
+      "sha256": "9fb065bdae1cc73f614f433628ad98e97f81ceec74e8ad093de9e1eb24c6de1d"
+    }
+  ],
+  "external_imports": [
+    "Mathlib",
+    "Mathlib.Analysis.Calculus.MeanValue",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Deriv",
+    "Mathlib.Tactic.Inclusion.Extension.IntervalDyadicReal.Exp",
+    "Mathlib.Tactic.Inclusion.Extension.IntervalDyadicReal.Tactic"
+  ],
+  "block_builds": {
+    "enclosures": {
+      "status": "ALL_BLOCKS_COMPILED",
+      "elapsed_seconds": 143.287,
+      "rows": [
+        {
+          "module": "LegendreK6\\M3Far\\Enclosures\\Height000.lean",
+          "exit_code": 0,
+          "seconds": 32.08,
+          "log": "tmp\\m3_far_enclosure_build\\Height000.log",
+          "source_sha256": "a572a672d2fd24614bd3a65a001c358fec3ff783cd606abc3e4ae348b99f7e08",
+          "source_bytes": 99424,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "c2599ba360074daf52e35b0072accc3b288435856c7b31215b681941a564bcdc"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\Enclosures\\Height001.lean",
+          "exit_code": 0,
+          "seconds": 32.081,
+          "log": "tmp\\m3_far_enclosure_build\\Height001.log",
+          "source_sha256": "2ed243f94b863e38d00696ffb32c777eacedb339ba15e281a4334a2bccd82e2b",
+          "source_bytes": 98755,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "acd15558d5b86acda98d88cbe4eeeeca8dee36bf745b18f503e1c7ed38d4c733"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\Enclosures\\Height002.lean",
+          "exit_code": 0,
+          "seconds": 34.479,
+          "log": "tmp\\m3_far_enclosure_build\\Height002.log",
+          "source_sha256": "21f9254f3429e9cf145ecccd76cb0147109f7cbc2a6649cf0255138728eb5a03",
+          "source_bytes": 97812,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "60b103035657006b9fbc3669d71aff480e8631943a588caa4e6c2921a57b8727"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\Enclosures\\Sigma001.lean",
+          "exit_code": 0,
+          "seconds": 20.783,
+          "log": "tmp\\m3_far_enclosure_build\\Sigma001.log",
+          "source_sha256": "dcdd45744c6dd1fd352e1137608bcdd24f5b4e3b8126cf914935728c671aba27",
+          "source_bytes": 18816,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "d40af4d307467beb8b6111b1bcaa1b3c50dd7b35b5e19010777df92601416573"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\Enclosures\\Sigma000.lean",
+          "exit_code": 0,
+          "seconds": 24.342,
+          "log": "tmp\\m3_far_enclosure_build\\Sigma000.log",
+          "source_sha256": "93d6e0dfb59cb7769032f1ebd5fb305e44889364622ba9f2002beff5620f761e",
+          "source_bytes": 18798,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "7b87fb54249b74ed625dda7639b92fb9c471fc5c20b7ca68766cc10eadc642f8"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\Enclosures\\Height003.lean",
+          "exit_code": 0,
+          "seconds": 36.023,
+          "log": "tmp\\m3_far_enclosure_build\\Height003.log",
+          "source_sha256": "9f67f9e2d12c9ed05e6a1cf2702ec1bc34cbc132e90e48457b514bf7532d3bdc",
+          "source_bytes": 88156,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "1748dea6516b1e7bf3ca72d15a05daa44576e321820db9ece5fdc9fe24ed8d6f"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\Enclosures\\Sigma003.lean",
+          "exit_code": 0,
+          "seconds": 22.516,
+          "log": "tmp\\m3_far_enclosure_build\\Sigma003.log",
+          "source_sha256": "d2c81c153d04be421ad69030ba795763e1622797d0c475db24247190337f8f18",
+          "source_bytes": 18917,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "472eb3efc3c855402949eb4c04896c14b547397db1a4d89b97a7f48541f242d0"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\Enclosures\\Sigma002.lean",
+          "exit_code": 0,
+          "seconds": 25.935,
+          "log": "tmp\\m3_far_enclosure_build\\Sigma002.log",
+          "source_sha256": "12cc234ca8a2b7442dfe7851f97a47130de3e8f93fa80dfa085ff73ea1ce42d9",
+          "source_bytes": 18833,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "4e452c901bdbcc96a0d2c66b15b14902c49aef8db1c664d43f61b39adac4a0c1"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\Enclosures\\Sigma004.lean",
+          "exit_code": 0,
+          "seconds": 21.325,
+          "log": "tmp\\m3_far_enclosure_build\\Sigma004.log",
+          "source_sha256": "e917ff4ddfc8c94edb3179de823959499b51196bd6bffac7840a9cf73b1c43ef",
+          "source_bytes": 18942,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "750d3c4bdf8cdfaedb2647da6fc6b4ac2ce6fb52c3e603795f50576d3f718a78"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\Enclosures\\Sigma005.lean",
+          "exit_code": 0,
+          "seconds": 22.746,
+          "log": "tmp\\m3_far_enclosure_build\\Sigma005.log",
+          "source_sha256": "951b52d92c19b3e1c623728ff79df04b9fffc125969aba3162e1ce9b062221ba",
+          "source_bytes": 18855,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "a1fce897346f6175d84b2902e454a79f1e58efd5ed613685b16f57260d83b259"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\Enclosures\\Sigma006.lean",
+          "exit_code": 0,
+          "seconds": 21.229,
+          "log": "tmp\\m3_far_enclosure_build\\Sigma006.log",
+          "source_sha256": "12df48e4ea81006258d981ee5e09e3978214820e512e2600e5d9500a78183198",
+          "source_bytes": 18913,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "3d8002fa4f90f74f34a98e4ca6c4f8988f87c9fe323bd297e4d9ed318820d87e"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\Enclosures\\Sigma007.lean",
+          "exit_code": 0,
+          "seconds": 21.802,
+          "log": "tmp\\m3_far_enclosure_build\\Sigma007.log",
+          "source_sha256": "aefa24c6bd23e9e56882a0d404b7ac9f5f11283e565cd232b39a117986f89c47",
+          "source_bytes": 18828,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "cb4b7235cd18d1c011067e0b2ddaba7c5473a09db8403bd5db0753030a65d6e3"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\Enclosures\\Sigma009.lean",
+          "exit_code": 0,
+          "seconds": 22.513,
+          "log": "tmp\\m3_far_enclosure_build\\Sigma009.log",
+          "source_sha256": "53c7aaa3f6f861f245164686075c049d3d94d396fe46f51e4a46be7f44c88c3c",
+          "source_bytes": 19012,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "c86ac777e2fb47073453c5254a520f9b0986fbc6a34eaec780b2f0d14f7d2f4f"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\Enclosures\\Sigma008.lean",
+          "exit_code": 0,
+          "seconds": 25.412,
+          "log": "tmp\\m3_far_enclosure_build\\Sigma008.log",
+          "source_sha256": "0e9d5879c7069b9273e44f46a243e800bea52cb07aba2d5b4e0185960d9ba186",
+          "source_bytes": 18831,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "d90e8edc50165f4ec549aeb371e15db859b8d9138c5d3781b099e63e2cc42896"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\Enclosures\\Sigma010.lean",
+          "exit_code": 0,
+          "seconds": 21.777,
+          "log": "tmp\\m3_far_enclosure_build\\Sigma010.log",
+          "source_sha256": "f2b1b351d10db4c947136b315088f09b861a7d430b295abdd3349470e5dd14df",
+          "source_bytes": 19149,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "7e6c27fd2f3291c881755671b12772cbc5b26220b7b5b2d1a196bd0f52a26bb1"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\Enclosures\\Sigma011.lean",
+          "exit_code": 0,
+          "seconds": 18.303,
+          "log": "tmp\\m3_far_enclosure_build\\Sigma011.log",
+          "source_sha256": "6754951e11a4647e9cbfc90963e87d027173824c6a34ef0d3f7d89b0c8dc2b2a",
+          "source_bytes": 19244,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "a13f36798df8544e8aece995513ceef189bac51dcdb451ae266b48e5b133d072"
+        }
+      ]
+    },
+    "factor_bounds": {
+      "status": "ALL_BLOCKS_COMPILED",
+      "elapsed_seconds": 109.058,
+      "rows": [
+        {
+          "module": "LegendreK6\\M3Far\\FactorBounds\\Height000.lean",
+          "exit_code": 0,
+          "seconds": 15.463,
+          "log": "tmp\\m3_far_factor_bounds_build\\Height000.log",
+          "source_sha256": "712a484fe8343bab4e9058dc64cc20fd5ff21a6fb261fc2e3dfc1d54b33f4125",
+          "source_bytes": 14831,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "2fd2706c68952bac39e54c8a9c3fd11dc5a59d99ef18ff299c5cd5d8764e4c31"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\FactorBounds\\Height001.lean",
+          "exit_code": 0,
+          "seconds": 15.834,
+          "log": "tmp\\m3_far_factor_bounds_build\\Height001.log",
+          "source_sha256": "18d0b7a9be1582bc888a593b11a35eb2b1de5d4ba514420b6766962a2fb35939",
+          "source_bytes": 14797,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "50914d26875e783c6bb6cc95eb7252627852074343210e0a358ce853d99a077e"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\FactorBounds\\Height002.lean",
+          "exit_code": 0,
+          "seconds": 16.558,
+          "log": "tmp\\m3_far_factor_bounds_build\\Height002.log",
+          "source_sha256": "6cbd454f6d99dd94c3687688b8c6b8fd48e245ef3df9544583ff7f7e21e675a2",
+          "source_bytes": 14623,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "c881d52f3ec423b3790c03123955ce90dbbf98f5fc88634be1ce5fef3113b53c"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\FactorBounds\\Sigma000.lean",
+          "exit_code": 0,
+          "seconds": 17.269,
+          "log": "tmp\\m3_far_factor_bounds_build\\Sigma000.log",
+          "source_sha256": "8901aecd03c756825c909b38765b7ab1ab135d6b7addcaffbf83c6e6fc87a0c6",
+          "source_bytes": 13624,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "936ae373b37e5be3da3430ee41cc77b9f5b819ae98a9299b7d07fc0be90265b1"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\FactorBounds\\Height003.lean",
+          "exit_code": 0,
+          "seconds": 18.013,
+          "log": "tmp\\m3_far_factor_bounds_build\\Height003.log",
+          "source_sha256": "c98138844026fd78ca2447622313c4c4cd3a75509126b55bdc76704d784e7ead",
+          "source_bytes": 13200,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "22702c3244fa0f44110c0c5cb62d3a45442c360df7a65381bc928afaa1f37ac9"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\FactorBounds\\Sigma001.lean",
+          "exit_code": 0,
+          "seconds": 18.44,
+          "log": "tmp\\m3_far_factor_bounds_build\\Sigma001.log",
+          "source_sha256": "d090965c7dc1b2f4d5207c789fc452f42e030a49b3e838845b7f9a7fc41d3b84",
+          "source_bytes": 13655,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "d3515e74b1ecf05d91aa9b2ec992bba5c9f034122afd93c1ea4d8cc5f3bc1ea0"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\FactorBounds\\Sigma002.lean",
+          "exit_code": 0,
+          "seconds": 17.649,
+          "log": "tmp\\m3_far_factor_bounds_build\\Sigma002.log",
+          "source_sha256": "d2777301adf04fac3ad3e76ddf498b31bafb7a446fb8cad8e901b7fba9b79de8",
+          "source_bytes": 13646,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "8320c54ad521551cf2491a4462f96c89f1606233fc633c8ea7efa8d4386a7ef9"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\FactorBounds\\Sigma003.lean",
+          "exit_code": 0,
+          "seconds": 17.756,
+          "log": "tmp\\m3_far_factor_bounds_build\\Sigma003.log",
+          "source_sha256": "f27a5cacb57dad659f7e5b2c4fe3c3ca899438e55d8ecbb0c4b22aec04a6aba7",
+          "source_bytes": 13736,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "b197cdda7c6abb644c4bd9f3ca1a1a68c321cb2172359930e20e7fabc139d8ea"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\FactorBounds\\Sigma004.lean",
+          "exit_code": 0,
+          "seconds": 20.354,
+          "log": "tmp\\m3_far_factor_bounds_build\\Sigma004.log",
+          "source_sha256": "3e0bf4b0925fe0dd1bbfca55bae6383f1ef224546c7f1da700f25772d05c8f7b",
+          "source_bytes": 13736,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "20fac2de2db32ae95324fd743609213dac4578a72fb14d1298f40841908a646b"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\FactorBounds\\Sigma006.lean",
+          "exit_code": 0,
+          "seconds": 18.852,
+          "log": "tmp\\m3_far_factor_bounds_build\\Sigma006.log",
+          "source_sha256": "f4e8827d2d3305b9281484fc253f83fcf00fb193f9409fabf298cdfdca96e79e",
+          "source_bytes": 13729,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "ce3c3c05c1636557194b1ba7421cb1a2778add375ac7ee738dd3c88f614d93af"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\FactorBounds\\Sigma005.lean",
+          "exit_code": 0,
+          "seconds": 21.5,
+          "log": "tmp\\m3_far_factor_bounds_build\\Sigma005.log",
+          "source_sha256": "eacc04313dd799f2d9c569e96ab167535946f82a25392a4e12a54083f60de999",
+          "source_bytes": 13739,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "41b117e23f66a9991c78520fd5f25b7af3e8e418df829f860deeaf74faad3dee"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\FactorBounds\\Sigma007.lean",
+          "exit_code": 0,
+          "seconds": 19.201,
+          "log": "tmp\\m3_far_factor_bounds_build\\Sigma007.log",
+          "source_sha256": "544bb90c2ce5e32421b3a97b595459603a09726b9694189fa43d6d552329ff3a",
+          "source_bytes": 13692,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "16bcea147870aa45caf97c779e06f169ab901b5d52b11d328210f88d63a4aae0"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\FactorBounds\\Sigma008.lean",
+          "exit_code": 0,
+          "seconds": 19.196,
+          "log": "tmp\\m3_far_factor_bounds_build\\Sigma008.log",
+          "source_sha256": "9ab0964659b989e086a198b3149071a50ef3249973f9de68efdbde040ff95026",
+          "source_bytes": 13709,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "16f9de423fbce7592365aca78780080db4e0eb3056e3aa351eabf8128317bee9"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\FactorBounds\\Sigma009.lean",
+          "exit_code": 0,
+          "seconds": 19.842,
+          "log": "tmp\\m3_far_factor_bounds_build\\Sigma009.log",
+          "source_sha256": "1a1034d4d6e0122d0987d3f1843b5682a654f802beb93cf461c011af9f1c14bd",
+          "source_bytes": 13843,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "54df4d5f5ed2708c964920fc53e4e6fa16111b485b79b472ec9814ff70492790"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\FactorBounds\\Sigma010.lean",
+          "exit_code": 0,
+          "seconds": 19.835,
+          "log": "tmp\\m3_far_factor_bounds_build\\Sigma010.log",
+          "source_sha256": "d9859dd1bbd105a2b3fd0768a01ce87f5b815d7d7f64dd59e04f0b5400c589f2",
+          "source_bytes": 13991,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "fb2cc441b466a15a5585b8fe509bb621e32d9ebab058d194290fb8bf2dc07c8f"
+        },
+        {
+          "module": "LegendreK6\\M3Far\\FactorBounds\\Sigma011.lean",
+          "exit_code": 0,
+          "seconds": 19.774,
+          "log": "tmp\\m3_far_factor_bounds_build\\Sigma011.log",
+          "source_sha256": "f1f2b0ec147b83b64f0287063604d297624a2e623264490404363e679165b92a",
+          "source_bytes": 14089,
+          "compiler_output": "",
+          "compiler_flags": [
+            "-DautoImplicit=false"
+          ],
+          "olean_sha256": "7d25c841cd65a2e92ae5c6b2a5d900005702a15bbbb4a1e17f0d5f2a6ca1a987"
+        }
+      ]
+    }
+  },
+  "assembly_builds": [
+    {
+      "module": "LegendreK6/M3FarFactorBounds.lean",
+      "exit_code": 0,
+      "seconds": 17.109,
+      "source_sha256": "2e8981e1fb2f27794b56dffd04d60f4d0a602c27568c8ddc2225c9910f4e26ac",
+      "compiler_flags": [
+        "-DautoImplicit=false"
+      ],
+      "compiler_output": ""
+    },
+    {
+      "module": "LegendreK6/M3FarLowRankBound.lean",
+      "exit_code": 0,
+      "seconds": 16.734,
+      "source_sha256": "a43881e1bbd9388a7923b073fe15c5321445465d076eaeaa8f32b17be3110875",
+      "compiler_flags": [
+        "-DautoImplicit=false"
+      ],
+      "compiler_output": ""
+    },
+    {
+      "module": "LegendreK6/M3FarResult.lean",
+      "exit_code": 0,
+      "seconds": 15.891,
+      "source_sha256": "096699fca4a1f745cb93584463158cc010dc48b9591d29a631024902d45f6862",
+      "compiler_flags": [
+        "-DautoImplicit=false"
+      ],
+      "compiler_output": ""
+    }
+  ],
+  "generator_checks": [
+    {
+      "source": "code/generate_m3_far.py",
+      "sha256": "1d6a81b6f4e703f393d20e7266a6da8d101d84fd708c0986502273b4f892a09c",
+      "arguments": [
+        "--all-blocks",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"SOURCE_MATCHES\",\n  \"number_of_blocks\": 16,\n  \"bytes\": 611285,\n  \"report\": \"D:\\\\UGit\\\\AI4Math\\\\.worktrees\\\\qrh-full-lean\\\\routes\\\\qrh\\\\tmp\\\\m3_far_enclosure_generation.json\"\n}\n"
+    },
+    {
+      "source": "code/generate_m3_far_factor_bounds.py",
+      "sha256": "0ad6095d779c25304bcdada27924e7a7a752ba1577cdad9ae6b957a91be80c08",
+      "arguments": [
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "16 bound blocks match\nBoth final bound modules match\n"
+    },
+    {
+      "source": "code/generate_m3_far_integer_data.py",
+      "sha256": "e96fb3ab516645deef26f66387add13438003d77f7a300f7683f500d5a6b84b2",
+      "arguments": [
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"CHECK_PASS\",\n  \"read_only\": true,\n  \"bits\": 48,\n  \"sigma_rows\": 384,\n  \"height_rows\": 125,\n  \"height_factor_padding\": 1048576,\n  \"height_power_padding\": 1,\n  \"exploratory_low_rank\": 0.43419922534542355,\n  \"proposed_cap\": \"9/20\",\n  \"exploratory_cap_holds\": true,\n  \"bytes\": 15509,\n  \"sha256\": \"47d0551885d8bb04a5565492030fe97bf2934eec80af98bbca34f8621b5153b2\"\n}\n"
+    }
+  ],
+  "axiom_audit": "LegendreK6.M3Far.pilot_short_interval_from_inputs (HQ : LegendreK6.QRHSevenEighths) (HC : LegendreK6.CSv2)\n  (HR : LegendreK6.RosserZeroCount) (HF : LegendreK6.IntegratedExplicitFormula) (x : ℝ) (hx : 0 < x)\n  (hlo : 400 ≤ Real.log x) (hhi : Real.log x ≤ 1601 / 4) : LegendreK6.ShortInterval4 x\nLegendreK6.M3Far.completeBudget_le : LegendreK6.M3Far.completeBudget ≤ 225011 / 500000\nLegendreK6.M3Far.zeroBudget_le :\n  2 *\n      LegendreK6.trapezoidHeightBudget LegendreK6.M3Far.s LegendreK6.M3Far.rowNat 384 LegendreK6.M3Far.left\n        LegendreK6.M3Far.q LegendreK6.M3Far.node 125 ≤\n    22501 / 50000\n'LegendreK6.M3Far.pilot_short_interval_from_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M3Far.completeBudget_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M3Far.rationalLowRank20_le' depends on axioms: [propext, Classical.choice, Quot.sound]\ndef LegendreK6.farPrimePowerBudget : ℝ → ℝ → ℝ :=\nfun A C =>\n  32 / 31 * √(1 + LegendreK6.farEpsilon A) * (C + Real.log (1 + LegendreK6.farEpsilon A)) ^ 2 / (8 * Real.log 2) *\n    Real.exp (-A / 4)\ndef LegendreK6.M3Far.height : Fin 125 → ℝ :=\nfun i => (796 + ↑↑i) / 8\ndef LegendreK6.M3Far.sigmaLo : Fin 384 → ℝ :=\nfun j => (512 + ↑↑j) / 1024\n",
+  "axiom_audit_source": "import LegendreK6.M3FarResult\n#check LegendreK6.M3Far.pilot_short_interval_from_inputs\n#check LegendreK6.M3Far.completeBudget_le\n#check LegendreK6.M3Far.zeroBudget_le\n#print axioms LegendreK6.M3Far.pilot_short_interval_from_inputs\n#print axioms LegendreK6.M3Far.completeBudget_le\n#print axioms LegendreK6.M3Far.rationalLowRank20_le\n#print LegendreK6.farPrimePowerBudget\n#print LegendreK6.M3Far.height\n#print LegendreK6.M3Far.sigmaLo\n",
+  "lean_toolchain": "leanprover/lean4:v4.36.0-rc2",
+  "lake_manifest_sha256": "1a2552df9acfbb7ff8f41bf877975acfcbff176531b82f3e41a6761f3cb77d23"
+}

@@ -1,0 +1,98 @@
+{
+  "success": {
+    "exit_code": 0,
+    "status": "SELECTED_LEAN_MODULES_COMPILED",
+    "modules": {
+      "A": "PASS",
+      "B": "PASS",
+      "C": "PASS"
+    }
+  },
+  "failure": {
+    "exit_code": 1,
+    "status": "BUILD_FAILED",
+    "modules": {
+      "A": "PASS",
+      "B": "FAILED",
+      "C": "NOT_STARTED"
+    }
+  },
+  "source_mutation": {
+    "status": "FAILED",
+    "source_unchanged": false
+  },
+  "cache_protection": {
+    "exit_code": 1,
+    "status": "PREFLIGHT_FAILED"
+  },
+  "existing_m1_report_unchanged": true,
+  "status": "SMALL_FIXTURE_SMOKE_PASSED",
+  "date": "2026-11-06",
+  "build_driver_sha256": "8a438e435ca901ff4b0c9181ee418b4ad3740fcf7db9b23b52867e5dc6f85fd0",
+  "compiler_version": "Lean (version 4.36.0-rc2, x86_64-w64-windows-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)",
+  "lean_options": {
+    "autoImplicit": false
+  },
+  "jobs": 2,
+  "actual_project_graph_modules": 241,
+  "full_project_compilation_performed": false,
+  "scope": "Temporary three-module Lean fixtures test scheduling and records; they do not establish mathematical scope.",
+  "command": "python -B routes/qrh/lean/.lake/tmp/build_driver_smoke.py",
+  "report_module_order": [
+    "A",
+    "B",
+    "C"
+  ],
+  "success_rows": [
+    {
+      "module": "A",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256_before": "0120835f37f26f34c64d731c0a9be37d8deae27974ffd6b1903abc8a2b2232d6",
+      "source_sha256_after": "0120835f37f26f34c64d731c0a9be37d8deae27974ffd6b1903abc8a2b2232d6",
+      "source_unchanged": true,
+      "olean_sha256": "37939887c2c131bbaa636a62ffa8bba040f07b33abb1134131905f0b9a9f19c3",
+      "started_at": "2026-11-06T06:21:03.985720+00:00",
+      "finished_at": "2026-11-06T06:21:06.042429+00:00"
+    },
+    {
+      "module": "B",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256_before": "aaeb0063c62cfef925b797a0ac3fa6f944a863c3466c0e094a9f9c5c76403317",
+      "source_sha256_after": "aaeb0063c62cfef925b797a0ac3fa6f944a863c3466c0e094a9f9c5c76403317",
+      "source_unchanged": true,
+      "olean_sha256": "ce3a623884561b56fdbfcc1fd49c70ed4b0886e691a57728a082701535286fb4",
+      "started_at": "2026-11-06T06:21:03.985720+00:00",
+      "finished_at": "2026-11-06T06:21:04.516438+00:00"
+    },
+    {
+      "module": "C",
+      "status": "PASS",
+      "exit_code": 0,
+      "source_sha256_before": "4bc1bac59e80e515f985462e0c3dec552c8ad333ccb95bbcd2bd61f2d195d4ef",
+      "source_sha256_after": "4bc1bac59e80e515f985462e0c3dec552c8ad333ccb95bbcd2bd61f2d195d4ef",
+      "source_unchanged": true,
+      "olean_sha256": "0dea348bc9625173c6f9ca139d22010c91f03ca1dbf4e64fdba4ee3f7f0d51cd",
+      "started_at": "2026-11-06T06:21:06.042429+00:00",
+      "finished_at": "2026-11-06T06:21:06.564269+00:00"
+    }
+  ],
+  "failure_rows": [
+    {
+      "module": "A",
+      "status": "PASS",
+      "exit_code": 0
+    },
+    {
+      "module": "B",
+      "status": "FAILED",
+      "exit_code": 1
+    },
+    {
+      "module": "C",
+      "status": "NOT_STARTED",
+      "exit_code": null
+    }
+  ]
+}

@@ -44,8 +44,16 @@ reproducible is the frozen mathematical input, deterministic program/source
 generation, specified toolchain, certificates, and compiler/verification
 commands. Model agreement is not proof.
 
-The mathematical argument is conditional on H1/H2 and the explicitly cited
-literature inputs. The present Lean development is partial as a formalization
-of that complete argument. The missing steps are listed in
-`FORMALIZATION_STATUS.md`; no collection of successful local compilations
-changes that status by itself.
+The argument is conditional on seven individually named inputs, including
+QRH and CS v2. The final downstream theorem has passed a fresh 241-module
+build and matching dependency audit, without local analytic conclusions or
+numerical budgets as inputs. See `FORMALIZATION_STATUS.md` and the records
+in `audit/builds/final-20261106/`. Those external inputs were not re-proved.
+
+The new formal argument uses a continuous grid translation, a finite-RH
+lower-range comparison and a trapezoid far-range certificate. It does not
+claim a line-by-line translation of the historical polynomial-weight proof.
+Codex agents implemented and cross-reviewed these changes; each review
+distinguishes its author's implementation from independently read code.
+The Claude review retains its historical scope. The new method is described
+in `paper/lean_formalization_addendum.md`.

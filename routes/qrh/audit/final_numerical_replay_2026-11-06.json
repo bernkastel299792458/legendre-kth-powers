@@ -1,0 +1,48 @@
+{
+  "schema": "legendre-k6-final-numerical-replay-v1",
+  "scope": "Read-only replay of the four original written-proof certificates; distinct from the new Lean proof and its fresh build.",
+  "started_utc": "2026-11-06T07:03:18.188781+00:00",
+  "finished_utc": "2026-11-06T07:07:10.980247+00:00",
+  "elapsed_seconds": 232.797,
+  "cwd": "D:\\UGit\\AI4Math\\.worktrees\\qrh-full-lean\\routes\\qrh",
+  "command": [
+    "C:\\Users\\Bernkastel\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-X",
+    "utf8",
+    "code/verify_k6.py",
+    "--dry-run"
+  ],
+  "python_version": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "python_flint_version": "0.9.0",
+  "exit_code": 0,
+  "status": "PASS",
+  "frozen_scripts_certificates_and_summary_unchanged": true,
+  "sha256_before": {
+    "code/verify_k6.py": "7db8e76e2866304a6280105e63f70551269f06ac50e4d992c6f4253b9c12a5eb",
+    "code/certify_lower_range_k6.py": "0d7149060506aa6b18c9c25a14b0e64ba9bbdeade42ba44888c24de6154b2d93",
+    "code/certify_smooth_k6.py": "529444f426560c2e2f9523d1f393bff43a5fa8cf46e2c891d0296343c294355e",
+    "code/certify_smooth_segment.py": "ec7e6d218e09967d9161f44074c35ecdce09eb6a3a3a3d307db1e5b36083d21e",
+    "code/certify_tail_cs.py": "162e880b9ad62f6ae47dd16a6b7ea75bce0a34cab35fff2975c169430ee77cb6",
+    "results/lower_range_k6_certificate.json": "a108bd9166c0c8c137ee5299e1b5a135e825efa6514894be5054872299fd60fc",
+    "results/smooth_k6_certificate.json": "65dbfce3f0caa99f71f3bc74d9e2f61cfc7501ee28cdfe5ae584696c60429b95",
+    "results/smooth_segment_certificate.json": "7e3768054da03709927d63a3f2d5766b7d0b26a7f600d4a8005621413e1a2a7f",
+    "results/tail_cs_certificate.json": "d579daae45c617416d14282b69aa727e0f4b7e10699e73678bfebc6b2b743e84",
+    "results/k6_verification_summary.json": "f5a9f56acf4c73b85b436a1dc6b0f03be5786d0e2f1e927f6e8b5bfb784f31b2"
+  },
+  "sha256_after": {
+    "code/verify_k6.py": "7db8e76e2866304a6280105e63f70551269f06ac50e4d992c6f4253b9c12a5eb",
+    "code/certify_lower_range_k6.py": "0d7149060506aa6b18c9c25a14b0e64ba9bbdeade42ba44888c24de6154b2d93",
+    "code/certify_smooth_k6.py": "529444f426560c2e2f9523d1f393bff43a5fa8cf46e2c891d0296343c294355e",
+    "code/certify_smooth_segment.py": "ec7e6d218e09967d9161f44074c35ecdce09eb6a3a3a3d307db1e5b36083d21e",
+    "code/certify_tail_cs.py": "162e880b9ad62f6ae47dd16a6b7ea75bce0a34cab35fff2975c169430ee77cb6",
+    "results/lower_range_k6_certificate.json": "a108bd9166c0c8c137ee5299e1b5a135e825efa6514894be5054872299fd60fc",
+    "results/smooth_k6_certificate.json": "65dbfce3f0caa99f71f3bc74d9e2f61cfc7501ee28cdfe5ae584696c60429b95",
+    "results/smooth_segment_certificate.json": "7e3768054da03709927d63a3f2d5766b7d0b26a7f600d4a8005621413e1a2a7f",
+    "results/tail_cs_certificate.json": "d579daae45c617416d14282b69aa727e0f4b7e10699e73678bfebc6b2b743e84",
+    "results/k6_verification_summary.json": "f5a9f56acf4c73b85b436a1dc6b0f03be5786d0e2f1e927f6e8b5bfb784f31b2"
+  },
+  "output_file": "audit\\final_numerical_replay_2026-11-06.txt",
+  "output_sha256": "c8d86acfa4cf68443ccc3d1a8fa51d9e80ec6b225fa51863ad849641d961b536",
+  "output_capture": "Complete combined stdout/stderr emitted by the unchanged aggregate command. Child stdout is internally captured by that command and is not printed by --dry-run.",
+  "read_only_source_check": "verify_k6 main writes only when not args.dry_run; all four child --verify paths read/recompute and return before their certificate-writing branches."
+}

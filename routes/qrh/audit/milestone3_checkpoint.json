@@ -1,0 +1,73 @@
+{
+  "status": "MILESTONE_3_COMPLETE_RELATIVE_TO_NAMED_INPUTS",
+  "created": "2026-11-06T07:22:19.912627+00:00",
+  "theorem": "LegendreK6.sixth_powers_from_named_inputs",
+  "conclusion": "For every integer n >= 1, there exists an actual Nat.Prime p with n^6 < p < (n+1)^6.",
+  "stronger_conclusion": "For every integer n >= 1, there exists an actual Nat.Prime p with n^6 < p < n^6+6*n^5.",
+  "external_inputs": [
+    "QRHSevenEighths",
+    "CSv2",
+    "RosserZeroCount",
+    "IntegratedExplicitFormula",
+    "FiniteRH3e12",
+    "CHJIIShortInterval",
+    "CHLRows"
+  ],
+  "external_inputs_reproved": false,
+  "end_to_end_k6_relative_to_named_inputs": true,
+  "end_to_end_H1_H2_only": false,
+  "final_local_analytic_or_numeric_premises": [],
+  "covered_historical_cells": {
+    "middle": 94,
+    "far": 60
+  },
+  "covered_positive_integers": "all",
+  "exact_complete_budgets": {
+    "difficult_pilot": "234943/250000",
+    "lower_middle": "966283/1000000",
+    "far_pilot": "225011/500000"
+  },
+  "proof_method": "Actual zeta and arithmetic bridges; kernel-checked real enclosures and integer moments; continuous grid translation; finite-RH lower comparison; new trapezoid far proof. The old polynomial proof is preserved, not translated line by line.",
+  "build": {
+    "modules": 241,
+    "all_pass": true,
+    "fresh_output_tree": true,
+    "seconds": 2690.618,
+    "lean_version": "Lean (version 4.36.0-rc2, x86_64-w64-windows-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)",
+    "lean_options": {
+      "autoImplicit": false
+    }
+  },
+  "dependency_audit": {
+    "status": "FINAL_K6_DEPENDENCY_AUDIT_PASSED",
+    "seconds": 17.375,
+    "actual_proof_dependencies_checked": true,
+    "complete_input_types_printed": true
+  },
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "previous_milestone_commits": {
+    "M1": "b1d00a8",
+    "M2": "a136d67"
+  },
+  "review_scope": "AI implementation cross-reviews with disclosed overlap; no complete human expert review recorded.",
+  "sha256": {
+    "audit/builds/final-20261106/lean_build_report.json": "bddf96be2d66f280e0bb8ace907967393d606bb5b49808bff99d793c389dcf43",
+    "audit/builds/final-20261106/lean_build.log": "cbb8d76439aaff018267a0048a739af1fffde891035431616421676a67cdec9e",
+    "audit/builds/final-20261106/kernel_axioms.txt": "aadb7440f10a0c64662d1545f98802de32aaeb169efad6f9355d73ca249a3de7",
+    "audit/builds/final-20261106/final_dependency_report.json": "70c5bfe5d30dbf3c159a079ada4bda025205c179e28fe4bfb654c8f6c76eb5f0",
+    "audit/builds/final-20261106/final_dependencies.txt": "430d823cb8ddbdbcba386d46ab77679d7d6fcf1147b9a89d2a2709636fe238aa",
+    "lean/LegendreK6/FinalResult.lean": "57b9148fbdd078083abf425c2d7fc552bff551a83c97ef79a539c63147a0ea24",
+    "lean/LegendreK6/FinalCellCoverage.lean": "af81a4c1efbdd568f994b8e4797572845b48e7e17be4f543bebaed02d8595e5b",
+    "audit/FinalDependencies.lean": "2180d7708aec8aa57ec201b9a1f72ec0f47025ed58a2e082c75d86a550f6308a",
+    "code/build_lean.py": "8a438e435ca901ff4b0c9181ee418b4ad3740fcf7db9b23b52867e5dc6f85fd0",
+    "code/run_dependency_audit.py": "19f8dec62c6081cbc093baa03c45d8361bea603c623bcf9cf38d8db9b9fee272",
+    "code/release_manifest.py": "0db887a1be9425a7c2cf038031483356d711e9208d20549c1b6babaa16f406f6",
+    "audit/final_source_regeneration.json": "2847a160b961e3582a6fd6ba25aae611e3f5419ff0f751b1753274c15c52e4d8",
+    "audit/final_numerical_replay_2026-11-06.json": "b66a8c1ef9f80594cfdbca99ac938c8c9b6f7a582df988a23f08265e067c339a",
+    "audit/final_numerical_replay_2026-11-06.txt": "c8d86acfa4cf68443ccc3d1a8fa51d9e80ec6b225fa51863ad849641d961b536"
+  }
+}

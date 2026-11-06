@@ -59,3 +59,15 @@ import LegendreK6
 #check LegendreK6.M2Pilot.completeBudget_le
 #check LegendreK6.M2Pilot.pilot_short_interval_from_inputs
 #print LegendreK6.IntegratedExplicitFormula
+
+/-! Final downstream theorem: seven named inputs, no analytic-segment premise. -/
+#check LegendreK6.sixth_powers_from_named_inputs
+#print axioms LegendreK6.sixth_powers_from_named_inputs
+#check LegendreK6.sixth_power_short_from_named_inputs
+#print axioms LegendreK6.sixth_power_short_from_named_inputs
+#check LegendreK6.all_94_cells_actual_prime_intervals
+#print axioms LegendreK6.all_94_cells_actual_prime_intervals
+#check LegendreK6.all_60_far_cells_actual_prime_intervals
+#print axioms LegendreK6.all_60_far_cells_actual_prime_intervals
+#print LegendreK6.SixthPowerConclusion
+#print LegendreK6.FiniteRH3e12

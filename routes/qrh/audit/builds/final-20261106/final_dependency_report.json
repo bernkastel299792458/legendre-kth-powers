@@ -1,0 +1,30 @@
+{
+  "status": "FINAL_K6_DEPENDENCY_AUDIT_PASSED",
+  "created": "2026-11-06T07:17:00.519592+00:00",
+  "exit_code": 0,
+  "seconds": 17.375,
+  "errors": [],
+  "command": [
+    "C:\\Users\\Bernkastel\\.elan\\bin\\lean.exe",
+    "-DautoImplicit=false",
+    "../audit/FinalDependencies.lean"
+  ],
+  "cwd": "D:\\UGit\\AI4Math\\.worktrees\\qrh-full-lean\\routes\\qrh\\lean",
+  "lean_path": [
+    "D:\\UGit\\AI4Math\\.worktrees\\qrh-full-lean\\routes\\qrh\\lean\\.lake\\final-20261106",
+    "D:\\UGit\\AI4Math\\legendre_k67\\proof\\LegendreK67\\.lake\\packages\\LeanSearchClient\\.lake\\build\\lib\\lean",
+    "D:\\UGit\\AI4Math\\legendre_k67\\proof\\LegendreK67\\.lake\\packages\\Qq\\.lake\\build\\lib\\lean",
+    "D:\\UGit\\AI4Math\\legendre_k67\\proof\\LegendreK67\\.lake\\packages\\aesop\\.lake\\build\\lib\\lean",
+    "D:\\UGit\\AI4Math\\legendre_k67\\proof\\LegendreK67\\.lake\\packages\\batteries\\.lake\\build\\lib\\lean",
+    "D:\\UGit\\AI4Math\\legendre_k67\\proof\\LegendreK67\\.lake\\packages\\importGraph\\.lake\\build\\lib\\lean",
+    "D:\\UGit\\AI4Math\\legendre_k67\\proof\\LegendreK67\\.lake\\packages\\mathlib\\.lake\\build\\lib\\lean",
+    "D:\\UGit\\AI4Math\\legendre_k67\\proof\\LegendreK67\\.lake\\packages\\plausible\\.lake\\build\\lib\\lean",
+    "D:\\UGit\\AI4Math\\legendre_k67\\proof\\LegendreK67\\.lake\\packages\\proofwidgets\\.lake\\build\\lib\\lean"
+  ],
+  "build_report": "D:\\UGit\\AI4Math\\.worktrees\\qrh-full-lean\\routes\\qrh\\audit\\builds\\final-20261106\\lean_build_report.json",
+  "build_report_sha256": "bddf96be2d66f280e0bb8ace907967393d606bb5b49808bff99d793c389dcf43",
+  "diagnostic_source_sha256": "2180d7708aec8aa57ec201b9a1f72ec0f47025ed58a2e082c75d86a550f6308a",
+  "output_sha256": "430d823cb8ddbdbcba386d46ab77679d7d6fcf1147b9a89d2a2709636fe238aa",
+  "checked_modules": 241,
+  "scope": "Complete downstream k=6 proof relative to seven individually named external inputs; not a re-proof of those inputs or a theorem assuming only QRH and CS."
+}

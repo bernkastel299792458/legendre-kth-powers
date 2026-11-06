@@ -1,0 +1,37 @@
+{
+  "status": "ALL_SIX_READ_ONLY_SOURCE_CHECKS_PASSED",
+  "recorded_at": "2026-11-06T06:35:40.413361+00:00",
+  "scope": "Executed by the root agent while Lean sources were frozen; each command returned exit code 0. This is source reproducibility, not a substitute for kernel checking.",
+  "commands": [
+    {
+      "command": "python -B -X utf8 code/generate_m2_pilot.py --all-blocks --check",
+      "exit_code": 0,
+      "generator_sha256": "f854b323ff5e9a81a0f9f2a539689b069621abdf5d9d15fc2b002a598b996638"
+    },
+    {
+      "command": "python -B -X utf8 code/generate_m2_factor_bounds.py --check",
+      "exit_code": 0,
+      "generator_sha256": "a6a62aacf85e7b999bd8a72fdbf6261393152a1c59a2c44e8a3fc253b973a304"
+    },
+    {
+      "command": "python -B -X utf8 code/generate_m2_integer_data.py --check",
+      "exit_code": 0,
+      "generator_sha256": "081ff1fc3d801ca9dc1ebfe077873ec51e63bee02534c538cfc40073bc557083"
+    },
+    {
+      "command": "python -B -X utf8 code/generate_m3_far.py --all-blocks --check",
+      "exit_code": 0,
+      "generator_sha256": "1d6a81b6f4e703f393d20e7266a6da8d101d84fd708c0986502273b4f892a09c"
+    },
+    {
+      "command": "python -B -X utf8 code/generate_m3_far_factor_bounds.py --check",
+      "exit_code": 0,
+      "generator_sha256": "0ad6095d779c25304bcdada27924e7a7a752ba1577cdad9ae6b957a91be80c08"
+    },
+    {
+      "command": "python -B -X utf8 code/generate_m3_far_integer_data.py --check",
+      "exit_code": 0,
+      "generator_sha256": "e96fb3ab516645deef26f66387add13438003d77f7a300f7683f500d5a6b84b2"
+    }
+  ]
+}

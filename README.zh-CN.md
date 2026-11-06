@@ -10,7 +10,8 @@
 各有自己的审查包和验证记录。
 
 **状态（2026-11-06）：** 公开审查稿，研究工作主要由 AI 系统完成。
-两条路线均尚无完整人类专家审阅的记录，也均未完成全部解析论证的端到端 Lean 形式化。
+两条路线均尚无完整人类专家审阅记录。QRH 路线的全范围后续推导已由七项明确输入连接成
+Lean 定理，241 个模块的全新目录重建及对应依赖审计全部通过；传统路线的验证范围见下文。
 
 ## 成果总览
 
@@ -71,7 +72,7 @@ Lean 项目保留的历史名称 `LegendreK67` 不代表当前仍声称证明了
 
 OpenAI 的[Family 003 专项说明](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/003.md)明确列出了该 7/8 结果的形式化范围。
 我们尚未独立重建其完整证明依赖或运行上游 Comparator，因此在定理前提中继续显式保留 H1。
-上游 QRH 的形式化与本项目尚未完成的素数区间论证端到端形式化是两件不同的事。
+上游 QRH 的形式化与本项目的素数区间后续推导是两件不同的事；本项目的完整输入和构建状态见下文。
 
 此外，明确依赖 Chourasiya–Simonič 的 **v2** 密度结果，并将其作为预印本输入处理：
 推论 1、表 1 中编号 **16–27** 的行（即前 12 行），以及这些行规定的适用域。
@@ -94,31 +95,36 @@ n^6 < p < n^6 + 6n^5 < (n+1)^6。
 固定其他输入、指数和适用域后，CS 三列系数统一增大 **6%**，书面证明的全链仍能通过。
 这项敏感性检验不认证 CS 定理本身。
 
-**46 个 Lean 模块**已通过编译，其中包括全部 1259 个素数见证的实际 Lucas/Pratt 证明、
-精确区间归约、有理证书比较、部分解析引理及标量尾界。
-但当前最终装配定理的类型仍然是
+最终 Lean 定理 `sixth_powers_from_named_inputs` 已编译，完整类型为
 
 ```text
-CHLRows -> AnalyticSegmentInputs -> SixthPowerConclusion
+QRHSevenEighths -> CSv2 -> RosserZeroCount -> IntegratedExplicitFormula ->
+  FiniteRH3e12 -> CHJIIShortInterval -> CHLRows -> SixthPowerConclusion
 ```
 
-`AnalyticSegmentInputs` 中的三个局部解析结论，尚未在 Lean 中由 H1/H2 和列明文献输入推出。
-实际 ζ 显式公式与密度估计的论证、完整单元超越表达式的上界，仍需在 Lean 中连接起来。
-详见[形式化状态](routes/qrh/FORMALIZATION_STATUS.md)和
-[完整定理类型及公理审计](routes/qrh/audit/kernel_axioms.txt)。
+本项目的全部解析区间和数值预算已由实际证明提供，最终参数中不再含局部素数区间结论或证书正确性前提。
+证明覆盖原 94 个中段单元、60 个远段单元的全部点，以及整数下段和无限尾部。
+远段的新形式化改用梯形证书，原多项式证明保留；原稿 6% 系数灵敏度检验不自动成为新保守下段预算的形式化属性。
 
-发布包在提交 `58521b6` 上通过了
-[Linux 数值与 Lean 自动复核](https://github.com/bernkastel299792458/legendre-kth-powers/actions/runs/42153017737)。
-这验证的是明确列出的计算和部分形式化范围，不是该条件定理的端到端 Lean 证明。
+参见[可读的形式化补充稿](routes/qrh/paper/lean_formalization_addendum.md)、
+[最终定理源码](routes/qrh/lean/LegendreK6/FinalResult.lean)和
+[准确形式化范围](routes/qrh/FORMALIZATION_STATUS.md)。
+[241 模块干净重建](routes/qrh/audit/builds/final-20261106/lean_build_report.json)与
+[对应依赖审计](routes/qrh/audit/builds/final-20261106/final_dependency_report.json)均已通过，公理仅为 Lean 标准三项。
+这是相对于七项列明输入的完整后续推导，
+不表示重证了所有经典文献，也不能缩写成“只假设 QRH 和 CS”。
+
+早先提交 `58521b6` 的[Linux CI](https://github.com/bernkastel299792458/legendre-kth-powers/actions/runs/42153017737)
+保留为当时部分形式化范围的历史证据，不冒充新源码的构建记录。
 
 ## 阅读、复现与审查
 
 | 目的 | 传统路线 | QRH 路线 |
 |---|---|---|
-| 阅读论证 | [英文论文](routes/traditional/proof/manuscript.md) | [中文论文](routes/qrh/paper/manuscript.md) · [PDF](routes/qrh/paper/main.pdf) |
+| 阅读论证 | [英文论文](routes/traditional/proof/manuscript.md) | [原论文](routes/qrh/paper/manuscript.md) · [形式化补充稿](routes/qrh/paper/lean_formalization_addendum.md) |
 | 检查输入 | [论文第 3 节](routes/traditional/proof/manuscript.md) · [文献来源](routes/traditional/SOURCES.md) | [论文第 1 节](routes/qrh/paper/manuscript.md) · [BibTeX](routes/qrh/paper/references.bib) |
 | 复现计算 | [审查包复算说明](routes/traditional/proof/README.md#如何复核) | [复现说明](routes/qrh/REPRODUCING.md) |
-| 理解 Lean 范围 | [逻辑拼接的范围](routes/traditional/proof/README.md#lean-证明了什么) | [已完成部分与剩余义务](routes/qrh/FORMALIZATION_STATUS.md) |
+| 理解 Lean 范围 | [逻辑拼接的范围](routes/traditional/proof/README.md#lean-证明了什么) | [准确结论与验收证据](routes/qrh/FORMALIZATION_STATUS.md) |
 | 审查证据 | [清单](routes/traditional/proof/REVIEW_CHECKLIST.md) · [AI 审阅与答复](routes/traditional/review/) | [范围审阅](routes/qrh/audit/PUBLICATION_SCOPE_REVIEW.md) · [历史审阅](routes/qrh/audit/source_reviews/README.md) |
 
 **传统路线数值重放**，从仓库根目录运行：

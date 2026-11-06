@@ -11,8 +11,10 @@ different mathematical premises, separate review packages, and separate
 verification records.
 
 **Status — 2026-11-06:** public review drafts, produced largely by AI systems.
-Neither track has received a recorded complete human expert review, and
-neither has an end-to-end Lean formalization of its full analytic argument.
+Neither track has a recorded complete human expert review. The QRH track
+has completed its full downstream Lean proof from seven named inputs: all
+241 modules passed an isolated rebuild and the matching dependency audit. The
+traditional track retains the verification scope stated below.
 
 ## Results at a glance
 
@@ -83,8 +85,8 @@ investigate the resulting prime intervals between consecutive powers.
 OpenAI's [Family 003 documentation](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/003.md) specifies the scope of its
 7/8 formalization. We have not independently rebuilt its complete dependencies
 or run the upstream Comparator, so H1 remains explicit in our theorem statements.
-That upstream formalization is distinct from this project's incomplete
-end-to-end formalization of the prime-interval argument.
+That upstream formalization is distinct from this project's downstream
+prime-interval proof, whose exact inputs and build status are listed below.
 
 This track also explicitly assumes the
 Chourasiya–Simonič **v2** density result, treated as a preprint dependency:
@@ -111,34 +113,42 @@ other inputs, exponents, and domains fixed, uniformly increasing all three
 CS coefficient columns by **6%** still passes the written proof chain.
 That sensitivity check does not validate the CS theorem itself.
 
-**46 Lean modules** compile. They include actual Lucas/Pratt proofs of the
-1259 prime witnesses, exact range reductions, rational certificate checks,
-selected analytic lemmas, and the scalar tail bound. The current assembly
-theorem nevertheless has the type
+The final Lean theorem `sixth_powers_from_named_inputs` has compiled with type
 
 ```text
-CHLRows -> AnalyticSegmentInputs -> SixthPowerConclusion
+QRHSevenEighths -> CSv2 -> RosserZeroCount -> IntegratedExplicitFormula ->
+  FiniteRH3e12 -> CHJIIShortInterval -> CHLRows -> SixthPowerConclusion
 ```
 
-The three local analytic conclusions in `AnalyticSegmentInputs` have not yet
-been derived inside Lean from H1/H2 and the cited inputs. The actual zeta
-explicit-formula/density argument and the complete transcendental cell
-bounds still need to be connected. See the
-[formalization status](routes/qrh/FORMALIZATION_STATUS.md) and
-[full theorem types and axiom audit](routes/qrh/audit/kernel_axioms.txt).
+All project-specific analytic segments and numerical budgets are proved.
+There is no local prime-interval or certificate-correctness premise in this
+final type. The proof covers every point of the 94 middle and 60 far cells,
+plus the integer lower range and infinite tail. The far formal argument uses
+a new trapezoid certificate; the historical polynomial proof is preserved.
+The original 6% coefficient-sensitivity result is not automatically a property
+of the new conservative formal lower-range bound.
 
-The published package passed [Linux numerical and Lean CI](https://github.com/bernkastel299792458/legendre-kth-powers/actions/runs/42153017737)
-at commit `58521b6`. This verifies the stated computational and partial
-formalization scope, not an end-to-end proof of the conditional theorem.
+See the [readable formalization addendum](routes/qrh/paper/lean_formalization_addendum.md),
+[final theorem source](routes/qrh/lean/LegendreK6/FinalResult.lean), and
+[exact formalization status](routes/qrh/FORMALIZATION_STATUS.md).
+The [clean 241-module build](routes/qrh/audit/builds/final-20261106/lean_build_report.json)
+and [matching proof-dependency audit](routes/qrh/audit/builds/final-20261106/final_dependency_report.json)
+both passed, with only the standard Lean axioms. This is
+a complete downstream proof relative to all seven named inputs, not a
+re-proof of the auxiliary literature or a QRH/CS-only theorem.
+
+The earlier [Linux CI run](https://github.com/bernkastel299792458/legendre-kth-powers/actions/runs/42153017737)
+at `58521b6` remains historical evidence for its original partial scope.
+It is not presented as a build of these new sources.
 
 ## Read, reproduce, and review
 
 | Purpose | Traditional track | QRH track |
 |---|---|---|
-| Read the argument | [English manuscript](routes/traditional/proof/manuscript.md) | [Chinese manuscript](routes/qrh/paper/manuscript.md) · [PDF](routes/qrh/paper/main.pdf) |
+| Read the argument | [English manuscript](routes/traditional/proof/manuscript.md) | [Original manuscript](routes/qrh/paper/manuscript.md) · [Formal proof addendum](routes/qrh/paper/lean_formalization_addendum.md) |
 | Inspect dependencies | [Manuscript §3](routes/traditional/proof/manuscript.md) · [Sources](routes/traditional/SOURCES.md) | [Paper §1](routes/qrh/paper/manuscript.md) · [BibTeX](routes/qrh/paper/references.bib) |
 | Reproduce computations | [Review package](routes/traditional/proof/README.md#如何复核) | [Reproduction instructions](routes/qrh/REPRODUCING.md) |
-| Understand Lean coverage | [Assembly scope](routes/traditional/proof/README.md#lean-证明了什么) | [Completed parts and remaining obligations](routes/qrh/FORMALIZATION_STATUS.md) |
+| Understand Lean coverage | [Assembly scope](routes/traditional/proof/README.md#lean-证明了什么) | [Exact theorem and acceptance evidence](routes/qrh/FORMALIZATION_STATUS.md) |
 | Review the evidence | [Checklist](routes/traditional/proof/REVIEW_CHECKLIST.md) · [AI reviews and responses](routes/traditional/review/) | [Scope review](routes/qrh/audit/PUBLICATION_SCOPE_REVIEW.md) · [Historical reviews](routes/qrh/audit/source_reviews/README.md) |
 
 For the **traditional numerical replay**, run from the repository root:

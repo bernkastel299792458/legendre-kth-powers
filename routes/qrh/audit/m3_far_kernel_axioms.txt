@@ -1,0 +1,20 @@
+LegendreK6.M3Far.pilot_short_interval_from_inputs (HQ : LegendreK6.QRHSevenEighths) (HC : LegendreK6.CSv2)
+  (HR : LegendreK6.RosserZeroCount) (HF : LegendreK6.IntegratedExplicitFormula) (x : ℝ) (hx : 0 < x)
+  (hlo : 400 ≤ Real.log x) (hhi : Real.log x ≤ 1601 / 4) : LegendreK6.ShortInterval4 x
+LegendreK6.M3Far.completeBudget_le : LegendreK6.M3Far.completeBudget ≤ 225011 / 500000
+LegendreK6.M3Far.zeroBudget_le :
+  2 *
+      LegendreK6.trapezoidHeightBudget LegendreK6.M3Far.s LegendreK6.M3Far.rowNat 384 LegendreK6.M3Far.left
+        LegendreK6.M3Far.q LegendreK6.M3Far.node 125 ≤
+    22501 / 50000
+'LegendreK6.M3Far.pilot_short_interval_from_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.M3Far.completeBudget_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.M3Far.rationalLowRank20_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+def LegendreK6.farPrimePowerBudget : ℝ → ℝ → ℝ :=
+fun A C =>
+  32 / 31 * √(1 + LegendreK6.farEpsilon A) * (C + Real.log (1 + LegendreK6.farEpsilon A)) ^ 2 / (8 * Real.log 2) *
+    Real.exp (-A / 4)
+def LegendreK6.M3Far.height : Fin 125 → ℝ :=
+fun i => (796 + ↑↑i) / 8
+def LegendreK6.M3Far.sigmaLo : Fin 384 → ℝ :=
+fun j => (512 + ↑↑j) / 1024

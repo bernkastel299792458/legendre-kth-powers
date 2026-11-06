@@ -1,0 +1,7 @@
+PASS certify_lower_range_k6.py
+PASS certify_smooth_k6.py
+PASS certify_smooth_segment.py
+PASS certify_tail_cs.py
+Read-only replay: no summary written
+ALL_K6_MODULES_VERIFIED
+Conditional all-n coverage: true; uncovered intervals: []

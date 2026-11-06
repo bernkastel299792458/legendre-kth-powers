@@ -3,7 +3,7 @@
 # Official action inputs checked on 2026-11-06:
 # https://github.com/leanprover/lean-action/blob/fe408643ea7367d8c0404a8be3975bb145f5fb64/action.yml
 # All action revisions below are full commit SHAs resolved from their official repositories.
-# A green run verifies the stated computational/partial-formalization scope.
+# A green run verifies the stated computations and downstream conditional proof.
 # It does NOT certify an end-to-end theorem from QRH(7/8) and CS v2 alone.
 
 name: QRH route verification (current k6)
@@ -81,6 +81,12 @@ jobs:
         run: |
           set -euo pipefail
           python -B code/generate_lean_certificates.py --check | tee "$RUNNER_TEMP/k6-generator-check.log"
+          python -B code/generate_m2_pilot.py --all-blocks --check
+          python -B code/generate_m2_factor_bounds.py --check
+          python -B code/generate_m2_integer_data.py --check
+          python -B code/generate_m3_far.py --all-blocks --check
+          python -B code/generate_m3_far_factor_bounds.py --check
+          python -B code/generate_m3_far_integer_data.py --check
 
       - name: Confirm that the saved release files stayed unchanged
         run: |
@@ -112,9 +118,9 @@ jobs:
           retention-days: 30
 
   lean-modules:
-    name: All Lean modules and explicit-parameter audit (partial formalization)
+    name: Full downstream Lean proof and exact-input audit
     runs-on: ubuntu-24.04
-    timeout-minutes: 90
+    timeout-minutes: 180
     env:
       LEAN_NUM_THREADS: "2"
     defaults:
@@ -132,33 +138,48 @@ jobs:
         with:
           python-version: "3.12.10"
 
-      # The Lean action writes .lake/ and the driver replaces audit reports.
+      # Check the committed bytes before installing the read-only dependencies.
       # Check the committed snapshot first, while those bytes are still untouched.
       - name: Check frozen release bytes before installing/building Lean dependencies
         run: |
           set -euo pipefail
           python -B code/release_manifest.py --check | tee "$RUNNER_TEMP/k6-lean-manifest-before.log"
 
-      - name: Build the Lake library with its pinned toolchain and Mathlib revision
+      - name: Prepare the pinned Lean toolchain and Mathlib cache
         uses: leanprover/lean-action@fe408643ea7367d8c0404a8be3975bb145f5fb64 # v1
         with:
           lake-package-directory: routes/qrh/lean
           use-mathlib-cache: "true"
           use-github-cache: "true"
           auto-config: "false"
-          build: "true"
+          build: "false"
           test: "false"
           lint: "false"
           mk_all-check: "false"
 
-      # The library root intentionally omits the print-only Audit/CoreAudit files.
-      # This driver discovers every local .lean file (46 in the initial release),
-      # including both audits, verifies pinned dependency revisions, and recompiles
-      # each file with Lean. A successful lake build alone is not the full check.
+      - name: Provide swap for exact kernel arithmetic
+        run: |
+          set -euo pipefail
+          # Exact rational normalization has a recorded high-memory module.
+          # This file exists only on the disposable GitHub runner.
+          free -h
+          df -h "$RUNNER_TEMP"
+          sudo fallocate -l 8G "$RUNNER_TEMP/k6-kernel.swap"
+          sudo chmod 600 "$RUNNER_TEMP/k6-kernel.swap"
+          sudo mkswap "$RUNNER_TEMP/k6-kernel.swap"
+          sudo swapon "$RUNNER_TEMP/k6-kernel.swap"
+
+      # Compile every local module into a new output tree, including print-only
+      # audits. No development olean is on this build's search path.
       - name: Compile every present module and capture kernel axioms and theorem parameters
         run: |
           set -euo pipefail
-          python -B code/build_lean.py | tee "$RUNNER_TEMP/k6-lean-driver.log"
+          python -B code/build_lean.py --jobs 1 \
+            --build-root "$RUNNER_TEMP/k6-clean-lib" \
+            --report-root "$RUNNER_TEMP/k6-clean-audit" | tee "$RUNNER_TEMP/k6-lean-driver.log"
+          python -B code/run_dependency_audit.py \
+            --build-report "$RUNNER_TEMP/k6-clean-audit/lean_build_report.json" \
+            --output-dir "$RUNNER_TEMP/k6-clean-audit"
 
       - name: Check the audit scope and retain only fresh reports
         run: |
@@ -168,7 +189,8 @@ jobs:
           from pathlib import Path
           import shutil
 
-          report = json.loads(Path("audit/lean_build_report.json").read_text(encoding="utf-8"))
+          fresh = Path(os.environ["RUNNER_TEMP"]) / "k6-clean-audit"
+          report = json.loads((fresh / "lean_build_report.json").read_text(encoding="utf-8"))
           assert report["status"] == "ALL_PRESENT_LEAN_MODULES_COMPILED"
           assert report["end_to_end_H1_H2_formalization"] is False
           sources = {
@@ -178,20 +200,24 @@ jobs:
           rows = report["modules"]
           assert len(rows) == len(sources)
           assert {row["module"] for row in rows} == sources
-          assert all(row["exit_code"] == 0 for row in rows)
+          assert all(row["exit_code"] == 0 and row["status"] == "PASS" for row in rows)
+          assert all(row["olean_existed_before"] is False for row in rows)
           assert {"LegendreK6.Audit", "LegendreK6.CoreAudit"} <= sources
-          evidence = Path("audit/kernel_axioms.txt").read_text(encoding="utf-8")
-          assert "AnalyticSegmentInputs" in evidence
+          evidence = (fresh / "kernel_axioms.txt").read_text(encoding="utf-8")
+          assert "sixth_powers_from_named_inputs" in evidence
           assert "sorryAx" not in evidence and "Lean.ofReduceBool" not in evidence
+          dependency_report = json.loads((fresh / "final_dependency_report.json").read_text(encoding="utf-8"))
+          assert dependency_report["status"] == "FINAL_K6_DEPENDENCY_AUDIT_PASSED"
 
           target = Path(os.environ["RUNNER_TEMP"]) / "k6-current-lean-audit"
           target.mkdir(exist_ok=True)
-          for name in ("lean_build_report.json", "lean_build.log", "kernel_axioms.txt"):
-              shutil.copy2(Path("audit") / name, target / name)
+          for name in ("lean_build_report.json", "lean_build.log", "kernel_axioms.txt",
+                       "final_dependencies.txt", "final_dependency_report.json"):
+              shutil.copy2(fresh / name, target / name)
           with open(os.environ["GITHUB_STEP_SUMMARY"], "a", encoding="utf-8") as summary:
               summary.write(f"All {len(rows)} present Lean modules compiled and the explicit-parameter audit passed.\n\n")
-              summary.write("**End-to-end H1/H2 formalization: false.** The assembly theorem retains explicit local analytic segment inputs.\n")
-          print(f"ALL_{len(rows)}_PRESENT_MODULES_AUDITED; END_TO_END_H1_H2_FORMALIZATION=false")
+              summary.write("**Complete downstream k=6 derivation relative to seven named external inputs.** No local analytic-segment or numerical-budget conclusion is a final theorem parameter. The stronger QRH/CS-only scope remains distinct.\n")
+          print(f"ALL_{len(rows)}_PRESENT_MODULES_AUDITED; FINAL_NAMED_INPUT_DERIVATION_CHECKED")
           PY
 
       # Use RUNNER_TEMP, not committed audit files: if this run fails before the
@@ -204,6 +230,7 @@ jobs:
           path: |
             ${{ runner.temp }}/k6-lean-manifest-before.log
             ${{ runner.temp }}/k6-lean-driver.log
+            ${{ runner.temp }}/k6-clean-audit/
             ${{ runner.temp }}/k6-current-lean-audit/
           if-no-files-found: warn
           retention-days: 30

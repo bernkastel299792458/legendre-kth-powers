@@ -5,3 +5,4 @@ import LegendreK6.PrimeExtraction
 import LegendreK6.TailResult
 import LegendreK6.AssemblyWithTail
 import LegendreK6.M2PilotResult
+import LegendreK6.FinalCellCoverage
