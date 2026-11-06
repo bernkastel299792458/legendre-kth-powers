@@ -1,0 +1,16 @@
+k=70 bty_pub  base         S: max delta 0.8200 at L=5804.1, 0/2109 pieces >= 1 | H: max delta 0.8598 at L=9521.0, 0/1858 pieces >= 1
+k=70 bty_pub  Z1=4.95      S: max delta 0.9271 at L=5210.1, 0/2109 pieces >= 1 | H: unaffected
+k=70 bty_pub  Z1=4.98      S: max delta 0.9933 at L=5103.1, 0/2109 pieces >= 1 | H: unaffected
+k=70 bty_pub  Z1=4.99      S: max delta 1.0083 at L=5103.1, 7/2109 pieces >= 1 | H: unaffected
+k=70 bty_pub  Z1=5.0       S: max delta 1.0115 at L=5103.1, 8/2109 pieces >= 1 | H: unaffected
+k=70 bty_pub  Z1=5.1       S: max delta 1.0882 at L=4611.1, 120/2109 pieces >= 1 | H: unaffected
+k=70 bty_pub  Z1=5.558691  S: max delta 2.0645 at L=3327.1, 669/2109 pieces >= 1 | H: unaffected
+k=70 bty_pub  C=1.05       S: max delta 0.8610 at L=5804.1, 0/2109 pieces >= 1 | H: max delta 0.9016 at L=9521.0, 0/1858 pieces >= 1
+k=70 bty_pub  C=1.1        S: max delta 0.9020 at L=5804.1, 0/2109 pieces >= 1 | H: max delta 0.9435 at L=9521.0, 0/1858 pieces >= 1
+k=70 bty_pub  C=1.2        S: max delta 0.9840 at L=5804.1, 0/2109 pieces >= 1 | H: max delta 1.0273 at L=9521.0, 2/1858 pieces >= 1
+k=70 bty_pub  JY=1.5       S: max delta 0.8200 at L=5804.1, 0/2109 pieces >= 1 | H: max delta 0.8598 at L=9521.0, 0/1858 pieces >= 1
+k=74 pub      base         S: max delta 0.9330 at L=3523.7, 0/2539 pieces >= 1 | H: max delta 0.8849 at L=7343.0, 0/1911 pieces >= 1
+k=74 pub      C=1.05       S: max delta 0.9797 at L=3523.7, 0/2539 pieces >= 1 | H: max delta 0.9276 at L=7343.0, 0/1911 pieces >= 1
+k=74 pub      C=1.1        S: max delta 1.0263 at L=3523.7, 724/2539 pieces >= 1 | H: max delta 0.9703 at L=7343.0, 0/1911 pieces >= 1
+k=74 pub      C=1.2        S: max delta 1.1196 at L=3523.7, 1251/2539 pieces >= 1 | H: max delta 1.0558 at L=7343.0, 3/1911 pieces >= 1
+k=74 pub      JY=1.5       S: max delta 0.9631 at L=2341.2, 0/2539 pieces >= 1 | H: max delta 0.8849 at L=7343.0, 0/1911 pieces >= 1

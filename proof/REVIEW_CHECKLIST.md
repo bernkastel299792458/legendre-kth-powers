@@ -85,6 +85,7 @@ Where things are:
 | C5 | Run `python code/verify_all.py`; compare with `certificates/verify_all_output.txt` (hashes, contiguity, δ < 1) | |
 | C6 | Independent reimplementation (other language or library) | |
 | C7 | Sanity: the method must fail for small k (`certificates/sanity_small_k.txt`); try a smaller k with `scan_min_k.py` | |
+| C9 | Sensitivity (manuscript §11): `python code/sensitivity.py`; compare with `certificates/sensitivity_output.txt` | |
 
 ## D. Lean
 

@@ -1,5 +1,8 @@
 # Conversation record: Legendre's conjecture and primes between consecutive k-th powers (k ≥ 67)
 
+> **Note (v4):** the k ≥ 67 claim recorded in this transcript was later withdrawn, because the proof of the constant 19.62 it relied on contains an error. The interim results are k ≥ 70 / k ≥ 74; `proof/manuscript.md` is authoritative.
+
+
 *Automatically converted from the session record exported from the Claude desktop app (`export_to_md.py`). User messages and the assistant's text answers are kept; tool calls are kept only as one-line summaries, and tool outputs and internal reasoning are not kept. The full original record is in the exported zip.*
 
 *English translation of `conversation_zh.md` (AI-assisted translation; the Chinese original is authoritative).*

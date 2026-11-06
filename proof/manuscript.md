@@ -2,7 +2,7 @@
 
 **A computer-assisted argument with explicitly listed inputs — interim report for review (v4, 2026-11-06)**
 
-*Prepared in the AI4Math / legendre_k67 project; drafted with the assistance of an AI system (Claude).*
+*Research, proofs, code and text: Claude (Anthropic, Claude Opus 5.5), working almost autonomously at the direction of the project owner (GitHub: bernkastel299792458). External reviews: GPT (OpenAI) and a separate Claude instance. The project owner has not independently verified the mathematics. See "Authorship and AI involvement" below.*
 
 **Status: not peer-reviewed.** Every statement below is meant to be checked.
 
@@ -33,6 +33,42 @@ For every integer k ≥ 70 and every n ≥ 1, the interval (n^k, (n+1)^k) contai
 **Dependencies.**
 - **k ≥ 70** uses one non-refereed input: the classical zero-free region with constant **4.896** (Bellotti–Trudgian–Yang, arXiv:2603.21490). Our audit verified its proof after correcting 15 non-fatal issues; it depends only on published results.
 - **k ≥ 74** uses only refereed results: Mossinghoff–Trudgian–Yang's 5.558691 and Yang's 21.233, among others.
+- Both theorems also rest on the new arguments here (Props. H and S, Lemmas 4–6 and T). These have been examined by two AI reviews, but not yet by a human expert.
+
+**Robustness.** Theorem 1 still holds if 4.896 is weakened to 4.98, or if every C in Bellotti's table is multiplied by 1.1 (§11).
+
+**Contributions.**
+1. The exponents 70 and 74; the best published value is 86.
+2. The ingredients (H), (S), the low-height Bellotti rows and (T), and Lemma 4 (the smooth explicit formula for C¹ weights with absolutely continuous derivative).
+3. A check of every input against its source (§3), including four inputs as quoted by Lee (§3.2).
+4. An audit of the zero-free-region constants 4.896 and 19.62 (`zfr_audit/`; §1, Remark 1).
+5. Arb certificates with a one-command checker, and a Lean formalisation of the assembly.
+
+---
+
+## Authorship and AI involvement
+
+This work was produced almost entirely by AI systems. We describe the division of labour as precisely as we can, so that readers can weigh the results accordingly.
+
+- **Project owner (human).**
+  - Posed the problem: primes between consecutive k-th powers *for every n*.
+  - Suggested the overall strategy: an explicit bound for large n, closed by computation for small n.
+  - Chose the target k = 67, which Claude had identified from Lee's tables as the likely limit of the method.
+  - Set the quality requirements: work from the original papers, rigorous numerics, Lean, a review archive.
+  - Noticed that the conclusion hinged on the constants 19.62 and 4.896, and asked for them to be audited independently.
+  - Obtained the external reviews, and decided which results to state.
+  - **Did not derive, implement or check the mathematics.**
+- **Claude** (Anthropic, Claude Opus 5.5, via Claude Code).
+  - Literature search and reading; all derivations; all code, computations and certificates; the Lean formalisation; this manuscript and the other documents.
+  - Separate Claude sessions carried out the audit in `zfr_audit/` and translated the research conversation.
+- **External AI reviews of v2** (`../review/`).
+  - GPT (OpenAI) wrote one review, including an independent rigorous re-implementation of δ_H.
+  - A separate Claude instance wrote another review with its own scripts.
+
+**Known failure modes.** Misquoted constants, inputs used outside their stated range, and missed hypotheses were the most common errors during the project.
+- Each error found is recorded in `../LOG.md`, Appendix C and `../review/response_to_reviews_2026-11-06.md`.
+- The k = 67 claim of v1–v3 was stated before its key input (19.62) had been audited, and was withdrawn in v4.
+- The full research conversation is in `conversation/`. It contains statements that were later corrected; this manuscript is authoritative.
 
 ---
 
@@ -48,6 +84,7 @@ For every integer k ≥ 70 and every n ≥ 1, the interval (n^k, (n+1)^k) contai
    - With this correction, the main-term coefficient reaches about 3.53 on log t ∈ [64, 160], whereas the final step tolerates at most about 3.446.
    - The repaired method gives only about 19.90–20.08 (grid estimates).
    - With a uniform 19.90 or 20.08, our method does not close for k = 67 (δ ≈ 1.02 and 1.14 at L ≈ 4200).
+   - This is our reading of the thesis. It has not been confirmed by the author, and we would welcome a correction.
 
    The k = 67 certificates are kept in `certificates/withdrawn_k67/` as *conditional* certificates (valid if 19.62 holds).
 2. **Minimality.** 70 and 74 are the smallest exponents that *this method* certifies with (I5-A) and (I5-B) respectively. For k = 69 and k = 73, at least one rigorously evaluated small L-interval has δ ≥ 1 (§11). This does not show that the statements fail for those k.
@@ -313,7 +350,29 @@ Lemmas 1–2 then give the theorems. In Lean, these are `main_k70` and `main_k74
 
 **Margins.** The largest certified δ is 0.82 (S) and 0.86 (H) for k₀ = 70, and 0.93 (S) and 0.88 (H) for k₀ = 74.
 
-**Sensitivity to Bellotti's table.** The S-range depends on Bellotti's rows e^{29}–e^{80}. For the earlier k = 67 chain, the Claude review found that C × 1.05 broke the bound. Comparing the printed JNT table with arXiv v2 therefore remains important for both theorems.
+**Sensitivity to the inputs** (`code/sensitivity.py`, output in `certificates/sensitivity_output.txt`).
+- **Method.** Every archived certificate piece is re-evaluated in Arb, with the same endpoints, after changing one input. For S pieces, both M = 2 and M = 3 are tried. A failing piece might still be repaired by re-optimising the chain, so the tolerances found are lower bounds for what the method tolerates.
+- **Why Z₁ affects only S.** The classical region is wider than the Littlewood region only where 1/(Z₁ log t) > log log t/(Z₂ log t), that is, for log t < exp(Z₂/Z₁). For Z₁ = 4.896 this means log t < 76.5, and the bound is smaller for larger Z₁. The H-range has log 2T > 137, so H is unaffected by Z₁.
+
+| Change | k₀ = 70: max δ (S / H) | k₀ = 74: max δ (S / H) |
+|---|---|---|
+| none | 0.820 / 0.860 | 0.933 / 0.885 |
+| Z₁ = 4.95 | 0.927 / — | |
+| Z₁ = 4.98 (+1.7%) | **0.993** / — | |
+| Z₁ = 4.99 | 1.008 (fails) / — | |
+| Z₁ = 5.1 | 1.088 (fails) / — | |
+| Z₁ = 5.558691 (MTY) | 2.06 (fails) / — | (this is (I5-B)) |
+| Bellotti C × 1.05 | 0.861 / 0.902 | 0.980 / 0.928 |
+| Bellotti C × 1.1 | **0.902 / 0.944** | 1.026 (fails) / 0.970 |
+| Bellotti C × 1.2 | 0.984 / 1.027 (fails) | 1.120 (fails) / 1.056 (fails) |
+| Johnston–Yang 17.418, 2.231 × 1.5 | unchanged (E_K < 10⁻³⁸) | unchanged |
+
+**Reading of the table.**
+- Theorem 1 tolerates a classical constant up to at least 4.98, 1.7% weaker than 4.896.
+  - Separately, the audit found that BTY's final inequality holds with the corrected constants. Its relative margin is 0.05% over the whole range log t ≤ 76.47, and 0.9% for log t ≤ 55.01.
+  - So a small numerical error in 4.896 would not affect Theorem 1. Only a substantive flaw in BTY's argument would, and in that case Theorem 2 still applies.
+- **Theorem 2 is more sensitive to Bellotti's table than Theorem 1.** "Conservative" refers to the refereed status of its inputs, not to its numerical margin.
+- For the earlier k = 67 chain, the Claude review found that C × 1.05 already broke the bound. Comparing the printed JNT table with arXiv v2 therefore remains important for both theorems.
 
 ## 12. Items for reviewers
 
@@ -440,13 +499,16 @@ Code bugs found during development are listed in `../LOG.md`.
 - C. Bellotti, P.-J. Wong, *Improved estimates for the argument and zero-counting function of the Riemann zeta-function*, Math. Comp. (2025); arXiv:2412.15470.
 - S. Broadbent, H. Kadiri, A. Lumley, N. Ng, K. Wilk, *Sharper bounds for the Chebyshev function θ(x)*, Math. Comp. 90 (2021) 2281–2315; arXiv:2002.11068.
 - M. Chamberland, A. Straub, *Weakening the Legendre Conjecture*, arXiv:2602.22502 (2026).
+- M. Cully-Hugill, *Primes between consecutive powers*, J. Number Theory 247 (2023) 100–117; arXiv:2107.14468.
 - M. Cully-Hugill, D. R. Johnston, *On the error term in the explicit formula of Riemann–von Mangoldt* I, Int. J. Number Theory 19 (2023); II, Funct. Approx. Comment. Math. 73 (2025) 223–242; arXiv:2111.10001, arXiv:2402.04272.
 - M. Cully-Hugill, E. S. Lee, *Explicit interval estimates for prime numbers*, Math. Comp. 91 (2022) 1955–1970; Corrigendum, Math. Comp. 93 (2024) 1019–1025; arXiv:2103.05986v3.
+- A. W. Dudek, *An explicit result for primes between cubes*, Funct. Approx. Comment. Math. 55 (2016) 177–197.
 - G. A. Hiary, D. Patel, A. Yang, *An improved explicit estimate for ζ(1/2+it)*, J. Number Theory 256 (2024) 195–217; arXiv:2207.02366.
 - A. E. Ingham, *The Distribution of Prime Numbers*, Cambridge (1932).
 - D. R. Johnston, A. Yang, *Some explicit estimates for the error term in the prime number theorem*, J. Math. Anal. Appl. 527 (2023) 127460; arXiv:2204.01980.
 - H. Kadiri, A. Lumley, N. Ng, *Explicit zero density for the Riemann zeta function*, J. Math. Anal. Appl. 465 (2018) 22–46; arXiv:2101.12263.
 - E. S. Lee, *Minimal zero-free regions for results on primes between consecutive perfect kth powers*, Acta Arith. 225 (2026) 149–162, doi:10.4064/aa260304-20-7; arXiv:2602.14340.
+- C. Mattner, *Prime numbers in short intervals*, BSc (Honours) thesis, Australian National University (2017).
 - M. J. Mossinghoff, T. S. Trudgian, A. Yang, *Explicit zero-free regions for the Riemann zeta-function*, Res. Number Theory 10 (2024) 11; arXiv:2212.06867.
 - OpenAI, *The Quasi-Riemann Hypothesis: A Zero-Free Half-Plane Re(s) > 7/8*, OpenAI Math Release preprint (dated 30 Sep 2026), github.com/openai/math.
 - D. Platt, T. Trudgian, *The Riemann hypothesis is true up to 3·10^12*, Bull. London Math. Soc. 53 (2021) 792–797; arXiv:2004.09765.
