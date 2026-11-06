@@ -27,3 +27,28 @@ import LegendreK6
 #check LegendreK6.sixth_powers_of_segment_inputs
 #print LegendreK6.AnalyticSegmentInputs
 #print LegendreK6.CHLRows
+
+/-! Milestone 1: inspect actual tail dependencies and the remaining finite inputs. -/
+#print axioms LegendreK6.zetaMultiplicity_pos
+#print axioms LegendreK6.zetaMultiplicity_conj
+#print axioms LegendreK6.riemannZeta_ne_zero_real_strip
+#print axioms LegendreK6.sum_allZetaZeros_eq_twice
+#print axioms LegendreK6.weightedNonprime_le_manuscript_budget
+#print axioms LegendreK6.prime_of_theta_sub_gt_log
+#print axioms LegendreK6.norm_cpow_sub_div_le
+#print axioms LegendreK6.finite_exp_layer_bound
+#print axioms LegendreK6.cs_tail_density
+#print axioms LegendreK6.totalZeroCount_le_mul_log
+#print axioms LegendreK6.tail_positive_zero_sum_bound
+#print axioms LegendreK6.tail_truncated_zero_bound
+#print axioms LegendreK6.tail_short_interval_from_inputs
+#print axioms LegendreK6.sixth_powers_of_finite_segment_inputs
+#check LegendreK6.riemannZeta_ne_zero_real_strip
+#check LegendreK6.tail_truncated_zero_bound
+#check LegendreK6.tail_short_interval_from_inputs
+#check LegendreK6.sixth_powers_of_finite_segment_inputs
+#print LegendreK6.FiniteAnalyticSegmentInputs
+#print LegendreK6.QRHSevenEighths
+#print LegendreK6.CSv2
+#print LegendreK6.RosserZeroCount
+#print LegendreK6.CHJIIShortInterval

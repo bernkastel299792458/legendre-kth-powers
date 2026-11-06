@@ -40,6 +40,8 @@ or an all-n result for k = 3, 4, or 5.
 - [Readable manuscript](paper/manuscript.md), [LaTeX source](paper/main.tex),
   [BibTeX](paper/references.bib)
 - [Exact formalization scope and open obligations](FORMALIZATION_STATUS.md)
+- [Three-milestone implementation plan](FORMALIZATION_PLAN.md) and
+  [current implementation log](audit/formalization_progress_2026-11-06.md)
 - [Reproduction instructions](REPRODUCING.md)
 - [AI use and review disclosure](AI_USE.md)
 - [Four-module numerical replay](results/k6_verification_summary.json)
@@ -56,7 +58,7 @@ or an all-n result for k = 3, 4, or 5.
 | Integer lower range | 1 <= n <= 1242317999994 | 1259 witnesses + 12 corrected CHL rows |
 | New real-variable segment | 167 <= log x <= 400 | 94 Arb-certified closed cells |
 | Inherited real-variable segment | 400 <= log x <= 700 | 60 Arb-certified closed cells |
-| Infinite real-variable tail | log x >= 700 | Explicit six-term bound and analytic monotonicity |
+| Infinite real-variable tail | log x >= 700 | Complete Lean derivation from QRH, CS, Rosser, and CHJII inputs |
 
 The new segment has a worst certified upper bound
 `0.939735996783828324763044 < 1`, leaving at least 6.0264% of its normalized
@@ -71,19 +73,26 @@ The checked source includes actual Lucas/Pratt proofs of the 1259 primes
 (5349 recursive nodes), exact lower-range thresholds and CHL deductions,
 rational certificate bounds and real-parameter cell coverage, selected
 analytic identities, weighted von Mangoldt prime extraction, and the
-six-term tail bound for every L >= 700.
+six-term tail bound for every L >= 700. The infinite tail is now connected
+to the actual zeta zeros, their multiplicities, the actual Chebyshev functions,
+and a strictly interior prime. Its theorem is `tail_short_interval_from_inputs`.
 
 The current final assembly theorem has the explicit type
 
 ```text
-CHLRows -> AnalyticSegmentInputs -> SixthPowerConclusion
+QRHSevenEighths -> CSv2 -> RosserZeroCount -> CHJIIShortInterval ->
+  CHLRows -> FiniteAnalyticSegmentInputs -> SixthPowerConclusion
 ```
 
-`AnalyticSegmentInputs` contains the three still-unformalized local analytic
-conclusions. In particular, the complete zeta explicit-formula/density
-argument and the 94/60-cell transcendental enclosures have not yet been
-connected inside Lean. The rational-data checks do not silently certify the
-Arb computation. See [the scope document](FORMALIZATION_STATUS.md).
+`FiniteAnalyticSegmentInputs` contains the two still-unformalized finite-range
+conclusions. The smoothed explicit-formula arguments and the complete
+94/60-cell transcendental enclosures remain unfinished. Rational-data checks
+do not silently certify the Arb computation. The old three-field assembly
+is retained as a general lemma. See [the scope document](FORMALIZATION_STATUS.md).
+
+第一里程碑已把无限尾部从实际 ζ 零点接到严格开区间内的素数；当前总定理
+仍保留中段与远段两个局部结论前提，尚不是全量 k=6 形式化。论文 PDF 与
+历史审阅保留初版状态，后续进展以形式化状态页和实际构建记录为准。
 
 ## Reproduce
 

@@ -1,0 +1,243 @@
+Actual strict prime-interval predicate occurs in the tail theorem.
+LegendreK6.CHJIIShortInterval
+LegendreK6.CHJIIShortInterval._proof_1
+LegendreK6.CHJIIShortInterval._proof_2
+LegendreK6.CHJIIShortInterval._proof_3
+LegendreK6.CHJIIShortInterval._proof_4
+LegendreK6.CHJIIShortInterval._proof_5
+LegendreK6.CHJIIShortInterval._proof_6
+LegendreK6.CSv2
+LegendreK6.CSv2._proof_1
+LegendreK6.CSv2._proof_2
+LegendreK6.CSv2._proof_3
+LegendreK6.CSv2._proof_4
+LegendreK6.NontrivialZero
+LegendreK6.PrimeInOpenInterval
+LegendreK6.QRHSevenEighths
+LegendreK6.QRHSevenEighths._proof_1
+LegendreK6.QRHSevenEighths._proof_2
+LegendreK6.RosserZeroCount
+LegendreK6.RosserZeroCount._proof_1
+LegendreK6.RosserZeroCount._proof_2
+LegendreK6.RosserZeroCount._proof_3
+LegendreK6.RosserZeroCount._proof_4
+LegendreK6.RosserZeroCount._proof_5
+LegendreK6.RosserZeroCount._proof_6
+LegendreK6.RosserZeroCount._proof_7
+LegendreK6.ShortInterval4
+LegendreK6.ShortInterval4._proof_1
+LegendreK6.ShortInterval4._proof_2
+LegendreK6.affine_power_exp_antitone
+LegendreK6.allZetaZeros
+LegendreK6.allZetaZeros_mono
+LegendreK6.allZetaZeros_partition
+LegendreK6.allZetaZeros_partition._simp_1_1
+LegendreK6.allZetaZeros_partition._simp_1_4
+LegendreK6.csB1
+LegendreK6.csB2
+LegendreK6.csB3
+LegendreK6.csExponent
+LegendreK6.csExponent._proof_1
+LegendreK6.csExponent._proof_2
+LegendreK6.csLogExponent
+LegendreK6.csLogExponent._proof_1
+LegendreK6.cs_density_exponent_bound
+LegendreK6.cs_log_exponent_bound
+LegendreK6.cs_log_exponent_eq
+LegendreK6.cs_tail_constants
+LegendreK6.cs_tail_density
+LegendreK6.cs_tail_row_exists
+LegendreK6.densityZeroCount
+LegendreK6.density_exp_product
+LegendreK6.exact_sigma_weight
+LegendreK6.exp_le_base_add_layer
+LegendreK6.finiteLayerCount
+LegendreK6.finiteLayerCount_eq_cast_sum_filter
+LegendreK6.finite_exp_layer_bound
+LegendreK6.integral_cs_tail_envelope_le
+LegendreK6.integral_two_density_exponentials
+LegendreK6.intervalIntegrable_exp_layer
+LegendreK6.intervalIntegrable_finite_exp_layer
+LegendreK6.log_two_bounds
+LegendreK6.mem_allZetaZeros
+LegendreK6.mem_allZetaZeros._simp_1
+LegendreK6.mem_positiveZetaZeros
+LegendreK6.mem_positiveZetaZeros._simp_1
+LegendreK6.negativeZetaZeros
+LegendreK6.negativeZetaZeros_eq_conj_image
+LegendreK6.negativeZetaZeros_eq_conj_image._simp_1_2
+LegendreK6.negativeZetaZeros_eq_conj_image._simp_1_3
+LegendreK6.norm_cpow_sub_div_le
+LegendreK6.norm_cpow_sub_div_le._simp_1_1
+LegendreK6.norm_sum_cpow_sub_div_le
+LegendreK6.positiveZetaZeroSet
+LegendreK6.positiveZetaZeroSet_finite
+LegendreK6.positiveZetaZeros
+LegendreK6.positive_zero_exp_bound
+LegendreK6.positive_zero_exp_layer
+LegendreK6.prime_of_theta_sub_gt_log
+LegendreK6.psi_sub_lower_of_complex_residual
+LegendreK6.riemannZeta_ne_zero_real_strip
+LegendreK6.rosserCount
+LegendreK6.rosserZeroSet
+LegendreK6.rosserZeroSet_finite
+LegendreK6.rosserZeroSet_finite._simp_1_1
+LegendreK6.rosserZeros
+LegendreK6.sum_allZetaZeros_conj_invariant
+LegendreK6.sum_allZetaZeros_eq_twice
+LegendreK6.sum_allZetaZeros_eq_twice_of_nonvanishing
+LegendreK6.tailBound
+LegendreK6.tailBound._proof_1
+LegendreK6.tailBound._proof_2
+LegendreK6.tailBound._proof_3
+LegendreK6.tailBound._proof_4
+LegendreK6.tailBound._proof_5
+LegendreK6.tailBound._proof_6
+LegendreK6.tailBound._proof_7
+LegendreK6.tailBound_antitone
+LegendreK6.tailBound_eq_decay
+LegendreK6.tailDecayExpression
+LegendreK6.tailDecayExpression._proof_1
+LegendreK6.tailDecayExpression._proof_10
+LegendreK6.tailDecayExpression._proof_11
+LegendreK6.tailDecayExpression._proof_12
+LegendreK6.tailDecayExpression._proof_13
+LegendreK6.tailDecayExpression._proof_2
+LegendreK6.tailDecayExpression._proof_3
+LegendreK6.tailDecayExpression._proof_4
+LegendreK6.tailDecayExpression._proof_5
+LegendreK6.tailDecayExpression._proof_6
+LegendreK6.tailDecayExpression._proof_7
+LegendreK6.tailDecayExpression._proof_8
+LegendreK6.tailDecayExpression._proof_9
+LegendreK6.tailH
+LegendreK6.tailH._proof_1
+LegendreK6.tailH._proof_2
+LegendreK6.tailH_eq_rpow
+LegendreK6.tailH_pos
+LegendreK6.tailHeight
+LegendreK6.tailHeight._proof_1
+LegendreK6.tailLambda
+LegendreK6.tailLambda._proof_1
+LegendreK6.tailLambda._proof_2
+LegendreK6.tailLambda._proof_3
+LegendreK6.tailT
+LegendreK6.tailT._proof_1
+LegendreK6.tailT._proof_2
+LegendreK6.tailT_pos
+LegendreK6.tailU
+LegendreK6.tailU._proof_1
+LegendreK6.tailU._proof_2
+LegendreK6.tailU._proof_3
+LegendreK6.tailX
+LegendreK6.tailX_pos
+LegendreK6.tailY
+LegendreK6.tailY_pos
+LegendreK6.tailZeroBound
+LegendreK6.tailZeroBound._proof_1
+LegendreK6.tailZeroBound._proof_10
+LegendreK6.tailZeroBound._proof_2
+LegendreK6.tailZeroBound._proof_3
+LegendreK6.tailZeroBound._proof_4
+LegendreK6.tailZeroBound._proof_5
+LegendreK6.tailZeroBound._proof_6
+LegendreK6.tailZeroBound._proof_7
+LegendreK6.tailZeroBound._proof_8
+LegendreK6.tailZeroBound._proof_9
+LegendreK6.tail_H_le_X
+LegendreK6.tail_T_ge_RH
+LegendreK6.tail_T_gt_51
+LegendreK6.tail_T_lt_sqrt_limit
+LegendreK6.tail_T_lt_truncation_limit
+LegendreK6.tail_U_gt_one
+LegendreK6.tail_X_ge_one
+LegendreK6.tail_X_lt_Y
+LegendreK6.tail_Y_ge_one
+LegendreK6.tail_Y_le_two_X
+LegendreK6.tail_at_700
+LegendreK6.tail_bound_all
+LegendreK6.tail_decay_antitone
+LegendreK6.tail_endpoint_error_le
+LegendreK6.tail_endpoint_scaling
+LegendreK6.tail_height_ge_RH
+LegendreK6.tail_lambda_eq_height
+LegendreK6.tail_lambda_pos
+LegendreK6.tail_log_X
+LegendreK6.tail_log_Y_le
+LegendreK6.tail_log_height
+LegendreK6.tail_log_sq_lt_T
+LegendreK6.tail_positive_zero_sum_bound
+LegendreK6.tail_prime_power_error_le
+LegendreK6.tail_prime_power_scaling
+LegendreK6.tail_ratio_antitone
+LegendreK6.tail_short_interval_exp
+LegendreK6.tail_short_interval_from_inputs
+LegendreK6.tail_sqrt_X
+LegendreK6.tail_sqrt_Y_le
+LegendreK6.tail_truncated_zero_bound
+LegendreK6.tail_truncation_error_le
+LegendreK6.tail_truncation_scaling
+LegendreK6.theta_sub_le_log_of_no_prime
+LegendreK6.totalZeroCount
+LegendreK6.totalZeroCount_le_mul_log
+LegendreK6.totalZeroCount_le_rosserCount
+LegendreK6.truncatedZeroIncrement
+LegendreK6.zeroHeightZetaZeros
+LegendreK6.zeroHeightZetaZeros_eq_empty_of_nonvanishing
+LegendreK6.zetaMultiplicity
+LegendreK6.zetaMultiplicity_conj
+LegendreK6.zetaZeroRectangle
+LegendreK6.zetaZeroRectangle_finite
+LegendreK6.zetaZeroRectangle_finite._simp_1_1
+LegendreK6.zeta_finiteLayerCount_eq
+LegendreK6.zeta_order_ne_top
+_private.LegendreK6.ZetaZeros.0.LegendreK6.analyticAt_conjugate
+_private.LegendreK6.ZetaZeros.0.LegendreK6.completedZeta₀_re_integral
+_private.LegendreK6.ZetaZeros.0.LegendreK6.completedZeta₀_re_le_twice_two
+_private.LegendreK6.ZetaZeros.0.LegendreK6.completedZeta₀_two_value
+_private.LegendreK6.ZetaZeros.0.LegendreK6.evenKernel_sub_one_nonneg
+_private.LegendreK6.ZetaZeros.0.LegendreK6.zetaModifiedKernel
+_private.LegendreK6.ZetaZeros.0.LegendreK6.zetaModifiedKernel_integrable
+_private.LegendreK6.ZetaZeros.0.LegendreK6.zetaModifiedKernel_nonneg
+_private.LegendreK6.ZetaZeros.0.LegendreK6.zetaModifiedKernel_nonneg._simp_1_2
+_private.LegendreK6.ZetaZeros.0.LegendreK6.zetaModifiedKernel_nonneg._simp_1_3
+_private.LegendreK6.ZetaZeros.0.LegendreK6.zetaModifiedKernel_real
+_private.LegendreK6.ZetaZeros.0.LegendreK6.zetaRealKernelPower
+_private.LegendreK6.ZetaZeros.0.LegendreK6.zetaRealKernelPower._proof_1
+_private.LegendreK6.ZetaZeros.0.LegendreK6.zetaRealKernelPower.eq_1
+_private.LegendreK6.ZetaZeros.0.LegendreK6.zetaRealKernelPower_coe
+_private.LegendreK6.ZetaZeros.0.LegendreK6.zetaRealKernelPower_integrable
+_private.LegendreK6.ZetaZeros.0.LegendreK6.zetaRealKernelPower_le
+MILESTONE1_REQUIRED_PROOF_DEPENDENCIES_PRESENT
+LegendreK6.tail_short_interval_from_inputs (HQ : LegendreK6.QRHSevenEighths) (HC : LegendreK6.CSv2)
+  (HR : LegendreK6.RosserZeroCount) (HJ : LegendreK6.CHJIIShortInterval) (x : ℝ) (hx : 0 < x)
+  (hlog : 700 ≤ Real.log x) : LegendreK6.ShortInterval4 x
+'LegendreK6.tail_short_interval_from_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+def LegendreK6.QRHSevenEighths : Prop :=
+∀ (ρ : LegendreK6.NontrivialZero), (↑ρ).re ≤ 7 / 8
+def LegendreK6.CSv2 : Prop :=
+∀ (i : Fin 12) (σ T : ℝ),
+  (16 + ↑↑i) / 32 ≤ σ →
+    σ ≤ (17 + ↑↑i) / 32 →
+      3000000000000 ≤ T →
+        ↑(LegendreK6.densityZeroCount σ T) ≤
+          LegendreK6.csB1 i * T ^ LegendreK6.csExponent σ * Real.log T ^ LegendreK6.csLogExponent σ +
+              LegendreK6.csB2 i * Real.log T ^ 2 +
+            LegendreK6.csB3 i * Real.log T
+def LegendreK6.RosserZeroCount : Prop :=
+∀ (T : ℝ),
+  2 ≤ T →
+    |↑(LegendreK6.rosserCount T) - (T / (2 * Real.pi) * Real.log (T / (2 * Real.pi)) - T / (2 * Real.pi) + 7 / 8)| ≤
+      137 / 1000 * Real.log T + 443 / 1000 * Real.log (Real.log T) + 397 / 250
+def LegendreK6.CHJIIShortInterval : Prop :=
+∀ (x h T : ℝ),
+  0 < x →
+    40 ≤ Real.log x →
+      0 ≤ h →
+        max 51 (Real.log x ^ 2) < T →
+          T < (√x - 2) / 4 →
+            ∃ Tstar,
+              T ≤ Tstar ∧
+                Tstar ≤ 2 * T ∧
+                  ‖↑(Chebyshev.psi (x + h) - Chebyshev.psi x - h) + LegendreK6.truncatedZeroIncrement x (x + h) Tstar‖ ≤
+                    1447 / 500 / T * ((x + h) * Real.log (x + h) + x * Real.log x)

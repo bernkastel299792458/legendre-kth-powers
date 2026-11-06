@@ -61,7 +61,21 @@ outputs are modified by this driver. The optional PowerShell helper
 
 A successful build means the present lemmas are kernel checked. It does not
 prove the missing analytic bridges. Read [FORMALIZATION_STATUS.md](FORMALIZATION_STATUS.md)
-and the full type of `sixth_powers_of_segment_inputs` before interpreting it.
+and the full types of `tail_short_interval_from_inputs` and
+`sixth_powers_of_finite_segment_inputs` before interpreting it. The latter
+still takes two finite analytic conclusions as inputs.
+
+The milestone-1 proof-dependency diagnostic can additionally be reproduced:
+
+```sh
+cd lean
+lake env lean ../audit/Milestone1Dependencies.lean
+```
+
+This inspects constants in actual local proof terms and checks that the
+zero-count, real-axis, complex-power, arithmetic and six-term bound proofs
+are used by the final tail theorem. It also prints the full external input
+statements. This diagnostic does not replace Lean's kernel.
 
 ## Rebuild the generated proof terms
 
