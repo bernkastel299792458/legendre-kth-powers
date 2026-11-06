@@ -119,3 +119,30 @@ any command that deliberately rewrites reports:
 ```sh
 python -X utf8 code/release_manifest.py --check
 ```
+
+## Milestone 2 pilot
+
+The difficult-cell proof has an additional actual-dependency diagnostic:
+
+```sh
+cd lean
+lake env lean ../audit/Milestone2Dependencies.lean
+cd ..
+python -X utf8 code/generate_m2_pilot.py --all-blocks --check
+python -X utf8 code/generate_m2_factor_bounds.py --check
+python -X utf8 code/generate_m2_integer_data.py --check
+```
+
+The three generators propose explicit numerical witnesses and compare
+regenerated source bytes. The final proof trusts Lean's checks of those
+witnesses, not Python or Arb's assertions. Ordinary `decide +kernel` checks
+the exact rational moment inequality; it does not use `native_decide`.
+
+`audit/m2_pilot_numeric_build_2026-11-06.json` preserves the incremental
+numerical build evidence and source hashes. Its initial enclosure builds
+used Lean's default autoImplicit setting; the later connection/aggregation
+builds used `autoImplicit=false`. This difference is disclosed in the record.
+The native build driver now reads all lakefile Lean options; the PowerShell
+helper passes the current `autoImplicit=false`. The final whole-tree build
+must use the pinned Lake settings. The existing 58-module aggregate report
+predates M2 and must not be read as a clean rebuild of the expanded tree.

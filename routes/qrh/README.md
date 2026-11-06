@@ -84,14 +84,20 @@ QRHSevenEighths -> CSv2 -> RosserZeroCount -> CHJIIShortInterval ->
   CHLRows -> FiniteAnalyticSegmentInputs -> SixthPowerConclusion
 ```
 
-`FiniteAnalyticSegmentInputs` contains the two still-unformalized finite-range
-conclusions. The smoothed explicit-formula arguments and the complete
-94/60-cell transcendental enclosures remain unfinished. Rational-data checks
+`FiniteAnalyticSegmentInputs` still contains two finite-range conclusions.
+Milestone 2 now closes the difficult pilot `715/4 <= log x <= 179` from QRH,
+CS v2, Rosser and the classical integrated explicit formula. The actual
+transcendental budget is kernel checked at `<= 0.939772`, with no numerical
+premise left in the pilot theorem. Its [full type and proof dependencies](audit/milestone2_dependencies.txt)
+and [readable derivation](audit/milestone2_mathematical_note.md) are available.
+The complete 94/60-cell coverage remains unfinished. Rational-data checks
 do not silently certify the Arb computation. The old three-field assembly
 is retained as a general lemma. See [the scope document](FORMALIZATION_STATUS.md).
 
-第一里程碑已把无限尾部从实际 ζ 零点接到严格开区间内的素数；当前总定理
-仍保留中段与远段两个局部结论前提，尚不是全量 k=6 形式化。论文 PDF 与
+第一里程碑已闭合无限尾部；第二里程碑已闭合最困难试点
+`178.75 ≤ log x ≤ 179` 的完整解析与内核数值证明，总预算不超过 `0.939772`。
+试点定理不再带数值预算前提，但当前总定理仍保留中段与远段两个局部结论前提，
+尚不是全量 k=6 形式化。论文 PDF 与
 历史审阅保留初版状态，后续进展以形式化状态页和实际构建记录为准。
 
 ## Reproduce

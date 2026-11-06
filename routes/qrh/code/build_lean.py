@@ -16,6 +16,7 @@ import re
 import shutil
 import subprocess
 import time
+import tomllib
 
 ROOT = Path(__file__).resolve().parents[1]
 LEAN_ROOT = ROOT / 'lean'
@@ -44,6 +45,10 @@ def main():
     ap.add_argument('--dependency-root', type=Path)
     ap.add_argument('--lean', type=Path)
     args = ap.parse_args()
+    config = tomllib.loads((LEAN_ROOT / 'lakefile.toml').read_text(encoding='utf-8'))
+    lean_options = config.get('leanOptions', {})
+    option_args = ['-D' + key + '=' + (str(value).lower() if isinstance(value, bool) else str(value))
+                   for key, value in lean_options.items()]
     deps = (args.dependency_root or LEAN_ROOT / '.lake/packages').resolve()
     if not deps.is_dir():
         raise SystemExit('Run lake update and lake exe cache get in lean/, or supply --dependency-root.')
@@ -97,7 +102,7 @@ def main():
         target = build/relative.with_suffix('.olean')
         target.parent.mkdir(parents=True,exist_ok=True)
         before = time.perf_counter()
-        run = subprocess.run([lean,'-o',str(target),relative.as_posix()],cwd=LEAN_ROOT,env=env,
+        run = subprocess.run([lean,*option_args,'-o',str(target),relative.as_posix()],cwd=LEAN_ROOT,env=env,
                              capture_output=True,text=True,encoding='utf-8')
         output = run.stdout + run.stderr
         outputs.append(f'=== {module} ===\n'+output)
@@ -114,7 +119,7 @@ def main():
             (AUDIT/'kernel_axioms.txt').write_text(output,encoding='utf-8')
     (AUDIT/'lean_build.log').write_text('\n'.join(outputs),encoding='utf-8')
     result=dict(status='ALL_PRESENT_LEAN_MODULES_COMPILED',end_to_end_H1_H2_formalization=False,
-                version=version,created=datetime.now(timezone.utc).isoformat(),
+                version=version,lean_options=lean_options,created=datetime.now(timezone.utc).isoformat(),
                 elapsed_seconds=round(time.perf_counter()-started,3),modules=rows,
                 dependency_revisions=revisions,
                 dependency_cache_mode='read-only external cache' if args.dependency_root else 'project cache',

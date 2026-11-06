@@ -4,3 +4,4 @@ import LegendreK6.AnalyticBounds
 import LegendreK6.PrimeExtraction
 import LegendreK6.TailResult
 import LegendreK6.AssemblyWithTail
+import LegendreK6.M2PilotResult

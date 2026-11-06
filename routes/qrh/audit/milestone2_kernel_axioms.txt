@@ -1,0 +1,140 @@
+'LegendreK6.small_range_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.chl_integer_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.lower_log_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.refined_cells_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.polynomial_cells_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.refined_real_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.polynomial_real_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.four_point_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.exact_sigma_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.log_ratio_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.common_zero_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.coefficient_scaling_criterion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.prime_of_normalized_weighted_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.tail_at_700' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.tail_bound_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.tail_scaled_bound_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.sixth_powers_of_segment_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+LegendreK6.small_range_prime (n : ℕ) (hn : 1 ≤ n) (hmax : n ≤ 1259) : LegendreK6.NatSixthShort n
+LegendreK6.lower_log_range (H : LegendreK6.CHLRows) (n : ℕ) (hn : 1 ≤ n) (hlog : Real.log (↑n ^ 6) ≤ 167) :
+  LegendreK6.NatSixthShort n
+LegendreK6.tail_bound_all {L : ℝ} (hL : 700 ≤ L) : LegendreK6.tailBound L < 14 / 25
+LegendreK6.prime_of_normalized_weighted_budget (S : Finset ℕ) (w : ℕ → ℝ) (x y M δ : ℝ)
+  (hsupport : ∀ m ∈ S, w m ≠ 0 → x < ↑m ∧ ↑m < y) (hM : 0 < M) (hδ : δ < 1)
+  (hmain : M * (1 - δ) ≤ LegendreK6.weightedMangoldt S w - LegendreK6.weightedNonprime S w) :
+  LegendreK6.PrimeInOpenInterval x y
+LegendreK6.sixth_powers_of_segment_inputs (HCHL : LegendreK6.CHLRows) (H : LegendreK6.AnalyticSegmentInputs) :
+  LegendreK6.SixthPowerConclusion
+structure LegendreK6.AnalyticSegmentInputs : Prop
+number of parameters: 0
+fields:
+  LegendreK6.AnalyticSegmentInputs.middle : ∀ (x : ℝ),
+      0 < x → 167 ≤ Real.log x → Real.log x ≤ 400 → LegendreK6.ShortInterval6 x
+  LegendreK6.AnalyticSegmentInputs.far : ∀ (x : ℝ),
+      0 < x → 400 ≤ Real.log x → Real.log x ≤ 700 → LegendreK6.ShortInterval4 x
+  LegendreK6.AnalyticSegmentInputs.tail : ∀ (x : ℝ), 0 < x → 700 ≤ Real.log x → LegendreK6.ShortInterval4 x
+constructor:
+  LegendreK6.AnalyticSegmentInputs.mk
+    (middle : ∀ (x : ℝ), 0 < x → 167 ≤ Real.log x → Real.log x ≤ 400 → LegendreK6.ShortInterval6 x)
+    (far : ∀ (x : ℝ), 0 < x → 400 ≤ Real.log x → Real.log x ≤ 700 → LegendreK6.ShortInterval4 x)
+    (tail : ∀ (x : ℝ), 0 < x → 700 ≤ Real.log x → LegendreK6.ShortInterval4 x) : LegendreK6.AnalyticSegmentInputs
+structure LegendreK6.CHLRows : Prop
+number of parameters: 0
+fields:
+  LegendreK6.CHLRows.row0 : LegendreK6.CHLInterval 39097000 (4 * 10 ^ 18)
+  LegendreK6.CHLRows.row43 : LegendreK6.CHLInterval 41816800 (Real.exp 43)
+  LegendreK6.CHLRows.row46 : LegendreK6.CHLInterval 163940000 (Real.exp 46)
+  LegendreK6.CHLRows.row50 : LegendreK6.CHLInterval 1061200000 (Real.exp 50)
+  LegendreK6.CHLRows.row55 : LegendreK6.CHLInterval 10288400000 (Real.exp 55)
+  LegendreK6.CHLRows.row60 : LegendreK6.CHLInterval 76918400000 (Real.exp 60)
+  LegendreK6.CHLRows.row75 : LegendreK6.CHLInterval 174043000000 (Real.exp 75)
+  LegendreK6.CHLRows.row90 : LegendreK6.CHLInterval 184304000000 (Real.exp 90)
+  LegendreK6.CHLRows.row105 : LegendreK6.CHLInterval 191886000000 (Real.exp 105)
+  LegendreK6.CHLRows.row120 : LegendreK6.CHLInterval 197917000000 (Real.exp 120)
+  LegendreK6.CHLRows.row135 : LegendreK6.CHLInterval 202553000000 (Real.exp 135)
+  LegendreK6.CHLRows.row150 : LegendreK6.CHLInterval 207053000000 (Real.exp 150)
+constructor:
+  LegendreK6.CHLRows.mk (row0 : LegendreK6.CHLInterval 39097000 (4 * 10 ^ 18))
+    (row43 : LegendreK6.CHLInterval 41816800 (Real.exp 43)) (row46 : LegendreK6.CHLInterval 163940000 (Real.exp 46))
+    (row50 : LegendreK6.CHLInterval 1061200000 (Real.exp 50)) (row55 : LegendreK6.CHLInterval 10288400000 (Real.exp 55))
+    (row60 : LegendreK6.CHLInterval 76918400000 (Real.exp 60))
+    (row75 : LegendreK6.CHLInterval 174043000000 (Real.exp 75))
+    (row90 : LegendreK6.CHLInterval 184304000000 (Real.exp 90))
+    (row105 : LegendreK6.CHLInterval 191886000000 (Real.exp 105))
+    (row120 : LegendreK6.CHLInterval 197917000000 (Real.exp 120))
+    (row135 : LegendreK6.CHLInterval 202553000000 (Real.exp 135))
+    (row150 : LegendreK6.CHLInterval 207053000000 (Real.exp 150)) : LegendreK6.CHLRows
+'LegendreK6.zetaMultiplicity_pos' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.zetaMultiplicity_conj' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.riemannZeta_ne_zero_real_strip' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.sum_allZetaZeros_eq_twice' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.weightedNonprime_le_manuscript_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.prime_of_theta_sub_gt_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.norm_cpow_sub_div_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.finite_exp_layer_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.cs_tail_density' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.totalZeroCount_le_mul_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.tail_positive_zero_sum_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.tail_truncated_zero_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.tail_short_interval_from_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.sixth_powers_of_finite_segment_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+LegendreK6.riemannZeta_ne_zero_real_strip {s : ℝ} (hs0 : 0 < s) (hs1 : s < 1) : riemannZeta ↑s ≠ 0
+LegendreK6.tail_truncated_zero_bound (HQ : LegendreK6.QRHSevenEighths) (HC : LegendreK6.CSv2)
+  (HR : LegendreK6.RosserZeroCount) (L Tstar : ℝ) (hL : 700 ≤ L) (hT : Tstar ≤ LegendreK6.tailHeight L) :
+  ‖LegendreK6.truncatedZeroIncrement (LegendreK6.tailX L) (LegendreK6.tailY L) Tstar‖ ≤
+    LegendreK6.tailH L * LegendreK6.tailZeroBound L
+LegendreK6.tail_short_interval_from_inputs (HQ : LegendreK6.QRHSevenEighths) (HC : LegendreK6.CSv2)
+  (HR : LegendreK6.RosserZeroCount) (HJ : LegendreK6.CHJIIShortInterval) (x : ℝ) (hx : 0 < x)
+  (hlog : 700 ≤ Real.log x) : LegendreK6.ShortInterval4 x
+LegendreK6.sixth_powers_of_finite_segment_inputs (HQ : LegendreK6.QRHSevenEighths) (HC : LegendreK6.CSv2)
+  (HR : LegendreK6.RosserZeroCount) (HJ : LegendreK6.CHJIIShortInterval) (HCHL : LegendreK6.CHLRows)
+  (H : LegendreK6.FiniteAnalyticSegmentInputs) : LegendreK6.SixthPowerConclusion
+structure LegendreK6.FiniteAnalyticSegmentInputs : Prop
+number of parameters: 0
+fields:
+  LegendreK6.FiniteAnalyticSegmentInputs.middle : ∀ (x : ℝ),
+      0 < x → 167 ≤ Real.log x → Real.log x ≤ 400 → LegendreK6.ShortInterval6 x
+  LegendreK6.FiniteAnalyticSegmentInputs.far : ∀ (x : ℝ),
+      0 < x → 400 ≤ Real.log x → Real.log x ≤ 700 → LegendreK6.ShortInterval4 x
+constructor:
+  LegendreK6.FiniteAnalyticSegmentInputs.mk
+    (middle : ∀ (x : ℝ), 0 < x → 167 ≤ Real.log x → Real.log x ≤ 400 → LegendreK6.ShortInterval6 x)
+    (far : ∀ (x : ℝ), 0 < x → 400 ≤ Real.log x → Real.log x ≤ 700 → LegendreK6.ShortInterval4 x) :
+    LegendreK6.FiniteAnalyticSegmentInputs
+def LegendreK6.QRHSevenEighths : Prop :=
+∀ (ρ : LegendreK6.NontrivialZero), (↑ρ).re ≤ 7 / 8
+def LegendreK6.CSv2 : Prop :=
+∀ (i : Fin 12) (σ T : ℝ),
+  (16 + ↑↑i) / 32 ≤ σ →
+    σ ≤ (17 + ↑↑i) / 32 →
+      3000000000000 ≤ T →
+        ↑(LegendreK6.densityZeroCount σ T) ≤
+          LegendreK6.csB1 i * T ^ LegendreK6.csExponent σ * Real.log T ^ LegendreK6.csLogExponent σ +
+              LegendreK6.csB2 i * Real.log T ^ 2 +
+            LegendreK6.csB3 i * Real.log T
+def LegendreK6.RosserZeroCount : Prop :=
+∀ (T : ℝ),
+  2 ≤ T →
+    |↑(LegendreK6.rosserCount T) - (T / (2 * Real.pi) * Real.log (T / (2 * Real.pi)) - T / (2 * Real.pi) + 7 / 8)| ≤
+      137 / 1000 * Real.log T + 443 / 1000 * Real.log (Real.log T) + 397 / 250
+def LegendreK6.CHJIIShortInterval : Prop :=
+∀ (x h T : ℝ),
+  0 < x →
+    40 ≤ Real.log x →
+      0 ≤ h →
+        max 51 (Real.log x ^ 2) < T →
+          T < (√x - 2) / 4 →
+            ∃ Tstar,
+              T ≤ Tstar ∧
+                Tstar ≤ 2 * T ∧
+                  ‖↑(Chebyshev.psi (x + h) - Chebyshev.psi x - h) + LegendreK6.truncatedZeroIncrement x (x + h) Tstar‖ ≤
+                    1447 / 500 / T * ((x + h) * Real.log (x + h) + x * Real.log x)
+'LegendreK6.M2Pilot.completeBudget_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.M2Pilot.pilot_short_interval_from_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+LegendreK6.M2Pilot.completeBudget_le : LegendreK6.M2Pilot.completeBudget ≤ 234943 / 250000
+LegendreK6.M2Pilot.pilot_short_interval_from_inputs (HQ : LegendreK6.QRHSevenEighths) (HC : LegendreK6.CSv2)
+  (HR : LegendreK6.RosserZeroCount) (HF : LegendreK6.IntegratedExplicitFormula) (x : ℝ) (hx : 0 < x)
+  (hlo : 715 / 4 ≤ Real.log x) (hhi : Real.log x ≤ 179) : LegendreK6.ShortInterval6 x
+def LegendreK6.IntegratedExplicitFormula : Prop :=
+∀ (t : ℝ),
+  1 < t → Filter.Tendsto (LegendreK6.integratedZeroSum t) Filter.atTop (nhds (LegendreK6.integratedFormulaValue t))

@@ -58,3 +58,13 @@ unproved obligations remain in the log. The numerical certificate and paper
 snapshots are retained; new proof work is separately versioned.
 
 Implementation evidence is recorded in [the progress log](audit/formalization_progress_2026-11-06.md).
+
+## Accepted progress, 2026-11-06
+
+Milestone 1 is complete relative to its four named inputs (commit `b1d00a8`).
+Milestone 2 now has a compiled final strict-prime theorem on
+`715/4 <= log x <= 179`, with no numerical budget parameter; its complete
+input list and actual dependencies are recorded in
+`audit/milestone2_dependencies.txt`. The 86 numerical blocks and final
+aggregation passed. These are incremental build records, not a new clean
+whole-tree rebuild. Milestone 3 and the final reproducible build remain open.

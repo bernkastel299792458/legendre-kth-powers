@@ -1,0 +1,32 @@
+{
+  "status": "MILESTONE_2_COMPLETE_RELATIVE_TO_NAMED_INPUTS",
+  "scope": "715/4 <= log x <= 179; actual strict prime interval; no remaining numerical premise",
+  "external_inputs": [
+    "QRHSevenEighths",
+    "CSv2",
+    "RosserZeroCount",
+    "IntegratedExplicitFormula"
+  ],
+  "end_to_end_k6": false,
+  "build_mode": "Incremental module compilation; not a new clean whole-tree build",
+  "native_final_options": {
+    "autoImplicit": false
+  },
+  "final_dependency_audit_seconds": 24.0,
+  "axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "sha256": {
+    "lean/LegendreK6/M2PilotResult.lean": "e3c045d6064d180117f6bb6b2010ecd084f83e0172c1c1969ec68b34d8400066",
+    "lean/LegendreK6.lean": "2c44ac72c6c0a27340b7e0a353381207a5213f4bc0961b95688ccdc99c65ed2d",
+    "lean/LegendreK6/Audit.lean": "e5648340aedec405219c1ed5881f2b125b4a132872c13d32f67d8b0ee37c95d3",
+    "audit/Milestone2Dependencies.lean": "0879f78c2170a6e3ed3bf50c1d8fcf84b8d0a2ea5b38f8b7e49734bb12fc5e2a",
+    "audit/milestone2_dependencies.txt": "0570bbe798b4cc4bfe451b857b124dde64700e8557747fbadf7ccea7f74b0e7a",
+    "audit/milestone2_kernel_axioms.txt": "2c768efb77553b4e7096f517c1363ff480ed4d71dddbe42d53bea0e7fd72a132",
+    "audit/milestone2_analytic_review.md": "5b5aeb7f54a1004397af3ef7f3997d7dfe9b6925d98a07a91dec64af98cb4049",
+    "audit/milestone2_integer_review.md": "30811edbe6c8c60cdf4d1afbacdbee14aa53787e35a0e029ebc129c6c8709d60",
+    "audit/m2_pilot_numeric_build_2026-11-06.json": "e71daaec377fa0e788f740d36404194273be402f03f82df7efb7dcb1e425c7ac"
+  }
+}

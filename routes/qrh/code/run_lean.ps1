@@ -30,6 +30,6 @@ foreach ($dependency in Get-ChildItem -LiteralPath $DependencyRoot -Directory) {
 $env:LEAN_PATH = $searchPaths -join [IO.Path]::PathSeparator
 Push-Location $leanRoot
 try {
-    & $LeanExecutable -o $outputFile $File
+    & $LeanExecutable -DautoImplicit=false -o $outputFile $File
     if ($LASTEXITCODE -ne 0) { throw "Lean failed for $File (exit $LASTEXITCODE)" }
 } finally { Pop-Location }

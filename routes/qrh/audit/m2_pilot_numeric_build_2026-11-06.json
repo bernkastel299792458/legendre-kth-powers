@@ -1,0 +1,1626 @@
+{
+  "schema": "qrh.m2-pilot.numeric-build.v1",
+  "recorded_at_utc": "2026-11-06T05:43:32.817464+00:00",
+  "scope": "Completed numeric chain for the single fixed cell [715/4,179]; this record does not assert the whole middle range or the final k=6 theorem.",
+  "theorem": "LegendreK6.M2Pilot.lowRankTaylor20_le",
+  "bound": "3759/4000",
+  "sigma_nodes": 1536,
+  "height_nodes": 988,
+  "dyadic_bits": 48,
+  "taylor_degree": 20,
+  "remainder": "2*z^21/21! on 0 <= z <= 11",
+  "toolchain": "Lean (version 4.36.0-rc2, x86_64-w64-windows-gnu, commit b35cb10cf2ced51a2fd1880cfdbf75c71ab7a35a, Release)",
+  "python": "3.12.10 (tags/v3.12.10:0cc8128, Apr  8 2025, 12:21:36) [MSC v.1943 64 bit (AMD64)]",
+  "python_flint": "0.9.0",
+  "lean_toolchain": "leanprover/lean4:v4.36.0-rc2",
+  "lake_manifest_sha256": "1a2552df9acfbb7ff8f41bf877975acfcbff176531b82f3e41a6761f3cb77d23",
+  "source_manifest_scope": "Complete local LegendreK6 import closure of LowRankBound, SmallBudgets, and EnclosureSample; compile records below certify the newly generated blocks and final assembly, not a clean rebuild of every ancestor.",
+  "source_manifest": [
+    {
+      "path": "lean/LegendreK6/AnalyticBounds.lean",
+      "bytes": 3283,
+      "sha256": "358ee8890545235abdfa1a3506a808bfa39079753e71886688bb54932b11cf66"
+    },
+    {
+      "path": "lean/LegendreK6/CpowInterval.lean",
+      "bytes": 2831,
+      "sha256": "57f9334f94f50b16befcc1af6ab1ee4a0bd32b4858103f319da900a287947f35"
+    },
+    {
+      "path": "lean/LegendreK6/Definitions.lean",
+      "bytes": 1519,
+      "sha256": "41eb5d0dd3e5debfb2821c9ecf9eb6b71d0f3df1737d9b3316fbda0f373056ac"
+    },
+    {
+      "path": "lean/LegendreK6/DensityGridGrowth.lean",
+      "bytes": 5263,
+      "sha256": "0aeba9712309446cab2eb070d02fca8cc350e101ad8e6844b59912074188ca87"
+    },
+    {
+      "path": "lean/LegendreK6/DensityInput.lean",
+      "bytes": 5031,
+      "sha256": "990d6e27408ddfd9e69db0fad1c0c6580460d96c15f99a44cceb8a6b581146a9"
+    },
+    {
+      "path": "lean/LegendreK6/FiniteDensityGrid.lean",
+      "bytes": 7751,
+      "sha256": "e7788c6da80ab537a88156ac6c36296b3d8eca1949b6929359b65cfd70f8a572"
+    },
+    {
+      "path": "lean/LegendreK6/FiniteZeroLayer.lean",
+      "bytes": 5747,
+      "sha256": "3dbe7a724f27c3dd0b80a278e5f86d650cd85b2e0802846f2c74f2f0ba656ab0"
+    },
+    {
+      "path": "lean/LegendreK6/GeometricHeightTail.lean",
+      "bytes": 5387,
+      "sha256": "37506523d5c8384c77cd7adf51b7135d2b60e438afff52bb0ee4a6c9a07aec8f"
+    },
+    {
+      "path": "lean/LegendreK6/HeightGrid.lean",
+      "bytes": 3652,
+      "sha256": "eb181da69aaa4a7003af3182a3a313bddb240b33baa819a018ae22f4b5ce5c6c"
+    },
+    {
+      "path": "lean/LegendreK6/HeightKernel.lean",
+      "bytes": 277,
+      "sha256": "c893a43e9242f7a64b05903cd20a94f27f3a2e72157c25e221a3463c47742f6f"
+    },
+    {
+      "path": "lean/LegendreK6/IntegratedExplicitFormula.lean",
+      "bytes": 6701,
+      "sha256": "9dfad65f0a4a3849e4f89f6aca7b0f25511a2958466e1bd2712845d8e368aced"
+    },
+    {
+      "path": "lean/LegendreK6/IntegratedPsi.lean",
+      "bytes": 6558,
+      "sha256": "52a735da07c58adfaee31f0405079c55879ef63585bf60d7b43e4359ca658245"
+    },
+    {
+      "path": "lean/LegendreK6/LiteratureInputs.lean",
+      "bytes": 4738,
+      "sha256": "feb8446dcfb232adedec2937a271ed010e35f8addeec240a60f75c2c74c8df78"
+    },
+    {
+      "path": "lean/LegendreK6/LowRankInteger.lean",
+      "bytes": 2745,
+      "sha256": "7a40f7398f9b37e6cfb89065ce4b9eadd36d66477538deb8d55faf2ccb322c77"
+    },
+    {
+      "path": "lean/LegendreK6/LowRankTaylor.lean",
+      "bytes": 7958,
+      "sha256": "899c71a212974dd6dd18bad7eb8636a7f0d0d0f426f66a160fa986f41c9269e5"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/EnclosureSample.lean",
+      "bytes": 10495,
+      "sha256": "5456d30dbfd8c7493d35cbae27b90641420e5d586761aa34d4751c30aacc4191"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height000.lean",
+      "bytes": 100546,
+      "sha256": "403d96f01d67a08ebf47a730c246a07b8752cb6a2b6c284b3b6fd3160b426e9e"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height001.lean",
+      "bytes": 100562,
+      "sha256": "860d9f18081f0a7fa34161eabe5d25fc61237f63a36e384e274971b306704c6d"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height002.lean",
+      "bytes": 100534,
+      "sha256": "13878385cc10310aff0b00833b0294e7af3b13bd4a657e32bba4cb340ae204a0"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height003.lean",
+      "bytes": 100703,
+      "sha256": "a043eae1890136b95b95e2058c987f8fc4569b6b1f0b9e22c07bff2e5140aa5e"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height004.lean",
+      "bytes": 100632,
+      "sha256": "2e37faf66c079a99e3d4c86ba141cdcd6d6100699d3df4d82c208f2821341c7a"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height005.lean",
+      "bytes": 100720,
+      "sha256": "65f6b3b9bb2f37ed7eab0fc518f961a05ac06478d0f89148c8b5f93059236a84"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height006.lean",
+      "bytes": 100668,
+      "sha256": "fbf788d52bb1a462d4a89441e3a58a0b561da5fe7f5565082c3b1000e17513c4"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height007.lean",
+      "bytes": 100581,
+      "sha256": "73be0c6568a2e8270bcdbe84a9c403686853369370731ea85f95cbf6723cfd13"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height008.lean",
+      "bytes": 100459,
+      "sha256": "6cdcdb59e663e30b58cd5308efbba08e2c8a14d9a507e21248c619bec93faaa5"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height009.lean",
+      "bytes": 100302,
+      "sha256": "f4121ac9eadde3366ebdd574a83421804e5d5a518aa21f1ecfb07236996dd3b7"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height010.lean",
+      "bytes": 100154,
+      "sha256": "958e22fc2800e1d8258990ae2c7e79357d711b3bcabf82b5df14dd6a9ee03280"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height011.lean",
+      "bytes": 100090,
+      "sha256": "e20aaf95ab13f19ab58fb7f872839232c41220c1a981e53ae1546501262a62f4"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height012.lean",
+      "bytes": 100009,
+      "sha256": "dc7da488d736d9fbe95daeb2b750a6d9f72b165b31dfbf46b5ad6bd533ec10ce"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height013.lean",
+      "bytes": 99923,
+      "sha256": "cdb560165c0b0dc96214fbb9c6c2bf16e07932a2a84a99656da06ae171f95c4e"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height014.lean",
+      "bytes": 99699,
+      "sha256": "93769f7b46640d3f18925372e3adb19a963759c87ccab92bd213f8bdbfd23ea7"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height015.lean",
+      "bytes": 99670,
+      "sha256": "a050d063bbf3a2f55f843c469a3dc8b655d3d7656e8c79a4e1f4baae5d4d583a"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height016.lean",
+      "bytes": 99544,
+      "sha256": "6bb3edd1dc94aa34fe2c9c895bd18b341fd0774a494846071f6ca3c901a33ce6"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height017.lean",
+      "bytes": 99419,
+      "sha256": "b6c46c012b16357a9653550281fb08ff8c12d2585707940eab8aa015bc77b785"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height018.lean",
+      "bytes": 99264,
+      "sha256": "4a368fe035a8e3bbda58dcf4f7cdc4d7f32966e3b1a7fa57406fb2df97f96aa7"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height019.lean",
+      "bytes": 99147,
+      "sha256": "0b36c9e86c17894eae86ae9d55392e775638e6388327a305ca6627d8f2fa6e57"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height020.lean",
+      "bytes": 99023,
+      "sha256": "6540a53b66af05085fccfb278f16f89dea271f54091265c5e294a098a3943db8"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height021.lean",
+      "bytes": 98914,
+      "sha256": "983f3112dc40597d2f810cd5bf2ef2148ed74344a92c4f401d3bcd3a5d0f2808"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height022.lean",
+      "bytes": 98786,
+      "sha256": "affeffd59c7b90d30fa5a008a884da7d494c4b0c2ba7e6a906262512b04b4de2"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height023.lean",
+      "bytes": 98702,
+      "sha256": "cb28771032842c1717a1b8b7ff832135cac43b62cc89818aa7f52f2eb95e3a4b"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height024.lean",
+      "bytes": 98532,
+      "sha256": "b3dabad49f66ba934d8c598edbcc05dd19a54d527d494eec77e590c207fe0a63"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height025.lean",
+      "bytes": 98484,
+      "sha256": "6e9c5a10e3a3df38364fb2259449dc19888bd2d0bad06343c820d4a3d450c402"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height026.lean",
+      "bytes": 98262,
+      "sha256": "fa7df4d6f0adb69616089ac52d0c35e50bdbd6292134ecdc3eb4f89f677cfe9d"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height027.lean",
+      "bytes": 98165,
+      "sha256": "360e56a030122ee39be5040f891918b3901cde002c6d7b532a253882785023e0"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height028.lean",
+      "bytes": 98038,
+      "sha256": "e94888aa971d95cd834e21f7fe17e0b6e9438f2b34eb045cd44a4d845b5701ad"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height029.lean",
+      "bytes": 98005,
+      "sha256": "3c95b37e0e8ea94c01d59276428244338166a09d2bedfb5002e4792f189ae2fa"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Height030.lean",
+      "bytes": 85940,
+      "sha256": "46547a1b067d7020323b1419aa8dc80baadcbb1d402f5d6f5c9d9d376c39466f"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Sigma000.lean",
+      "bytes": 75966,
+      "sha256": "28b224b7909b18cd4a0eabd65ec21251cd54e97d67f282443e3fae182aa07b31"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Sigma001.lean",
+      "bytes": 76267,
+      "sha256": "d4171891ed4252e7d8e4da4147f6fb8171ff9ea1d82cf7d75f27986b54d90106"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Sigma002.lean",
+      "bytes": 76361,
+      "sha256": "d5354480421595d4acb892ca301825f1c2d8bf157580cad7e7c543c8272738f7"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Sigma003.lean",
+      "bytes": 76233,
+      "sha256": "c67179abf2ac7f2b2c5821db1df2262ca628600fc2c55e38cad7ec2c7b0a648d"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Sigma004.lean",
+      "bytes": 76322,
+      "sha256": "64eac631586464f0482930aba4785f01d3e05d85b7ece52b1915d6edd6f740b1"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Sigma005.lean",
+      "bytes": 75944,
+      "sha256": "d923c16ec449526407c0f7c87e3c117e2f57ab87fd79faa5a67690dab16f6f0c"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Sigma006.lean",
+      "bytes": 76160,
+      "sha256": "e98a194b88548501e76a006c401a8c71f67fbe3584f5116a78e80f220b3c5b1f"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Sigma007.lean",
+      "bytes": 76280,
+      "sha256": "1b13277ba2a35d51d089b694a6a5edd1808dea757fd88c19549c5106225047ca"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Sigma008.lean",
+      "bytes": 77110,
+      "sha256": "42d6d0a6b6106ba67dd26a5aff3c204a1fae655ad5346b8a06ff2d462d000f21"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Sigma009.lean",
+      "bytes": 77720,
+      "sha256": "e79390fbcce674c96b2dcf0d1675d514990e23fb7f6c49c5675f3c89d65f5b28"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Sigma010.lean",
+      "bytes": 78043,
+      "sha256": "775734cafac8e27fa4b277c98ba59e8154b6961444e766c0129f65e89e5ca726"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/Enclosures/Sigma011.lean",
+      "bytes": 78331,
+      "sha256": "84aa6a6eeb7b874f5d1c1a483010f2d527b110f43448fc6a7fdffed2e1b9b033"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height000.lean",
+      "bytes": 14659,
+      "sha256": "e7fbf77516e8131ed38cba8597d2386b0b97a315b53b8a6df7bc1ee15ce4c1eb"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height001.lean",
+      "bytes": 14742,
+      "sha256": "5417bad00c1e552e4614ebd1e823e2c121cdddb8b3d940f3e80cd203b4483001"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height002.lean",
+      "bytes": 14744,
+      "sha256": "5b985dcb1536e351aa277a5c917fd2a8698d7104ff52cf0a9a71c75bd0b72fd9"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height003.lean",
+      "bytes": 14834,
+      "sha256": "62bead2e5b74a5ecfd7456e5ed5d4abd4842d4dc5ae1c347e409e6f8e4fc3d3c"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height004.lean",
+      "bytes": 14837,
+      "sha256": "1f14650c1a889cb076d5d3521fbb2aafad1eb631b1467ec1527f55c9e790d5fa"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height005.lean",
+      "bytes": 14851,
+      "sha256": "29204a2095633ce5f9ccbb217ef630e448705337e4d0d9dfc95927fd65bc6dd8"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height006.lean",
+      "bytes": 14846,
+      "sha256": "c5ec4dd2f2546cb811adfefb97484860d8757a91c55b2f319b93909df20148b1"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height007.lean",
+      "bytes": 14870,
+      "sha256": "a37d7d6bc477132645eb4c2358dcea210f3def894360fc5f59ad2f5372351c7b"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height008.lean",
+      "bytes": 14832,
+      "sha256": "efa8c1257d319eb4ac193692630eb07ae335971e8ea46f2d5dfd65280d15220a"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height009.lean",
+      "bytes": 14823,
+      "sha256": "cd1f7ecb3d2e7c0229a24228d931b45454b3ae077cab53973368d949f7629540"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height010.lean",
+      "bytes": 14784,
+      "sha256": "ae11a2b0078e64dc7cbba677253e83e80187081c80dc3854e3ebdc6037bd11f2"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height011.lean",
+      "bytes": 14780,
+      "sha256": "3c10d2630fbbe18ba644c4e966de701ce5d001ca619526594419ad632178e734"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height012.lean",
+      "bytes": 14762,
+      "sha256": "d4c3e089f59e079dcb6536f3fcb3042d7d57f01d0f7f086368cf3832ab567d3a"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height013.lean",
+      "bytes": 14742,
+      "sha256": "2cfe3ac8ff41cfdebd7211605ef28144f65d09e49cbf6731db5b978625580b69"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height014.lean",
+      "bytes": 14708,
+      "sha256": "e1f208ed886873423a7e9d425d4477fbb70ad319aef3ba2109ee2a1e8b349a29"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height015.lean",
+      "bytes": 14707,
+      "sha256": "37d6b69eb677b4c67b11e46b98545a6c47237c0d2a613a0c378ce7db5222d74e"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height016.lean",
+      "bytes": 14665,
+      "sha256": "e8a7b990b8ee770bee0689d1b394626c7bfa8f38a9a425dc3963fb9f4b1f1dfe"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height017.lean",
+      "bytes": 14647,
+      "sha256": "ae716518f455f859505bab7b787d50b6af04049734954c814c873467f8599045"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height018.lean",
+      "bytes": 14634,
+      "sha256": "51c6eb5bb8a9974710def7f826754264b61c100089966fdd52fb7ed8f0cd8e09"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height019.lean",
+      "bytes": 14602,
+      "sha256": "28abb8ef08286002c57f2b6d9ec9f2510739a4eb31c96d42b3a5cd17589c61bd"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height020.lean",
+      "bytes": 14581,
+      "sha256": "ea83dfd6acb6fb71d4637cd5474c1f4155c013ffe85de1f8b70d70a1313ecd1c"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height021.lean",
+      "bytes": 14583,
+      "sha256": "ae92439100b408c837efbc3159f5d2159ecf41597bcd239c0e6b0a41caacb4b0"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height022.lean",
+      "bytes": 14538,
+      "sha256": "49182c88355ca97595d4c869216f6fa1f42ff17b5e0ed813c9eb10f9415db6a5"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height023.lean",
+      "bytes": 14533,
+      "sha256": "5f7377b085743bd18e61f97f1874bd36d4bc2a45309e023c4d09a16963e6f736"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height024.lean",
+      "bytes": 14504,
+      "sha256": "48b782e498e1eb0a99142f9eff668bbf97a3536e093e707912be4b0a3613253d"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height025.lean",
+      "bytes": 14467,
+      "sha256": "c56e8065cd73acfb1f12456da5c2848cc5600494b0a3e0f2d5964a8e1a12b5ca"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height026.lean",
+      "bytes": 14443,
+      "sha256": "78f7b12e01de173f27cf38d371f0e96a8db710d1d9b5dccf5f0047f8e0efba98"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height027.lean",
+      "bytes": 14435,
+      "sha256": "a5b71f131f7221a575f0f72b4f7b762c6d678beda0883279e7cec78a0e91ebb3"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height028.lean",
+      "bytes": 14395,
+      "sha256": "6fac9ceab13a7fd6d23c7fb8304c490b7bad047ce936f36479128efafaec0d91"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height029.lean",
+      "bytes": 14406,
+      "sha256": "8a12016224a1d0862fac3ac7f79ffadea8fca3b8e0e8592dee7ae54a9c28f47a"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Height030.lean",
+      "bytes": 12664,
+      "sha256": "d1a4ad193e28cb9ba6be86df78235059c83bdc17608da20418f922a0a73fc798"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Sigma000.lean",
+      "bytes": 53319,
+      "sha256": "27579997bc5e7c6f3d1cb55c5308d8d2eaff9e3e21231d64c3a8c722dd87e1a0"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Sigma001.lean",
+      "bytes": 53643,
+      "sha256": "708228bc2db6d671121a8ef2ce8ca0447e4bcbdc3f0304ace2f589bad8e7dbfc"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Sigma002.lean",
+      "bytes": 53628,
+      "sha256": "19dba6083398414292517801e8c1d3529873329206735a258905abcb02983c23"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Sigma003.lean",
+      "bytes": 53635,
+      "sha256": "aa4b137935f40f5b368fc0974d315356a1521015883948281059fabcc32beb7b"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Sigma004.lean",
+      "bytes": 53630,
+      "sha256": "891e3eff2f2e762e0275cfb20fccdfefe89120a71e2fd2aa4074261d78c62bd4"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Sigma005.lean",
+      "bytes": 53637,
+      "sha256": "e496488e85939653f452dd7a0dc9c93ab5858945e553b53a6de47578f8c28b0b"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Sigma006.lean",
+      "bytes": 53596,
+      "sha256": "6b888e51102f55c51022057ad175bbd408f60c4fd0101e1c48b70910a0bfdcc0"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Sigma007.lean",
+      "bytes": 53920,
+      "sha256": "78e0db4f648cd56895352b0bba52250c246d30661ef8c536647302c8c77f70c6"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Sigma008.lean",
+      "bytes": 54673,
+      "sha256": "40bc31eb3df98bd478a72ac14aabf1d2b400bf6f67cd1a20470c4c5896227fc9"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Sigma009.lean",
+      "bytes": 55071,
+      "sha256": "0ab07b06a81a539bbe05cc537f5281212c2b9225acfc7961a52f48e062527a01"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Sigma010.lean",
+      "bytes": 55419,
+      "sha256": "6653167c836b9923a4af80ac2eb02ed331fcf3c2a15948d54d4db6fe3689a11b"
+    },
+    {
+      "path": "lean/LegendreK6/M2Pilot/FactorBounds/Sigma011.lean",
+      "bytes": 55674,
+      "sha256": "02633e4f9c7b7fc861b7e6e9c5f6a6cfb15e412256859f7ad5f0c50c7bc63f52"
+    },
+    {
+      "path": "lean/LegendreK6/M2PilotBudgetDefinitions.lean",
+      "bytes": 958,
+      "sha256": "d495da05eff262db0bc8e778a6aeb24df3c1febfe6ad895c546861eb8b49a71d"
+    },
+    {
+      "path": "lean/LegendreK6/M2PilotConstants.lean",
+      "bytes": 1264,
+      "sha256": "46e4615d09e0ef8e84a0e26b881eb855385ed756f974f539ff6e708072d91c00"
+    },
+    {
+      "path": "lean/LegendreK6/M2PilotDefinitions.lean",
+      "bytes": 4080,
+      "sha256": "fe668f0f4e062f64387e36e7ba9ebaa9a3972ca3eb35bdf1980da1e8e66d8cd3"
+    },
+    {
+      "path": "lean/LegendreK6/M2PilotExpression.lean",
+      "bytes": 3759,
+      "sha256": "c63d9903159f97c953c1c744bac2288e52fa2d58b182a9bdafd6fcd66c91881d"
+    },
+    {
+      "path": "lean/LegendreK6/M2PilotFactorBounds.lean",
+      "bytes": 5972,
+      "sha256": "7625778d79d2e11722125c556ff65bcd1a273fb7184a648693d5c9255432883b"
+    },
+    {
+      "path": "lean/LegendreK6/M2PilotGrid.lean",
+      "bytes": 6703,
+      "sha256": "676dc754c70e9ef926b8748faf03db726abd5ee739a9c6eebebfeebd737271ea"
+    },
+    {
+      "path": "lean/LegendreK6/M2PilotIntegerCertificate.lean",
+      "bytes": 1035,
+      "sha256": "9f4daf3fb0cd397f6d2a851d46cc51a0f2b47b8808e177c56846dabc2f319df8"
+    },
+    {
+      "path": "lean/LegendreK6/M2PilotIntegerData.lean",
+      "bytes": 76543,
+      "sha256": "33121bf8c5c3d7290535a845d5b2432f83dea3c022ea81db09d8cabd8f468fce"
+    },
+    {
+      "path": "lean/LegendreK6/M2PilotLowRankBound.lean",
+      "bytes": 917,
+      "sha256": "1bbffe9fbcc5e5d7c261b0898b866e688c6d8d9ab4e84d40ff3055cc4f9eca41"
+    },
+    {
+      "path": "lean/LegendreK6/M2PilotSmallBudgets.lean",
+      "bytes": 3067,
+      "sha256": "99303748ae604303d915b73720d043efc5c89b5bfda1e9e3c6b5a2fd59c54e64"
+    },
+    {
+      "path": "lean/LegendreK6/MiddleDomains.lean",
+      "bytes": 7788,
+      "sha256": "3d828ba99a09181bdc1b4c47c643bfa86129f38f0b7fb228977f2d98046c06c5"
+    },
+    {
+      "path": "lean/LegendreK6/PrimeExtraction.lean",
+      "bytes": 2763,
+      "sha256": "713c77688d31d4e43eee9afb6f03eaaeecf246b54343b1e833de37ac08195d15"
+    },
+    {
+      "path": "lean/LegendreK6/PrimePowerBudget.lean",
+      "bytes": 6236,
+      "sha256": "4ba970c664d8eea921a92f9ad7a72b7282a2233e8450c3700e6c1bb7458a3d45"
+    },
+    {
+      "path": "lean/LegendreK6/TrapezoidCell.lean",
+      "bytes": 2432,
+      "sha256": "be9f5069f595423f3b808fc84b68aa3637ccdc643229056cfaad88e1a6eecc86"
+    },
+    {
+      "path": "lean/LegendreK6/TrapezoidHeightBound.lean",
+      "bytes": 8508,
+      "sha256": "fcd0ba6678a162cbfbd6535bcb978947adc15651d2eeb5d8f201518966a8b152"
+    },
+    {
+      "path": "lean/LegendreK6/TrapezoidKernel.lean",
+      "bytes": 11755,
+      "sha256": "b970b79fe41f4afde356ce7598d28d377e10c4178791c0bff88f0125c89467a3"
+    },
+    {
+      "path": "lean/LegendreK6/TrapezoidPrime.lean",
+      "bytes": 3285,
+      "sha256": "646a9d2888d043f3b824ab1de5d702c9f2f66a755ed2653fa5fbbbbf8a5a4c3b"
+    },
+    {
+      "path": "lean/LegendreK6/TrapezoidTrivial.lean",
+      "bytes": 6650,
+      "sha256": "7c9bfaae3b762dac8508e083a82bbe556051c1f173c3dad98885bde01f80868e"
+    },
+    {
+      "path": "lean/LegendreK6/TrapezoidZeroBound.lean",
+      "bytes": 5491,
+      "sha256": "7780c830dda9d4164172395d60031f25ef1e8c56da66e2c3e98eb4163701b27f"
+    },
+    {
+      "path": "lean/LegendreK6/ZetaZeros.lean",
+      "bytes": 21081,
+      "sha256": "9fb065bdae1cc73f614f433628ad98e97f81ceec74e8ad093de9e1eb24c6de1d"
+    }
+  ],
+  "external_imports": [
+    "Mathlib",
+    "Mathlib.Analysis.Calculus.MeanValue",
+    "Mathlib.Analysis.SpecialFunctions.Pow.Deriv",
+    "Mathlib.Tactic.Inclusion.Extension.IntervalDyadicReal.Exp",
+    "Mathlib.Tactic.Inclusion.Extension.IntervalDyadicReal.Tactic"
+  ],
+  "block_builds": {
+    "enclosures": {
+      "status": "ALL_BLOCKS_COMPILED",
+      "elapsed_seconds": 1039.03,
+      "rows": [
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height001.lean",
+          "exit_code": 0,
+          "seconds": 30.088,
+          "source_sha256": "860d9f18081f0a7fa34161eabe5d25fc61237f63a36e384e274971b306704c6d",
+          "source_bytes": 100562,
+          "olean_sha256": "318dc03e215043a70e40295223e605121d196656371496d3ad6fac473ea4c54c",
+          "olean_bytes": 7867008,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height000.lean",
+          "exit_code": 0,
+          "seconds": 47.891,
+          "source_sha256": "403d96f01d67a08ebf47a730c246a07b8752cb6a2b6c284b3b6fd3160b426e9e",
+          "source_bytes": 100546,
+          "olean_sha256": "adaab7bcec4efbd78869e5467def0cb241aa2e2ca7bae48aaff865855eab295e",
+          "olean_bytes": 7872200,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height002.lean",
+          "exit_code": 0,
+          "seconds": 35.503,
+          "source_sha256": "13878385cc10310aff0b00833b0294e7af3b13bd4a657e32bba4cb340ae204a0",
+          "source_bytes": 100534,
+          "olean_sha256": "6d968b729b77652c1ae53d031076c7796a108c3659959d33bd383e3f4e39a4f7",
+          "olean_bytes": 7801928,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height003.lean",
+          "exit_code": 0,
+          "seconds": 47.73,
+          "source_sha256": "a043eae1890136b95b95e2058c987f8fc4569b6b1f0b9e22c07bff2e5140aa5e",
+          "source_bytes": 100703,
+          "olean_sha256": "b87039c0f1731e19fb9062ea634ba0efcf54a90f46aad186a1cb101be0623d69",
+          "olean_bytes": 7813176,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height004.lean",
+          "exit_code": 0,
+          "seconds": 51.081,
+          "source_sha256": "2e37faf66c079a99e3d4c86ba141cdcd6d6100699d3df4d82c208f2821341c7a",
+          "source_bytes": 100632,
+          "olean_sha256": "fbf179049798352bdd12845f7463bf6bcd0043b9ad9bf13138be481b24abc3f3",
+          "olean_bytes": 7829304,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height005.lean",
+          "exit_code": 0,
+          "seconds": 34.468,
+          "source_sha256": "65f6b3b9bb2f37ed7eab0fc518f961a05ac06478d0f89148c8b5f93059236a84",
+          "source_bytes": 100720,
+          "olean_sha256": "19afa5dc676d40dee4e35f8120ebc86923107ecaec85da67a4ae0c157a1535c1",
+          "olean_bytes": 7801048,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height007.lean",
+          "exit_code": 0,
+          "seconds": 31.578,
+          "source_sha256": "73be0c6568a2e8270bcdbe84a9c403686853369370731ea85f95cbf6723cfd13",
+          "source_bytes": 100581,
+          "olean_sha256": "f6b5b25e6cb02ce94f335012e8b0f19d04d8fc7052e0ea70bfa450252111a5af",
+          "olean_bytes": 7818144,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height006.lean",
+          "exit_code": 0,
+          "seconds": 61.229,
+          "source_sha256": "fbf788d52bb1a462d4a89441e3a58a0b561da5fe7f5565082c3b1000e17513c4",
+          "source_bytes": 100668,
+          "olean_sha256": "71a293fdab4150905d3d1c49db9b44caa7b58d9f543436f9775eb1c666dc8354",
+          "olean_bytes": 7793304,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height008.lean",
+          "exit_code": 0,
+          "seconds": 48.779,
+          "source_sha256": "6cdcdb59e663e30b58cd5308efbba08e2c8a14d9a507e21248c619bec93faaa5",
+          "source_bytes": 100459,
+          "olean_sha256": "00945a5042ccb38e4310921e1b58f19d4911119850f99497b324e247661e3b49",
+          "olean_bytes": 7816248,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height010.lean",
+          "exit_code": 0,
+          "seconds": 44.995,
+          "source_sha256": "958e22fc2800e1d8258990ae2c7e79357d711b3bcabf82b5df14dd6a9ee03280",
+          "source_bytes": 100154,
+          "olean_sha256": "4d8117d6d001d25f89feabb217f62036ac724fdbdddcbfa877152e31f50a02b4",
+          "olean_bytes": 7839240,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height009.lean",
+          "exit_code": 0,
+          "seconds": 88.236,
+          "source_sha256": "f4121ac9eadde3366ebdd574a83421804e5d5a518aa21f1ecfb07236996dd3b7",
+          "source_bytes": 100302,
+          "olean_sha256": "b0e61f45bce5a9229d4541eff886ade29d353e3ace1e51b618e518d0f5c8b4ee",
+          "olean_bytes": 7840504,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height011.lean",
+          "exit_code": 0,
+          "seconds": 37.713,
+          "source_sha256": "e20aaf95ab13f19ab58fb7f872839232c41220c1a981e53ae1546501262a62f4",
+          "source_bytes": 100090,
+          "olean_sha256": "e4a8c778a1e4387c5cd6293948fd356a917827e7b45a2b200380b9bd77b84f3e",
+          "olean_bytes": 7832720,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height013.lean",
+          "exit_code": 0,
+          "seconds": 32.783,
+          "source_sha256": "cdb560165c0b0dc96214fbb9c6c2bf16e07932a2a84a99656da06ae171f95c4e",
+          "source_bytes": 99923,
+          "olean_sha256": "1620d7d54527503978ad74d5ee4c98fd9ba365027466571645b5a50b633401b7",
+          "olean_bytes": 7809808,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height012.lean",
+          "exit_code": 0,
+          "seconds": 91.456,
+          "source_sha256": "dc7da488d736d9fbe95daeb2b750a6d9f72b165b31dfbf46b5ad6bd533ec10ce",
+          "source_bytes": 100009,
+          "olean_sha256": "feee03cb84c19814aab68bd122f7a54b21936c27eafd4d7a91a2f3abfc2bd5aa",
+          "olean_bytes": 7822904,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height014.lean",
+          "exit_code": 0,
+          "seconds": 39.783,
+          "source_sha256": "93769f7b46640d3f18925372e3adb19a963759c87ccab92bd213f8bdbfd23ea7",
+          "source_bytes": 99699,
+          "olean_sha256": "103925917aa104493cd0989f0cc86c90be5f1c9d3fa495c1cd01808e8eb7c285",
+          "olean_bytes": 7817336,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height016.lean",
+          "exit_code": 0,
+          "seconds": 34.278,
+          "source_sha256": "6bb3edd1dc94aa34fe2c9c895bd18b341fd0774a494846071f6ca3c901a33ce6",
+          "source_bytes": 99544,
+          "olean_sha256": "ce493e85194aa520a1b657abb770786fef2cb4b44e2480fdd5a43393c243d8fe",
+          "olean_bytes": 7765544,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height015.lean",
+          "exit_code": 0,
+          "seconds": 81.116,
+          "source_sha256": "a050d063bbf3a2f55f843c469a3dc8b655d3d7656e8c79a4e1f4baae5d4d583a",
+          "source_bytes": 99670,
+          "olean_sha256": "b3b056eea9b03e1800875ee792bd7743bafac9baf0863f0084a389fb0682a079",
+          "olean_bytes": 7821520,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height017.lean",
+          "exit_code": 0,
+          "seconds": 39.687,
+          "source_sha256": "b6c46c012b16357a9653550281fb08ff8c12d2585707940eab8aa015bc77b785",
+          "source_bytes": 99419,
+          "olean_sha256": "2cf5ebf10cda34af996c3a35d7be53fd913566507307bfe9867deb3730849a54",
+          "olean_bytes": 7827008,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height019.lean",
+          "exit_code": 0,
+          "seconds": 34.319,
+          "source_sha256": "0b36c9e86c17894eae86ae9d55392e775638e6388327a305ca6627d8f2fa6e57",
+          "source_bytes": 99147,
+          "olean_sha256": "1a854c9315be0bfe05629f162952d6459a6b7daa774854071739ce11a35f551e",
+          "olean_bytes": 7792336,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height018.lean",
+          "exit_code": 0,
+          "seconds": 57.927,
+          "source_sha256": "4a368fe035a8e3bbda58dcf4f7cdc4d7f32966e3b1a7fa57406fb2df97f96aa7",
+          "source_bytes": 99264,
+          "olean_sha256": "470236e1143661fe4aa86f6e19ac2e5e2762406dff0a01f215d87003c9ca58e2",
+          "olean_bytes": 7824144,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height021.lean",
+          "exit_code": 0,
+          "seconds": 36.071,
+          "source_sha256": "983f3112dc40597d2f810cd5bf2ef2148ed74344a92c4f401d3bcd3a5d0f2808",
+          "source_bytes": 98914,
+          "olean_sha256": "44942deabdeae2311c4afc8a7a068ad2e6dc563bc0c342946f0900e7d734ed83",
+          "olean_bytes": 7806632,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height020.lean",
+          "exit_code": 0,
+          "seconds": 64.091,
+          "source_sha256": "6540a53b66af05085fccfb278f16f89dea271f54091265c5e294a098a3943db8",
+          "source_bytes": 99023,
+          "olean_sha256": "a16db078fc10573383d948e0c5aa766ea8c3a83da4b39a50622b53fe5637c757",
+          "olean_bytes": 7812368,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height023.lean",
+          "exit_code": 0,
+          "seconds": 33.995,
+          "source_sha256": "cb28771032842c1717a1b8b7ff832135cac43b62cc89818aa7f52f2eb95e3a4b",
+          "source_bytes": 98702,
+          "olean_sha256": "a0bf129e07c93bd5b87d1f18516e2257f1987d0ce5f39f7fa125eded9df67c3f",
+          "olean_bytes": 7779736,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height022.lean",
+          "exit_code": 0,
+          "seconds": 65.757,
+          "source_sha256": "affeffd59c7b90d30fa5a008a884da7d494c4b0c2ba7e6a906262512b04b4de2",
+          "source_bytes": 98786,
+          "olean_sha256": "d51aae312da17f92b6b0ba5d1bf9b8c9b75fef7df9942628645c48c067f5c5f4",
+          "olean_bytes": 7764256,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height024.lean",
+          "exit_code": 0,
+          "seconds": 36.638,
+          "source_sha256": "b3dabad49f66ba934d8c598edbcc05dd19a54d527d494eec77e590c207fe0a63",
+          "source_bytes": 98532,
+          "olean_sha256": "e0eac1580e4268e95ed0e98acd45444c698995b1f8e3c151d8518544465dce3f",
+          "olean_bytes": 7791952,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height025.lean",
+          "exit_code": 0,
+          "seconds": 54.672,
+          "source_sha256": "6e9c5a10e3a3df38364fb2259449dc19888bd2d0bad06343c820d4a3d450c402",
+          "source_bytes": 98484,
+          "olean_sha256": "7d8e675298a463e17a0bd6c14251303116f0c1bd94a5b29c75bb329c0dd47d86",
+          "olean_bytes": 7793712,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height026.lean",
+          "exit_code": 0,
+          "seconds": 69.425,
+          "source_sha256": "fa7df4d6f0adb69616089ac52d0c35e50bdbd6292134ecdc3eb4f89f677cfe9d",
+          "source_bytes": 98262,
+          "olean_sha256": "db5522795a0bfa07ad5595af6003b53324dd6eda0119b2c8ad6d24cfedbeb180",
+          "olean_bytes": 7846760,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height027.lean",
+          "exit_code": 0,
+          "seconds": 40.142,
+          "source_sha256": "360e56a030122ee39be5040f891918b3901cde002c6d7b532a253882785023e0",
+          "source_bytes": 98165,
+          "olean_sha256": "1ee738512db45b7aa848992a99a63905ca87ff6d8ec078980f6f75765deec9f4",
+          "olean_bytes": 7821480,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height028.lean",
+          "exit_code": 0,
+          "seconds": 48.859,
+          "source_sha256": "e94888aa971d95cd834e21f7fe17e0b6e9438f2b34eb045cd44a4d845b5701ad",
+          "source_bytes": 98038,
+          "olean_sha256": "a1179303a0dd8129833a307489adfe8aae950daba98221087daacc3eae83bdd4",
+          "olean_bytes": 7822320,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height029.lean",
+          "exit_code": 0,
+          "seconds": 33.752,
+          "source_sha256": "3c95b37e0e8ea94c01d59276428244338166a09d2bedfb5002e4792f189ae2fa",
+          "source_bytes": 98005,
+          "olean_sha256": "702debc45e75ac0c45a0ed90a4daef8c88624e1e5b1ce52ee20e1e05fec0c8e3",
+          "olean_bytes": 7800728,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Sigma000.lean",
+          "exit_code": 0,
+          "seconds": 34.047,
+          "source_sha256": "28b224b7909b18cd4a0eabd65ec21251cd54e97d67f282443e3fae182aa07b31",
+          "source_bytes": 75966,
+          "olean_sha256": "02b27d724408b7b284bd1efe40596076828a5efa75ebbdfb73a14460b665a683",
+          "olean_bytes": 7888984,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Height030.lean",
+          "exit_code": 0,
+          "seconds": 50.412,
+          "source_sha256": "46547a1b067d7020323b1419aa8dc80baadcbb1d402f5d6f5c9d9d376c39466f",
+          "source_bytes": 85940,
+          "olean_sha256": "ae983c4177edd9bb1fb49e1456ad92843465deb509384c4e94b4728dac11311d",
+          "olean_bytes": 6941256,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Sigma001.lean",
+          "exit_code": 0,
+          "seconds": 35.517,
+          "source_sha256": "d4171891ed4252e7d8e4da4147f6fb8171ff9ea1d82cf7d75f27986b54d90106",
+          "source_bytes": 76267,
+          "olean_sha256": "e6812aec6540909ea2e803c30c65883396af58387c990d0e095370d7713252e9",
+          "olean_bytes": 7933024,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Sigma002.lean",
+          "exit_code": 0,
+          "seconds": 36.714,
+          "source_sha256": "d5354480421595d4acb892ca301825f1c2d8bf157580cad7e7c543c8272738f7",
+          "source_bytes": 76361,
+          "olean_sha256": "f129464ccdf6c098a445b693244468b85f1942ed759fd482e34763f9ab6cdd7d",
+          "olean_bytes": 7927552,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Sigma003.lean",
+          "exit_code": 0,
+          "seconds": 36.652,
+          "source_sha256": "c67179abf2ac7f2b2c5821db1df2262ca628600fc2c55e38cad7ec2c7b0a648d",
+          "source_bytes": 76233,
+          "olean_sha256": "0bd233329f03d1a1ab4b6f49c4a24193a3ebc66d7c9967b4fb18dcd63b80507f",
+          "olean_bytes": 7911960,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Sigma004.lean",
+          "exit_code": 0,
+          "seconds": 53.192,
+          "source_sha256": "64eac631586464f0482930aba4785f01d3e05d85b7ece52b1915d6edd6f740b1",
+          "source_bytes": 76322,
+          "olean_sha256": "f7c7afcf7429e0398eee33cbd1a06a0b56168cd7c2e4524da0b4a0b0962409ca",
+          "olean_bytes": 7927032,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Sigma005.lean",
+          "exit_code": 0,
+          "seconds": 34.271,
+          "source_sha256": "d923c16ec449526407c0f7c87e3c117e2f57ab87fd79faa5a67690dab16f6f0c",
+          "source_bytes": 75944,
+          "olean_sha256": "aec48e84ea21add217530ee31a2ee36cc164d8f65542a986903d0275bedab470",
+          "olean_bytes": 7831184,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Sigma006.lean",
+          "exit_code": 0,
+          "seconds": 47.549,
+          "source_sha256": "e98a194b88548501e76a006c401a8c71f67fbe3584f5116a78e80f220b3c5b1f",
+          "source_bytes": 76160,
+          "olean_sha256": "efe12821cff2e537f270852f1370ca30df60489fe1db574580d3138119578c98",
+          "olean_bytes": 8025528,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Sigma007.lean",
+          "exit_code": 0,
+          "seconds": 56.995,
+          "source_sha256": "1b13277ba2a35d51d089b694a6a5edd1808dea757fd88c19549c5106225047ca",
+          "source_bytes": 76280,
+          "olean_sha256": "e721ff5379059f78a4fc84c7017407c0c5584eb7bd4c37e719a75bd3dc4705fd",
+          "olean_bytes": 8390600,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Sigma009.lean",
+          "exit_code": 0,
+          "seconds": 49.647,
+          "source_sha256": "e79390fbcce674c96b2dcf0d1675d514990e23fb7f6c49c5675f3c89d65f5b28",
+          "source_bytes": 77720,
+          "olean_sha256": "1c3fcc7de96f0d45b8e801fe8fa7fe97f57cda194fadf0d84565c6a722c79945",
+          "olean_bytes": 8418016,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Sigma008.lean",
+          "exit_code": 0,
+          "seconds": 88.811,
+          "source_sha256": "42d6d0a6b6106ba67dd26a5aff3c204a1fae655ad5346b8a06ff2d462d000f21",
+          "source_bytes": 77110,
+          "olean_sha256": "b175295903aea1165cbdbffc1c5a29e824b3afb95cd0bbda883811108f744154",
+          "olean_bytes": 8474576,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Sigma010.lean",
+          "exit_code": 0,
+          "seconds": 41.038,
+          "source_sha256": "775734cafac8e27fa4b277c98ba59e8154b6961444e766c0129f65e89e5ca726",
+          "source_bytes": 78043,
+          "olean_sha256": "57d023bc7f339e2b2a5e3f40748e1b1691d32a79aa47d417c06f787df6df820e",
+          "olean_bytes": 8461336,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/Enclosures/Sigma011.lean",
+          "exit_code": 0,
+          "seconds": 35.316,
+          "source_sha256": "84aa6a6eeb7b874f5d1c1a483010f2d527b110f43448fc6a7fdffed2e1b9b033",
+          "source_bytes": 78331,
+          "olean_sha256": "e770b19ebdebf78cd04412c7756fff106de7ab52a003dddf65e09966504c706c",
+          "olean_bytes": 8370888,
+          "compiler_output": ""
+        }
+      ],
+      "parallel_workers": 2,
+      "autoImplicit_explicit": null,
+      "autoImplicit_effective": true,
+      "compiler_flags": []
+    },
+    "factor_connections": {
+      "status": "ALL_BLOCKS_COMPILED",
+      "elapsed_seconds": 916.539,
+      "rows": [
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height000.lean",
+          "exit_code": 0,
+          "seconds": 20.853,
+          "source_sha256": "e7fbf77516e8131ed38cba8597d2386b0b97a315b53b8a6df7bc1ee15ce4c1eb",
+          "source_bytes": 14659,
+          "olean_sha256": "8da360fedc39ed6e074b89f39a8a309485e7fe6c8024a27305eb9d6ed1f1ec92",
+          "olean_bytes": 357128,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height001.lean",
+          "exit_code": 0,
+          "seconds": 21.22,
+          "source_sha256": "5417bad00c1e552e4614ebd1e823e2c121cdddb8b3d940f3e80cd203b4483001",
+          "source_bytes": 14742,
+          "olean_sha256": "2dfe2ecda8b9561d4fd7b6e4c9fc68a04271f911158445f0d8b74dacac1591ca",
+          "olean_bytes": 358032,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height002.lean",
+          "exit_code": 0,
+          "seconds": 22.673,
+          "source_sha256": "5b985dcb1536e351aa277a5c917fd2a8698d7104ff52cf0a9a71c75bd0b72fd9",
+          "source_bytes": 14744,
+          "olean_sha256": "c98bd6a93640600673429e698567e0d588325836c1a68f3300c225f1f0f745b7",
+          "olean_bytes": 358656,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height003.lean",
+          "exit_code": 0,
+          "seconds": 42.72,
+          "source_sha256": "62bead2e5b74a5ecfd7456e5ed5d4abd4842d4dc5ae1c347e409e6f8e4fc3d3c",
+          "source_bytes": 14834,
+          "olean_sha256": "b692f1a6f0ca1454ba44748d24c30bd0b106b41dc4bc55c2829cab91542d6052",
+          "olean_bytes": 359016,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height005.lean",
+          "exit_code": 0,
+          "seconds": 23.405,
+          "source_sha256": "29204a2095633ce5f9ccbb217ef630e448705337e4d0d9dfc95927fd65bc6dd8",
+          "source_bytes": 14851,
+          "olean_sha256": "5a520ef26d044ab731f9d50f513bd68c879b0c73a29f1aeb0142607fc8599e59",
+          "olean_bytes": 356576,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height004.lean",
+          "exit_code": 0,
+          "seconds": 65.11,
+          "source_sha256": "1f14650c1a889cb076d5d3521fbb2aafad1eb631b1467ec1527f55c9e790d5fa",
+          "source_bytes": 14837,
+          "olean_sha256": "fa9c218375490715736484c69d4d4839bdf3f06f1443b9e08b63bfb25928640a",
+          "olean_bytes": 358928,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height006.lean",
+          "exit_code": 0,
+          "seconds": 37.023,
+          "source_sha256": "c5ec4dd2f2546cb811adfefb97484860d8757a91c55b2f319b93909df20148b1",
+          "source_bytes": 14846,
+          "olean_sha256": "f9cedd78c8ca9de4b5b9fd49ed65e0caddfd625d8196bed42f61f132dc2fffe4",
+          "olean_bytes": 357704,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height007.lean",
+          "exit_code": 0,
+          "seconds": 39.9,
+          "source_sha256": "a37d7d6bc477132645eb4c2358dcea210f3def894360fc5f59ad2f5372351c7b",
+          "source_bytes": 14870,
+          "olean_sha256": "cf180ed0a2a23ccc3173469a093418f1b8b737e321dd8adcdaa4a3b19e33c5d7",
+          "olean_bytes": 359064,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height008.lean",
+          "exit_code": 0,
+          "seconds": 40.651,
+          "source_sha256": "efa8c1257d319eb4ac193692630eb07ae335971e8ea46f2d5dfd65280d15220a",
+          "source_bytes": 14832,
+          "olean_sha256": "57a89d6ac60467085b78329d63aaa972cb2aa33f2e89e9f8a1d9404f06b9fb25",
+          "olean_bytes": 358888,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height009.lean",
+          "exit_code": 0,
+          "seconds": 24.675,
+          "source_sha256": "cd1f7ecb3d2e7c0229a24228d931b45454b3ae077cab53973368d949f7629540",
+          "source_bytes": 14823,
+          "olean_sha256": "3d1716a38fabf3db0468b8c01bb452736a6ecfc89cadd8cae755360a215ac9b6",
+          "olean_bytes": 359064,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height010.lean",
+          "exit_code": 0,
+          "seconds": 26.378,
+          "source_sha256": "ae11a2b0078e64dc7cbba677253e83e80187081c80dc3854e3ebdc6037bd11f2",
+          "source_bytes": 14784,
+          "olean_sha256": "fffcc5837bcee390c668029399fc08cd413f68b63a69f9c2f1cfb78a2d92e282",
+          "olean_bytes": 359792,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height011.lean",
+          "exit_code": 0,
+          "seconds": 36.999,
+          "source_sha256": "3c10d2630fbbe18ba644c4e966de701ce5d001ca619526594419ad632178e734",
+          "source_bytes": 14780,
+          "olean_sha256": "a06e17e2a67d341d18c64b3b2274b52571fa0b74c847c046bc0295df401b5768",
+          "olean_bytes": 358656,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height012.lean",
+          "exit_code": 0,
+          "seconds": 26.39,
+          "source_sha256": "d4c3e089f59e079dcb6536f3fcb3042d7d57f01d0f7f086368cf3832ab567d3a",
+          "source_bytes": 14762,
+          "olean_sha256": "cdcb62dcc20b59dbf525dfbbdd905737babff8f4da6d6f35c571599f456e83ae",
+          "olean_bytes": 358656,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height014.lean",
+          "exit_code": 0,
+          "seconds": 21.936,
+          "source_sha256": "e1f208ed886873423a7e9d425d4477fbb70ad319aef3ba2109ee2a1e8b349a29",
+          "source_bytes": 14708,
+          "olean_sha256": "ddf0a56750e79a2f9f1139a304f642d34318b0777ab1818f6ffed3c9a8167b84",
+          "olean_bytes": 359920,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height013.lean",
+          "exit_code": 0,
+          "seconds": 35.463,
+          "source_sha256": "2cfe3ac8ff41cfdebd7211605ef28144f65d09e49cbf6731db5b978625580b69",
+          "source_bytes": 14742,
+          "olean_sha256": "4d4b73b43ed0189c848a0f2ba89b042654db40920138965f7ed72e5c4bcaa5bb",
+          "olean_bytes": 357072,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height015.lean",
+          "exit_code": 0,
+          "seconds": 27.028,
+          "source_sha256": "37d6b69eb677b4c67b11e46b98545a6c47237c0d2a613a0c378ce7db5222d74e",
+          "source_bytes": 14707,
+          "olean_sha256": "1817a581632fb59e7958e7c1e89e0ae737fe6c6c9b5ba485193948ba2c6b41e7",
+          "olean_bytes": 357936,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height016.lean",
+          "exit_code": 0,
+          "seconds": 27.668,
+          "source_sha256": "e8a7b990b8ee770bee0689d1b394626c7bfa8f38a9a425dc3963fb9f4b1f1dfe",
+          "source_bytes": 14665,
+          "olean_sha256": "b0b1ae512f9a0fca9c0eafb25f682250f8890e9a774c0057f78553068b885858",
+          "olean_bytes": 359160,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height017.lean",
+          "exit_code": 0,
+          "seconds": 28.329,
+          "source_sha256": "ae716518f455f859505bab7b787d50b6af04049734954c814c873467f8599045",
+          "source_bytes": 14647,
+          "olean_sha256": "01079504740ffc0dfc3258e221a2b422a579dd2991a3271f39a9df9ab0496c92",
+          "olean_bytes": 359248,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height018.lean",
+          "exit_code": 0,
+          "seconds": 33.707,
+          "source_sha256": "51c6eb5bb8a9974710def7f826754264b61c100089966fdd52fb7ed8f0cd8e09",
+          "source_bytes": 14634,
+          "olean_sha256": "f4a5f4c7408fca2aa78c798bfa7051673c34a754496c5d2f5e5afd88f5304984",
+          "olean_bytes": 359608,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height019.lean",
+          "exit_code": 0,
+          "seconds": 69.821,
+          "source_sha256": "28abb8ef08286002c57f2b6d9ec9f2510739a4eb31c96d42b3a5cd17589c61bd",
+          "source_bytes": 14602,
+          "olean_sha256": "bda07756dc3fd0e7fdf8485560c5b457029163f8bfd6897669917c3f1eb091f0",
+          "olean_bytes": 357480,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height020.lean",
+          "exit_code": 0,
+          "seconds": 92.904,
+          "source_sha256": "ea83dfd6acb6fb71d4637cd5474c1f4155c013ffe85de1f8b70d70a1313ecd1c",
+          "source_bytes": 14581,
+          "olean_sha256": "d9f19c987bd99048780142dda291178b850db59893dfc484a23689a3450e97a3",
+          "olean_bytes": 359656,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height021.lean",
+          "exit_code": 0,
+          "seconds": 65.74,
+          "source_sha256": "ae92439100b408c837efbc3159f5d2159ecf41597bcd239c0e6b0a41caacb4b0",
+          "source_bytes": 14583,
+          "olean_sha256": "666021d584183fdafeb08a14e8e1465f3ab6fd522dda45725ecf6222f3e658f7",
+          "olean_bytes": 358336,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height022.lean",
+          "exit_code": 0,
+          "seconds": 43.87,
+          "source_sha256": "49182c88355ca97595d4c869216f6fa1f42ff17b5e0ed813c9eb10f9415db6a5",
+          "source_bytes": 14538,
+          "olean_sha256": "413ada6fa75193f18653db1e21b335a85c7e1441deb6d68cdb575cbc13813bd8",
+          "olean_bytes": 357528,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height023.lean",
+          "exit_code": 0,
+          "seconds": 23.273,
+          "source_sha256": "5f7377b085743bd18e61f97f1874bd36d4bc2a45309e023c4d09a16963e6f736",
+          "source_bytes": 14533,
+          "olean_sha256": "9c142ff68e7460d404baccaf0b82bdfb2fb4b51f87f10e9de34012b97226e0fd",
+          "olean_bytes": 357616,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height024.lean",
+          "exit_code": 0,
+          "seconds": 23.815,
+          "source_sha256": "48b782e498e1eb0a99142f9eff668bbf97a3536e093e707912be4b0a3613253d",
+          "source_bytes": 14504,
+          "olean_sha256": "cbc7213c3e3e72a0a62e61342bff0debad76cb02393c0ef3d3aaaa8cd1b7373c",
+          "olean_bytes": 358840,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height025.lean",
+          "exit_code": 0,
+          "seconds": 23.902,
+          "source_sha256": "c56e8065cd73acfb1f12456da5c2848cc5600494b0a3e0f2d5964a8e1a12b5ca",
+          "source_bytes": 14467,
+          "olean_sha256": "cfcbf1092b17d51ed290cda7d572a78c7fb711162df5f495e82a229878b87b17",
+          "olean_bytes": 357936,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height026.lean",
+          "exit_code": 0,
+          "seconds": 23.684,
+          "source_sha256": "78f7b12e01de173f27cf38d371f0e96a8db710d1d9b5dccf5f0047f8e0efba98",
+          "source_bytes": 14443,
+          "olean_sha256": "c2c1d525a94c73e78eac10a744fe924c13ce1006d9b7d0cb2fa191a556677eb8",
+          "olean_bytes": 360064,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height027.lean",
+          "exit_code": 0,
+          "seconds": 25.363,
+          "source_sha256": "a5b71f131f7221a575f0f72b4f7b762c6d678beda0883279e7cec78a0e91ebb3",
+          "source_bytes": 14435,
+          "olean_sha256": "8cdb42a0f7957df0b158f946d52216b3f44e7190d56bd973772e53c82f4640df",
+          "olean_bytes": 359248,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height029.lean",
+          "exit_code": 0,
+          "seconds": 26.465,
+          "source_sha256": "8a12016224a1d0862fac3ac7f79ffadea8fca3b8e0e8592dee7ae54a9c28f47a",
+          "source_bytes": 14406,
+          "olean_sha256": "5b8ebb42551d78ce71a9b608523c38a9cfbba21e4387168437633a3bd6bc7fef",
+          "olean_bytes": 357888,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height028.lean",
+          "exit_code": 0,
+          "seconds": 50.946,
+          "source_sha256": "6fac9ceab13a7fd6d23c7fb8304c490b7bad047ce936f36479128efafaec0d91",
+          "source_bytes": 14395,
+          "olean_sha256": "31f63ff1ec2fe603ccfa1bd750c4b9c194229aca78e95d2b9c190086a6f01faf",
+          "olean_bytes": 358976,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Height030.lean",
+          "exit_code": 0,
+          "seconds": 23.365,
+          "source_sha256": "d1a4ad193e28cb9ba6be86df78235059c83bdc17608da20418f922a0a73fc798",
+          "source_bytes": 12664,
+          "olean_sha256": "fc2e0d5c109a02060891590257803ef75623db29e6f4e2bd4b11c7e50f2ead6d",
+          "olean_bytes": 317296,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Sigma000.lean",
+          "exit_code": 0,
+          "seconds": 21.779,
+          "source_sha256": "27579997bc5e7c6f3d1cb55c5308d8d2eaff9e3e21231d64c3a8c722dd87e1a0",
+          "source_bytes": 53319,
+          "olean_sha256": "68f72d667294925292291c19545b17b8ebf734e72fa8a7517482e4bc5a5a231e",
+          "olean_bytes": 922736,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Sigma001.lean",
+          "exit_code": 0,
+          "seconds": 24.817,
+          "source_sha256": "708228bc2db6d671121a8ef2ce8ca0447e4bcbdc3f0304ace2f589bad8e7dbfc",
+          "source_bytes": 53643,
+          "olean_sha256": "349c8f00f6916010fef32122f998b337865733492c12bfc27ca4036ad7ebfa15",
+          "olean_bytes": 925488,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Sigma002.lean",
+          "exit_code": 0,
+          "seconds": 28.725,
+          "source_sha256": "19dba6083398414292517801e8c1d3529873329206735a258905abcb02983c23",
+          "source_bytes": 53628,
+          "olean_sha256": "0eca566571573ad8636e147426105eac677575fe30add416429e861c55782ce3",
+          "olean_bytes": 925392,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Sigma003.lean",
+          "exit_code": 0,
+          "seconds": 49.482,
+          "source_sha256": "aa4b137935f40f5b368fc0974d315356a1521015883948281059fabcc32beb7b",
+          "source_bytes": 53635,
+          "olean_sha256": "4067868121cce5c8aa2d35bb2bc1a39fd643fda2c70363570f51025c383edceb",
+          "olean_bytes": 925480,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Sigma004.lean",
+          "exit_code": 0,
+          "seconds": 58.285,
+          "source_sha256": "891e3eff2f2e762e0275cfb20fccdfefe89120a71e2fd2aa4074261d78c62bd4",
+          "source_bytes": 53630,
+          "olean_sha256": "a347c2e50201a271bd5261c59bb512b236ad69a6600088cbd1972e8e3e562b13",
+          "olean_bytes": 924488,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Sigma005.lean",
+          "exit_code": 0,
+          "seconds": 37.958,
+          "source_sha256": "e496488e85939653f452dd7a0dc9c93ab5858945e553b53a6de47578f8c28b0b",
+          "source_bytes": 53637,
+          "olean_sha256": "2d46e50b9531802bdfbb046b09df96a988e5dc9ac12756d1289f0fcc9b7c5c56",
+          "olean_bytes": 925480,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Sigma006.lean",
+          "exit_code": 0,
+          "seconds": 44.896,
+          "source_sha256": "6b888e51102f55c51022057ad175bbd408f60c4fd0101e1c48b70910a0bfdcc0",
+          "source_bytes": 53596,
+          "olean_sha256": "a1e9afc4c6fd63e2f0f58b66cbd6670b002de27eda39b8592c6dc5c4955fa455",
+          "olean_bytes": 1014768,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Sigma007.lean",
+          "exit_code": 0,
+          "seconds": 50.99,
+          "source_sha256": "78e0db4f648cd56895352b0bba52250c246d30661ef8c536647302c8c77f70c6",
+          "source_bytes": 53920,
+          "olean_sha256": "34cd3cb2780a638b0ecb035f3f7a5dbd1cb2f0bd300dd9317af903729bf2d6d7",
+          "olean_bytes": 1291104,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Sigma009.lean",
+          "exit_code": 0,
+          "seconds": 54.838,
+          "source_sha256": "0ab07b06a81a539bbe05cc537f5281212c2b9225acfc7961a52f48e062527a01",
+          "source_bytes": 55071,
+          "olean_sha256": "aa0dfb45411815318774ba10933b7bceba4b2696405991b4e682fa1dd3acefcc",
+          "olean_bytes": 1315768,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Sigma008.lean",
+          "exit_code": 0,
+          "seconds": 118.221,
+          "source_sha256": "40bc31eb3df98bd478a72ac14aabf1d2b400bf6f67cd1a20470c4c5896227fc9",
+          "source_bytes": 54673,
+          "olean_sha256": "55c07b6d945fc7c170e787b8365ab60f1a0109d4814d9b178453c0738923330e",
+          "olean_bytes": 1313560,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Sigma010.lean",
+          "exit_code": 0,
+          "seconds": 85.163,
+          "source_sha256": "6653167c836b9923a4af80ac2eb02ed331fcf3c2a15948d54d4db6fe3689a11b",
+          "source_bytes": 55419,
+          "olean_sha256": "97d8db649ef1c136354681bc8988e2d6be1bbafb23b1cd4e69876c9a01df9fbf",
+          "olean_bytes": 1317352,
+          "compiler_output": ""
+        },
+        {
+          "module": "LegendreK6/M2Pilot/FactorBounds/Sigma011.lean",
+          "exit_code": 0,
+          "seconds": 102.332,
+          "source_sha256": "02633e4f9c7b7fc861b7e6e9c5f6a6cfb15e412256859f7ad5f0c50c7bc63f52",
+          "source_bytes": 55674,
+          "olean_sha256": "41b59e77fdf0383e46a5cbe8ed750debdf1f30214bc527da0b39e0e7c8d52713",
+          "olean_bytes": 1317760,
+          "compiler_output": ""
+        }
+      ],
+      "parallel_workers": 2,
+      "autoImplicit_explicit": false,
+      "autoImplicit_effective": false,
+      "compiler_flags": [
+        "-DautoImplicit=false"
+      ]
+    }
+  },
+  "assembly_builds": [
+    {
+      "source": "LegendreK6/M2PilotFactorBounds.lean",
+      "exit_code": 0,
+      "seconds": 67.32567260001088,
+      "started_utc": "2026-11-06T05:39:27.728831+00:00",
+      "command": [
+        "lean",
+        "-DautoImplicit=false",
+        "-o",
+        "<build>/LegendreK6\\M2PilotFactorBounds.olean",
+        "LegendreK6/M2PilotFactorBounds.lean"
+      ],
+      "source_sha256": "7625778d79d2e11722125c556ff65bcd1a273fb7184a648693d5c9255432883b",
+      "autoImplicit_explicit": false,
+      "compiler_output": ""
+    },
+    {
+      "source": "LegendreK6/M2PilotLowRankBound.lean",
+      "exit_code": 0,
+      "seconds": 47.87572710000677,
+      "started_utc": "2026-11-06T05:40:35.055514+00:00",
+      "command": [
+        "lean",
+        "-DautoImplicit=false",
+        "-o",
+        "<build>/LegendreK6\\M2PilotLowRankBound.olean",
+        "LegendreK6/M2PilotLowRankBound.lean"
+      ],
+      "source_sha256": "1bbffe9fbcc5e5d7c261b0898b866e688c6d8d9ab4e84d40ff3055cc4f9eca41",
+      "autoImplicit_explicit": false,
+      "compiler_output": ""
+    },
+    {
+      "source": ".lake/tmp/M2FullNumericAudit.lean",
+      "exit_code": 0,
+      "seconds": 18.5628127999953,
+      "started_utc": "2026-11-06T05:41:22.932533+00:00",
+      "command": [
+        "lean",
+        "-DautoImplicit=false",
+        "-o",
+        "<build>/.lake\\tmp\\M2FullNumericAudit.olean",
+        ".lake/tmp/M2FullNumericAudit.lean"
+      ],
+      "source_sha256": "a4fa8cd3dbc818d31103fa90a1a5f1a6201362c2c02ac1e5fb43bbab9e773d9b",
+      "autoImplicit_explicit": false,
+      "compiler_output": "'LegendreK6.exp_le_taylor20' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.lowRankTaylor20_mono' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M2Pilot.sigmaFactor_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M2Pilot.sigmaPower_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M2Pilot.heightFactor_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M2Pilot.heightPower_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M2Pilot.rationalLowRank20_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M2Pilot.dyadicLowRank20_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M2Pilot.lowRankTaylor20_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M2Pilot.prime_power_budget_small' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M2Pilot.trivial_budget_small' depends on axioms: [propext, Classical.choice, Quot.sound]\n"
+    }
+  ],
+  "option_note": "The first enclosure batch used Lean default autoImplicit=true; factor and final assembly batches explicitly used false. All generated theorem binders are explicit. The repository-wide final build is performed separately with lakefile options.",
+  "generator_manifest": [
+    {
+      "path": "code/generate_m2_pilot.py",
+      "sha256": "f854b323ff5e9a81a0f9f2a539689b069621abdf5d9d15fc2b002a598b996638"
+    },
+    {
+      "path": "code/generate_m2_factor_bounds.py",
+      "sha256": "a6a62aacf85e7b999bd8a72fdbf6261393152a1c59a2c44e8a3fc253b973a304"
+    }
+  ],
+  "read_only_regeneration_checks": [
+    {
+      "command": [
+        "python",
+        "code/generate_m2_pilot.py",
+        "--all-blocks",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"SOURCE_MATCHES\",\n  \"number_of_blocks\": 43,\n  \"bytes\": 3994214,\n  \"report\": \"D:\\\\UGit\\\\AI4Math\\\\.worktrees\\\\qrh-full-lean\\\\routes\\\\qrh\\\\tmp\\\\m2_enclosure_generation.json\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "code/generate_m2_factor_bounds.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "43 bound blocks match\nBoth final bound modules match\n",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "python",
+        "code/generate_m2_pilot.py",
+        "--check"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"SOURCE_MATCHES\",\n  \"source\": \"lean\\\\LegendreK6\\\\M2Pilot\\\\EnclosureSample.lean\",\n  \"sigma_indices\": [\n    0,\n    1535\n  ],\n  \"height_indices\": [\n    0,\n    987\n  ],\n  \"bytes\": 10495,\n  \"sha256\": \"5456d30dbfd8c7493d35cbae27b90641420e5d586761aa34d4751c30aacc4191\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "axiom_audit": {
+    "source": "import LegendreK6.M2PilotLowRankBound\nimport LegendreK6.M2PilotSmallBudgets\n\n#print axioms LegendreK6.exp_le_taylor20\n#print axioms LegendreK6.lowRankTaylor20_mono\n#print axioms LegendreK6.M2Pilot.sigmaFactor_upper\n#print axioms LegendreK6.M2Pilot.sigmaPower_upper\n#print axioms LegendreK6.M2Pilot.heightFactor_upper\n#print axioms LegendreK6.M2Pilot.heightPower_upper\n#print axioms LegendreK6.M2Pilot.rationalLowRank20_le\n#print axioms LegendreK6.M2Pilot.dyadicLowRank20_le\n#print axioms LegendreK6.M2Pilot.lowRankTaylor20_le\n#print axioms LegendreK6.M2Pilot.prime_power_budget_small\n#print axioms LegendreK6.M2Pilot.trivial_budget_small\n",
+    "output": "'LegendreK6.exp_le_taylor20' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.lowRankTaylor20_mono' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M2Pilot.sigmaFactor_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M2Pilot.sigmaPower_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M2Pilot.heightFactor_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M2Pilot.heightPower_upper' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M2Pilot.rationalLowRank20_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M2Pilot.dyadicLowRank20_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M2Pilot.lowRankTaylor20_le' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M2Pilot.prime_power_budget_small' depends on axioms: [propext, Classical.choice, Quot.sound]\n'LegendreK6.M2Pilot.trivial_budget_small' depends on axioms: [propext, Classical.choice, Quot.sound]\n",
+    "observed": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "only_standard_axioms": true
+  },
+  "reproducible_build": "Use code/build_lean.py for the pinned complete build; generation --check commands above compare UTF-8 bytes without modifying files."
+}

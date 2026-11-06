@@ -123,3 +123,23 @@ Milestone 1 is accepted relative to those named literature inputs. Milestones
 2 and 3 remain open; `end_to_end_H1_H2_formalization` remains false. The frozen
 paper, historical reviews, original certificate data, and original core
 certificate programs were not changed by this checkpoint.
+
+## Milestone 2 completed proof checkpoint
+
+The final `M2Pilot.pilot_short_interval_from_inputs` compiled successfully.
+For every positive x with `715/4 <= log x <= 179`, it proves the actual
+strict prime interval `ShortInterval6 x` from precisely QRH(7/8), CS v2,
+Rosser's count and the classical integrated explicit formula. No numerical
+budget, weighted zero estimate or local prime conclusion remains as an input.
+All 43 enclosure blocks, 43 real-to-dyadic connection blocks, integer moments
+and final aggregation passed. The complete budget is at most
+`234943/250000 = 0.939772 < 47/50`. The final actual-dependency diagnostic
+passed in 24.0 seconds, with only the standard three Lean axioms.
+
+The human-readable note's height-index notation was corrected: moments use
+the right endpoints `t_i = u_(i+1)`, not the starting node `u_0`. Lean already
+used the correct indices. Original paper/certificates/reviews are preserved.
+This checkpoint uses recorded incremental builds; it does not claim a new
+clean whole-tree rebuild. The earlier aggregate report remains M1 evidence.
+Full finite-range coverage, final assembly and final reproducible build
+remain milestone 3 work; full conditional k=6 formalization is not complete.

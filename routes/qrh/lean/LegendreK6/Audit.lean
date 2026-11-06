@@ -52,3 +52,10 @@ import LegendreK6
 #print LegendreK6.CSv2
 #print LegendreK6.RosserZeroCount
 #print LegendreK6.CHJIIShortInterval
+
+/-! Milestone 2: complete pilot, without a numerical-budget parameter. -/
+#print axioms LegendreK6.M2Pilot.completeBudget_le
+#print axioms LegendreK6.M2Pilot.pilot_short_interval_from_inputs
+#check LegendreK6.M2Pilot.completeBudget_le
+#check LegendreK6.M2Pilot.pilot_short_interval_from_inputs
+#print LegendreK6.IntegratedExplicitFormula
