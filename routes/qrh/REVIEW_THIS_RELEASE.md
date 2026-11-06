@@ -1,6 +1,6 @@
-# 本次 QRH 整理稿：审核入口
+# k=6 条件证明：数学审查入口
 
-本次将七输入下的 k=6 成果整理为完整论文、形式化导读、研究档案和复现包。**先供你本地审核，尚未推送 GitHub。** 工作分支为 `codex/qrh-archive-review-20261106`，以已公开提交 `37b7fbcbb3b900b86600996642eccdfe465d8fdd` 为整理起点。
+本审查包包含七输入下的 k=6 完整论文、形式化导读、研究档案和复现材料，供外部数学专家审阅。当前发布材料及其核验范围见[发布记录](audit/publication_2026-11-06.json)。归档整理以提交 `37b7fbcbb3b900b86600996642eccdfe465d8fdd` 为起点；旧审计中的“本地待审核”状态保留当时记录，当前发布已获项目发起人授权。
 
 ## 建议先读这四份材料
 
@@ -9,7 +9,7 @@
 3. **[论文—Lean 导读](documentation/blueprint/README.md)**：依赖图、区间分工，以及[逐条声明对应表](documentation/blueprint/theorem_map.md)，便于对照正文和源码。
 4. **[研究阶段回顾](research-history/chronological_review.md)**：解释从 k=8 背景、k=4 探索到 k=6、证书细化和三个形式化里程碑的选择；原材料链接可追溯。
 
-## 本次整理的边界
+## 结论与材料范围
 
 数学结论仍为：在 QRH、CS v2、Rosser、积分显式公式、有限高度 RH、CHJII、CHL 七项输入下，对每个整数 n≥1 存在素数 n⁶<p<n⁶+6n⁵<(n+1)⁶。新稿呈现实际完成的梯形、密度网格和连续平移证明。
 
@@ -31,13 +31,13 @@
 | 论文—Lean 导航 | 150 处声明对应检查通过 |
 | 原始研究快照 | 177 件、3,782,882 字节全部核对通过 |
 
-正文进行了[解析章节交叉审查](audit/current_manuscript_analytic_crossreview.md)和[尾部、下端及拼接交叉审查](audit/current_manuscript_tail_crossreview.md)。报告明确作者参与实现的部分；它们是项目内 AI 交叉审查。PDF 的[构建记录](paper/current/build_report.json)与[逐页视觉检查记录](audit/current_paper_visual_review.json)绑定具体文件散列。
+正文进行了[解析章节交叉审查](audit/current_manuscript_analytic_crossreview.md)和[尾部、下端及拼接交叉审查](audit/current_manuscript_tail_crossreview.md)。报告明确作者参与实现的部分；它们是项目内 AI 交叉审查。PDF 的[构建记录](paper/current/build_report.json)与[逐页视觉检查记录](audit/publication_visual_review_2026-11-06.json)绑定具体文件散列。
 
-## 请审核的重点
+## 建议优先审查的事项
 
-- 论文是否完整、顺畅地呈现了我们的思路，尤其第 4–10 章是否便于人类逐步复核。
-- 七项前提的陈述和证据分类是否符合你的公开表述预期；H7 的舍入参数问题已如实保留。
-- 原始研究日志中的三份会话标识是否保留公开，具体文件见[快照隐私记录](research-history/snapshot_manifest.json)及研究档案说明。
-- AI 作者分工、人类身份暂空、0BSD/CC0 许可与中英文入口是否合适。
+- 七项前提的精确陈述、来源版本、适用域及实际使用是否对应；H7 的舍入参数问题及来源核查边界已保留。
+- 论文第 4–10 章的推导、严格端点处理、数值预算与全部范围的连接是否完整。
+- 论文陈述与对应 Lean 声明的数学含义是否一致，最终定理是否恰以列出的七项命题为输入。
+- 按[复现说明](REPRODUCING.md)核对文件散列、重放证书并构建形式化证明；既有 AI 交叉审查报告注明了各自的参与和复核范围。
 
-你审核并同意后，再将这一整理版本推送到指定 GitHub 仓库。
+请在审查意见中注明所用 Git 提交、文件与定理或公式位置，区分输入来源问题、数学推导问题和复现问题。可以通过 [GitHub Issues](https://github.com/bernkastel299792458/legendre-kth-powers/issues)记录意见；作者与研究贡献见 [AI 使用声明](AI_USE.md)。

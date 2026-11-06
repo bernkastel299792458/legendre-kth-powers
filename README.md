@@ -23,14 +23,42 @@ and the new arguments in its manuscript.
 
 | Research track | Reported result | Main premises | Review package |
 |---|---|---|---|
+| **B. Assuming QRH(7/8)** | Fixed exponent **k = 6** | **Seven named inputs**, including QRH(7/8), CS **arXiv:2507.15184v2** Corollary 1 and its specified rows; [complete statements](routes/qrh/documentation/inputs.md). | [QRH route package](routes/qrh/README.md) · [Chinese paper, PDF](routes/qrh/paper/current/main.pdf) |
 | **A. Traditional explicit estimates** | Every integer **k >= 70** | The listed explicit estimates, including the **4.896** zero-free-region constant from the Bellotti–Trudgian–Yang preprint. No QRH assumption. | [Traditional manuscript, English](routes/traditional/proof/manuscript.md) |
 | **A. Traditional, refereed-input variant** | Every integer **k >= 74** | The listed refereed literature inputs, using **5.558691** in place of 4.896. No QRH assumption. | [Traditional review package](routes/traditional/proof/README.md) |
-| **B. Assuming QRH(7/8)** | Fixed exponent **k = 6** | **Seven named inputs**, including QRH(7/8), CS **arXiv:2507.15184v2** Corollary 1 and its specified rows; [complete statements](routes/qrh/documentation/inputs.md). | [QRH route package](routes/qrh/README.md) · [Chinese paper, PDF](routes/qrh/paper/current/main.pdf) |
 
 “Refereed-input” describes the sources used by that variant; it does not mean
 that this project's new proof has been peer-reviewed. The two tracks answer
 the question under different premises, so their exponents should be read
 with those premises attached.
+
+## Track B — assuming QRH(7/8)
+
+This route accepts the zeta bound in [OpenAI's official quasi-RH release](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/README.md)
+as an explicit research premise. [Family 003](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/003.md)
+describes the upstream formalization; this project studies its prime-interval consequences.
+
+Under **seven precise inputs** — QRH(7/8), CS v2, Rosser, the integrated explicit
+formula, finite-height RH, CHJII and CHL — every integer n≥1 has a prime
+`n^6 < p < n^6+6n^5 < (n+1)^6`. The [input register](routes/qrh/documentation/inputs.md)
+gives exact statements, source versions and the evidence for each premise.
+CS v2 remains a preprint dependency; all seven inputs remain explicit in Lean.
+
+The complete downstream theorem, `sixth_powers_from_named_inputs`, passed a
+fresh **241-module** build and its matching proof-dependency audit. Project
+analytic intervals and numerical budgets are proved, not additional premises.
+See the [exact formalization status](routes/qrh/FORMALIZATION_STATUS.md).
+
+The reorganized package provides a [new twelve-chapter Chinese paper](routes/qrh/paper/current/main.pdf),
+[paper-to-Lean guide](routes/qrh/documentation/blueprint/README.md),
+[bilingual route entry](routes/qrh/README.md), and a [research-history archive](routes/qrh/research-history/README.md).
+The paper explains the actual final trapezoid proof and continuous propagation;
+the original polynomial-weight paper and its certificates remain historical.
+The old 6% CS-coefficient sensitivity result retains its original scope.
+
+The full-range result is k=6; k=4 and k=3 remain the stage and long-term targets.
+The [review entry point](routes/qrh/REVIEW_THIS_RELEASE.md) links the complete
+k=6 paper, assumptions, Lean sources and verification records.
 
 ## Track A — traditional explicit estimates
 
@@ -71,34 +99,6 @@ The finding is the project's reading, not an author-confirmed correction.
 See the [audit report](routes/traditional/proof/zfr_audit/thesis_19.62/REPORT.md) and
 [withdrawn certificates](routes/traditional/proof/certificates/withdrawn_k67/README.md).
 The historical Lean package name `LegendreK67` is not a current k = 67 claim.
-
-## Track B — assuming QRH(7/8)
-
-This route accepts the zeta bound in [OpenAI's official quasi-RH release](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/README.md)
-as an explicit research premise. [Family 003](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/003.md)
-describes the upstream formalization; this project studies its prime-interval consequences.
-
-Under **seven precise inputs** — QRH(7/8), CS v2, Rosser, the integrated explicit
-formula, finite-height RH, CHJII and CHL — every integer n≥1 has a prime
-`n^6 < p < n^6+6n^5 < (n+1)^6`. The [input register](routes/qrh/documentation/inputs.md)
-gives exact statements, source versions and the evidence for each premise.
-CS v2 remains a preprint dependency; all seven inputs remain explicit in Lean.
-
-The complete downstream theorem, `sixth_powers_from_named_inputs`, passed a
-fresh **241-module** build and its matching proof-dependency audit. Project
-analytic intervals and numerical budgets are proved, not additional premises.
-See the [exact formalization status](routes/qrh/FORMALIZATION_STATUS.md).
-
-The reorganized package provides a [new twelve-chapter Chinese paper](routes/qrh/paper/current/main.pdf),
-[paper-to-Lean guide](routes/qrh/documentation/blueprint/README.md),
-[bilingual route entry](routes/qrh/README.md), and a [research-history archive](routes/qrh/research-history/README.md).
-The paper explains the actual final trapezoid proof and continuous propagation;
-the original polynomial-weight paper and its certificates remain historical.
-The old 6% CS-coefficient sensitivity result retains its original scope.
-
-The full-range result is k=6; k=4 and k=3 remain the stage and long-term targets.
-The current archival reorganization is [awaiting local review](routes/qrh/REVIEW_THIS_RELEASE.md)
-before push. The traditional route's mathematical materials are unchanged by it.
 
 ## Read, reproduce, and review
 

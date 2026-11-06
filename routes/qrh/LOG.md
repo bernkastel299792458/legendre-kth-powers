@@ -225,3 +225,24 @@ This is an editorial/archival consolidation of the seven-input downstream
 k=6 proof, not a new upstream theorem or an all-range k=4 result. It remains
 local on branch `codex/qrh-archive-review-20261106` for the owner's review.
 No push has been performed; publication waits for that review.
+
+## Publication authorized, 2026-11-06
+
+The project owner explicitly requested publishing the complete k=6 package
+for review by three mathematics PhDs. No completed human review is claimed.
+The English and Chinese root README now place the existing k=6 result row
+and QRH route section first, retaining the traditional section's text.
+Current entry points and the PDF identify this as a public review draft.
+
+All mathematical chapter sources, all 241 Lean modules, original numerical
+programs/certificates and historical audit records remain unchanged from
+f6891ed. The PDF edit changes publication wording only; pixel comparison
+confirms identical body content on pages 2–57, with changed regions visually
+checked against the previous full-page review. The old PDF build binding is
+preserved in audit/publication_previous_paper_build_2026-11-06.json.
+
+The frozen proof's full rebuild and exact-input audit from the preceding
+archival acceptance remain applicable to identical proof sources. This
+publication-only edit does not claim another Lean rebuild. New metadata,
+links, paper bindings, snapshot bytes and release hashes are checked before
+push. See audit/publication_2026-11-06.json for the precise publication scope.

@@ -1,0 +1,64 @@
+{
+  "schema": "qrh-publication-v1",
+  "prepared_utc": "2026-11-06T13:17:50.843051+00:00",
+  "state": "PUBLIC_REVIEW_AUTHORIZED",
+  "target_repository": "https://github.com/bernkastel299792458/legendre-kth-powers",
+  "target_branch": "main",
+  "authorization": "The project owner explicitly requested pushing the k=6 package and placing its existing result first on the home page, before review by three mathematics PhDs. No completed human review is claimed.",
+  "record_timing": "Prepared before the authorized Git push; the containing Git commit identifies the published version.",
+  "archival_commit": "f6891ed3837fcb8892e41f80c3b34128c36d48fb",
+  "readme_changes": [
+    {
+      "file": "README.md",
+      "only_changes": "Move the existing B result row and entire B section before A; replace the obsolete waiting-for-authorization sentence.",
+      "traditional_section_byte_equivalent": true
+    },
+    {
+      "file": "README.zh-CN.md",
+      "only_changes": "Move the existing B result row and entire B section before A; replace the obsolete waiting-for-authorization sentence.",
+      "traditional_section_byte_equivalent": true
+    }
+  ],
+  "mathematical_scope": "Complete downstream proof from seven explicit inputs, for every integer n>=1, of a prime n^6<p<n^6+6*n^5<(n+1)^6. The seven upstream inputs remain premises.",
+  "preservation": {
+    "protected_files_compared": 840,
+    "all_byte_identical_to_archival_commit": true,
+    "protected_sets": [
+      "traditional route tree",
+      "QRH Lean sources and build configuration",
+      "QRH code and numerical results",
+      "all thirteen current paper sections, bibliography and bibliography style",
+      "original paper and original build source",
+      "all existing audit records except the navigation README",
+      "all original research snapshot files"
+    ],
+    "inventory_sha256": "5861369eced0ee108fad54fc9f3f7ac443d7cfdd9cb7ebb67a0c9ca508cefba3",
+    "input_register_math_unchanged": true
+  },
+  "verification": {
+    "new_full_lean_build_run": false,
+    "reason": "Only publication wording, navigation order and related metadata changed; the 241 accepted proof sources remain identical.",
+    "retained_fresh_build": "241/241 PASS, 3525.235 seconds",
+    "retained_matching_dependency_audit": "PASS, 25.5 seconds; seven inputs and only propext/Classical.choice/Quot.sound",
+    "paper_binding": "PAPER_SOURCE_PDF_BINDING_PASS 17",
+    "reading_map": "READING_MAP_VERIFIED 150",
+    "snapshot": "177 files, 3782882 bytes verified",
+    "current_navigation": {
+      "documents": 18,
+      "local_links": 521,
+      "missing": []
+    },
+    "visual_record": "audit/publication_visual_review_2026-11-06.json"
+  },
+  "historical_record_policy": "Old LOCAL_* fields and file hashes record their original check time. Resolve their original paths at the archival commit; the old paper build binding has also been copied byte for byte. They were not rewritten to claim a later review.",
+  "evidence_sha256": {
+    "paper/current/build_report.json": "ce70298b3ce4939ca40c6780c3d4a87f9ef87ab36d940f1f9bad85ed3f29c145",
+    "paper/current/main.pdf": "d77ef689fab38b11affc1f47f45489a07c1398345d9002a409d39e47c8317dc1",
+    "audit/publication_visual_review_2026-11-06.json": "e42473f604da38aeb4a8bac87a23d89818f29187c76127348fb2a17ae3df4b1e",
+    "audit/publication_previous_paper_build_2026-11-06.json": "3b4b9b2529f25873e22ab8d849187efbcb537cdba707bf235e6ab32d5f2b8016",
+    "audit/builds/archive-review-20261106/lean_build_report.json": "eec0fe171b5fcdedeedfe5be02b61c11ccfab26f36075fae5e43ebafe2e6a1ee",
+    "audit/builds/archive-review-20261106/final_dependency_report.json": "91d9aae8985ebfdbf6a386b6d912cf0b1f0b7fb8c6d117c414db5802e452d47e",
+    "audit/archive_build_independent_check.json": "3cd3fb0f96a9683e4061ca9dcc5f6af3eb296688e36e3e0bdb8155ed7a820ea1"
+  },
+  "ci_scope": "This record does not claim success of the future GitHub Actions run. Its actual status is associated with the pushed commit on GitHub."
+}

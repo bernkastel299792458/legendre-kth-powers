@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "review_date": "2026-11-06",
-  "review_state": "local draft pending owner review; no push authorized",
+  "review_state": "public mathematical review version; publication authorized by the project owner; upstream inputs remain explicit",
   "title": "Exact external inputs for the QRH-route sixth-power theorem",
   "trust_labels_are_probabilities": false,
   "formalization_scope": "Complete downstream derivation from seven explicit mathematical premises; none of the seven premises is reproved in this repository.",

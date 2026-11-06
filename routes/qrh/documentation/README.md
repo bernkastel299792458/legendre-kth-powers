@@ -10,7 +10,7 @@
 | 查看实际最终命题 | [FinalResult.lean](../lean/LegendreK6/FinalResult.lean)，[完整定理参数与依赖输出](../audit/builds/final-20261106/final_dependencies.txt) |
 | 重新运行证明和计算 | [复现说明](../REPRODUCING.md) |
 | 理解方法如何形成 | [研究历史](../research-history/README.md)，[迭代综述](../research-history/chronological_review.md) |
-| 判断本次整理是否就绪 | [本地审阅清单](../REVIEW_THIS_RELEASE.md)，[整理验证记录](../audit/archive_review_2026-11-06.json) |
+| 审查当前公开版本 | [数学审查入口](../REVIEW_THIS_RELEASE.md)，[发布记录](../audit/publication_2026-11-06.json)，[归档时验证记录](../audit/archive_review_2026-11-06.json) |
 | 查看作者及审阅职责 | [AI 使用声明](../AI_USE.md)，[项目作者分工](../../../AUTHORS.md) |
 
 当前论文采用最终 Lean 中的梯形权、整数矩和连续传播证明。历史原稿的多项式远段、逐单元认证和旧敏感性结果保留在各自版本中；当前状态不要求读者自行拼接旧稿与补充稿。

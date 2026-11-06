@@ -1,6 +1,6 @@
 # QRH(7/8): primes between consecutive sixth powers
 
-[中文版](README.zh-CN.md) · [Review this archival draft](REVIEW_THIS_RELEASE.md)
+[中文版](README.zh-CN.md) · [Mathematical review guide](REVIEW_THIS_RELEASE.md)
 
 Assuming the seven precise inputs listed below, **every integer n ≥ 1** has a prime
 
@@ -53,4 +53,4 @@ The final difficult-pilot, lower-middle, and far normalized budgets are bounded 
 
 The stage target remains k=4 and the long-term target k=3. The current all-integer theorem is k=6; other-exponent explorations are archived with their own assumptions and verification status.
 
-This reorganization is a local review draft, awaiting the owner's review before push. Original QRH code uses **0BSD**; original text and data use **CC0-1.0**, as specified in [LICENSE](LICENSE). Third-party material retains its own terms.
+This package is provided for external mathematical review; the [publication record](audit/publication_2026-11-06.json) identifies the released materials and their checks. Original QRH code uses **0BSD**; original text and data use **CC0-1.0**, as specified in [LICENSE](LICENSE). Third-party material retains its own terms.

@@ -91,7 +91,7 @@ def main() -> None:
         'pdf_sha256': digest(output),
         'compiler_output_sha256': hashlib.sha256(log).hexdigest(),
         'local_intermediates': build_root.relative_to(ROOT).as_posix(),
-        'publication_status': 'LOCAL_USER_REVIEW_PENDING',
+        'publication_status': 'PUBLIC_REVIEW_AUTHORIZED',
         'mathematical_validation': 'See the independent Lean, dependency, and certificate records.',
     }
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n',

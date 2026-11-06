@@ -71,8 +71,11 @@ The new input register, declaration map, research narrative and byte-preserving
 177-file research snapshot were prepared with Codex. The historical Claude
 review was retained without expanding its scope. Original conversations were
 not fully captured; the research archive contains selected project records,
-not a claim of complete model-interaction reproducibility. Its original session
-identifiers remain available for the owner's local publication review.
+not a claim of complete model-interaction reproducibility. Ordinary internal
+session identifiers remain in the original records under the owner's publication
+authorization; they are not access credentials or sharing links. Historical
+local-review status fields retain the state at the time of each check; see the
+[publication record](audit/publication_2026-11-06.json) for the subsequent release.
 
 No new mathematical claim about another exponent is established by this
 archival work. The current k=6 paper, original proof sources, fresh replay

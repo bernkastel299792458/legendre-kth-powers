@@ -81,4 +81,4 @@ R5 的 [高高度定基正文](snapshots/legacy-20261106/theory_round5/PROOF.md)
 
 本次操作证明所选 177 件文件的快照与复制时源文件字节一致，并登记复制前后与最终检查散列。它保留旧结论、失败、改进和审阅上下文，**不增加任何数学覆盖范围**。源码、旧证书、原审稿与当前 Lean 应按各自日期、输入、实现及审查范围阅读；不能把最新状态倒填进旧文档。
 
-完整文件清单见 [snapshot_manifest.json](snapshot_manifest.json)，缺失依赖及原链接情况见 [dependency_gaps.md](dependency_gaps.md)。这仍是本地待审核档案，没有对外发布。
+完整文件清单见 [snapshot_manifest.json](snapshot_manifest.json)，缺失依赖及原链接情况见 [dependency_gaps.md](dependency_gaps.md)。这些档案随 k=6 审查包公开；归档清单中的本地待审核状态保留原检查时点，后续状态见[发布记录](../audit/publication_2026-11-06.json)。

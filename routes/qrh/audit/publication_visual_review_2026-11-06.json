@@ -1,0 +1,1095 @@
+{
+  "schema": "qrh-publication-pdf-differential-visual-review-v1",
+  "status": "PUBLICATION_LAYOUT_REVIEW_PASSED",
+  "reviewed_utc": "2026-11-06T13:04:12.424152+00:00",
+  "reviewer": "Codex child agent /root/publication_review",
+  "role_disclosure": "This agent updated selected current documentation entrypoints, but did not modify the PDF, mathematical chapters, or build script. This is project AI visual checking, not human peer review.",
+  "pdf": {
+    "path": "paper/current/main.pdf",
+    "sha256": "d77ef689fab38b11affc1f47f45489a07c1398345d9002a409d39e47c8317dc1",
+    "bytes": 794620,
+    "page_count": 57
+  },
+  "build_report": {
+    "path": "paper/current/build_report.json",
+    "sha256": "ce70298b3ce4939ca40c6780c3d4a87f9ef87ab36d940f1f9bad85ed3f29c145",
+    "publication_status": "PUBLIC_REVIEW_AUTHORIZED",
+    "bibliography_entries": 14,
+    "unresolved_references": []
+  },
+  "baseline": {
+    "commit": "f6891ed",
+    "pdf_sha256": "500fa769a0933774b677264fab06ecfa403cdc2bb67575f6e485f4ddaa3b446f",
+    "visual_report": "audit/current_paper_visual_review.json",
+    "visual_report_sha256": "cd9f8f03c526f637b631ea2f6d141f496ea8aeb32b336a9a8e735d882eb57250",
+    "old_build_report_sha256": "3b4b9b2529f25873e22ab8d849187efbcb537cdba707bf235e6ab32d5f2b8016",
+    "old_png_hashes_match_prior_page_records": true,
+    "chunk_records": [
+      {
+        "path": "audit/current_paper_visual_01_14.json",
+        "sha256": "0b7de3f3f2996b43f18929cace887c40c172a5749bb690badba99197f9b36262"
+      },
+      {
+        "path": "audit/current_paper_visual_15_28.json",
+        "sha256": "4db69bc6af6626341c8b38300a810afc76eabcc0a226e46d9c8c78b62aa68057"
+      },
+      {
+        "path": "audit/current_paper_visual_29_42.json",
+        "sha256": "62ba377c4dbde208a1419d41f5dc2640754513bce1d7d1c0ff6b63687714d75c"
+      },
+      {
+        "path": "audit/current_paper_visual_43_57.json",
+        "sha256": "b08888165ddb0ba1fb26527c7f5887637381b39ed06b09dbbce372c8ad39483f"
+      }
+    ]
+  },
+  "method": {
+    "description": "Full-page pixel differences for all 57 rendered pages; visual reinspection of changed content and representative recurring headers; prior complete visual review supports the unchanged regions.",
+    "tool": "Pillow ImageChops.difference on RGB images",
+    "pillow_version": "13.0.0",
+    "installation": "Isolated ignored directory tmp/publication-review-python; project dependencies unchanged.",
+    "rendering": "Parent-provided pdftoppm renders at 110 dpi, 910 x 1287 pixels for every page.",
+    "old_render_directory": "tmp/paper-visual-final",
+    "new_render_directory": "tmp/publication-pdf",
+    "bounding_box_convention": "[left, upper, right, lower], right/lower exclusive; origin at top left.",
+    "body_check": "For pages 2-57, every pixel at y>=80 is identical to the prior render. The full difference bbox is also confined to the two changed header glyphs.",
+    "full_pages_directly_viewed_this_review": [
+      1,
+      2,
+      57
+    ],
+    "not_claimed": "This review did not manually re-view all 57 full pages and does not independently verify mathematics or hyperlink destinations."
+  },
+  "summary": {
+    "all_57_dimensions_identical": true,
+    "pages_2_to_57_difference_bbox": [
+      725,
+      47,
+      757,
+      63
+    ],
+    "pages_2_to_57_body_pixel_identical": true,
+    "page_1_changed_scanline_runs_inclusive": [
+      [
+        404,
+        425
+      ],
+      [
+        1110,
+        1128
+      ],
+      [
+        1138,
+        1157
+      ],
+      [
+        1167,
+        1186
+      ]
+    ],
+    "unexpected_changed_pages": [],
+    "open_visual_issues": []
+  },
+  "visual_observations": {
+    "1": "The date-line label is now public-review draft. The revised reading note fits its original area and clearly states authorization for open mathematical review. Title, author roles, abstracts, formula, margins and page number remain legible; no clipping or overlap observed.",
+    "2": "Public-review header is clear; contents alignment, leader dots and page number remain intact. The changed glyphs sit well above the rule and body.",
+    "57": "Public-review header and the final references fit. Long URLs and DOI/arXiv strings wrap within the text margins; the page number remains visible. No clipping or overlap observed."
+  },
+  "source_comparison": {
+    "unchanged_sources": [
+      "paper/current/references.bib",
+      "paper/current/plainurl.bst",
+      "paper/current/sections/01_introduction.tex",
+      "paper/current/sections/02_inputs.tex",
+      "paper/current/sections/03_preliminaries.tex",
+      "paper/current/sections/04_trapezoid.tex",
+      "paper/current/sections/05_density.tex",
+      "paper/current/sections/06_certificates.tex",
+      "paper/current/sections/07_coverage.tex",
+      "paper/current/sections/08_tail.tex",
+      "paper/current/sections/09_lower.tex",
+      "paper/current/sections/10_assembly.tex",
+      "paper/current/sections/11_methods.tex",
+      "paper/current/sections/12_formalization.tex",
+      "paper/current/sections/appendix_versions.tex"
+    ],
+    "changed_sources": [
+      "paper/current/main.tex",
+      "paper/current/build.py"
+    ],
+    "all_13_chapter_sources_unchanged": true,
+    "mathematical_source_claim": "The source comparison is against the previously reviewed build record; only main.tex publication labels/notice and build.py publication metadata changed."
+  },
+  "pages": [
+    {
+      "page": 1,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        104,
+        404,
+        806,
+        1187
+      ],
+      "nonzero_pixels": 12980,
+      "body_after_y80_identical": false,
+      "old_png_sha256": "87046ce2ed7361e7f412eb1575a07f996d08edaec531aa74a80d911094ea5789",
+      "new_png_sha256": "60135e479d685639651c63738ae90b47c2116b43fee0d56aea42dafca0bcdf17"
+    },
+    {
+      "page": 2,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "912addb8f07280c5fe52b71fe88ef8427c9f43ebf25e60990ecea3371755f839",
+      "new_png_sha256": "89a556aea16fa044fac6c9f4dc49487c82869e7d3dce9d692ca7e155ffa0ea55"
+    },
+    {
+      "page": 3,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "a2e14640f732c9ac36cd25ecc7b8b4835ef0743f20bbc49e44800362cce02faa",
+      "new_png_sha256": "df377f4915a58184988a0300219aee71e83459d00848028f567210704587f097"
+    },
+    {
+      "page": 4,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "64c20465c25010f33698f5f3c2c6d53165af0fc1af5b706bac68df2ea929b37d",
+      "new_png_sha256": "686917bb42b9abef8471ca186a2594a138d5bbba1d2366f00be02a4dd76ea287"
+    },
+    {
+      "page": 5,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "e1773a84a4e9102400a66ffb4ed3b4745bcbb225328a3c7997064f5120a9158c",
+      "new_png_sha256": "4725dbd715d0b952a7c3426fd948129d9ae548e0f5371323728d0d727745c7eb"
+    },
+    {
+      "page": 6,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "fde54041600aaadda838c4f621fd9ffa6e2259f237fa899c09b7171fd568fda0",
+      "new_png_sha256": "171dd138ef84237c159bd283c2e46dd46affd5cf86c0c0329e4ae01df7009b07"
+    },
+    {
+      "page": 7,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "4c618c827b25346592437d303c3e4a5640632d9e5015c8e68bff64b8466df43e",
+      "new_png_sha256": "a66714ac9a05b5866015c53b4029522972ad9ab8a696d64cbd49c439ee74a867"
+    },
+    {
+      "page": 8,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "cd4a86be0298695c71ad6bbec22e649e419f30ec6b1ff4b271b1483b740a72fe",
+      "new_png_sha256": "139c32a2265342cb89354c351b774751a65c13fc9eb48a646c98e389f95159e1"
+    },
+    {
+      "page": 9,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "22717bdde5f3b7d3e881240eee8ecd6e3f0c614db379709acf6566e15957783c",
+      "new_png_sha256": "eac157ad32be7375eb897458143f0b38b0138b3aec0e2cbaa105abe25f1c3989"
+    },
+    {
+      "page": 10,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "9d738fd4898f295efda960859e476116b604d5c897e4c74941605e86e028def6",
+      "new_png_sha256": "b7219573f3dbe5143584222a3afc08c0d704087a59e010365ef808f2d29b3adc"
+    },
+    {
+      "page": 11,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "53a71adb59588d9bbd64327704d9c15559dfdbdc889b798c8dd915280fca2b2f",
+      "new_png_sha256": "2fb11c465fba50210237b6b416f4bcab5a9ec10789eeb8e8fd6467ee381ad7b3"
+    },
+    {
+      "page": 12,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "b79696d7d72185957efff8e06c13897c3959bc3a4703b3b9bbe23e6092ded42b",
+      "new_png_sha256": "f0b0544a04857f313535326e7231ff92224beb2b985f277f33eaff2bd955754c"
+    },
+    {
+      "page": 13,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "b9619d6077366ec1be1db81c0cee7b01b2cf407bc58dbb80989a80250981fb00",
+      "new_png_sha256": "ec46929cfc4e80e8b753a840d045cd6afa86e1d6c02315381c9d642660dac934"
+    },
+    {
+      "page": 14,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "7a2f4f138ed18d5766386691a6fca8589cb12c0bf1bdeadbc701fa1e7a8f6c5f",
+      "new_png_sha256": "5e5992cbd657ebd24028f3371fc38504f993a21232848f8a59b98e065830b25b"
+    },
+    {
+      "page": 15,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "4b0ef4461b3f92949415cea027ca45e2cc7f716a1b4e40e00b87b1cc66c1be7e",
+      "new_png_sha256": "782c9eec5d9717b20a77beae165b073ba81b9b0c4428461ed9d36a51922f0862"
+    },
+    {
+      "page": 16,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "f5bf0a5f864311df9e32e5c726083aeaeb899970343c6d9beb5eee5aa88c5bf0",
+      "new_png_sha256": "357a92051a1910af9dd3cdc0f745cb9095b8c7554167b4bce16b1b0b1bbfb567"
+    },
+    {
+      "page": 17,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "03c38572ffda35e55b28418e2d9737528452d89291c011062ade72ce70e6a0bb",
+      "new_png_sha256": "b369096341da5ea7074c5335b4e77ed1673a36090bbc3bb23b51c6b014a8d1fb"
+    },
+    {
+      "page": 18,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "fa35730785473c29155535d949d79521fc9b0eadc514b8f1d57b7da1e1226457",
+      "new_png_sha256": "6894fbe5758a263c346c3bdc304eb15b89437f6e204b509c7485160f37bc402e"
+    },
+    {
+      "page": 19,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "8c5b7adbf7b4bc7bec59fee8bde153349868aabd65da4cfa7e613ca7bc230571",
+      "new_png_sha256": "bfb063b950e82a221dac786429d28a5f6e7a24f691638db71f5b461b2fd8d6e9"
+    },
+    {
+      "page": 20,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "d825850e07b93a38bd0b3d816a1d5a157e1c7619fe71b6c22e7337f8ba422752",
+      "new_png_sha256": "386be8247fd851e135787fa7523f75c9abc808b06b354c5af4cb18fe1ae7ae91"
+    },
+    {
+      "page": 21,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "c8397f708af96bdc47b920b9980d20da17abca0a2c4fdf594ca078ff8a09fb88",
+      "new_png_sha256": "d03ef03493626b015d48a4dbe4d00a8de1c5d0601563ab5b7c35f79a0af5c211"
+    },
+    {
+      "page": 22,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "8924867c8179adc76b1f7da3b390ae9cc8555b50af09dbcdcf38fce3c9515374",
+      "new_png_sha256": "b50b08011a039857e592603080a13edb64cca8a522159920beeb3f74031a4c83"
+    },
+    {
+      "page": 23,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "e42bb448166bf0c216f72d41a8e6d0d29437badff6e1f9bdf7e55eecf19f0517",
+      "new_png_sha256": "5ecf4c3822e7bcf681f778591e34e346052d3164a7dd0bb5dc894dbb79b59636"
+    },
+    {
+      "page": 24,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "1b423d51d1ff09364f8a61f20d9eb8b46426b2781836e70e5baa3a2bdc6cff7b",
+      "new_png_sha256": "0a89b9e6b335ebb8c40420f4f995b1b21f7e9b21d9998d0da280f4d6f8d0c18c"
+    },
+    {
+      "page": 25,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "3bf38dda69f1f7cca2e94d7b9851bffbe929fcb739b195953ecad7472731bda3",
+      "new_png_sha256": "dbfeb9f097113c7ad85e2d66d4bb37536aacf019b94d2062932163f783f9240b"
+    },
+    {
+      "page": 26,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "97aac2fb5786eef932796a79ab7094d49aeaeb1c1d174ea4844f54ad6d0682a2",
+      "new_png_sha256": "b17b916164bd0798c7fb7481f9150aae883c27eadfd65faa50afb299ec8dcb73"
+    },
+    {
+      "page": 27,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "28fabcc617f2a22fe1452ccfa99ceefca039eda85440ffd551cd8ee5ea423d11",
+      "new_png_sha256": "a48d3da15463dc84ac1bb395654e48df7d2610e7cdd277e03f38350d2ef41f72"
+    },
+    {
+      "page": 28,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "971fdffca2c4cc73fea30921dacc512ea4314d827a12bedb9554d3dbc8f61f7d",
+      "new_png_sha256": "800dfa37d242579961d626597495412efee7f0da8aaa989ed0c6732308686ce3"
+    },
+    {
+      "page": 29,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "6bac419695d3d53170ce8570a8d8bb9c293a8c7c0b687961934e75feacdac480",
+      "new_png_sha256": "3c34d9564d4895a7cf76b7e6a2764ba94a105c924183b317a7e3f827d9c1952b"
+    },
+    {
+      "page": 30,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "3d7d876741227cd56b0dc6020dfb7c31dd19790251cb8cda553b0c3ce23a9cc7",
+      "new_png_sha256": "4c4201f6484f846e6ca8511c008d7a67683178aef21b6fd0586aad2279d60b50"
+    },
+    {
+      "page": 31,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "13138faf811480897fe5acb50eebaf284e7f14c5538160507372abf7fe521b8c",
+      "new_png_sha256": "e2bd46d0c1d70197b7864b2df3a1bb40ae63bb3f20f7ea93bb1cdb0565976907"
+    },
+    {
+      "page": 32,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "a2d1c98d2b28428dfc1e9816651f71cfe99974b99399cc821563e64082147174",
+      "new_png_sha256": "388e392c611c817abe73784ed7ca19b59b58f14f15a66e4782f4c14ecd110d45"
+    },
+    {
+      "page": 33,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "aa6239268ff69efc9779c1b5d5ad8e4d99bb9a26489b606f9ea416fb99034da1",
+      "new_png_sha256": "88068f90f17ef24dc4d8ad64bb3f1abe6b0448a077bd274c8d6cf0349d591d06"
+    },
+    {
+      "page": 34,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "e67a5958cca137f078bcce70349e40d8900382aa24fc92ff0dad60566de16d7c",
+      "new_png_sha256": "4ea4bbccee175292790cdcbfabb8485cf2901c251f75f299fb308c2933f2e177"
+    },
+    {
+      "page": 35,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "c7a33fd2d473c811a65fac12b1ec37eabad1fd6261d7acf7eb865d8240f9aafb",
+      "new_png_sha256": "d9a65e0cc6ca86a60688a5406eaeeaaaa3cbc772b53b19bc9149655e90b11443"
+    },
+    {
+      "page": 36,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "18ad2400e8da653338b08440d2ed928b87b06f77a6d54680e3f40682f42ce03e",
+      "new_png_sha256": "91fb27e4362b4bf9153db00938b4d90332fe34f12eca6ed3eb3149b224617920"
+    },
+    {
+      "page": 37,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "133031c3a9f4c9443b8b7c69c80eab29b95d806e11a0bf812fd24d1a74c88dc7",
+      "new_png_sha256": "f959dc74bd0d4338b914e74ac4fc9b7a6432c4ec574ae0bae8079116043296bb"
+    },
+    {
+      "page": 38,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "dad48e35a7460e7a29b762f0c0dcf091d217d84a4aaaa18b065bb2d0992fa36e",
+      "new_png_sha256": "06587b38f00ac3f3befb712415ffa9517393bb85b035276d4ce3fa69d0c3bdf3"
+    },
+    {
+      "page": 39,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "c90b52cc521197968602e4169cc765f81be6ae6fe5751a01182deb1e86a1a72f",
+      "new_png_sha256": "e52eea2f8818e26821a2767818bd82cbb0698c4f60e9c1b2f535361731059a20"
+    },
+    {
+      "page": 40,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "2055d2cdc4c9c9180bb254b776601a0e2f286833103196c337327885aed77576",
+      "new_png_sha256": "3c610ac0608a8ed1d39952feb54a09358902b65076f4da76e54b39d9d9c92931"
+    },
+    {
+      "page": 41,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "aebf72ff4aa04355abe492bcffed5f5ee3fbb52c55be29e55767b05e6ceacb62",
+      "new_png_sha256": "cc7c0363b4129568c62c9d6e13d95e0a1e96c9f1dafaab2adb578ab02de7d69b"
+    },
+    {
+      "page": 42,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "0db19618d8bc226223a48774e5a8b8f819817c6b84f1a31f34c62ba9875aa269",
+      "new_png_sha256": "37788c9b60b771a257487dbbee6156309c2c0ab5cad0eb364d1409ade977f1ba"
+    },
+    {
+      "page": 43,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "56c2c1c5e8310700b38768a049819bd0cb668cf0c91f78f88bcb6d1e04c4e018",
+      "new_png_sha256": "d8a7e16d9c5bd63192048c78cc61dfabae04ed36a09b6e6db82ae94bef2e3cc5"
+    },
+    {
+      "page": 44,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "4aab8ca8014983b22296abcedc25f9457d67a70176843f6472d0ecef9255aee1",
+      "new_png_sha256": "127eda0a91452cff64a145a5d9fd908d2864979d68773e398c5e70ae1cc4e04a"
+    },
+    {
+      "page": 45,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "ee854def0d0b0bd071738bbe95f9cc87faa8a156c6caeb825cd0cb7d38a42485",
+      "new_png_sha256": "b7c127b0f543f91d88709af0a2e5de3036164b5beeac8113f003ad2abfb8f2ba"
+    },
+    {
+      "page": 46,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "8116366fc18ad1a9d98cf5c5f31b98b1f3ae98264c18e3c933d1a20d29736907",
+      "new_png_sha256": "2441118fc5cd46d17564889d9f4c83ba91f977bf6083f3081bd15f77be12ddc2"
+    },
+    {
+      "page": 47,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "63207e7d02ab95c05835340eac740912c7b0fac3840b74f90d62d10ea47b51f7",
+      "new_png_sha256": "650b54c68e53c3444b528bfbd907181430c5e0441a4d7a27f299b04dfc1b4d01"
+    },
+    {
+      "page": 48,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "e334ccaf59686ab20e32a106a92fd6935e97150b28760082c40c2774b5c499d3",
+      "new_png_sha256": "8b99413f78567fd9dbffb2dd2004547b881a3234f67ea971d4475386e3a9b92b"
+    },
+    {
+      "page": 49,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "b7fa7b0d51ab84a10f14866a29f5246aad75b215f85e5d48b6d602fa0cdda5ba",
+      "new_png_sha256": "f87d2108729736998a9961bb0249c417d772b2d42a3de297058acbfb33bf7b50"
+    },
+    {
+      "page": 50,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "de988252b7362ae4ce2c2875ebad794710067d35a48ac15a47e327624a7659b0",
+      "new_png_sha256": "c0cfeeaa39109c8a4fd00593f59aba41e1a9691f9956b37320be7ce4954ffee6"
+    },
+    {
+      "page": 51,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "021c09c529bd29673bea6a22ff9629fb283aeb0905b34390f8ea75b3c1159c6b",
+      "new_png_sha256": "99dfb44633396f81c9027b062af3ed979a306417c3e3b8c4090e4544fa06b764"
+    },
+    {
+      "page": 52,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "6427be1ee25f6349bcfc76d1f0cb16fe7ca5c774dfc3539cb5c38debab42d8a3",
+      "new_png_sha256": "1dabe464777e4c878b282437d2bd75fa85883f95b5e752a85e8db72d04a73fd8"
+    },
+    {
+      "page": 53,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "5600cc4a4c57c9d75871a4a7cf69812466c4ef0cf4511ec5c58390d94eb70650",
+      "new_png_sha256": "5d3794587c9cb26795b08013da45b8fa54b4547ce718d9b31ed2b87a9c523f65"
+    },
+    {
+      "page": 54,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "363d94ba5a2acc43263cb48a4a6b6b50d4b667737f20e96791524a4ef6f731e2",
+      "new_png_sha256": "70aedac520e898cb4a081573521eb4a50cb7b41aea34d7841adbd82ba8ff134a"
+    },
+    {
+      "page": 55,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "5afa5197cba889077238ff1507c8cf9ee36dfbbbca93db502a97f319daae997b",
+      "new_png_sha256": "78df83855cb0ee2ad0f2131736c7b1894819d8ec72a0aa822b6339af5cee057f"
+    },
+    {
+      "page": 56,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "a00a01a5fe2f1abb284ffa3aea720c63b99c9cb2855cc1a8a8deae5e99302e81",
+      "new_png_sha256": "92967721818523518e5d1b4795603d91df1fdc3a0f267a2e4dd23b0bb6cd6d1b"
+    },
+    {
+      "page": 57,
+      "size": [
+        910,
+        1287
+      ],
+      "bbox": [
+        725,
+        47,
+        757,
+        63
+      ],
+      "nonzero_pixels": 326,
+      "body_after_y80_identical": true,
+      "old_png_sha256": "6fb33143e919d54bb7b401848eb189a3dbb4da5580a17883c9eea6c7f5c30f4d",
+      "new_png_sha256": "bd368072ecc4f383ebc6d53ced7ad51d91002d56bde0c0991831ae35b74042d4"
+    }
+  ],
+  "mutation_scope": "Only this JSON report and ignored temporary comparison/dependency files were created; no PDF or project source changes, no commit or push."
+}

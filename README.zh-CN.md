@@ -19,12 +19,36 @@ Lean 定理，241 个模块的全新目录重建及对应依赖审计全部通�
 
 | 研究路线 | 当前报告的成果 | 主要前提 | 审查入口 |
 |---|---|---|---|
+| **B. 假定 QRH(7/8) 成立的路线** | 固定指数 **k = 6** | **七项明确输入**，包括 QRH(7/8)、CS **arXiv:2507.15184v2** 推论 1 及指定表格行；见[完整陈述](routes/qrh/documentation/inputs.md) | [QRH 路线审查包](routes/qrh/README.md) · [中文论文 PDF](routes/qrh/paper/current/main.pdf) |
 | **A. 传统显式估计路线** | 所有整数 **k ≥ 70** | 列明的显式估计，包括 Bellotti–Trudgian–Yang 预印本的零点自由区域常数 **4.896**；不假定 QRH | [传统路线论文，英文](routes/traditional/proof/manuscript.md) |
 | **A. 传统路线，仅用经评审文献输入的版本** | 所有整数 **k ≥ 74** | 列明的经同行评审文献输入，以 **5.558691** 替代 4.896；不假定 QRH | [传统路线审查包](routes/traditional/proof/README.md) |
-| **B. 假定 QRH(7/8) 成立的路线** | 固定指数 **k = 6** | **七项明确输入**，包括 QRH(7/8)、CS **arXiv:2507.15184v2** 推论 1 及指定表格行；见[完整陈述](routes/qrh/documentation/inputs.md) | [QRH 路线审查包](routes/qrh/README.md) · [中文论文 PDF](routes/qrh/paper/current/main.pdf) |
 
 “仅用经评审文献输入”描述的是所用文献的状态，不表示本项目的新证明已经通过同行评审。
 两条路线的数学前提不同，比较指数时必须同时说明这些前提。
+
+## 路线 B：假定 QRH(7/8) 成立
+
+本路线以 [OpenAI 官方 quasi-RH 发布](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/README.md)
+为研究起点，将其中 ζ 非平凡零点的 7/8 实部界作为明确输入。
+[Family 003](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/003.md)
+说明上游形式化范围，本项目研究其素数短区间推论。
+
+在 **QRH(7/8)、CS v2、Rosser、积分显式公式、有限高度 RH、CHJII、CHL 七项精确输入**下，
+对每个整数 n≥1，存在素数 `n^6 < p < n^6+6n^5 < (n+1)^6`。
+[输入登记表](routes/qrh/documentation/inputs.md)列出命题、版本和证据依据。
+CS v2 仍是预印本依赖，全部七项仍明确保留在最终 Lean 定理中。
+
+完整下游定理 `sixth_powers_from_named_inputs` 已通过 **241 个模块**的全新输出目录重建和对应依赖审计。
+本项目的解析区间与数值预算均有实际证明，不再列作额外前提。详见[形式化范围](routes/qrh/FORMALIZATION_STATUS.md)。
+
+整理后的入口包括[新十二章中文论文](routes/qrh/paper/current/main.pdf)、
+[论文—Lean 导读](routes/qrh/documentation/blueprint/README.md)、
+[中英文路线主页](routes/qrh/README.zh-CN.md)和[研究档案](routes/qrh/research-history/README.md)。
+论文完整讲解最终采用的梯形权与连续平移证明；原多项式稿件及证书保留为历史版本。
+旧稿的 CS 系数 6% 灵敏度结果保留原适用范围。
+
+当前全范围结论为 k=6；k=4 和 k=3 分别仍是阶段目标与长期目标。
+[数学审查入口](routes/qrh/REVIEW_THIS_RELEASE.md)汇总完整 k=6 论文、前提、Lean 源码与核验记录。
 
 ## 路线 A：传统显式估计
 
@@ -59,30 +83,6 @@ k ≥ 70 版本使用预印本常数 4.896。项目的
 参见[核查报告](routes/traditional/proof/zfr_audit/thesis_19.62/REPORT.md)和
 [撤回结论的历史证书](routes/traditional/proof/certificates/withdrawn_k67/README.md)。
 Lean 项目保留的历史名称 `LegendreK67` 不代表当前仍声称证明了 k = 67。
-
-## 路线 B：假定 QRH(7/8) 成立
-
-本路线以 [OpenAI 官方 quasi-RH 发布](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/README.md)
-为研究起点，将其中 ζ 非平凡零点的 7/8 实部界作为明确输入。
-[Family 003](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/003.md)
-说明上游形式化范围，本项目研究其素数短区间推论。
-
-在 **QRH(7/8)、CS v2、Rosser、积分显式公式、有限高度 RH、CHJII、CHL 七项精确输入**下，
-对每个整数 n≥1，存在素数 `n^6 < p < n^6+6n^5 < (n+1)^6`。
-[输入登记表](routes/qrh/documentation/inputs.md)列出命题、版本和证据依据。
-CS v2 仍是预印本依赖，全部七项仍明确保留在最终 Lean 定理中。
-
-完整下游定理 `sixth_powers_from_named_inputs` 已通过 **241 个模块**的全新输出目录重建和对应依赖审计。
-本项目的解析区间与数值预算均有实际证明，不再列作额外前提。详见[形式化范围](routes/qrh/FORMALIZATION_STATUS.md)。
-
-整理后的入口包括[新十二章中文论文](routes/qrh/paper/current/main.pdf)、
-[论文—Lean 导读](routes/qrh/documentation/blueprint/README.md)、
-[中英文路线主页](routes/qrh/README.zh-CN.md)和[研究档案](routes/qrh/research-history/README.md)。
-论文完整讲解最终采用的梯形权与连续平移证明；原多项式稿件及证书保留为历史版本。
-旧稿的 CS 系数 6% 灵敏度结果保留原适用范围。
-
-当前全范围结论为 k=6；k=4 和 k=3 分别仍是阶段目标与长期目标。
-本次整理[先供本地审核](routes/qrh/REVIEW_THIS_RELEASE.md)，审核后再推送；传统路线数学材料未改。
 
 ## 阅读、复现与审查
 

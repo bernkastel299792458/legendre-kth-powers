@@ -1,6 +1,6 @@
 # QRH 路线研究档案
 
-整理日期：2026-11-06。**本目录仅完成本地归档，等待项目发起人审核；没有推送。**
+整理日期：2026-11-06。**本目录随 k=6 审查包公开，保留原始研究记录及其当时状态。** 发布材料与核验范围见[发布记录](../audit/publication_2026-11-06.json)。
 
 这里保存研究怎样从 k=8 的背景进入 k=4 探索、形成 k=6 结果、接受审阅并完成七输入下游 Lean 证明。保存原文不表示当前认可其中每个陈述，也不把别的会话的候选纳入当前 k=6 证明。**本次没有运行旧探索程序或重新验证旧数学结论。**
 
@@ -29,7 +29,7 @@ R3–R5 是其他研究会话继续推进 k=4 的材料，**不是本次七输�
 | 分支 | 档案入口 | 保留的边界 |
 |---|---|---|
 | R3 带限下端、梯形远段与结构分析 | [会话记录](snapshots/legacy-20261106/research/SESSION_2026-11-06_ROUND3.md)、[带限权](snapshots/legacy-20261106/research/K4_BANDLIMITED_ROUND3.md)、[单调远段](snapshots/legacy-20261106/research/K4_MONOTONE_ROUND3.md) | 历史报告的局部推进；不增加本次 k=6 输入 |
-| R4 Selberg 下端推进 | [研究正文](snapshots/legacy-20261106/research/K4_SELBERG_ROUND4.md)、[会话记录](snapshots/legacy-20261106/research/SESSION_2026-11-06_ROUND4.md) | 原会话记录含内部会话标识，仅供本地审核；索引不复述标识 |
+| R4 Selberg 下端推进 | [研究正文](snapshots/legacy-20261106/research/K4_SELBERG_ROUND4.md)、[会话记录](snapshots/legacy-20261106/research/SESSION_2026-11-06_ROUND4.md) | 原会话记录保留内部会话标识；索引不复述标识 |
 | R5 高高度重新定基 | [PROOF](snapshots/legacy-20261106/theory_round5/PROOF.md)、[当时复核](snapshots/legacy-20261106/theory_round5/audit/REVIEW.md) | **输入扩大到 CS v2 Theorem 1、Corollary 5 及原表首行，并使用有限 RH；不能混同 k=6 的 H2（Corollary 1 指定十二行）** |
 | R5 对数坐标上端候选 | [候选说明](snapshots/legacy-20261106/theory_round5/upper/LOG_KERNEL_CANDIDATE.md)、[冻结记录](snapshots/legacy-20261106/theory_round5/upper/FREEZE_MANIFEST.json) | 原文明确待独立解析审阅，不将 L≥360 候选改写为本次已证范围 |
 | R5 下端谱边缘候选 | [候选说明](snapshots/legacy-20261106/theory_round5/lower/SELBERG_OVERSHOOT.md)、[数据](snapshots/legacy-20261106/theory_round5/lower/selberg_overshoot.json) | 参数与输入另列；不因有数值文件就并入正式覆盖 |
@@ -49,7 +49,9 @@ R3–R5 是其他研究会话继续推进 k=4 的材料，**不是本次七输�
 
 [snapshot_manifest.json](snapshot_manifest.json) 对每件文件登记原相对路径、字节数、SHA-256、源文件复制前后及归档结束时的复核、原换行情况和证据状态。[snapshots/.gitattributes](snapshots/.gitattributes) 使用 `* -text`，防止 Git 改写历史 CRLF/LF。新索引和清单使用 UTF-8/LF；历史文本不作换行、措辞或链接“修复”。
 
-已检查明显凭证与外部作者/版权标记，未发现需要排除的密钥或第三方源代码。三份历史文件保留会话 UUID；保留它们的授权限于本次本地归档审核。启发式扫描不等于任意隐私信息的完备检查，后续公开仍应审阅这些原记录。本次没有推送。
+已检查明显凭证与外部作者/版权标记，未发现需要排除的密钥或第三方源代码。三份历史文件保留两个不同的内部会话 UUID，共四处出现；它们是研究分工记录中的会话标识，不是访问凭证或分享链接。项目发起人已授权公开本审查包，原记录继续按原字节保留。
+
+快照清单及旧审计中的 `LOCAL_OWNER_REVIEW_ONLY_NO_PUSH` 等状态描述归档和核验当时的情况，不代表当前仍待发布授权；这些历史记录保持原样，后续状态见发布记录。
 
 ## 阅读及复核方式
 

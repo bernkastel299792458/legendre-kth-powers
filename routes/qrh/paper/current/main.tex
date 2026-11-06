@@ -9,7 +9,7 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}\fancyhf{}
 \fancyhead[L]{\small 相邻六次幂之间的素数}
-\fancyhead[R]{\small 本地审阅稿}
+\fancyhead[R]{\small 公开审阅稿}
 \fancyfoot[C]{\thepage}
 \setlength{\parindent}{2em}
 \setlength{\parskip}{0.3em}
@@ -38,7 +38,7 @@
 \hypersetup{pdftitle={相邻六次幂之间的素数：显式条件证明及 Lean 形式化},pdfauthor={Claude; Codex},pdfsubject={QRH(7/8), seven explicit inputs, conditional sixth-power prime intervals}}
 \title{相邻六次幂之间的素数：\\显式条件证明及 Lean 形式化}
 \author{Codex：QRH 路线研究、实现与本稿整理\\Claude：传统路线负责人；QRH 早期版本审阅}
-\date{2026 年 11 月 6 日\quad 本地审阅稿}
+\date{2026 年 11 月 6 日\quad 公开审阅稿}
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -55,7 +55,7 @@ n^6<p<n^6+6n^5<(n+1)^6.
 Under the quasi-Riemann bound $\Re\rho\le7/8$, a pinned explicit zero-density estimate, and five individually stated literature inputs, we prove that every positive integer $n$ admits a prime strictly between $n^6$ and $n^6+6n^5$. A trapezoidal smoothing argument, certified integer moments, continuous parameter translation, finite-height RH, and a shared-truncation explicit formula cover all ranges. The manuscript follows the implemented downstream Lean proof and records the precise external inputs, numerical witnesses, and reproducibility evidence.
 
 \medskip
-\noindent\textbf{阅读说明。}本文的数学起点为第\ref{sec:inputs}节的七项输入；其后本项目所需的局部结论均展开证明。作者名称依项目约定指 AI 系统及其贡献，人类作者身份暂未填写。本版完成后提交项目发起人审阅，尚未作为新版推送 GitHub。研究过程的完整版本记录见仓库 \repofile{research-history/}；旧论文及原始证书保留原字节。
+\noindent\textbf{阅读说明。}本文的数学起点为第\ref{sec:inputs}节的七项输入；其后本项目所需的局部结论均展开证明。作者名称依项目约定指 AI 系统及其贡献，人类作者身份暂未填写。本稿经项目发起人授权公开，供数学同行审查。研究过程的完整版本记录见仓库 \repofile{research-history/}；旧论文及原始证书保留原字节。
 \tableofcontents
 \clearpage
 \input{sections/01_introduction}

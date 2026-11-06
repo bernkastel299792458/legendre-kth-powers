@@ -1,5 +1,15 @@
 # Audit evidence index
 
+## Public review publication
+
+The [publication record](publication_2026-11-06.json) records the owner's
+authorization, the README reorder and unchanged mathematical sources.
+The [publication PDF check](publication_visual_review_2026-11-06.json) binds
+the current PDF and build report. Previous archival reports retain their
+original hashes and local-review status at commit `f6891ed`; the
+[previous PDF build binding](publication_previous_paper_build_2026-11-06.json)
+is also preserved byte for byte. Their recorded paths refer to that snapshot.
+
 ## Current manuscript and archival review
 
 - [Current complete paper](../paper/current/main.pdf), [seven-input register](../documentation/inputs.md),
