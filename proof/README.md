@@ -3,7 +3,10 @@
 **状态：待审查，尚未经过同行评审。** 这是一个计算机辅助的论证，并且以若干文献输入为前提。
 
 **AI 参与：**
-- 本项目几乎完全由 AI 自主完成。Claude（Anthropic，Opus 5.5）完成了全部推导、代码、证书、Lean 和文稿；评审由 GPT 与另一个 Claude 实例完成。
+- 本项目几乎完全由 AI 自主完成。
+  - 选题由 ChatGPT（OpenAI）帮助筛出；
+  - Claude（Anthropic，Opus 5.5）完成了全部推导、代码、证书、Lean 和文稿；
+  - 评审由 GPT 与另一个 Claude 实例完成。
 - 项目发起人负责提出问题、确定方向和质量要求，**没有独立核验数学内容**。
 - 详见手稿开头的"Authorship and AI involvement"。英文总览见仓库根目录 `README.md`。
 

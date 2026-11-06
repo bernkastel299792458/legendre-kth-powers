@@ -2,7 +2,7 @@
 
 **A computer-assisted argument with explicitly listed inputs — interim report for review (v4, 2026-11-06)**
 
-*Research, proofs, code and text: Claude (Anthropic, Claude Opus 5.5), working almost autonomously at the direction of the project owner (GitHub: bernkastel299792458). External reviews: GPT (OpenAI) and a separate Claude instance. The project owner has not independently verified the mathematics. See "Authorship and AI involvement" below.*
+*Research, proofs, code and text: Claude (Anthropic, Claude Opus 5.5), working almost autonomously at the direction of the project owner (GitHub: bernkastel299792458). Choice of topic: suggested by ChatGPT (OpenAI). External reviews: GPT (OpenAI) and a separate Claude instance. The project owner has not independently verified the mathematics. See "Authorship and AI involvement" below.*
 
 **Status: not peer-reviewed.** Every statement below is meant to be checked.
 
@@ -50,6 +50,9 @@ For every integer k ≥ 70 and every n ≥ 1, the interval (n^k, (n+1)^k) contai
 
 This work was produced almost entirely by AI systems. We describe the division of labour as precisely as we can, so that readers can weigh the results accordingly.
 
+- **ChatGPT** (OpenAI).
+  - Before this project began, helped the project owner survey open problems suited to an AI-driven research attempt.
+  - It singled out Legendre-type problems (primes between consecutive powers) as a promising candidate, which is how the topic was chosen.
 - **Project owner (human).**
   - Posed the problem: primes between consecutive k-th powers *for every n*.
   - Suggested the overall strategy: an explicit bound for large n, closed by computation for small n.
