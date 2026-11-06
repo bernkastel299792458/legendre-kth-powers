@@ -1,216 +1,184 @@
-# Primes between consecutive k-th powers for every k ≥ 70: an AI-generated, computer-assisted interim result
+# Primes between consecutive k-th powers
 
-## Separate conditional k = 6 research track
+**English** | [简体中文](README.zh-CN.md)
 
-The new [`conditional-k6/`](conditional-k6/) package gives a written,
-computer-assisted argument for a prime between every pair of consecutive
-sixth powers, assuming **QRH(7/8)**, **Chourasiya–Simonič
-arXiv:2507.15184v2 Corollary 1 with the specified table rows**, and the
-explicitly cited auxiliary inputs. It includes a Chinese paper, certificates,
-reproduction tools, substantial Lean proofs, and an AI-use statement.
-**Its end-to-end Lean formalization is not complete**, and it has not received
-human expert peer review. See its [formalization scope](conditional-k6/FORMALIZATION_STATUS.md).
+This repository studies when, for **every integer n >= 1**, the open interval
+`(n^k, (n+1)^k)` contains a prime. It contains two research tracks with
+different mathematical premises, separate review packages, and separate
+verification records.
 
-The traditional k >= 70 track below does not use the QRH assumption; its
-materials and Apache-2.0 license are retained. The conditional package's
-original code uses 0BSD, and its original paper/documentation/data use CC0-1.0;
-see its [license scope](conditional-k6/LICENSE).
+**Status — 2026-11-06:** public review drafts, produced largely by AI systems.
+Neither track has received a recorded complete human expert review, and
+neither has an end-to-end Lean formalization of its full analytic argument.
 
-## Traditional track
+## Results at a glance
 
-> [!IMPORTANT]
-> - **Not peer-reviewed.** This is an interim report, published so that it can be checked.
-> - **Conditional on listed inputs.** The theorems hold *if* the published (and, for k ≥ 70, one preprint) estimates listed below are correct. Each input is listed with its status.
-> - **AI-generated.** The research, the code, the proofs and this text were produced almost entirely by AI systems. The project owner has not independently checked the mathematics. See [AI involvement](#ai-involvement).
-> - **An earlier claim (k ≥ 67) was withdrawn.** It rested on a constant whose proof turned out to contain an error. See [History](#history).
+Every row below concerns **all positive integers n**, under the stated inputs
+and the new arguments in its manuscript.
 
-## Abstract
-
-We give a computer-assisted argument that, for every integer **k ≥ 70** and every integer n ≥ 1, the open interval (n^k, (n+1)^k) contains a prime.
-- The argument uses exactly one input that has not been refereed: the classical zero-free-region constant 4.896 of Bellotti–Trudgian–Yang (arXiv:2603.21490). We audited its proof independently.
-- If only refereed inputs are allowed, the same method gives every **k ≥ 74**.
-- The best previously published result valid for all n is k ≥ 86 (E. S. Lee, *Acta Arith.* 225 (2026)).
-
-**Method.** We work within the explicit-formula / zero-density framework of Lee and of Cully-Hugill–Johnston, and add four ingredients:
-- **(H)** a hybrid zero-density bound that splits the σ-integral between a Kadiri–Lumley–Ng-type estimate (with Johnston–Yang constants) and Bellotti's log-free estimate;
-- **(S)** a smoothed explicit formula with weight y^M(1−y)^M. It comes with a proof of the smooth explicit formula for C¹ weights with absolutely continuous derivative;
-- the rows of Bellotti's log-free table below height e^80;
-- **(T)** a self-contained tail lemma for log x ≥ 10^8.
-
-**Verification.**
-- All numerical inequalities are certified with Arb ball arithmetic and stored as re-checkable certificates. One command, `verify_all.py`, re-checks everything in about 15 minutes.
-- The logical assembly is formalised in Lean 4 / Mathlib. The analytic inputs and the certificates enter the Lean proof as explicit hypotheses.
-
-## Main results
-
-| | Statement | Inputs from the literature | Largest certified δ (S / H) |
+| Research track | Reported result | Main premises | Review package |
 |---|---|---|---|
-| **Theorem 1 (high confidence)** | For all k ≥ **70** and n ≥ 1, (n^k, (n+1)^k) contains a prime. | Zero-free constants 4.896 / 21.233 / 54.004. 4.896 is an arXiv preprint (audited here); everything else is refereed. | 0.820 / 0.860 (δ < 1 is needed) |
-| **Theorem 2 (conservative)** | The same for all k ≥ **74**. | Zero-free constants 5.558691 / 21.233 / 54.004; all inputs refereed. | 0.933 / 0.885 |
+| **A. Traditional explicit estimates** | Every integer **k >= 70** | The listed explicit estimates, including the **4.896** zero-free-region constant from the Bellotti–Trudgian–Yang preprint. No QRH assumption. | [Traditional manuscript, English](proof/manuscript.md) |
+| **A. Traditional, refereed-input variant** | Every integer **k >= 74** | The listed refereed literature inputs, using **5.558691** in place of 4.896. No QRH assumption. | [Traditional review package](proof/README.md) |
+| **B. Assuming QRH(7/8)** | Fixed exponent **k = 6** | **H1:** every nontrivial zeta zero has real part at most 7/8. **H2:** CS **arXiv:2507.15184v2**, Corollary 1 and the specified table rows, plus the cited auxiliary inputs. | [Conditional k6 package](conditional-k6/README.md) · [Chinese paper, PDF](conditional-k6/paper/main.pdf) |
 
-- **"Conservative"** refers only to the status of the *literature inputs*. Both theorems also rest on the new arguments of this project (Props. H and S, Lemmas 4–6 and T), which have been checked by two AI reviews but not yet by a human expert.
-- **Minimality.** 70 and 74 are the smallest exponents *this method* certifies with these inputs. For k = 69 (resp. 73), some rigorously evaluated interval has δ ≥ 1. This says nothing about whether the statement fails for those k.
-- **Robustness of Theorem 1.** It survives the following changes; the details are in manuscript §11 and the full output in [`proof/certificates/sensitivity_output.txt`](proof/certificates/sensitivity_output.txt).
+“Refereed-input” describes the sources used by that variant; it does not mean
+that this project's new proof has been peer-reviewed. The two tracks answer
+the question under different premises, so their exponents should be read
+with those premises attached.
 
-  | Input changed | Result |
-  |---|---|
-  | classical constant 4.896 raised to 4.98 (+1.7%) | still closes |
-  | all C in Bellotti's table × 1.1 | still closes |
-  | Johnston–Yang constants × 1.5 | no visible effect (that term is below 10⁻³⁸) |
+## Track A — traditional explicit estimates
 
-  Theorem 2 still closes with Bellotti's C × 1.05, but fails at × 1.1.
+### Result and method
 
-## Core contributions
+The [v4 manuscript](proof/manuscript.md) gives computer-assisted arguments for
+all integer exponents **k >= 70**, and for **k >= 74** when restricting the
+literature inputs to refereed results.
 
-1. **New explicit exponents.** k ≥ 70 (with one audited preprint input) and k ≥ 74 (refereed inputs only), compared with the published k ≥ 86 (Lee 2026) and k ≥ 90 (Cully-Hugill–Johnston 2025).
-2. **Method.** The four ingredients (H), (S), the low-height Bellotti rows and (T) above. They are described in [`proof/manuscript.md`](proof/manuscript.md) §§6–8.
-3. **Source verification of the inputs.** Every input was checked against the original papers ([`proof/input_verification/`](proof/input_verification/)). For four inputs as quoted in Lee (2026), the quoted form differs from the source or lacks an argument (manuscript §3.2). We avoid all four. **We have not assessed whether they affect Lee's k = 86.**
-4. **Audit of the zero-free-region constants** ([`proof/zfr_audit/`](proof/zfr_audit/)).
-   - **4.896 (Bellotti–Trudgian–Yang, arXiv).** Verified after correcting 15 issues, none fatal.
-   - **19.62 (Littlewood-type constant, A. Yang, PhD thesis, UNSW 2025).** We believe the proof as written contains an arithmetic slip (Lemma 3.8, p. 59). With it corrected, the same method appears to give only about 19.90–20.08. These are grid estimates, not proofs.
+The method combines explicit zero-free regions, hybrid zero-density bounds,
+a smoothed explicit formula, finite-range certificates, and an analytic
+infinite tail. It does **not** assume QRH(7/8).
 
-   These are our readings of other authors' work. We would be glad to be corrected.
-5. **Reproducibility.** Certificates, checkers, a one-command verification, a Lean formalisation of the bookkeeping, two external AI reviews with our point-by-point response, and the full research conversation.
+The k >= 70 variant uses the preprint constant 4.896. The project's
+[AI audit](proof/zfr_audit/bty_4.896/REPORT.md) reports that its proof closes
+after specified corrections; this is not human peer review. The k >= 74
+variant uses the refereed constant 5.558691. Both variants also use 21.233,
+54.004, and the other inputs stated in the manuscript.
 
-## What is *not* claimed
+### Evidence and limits
 
-- Nothing about Legendre's conjecture itself (k = 2), or about cubes.
-- No independent human verification. The project owner directed the work but did not check the proofs (see below).
-- Lean does **not** verify the analytic number theory. It verifies that the four ranges and the listed hypotheses together imply the theorem (manuscript Appendix B).
-- No position on OpenAI's claimed quasi-Riemann hypothesis (zero-free half-plane Re s > 7/8, preprint, Sep 2026). That claim is not peer-reviewed. M. Visser (arXiv:2610.20058) shows that it would imply the result for k = 8. If the claim is correct, it supersedes the exponents here. Our argument does not use it.
+Arb certificates cover the numerical ranges. Lean checks the logical assembly
+of the ranges **assuming the stated analytic estimates and certificate
+conclusions**. It does not prove those analytic estimates or Arb computations.
+See the [review checklist](proof/REVIEW_CHECKLIST.md),
+[recorded numerical replay](proof/certificates/verify_all_output.txt), and
+[Lean scope](proof/README.md#lean-证明了什么).
 
-## AI involvement
+The input checks and open review tasks remain visible in
+[SOURCES.md](SOURCES.md), [input verification](proof/input_verification/), and
+[zero-free-region audits](proof/zfr_audit/README.md). In particular, the
+Bellotti table was checked against arXiv v2; comparison with the printed
+journal table remains a review task.
 
-This project is an experiment in **almost fully autonomous AI research**. We state the division of labour as precisely as we can.
+**The earlier k >= 67 claim was withdrawn.** The project's audit found an
+arithmetic problem in the thesis proof of the required constant 19.62.
+The finding is the project's reading, not an author-confirmed correction.
+See the [audit report](proof/zfr_audit/thesis_19.62/REPORT.md) and
+[withdrawn certificates](proof/certificates/withdrawn_k67/README.md).
+The historical Lean package name `LegendreK67` is not a current k = 67 claim.
 
-| Who | What |
-|---|---|
-| **Codex** (OpenAI) | Before this project began, helped the project owner survey open problems suited to an AI-driven research attempt. It singled out Legendre-type problems (primes between consecutive powers) as a promising candidate. This is how the topic was chosen. |
-| **Project owner** ([@bernkastel299792458](https://github.com/bernkastel299792458)) | Posed the question (for which k can one prove a prime between consecutive k-th powers *for all n*?). Suggested the overall strategy: an explicit analytic bound for large n, closed by computation for small n. Chose the target k = 67, which Claude had identified from Lee's tables as the likely limit of the method. Set the quality requirements: work from the papers, rigorous numerics, Lean, an archive for review. Pointed out that the results hinged on the constants 19.62 and 4.896 and asked for them to be audited independently. Obtained two external AI reviews. Chose which results to state. **Did not write the mathematics or the code, and did not verify them.** |
-| **Claude** (Anthropic, Claude Opus 5.5, via Claude Code) | Found and read the literature. Did all derivations (Props. H and S, Lemma 4, Lemma T) and wrote all verification code, the certificates, the Lean formalisation, the manuscript and the documentation. Further Claude sessions carried out the independent audit of 4.896 / 19.62 (`proof/zfr_audit/`) and translated the conversation. |
-| **Codex** (OpenAI), as reviewer | One review of manuscript v2, including an independent rigorous re-implementation of δ_H, and a note on the quasi-RH claim. The files are named `review/GPT_*.md`. |
-| **Claude, separate instance** | One independent review of manuscript v2, with its own scripts (`review/Claude_review_*`). |
+## Track B — assuming QRH(7/8)
 
-**Consequences.**
-- Errors of the kind AI systems make (misquoted constants, inputs used outside their range of validity, overlooked hypotheses) are the main risk. Several such errors were found and fixed during the project; all are recorded in `LOG.md`, in manuscript Appendix C, and in the review responses.
-- The withdrawn k = 67 claim is an example: it was made before its key input had been audited.
-- The full conversation that produced this work is in [`proof/conversation/`](proof/conversation/) (Chinese original, English translation). It contains statements that were later corrected; the manuscript is authoritative.
+### Result and explicit premises
 
-## Inputs and their status
+This track accepts QRH(7/8) as a **working hypothesis**; it does not establish
+or audit the upstream claimed proof. It also explicitly assumes the
+Chourasiya–Simonič **v2** density result, treated as a preprint dependency:
+Corollary 1, Table 1 rows indexed **16–27** (the first 12 rows), on their
+specified domains. The cited classical auxiliary inputs are listed in the
+[paper](conditional-k6/paper/manuscript.md).
 
-| Input | Source | Status | Used by |
-|---|---|---|---|
-| RH verified to height 3·10¹² | Platt–Trudgian 2021 | refereed | both |
-| N(T) bound | Bellotti–Wong 2025 | refereed | both |
-| zero-density (KLN-type) 17.418 / 2.231 | Johnston–Yang 2023 | refereed | both (negligible) |
-| log-free zero density, Table 2 | Bellotti, *J. Number Theory* 2025 | refereed; checked against arXiv v2 only, **not yet against the printed table** | both |
-| zero-free region, classical **4.896** | Bellotti–Trudgian–Yang, arXiv:2603.21490 | **preprint**; audited here | Theorem 1 |
-| zero-free region, classical 5.558691 | Mossinghoff–Trudgian–Yang 2024 | refereed | Theorem 2 |
-| zero-free region, Littlewood 21.233 | Yang, *JMAA* 2024 | refereed | both |
-| zero-free region, Vinogradov–Korobov 54.004 | Bellotti, *JMAA* 2024 | refereed | both |
-| truncated explicit formula | Cully-Hugill–Johnston II 2025 | refereed | both |
-| ψ − θ bounds | Broadbent–Kadiri–Lumley–Ng–Wilk 2021 | refereed | both |
-| prime-interval pairs (Δ, x₀) | Cully-Hugill–Lee 2022 + corrigendum 2024 | refereed; checked against arXiv v3 | both |
-| ζ(1/2+it) bound (an upstream input) | Hiary–Patel–Yang 2024, plus our Arb check | refereed + verified | both |
+Under these inputs, the written argument gives, for every integer n >= 1, a prime
 
-The full statements of these inputs are in manuscript §3.1. [`SOURCES.md`](SOURCES.md) has links to all papers. The papers themselves are not redistributed here.
-
-## How to review
-
-| If you want to … | Start with |
-|---|---|
-| read the argument | [`proof/manuscript.md`](proof/manuscript.md) (English, v4) |
-| check specific items | [`proof/REVIEW_CHECKLIST.md`](proof/REVIEW_CHECKLIST.md), ordered by how much the conclusion depends on them |
-| see the reviews so far | [`review/`](review/) (Chinese) and our [response](review/response_to_reviews_2026-11-06.md) |
-| check the zero-free-region audit | [`proof/zfr_audit/README.md`](proof/zfr_audit/README.md) |
-
-The highest-value checks are:
-1. BTY Theorem 1 (4.896), which only Theorem 1 needs;
-2. the printed JNT version of Bellotti's Table 2;
-3. Lemma 4 (smooth explicit formula via ψ₁);
-4. Propositions H and S and Lemma T;
-5. a second, independent rigorous implementation of δ_S.
-
-**Re-run the numerics** with Python 3 and python-flint 0.9.0. It takes about 15 minutes; compare the output with `proof/certificates/verify_all_output.txt`.
-
-```bash
-cd proof/code
-pip install -r requirements.txt
-python verify_all.py
+```text
+n^6 < p < n^6 + 6n^5 < (n+1)^6.
 ```
 
-**Build the Lean part** with Lean 4.36.0-rc2 and Mathlib. `Audit.lean` should list only the axioms `propext`, `Classical.choice` and `Quot.sound`.
+The result is conditional on **both H1 and H2**, not on QRH alone. The project
+has not obtained an all-n result for k = 4 or k = 3; those remain the stage
+and longer-term research targets respectively.
 
-```bash
-cd proof/LegendreK67
-lake exe cache get
-lake build
-lake env lean LegendreK67/Audit.lean
+### Evidence and limits
+
+The package combines 1259 small-range prime witnesses and CHL interval rows,
+**94** middle cells, **60** further cells, and an analytic infinite tail.
+The refined middle bound is at most `0.939735996783828324763044`. With all
+other inputs, exponents, and domains fixed, uniformly increasing all three
+CS coefficient columns by **6%** still passes the written proof chain.
+That sensitivity check does not validate the CS theorem itself.
+
+**46 Lean modules** compile. They include actual Lucas/Pratt proofs of the
+1259 prime witnesses, exact range reductions, rational certificate checks,
+selected analytic lemmas, and the scalar tail bound. The current assembly
+theorem nevertheless has the type
+
+```text
+CHLRows -> AnalyticSegmentInputs -> SixthPowerConclusion
 ```
 
-Please report problems as GitHub issues, quoting a checklist ID if possible (e.g. `A5: ISSUE — …`).
+The three local analytic conclusions in `AnalyticSegmentInputs` have not yet
+been derived inside Lean from H1/H2 and the cited inputs. The actual zeta
+explicit-formula/density argument and the complete transcendental cell
+bounds still need to be connected. See the
+[formalization status](conditional-k6/FORMALIZATION_STATUS.md) and
+[full theorem types and axiom audit](conditional-k6/audit/kernel_axioms.txt).
 
-## Repository layout
+The published package passed [Linux numerical and Lean CI](https://github.com/bernkastel299792458/legendre-kth-powers/actions/runs/42153017737)
+at commit `58521b6`. This verifies the stated computational and partial
+formalization scope, not an end-to-end proof of the conditional theorem.
 
-| Path | Contents |
+## Read, reproduce, and review
+
+| Purpose | Traditional track | QRH track |
+|---|---|---|
+| Read the argument | [English manuscript](proof/manuscript.md) | [Chinese manuscript](conditional-k6/paper/manuscript.md) · [PDF](conditional-k6/paper/main.pdf) |
+| Inspect dependencies | [Manuscript §3](proof/manuscript.md) · [Sources](SOURCES.md) | [Paper §1](conditional-k6/paper/manuscript.md) · [BibTeX](conditional-k6/paper/references.bib) |
+| Reproduce computations | [Review package](proof/README.md#如何复核) | [Reproduction instructions](conditional-k6/REPRODUCING.md) |
+| Understand Lean coverage | [Assembly scope](proof/README.md#lean-证明了什么) | [Completed parts and remaining obligations](conditional-k6/FORMALIZATION_STATUS.md) |
+| Review the evidence | [Checklist](proof/REVIEW_CHECKLIST.md) · [AI reviews and responses](review/) | [Scope review](conditional-k6/audit/PUBLICATION_SCOPE_REVIEW.md) · [Historical reviews](conditional-k6/audit/source_reviews/README.md) |
+
+For the **traditional numerical replay**, run from the repository root:
+
+```sh
+python -m pip install -r proof/code/requirements.txt
+python proof/code/verify_all.py
+```
+
+For the **QRH numerical replay**, use **Python 3.12.10** and run from the
+repository root. The frozen tail checker includes the Python patch version
+in its metadata comparison.
+
+```sh
+python -m pip install -r conditional-k6/code/requirements.txt
+python conditional-k6/code/release_manifest.py --check
+python -X utf8 conditional-k6/code/verify_k6.py --dry-run
+python -X utf8 conditional-k6/code/generate_lean_certificates.py --check
+```
+
+Both packages use python-flint 0.9.0. Their linked instructions give the
+separate Lean build procedures and further review commands. A green CI run,
+absence of `sorry`, or standard-axioms-only output must be read together with
+the complete theorem hypotheses. Problems can be reported through
+[GitHub Issues](https://github.com/bernkastel299792458/legendre-kth-powers/issues),
+identifying the track, file or theorem, and version.
+
+## Human direction and AI contributions
+
+| Role | Recorded contribution |
 |---|---|
-| `proof/` | **The review package. This is the authoritative version.** It contains the manuscript, checklist, certificates, verification code, the Lean project, the audit and the conversation. |
-| `review/` | External AI reviews and our responses |
-| `SOURCES.md` | Literature with links |
-| `ROADMAP.md`, `LOG.md` | Research roadmap and lab log (Chinese), including every bug found |
-| `code/`, `docs/`, `results/` | Exploratory working files from earlier stages. Many of them use superseded constants or the withdrawn k = 67 setting. They are kept for the record and are **not** part of the claims. |
+| **Project owner** | Set the problem, research directions, quality requirements, audit requests, and publication decisions. Has not independently verified the mathematics. |
+| **Codex — topic selection** | Helped identify Legendre-type questions as a research target. |
+| **Claude — traditional track** | Developed the literature review, arguments, code, certificates, Lean assembly, and manuscript. Separate sessions audited constants and translated the conversation. |
+| **Codex and a separate Claude instance — traditional reviews** | Supplied the AI reviews and associated checks archived under `review/`. |
+| **Codex — QRH track** | Developed the conditional argument, refined certificates, Lean components, manuscript, and reproducibility package, with cross-checks in separate agent contexts. |
+| **Claude — earlier QRH review** | Reviewed the earlier 76-cell version; its recommendations prompted clearer CS v2 premises and stronger numerical margins. That review does not certify the later Lean implementation. |
 
-The folder and Lean package are still named `legendre_k67` / `LegendreK67` for historical reasons: the project started with k = 67 as its target.
+AI agreement is not a substitute for mathematical proof or human expert
+review. The traditional manuscript contains its detailed contribution
+statement and [conversation archive](proof/conversation/); the QRH package
+has a separate [AI-use statement](conditional-k6/AI_USE.md). Human author
+names, affiliations, and emails remain unfilled in the QRH paper.
 
-## History
+## Repository map and licenses
 
-| Version | Change |
-|---|---|
-| v1 | k ≥ 67 claimed, using inputs as quoted in Lee (2026). |
-| v2 | Inputs checked against the original sources; four quoted inputs replaced. |
-| v3 | Revised after two AI reviews (Codex, Claude). |
-| v4 (2026-11-06) | The audit found an arithmetic error in the thesis proof of 19.62, on which k = 67 depended. **k = 67 withdrawn**; interim results k ≥ 70 and k ≥ 74. Lean generalised to a parameter k₀. |
+| Location | Contents | License scope |
+|---|---|---|
+| `proof/` | Current traditional review package: manuscript, certificates, code, Lean, input audits, and conversation | [Apache-2.0](LICENSE) |
+| `review/`, `SOURCES.md`, `ROADMAP.md`, `LOG.md` | Traditional reviews, sources, research plan, and historical log | [Apache-2.0](LICENSE) |
+| `code/`, `docs/`, `results/` | Earlier traditional working files, including superseded constants and withdrawn settings; the current claims are in `proof/` | [Apache-2.0](LICENSE) |
+| `conditional-k6/` | QRH-track paper, certificates, code, Lean, scope statements, audit records, and release hashes | Original code: **0BSD**; original paper, documentation, and data: **CC0-1.0**. See [package license](conditional-k6/LICENSE). |
 
-## Key references
-
-The full list is in the manuscript and in [`SOURCES.md`](SOURCES.md).
-
-- E. S. Lee, *Minimal zero-free regions for results on primes between consecutive perfect kth powers*, Acta Arith. 225 (2026) 149–162.
-- M. Cully-Hugill, D. R. Johnston, *On the error term in the explicit formula of Riemann–von Mangoldt* II, Funct. Approx. Comment. Math. 73 (2025).
-- M. Cully-Hugill, E. S. Lee, *Explicit interval estimates for prime numbers*, Math. Comp. 91 (2022); Corrigendum 93 (2024).
-- C. Bellotti, *An explicit log-free zero density estimate for the Riemann zeta-function*, J. Number Theory 269 (2025).
-- C. Bellotti, T. Trudgian, A. Yang, *Zero-free regions inspired by work of Heath-Brown*, arXiv:2603.21490.
-- M. J. Mossinghoff, T. S. Trudgian, A. Yang, *Explicit zero-free regions for the Riemann zeta-function*, Res. Number Theory 10 (2024).
-- A. Yang, *Explicit bounds on ζ(s) in the critical strip and a zero-free region*, J. Math. Anal. Appl. 534 (2024).
-- D. R. Johnston, A. Yang, *Some explicit estimates for the error term in the prime number theorem*, J. Math. Anal. Appl. 527 (2023).
-
-## License
-
-The code, the Lean files and the documents are released under the Apache License 2.0 (`LICENSE`). Third-party papers are not included.
-
----
-
-## 中文摘要
-
-**结论（阶段性，未经同行评审）**
-- 对所有 k ≥ 70、n ≥ 1，区间 (n^k, (n+1)^k) 中都有素数。唯一未经评审的文献输入是 Bellotti–Trudgian–Yang 的经典零点自由区域常数 4.896（arXiv 预印本），本项目已独立核实其证明。
-- 只用经过同行评审的文献输入，得到 k ≥ 74。
-- 此前已发表的最好结果是 k ≥ 86（Lee 2026）。
-- 早先声称的 k ≥ 67 **已撤回**：它依赖的 19.62 的证明中，我们发现了一处算术错误。
-
-**核心贡献**
-- 在 Lee / Cully-Hugill–Johnston 的框架内加入四项改进：拼接密度估计、光滑化显式公式、Bellotti 表的低高度行、自证的尾部引理。
-- 对全部文献输入逐一核对原文。
-- 独立核验了两个零点自由区域常数。
-- 全部数值用 Arb 严格计算并给出证书；Lean 形式化了记账部分。
-
-**AI 参与程度**
-- 本项目几乎完全由 AI 自主完成：
-  - 选题阶段，Codex（OpenAI）帮助项目发起人筛选适合用 AI 攻克的问题，挑出了勒让德型问题；
-  - Claude（Anthropic，Opus 5.5）完成了文献、推导、代码、证书、Lean 和文稿；
-  - 评审由 Codex 和另一个 Claude 实例完成。
-- 项目发起人负责提出问题、确定方向和质量要求，并决定结论的表述，**没有独立核验数学内容**。
-
-**请批评指正**
-- 请从 `proof/manuscript.md` 和 `proof/REVIEW_CHECKLIST.md` 开始审查，问题请在 Issues 中提出。
-- 文中对他人工作（博士论文中的 19.62、BTY 的若干笔误）的判断是我们的理解，欢迎指正。
+The root [LICENSE](LICENSE) supplies the default Apache-2.0 terms; the
+conditional package states its own license scope. Third-party works and
+dependencies retain their original licenses. Cited papers are linked rather
+than redistributed.
