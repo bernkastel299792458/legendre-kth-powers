@@ -67,10 +67,10 @@ This project is an experiment in **almost fully autonomous AI research**. We sta
 
 | Who | What |
 |---|---|
-| **ChatGPT** (OpenAI) | Before this project began, helped the project owner survey open problems suited to an AI-driven research attempt. It singled out Legendre-type problems (primes between consecutive powers) as a promising candidate. This is how the topic was chosen. |
+| **Codex** (OpenAI) | Before this project began, helped the project owner survey open problems suited to an AI-driven research attempt. It singled out Legendre-type problems (primes between consecutive powers) as a promising candidate. This is how the topic was chosen. |
 | **Project owner** ([@bernkastel299792458](https://github.com/bernkastel299792458)) | Posed the question (for which k can one prove a prime between consecutive k-th powers *for all n*?). Suggested the overall strategy: an explicit analytic bound for large n, closed by computation for small n. Chose the target k = 67, which Claude had identified from Lee's tables as the likely limit of the method. Set the quality requirements: work from the papers, rigorous numerics, Lean, an archive for review. Pointed out that the results hinged on the constants 19.62 and 4.896 and asked for them to be audited independently. Obtained two external AI reviews. Chose which results to state. **Did not write the mathematics or the code, and did not verify them.** |
 | **Claude** (Anthropic, Claude Opus 5.5, via Claude Code) | Found and read the literature. Did all derivations (Props. H and S, Lemma 4, Lemma T) and wrote all verification code, the certificates, the Lean formalisation, the manuscript and the documentation. Further Claude sessions carried out the independent audit of 4.896 / 19.62 (`proof/zfr_audit/`) and translated the conversation. |
-| **GPT** (OpenAI), as reviewer | One review of manuscript v2, including an independent rigorous re-implementation of δ_H, and a note on the quasi-RH claim (`review/GPT_*.md`). |
+| **Codex** (OpenAI), as reviewer | One review of manuscript v2, including an independent rigorous re-implementation of δ_H, and a note on the quasi-RH claim. The files are named `review/GPT_*.md`. |
 | **Claude, separate instance** | One independent review of manuscript v2, with its own scripts (`review/Claude_review_*`). |
 
 **Consequences.**
@@ -150,7 +150,7 @@ The folder and Lean package are still named `legendre_k67` / `LegendreK67` for h
 |---|---|
 | v1 | k ≥ 67 claimed, using inputs as quoted in Lee (2026). |
 | v2 | Inputs checked against the original sources; four quoted inputs replaced. |
-| v3 | Revised after two AI reviews (GPT, Claude). |
+| v3 | Revised after two AI reviews (Codex, Claude). |
 | v4 (2026-11-06) | The audit found an arithmetic error in the thesis proof of 19.62, on which k = 67 depended. **k = 67 withdrawn**; interim results k ≥ 70 and k ≥ 74. Lean generalised to a parameter k₀. |
 
 ## Key references
@@ -188,9 +188,9 @@ The code, the Lean files and the documents are released under the Apache License
 
 **AI 参与程度**
 - 本项目几乎完全由 AI 自主完成：
-  - 选题阶段，ChatGPT（OpenAI）帮助项目发起人筛选适合用 AI 攻克的问题，挑出了勒让德型问题；
+  - 选题阶段，Codex（OpenAI）帮助项目发起人筛选适合用 AI 攻克的问题，挑出了勒让德型问题；
   - Claude（Anthropic，Opus 5.5）完成了文献、推导、代码、证书、Lean 和文稿；
-  - 评审由 GPT 和另一个 Claude 实例完成。
+  - 评审由 Codex 和另一个 Claude 实例完成。
 - 项目发起人负责提出问题、确定方向和质量要求，并决定结论的表述，**没有独立核验数学内容**。
 
 **请批评指正**

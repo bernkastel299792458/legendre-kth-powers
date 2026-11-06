@@ -11,7 +11,7 @@
 >   4. B5: Lemma T for k₀ = 70, 74;
 >   5. C6: a rigorous second implementation of δ_S.
 
-## Status after two independent AI reviews of v2 (GPT, Claude; 2026-11-06)
+## Status after two independent AI reviews of v2 (Codex, Claude; 2026-11-06)
 
 Full texts are in `../review/`; responses are in `../review/response_to_reviews_2026-11-06.md`.
 
@@ -27,7 +27,7 @@ Full texts are in `../review/`; responses are in `../review/response_to_reviews_
 | C5 (certificate endpoints) | Minor: no endpoint assertions | Fixed: `--expect-range` |
 | Conventions (γ < T vs ≤ T; λ_K ≥ 1) | Minor | Fixed (manuscript §2, Lemma 5) |
 | Literature (KLN/Hiary) | v2 was inaccurate | Fixed (manuscript §3.2) |
-| Context (k = 86 published; quasi-RH ⇒ k = 8) | GPT | Added (manuscript §1.1) |
+| Context (k = 86 published; quasi-RH ⇒ k = 8) | Codex | Added (manuscript §1.1) |
 | D (Lean) | OK; the scope must be stated precisely | Statements tightened (manuscript App. B, README, Assembly.lean) |
 
 New items for v3:

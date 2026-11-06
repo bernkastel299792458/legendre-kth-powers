@@ -2,14 +2,14 @@
 
 **A computer-assisted argument with explicitly listed inputs — interim report for review (v4, 2026-11-06)**
 
-*Research, proofs, code and text: Claude (Anthropic, Claude Opus 5.5), working almost autonomously at the direction of the project owner (GitHub: bernkastel299792458). Choice of topic: suggested by ChatGPT (OpenAI). External reviews: GPT (OpenAI) and a separate Claude instance. The project owner has not independently verified the mathematics. See "Authorship and AI involvement" below.*
+*Research, proofs, code and text: Claude (Anthropic, Claude Opus 5.5), working almost autonomously at the direction of the project owner (GitHub: bernkastel299792458). Choice of topic: suggested by Codex (OpenAI). External reviews: Codex (OpenAI) and a separate Claude instance. The project owner has not independently verified the mathematics. See "Authorship and AI involvement" below.*
 
 **Status: not peer-reviewed.** Every statement below is meant to be checked.
 
 **Version history**
 - **v1** relied on inputs quoted second-hand from Lee (2026).
 - **v2** corrected them against the original sources.
-- **v3** incorporated two AI reviews (GPT, Claude; `../review/`).
+- **v3** incorporated two AI reviews (Codex, Claude; `../review/`).
 - **v4** responds to an independent audit (`zfr_audit/`), which found an arithmetic error in the PhD-thesis proof of the Littlewood constant 19.62 on which the earlier k = 67 claim depended:
   - **the k = 67 claim is withdrawn**;
   - the interim results are **k = 70** (high confidence) and **k = 74** (conservative: refereed inputs only).
@@ -50,7 +50,7 @@ For every integer k ≥ 70 and every n ≥ 1, the interval (n^k, (n+1)^k) contai
 
 This work was produced almost entirely by AI systems. We describe the division of labour as precisely as we can, so that readers can weigh the results accordingly.
 
-- **ChatGPT** (OpenAI).
+- **Codex** (OpenAI).
   - Before this project began, helped the project owner survey open problems suited to an AI-driven research attempt.
   - It singled out Legendre-type problems (primes between consecutive powers) as a promising candidate, which is how the topic was chosen.
 - **Project owner (human).**
@@ -65,7 +65,7 @@ This work was produced almost entirely by AI systems. We describe the division o
   - Literature search and reading; all derivations; all code, computations and certificates; the Lean formalisation; this manuscript and the other documents.
   - Separate Claude sessions carried out the audit in `zfr_audit/` and translated the research conversation.
 - **External AI reviews of v2** (`../review/`).
-  - GPT (OpenAI) wrote one review, including an independent rigorous re-implementation of δ_H.
+  - Codex (OpenAI) wrote one review, including an independent rigorous re-implementation of δ_H.
   - A separate Claude instance wrote another review with its own scripts.
 
 **Known failure modes.** Misquoted constants, inputs used outside their stated range, and missed hypotheses were the most common errors during the project.
@@ -326,7 +326,7 @@ In both chains, each S piece uses whichever of M ∈ {2, 3} gives the smaller bo
 Its output is in `certificates/verify_all_output.txt`.
 
 **Independent re-implementations by the reviews** (of the v2 k = 67 chain; same formulas):
-- GPT: δ_H rigorously in Arb.
+- Codex: δ_H rigorously in Arb.
 - Claude: δ_H and δ_S pointwise in mpmath.
 
 ## 10. Proofs of Theorems 1 and 2
@@ -486,7 +486,7 @@ Code bugs found during development are listed in `../LOG.md`.
 ## Appendix D. External reviews and audit
 
 - **Reviews of v2.**
-  - *GPT*: "repairable gaps; no fatal error".
+  - *Codex*: "repairable gaps; no fatal error".
   - *Claude*: "major revision; no mathematical or computational error found; conditional, thin margins".
 
   All points are addressed (`../review/response_to_reviews_2026-11-06.md`), except the comparison with the printed JNT table, which remains open. The one disagreement: Lee's k = 86 is published, not a preprint.

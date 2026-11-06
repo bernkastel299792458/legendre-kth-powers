@@ -4,9 +4,9 @@
 
 **AI 参与：**
 - 本项目几乎完全由 AI 自主完成。
-  - 选题由 ChatGPT（OpenAI）帮助筛出；
+  - 选题由 Codex（OpenAI）帮助筛出；
   - Claude（Anthropic，Opus 5.5）完成了全部推导、代码、证书、Lean 和文稿；
-  - 评审由 GPT 与另一个 Claude 实例完成。
+  - 评审由 Codex 与另一个 Claude 实例完成。
 - 项目发起人负责提出问题、确定方向和质量要求，**没有独立核验数学内容**。
 - 详见手稿开头的"Authorship and AI involvement"。英文总览见仓库根目录 `README.md`。
 
@@ -27,7 +27,7 @@
 |---|---|
 | v1 | 引用 Lee 转述的输入 |
 | v2 | 对照原始文献修正了 4 处问题 |
-| v3 | 吸收 GPT 与 Claude 两份 AI 评审（`../review/`） |
+| v3 | 吸收 Codex 与 Claude 两份 AI 评审（`../review/`） |
 | v4 | 核验零点自由区域常数；撤回 k = 67；以 k = 70 / 74 为阶段性成果；Lean 改为参数 k₀ |
 
 ## 目录
