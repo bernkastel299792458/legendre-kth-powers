@@ -161,3 +161,29 @@ Acceptance records are under `audit/builds/final-20261106/` (or
 `audit/milestone3_checkpoint.json`, the audit index, and
 `FORMALIZATION_STATUS.md` for final scope and provenance. Earlier entries
 in this log describe their historical checkpoint, not remaining local gaps.
+
+## External-input source audit, 2026-11-06
+
+At the project owner's request, Codex checked inputs 4, 6 and 7 while
+excluding CS v2 (input 2). Input 4 now has an exact source in the explicitly
+identified accepted manuscript of Grenié–Molteni's Mathematics of Computation
+paper: specialization to Q gives the current formula without RH/GRH.
+CHJII's relevant v2/v3 source spans and the Lean statement agree. CHL's
+twelve rows agree with the corrected author manuscript, but six rounded
+auxiliary parameter sets generate slightly smaller Delta values; this
+reproduction issue is recorded, not hidden by a successful downstream build.
+The two latter journal texts were not obtained for exact version comparison.
+
+The new reports include source locations, hashes, scope limits and numerical
+diagnostics. See `audit/inputs_4_6_7_review_2026-11-06.md`. This is source and
+mathematical checking by Codex, not human peer review or a Lean reproof of
+the external theorems. The original manuscript, historical certificates and
+all accepted Lean source bytes are preserved. No new full Lean build is
+claimed for this documentation and audit update.
+
+Verification: the CHJII scalar verifier passed 9/9 interval comparisons;
+the CHL parameter-to-Delta Arb replay matched all twelve recorded results,
+including the six strict shortfalls. Existing release bytes differ only in
+the five explanatory documents; the other 336 existing files, including
+all 241 Lean sources, are unchanged. New JSON records and local document
+links were checked, and release hashes were regenerated and verified.

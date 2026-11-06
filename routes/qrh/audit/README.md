@@ -32,6 +32,12 @@ For mathematical navigation, start with the [proof map](PROOF_MAP.md),
 
 ## Historical evidence
 
+The subsequent [source audit of external inputs 4, 6 and 7](inputs_4_6_7_review_2026-11-06.md)
+is separate from the accepted Lean build. It includes an exact published
+source for the integrated explicit formula, CHJII version/constant checks,
+and the CHL rounded-parameter reproduction issue. It does not remove those
+inputs from the theorem or claim independent human peer review.
+
 Earlier reports retain their original source hashes and conclusions. They
 must not be interpreted as audits of later sources:
 

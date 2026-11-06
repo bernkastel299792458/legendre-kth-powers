@@ -30,6 +30,12 @@ list. Re-proving the other cited theorems in Lean is a distinct, stronger
 task. The metadata flag `end_to_end_H1_H2_formalization` therefore remains
 false; it is not the flag for the agreed downstream proof with named inputs.
 
+The [2026-11-06 source audit of inputs 4, 6 and 7](audit/inputs_4_6_7_review_2026-11-06.md)
+checks their precise literature correspondence and records version-access
+limits and CHL rounded-witness discrepancies. It strengthens or qualifies
+the external evidence; it does not supply new Lean proofs of these inputs
+or change the accepted theorem's assumptions.
+
 ## Completed mathematical connections
 
 | Part | Range | Actual proof |

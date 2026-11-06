@@ -1,0 +1,98 @@
+{
+  "review_date": "2026-11-06",
+  "reviewer": "Codex",
+  "scope": "Source review and mathematical specialization of IntegratedExplicitFormula; no new Lean proof or build",
+  "repository_head_at_review": "9087d46124fa69cab9d3d95f8b4bafc8cc2546f7",
+  "mathematical_result": "Exact formula matches the Lean proposition after K=Q specialization and absolute-convergence exhaustion; unconditional",
+  "new_RH_or_GRH_assumption": false,
+  "sources": [
+    {
+      "id": "grenie_molteni_accepted_2016",
+      "authors": ["Loic Grenie", "Giuseppe Molteni"],
+      "title": "Explicit smoothed prime ideals theorems under GRH",
+      "journal": "Mathematics of Computation",
+      "volume": 85,
+      "issue": 300,
+      "journal_pages": "1875-1899",
+      "journal_year": 2016,
+      "electronic_publication_date": "2015-10-06",
+      "doi": "10.1090/mcom3039",
+      "metadata_url": "https://air.unimi.it/handle/2434/448119",
+      "crossref_metadata_url": "https://api.crossref.org/works/10.1090/mcom3039",
+      "download_url": "https://air.unimi.it/bitstream/2434/448119/2/35-molteni-Explicit_smoothed_prime_ideals_theorems_under_GRH.pdf",
+      "version": "Institutional repository labelled accepted manuscript; PDF dateline April 13, 2016",
+      "is_publisher_version_of_record": false,
+      "local_ignored_file": "tmp/input_review_4/grenie_molteni_air_accepted.pdf",
+      "bytes": 515999,
+      "sha256": "b83b1bce0c30bc0007731f498319fda75ffd9ba3877cd9daeea1434fe8655a7d",
+      "page_numbering": "Accepted manuscript printed pages, same as PDF 1-based pages; not inferred AMS typeset page numbers",
+      "visually_inspected_pages_1_based": [1, 2, 8, 9, 10],
+      "mathematical_mapping": [
+        {"page": 1, "location": "Introduction final display", "claim": "psi_K^(1)=sum Lambda_tilde_K(n)(x-n)"},
+        {"page": 2, "location": "(1.2), (1.3a)", "claim": "Smoothed Perron formula and exact integrated explicit formula; no RH required"},
+        {"page": 2, "location": "Paragraph following (1.3a)-(1.3b)", "claim": "GRH is introduced for subsequent absolute-value estimates; zeros counted with multiplicity"},
+        {"page": 8, "location": "(3.8)", "claim": "At K=Q, r_Q=zeta'/zeta(0), r'_Q=zeta'/zeta(-1)"},
+        {"page": 9, "location": "Lemma 3.3", "claim": "At K=Q, R^(1)=-sum_{r>=1} x^(1-2r)/(2r(2r-1))"},
+        {"page": 10, "location": "Section 4 first half", "claim": "Dirichlet-series, Perron-kernel and residue derivation; contains local kernel Laurent typo noted separately"}
+      ]
+    },
+    {
+      "id": "grenie_molteni_arxiv_v5",
+      "metadata_url": "https://arxiv.org/abs/1312.4465v5",
+      "download_url": "https://arxiv.org/pdf/1312.4465v5",
+      "version_submission_date": "2015-09-17",
+      "pdf_generation_dateline": "2021-07-12",
+      "version_status": "Author-designated final version to appear in Mathematics of Computation",
+      "local_ignored_file": "tmp/input_review_4/grenie_molteni_1312.4465v5.pdf",
+      "bytes": 322240,
+      "sha256": "1ad0682b0569638911411f998ab3f87d1b2ca378d4e177c3386463ec7a49afe7",
+      "visually_inspected_pages_1_based": [2, 8, 9, 10],
+      "use": "Fixed-version cross-check against institutional accepted manuscript"
+    },
+    {
+      "id": "montgomery_vaughan_ch13",
+      "authors": ["Hugh L. Montgomery", "Robert C. Vaughan"],
+      "title": "Multiplicative Number Theory I: Classical Theory",
+      "publisher": "Cambridge University Press",
+      "chapter": 13,
+      "chapter_title": "Conditional estimates",
+      "chapter_doi": "10.1017/CBO9780511618314.015",
+      "download_url": "https://personal.science.psu.edu/rcv4/personal/Publications/MNTI/17.0_pp_419_451_Conditional_estimates.pdf",
+      "version": "Publisher chapter PDF provided on coauthor's university website",
+      "local_ignored_file": "tmp/input_review_4/montgomery_vaughan_ch13.pdf",
+      "bytes": 467875,
+      "sha256": "8b1f8c653ef3dbb4cb195000e9887bcbb06b2961c48b394b655470b2cac898e9",
+      "printed_page": 420,
+      "visually_inspected_pages_1_based": [2],
+      "equations": ["13.6", "13.7"],
+      "use": "Independent corroboration of psi_1 normalization and affine constants only",
+      "limitation": "Formula has O(x^-1/2); not used as a replacement for the exact trivial-zero sum"
+    }
+  ],
+  "source_issue": {
+    "source_ids": ["grenie_molteni_accepted_2016", "grenie_molteni_arxiv_v5"],
+    "printed_page": 10,
+    "location": "First kernel Laurent expansion at s=-1 in Section 4",
+    "printed_pole_term": "-x/(s+1)",
+    "correct_pole_term": "-1/(s+1)",
+    "verification": "Direct expansion exp(u log x)/((u-1)u)=-1/u-log x-1+O(u), u=s+1",
+    "main_formula_1_3a_affected": false,
+    "current_Lean_formula_affected": false,
+    "independent_cross_check": "Montgomery-Vaughan printed p.420, (13.7), confirms +zeta'/zeta(-1) without x"
+  },
+  "access_limits": {
+    "publisher_vor_url": "https://www.ams.org/mcom/2016-85-300/S0025-5718-2015-03039-7/S0025-5718-2015-03039-7.pdf",
+    "publisher_vor_retrieved": false,
+    "publisher_vor_failure": "HTTP 403",
+    "ingham_theorem_28_original_pages_checked": false,
+    "third_party_pdfs_republished": false
+  },
+  "Lean_files_sha256": {
+    "lean/LegendreK6/IntegratedExplicitFormula.lean": "9dfad65f0a4a3849e4f89f6aca7b0f25511a2958466e1bd2712845d8e368aced",
+    "lean/LegendreK6/IntegratedPsi.lean": "52a735da07c58adfaee31f0405079c55879ef63585bf60d7b43e4359ca658245",
+    "lean/LegendreK6/ZetaZeros.lean": "9fb065bdae1cc73f614f433628ad98e97f81ceec74e8ad093de9e1eb24c6de1d",
+    "lean/LegendreK6/TrapezoidKernel.lean": "b970b79fe41f4afde356ce7598d28d377e10c4178791c0bff88f0125c89467a3"
+  },
+  "files_modified_by_this_review": [],
+  "new_files": ["audit/input4_source_review_2026-11-06.md", "audit/input4_source_provenance_2026-11-06.json"]
+}

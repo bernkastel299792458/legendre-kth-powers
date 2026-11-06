@@ -14,12 +14,14 @@ AI 作者：Claude 与 Codex。此补充稿的实现与撰写由 Codex 完成；
 | `QRHSevenEighths` | 实际 ζ 函数的非平凡零点满足 Re ρ≤7/8。选择这一研究前提的依据为 [OpenAI math](https://github.com/openai/math) 的公开成果；本项目不重建上游证明。 |
 | `CSv2` | [Chourasiya–Simonič v2](https://arxiv.org/abs/2507.15184v2)，推论 1、表 1 前十二行，σ∈[1/2,7/8]、T≥3·10¹²。固定为 v2，并保留预印本依赖身份。 |
 | `RosserZeroCount` | 完整 Rosser 计数误差式，按 [Dusart HDR](https://www.unilim.fr/pages_perso/pierre.dusart/Documents/HDR_Dusart.pdf) 印刷页 82 定理 86、页 34 式 (2.2)–(2.3) 翻译，保留 0.137、0.443、1.588 及原闭矩形计数约定。 |
-| `IntegratedExplicitFormula` | [Hildebrand 讲义](https://eclass-b.uoa.gr/modules/document/file.php/MATH717/04.%20%CE%92%CE%BF%CE%B7%CE%B8%CE%AE%CE%BC%CE%B1%CF%84%CE%B1/Analytic-number-theory-Hildebrand.pdf)，2013-01-07 版，印刷页 166 定理 5.18 式 (5.32)、页 167 式 (5.34)。接口只接受绝对收敛公式的高度截断极限后果。 |
+| `IntegratedExplicitFormula` | Grenié–Molteni, [Mathematics of Computation 85 (2016), 1875–1899](https://doi.org/10.1090/mcom3039)，[机构库接受稿](https://air.unimi.it/handle/2434/448119)的 (1.3a)、(3.8)、Lemma 3.3，取 K=Q。精确恒等式无条件成立，不采用该文后续依赖 GRH 的界；重数、常数项及闭高度极限见[专项审查](../audit/input4_source_review_2026-11-06.md)。此前 Hildebrand 讲义仅保留为历史交叉来源。 |
 | `FiniteRH3e12` | [Platt–Trudgian v1](https://arxiv.org/pdf/2004.09765v1)：0<Im ρ≤3·10¹² 时 Re ρ=1/2。原定理验证至更高截止；这里采用较弱的闭端点结论，不假设简单零点。 |
 | `CHJIIShortInterval` | [Cully-Hugill–Johnston II v3](https://arxiv.org/abs/2402.04272v3)，定理 1.3、表 1 的 log(x_M)=40、α=1/2、ω=0、M=2.894 行，两个端点共用同一 T*。 |
 | `CHLRows` | [Cully-Hugill–Lee v3](https://arxiv.org/abs/2103.05986v3)，定理 1、修正表 2 中项目明确列出的十二行。保留原区间方向及开闭端点。 |
 
 这些是定理参数，不是新增内核公理。完整定义在 DensityInput、LiteratureInputs、IntegratedExplicitFormula、FiniteRHInput、CHLRange 中；最终审计打印全部类型。CS 的上游证明及常数来源独立审查不属于此次工作。
+
+2026-11-06 的[输入 4、6、7 专项核查](../audit/inputs_4_6_7_review_2026-11-06.md)补充了正式来源、版本对照和常数复算。第 4 项已取得明确标识的接受稿；第 6、7 项已确认期刊发表，但尚未取得出版社正文完成精确版本对照。CHL 的十二行与作者修订本完全一致；其中六行已舍入辅助参数生成的 Δ 未达到表中目标下界，微调后数值上可达到目标但尚非完整严格认证。这些结果不删除或证明任何外部 Lean 参数，详细结论以专项报告为准。
 
 ## 2. 实际函数与梯形权
 

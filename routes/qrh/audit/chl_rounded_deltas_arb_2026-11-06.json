@@ -1,0 +1,491 @@
+{
+  "schema_version": 1,
+  "status": "RIGOROUS_ARB_PARAMETER_TO_DELTA_DIAGNOSTIC_COMPLETE",
+  "source": {
+    "url": "https://arxiv.org/pdf/2103.05986v3",
+    "version": "2103.05986v3",
+    "printed_page": 12,
+    "table": 2,
+    "pdf_sha256": "faf16820df427f883ba7ed32392ee93a9cd36b4b98500b9fcee022c01612d298"
+  },
+  "formula": "Delta = 1 / (1 - (1 + delta*a) / (exp(delta/m)*(1 + delta*(1-a))))",
+  "input_semantics": "Printed finite decimals parsed as exact rationals; enclosed by Arb without Python floats.",
+  "precision_bits": 256,
+  "python_version": "3.12.10",
+  "python_flint_version": "0.9.0",
+  "script_sha256": "56f39df082bad1175ea58b4a085ed7e6544536b233da44a4b0b087bba1be718f",
+  "certified_below_log_x0": [
+    "50",
+    "60",
+    "75",
+    "90",
+    "105",
+    "135"
+  ],
+  "certified_above_count": 6,
+  "rows": [
+    {
+      "log_x0": "log(4*10^18)",
+      "m": 5,
+      "printed_delta": "3.341898e-8",
+      "delta_exact_rational": {
+        "numerator": "1670949",
+        "denominator": "50000000000000"
+      },
+      "printed_a": "0.2173221",
+      "a_exact_rational": {
+        "numerator": "2173221",
+        "denominator": "10000000"
+      },
+      "reported_Delta": 39097000,
+      "generated_Delta_enclosure": {
+        "decimal_ball": "[39097000.766092677110623243472271351332561002847324836295936448398751 +/- 2.44e-61]",
+        "lower_dyadic": {
+          "mantissa": "67459395551962001987145896676866956801367964194679313344238293555917754328433",
+          "exponent": -230
+        },
+        "upper_dyadic": {
+          "mantissa": "67459395551962001987145896676866956801367964194679313344238293555918164514095",
+          "exponent": -230
+        }
+      },
+      "difference_generated_minus_reported_enclosure": {
+        "decimal_ball": "[0.766092677110623243472271351332561002847324836295936448398751 +/- 2.44e-61]",
+        "lower_dyadic": {
+          "mantissa": "2643688667775623468380011481545495424646885825114881982322894970800867",
+          "exponent": -231
+        },
+        "upper_dyadic": {
+          "mantissa": "2643688667775623468380011481545495424646885825114881982322895791172189",
+          "exponent": -231
+        }
+      },
+      "certified_relation": "strictly_above_reported"
+    },
+    {
+      "log_x0": "43",
+      "m": 5,
+      "printed_delta": "3.123609e-8",
+      "delta_exact_rational": {
+        "numerator": "3123609",
+        "denominator": "100000000000000"
+      },
+      "printed_a": "0.2172087",
+      "a_exact_rational": {
+        "numerator": "2172087",
+        "denominator": "10000000"
+      },
+      "reported_Delta": 41816800,
+      "generated_Delta_enclosure": {
+        "decimal_ball": "[41816847.633701832138836643704897955956293669174155420589299245255650 +/- 6.04e-61]",
+        "lower_dyadic": {
+          "mantissa": "36076159423774906482700324909549676008029646222883846047724158899673759006779",
+          "exponent": -229
+        },
+        "upper_dyadic": {
+          "mantissa": "18038079711887453241350162454774838004014823111441923023862079449836996813699",
+          "exponent": -228
+        }
+      },
+      "difference_generated_minus_reported_enclosure": {
+        "decimal_ball": "[47.633701832138836643704897955956293669174155420589299245255650 +/- 6.04e-61]",
+        "lower_dyadic": {
+          "mantissa": "164377863802037600450167365745062089818057808073940936514117809835540717",
+          "exponent": -231
+        },
+        "upper_dyadic": {
+          "mantissa": "164377863802037600450167365745062089818057808073940936514117810774023191",
+          "exponent": -231
+        }
+      },
+      "certified_relation": "strictly_above_reported"
+    },
+    {
+      "log_x0": "46",
+      "m": 4,
+      "printed_delta": "6.874386e-9",
+      "delta_exact_rational": {
+        "numerator": "3437193",
+        "denominator": "500000000000000"
+      },
+      "printed_a": "0.1813398",
+      "a_exact_rational": {
+        "numerator": "906699",
+        "denominator": "5000000"
+      },
+      "reported_Delta": 163940000,
+      "generated_Delta_enclosure": {
+        "decimal_ball": "[163940260.84695092580335268740489555778187363001278223671994698044881 +/- 4.47e-60]",
+        "lower_dyadic": {
+          "mantissa": "35358565512260489091650433300584665032485427224600885088527643034577473741787",
+          "exponent": -227
+        },
+        "upper_dyadic": {
+          "mantissa": "35358565512260489091650433300584665032485427224600885088527643034578375260721",
+          "exponent": -227
+        }
+      },
+      "difference_generated_minus_reported_enclosure": {
+        "decimal_ball": "[260.84695092580335268740489555778187363001278223671994698044881 +/- 4.47e-60]",
+        "lower_dyadic": {
+          "mantissa": "56259359081988148749673656679011396839571550473468110636120525705421787",
+          "exponent": -227
+        },
+        "upper_dyadic": {
+          "mantissa": "56259359081988148749673656679011396839571550473468110636120526606940721",
+          "exponent": -227
+        }
+      },
+      "certified_relation": "strictly_above_reported"
+    },
+    {
+      "log_x0": "50",
+      "m": 5,
+      "printed_delta": "1.208702e-9",
+      "delta_exact_rational": {
+        "numerator": "604351",
+        "denominator": "500000000000000"
+      },
+      "printed_a": "0.2101882",
+      "a_exact_rational": {
+        "numerator": "1050941",
+        "denominator": "5000000"
+      },
+      "reported_Delta": 1061200000,
+      "generated_Delta_enclosure": {
+        "decimal_ball": "[1061196435.392115620918036028564864965739138040794563225286706903841 +/- 3.39e-58]",
+        "lower_dyadic": {
+          "mantissa": "14304899650770903392688338773775258472750159824236920462750957683092280140313",
+          "exponent": -223
+        },
+        "upper_dyadic": {
+          "mantissa": "14304899650770903392688338773775258472750159824236920462750957683094641027269",
+          "exponent": -223
+        }
+      },
+      "difference_generated_minus_reported_enclosure": {
+        "decimal_ball": "[-3564.607884379081963971435135034260861959205436774713293096159 +/- 3.39e-58]",
+        "lower_dyadic": {
+          "mantissa": "-48050819226082361979431397357562681709006363107295722617915141729459687",
+          "exponent": -223
+        },
+        "upper_dyadic": {
+          "mantissa": "-48050819226082361979431397357562681709006363107295722617915139368572731",
+          "exponent": -223
+        }
+      },
+      "certified_relation": "strictly_below_reported"
+    },
+    {
+      "log_x0": "55",
+      "m": 9,
+      "printed_delta": "1.757070e-10",
+      "delta_exact_rational": {
+        "numerator": "175707",
+        "denominator": "1000000000000000"
+      },
+      "printed_a": "0.2789679",
+      "a_exact_rational": {
+        "numerator": "2789679",
+        "denominator": "10000000"
+      },
+      "reported_Delta": 10288400000,
+      "generated_Delta_enclosure": {
+        "decimal_ball": "[10288407268.6661369259257465847884696194504983178270654286406709055 +/- 5.13e-56]",
+        "lower_dyadic": {
+          "mantissa": "541747873541336006465390527185458058989651255652842583212572980655467955293",
+          "exponent": -215
+        },
+        "upper_dyadic": {
+          "mantissa": "541747873541336006465390527185458058989651255652842583212572980656334797321",
+          "exponent": -215
+        }
+      },
+      "difference_generated_minus_reported_enclosure": {
+        "decimal_ball": "[7268.6661369259257465847884696194504983178270654286406709055 +/- 5.13e-56]",
+        "lower_dyadic": {
+          "mantissa": "382739944126653960609175120621054791105893337845098146450014776755293",
+          "exponent": -215
+        },
+        "upper_dyadic": {
+          "mantissa": "382739944126653960609175120621054791105893337845098146450015643597321",
+          "exponent": -215
+        }
+      },
+      "certified_relation": "strictly_above_reported"
+    },
+    {
+      "log_x0": "60",
+      "m": 30,
+      "printed_delta": "4.873014e-11",
+      "delta_exact_rational": {
+        "numerator": "2436507",
+        "denominator": "50000000000000000"
+      },
+      "printed_a": "0.3832708",
+      "a_exact_rational": {
+        "numerator": "958177",
+        "denominator": "2500000"
+      },
+      "reported_Delta": 76918400000,
+      "generated_Delta_enclosure": {
+        "decimal_ball": "[76918352267.638791337264769061148395809483727188332662130497152709 +/- 4.83e-55]",
+        "lower_dyadic": {
+          "mantissa": "63284749599018777138205628215676655788866881608903456484620629362769026609",
+          "exponent": -209
+        },
+        "upper_dyadic": {
+          "mantissa": "63284749599018777138205628215676655788866881608903456484620629363526074991",
+          "exponent": -209
+        }
+      },
+      "difference_generated_minus_reported_enclosure": {
+        "decimal_ball": "[-47732.361208662735230938851604190516272811667337869502847291 +/- 4.83e-55]",
+        "lower_dyadic": {
+          "mantissa": "-39271908950278240762570132998752365153594671518195876194813051773391",
+          "exponent": -209
+        },
+        "upper_dyadic": {
+          "mantissa": "-39271908950278240762570132998752365153594671518195876194812294725009",
+          "exponent": -209
+        }
+      },
+      "certified_relation": "strictly_below_reported"
+    },
+    {
+      "log_x0": "75",
+      "m": 82,
+      "printed_delta": "6.286379e-11",
+      "delta_exact_rational": {
+        "numerator": "6286379",
+        "denominator": "100000000000000000"
+      },
+      "printed_a": "0.4603978",
+      "a_exact_rational": {
+        "numerator": "2301989",
+        "denominator": "5000000"
+      },
+      "reported_Delta": 174043000000,
+      "generated_Delta_enclosure": {
+        "decimal_ball": "[174042580984.06342792106793358436678038898095194988822584270159894 +/- 3.88e-54]",
+        "lower_dyadic": {
+          "mantissa": "4474810315269085056648203691943737270472656685297147420780683916960236463",
+          "exponent": -204
+        },
+        "upper_dyadic": {
+          "mantissa": "17899241261076340226592814767774949081890626741188589683122735668325435757",
+          "exponent": -206
+        }
+      },
+      "difference_generated_minus_reported_enclosure": {
+        "decimal_ball": "[-419015.93657207893206641563321961101904805011177415729840106 +/- 3.88e-54]",
+        "lower_dyadic": {
+          "mantissa": "-10773322394055770191643053590134819691725053870394169034213727763537",
+          "exponent": -204
+        },
+        "upper_dyadic": {
+          "mantissa": "-43093289576223080766572214360539278766900215481576676136854426564243",
+          "exponent": -206
+        }
+      },
+      "certified_relation": "strictly_below_reported"
+    },
+    {
+      "log_x0": "90",
+      "m": 82,
+      "printed_delta": "6.270787e-11",
+      "delta_exact_rational": {
+        "numerator": "6270787",
+        "denominator": "100000000000000000"
+      },
+      "printed_a": "0.4628348",
+      "a_exact_rational": {
+        "numerator": "1157087",
+        "denominator": "2500000"
+      },
+      "reported_Delta": 184304000000,
+      "generated_Delta_enclosure": {
+        "decimal_ball": "[184303559482.35082480828670756081204936998560321510486822367781060 +/- 5.38e-54]",
+        "lower_dyadic": {
+          "mantissa": "18954521691170516261946454868833606043800601816875947097856706239473001783",
+          "exponent": -206
+        },
+        "upper_dyadic": {
+          "mantissa": "9477260845585258130973227434416803021900300908437973548928353120008151795",
+          "exponent": -205
+        }
+      },
+      "difference_generated_minus_reported_enclosure": {
+        "decimal_ball": "[-440517.64917519171329243918795063001439678489513177632218940 +/- 5.38e-54]",
+        "lower_dyadic": {
+          "mantissa": "-45304612456137636635145044514423095532619357259348055921107982998217",
+          "exponent": -206
+        },
+        "upper_dyadic": {
+          "mantissa": "-22652306228068818317572522257211547766309678629674027960553719848205",
+          "exponent": -205
+        }
+      },
+      "certified_relation": "strictly_below_reported"
+    },
+    {
+      "log_x0": "105",
+      "m": 80,
+      "printed_delta": "6.183604e-11",
+      "delta_exact_rational": {
+        "numerator": "1545901",
+        "denominator": "25000000000000000"
+      },
+      "printed_a": "0.4641109",
+      "a_exact_rational": {
+        "numerator": "4641109",
+        "denominator": "10000000"
+      },
+      "reported_Delta": 191886000000,
+      "generated_Delta_enclosure": {
+        "decimal_ball": "[191885906929.70202755477323034206291400307006254035256187957659366 +/- 7.16e-54]",
+        "lower_dyadic": {
+          "mantissa": "39468641792317184712965660035111325392340447850108091005191784721043938179",
+          "exponent": -207
+        },
+        "upper_dyadic": {
+          "mantissa": "39468641792317184712965660035111325392340447850108091005191784722221787829",
+          "exponent": -207
+        }
+      },
+      "difference_generated_minus_reported_enclosure": {
+        "decimal_ball": "[-93070.29797244522676965793708599692993745964743812042340634 +/- 7.16e-54]",
+        "lower_dyadic": {
+          "mantissa": "-19143449933112652892035413644482549208939012547202122114176364061821",
+          "exponent": -207
+        },
+        "upper_dyadic": {
+          "mantissa": "-19143449933112652892035413644482549208939012547202122114175186212171",
+          "exponent": -207
+        }
+      },
+      "certified_relation": "strictly_below_reported"
+    },
+    {
+      "log_x0": "120",
+      "m": 84,
+      "printed_delta": "6.335103e-11",
+      "delta_exact_rational": {
+        "numerator": "6335103",
+        "denominator": "100000000000000000"
+      },
+      "printed_a": "0.4660744",
+      "a_exact_rational": {
+        "numerator": "582593",
+        "denominator": "1250000"
+      },
+      "reported_Delta": 197917000000,
+      "generated_Delta_enclosure": {
+        "decimal_ball": "[197917028755.84672719763353354042333875398888580923909096104633677 +/- 4.51e-54]",
+        "lower_dyadic": {
+          "mantissa": "40709171598652246934872321352382220957098161391116652020207853725648499471",
+          "exponent": -207
+        },
+        "upper_dyadic": {
+          "mantissa": "40709171598652246934872321352382220957098161391116652020207853726901554153",
+          "exponent": -207
+        }
+      },
+      "difference_generated_minus_reported_enclosure": {
+        "decimal_ball": "[28755.84672719763353354042333875398888580923909096104633677 +/- 4.51e-54]",
+        "lower_dyadic": {
+          "mantissa": "5914734604904224191889356828470264644601291498793412022200272499471",
+          "exponent": -207
+        },
+        "upper_dyadic": {
+          "mantissa": "5914734604904224191889356828470264644601291498793412022201525554153",
+          "exponent": -207
+        }
+      },
+      "certified_relation": "strictly_above_reported"
+    },
+    {
+      "log_x0": "135",
+      "m": 90,
+      "printed_delta": "6.590771e-11",
+      "delta_exact_rational": {
+        "numerator": "6590771",
+        "denominator": "100000000000000000"
+      },
+      "printed_a": "0.4681018",
+      "a_exact_rational": {
+        "numerator": "2340509",
+        "denominator": "5000000"
+      },
+      "reported_Delta": 202553000000,
+      "generated_Delta_enclosure": {
+        "decimal_ball": "[202552874383.31260563661932121451974467894317939783009816292401091 +/- 6.57e-54]",
+        "lower_dyadic": {
+          "mantissa": "41662709737031333054797183175726006579094931687644838783158877611173101439",
+          "exponent": -207
+        },
+        "upper_dyadic": {
+          "mantissa": "41662709737031333054797183175726006579094931687644838783158877612485544645",
+          "exponent": -207
+        }
+      },
+      "difference_generated_minus_reported_enclosure": {
+        "decimal_ball": "[-125616.68739436338067878548025532105682060216990183707598909 +/- 6.57e-54]",
+        "lower_dyadic": {
+          "mantissa": "-25837853947877279750928591370525376080536314973974447472843610898561",
+          "exponent": -207
+        },
+        "upper_dyadic": {
+          "mantissa": "-25837853947877279750928591370525376080536314973974447472842298455355",
+          "exponent": -207
+        }
+      },
+      "certified_relation": "strictly_below_reported"
+    },
+    {
+      "log_x0": "150",
+      "m": 79,
+      "printed_delta": "6.090246e-11",
+      "delta_exact_rational": {
+        "numerator": "3045123",
+        "denominator": "50000000000000000"
+      },
+      "printed_a": "0.4666782",
+      "a_exact_rational": {
+        "numerator": "2333391",
+        "denominator": "5000000"
+      },
+      "reported_Delta": 207053000000,
+      "generated_Delta_enclosure": {
+        "decimal_ball": "[207053209682.90801285733709653133280194978127785632103409671862444 +/- 7.61e-54]",
+        "lower_dyadic": {
+          "mantissa": "42588375017651050270786575967235415429669625639281662306521080087789925177",
+          "exponent": -207
+        },
+        "upper_dyadic": {
+          "mantissa": "42588375017651050270786575967235415429669625639281662306521080089161336191",
+          "exponent": -207
+        }
+      },
+      "difference_generated_minus_reported_enclosure": {
+        "decimal_ball": "[209682.90801285733709653133280194978127785632103409671862444 +/- 7.61e-54]",
+        "lower_dyadic": {
+          "mantissa": "43129272590939997471697729528666145824490902960875781137057005925177",
+          "exponent": -207
+        },
+        "upper_dyadic": {
+          "mantissa": "43129272590939997471697729528666145824490902960875781137058377336191",
+          "exponent": -207
+        }
+      },
+      "certified_relation": "strictly_above_reported"
+    }
+  ],
+  "scope_limitations": [
+    "Certifies only the stated algebraic/exponential parameter-to-Delta map using Arb.",
+    "Does not certify constraint1, quadrature, the CHL theorem, or Lean input CHLRows.",
+    "Does not compare the unavailable published corrigendum table.",
+    "Does not refute existence of nearby feasible witnesses for the reported Delta.",
+    "This is not a Lean kernel proof; it relies on the correctness of Python and FLINT/Arb."
+  ]
+}

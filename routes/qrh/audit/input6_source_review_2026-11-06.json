@@ -1,0 +1,262 @@
+{
+  "review_date": "2026-11-06",
+  "reviewer": "Codex (AI-assisted source audit)",
+  "repository_head": "9087d46124fa69cab9d3d95f8b4bafc8cc2546f7",
+  "input": "LegendreK6.CHJIIShortInterval",
+  "status": {
+    "arxiv_v3_to_lean_statement": "matched by source and visual inspection; not a Lean proof of the external theorem",
+    "arxiv_v2_to_v3_relevant_spans": "identical",
+    "journal_publication": "confirmed by publisher contents, Crossref, author publication list",
+    "journal_text_to_arxiv": "not completed: journal full text or identified accepted manuscript not obtained",
+    "upstream_analytic_proof": "not independently re-proved",
+    "constant_optimization": "not independently optimized; selected first-row scalar bound separately recomputed and Arb-certified"
+  },
+  "acquisitions": [
+    {
+      "name": "chjii_v2.pdf",
+      "requested_url": "https://arxiv.org/pdf/2402.04272v2",
+      "fetched_at": "2026-11-06T07:50:02.804259+00:00",
+      "status": 200,
+      "resolved_url": "https://arxiv.org/pdf/2402.04272v2",
+      "content_type": "application/pdf",
+      "bytes": 259804,
+      "sha256": "e9c25d211016436691b2f7be713f116acc8065dadc7fe7e61dd7e64315a37867",
+      "saved": true
+    },
+    {
+      "name": "chjii_v3.pdf",
+      "requested_url": "https://arxiv.org/pdf/2402.04272v3",
+      "fetched_at": "2026-11-06T07:50:02.823750+00:00",
+      "status": 200,
+      "resolved_url": "https://arxiv.org/pdf/2402.04272v3",
+      "content_type": "application/pdf",
+      "bytes": 426592,
+      "sha256": "9bf784f264970a5bb82e54547c2dbd68b1a4cc6a69ee679b8fc2159d006a565c",
+      "saved": true
+    },
+    {
+      "name": "chjii_v2_source.tar",
+      "requested_url": "https://arxiv.org/src/2402.04272v2",
+      "fetched_at": "2026-11-06T07:50:02.852542+00:00",
+      "status": 200,
+      "resolved_url": "https://arxiv.org/src/2402.04272v2",
+      "content_type": "application/gzip",
+      "bytes": 30380,
+      "sha256": "aaf81c07e3c10d6438d1ddd453f3ccbdffaca2c4dfc3d95297082f60c581fad7",
+      "saved": true
+    },
+    {
+      "name": "chjii_v3_source.tar",
+      "requested_url": "https://arxiv.org/src/2402.04272v3",
+      "fetched_at": "2026-11-06T07:50:04.549927+00:00",
+      "status": 200,
+      "resolved_url": "https://arxiv.org/src/2402.04272v3",
+      "content_type": "application/gzip",
+      "bytes": 26252,
+      "sha256": "2d118982a210b43ff4884c88fb285f79fcaa3e22395ec8f83f0061af1b86c9a3",
+      "saved": true
+    },
+    {
+      "name": "crossref_chjii.json",
+      "requested_url": "https://api.crossref.org/works/10.7169/facm/241110-18-11",
+      "fetched_at": "2026-11-06T07:50:04.920374+00:00",
+      "status": 200,
+      "resolved_url": "https://api.crossref.org/works/10.7169/facm/241110-18-11",
+      "content_type": "application/json",
+      "bytes": 7373,
+      "sha256": "c0c80e18e99ec12d5c41bf6680849ed84358eeefae3c9ed17eedfdd9ed9e956c",
+      "saved": true
+    },
+    {
+      "name": "publisher_volume73_contents.pdf",
+      "requested_url": "https://press.amu.edu.pl/media/productattach/s/p/spis_tresci_functiones_vol73.2_2025_amup.pdf",
+      "fetched_at": "2026-11-06T07:50:05.226806+00:00",
+      "status": 200,
+      "resolved_url": "https://press.amu.edu.pl/media/productattach/s/p/spis_tresci_functiones_vol73.2_2025_amup.pdf",
+      "content_type": "application/pdf",
+      "bytes": 147831,
+      "sha256": "abc46a6540d1551b531bc1fdb6b3d2e88231ba6919488b0de83d7974a2963b56",
+      "saved": true
+    },
+    {
+      "name": "author_research.html",
+      "requested_url": "https://sites.google.com/view/danielrjohnston/research",
+      "fetched_at": "2026-11-06T07:50:06.508505+00:00",
+      "status": 200,
+      "resolved_url": "https://sites.google.com/view/danielrjohnston/research",
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 160097,
+      "sha256": "664c5a607049abdcad2b66770aa098642c6fb82b45b7a1fd7da0a4d0a745a864",
+      "saved": true
+    }
+  ],
+  "section_comparison": {
+    "theorem_1_3": {
+      "equal": true,
+      "v2_utf8_sha256": "877dd674ed1a5cb5819f382c86c430b5ecb15ee991163345dbe69b47f1788b08",
+      "v3_utf8_sha256": "877dd674ed1a5cb5819f382c86c430b5ecb15ee991163345dbe69b47f1788b08",
+      "characters": 623
+    },
+    "table_1": {
+      "equal": true,
+      "v2_utf8_sha256": "5ba2464aef1c1705a69bb740f9e2d484fecf9c677d137aa9efb25040c42bc0d9",
+      "v3_utf8_sha256": "5ba2464aef1c1705a69bb740f9e2d484fecf9c677d137aa9efb25040c42bc0d9",
+      "characters": 966
+    },
+    "shared_Tstar_corollary_and_proof": {
+      "equal": true,
+      "v2_utf8_sha256": "79c8cadf22488c8e04a4fbac33b859bd69ec720ea6d0b40761823302b58c882d",
+      "v3_utf8_sha256": "79c8cadf22488c8e04a4fbac33b859bd69ec720ea6d0b40761823302b58c882d",
+      "characters": 2206
+    },
+    "section_4_proof": {
+      "equal": true,
+      "v2_utf8_sha256": "b460041dc06da389c990c7655e68122c7619af3b1066ab83120b0f459de8e141",
+      "v3_utf8_sha256": "b460041dc06da389c990c7655e68122c7619af3b1066ab83120b0f459de8e141",
+      "characters": 5063
+    }
+  },
+  "source_span_delimiters": {
+    "theorem_1_3": [
+      "\\begin{theorem}\\label{mainthm-intervals}",
+      "\\end{theorem}"
+    ],
+    "table_1": [
+      "\\begin{table}[h]",
+      "\\end{table}"
+    ],
+    "shared_Tstar_corollary_and_proof": [
+      "We also have the following variant of Corollary~\\ref{newCor-MTPerron}",
+      "\\section{Proof of theorems"
+    ],
+    "section_4_proof": [
+      "\\section{Proof of theorems",
+      "\\section{Application:"
+    ]
+  },
+  "span_hash_method": "decode source; slice inclusively from first start delimiter to first subsequent end delimiter; encode UTF-8; SHA-256",
+  "lean_files": [
+    {
+      "path": "routes/qrh/lean/LegendreK6/LiteratureInputs.lean",
+      "sha256": "feb8446dcfb232adedec2937a271ed010e35f8addeec240a60f75c2c74c8df78"
+    },
+    {
+      "path": "routes/qrh/lean/LegendreK6/ZetaZeros.lean",
+      "sha256": "9fb065bdae1cc73f614f433628ad98e97f81ceec74e8ad093de9e1eb24c6de1d"
+    },
+    {
+      "path": "routes/qrh/lean/lake-manifest.json",
+      "sha256": "1a2552df9acfbb7ff8f41bf877975acfcbff176531b82f3e41a6761f3cb77d23"
+    }
+  ],
+  "local_evidence": [
+    {
+      "path": "routes/qrh/tmp/input_review_6/acquisition.json",
+      "sha256": "dcabbfa75497667b1e05e4e5f88bab71734516f7ae5127e8389086b1b5ee16c0",
+      "bytes": 3049
+    },
+    {
+      "path": "routes/qrh/tmp/input_review_6/crossref_chjii.json",
+      "sha256": "c0c80e18e99ec12d5c41bf6680849ed84358eeefae3c9ed17eedfdd9ed9e956c",
+      "bytes": 7373
+    },
+    {
+      "path": "routes/qrh/tmp/input_review_6/notebook_acquisition.json",
+      "sha256": "7d9f7efa25cd49e843e9c6a6a990cbe20a410155884993a5989e4018af1851d2",
+      "bytes": 395
+    },
+    {
+      "path": "routes/qrh/tmp/input_review_6/section_comparison.json",
+      "sha256": "1d42688fb17e4d8d080eacbdc8e9775acf0d1a66f601d083637299d4afdccc9b",
+      "bytes": 1032
+    },
+    {
+      "path": "routes/qrh/tmp/input_review_6/source_members.json",
+      "sha256": "e60b001bc879f3542e27c35d6769f8a425ceaf18dbad37f0d5410a072a9fcc74",
+      "bytes": 1209
+    },
+    {
+      "path": "routes/qrh/tmp/input_review_6/v2_page03.png",
+      "sha256": "7b486e4f364a6a0af306e10bbd8d347b1ea061f28c3e8812a2b24ab9c2ce1b3b",
+      "bytes": 256105
+    },
+    {
+      "path": "routes/qrh/tmp/input_review_6/v2_v3_main.diff",
+      "sha256": "b84cac4485973a0f76240140809b594bd1e1d562e5d1d8e4cc49de2b02017644",
+      "bytes": 6524
+    },
+    {
+      "path": "routes/qrh/tmp/input_review_6/v3_page03.png",
+      "sha256": "18dc4256309819c2ae997fe2fc3632136c4649e9a151812bb1af29f3d3538b9f",
+      "bytes": 257656
+    },
+    {
+      "path": "routes/qrh/tmp/input_review_6/v3_proof-10.png",
+      "sha256": "f29dafcb055b30bd4146d5a9a44c7cd0317711310e60fc44ded9750147e77e9a",
+      "bytes": 213041
+    },
+    {
+      "path": "routes/qrh/tmp/input_review_6/v3_proof-11.png",
+      "sha256": "5545c5e7cfc4f31d4063f70b417a18f9b63294346035b1910f693549752b4cb5",
+      "bytes": 202055
+    },
+    {
+      "path": "routes/qrh/tmp/input_review_6/v3_proof-12.png",
+      "sha256": "278b970be829be070b2c9ac49f3caf2d5e0033b2f123c20679ffaf72c7ca31dd",
+      "bytes": 188934
+    }
+  ],
+  "visual_inspection": [
+    {
+      "version": 2,
+      "pages": [
+        3
+      ]
+    },
+    {
+      "version": 3,
+      "pages": [
+        3,
+        10,
+        11,
+        12
+      ]
+    }
+  ],
+  "observed_typo": {
+    "versions": [
+      2,
+      3
+    ],
+    "page": 11,
+    "tex_line": 523,
+    "printed": "1/(1-kappa)=log x",
+    "intended": "1/(kappa-1)=log x",
+    "effect": "Following numbered bound (4.3) uses positive log x; theorem and Lean statement unaffected by transcription; no journal correction claim"
+  },
+  "external_links": {
+    "publisher_article": "https://projecteuclid.org/journals/functiones-et-approximatio-commentarii-mathematici/volume-73/issue-2/On-the-error-term-in-the-explicit-formulaof-Riemann-von/10.7169/facm/241110-18-11.full",
+    "author_code": "https://github.com/DJmath1729/Riemann-von-Mangoldt-estimates",
+    "journal_ethics": "https://fa.amu.edu.pl/html/ethics.pdf"
+  },
+  "access_limitations": [
+    "Project Euclid article endpoints returned a security-check HTML page instead of article text.",
+    "Author publication list links arXiv and journal; no separately identified accepted manuscript obtained.",
+    "UNSW repository requests were blocked by robots policy and were not retried through another transport."
+  ],
+  "no_changes_to": [
+    "Lean source",
+    "existing paper",
+    "certificates",
+    "historical reports"
+  ],
+  "new_compile_performed": false,
+  "supplemental_constant_audit": {
+    "path": "routes/qrh/audit/input6_constant_check_2026-11-06.json",
+    "sha256": "39e97e5a84722a19562d6f36d31028b22cae3b9dbc3793ef9a7aa4f5d9d2236c",
+    "scope": "First Table 1 row and upstream K, scalar comparisons only",
+    "all_x_T_analytic_proof": "not supplied; manual elementary endpoint reductions are documented in the Markdown report",
+    "verifier_path": "routes/qrh/audit/verify_input6_constant.py",
+    "verifier_sha256": "91237ac6462ed389e1d06f9d1cd6d25d8ff74289b4481067c1edb2faa1b8d62c"
+  }
+}

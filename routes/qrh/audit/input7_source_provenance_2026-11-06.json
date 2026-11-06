@@ -1,0 +1,596 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-06",
+  "reviewer": "Codex",
+  "scope": "Input 7: CHLRows source transcription and theorem-domain mapping only; excludes CS v2.",
+  "status": "AUTHOR_V3_MAPPING_PASS; PUBLISHED_CORRIGENDUM_EXACT_TABLE_COMPARISON_PENDING; SIX_ROUNDED_WITNESS_DELTA_SHORTFALLS_CERTIFIED_BY_ARB",
+  "review_is_not": [
+    "human_peer_review",
+    "independent_reproof_of_CHL",
+    "Lean_proof_of_CHL",
+    "verification_of_unread_VOR_table"
+  ],
+  "source_version": {
+    "arxiv": "2103.05986v3",
+    "submitted": "2022-09-14",
+    "theorem_printed_page": 2,
+    "table_number": 2,
+    "table_printed_page": 12
+  },
+  "published_original": {
+    "doi": "10.1090/mcom/3719",
+    "journal": "Mathematics of Computation",
+    "volume": 91,
+    "issue": 336,
+    "pages": "1955-1970",
+    "year": 2022
+  },
+  "published_corrigendum": {
+    "doi": "10.1090/mcom/3884",
+    "journal": "Mathematics of Computation",
+    "volume": 93,
+    "issue": 346,
+    "pages": "1019-1025",
+    "issue_year": 2024,
+    "published_online": "2023-07-19",
+    "body_obtained": false,
+    "publisher_metadata_and_abstract_obtained": true
+  },
+  "domain_mapping": {
+    "x_type": "real",
+    "condition": "x >= x0",
+    "left_endpoint": "x*(1-1/Delta), strict",
+    "right_endpoint": "x, inclusive",
+    "prime_type": "natural prime embedded in reals",
+    "additional_conditions_in_v3_theorem_statement": [],
+    "status": "PASS_AUTHOR_V3; CORRIGENDUM_ABSTRACT_CONSISTENT"
+  },
+  "rows": [
+    {
+      "lean_field": "row0",
+      "source_log_x0": "log(4*10^18)",
+      "source_delta_scientific": "3.90970e7",
+      "delta_integer": 39097000,
+      "lean_threshold_expression": "4 * 10 ^ 18",
+      "match": true
+    },
+    {
+      "lean_field": "row43",
+      "source_log_x0": "43",
+      "source_delta_scientific": "4.18168e7",
+      "delta_integer": 41816800,
+      "lean_threshold_expression": "Real.exp 43",
+      "match": true
+    },
+    {
+      "lean_field": "row46",
+      "source_log_x0": "46",
+      "source_delta_scientific": "1.63940e8",
+      "delta_integer": 163940000,
+      "lean_threshold_expression": "Real.exp 46",
+      "match": true
+    },
+    {
+      "lean_field": "row50",
+      "source_log_x0": "50",
+      "source_delta_scientific": "1.06120e9",
+      "delta_integer": 1061200000,
+      "lean_threshold_expression": "Real.exp 50",
+      "match": true
+    },
+    {
+      "lean_field": "row55",
+      "source_log_x0": "55",
+      "source_delta_scientific": "1.02884e10",
+      "delta_integer": 10288400000,
+      "lean_threshold_expression": "Real.exp 55",
+      "match": true
+    },
+    {
+      "lean_field": "row60",
+      "source_log_x0": "60",
+      "source_delta_scientific": "7.69184e10",
+      "delta_integer": 76918400000,
+      "lean_threshold_expression": "Real.exp 60",
+      "match": true
+    },
+    {
+      "lean_field": "row75",
+      "source_log_x0": "75",
+      "source_delta_scientific": "1.74043e11",
+      "delta_integer": 174043000000,
+      "lean_threshold_expression": "Real.exp 75",
+      "match": true
+    },
+    {
+      "lean_field": "row90",
+      "source_log_x0": "90",
+      "source_delta_scientific": "1.84304e11",
+      "delta_integer": 184304000000,
+      "lean_threshold_expression": "Real.exp 90",
+      "match": true
+    },
+    {
+      "lean_field": "row105",
+      "source_log_x0": "105",
+      "source_delta_scientific": "1.91886e11",
+      "delta_integer": 191886000000,
+      "lean_threshold_expression": "Real.exp 105",
+      "match": true
+    },
+    {
+      "lean_field": "row120",
+      "source_log_x0": "120",
+      "source_delta_scientific": "1.97917e11",
+      "delta_integer": 197917000000,
+      "lean_threshold_expression": "Real.exp 120",
+      "match": true
+    },
+    {
+      "lean_field": "row135",
+      "source_log_x0": "135",
+      "source_delta_scientific": "2.02553e11",
+      "delta_integer": 202553000000,
+      "lean_threshold_expression": "Real.exp 135",
+      "match": true
+    },
+    {
+      "lean_field": "row150",
+      "source_log_x0": "150",
+      "source_delta_scientific": "2.07053e11",
+      "delta_integer": 207053000000,
+      "lean_threshold_expression": "Real.exp 150",
+      "match": true
+    }
+  ],
+  "visual_check": [
+    {
+      "file": "chl_v3_p-02.png",
+      "printed_page": 2,
+      "content": "Theorem 1",
+      "viewed": true
+    },
+    {
+      "file": "chl_v3_table-12.png",
+      "printed_page": 12,
+      "content": "Table 2",
+      "viewed": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "routes/qrh/tmp/input_review_7/chl_v3.pdf",
+      "bytes": 225597,
+      "sha256": "faf16820df427f883ba7ed32392ee93a9cd36b4b98500b9fcee022c01612d298",
+      "url": "https://arxiv.org/pdf/2103.05986v3",
+      "source_kind": "author_corrected_preprint",
+      "access_status": "full_text_obtained"
+    },
+    {
+      "path": "routes/qrh/tmp/input_review_7/crossref_original.json",
+      "bytes": 21376,
+      "sha256": "4bae0958b94eefceabf5f1271b1b2cdb2e6777afed906ad190f79c434c1b8793",
+      "url": "https://api.crossref.org/works/10.1090/mcom/3719",
+      "source_kind": "publisher_deposited_metadata",
+      "access_status": "metadata_obtained"
+    },
+    {
+      "path": "routes/qrh/tmp/input_review_7/crossref_corrigendum.json",
+      "bytes": 10385,
+      "sha256": "30b14f365615ec66676f8010b9fffb50f96ec352cf3420cc96db9f4d79515fe0",
+      "url": "https://api.crossref.org/works/10.1090/mcom/3884",
+      "source_kind": "publisher_deposited_metadata",
+      "access_status": "metadata_and_abstract_obtained"
+    },
+    {
+      "path": "routes/qrh/tmp/input_review_7/cully_hugill_thesis_abstract.pdf",
+      "bytes": 100068,
+      "sha256": "54fdd5556403e640faa903c053349500e64e694fe29ad466b61de2448874240e",
+      "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/17D7818BA81863907DE2DCAED8055467/S0004972723000588a.pdf/explicit_estimates_for_the_distribution_of_primes.pdf",
+      "source_kind": "publisher_pdf_author_thesis_abstract",
+      "access_status": "full_text_obtained"
+    },
+    {
+      "path": "routes/qrh/tmp/input_review_7/openalex_corrigendum.json",
+      "bytes": 10369,
+      "sha256": "42d7819218984a1279e7d1c1ff1db84fac701b70e99856927674eb2aca37e157",
+      "url": "https://api.openalex.org/works/https://doi.org/10.1090/mcom/3884",
+      "source_kind": "secondary_locator_only",
+      "access_status": "metadata_obtained_no_mathematical_reliance"
+    },
+    {
+      "path": "routes/qrh/tmp/input_review_7/author_code.py",
+      "bytes": 12936,
+      "sha256": "853b73798fb1cf6fd127e5a368f81b18366661bab964edf2d4388a7793ad1938",
+      "url": "https://api.github.com/repos/EthanSLee/Interval-Estimates-for-Prime-Numbers/git/blobs/d17a426a0c6e7829f6376927f46f09a7f7ef76d5",
+      "source_kind": "author_public_supplementary_code",
+      "access_status": "full_text_obtained_and_limited_nonrigorous_replay"
+    }
+  ],
+  "reviewed_lean_files": [
+    {
+      "path": "routes/qrh/lean/LegendreK6/CHLRange.lean",
+      "bytes": 4525,
+      "sha256": "4c4e7c0a8a3950a071cd86b698beca2aeefe8959fa93f9a7c43fd32fce9239dd"
+    },
+    {
+      "path": "routes/qrh/lean/LegendreK6/Definitions.lean",
+      "bytes": 1519,
+      "sha256": "41eb5d0dd3e5debfb2821c9ecf9eb6b71d0f3df1737d9b3316fbda0f373056ac"
+    }
+  ],
+  "local_auxiliary_files": [
+    {
+      "path": "routes/qrh/tmp/input_review_7/chl_v3_p-02.png",
+      "bytes": 324221,
+      "sha256": "bc0b3ac2ed0110a2509e000f962928eda072c53458247ed7cbf5296cbfe1db2c"
+    },
+    {
+      "path": "routes/qrh/tmp/input_review_7/chl_v3_table-12.png",
+      "bytes": 457899,
+      "sha256": "15988d2d0fa91b0786b1dc35bfcac9abf7b2ff446402d90541edbd2597a3af15"
+    },
+    {
+      "path": "routes/qrh/tmp/input_review_7/check_rows_and_provenance.py",
+      "bytes": 7535,
+      "sha256": "830725d80ca9cbebe42b4a103f7eccbca71fe20783cac412d64ec61ca3a0da15"
+    }
+  ],
+  "access_limitations": {
+    "method": "ordinary DOI/publisher requests and legal author/institution/index discovery",
+    "ams_outcome": "HTTP 403 on inspected DOI/publisher article/PDF requests",
+    "access_controls_bypassed": false,
+    "publisher_pdf_url": "https://www.ams.org/mcom/2024-93-346/S0025-5718-2023-03884-4/S0025-5718-2023-03884-4.pdf",
+    "remaining_step": "Obtain legitimate published-corrigendum full text or corresponding author/institution final version; compare twelve exact parameters, theorem text, and table/page numbers."
+  },
+  "changes_to_lean_or_frozen_certificates": false,
+  "lean_rebuilt_in_this_review": false,
+  "author_code_diagnostic": {
+    "not_rigorous": true,
+    "git_blob": "d17a426a0c6e7829f6376927f46f09a7f7ef76d5",
+    "raw_replay": {
+      "status": "NON_RIGOROUS_AUTHOR_CODE_DIAGNOSTIC",
+      "source_url": "https://api.github.com/repos/EthanSLee/Interval-Estimates-for-Prime-Numbers/git/blobs/d17a426a0c6e7829f6376927f46f09a7f7ef76d5",
+      "author_code_sha256": "853b73798fb1cf6fd127e5a368f81b18366661bab964edf2d4388a7793ad1938",
+      "script_sha256": "2dc23cc91216b667f381e3cf49ebdf30feb4b9518fd70b32ca620a2a3e7faee2",
+      "precision_dps": 350,
+      "method": "Author code prefix; original Python float literals and scipy.integrate.quad preserved; optimizer not run.",
+      "rigorous_certificate": false,
+      "elapsed_seconds": 7.125,
+      "rows": [
+        {
+          "row": 0,
+          "parameters_from_author_comments": [
+            5,
+            3.341898e-08,
+            0.2173221,
+            338830000.0,
+            1
+          ],
+          "constraint_residual": "0.000235764893158103860426217359753",
+          "constraint_positive": true,
+          "computed_delta": "39097000.7660926709229210288625",
+          "stated_delta": 39097000,
+          "computed_delta_at_least_stated": true,
+          "relative_delta_difference": "1.9594666366292069183e-8",
+          "warnings": []
+        },
+        {
+          "row": 1,
+          "parameters_from_author_comments": [
+            5,
+            3.123609e-08,
+            0.2172087,
+            356557300.0,
+            1
+          ],
+          "constraint_residual": "0.0000153097629513678485069842436527",
+          "constraint_positive": true,
+          "computed_delta": "41816847.6337018366076434293718",
+          "stated_delta": 41816800,
+          "computed_delta_at_least_stated": true,
+          "relative_delta_difference": "1.1391044230215521855e-6",
+          "warnings": []
+        },
+        {
+          "row": 2,
+          "parameters_from_author_comments": [
+            4,
+            6.874386e-09,
+            0.1813398,
+            1215214000.0,
+            1
+          ],
+          "constraint_residual": "0.0000488226467894847218034983315935",
+          "constraint_positive": true,
+          "computed_delta": "163940260.846950917684667867238",
+          "stated_delta": 163940000,
+          "computed_delta_at_least_stated": true,
+          "relative_delta_difference": "1.5911123027795819682e-6",
+          "warnings": []
+        },
+        {
+          "row": 3,
+          "parameters_from_author_comments": [
+            5,
+            1.208702e-09,
+            0.2101882,
+            8262901000.0,
+            1
+          ],
+          "constraint_residual": "0.000126082916256759306045989715499",
+          "constraint_positive": true,
+          "computed_delta": "1061196435.39211553202445202528",
+          "stated_delta": 1061200000,
+          "computed_delta_at_least_stated": false,
+          "relative_delta_difference": "-3.3590349457858797097e-6",
+          "warnings": []
+        },
+        {
+          "row": 4,
+          "parameters_from_author_comments": [
+            9,
+            1.75707e-10,
+            0.2789679,
+            93307030000.0,
+            1
+          ],
+          "constraint_residual": "0.000205400503125252259923268328011",
+          "constraint_positive": true,
+          "computed_delta": "10288407268.6661372388689993478",
+          "stated_delta": 10288400000,
+          "computed_delta_at_least_stated": true,
+          "relative_delta_difference": "7.0649140169889088676e-7",
+          "warnings": []
+        },
+        {
+          "row": 5,
+          "parameters_from_author_comments": [
+            30,
+            4.873014e-11,
+            0.3832708,
+            989087200000.0,
+            1
+          ],
+          "constraint_residual": "0.000201280730439437481187484855197",
+          "constraint_positive": true,
+          "computed_delta": "76918352267.638805311364224463",
+          "stated_delta": 76918400000,
+          "computed_delta_at_least_stated": false,
+          "relative_delta_difference": "-6.2055842548322164496e-7",
+          "warnings": []
+        },
+        {
+          "row": 6,
+          "parameters_from_author_comments": [
+            82,
+            6.286379e-11,
+            0.4603978,
+            2844455000000.0,
+            1
+          ],
+          "constraint_residual": "0.000683888211044392218551725424722",
+          "constraint_positive": true,
+          "computed_delta": "174042580984.063429595098726515",
+          "stated_delta": 174043000000,
+          "computed_delta_at_least_stated": false,
+          "relative_delta_difference": "-2.4075425990726711288e-6",
+          "warnings": []
+        },
+        {
+          "row": 7,
+          "parameters_from_author_comments": [
+            82,
+            6.270787e-11,
+            0.4628348,
+            2361523000000.0,
+            1
+          ],
+          "constraint_residual": "0.00013624796005970588032077266633",
+          "constraint_positive": true,
+          "computed_delta": "184303559482.35080206567884895",
+          "stated_delta": 184304000000,
+          "computed_delta_at_least_stated": false,
+          "relative_delta_difference": "-2.3901686843363916201e-6",
+          "warnings": []
+        },
+        {
+          "row": 8,
+          "parameters_from_author_comments": [
+            80,
+            6.183604e-11,
+            0.4641109,
+            1860117000000.0,
+            1
+          ],
+          "constraint_residual": "0.000527354737553632968335749185306",
+          "constraint_positive": true,
+          "computed_delta": "191885906929.701980387939897635",
+          "stated_delta": 191886000000,
+          "computed_delta_at_least_stated": false,
+          "relative_delta_difference": "-4.8502912155973890801e-7",
+          "warnings": []
+        },
+        {
+          "row": 9,
+          "parameters_from_author_comments": [
+            84,
+            6.335103e-11,
+            0.4660744,
+            2020015000000.0,
+            1
+          ],
+          "constraint_residual": "0.000754400208993695627763670450473",
+          "constraint_positive": true,
+          "computed_delta": "197917028755.846706913724596136",
+          "stated_delta": 197917000000,
+          "computed_delta_at_least_stated": true,
+          "relative_delta_difference": "1.4529245444764080193e-7",
+          "warnings": []
+        },
+        {
+          "row": 10,
+          "parameters_from_author_comments": [
+            90,
+            6.590771e-11,
+            0.4681018,
+            2198840000000.0,
+            1
+          ],
+          "constraint_residual": "0.000396901565916314853863043364841",
+          "constraint_positive": true,
+          "computed_delta": "202552874383.312658383638379621",
+          "stated_delta": 202553000000,
+          "computed_delta_at_least_stated": false,
+          "relative_delta_difference": "-6.2016700489065262731e-7",
+          "warnings": []
+        },
+        {
+          "row": 11,
+          "parameters_from_author_comments": [
+            79,
+            6.090246e-11,
+            0.4666782,
+            2703636000000.0,
+            1
+          ],
+          "constraint_residual": "0.000764782019239446414543968946474",
+          "constraint_positive": true,
+          "computed_delta": "207053209682.908083561781388651",
+          "stated_delta": 207053000000,
+          "computed_delta_at_least_stated": true,
+          "relative_delta_difference": "1.0127016178638405693e-6",
+          "warnings": []
+        }
+      ]
+    },
+    "rounding_sensitivity": {
+      "status": "NON_RIGOROUS_ROUNDING_DIAGNOSTIC",
+      "method": "For each rounded witness below the stated Delta, decrease only the smoothing parameter delta by bisection until generated Delta >= table Delta*(1+1e-8); re-evaluate original author constraint.",
+      "rigorous_certificate": false,
+      "rows": [
+        {
+          "row": 3,
+          "log_x0": 50,
+          "modified_delta_parameter": "0.00000000120869792784075992145024129917290408094969629",
+          "relative_parameter_change": "-3.3690349151966517291e-6",
+          "computed_Delta": "1061200010.612",
+          "stated_Delta": 1061200000,
+          "constraint_residual": "0.000122788518869504609694673592025",
+          "constraint_positive": true,
+          "warnings": []
+        },
+        {
+          "row": 5,
+          "log_x0": 60,
+          "modified_delta_parameter": "0.0000000000487301092727999538350772401825192477369045318",
+          "relative_parameter_change": "-6.3055841919518037389e-7",
+          "computed_Delta": "76918400769.184",
+          "stated_Delta": 76918400000,
+          "constraint_residual": "0.000200530013873226575635313917479",
+          "constraint_positive": true,
+          "warnings": []
+        },
+        {
+          "row": 6,
+          "log_x0": 75,
+          "modified_delta_parameter": "0.0000000000628636380241112448272809491567157073259571944",
+          "relative_parameter_change": "-2.4175425749700396015e-6",
+          "computed_Delta": "174043001740.43",
+          "stated_Delta": 174043000000,
+          "constraint_residual": "0.00068002490601113911961736079825",
+          "constraint_positive": true,
+          "warnings": []
+        },
+        {
+          "row": 7,
+          "log_x0": 90,
+          "modified_delta_parameter": "0.0000000000627077194905356593958187367033015733788129254",
+          "relative_parameter_change": "-2.4001686604058644443e-6",
+          "computed_Delta": "184304001843.04",
+          "stated_Delta": 184304000000,
+          "constraint_residual": "0.000132355638715227702955727422423",
+          "constraint_positive": true,
+          "warnings": []
+        },
+        {
+          "row": 8,
+          "log_x0": 105,
+          "modified_delta_parameter": "0.0000000000618360093893597480586428067888352997157327364",
+          "relative_parameter_change": "-4.950291166237729006e-7",
+          "computed_Delta": "191886001918.86",
+          "stated_Delta": 191886000000,
+          "constraint_residual": "0.000526698782932906736993611341805",
+          "constraint_positive": true,
+          "warnings": []
+        },
+        {
+          "row": 10,
+          "log_x0": 135,
+          "modified_delta_parameter": "0.0000000000659076684671362086841892544992944550188159334",
+          "relative_parameter_change": "-6.3016699860822431591e-7",
+          "computed_Delta": "202553002025.53",
+          "stated_Delta": 202553000000,
+          "constraint_residual": "0.000395918270347435273422819829159",
+          "constraint_positive": true,
+          "warnings": []
+        }
+      ]
+    },
+    "local_files": [
+      {
+        "path": "routes/qrh/tmp/input_review_7/replay_author_table.py",
+        "bytes": 2850,
+        "sha256": "2dc23cc91216b667f381e3cf49ebdf30feb4b9518fd70b32ca620a2a3e7faee2"
+      },
+      {
+        "path": "routes/qrh/tmp/input_review_7/diagnose_author_rounding.py",
+        "bytes": 1949,
+        "sha256": "c6be3216756dab1e3ef56881171bc6008a236eff5f73af6a893118f6ca8e4123"
+      },
+      {
+        "path": "routes/qrh/tmp/input_review_7/author_table_replay.json",
+        "bytes": 6756,
+        "sha256": "dbfd2d41b868349ab518ecef2ab481cd007eefd3cb237b0925e7c6bf63b745fd"
+      },
+      {
+        "path": "routes/qrh/tmp/input_review_7/author_rounding_diagnostic.json",
+        "bytes": 2842,
+        "sha256": "36ab7b5158b34dc4ae42f634face72fd3a5ce0f8b338875ed0581785d36a9921"
+      },
+      {
+        "path": "routes/qrh/tmp/input_review_7/author_repo_tree.json",
+        "bytes": 458,
+        "sha256": "d1f8670ad7730d2523c60723451ffd934e4195cd90fc424134b31697fcb99b5c"
+      }
+    ]
+  },
+  "arb_parameter_to_delta_diagnostic": {
+    "rigorous_numerical_interval_diagnostic": true,
+    "lean_kernel_proof": false,
+    "certifies_CHL_theorem_or_constraint1": false,
+    "input_semantics": "Exact printed decimal rationals enclosed by Arb; no Python float inputs.",
+    "precision_bits": 256,
+    "certified_below_log_x0": [
+      "50",
+      "60",
+      "75",
+      "90",
+      "105",
+      "135"
+    ],
+    "certified_above_count": 6,
+    "files": [
+      {
+        "path": "routes/qrh/audit/check_chl_rounded_deltas.py",
+        "bytes": 6357,
+        "sha256": "56f39df082bad1175ea58b4a085ed7e6544536b233da44a4b0b087bba1be718f"
+      },
+      {
+        "path": "routes/qrh/audit/chl_rounded_deltas_arb_2026-11-06.json",
+        "bytes": 18123,
+        "sha256": "75c5c73ea4d8187aaf1dcd4d9e4131a1e549789a16c36f273d4ce9f25a9d7e4e"
+      }
+    ]
+  }
+}

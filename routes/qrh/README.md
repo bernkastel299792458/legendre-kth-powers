@@ -43,6 +43,7 @@ Claude 与 Codex 按各自实际分工作为 AI 作者署名，论文、证书�
 - [Readable manuscript](paper/manuscript.md), [LaTeX source](paper/main.tex),
   [BibTeX](paper/references.bib)
 - [Exact formalization scope and final acceptance](FORMALIZATION_STATUS.md)
+- [Source and constant checks for external inputs 4, 6 and 7](audit/inputs_4_6_7_review_2026-11-06.md), including the published source for the integrated formula and the CHL rounded-parameter reproduction issue
 - [Three-milestone implementation plan](FORMALIZATION_PLAN.md) and
   [current implementation log](audit/formalization_progress_2026-11-06.md)
 - [Reproduction instructions](REPRODUCING.md)
