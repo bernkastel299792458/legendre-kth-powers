@@ -27,7 +27,7 @@ for fam in ('Z1', 'Z2'):
 P('\n## Re-optimised global thresholds (repair: narrower pieces, M in {2,3,4}, re-optimised c/sigma*, movable S/H junction)\n')
 P('| family | closes at | fails at | binding L (failing ranges at the fail value) | confirm: all delta<1 / contiguous / max delta | S-range of cover |')
 P('|---|---|---|---|---|---|')
-for fam in ('Z1', 'Z2', 'Z1_pubLW', 'Z2_pubC', 'Z3'):
+for fam in ('Z1', 'Z2', 'optprof55', 'Z1_pubLW'):
     fn = os.path.join(OUT, f'reopt_{fam}.json')
     if not os.path.exists(fn):
         continue
@@ -50,6 +50,24 @@ if os.path.exists(fn):
     for r in csv.DictReader(open(fn)):
         P(f"| ({float(r['v_lo']):.2f}, {float(r['v_hi']):.2f}] | {r['active_constant']} | {r['proof_value']} | "
           f"{r['s_ok']} (fails {r['s_fail']}) | {r['weakest_admissible_constant']} | {r['binding_L_ranges']} |")
+
+fn = os.path.join(OUT, 'bands_z2.csv')
+if os.path.exists(fn):
+    P('\n## Littlewood band requirement: Z2 = z on the band only (19.62 elsewhere, Z1 = 4.896), re-optimised\n')
+    P('| band v = log t | largest z that closes | smallest z that fails | first failure (L) |')
+    P('|---|---|---|---|')
+    for r in csv.DictReader(open(fn)):
+        P(f"| ({float(r['v_lo']):g}, {float(r['v_hi']):g}] | {r['Z2_on_band_closes']} | {r['Z2_on_band_fails'] or '-'} | {r['binding_L_ranges'][:60]} |")
+fn = os.path.join(OUT, 'priority_z2.json')
+if os.path.exists(fn):
+    P('\n## Priority models (v3 code)\n')
+    P('| model | closes | full re-check (all delta<1 / contiguous / max delta at L) | failing / hole ranges |')
+    P('|---|---|---|---|')
+    for k, v in json.load(open(fn)).items():
+        c = v.get('confirm')
+        cs = f"{c['all_delta_lt_1']} / {c['contiguous_L1_to_1e8']} / {c['max_delta']:.7f} at {c['max_at_L']:.2f}" if c else ''
+        hs = '; '.join(f"[{a:.1f}, {b:.1f}]" for a, b in (v['holes'][:2] or []))
+        P(f"| {k}: {v['model']} | {v['closes']} | {cs} | {hs} |")
 
 open(os.path.join(OUT, 'summary.md'), 'w', encoding='utf-8').write('\n'.join(lines) + '\n')
 print('\n'.join(lines))

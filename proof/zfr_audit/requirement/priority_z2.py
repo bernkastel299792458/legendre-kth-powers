@@ -34,6 +34,12 @@ MODELS = {
     # same for the lambda* profile, to see whether it is [60, 80] that breaks it
     'PROF_lamstar_but_6080_opt': ZM.ZModel(z2prof=((0, "19.62"), (60, "19.44"), (80, "20.08"), (129, "19.89"),
                                                      (160, "19.59"), (216, "19.09"))),
+    # lambda* profile with LINEAR INTERPOLATION between the samples 60 (19.42) and 80 (20.00), taken in
+    # 2-unit pieces with the larger (right-end) value; elsewhere as PROF_LAMSTAR.  Hypothetical: the thesis
+    # audit has not computed these intermediate values.
+    'PROF_lamstar_interp': ZM.ZModel(z2prof=((0, "19.62"),) + tuple(
+        (60 + 2 * i, f"{19.42 + 0.029 * (2 * i + 2):.3f}") for i in range(10)) + (
+        (80, "20.08"), (129, "19.89"), (160, "19.59"), (216, "19.09"))),
 }
 
 

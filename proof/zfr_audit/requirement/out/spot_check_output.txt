@@ -1,0 +1,8 @@
+[cover] Z2=19.853906: pieces=3733 contiguous=True recorded_max=0.999999771 re-eval top40: all<1=True max=0.999999771
+[cover] Z1=4.90875: pieces=4816 contiguous=True recorded_max=0.999999722 re-eval top40: all<1=True max=0.999999722
+[cover] PROF_opt: pieces=3333 contiguous=True recorded_max=0.999795933 re-eval top40: all<1=True max=0.999795933
+[fail ] Z2=19.90: min over M=2..6 of delta at width 1/256: L=3960: 1.00042, L=4000: 1.00377, L=4050: 1.00191, L=4200: 1.01937, L=4250: 1.00585  -> all >= 1: True
+[fail ] Z2=20.08: min over M=2..6 of delta at width 1/256: L=3960: 1.00170, L=4100: 1.02978, L=4300: 1.09423  -> all >= 1: True
+[fail ] Z2=19.90 (narrow): min over M=2..8 of delta at width 1/4096: L=3960: 1.00041, L=3961: 1.00051, L=4250: 1.00584  -> all >= 1: True
+[fail ] Z2=19.854687 [info]: min over M=2..6 of delta at width 1/256: L=4213: 1.00025, L=4214: 0.99975, L=4215: 0.99910  -> all >= 1: False
+SPOT CHECK PASSED

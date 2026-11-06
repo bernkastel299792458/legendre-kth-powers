@@ -292,5 +292,32 @@
   "cover_file": "cover_PROF_lamstar_but_6080_opt.csv",
   "pieces": 3406,
   "seconds": 22
+ },
+ "PROF_lamstar_interp": {
+  "name": "PROF_lamstar_interp",
+  "model": "ZModel(Z1=4.896, Z3=54.004, Z2 profile=[0,..):19.62, [60,..):19.478, [62,..):19.536, [64,..):19.594, [66,..):19.652, [68,..):19.710, [70,..):19.768, [72,..):19.826, [74,..):19.884, [76,..):19.942, [78,..):20.000, [80,..):20.08, [129,..):19.89, [160,..):19.59, [216,..):19.09)",
+  "closes": true,
+  "n_failed_original": 64,
+  "failed_ranges": [
+   [
+    6989.94384765625,
+    8018.0
+   ]
+  ],
+  "holes": [],
+  "confirm": {
+   "all_delta_lt_1": true,
+   "contiguous_L1_to_1e8": true,
+   "max_delta": 0.9997959334621802,
+   "max_at_L": 3708.3798828125,
+   "max_kind": "S"
+  },
+  "S_range": [
+   2040.6298828125,
+   8018.0
+  ],
+  "cover_file": "cover_PROF_lamstar_interp.csv",
+  "pieces": 3406,
+  "seconds": 59
  }
 }

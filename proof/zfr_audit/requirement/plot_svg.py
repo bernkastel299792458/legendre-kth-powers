@@ -114,7 +114,28 @@ def fixed_plot():
     s.save(os.path.join(OUT, 'fixed_thresholds.svg'))
 
 
+def z2_bands_plot():
+    fn = os.path.join(OUT, 'bands_z2.csv')
+    if not os.path.exists(fn):
+        return
+    s = SVG()
+    s.axes(50, 1e6, 19.0, 31.0, xlog=True)
+    for r in csv.DictReader(open(fn)):
+        v0, v1 = float(r['v_lo']), float(r['v_hi'])
+        y = float(r['Z2_on_band_closes'])
+        s.line([(v0, y), (v1, y)], color='#1b9e77', width=2.6)
+        if r['Z2_on_band_fails']:
+            s.line([(v0, float(r['Z2_on_band_fails'])), (v1, float(r['Z2_on_band_fails']))], color='#d95f02', width=1, dash='3 2')
+    s.line([(50, 19.62), (1e6, 19.62)], color='#999', dash='4 3', width=1)
+    s.line([(50, 19.8539), (1e6, 19.8539)], color='#7570b3', dash='2 2', width=1)
+    s.frame([55, 60, 70, 80, 100, 130, 170, 300, 1000, 1e4, 1e5, 1e6], [19.62, 20, 21, 22, 24, 26, 28, 30],
+            'v = log t (log scale)', 'largest admissible Z2 on the band',
+            'k = 67: Littlewood constant allowed on each band (green: closes; orange dashed: fails; grey 19.62; purple uniform Z2* = 19.854)')
+    s.save(os.path.join(OUT, 'requirement_z2_bands.svg'))
+
+
 if __name__ == '__main__':
+    z2_bands_plot()
     bands_plot()
     fixed_plot()
     print('written:', [f for f in os.listdir(OUT) if f.endswith('.svg')])

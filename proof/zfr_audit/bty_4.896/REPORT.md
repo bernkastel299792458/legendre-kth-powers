@@ -79,7 +79,8 @@ All corrected-constant entries are rigorous covers by 4000 L-balls (`check_part5
 - **Indicative constants.** With the corrected constants, the same method gives 1/A₀ ≈ 4.852 (paper's route) or ≈ 4.811 (coupled) on t ≤ e^55.01, and ≈ 4.894 / 4.864 up to e^76.47.
   - These are *indicative*: η₀, σ₀ and hence the Lemma 5–14 constants depend on A₀ and were not recomputed for the smaller A₀.
   - Further gains: Lemma 10 using all certified m_p (p = 2 alone has slack 3.8·10⁻⁵), and a better digamma bound.
-- **For k = 67 none of this is needed.** 4.896 already has 0.9% slack where it is used. Whether the k = 67 proof would *benefit* from a smaller classical constant is answered by the requirement curve (`../requirement/`).
+- **For BTY's own Theorem 1 none of this is needed.** 4.896 already has 0.9% slack where it is used.
+- **For k = 67 it could matter.** The thesis's 19.62 fails (`../thesis_19.62/`). With a uniform repaired Littlewood constant of 19.90, k = 67 needs Z₁ ≤ 4.835 up to e^61.3 (`../requirement/REPORT.md` §4b). `check_part6_combo.py` (output `part6_output.txt`) shows that the coupled route gives about 4.830 there, while the paper's route gives only 4.867. With 20.08, k = 67 needs Z₁ ≤ 4.825, and the coupled route reaches only 4.837.
 
 ## 5. Upstream dependencies of BTY Theorem 1
 
@@ -105,6 +106,7 @@ All corrected-constant entries are rigorous covers by 4000 L-balls (`check_part5
 | `check_part3_lemmas10_11.py` | Lemmas 10, 11 (certified m_p) |
 | `check_part4_lemma14.py` | Lemma 14: printed vs corrected constants, direct quadrature test; writes `lemma14_corrected.json` |
 | `check_part5_lemma15_final.py` | Lemma 15, final step, margins, rigorous L-cover, Theorem 1 assembly |
-| `run_all.py` → `run_all_output.txt`, `part*_output.txt` | one-shot run (about 5 min) |
+| `run_all.py` → `run_all_output.txt`, `part*_output.txt` | one-shot run of parts 1–5 (about 5 min) |
+| `check_part6_combo.py` → `part6_output.txt` | indicative best 1/A₀ at the crossovers needed for k = 67 with Z₂ = 19.90 / 20.08 (not part of `run_all.py`) |
 
 Output tags: `OK` = verified; `ISSUE` = a statement of the paper that is false as written but whose downstream use is verified separately; `INFO` = context. A real failure is tagged `FAIL` and makes the script exit non-zero.

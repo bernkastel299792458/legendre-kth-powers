@@ -1,0 +1,4 @@
+Z2 = 19.90, target Z1 = 4.835: crossover log t = 61.3026; best 1/A0 there: decoupled 4.86720, coupled 4.82968  -> target reachable (coupled): True
+Z2 = 19.90, target Z1 = 4.84: crossover log t = 61.0425; best 1/A0 there: decoupled 4.86664, coupled 4.82896  -> target reachable (coupled): True
+Z2 = 20.08, target Z1 = 4.825: crossover log t = 64.1778; best 1/A0 there: decoupled 4.87310, coupled 4.83725  -> target reachable (coupled): False
+Z2 = 20.08, target Z1 = 4.83: crossover log t = 63.9020; best 1/A0 there: decoupled 4.87256, coupled 4.83655  -> target reachable (coupled): False

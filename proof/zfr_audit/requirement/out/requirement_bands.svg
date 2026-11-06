@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420"><rect width="100%" height="100%" fill="white"/><rect x="71.9" y="40.0" width="5.6" height="325.0" fill="#d95f02" fill-opacity="0.1"/>
+<polyline fill="none" stroke="#111" stroke-width="2.4" points="71.9,61.3 77.5,61.3"/>
+<rect x="77.5" y="40.0" width="6.8" height="325.0" fill="#d95f02" fill-opacity="0.1"/>
+<polyline fill="none" stroke="#111" stroke-width="2.4" points="77.5,63.2 84.4,63.2"/>
+<rect x="84.4" y="40.0" width="6.3" height="325.0" fill="#d95f02" fill-opacity="0.1"/>
+<polyline fill="none" stroke="#111" stroke-width="2.4" points="84.4,64.2 90.6,64.2"/>
+<rect x="90.6" y="40.0" width="5.8" height="325.0" fill="#d95f02" fill-opacity="0.1"/>
+<polyline fill="none" stroke="#111" stroke-width="2.4" points="90.6,63.2 96.4,63.2"/>
+<rect x="96.4" y="40.0" width="5.3" height="325.0" fill="#d95f02" fill-opacity="0.1"/>
+<polyline fill="none" stroke="#111" stroke-width="2.4" points="96.4,62.2 101.7,62.2"/>
+<rect x="101.7" y="40.0" width="5.0" height="325.0" fill="#d95f02" fill-opacity="0.1"/>
+<polyline fill="none" stroke="#111" stroke-width="2.4" points="101.7,60.3 106.7,60.3"/>
+<rect x="106.7" y="40.0" width="4.7" height="325.0" fill="#d95f02" fill-opacity="0.1"/>
+<polyline fill="none" stroke="#111" stroke-width="2.4" points="106.7,58.4 111.4,58.4"/>
+<rect x="111.4" y="40.0" width="4.4" height="325.0" fill="#d95f02" fill-opacity="0.1"/>
+<polyline fill="none" stroke="#111" stroke-width="2.4" points="111.4,56.4 115.8,56.4"/>
+<rect x="115.8" y="40.0" width="4.2" height="325.0" fill="#d95f02" fill-opacity="0.1"/>
+<polyline fill="none" stroke="#111" stroke-width="2.4" points="115.8,55.5 119.9,55.5"/>
+<polyline fill="none" stroke="#999" stroke-width="1" stroke-dasharray="4 3" points="70.0,55.5 880.0,55.5"/>
+<rect x="70" y="40" width="810" height="325" fill="none" stroke="#444"/>
+<line x1="75.1" y1="365" x2="75.1" y2="370" stroke="#444"/>
+<text x="75.1" y="383.0" font-size="11" text-anchor="middle" fill="#222" font-family="sans-serif">30</text>
+<line x1="119.9" y1="365" x2="119.9" y2="370" stroke="#444"/>
+<text x="119.9" y="383.0" font-size="11" text-anchor="middle" fill="#222" font-family="sans-serif">55</text>
+<line x1="164.1" y1="365" x2="164.1" y2="370" stroke="#444"/>
+<text x="164.1" y="383.0" font-size="11" text-anchor="middle" fill="#222" font-family="sans-serif">100</text>
+<line x1="245.4" y1="365" x2="245.4" y2="370" stroke="#444"/>
+<text x="245.4" y="383.0" font-size="11" text-anchor="middle" fill="#222" font-family="sans-serif">300</text>
+<line x1="334.4" y1="365" x2="334.4" y2="370" stroke="#444"/>
+<text x="334.4" y="383.0" font-size="11" text-anchor="middle" fill="#222" font-family="sans-serif">1000</text>
+<line x1="504.7" y1="365" x2="504.7" y2="370" stroke="#444"/>
+<text x="504.7" y="383.0" font-size="11" text-anchor="middle" fill="#222" font-family="sans-serif">10000</text>
+<line x1="675.0" y1="365" x2="675.0" y2="370" stroke="#444"/>
+<text x="675.0" y="383.0" font-size="11" text-anchor="middle" fill="#222" font-family="sans-serif">100000</text>
+<line x1="845.2" y1="365" x2="845.2" y2="370" stroke="#444"/>
+<text x="845.2" y="383.0" font-size="11" text-anchor="middle" fill="#222" font-family="sans-serif">1e+06</text>
+<line x1="65" y1="365.0" x2="70" y2="365.0" stroke="#444"/>
+<line x1="70" y1="365.0" x2="880" y2="365.0" stroke="#ddd"/>
+<text x="62.0" y="369.0" font-size="11" text-anchor="end" fill="#222" font-family="sans-serif">0</text>
+<line x1="65" y1="303.1" x2="70" y2="303.1" stroke="#444"/>
+<line x1="70" y1="303.1" x2="880" y2="303.1" stroke="#ddd"/>
+<text x="62.0" y="307.1" font-size="11" text-anchor="end" fill="#222" font-family="sans-serif">0.2</text>
+<line x1="65" y1="241.2" x2="70" y2="241.2" stroke="#444"/>
+<line x1="70" y1="241.2" x2="880" y2="241.2" stroke="#ddd"/>
+<text x="62.0" y="245.2" font-size="11" text-anchor="end" fill="#222" font-family="sans-serif">0.4</text>
+<line x1="65" y1="179.3" x2="70" y2="179.3" stroke="#444"/>
+<line x1="70" y1="179.3" x2="880" y2="179.3" stroke="#ddd"/>
+<text x="62.0" y="183.3" font-size="11" text-anchor="end" fill="#222" font-family="sans-serif">0.6</text>
+<line x1="65" y1="117.4" x2="70" y2="117.4" stroke="#444"/>
+<line x1="70" y1="117.4" x2="880" y2="117.4" stroke="#ddd"/>
+<text x="62.0" y="121.4" font-size="11" text-anchor="end" fill="#222" font-family="sans-serif">0.8</text>
+<line x1="65" y1="55.5" x2="70" y2="55.5" stroke="#444"/>
+<line x1="70" y1="55.5" x2="880" y2="55.5" stroke="#ddd"/>
+<text x="62.0" y="59.5" font-size="11" text-anchor="end" fill="#222" font-family="sans-serif">1</text>
+<text x="475.0" y="408.0" font-size="13" text-anchor="middle" fill="#222" font-family="sans-serif">v = log t (height band, log scale)</text>
+<text x="16" y="202.5" font-size="13" text-anchor="middle" font-family="sans-serif" transform="rotate(-90 16 202.5)">smallest admissible factor s</text>
+<text x="70.0" y="22.0" font-size="14" text-anchor="start" fill="#222" font-family="sans-serif">k = 67: how far the zero-free width may be scaled down on each band (shading: Z1 / Z2 / Z3 active)</text>
+<text x="82.2" y="340.2" font-size="12" text-anchor="start" fill="#d95f02" font-family="sans-serif">classical (Z1)</text>
+<text x="177.6" y="340.2" font-size="12" text-anchor="start" fill="#1b9e77" font-family="sans-serif">Littlewood (Z2)</text>
+<text x="818.9" y="340.2" font-size="12" text-anchor="start" fill="#7570b3" font-family="sans-serif">VK</text></svg>
