@@ -1,0 +1,20 @@
+{
+  "status": "COMPILED_AND_VISUALLY_REVIEWED",
+  "engine": "Tectonic 0.17.0 / XeTeX / xdvipdfmx",
+  "created_utc": "2026-11-06T02:41:17.795053+00:00",
+  "pages": 28,
+  "paper_sha256": "c5bc5224c34267f2733de261b6485fc2a34a0bcdb02c8728660db9916c50e30a",
+  "latex_sha256": "a07b8bf367f8a05fe2055c4eb7f7b83154de2addf92b5e5d2c438354363674e1",
+  "pdf_sha256": "afa4f74b7699ae1e7268c41c0659bce8b1baa16788fc80974313ed525111047d",
+  "overfull_boxes": 0,
+  "missing_character_warnings": 0,
+  "replacement_characters_in_pdf": 0,
+  "characters_outside_page": 0,
+  "visual_review": "All 28 rendered pages inspected in contact sheets; pages 4, 13, 25 and 27 inspected enlarged. No clipped content, overlapping equations, broken tables or missing glyphs observed.",
+  "nonfatal_diagnostics": [
+    "Fontconfig default-config warning on Windows; bundled CJK fonts rendered correctly.",
+    "lineno.sty source encoding warning; no replacement characters in the produced PDF.",
+    "Underfull boxes in references."
+  ],
+  "scope": "Artifact compilation and layout review, not mathematical verification."
+}

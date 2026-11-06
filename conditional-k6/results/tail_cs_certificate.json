@@ -1,0 +1,184 @@
+{
+  "schema": "legendre-k4-CS-tail-v1",
+  "status": "PASS: numerical premises of the documented analytic tail proof",
+  "scope": "Conditional on QRH beta<=7/8 and the stated CS/CHJII literature inputs; not all n and not Lean formalization.",
+  "statement": "For every real x>=exp(700), (x,x+4*x^(3/4)) contains a prime; hence for every integer n>=exp(175), (n^4,(n+1)^4) contains a prime.",
+  "arithmetic": {
+    "python": "3.12.10",
+    "python_flint": "0.9.0",
+    "precision_bits": 256
+  },
+  "parameters_exact": {
+    "L0": "700",
+    "mu": "9/32",
+    "T": "x^(9/32)",
+    "U": "2*T",
+    "h": "4*x^(3/4)",
+    "CS_source_c1": "2177/100",
+    "CS_used_c1": "561/25",
+    "CS_c2": "829/100",
+    "CS_c3": "147",
+    "CHJ_alpha": "1/2",
+    "CHJ_omega": "0",
+    "CHJ_M": "1447/500"
+  },
+  "auxiliary_balls": {
+    "log_2": "[0.693147180559945309417232121458176568075500134360255254120680 +/- 9.51e-63]",
+    "u": "[197.568147180559945309417232121458176568075500134360255254121 +/- 3.21e-58]",
+    "lambda": "[173.151607518506812508220714342778195818465332975039319322345 +/- 1.47e-58]",
+    "lambda_prime_L_minus_lambda": "[1.84839248149318749177928565722180418153466702496068067765515 +/- 3.31e-60]"
+  },
+  "normalized_error_term_balls": {
+    "low_real_part_zeros": "[2.49575266439331640870539231260903666877492766099117083631922e-26 +/- 2.67e-86]",
+    "CS_density_main": "[0.557219981702767641274381551967720631316107586456547101754837 +/- 2.06e-61]",
+    "CS_density_lower_order": "[7.04010330452762540965600817905189544306306861958074745833583e-33 +/- 2.65e-93]",
+    "CHJ_remainder": "[4.80705903307590039422957079462084159724664056472449946671205e-7 +/- 4.36e-67]",
+    "prime_powers": "[2.44833988294897732710334705777207098479607792028056309960342e-71 +/- 1.20e-131]",
+    "right_endpoint_charge": "[1.73402369390318750388501733174776480250088511281342553357235e-226 +/- 3.09e-286]"
+  },
+  "normalized_total_ball": "[0.557220462408670948864420999882333777436735925799936356303329 +/- 2.06e-61]",
+  "positive_margin_ball": "[0.442779537591329051135579000117666222563264074200063643696671 +/- 2.06e-61]",
+  "rational_total_upper_bound": "14/25",
+  "checks": {
+    "log_x_above_40": {
+      "positive_expression_ball": "660.000000000000000000000000000000000000000000000000000000000",
+      "passed": true,
+      "reason": "L increases; CHJII Table 1 starts at 40."
+    },
+    "log_2_above_half": {
+      "positive_expression_ball": "[0.193147180559945309417232121458176568075500134360255254120680 +/- 9.51e-63]",
+      "passed": true,
+      "reason": "Constant; also implies log(2)>0."
+    },
+    "log_2_below_one": {
+      "positive_expression_ball": "[0.306852819440054690582767878541823431924499865639744745879320 +/- 9.52e-63]",
+      "passed": true,
+      "reason": "Constant; yields log(x+h)<=L+1 when h<x."
+    },
+    "h_less_than_x": {
+      "positive_expression_ball": "[1.00000000000000000000000000000000000000000000000000000000000 +/- 3e-65]",
+      "passed": true,
+      "reason": "4*exp(-L/4) decreases."
+    },
+    "height_above_51": {
+      "positive_expression_ball": "[192.943174367275674228355220145204347759764306429591505760968 +/- 6.80e-59]",
+      "passed": true,
+      "reason": "log(T)=mu*L increases."
+    },
+    "height_above_endpoint_log_squared": {
+      "positive_expression_ball": "[183.769984225930819818999303151943998854031218728684684419730 +/- 4.46e-58]",
+      "passed": true,
+      "reason": "T>(L+1)^2 implies T>log(x)^2 and T>log(x+h)^2."
+    },
+    "height_log_squared_margin_increases": {
+      "positive_expression_ball": "[0.278396932952924393723252496433666191155492154065620542082739 +/- 5.57e-62]",
+      "passed": true,
+      "reason": "This derivative increases with L."
+    },
+    "height_strict_upper_bound": {
+      "positive_expression_ball": "[1.00000000000000000000000000000000000000000000000000000000000 +/- 3e-65]",
+      "passed": true,
+      "reason": "Equivalent to T<(sqrt(x)-2)/4; both subtracted terms decrease."
+    },
+    "CS_height_above_H_RH": {
+      "positive_expression_ball": "[168.838513775963287409806089428323280372214791712992230089986 +/- 5.09e-59]",
+      "passed": true,
+      "reason": "CS Corollary 1 and equation (11) apply for U>=3*10^12."
+    },
+    "counting_height_above_20": {
+      "positive_expression_ball": "[194.572414907005954315982008545315635792398898511371227023967 +/- 3.28e-58]",
+      "passed": true,
+      "reason": "Ensures U/2+0.43<U in the relaxation of CS equation (11)."
+    },
+    "lambda_positive": {
+      "positive_expression_ball": "[173.151607518506812508220714342778195818465332975039319322345 +/- 1.47e-58]",
+      "passed": true,
+      "reason": "lambda=L/4-(8/3)log(2), derivative 1/4."
+    },
+    "lambda_increases": {
+      "positive_expression_ball": "0.250000000000000000000000000000000000000000000000000000000000",
+      "passed": true,
+      "reason": "Constant positive derivative."
+    },
+    "count_term_decreases": {
+      "positive_expression_ball": "[0.0923264405648701954660319934806710744810409564776435706817818 +/- 4.19e-62]",
+      "passed": true,
+      "reason": "Negative logarithmic derivative of 4*u*exp(-3L/32)."
+    },
+    "log_height_above_one": {
+      "positive_expression_ball": "[196.568147180559945309417232121458176568075500134360255254121 +/- 3.21e-58]",
+      "passed": true,
+      "reason": "For u>1, the CS log power q(sigma)<=3 can be enlarged to u^3."
+    },
+    "density_core_decreases": {
+      "positive_expression_ball": "[0.0269793216946105863980959804420132234431228694329307120453453 +/- 2.54e-62]",
+      "passed": true,
+      "reason": "Negative logarithmic derivative of u^3*exp(-lambda/8)."
+    },
+    "density_lower_order_decreases": {
+      "positive_expression_ball": "[0.122152881129740390932063986961342148962081912955287141363564 +/- 4.84e-61]",
+      "passed": true,
+      "reason": "The log derivative of (8.29*u^2+147*u)*exp(-L/8) is at most 2*mu/u-1/8."
+    },
+    "CHJ_remainder_decreases": {
+      "positive_expression_ball": "[0.0298227878211227402473834443387250237868696479543292102759277 +/- 1.21e-62]",
+      "passed": true,
+      "reason": "Negative logarithmic derivative of (3L+2)*exp(-L/32)."
+    },
+    "prime_power_term_decreases": {
+      "positive_expression_ball": "[0.247146932952924393723252496433666191155492154065620542082739 +/- 5.57e-62]",
+      "passed": true,
+      "reason": "Negative logarithmic derivative of (L+1)^2*exp(-L/4)."
+    },
+    "right_endpoint_charge_decreases": {
+      "positive_expression_ball": "[0.748573466476462196861626248216833095577746077032810271041369 +/- 4.73e-61]",
+      "passed": true,
+      "reason": "Negative logarithmic derivative of (L+1)*exp(-3L/4)."
+    },
+    "total_less_than_one": {
+      "positive_expression_ball": "[0.442779537591329051135579000117666222563264074200063643696671 +/- 2.06e-61]",
+      "passed": true,
+      "reason": "With monotonicity, holds for all L>=700."
+    },
+    "total_less_than_14_over_25": {
+      "positive_expression_ball": "[0.00277953759132905113557900011766622256326407420006364369667079 +/- 4.75e-63]",
+      "passed": true,
+      "reason": "Convenient strict rational envelope."
+    }
+  },
+  "source_inputs": [
+    {
+      "name": "QRH",
+      "assumption": "Every nontrivial zeta zero has beta<=7/8; accepted research premise."
+    },
+    {
+      "name": "CS density",
+      "url": "https://arxiv.org/html/2507.15184v2",
+      "location": "Corollary 1, Table 1, displayed uniform bound following Corollary 1",
+      "input": "For 5/8<=sigma<=7/8 and U>=3*10^12: N<=21.77*U^[3(1-sigma)/(2-sigma)]*log(U)^[(7-5sigma)/(2-sigma)]+8.29*log(U)^2+147*log(U).",
+      "relaxation": "21.77<=22.44; p(sigma)<=8(1-sigma)/3; q(sigma)<=3; log(U)>1."
+    },
+    {
+      "name": "CS zero count",
+      "url": "https://arxiv.org/html/2507.15184v2",
+      "location": "Equation (11), first inequality, valid for U>=H_RH",
+      "input": "N(U)<=U/(2*pi)*log(U/(2*pi*e))+0.43*log(U).",
+      "relaxation": "For U>=3*10^12>20, this is less than (U/2+0.43)*log(U)<U*log(U)."
+    },
+    {
+      "name": "CHJII",
+      "url": "https://arxiv.org/html/2402.04272v3",
+      "location": "Theorem 1.3 and Table 1, log(x_M)=40 row",
+      "input": "Common T* in [T,2T]; alpha=1/2, omega=0, M=2.894; max(51,log(x)^2)<T<(sqrt(x)-2)/4."
+    }
+  ],
+  "FKS_density_or_table_used": false,
+  "proof_document": "research/TAIL_BOUND_CS.md",
+  "script_sha256": "162e880b9ad62f6ae47dd16a6b7ea75bce0a34cab35fff2975c169430ee77cb6",
+  "limitations": [
+    "The listed upstream statements and table values are accepted, not independently rederived.",
+    "The infinite range is justified by symbolic monotonicity, not point sampling.",
+    "No claim is made here for x<exp(700), and no optimality of 700 is asserted.",
+    "Decimal balls describe computed enclosures; decisions use rigorous Arb comparisons."
+  ]
+}

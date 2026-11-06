@@ -1,0 +1,66 @@
+'LegendreK6.small_range_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.chl_integer_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.lower_log_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.refined_cells_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.polynomial_cells_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.refined_real_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.polynomial_real_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.four_point_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.exact_sigma_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.log_ratio_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.common_zero_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.coefficient_scaling_criterion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.prime_of_normalized_weighted_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.tail_at_700' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.tail_bound_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.tail_scaled_bound_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.sixth_powers_of_segment_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+LegendreK6.small_range_prime (n : ℕ) (hn : 1 ≤ n) (hmax : n ≤ 1259) : LegendreK6.NatSixthShort n
+LegendreK6.lower_log_range (H : LegendreK6.CHLRows) (n : ℕ) (hn : 1 ≤ n) (hlog : Real.log (↑n ^ 6) ≤ 167) :
+  LegendreK6.NatSixthShort n
+LegendreK6.tail_bound_all {L : ℝ} (hL : 700 ≤ L) : LegendreK6.tailBound L < 14 / 25
+LegendreK6.prime_of_normalized_weighted_budget (S : Finset ℕ) (w : ℕ → ℝ) (x y M δ : ℝ)
+  (hsupport : ∀ m ∈ S, w m ≠ 0 → x < ↑m ∧ ↑m < y) (hM : 0 < M) (hδ : δ < 1)
+  (hmain : M * (1 - δ) ≤ LegendreK6.weightedMangoldt S w - LegendreK6.weightedNonprime S w) :
+  LegendreK6.PrimeInOpenInterval x y
+LegendreK6.sixth_powers_of_segment_inputs (HCHL : LegendreK6.CHLRows) (H : LegendreK6.AnalyticSegmentInputs) :
+  LegendreK6.SixthPowerConclusion
+structure LegendreK6.AnalyticSegmentInputs : Prop
+number of parameters: 0
+fields:
+  LegendreK6.AnalyticSegmentInputs.middle : ∀ (x : ℝ),
+      0 < x → 167 ≤ Real.log x → Real.log x ≤ 400 → LegendreK6.ShortInterval6 x
+  LegendreK6.AnalyticSegmentInputs.far : ∀ (x : ℝ),
+      0 < x → 400 ≤ Real.log x → Real.log x ≤ 700 → LegendreK6.ShortInterval4 x
+  LegendreK6.AnalyticSegmentInputs.tail : ∀ (x : ℝ), 0 < x → 700 ≤ Real.log x → LegendreK6.ShortInterval4 x
+constructor:
+  LegendreK6.AnalyticSegmentInputs.mk
+    (middle : ∀ (x : ℝ), 0 < x → 167 ≤ Real.log x → Real.log x ≤ 400 → LegendreK6.ShortInterval6 x)
+    (far : ∀ (x : ℝ), 0 < x → 400 ≤ Real.log x → Real.log x ≤ 700 → LegendreK6.ShortInterval4 x)
+    (tail : ∀ (x : ℝ), 0 < x → 700 ≤ Real.log x → LegendreK6.ShortInterval4 x) : LegendreK6.AnalyticSegmentInputs
+structure LegendreK6.CHLRows : Prop
+number of parameters: 0
+fields:
+  LegendreK6.CHLRows.row0 : LegendreK6.CHLInterval 39097000 (4 * 10 ^ 18)
+  LegendreK6.CHLRows.row43 : LegendreK6.CHLInterval 41816800 (Real.exp 43)
+  LegendreK6.CHLRows.row46 : LegendreK6.CHLInterval 163940000 (Real.exp 46)
+  LegendreK6.CHLRows.row50 : LegendreK6.CHLInterval 1061200000 (Real.exp 50)
+  LegendreK6.CHLRows.row55 : LegendreK6.CHLInterval 10288400000 (Real.exp 55)
+  LegendreK6.CHLRows.row60 : LegendreK6.CHLInterval 76918400000 (Real.exp 60)
+  LegendreK6.CHLRows.row75 : LegendreK6.CHLInterval 174043000000 (Real.exp 75)
+  LegendreK6.CHLRows.row90 : LegendreK6.CHLInterval 184304000000 (Real.exp 90)
+  LegendreK6.CHLRows.row105 : LegendreK6.CHLInterval 191886000000 (Real.exp 105)
+  LegendreK6.CHLRows.row120 : LegendreK6.CHLInterval 197917000000 (Real.exp 120)
+  LegendreK6.CHLRows.row135 : LegendreK6.CHLInterval 202553000000 (Real.exp 135)
+  LegendreK6.CHLRows.row150 : LegendreK6.CHLInterval 207053000000 (Real.exp 150)
+constructor:
+  LegendreK6.CHLRows.mk (row0 : LegendreK6.CHLInterval 39097000 (4 * 10 ^ 18))
+    (row43 : LegendreK6.CHLInterval 41816800 (Real.exp 43)) (row46 : LegendreK6.CHLInterval 163940000 (Real.exp 46))
+    (row50 : LegendreK6.CHLInterval 1061200000 (Real.exp 50)) (row55 : LegendreK6.CHLInterval 10288400000 (Real.exp 55))
+    (row60 : LegendreK6.CHLInterval 76918400000 (Real.exp 60))
+    (row75 : LegendreK6.CHLInterval 174043000000 (Real.exp 75))
+    (row90 : LegendreK6.CHLInterval 184304000000 (Real.exp 90))
+    (row105 : LegendreK6.CHLInterval 191886000000 (Real.exp 105))
+    (row120 : LegendreK6.CHLInterval 197917000000 (Real.exp 120))
+    (row135 : LegendreK6.CHLInterval 202553000000 (Real.exp 135))
+    (row150 : LegendreK6.CHLInterval 207053000000 (Real.exp 150)) : LegendreK6.CHLRows

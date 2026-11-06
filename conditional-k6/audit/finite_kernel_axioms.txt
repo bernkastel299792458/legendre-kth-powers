@@ -1,0 +1,12 @@
+'LegendreK6.small_range_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.Pratt.prime_3982487126873086493' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.refined_cells_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.polynomial_cells_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.refined_saved_bounds_le_worst' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.refined_saved_scaled_bounds_le_worst' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.polynomial_saved_bounds_le_worst' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.refined_saved_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.refined_real_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.polynomial_real_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.chl_integer_chain_checked' does not depend on any axioms
+'LegendreK6.tail_scaled_bound_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]

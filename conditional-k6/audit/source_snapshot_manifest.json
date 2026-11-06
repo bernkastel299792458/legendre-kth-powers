@@ -1,0 +1,15 @@
+{
+  "code/certify_lower_range_k6.py": "0d7149060506aa6b18c9c25a14b0e64ba9bbdeade42ba44888c24de6154b2d93",
+  "code/certify_smooth_k6.py": "529444f426560c2e2f9523d1f393bff43a5fa8cf46e2c891d0296343c294355e",
+  "code/certify_smooth_segment.py": "ec7e6d218e09967d9161f44074c35ecdce09eb6a3a3a3d307db1e5b36083d21e",
+  "code/certify_tail_cs.py": "162e880b9ad62f6ae47dd16a6b7ea75bce0a34cab35fff2975c169430ee77cb6",
+  "code/review_smooth_k6_refined.py": "2a13aaa4bacc9f3d79fc245348711efd737d1e65e9f09a7210309ca4b0cc9a90",
+  "results/lower_range_k6_certificate.json": "a108bd9166c0c8c137ee5299e1b5a135e825efa6514894be5054872299fd60fc",
+  "results/smooth_k6_certificate.json": "65dbfce3f0caa99f71f3bc74d9e2f61cfc7501ee28cdfe5ae584696c60429b95",
+  "results/smooth_segment_certificate.json": "7e3768054da03709927d63a3f2d5766b7d0b26a7f600d4a8005621413e1a2a7f",
+  "results/tail_cs_certificate.json": "d579daae45c617416d14282b69aa727e0f4b7e10699e73678bfebc6b2b743e84",
+  "audit/source_reviews/Claude_K6_proof_review_2026-11-06.md": "b8f4265c0fc9669859e57ad19f6effa248d10d6b1d367d729f3b91e8a26e6abf",
+  "audit/source_reviews/K6_revision_numeric_audit_2026-11-06.md": "0b1e8e7e4424cd1448df5026c7ecba58de8310ff57fbcfe9744c9069f61d8be1",
+  "audit/source_reviews/K6_manuscript_revision_review_2026-11-06.md": "4a2e72d61b07d38abdfdaaa0d1a9de056fd0d6870660c3cb0b1e129303fc4f8e",
+  "audit/source_reviews/Response_to_Claude_K6_2026-11-06.md": "0936b325c4bf68287f03e70ead3d9c8c14422a94cf75149e756d6f5d515c39de"
+}

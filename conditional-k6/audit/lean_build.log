@@ -1,0 +1,191 @@
+=== LegendreK6.Definitions ===
+
+=== LegendreK6.Reduction ===
+
+=== LegendreK6.CHL ===
+
+=== LegendreK6.Thresholds ===
+
+=== LegendreK6.CHLRange ===
+
+=== LegendreK6.Pratt.Block000 ===
+
+=== LegendreK6.Pratt.Block001 ===
+
+=== LegendreK6.Pratt.Block002 ===
+
+=== LegendreK6.Pratt.Block003 ===
+
+=== LegendreK6.Pratt.Block004 ===
+
+=== LegendreK6.Pratt.Block005 ===
+
+=== LegendreK6.Pratt.Block006 ===
+
+=== LegendreK6.Pratt.Block007 ===
+
+=== LegendreK6.Pratt.Block008 ===
+
+=== LegendreK6.Pratt.Block009 ===
+
+=== LegendreK6.Pratt.Block010 ===
+
+=== LegendreK6.Pratt.Block011 ===
+
+=== LegendreK6.Pratt.Block012 ===
+
+=== LegendreK6.Pratt.Block013 ===
+
+=== LegendreK6.Pratt.Block014 ===
+
+=== LegendreK6.Pratt.Block015 ===
+
+=== LegendreK6.Pratt.Block016 ===
+
+=== LegendreK6.Pratt.Block017 ===
+
+=== LegendreK6.Pratt.Block018 ===
+
+=== LegendreK6.Pratt.Block019 ===
+
+=== LegendreK6.Pratt.Block020 ===
+
+=== LegendreK6.Pratt.Block021 ===
+
+=== LegendreK6.Pratt.Block022 ===
+
+=== LegendreK6.Pratt.Block023 ===
+
+=== LegendreK6.Pratt.Block024 ===
+
+=== LegendreK6.Pratt.Block025 ===
+
+=== LegendreK6.Pratt.Block026 ===
+
+=== LegendreK6.PrimeWitnesses ===
+
+=== LegendreK6.LowerRange ===
+
+=== LegendreK6.Assembly ===
+
+=== LegendreK6.CertificateData ===
+
+=== LegendreK6.Certificates ===
+
+=== LegendreK6.AnalyticBounds ===
+LegendreK6/AnalyticBounds.lean:55:20: warning: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+LegendreK6/AnalyticBounds.lean:55:20: warning: Unused tactic linter: `<;>` can be replaced with `;`.
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+
+=== LegendreK6.PrimeExtraction ===
+
+=== LegendreK6.TailArithmetic ===
+Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+
+=== LegendreK6.TailMonotonic ===
+
+=== LegendreK6.TailResult ===
+
+=== LegendreK6 ===
+
+=== LegendreK6.Audit ===
+'LegendreK6.small_range_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.chl_integer_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.lower_log_range' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.refined_cells_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.polynomial_cells_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.refined_real_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.polynomial_real_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.four_point_quadratic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.exact_sigma_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.log_ratio_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.common_zero_weight' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.coefficient_scaling_criterion' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.prime_of_normalized_weighted_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.tail_at_700' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.tail_bound_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.tail_scaled_bound_all' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.sixth_powers_of_segment_inputs' depends on axioms: [propext, Classical.choice, Quot.sound]
+LegendreK6.small_range_prime (n : ℕ) (hn : 1 ≤ n) (hmax : n ≤ 1259) : LegendreK6.NatSixthShort n
+LegendreK6.lower_log_range (H : LegendreK6.CHLRows) (n : ℕ) (hn : 1 ≤ n) (hlog : Real.log (↑n ^ 6) ≤ 167) :
+  LegendreK6.NatSixthShort n
+LegendreK6.tail_bound_all {L : ℝ} (hL : 700 ≤ L) : LegendreK6.tailBound L < 14 / 25
+LegendreK6.prime_of_normalized_weighted_budget (S : Finset ℕ) (w : ℕ → ℝ) (x y M δ : ℝ)
+  (hsupport : ∀ m ∈ S, w m ≠ 0 → x < ↑m ∧ ↑m < y) (hM : 0 < M) (hδ : δ < 1)
+  (hmain : M * (1 - δ) ≤ LegendreK6.weightedMangoldt S w - LegendreK6.weightedNonprime S w) :
+  LegendreK6.PrimeInOpenInterval x y
+LegendreK6.sixth_powers_of_segment_inputs (HCHL : LegendreK6.CHLRows) (H : LegendreK6.AnalyticSegmentInputs) :
+  LegendreK6.SixthPowerConclusion
+structure LegendreK6.AnalyticSegmentInputs : Prop
+number of parameters: 0
+fields:
+  LegendreK6.AnalyticSegmentInputs.middle : ∀ (x : ℝ),
+      0 < x → 167 ≤ Real.log x → Real.log x ≤ 400 → LegendreK6.ShortInterval6 x
+  LegendreK6.AnalyticSegmentInputs.far : ∀ (x : ℝ),
+      0 < x → 400 ≤ Real.log x → Real.log x ≤ 700 → LegendreK6.ShortInterval4 x
+  LegendreK6.AnalyticSegmentInputs.tail : ∀ (x : ℝ), 0 < x → 700 ≤ Real.log x → LegendreK6.ShortInterval4 x
+constructor:
+  LegendreK6.AnalyticSegmentInputs.mk
+    (middle : ∀ (x : ℝ), 0 < x → 167 ≤ Real.log x → Real.log x ≤ 400 → LegendreK6.ShortInterval6 x)
+    (far : ∀ (x : ℝ), 0 < x → 400 ≤ Real.log x → Real.log x ≤ 700 → LegendreK6.ShortInterval4 x)
+    (tail : ∀ (x : ℝ), 0 < x → 700 ≤ Real.log x → LegendreK6.ShortInterval4 x) : LegendreK6.AnalyticSegmentInputs
+structure LegendreK6.CHLRows : Prop
+number of parameters: 0
+fields:
+  LegendreK6.CHLRows.row0 : LegendreK6.CHLInterval 39097000 (4 * 10 ^ 18)
+  LegendreK6.CHLRows.row43 : LegendreK6.CHLInterval 41816800 (Real.exp 43)
+  LegendreK6.CHLRows.row46 : LegendreK6.CHLInterval 163940000 (Real.exp 46)
+  LegendreK6.CHLRows.row50 : LegendreK6.CHLInterval 1061200000 (Real.exp 50)
+  LegendreK6.CHLRows.row55 : LegendreK6.CHLInterval 10288400000 (Real.exp 55)
+  LegendreK6.CHLRows.row60 : LegendreK6.CHLInterval 76918400000 (Real.exp 60)
+  LegendreK6.CHLRows.row75 : LegendreK6.CHLInterval 174043000000 (Real.exp 75)
+  LegendreK6.CHLRows.row90 : LegendreK6.CHLInterval 184304000000 (Real.exp 90)
+  LegendreK6.CHLRows.row105 : LegendreK6.CHLInterval 191886000000 (Real.exp 105)
+  LegendreK6.CHLRows.row120 : LegendreK6.CHLInterval 197917000000 (Real.exp 120)
+  LegendreK6.CHLRows.row135 : LegendreK6.CHLInterval 202553000000 (Real.exp 135)
+  LegendreK6.CHLRows.row150 : LegendreK6.CHLInterval 207053000000 (Real.exp 150)
+constructor:
+  LegendreK6.CHLRows.mk (row0 : LegendreK6.CHLInterval 39097000 (4 * 10 ^ 18))
+    (row43 : LegendreK6.CHLInterval 41816800 (Real.exp 43)) (row46 : LegendreK6.CHLInterval 163940000 (Real.exp 46))
+    (row50 : LegendreK6.CHLInterval 1061200000 (Real.exp 50)) (row55 : LegendreK6.CHLInterval 10288400000 (Real.exp 55))
+    (row60 : LegendreK6.CHLInterval 76918400000 (Real.exp 60))
+    (row75 : LegendreK6.CHLInterval 174043000000 (Real.exp 75))
+    (row90 : LegendreK6.CHLInterval 184304000000 (Real.exp 90))
+    (row105 : LegendreK6.CHLInterval 191886000000 (Real.exp 105))
+    (row120 : LegendreK6.CHLInterval 197917000000 (Real.exp 120))
+    (row135 : LegendreK6.CHLInterval 202553000000 (Real.exp 135))
+    (row150 : LegendreK6.CHLInterval 207053000000 (Real.exp 150)) : LegendreK6.CHLRows
+
+=== LegendreK6.CoreAudit ===
+'LegendreK6.sixth_binomial_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.sixth_rpow_five_sixths' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.short_six_of_short_four' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.nat_sixth_short_of_CHL' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.chl_threshold_150' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.lower_join_exp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.chl_integer_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.lower_join_of_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+LegendreK6.chl_integer_coverage (H : LegendreK6.CHLRows) (n : ℕ) (hnlo : 1260 ≤ n) (hnhi : n ≤ 1242317999994) :
+  LegendreK6.NatSixthShort n
+
+=== LegendreK6.FiniteAudit ===
+'LegendreK6.small_range_prime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.Pratt.prime_3982487126873086493' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.refined_cells_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.polynomial_cells_checked' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.refined_saved_bounds_le_worst' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.refined_saved_scaled_bounds_le_worst' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.polynomial_saved_bounds_le_worst' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.refined_saved_margin' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.refined_real_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.polynomial_real_coverage' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LegendreK6.chl_integer_chain_checked' does not depend on any axioms
+'LegendreK6.tail_scaled_bound_lt_one' depends on axioms: [propext, Classical.choice, Quot.sound]

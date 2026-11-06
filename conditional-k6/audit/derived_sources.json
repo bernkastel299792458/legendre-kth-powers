@@ -1,0 +1,7 @@
+{
+  "code/verify_k6.py": {
+    "source_sha256": "7b3ae02ea2f1af710b75c10394206395d6bbdbbd3797ed98a47710d499dc1109",
+    "publication_sha256": "7db8e76e2866304a6280105e63f70551269f06ac50e4d992c6f4253b9c12a5eb",
+    "change": "proof_document points to paper/manuscript.md in this standalone publication package; numerical verification logic unchanged"
+  }
+}

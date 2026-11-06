@@ -1,0 +1,3 @@
+# Preserve the exact bytes identified by MANIFEST.json on every platform.
+# This also overrides automatic newline conversion in the surrounding repo.
+* -text

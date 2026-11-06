@@ -1,0 +1,13 @@
+**/.lake/
+**/__pycache__/
+*.pyc
+paper/*.aux
+paper/*.out
+paper/*.toc
+paper/*.synctex.gz
+paper/*.xdv
+paper/*.log
+paper/*.fls
+paper/*.fdb_latexmk
+tmp/
+!paper/main.pdf

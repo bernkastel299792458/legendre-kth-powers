@@ -1,0 +1,14 @@
+name = "LegendreK6"
+version = "0.1.0"
+defaultTargets = ["LegendreK6"]
+
+[leanOptions]
+autoImplicit = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "9d581dfff2e41de989072ea63abf3daf69311520"
+
+[[lean_lib]]
+name = "LegendreK6"

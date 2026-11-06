@@ -1,0 +1,20 @@
+Licensing of this conditional k=6 package
+=======================================
+
+Original software in code/ and lean/, and the accompanying workflow examples,
+is offered under the Zero-Clause BSD license (SPDX: 0BSD). See LICENSES/0BSD.txt.
+
+The original paper, documentation, generated certificate data, and project
+audit notes in this package are dedicated under CC0 1.0 Universal
+(SPDX: CC0-1.0). See LICENSES/CC0-1.0.txt.
+
+This notice applies to this package only. It does not change the license of
+the surrounding legendre-kth-powers repository or any other research track.
+Lean, Mathlib, python-flint/FLINT/Arb, TeX engines, fonts, and cited papers
+retain their respective licenses and copyrights. They are referenced or used
+as dependencies, not relicensed by this notice. Third-party papers are not
+bundled. Where a file contains an existing third-party copyright or license
+notice, that notice takes precedence for the corresponding material.
+
+The permissive license does not constitute a warranty of mathematical
+correctness or endorsement by any AI provider, cited author, or institution.

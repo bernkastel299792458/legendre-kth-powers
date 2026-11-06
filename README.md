@@ -1,5 +1,23 @@
 # Primes between consecutive k-th powers for every k ≥ 70: an AI-generated, computer-assisted interim result
 
+## Separate conditional k = 6 research track
+
+The new [`conditional-k6/`](conditional-k6/) package gives a written,
+computer-assisted argument for a prime between every pair of consecutive
+sixth powers, assuming **QRH(7/8)**, **Chourasiya–Simonič
+arXiv:2507.15184v2 Corollary 1 with the specified table rows**, and the
+explicitly cited auxiliary inputs. It includes a Chinese paper, certificates,
+reproduction tools, substantial Lean proofs, and an AI-use statement.
+**Its end-to-end Lean formalization is not complete**, and it has not received
+human expert peer review. See its [formalization scope](conditional-k6/FORMALIZATION_STATUS.md).
+
+The traditional k >= 70 track below does not use the QRH assumption; its
+materials and Apache-2.0 license are retained. The conditional package's
+original code uses 0BSD, and its original paper/documentation/data use CC0-1.0;
+see its [license scope](conditional-k6/LICENSE).
+
+## Traditional track
+
 > [!IMPORTANT]
 > - **Not peer-reviewed.** This is an interim report, published so that it can be checked.
 > - **Conditional on listed inputs.** The theorems hold *if* the published (and, for k ≥ 70, one preprint) estimates listed below are correct. Each input is listed with its status.
