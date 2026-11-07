@@ -1,0 +1,52 @@
+BELCORR01 [28.7296,29] a0=0.9927 lam=1 C_csv=82004.4 C_ref=39730 ratio=0.48449 ok
+BELCORR02 [29,30] a0=0.9927 lam=1 C_csv=80295.6 C_ref=39901.2 ratio=0.49693 ok
+BELCORR03 [30,31] a0=0.9925 lam=1 C_csv=80704.0 C_ref=43039 ratio=0.53330 ok
+BELCORR04 [31,32] a0=0.9923 lam=1 C_csv=84307.9 C_ref=46705.8 ratio=0.55399 ok
+BELCORR05 [32,33] a0=0.9921 lam=1 C_csv=89479.2 C_ref=50769.2 ratio=0.56739 ok
+BELCORR06 [33,34] a0=0.9919 lam=1 C_csv=95546.4 C_ref=55003.9 ratio=0.57568 ok
+BELCORR07 [34,35] a0=0.9918 lam=1 C_csv=101199 C_ref=58893.9 ratio=0.58196 ok
+BELCORR08 [35,36] a0=0.9916 lam=1 C_csv=107573 C_ref=63092.9 ratio=0.58651 ok
+BELCORR09 [36,37] a0=0.9914 lam=1 C_csv=116210 C_ref=68720.7 ratio=0.59135 ok
+BELCORR10 [37,38] a0=0.9912 lam=1 C_csv=125417 C_ref=74730.5 ratio=0.59586 ok
+BELCORR11 [38,39] a0=0.9910 lam=1 C_csv=134139 C_ref=80443.9 ratio=0.59971 ok
+BELCORR12 [39,40] a0=0.9909 lam=1 C_csv=141141 C_ref=85156.1 ratio=0.60334 ok
+BELCORR13 [40,41] a0=0.9907 lam=1 C_csv=150216 C_ref=91143.9 ratio=0.60675 ok
+BELCORR14 [41,42] a0=0.9906 lam=1 C_csv=157780 C_ref=96335.8 ratio=0.61057 ok
+BELCORR15 [42,43] a0=0.9905 lam=1 C_csv=165645 C_ref=101592 ratio=0.61331 ok
+BELCORR16 [43,44] a0=0.9903 lam=1 C_csv=177128 C_ref=109256 ratio=0.61682 ok
+BELCORR17 [44,45] a0=0.9901 lam=1 C_csv=189638 C_ref=117661 ratio=0.62045 ok
+BELCORR18 [45,46.2] a0=0.9900 lam=1 C_csv=198067 C_ref=123428 ratio=0.62316 ok
+BELCORR19 [46.2,50] a0=0.9899 lam=1 C_csv=207789 C_ref=130218 ratio=0.62668 ok
+BELCORR20 [50,60] a0=0.9892 lam=1 C_csv=256447 C_ref=162807 ratio=0.63485 ok
+BELCORR21 [60,70] a0=0.9876 lam=1 C_csv=398372 C_ref=258635 ratio=0.64923 ok
+BELCORR22 [70,80] a0=0.9860 lam=1 C_csv=586967 C_ref=386932 ratio=0.65921 ok
+BELCORR23 [80,90] a0=0.9850 lam=1 C_csv=800577 C_ref=534589 ratio=0.66775 ok
+BELCORR24 [90,100] a0=0.9850 lam=1 C_csv=910527 C_ref=614734 ratio=0.67514 ok
+BELCORR25 [100,110] a0=0.9850 lam=1 C_csv=1041080 C_ref=710550 ratio=0.68251 ok
+BELCORR26 [110,120] a0=0.9850 lam=1 C_csv=1152200 C_ref=792777 ratio=0.68805 ok
+BELCORR27 [120,130] a0=0.9850 lam=1 C_csv=1328510 C_ref=922112 ratio=0.69409 ok
+BELCORR28 [130,140] a0=0.9850 lam=1 C_csv=1447850 C_ref=1.01132e+06 ratio=0.69850 ok
+BELCORR29 [140,150] a0=0.9850 lam=1 C_csv=1613620 C_ref=1.13469e+06 ratio=0.70319 ok
+BELCORR30 [150,160] a0=0.9850 lam=1 C_csv=1705870 C_ref=1.20454e+06 ratio=0.70611 ok
+BELCORR31 [160,170.2] a0=0.9850 lam=1 C_csv=1873950 C_ref=1.33008e+06 ratio=0.70977 ok
+BELCORR32 [170.2,500] a0=0.9850 lam=1 C_csv=2086220 C_ref=1.69482e+06 ratio=0.81239 ok
+BELCORR33 [500,1000] a0=0.9850 lam=1 C_csv=11646100 C_ref=1.00717e+07 ratio=0.86481 ok
+BELCORR34 [1000,1500] a0=0.9850 lam=1 C_csv=39006300 C_ref=3.23995e+07 ratio=0.83062 ok
+BELCORR35 [1500,2000] a0=0.9850 lam=1 C_csv=116984000 C_ref=9.24283e+07 ratio=0.79009 ok
+BELCORR36 [2000,2500] a0=0.9850 lam=1 C_csv=344769000 C_ref=2.99557e+08 ratio=0.86886 ok
+BELCORR37 [2500,3000] a0=0.9850 lam=1 C_csv=511934000 C_ref=4.37021e+08 ratio=0.85367 ok
+BELCORR38 [3000,481958] a0=0.9850 lam=1 C_csv=1101250000 C_ref=nan ratio=nan FAIL status,c1/den<=0 somewhere,C_csv < C_ref
+Traceback (most recent call last):
+  File "D:\UGit\AI4Math\legendre_k67\work\review_phase0\batch_check.py", line 31, in <module>
+    try:
+         
+  File "D:\UGit\AI4Math\legendre_k67\work\review_phase0\indep_C.py", line 279, in C_row
+    for i in range(n):
+            ^^^^^^^^^^^
+  File "D:\UGit\AI4Math\legendre_k67\work\review_phase0\indep_C.py", line 215, in C_piece
+    c = constants(row['alpha0'])
+         ^^^^^^^^^^^^^
+  File "D:\UGit\AI4Math\legendre_k67\work\review_phase0\indep_C.py", line 49, in nu_of
+    elif z == 'ford':
+          ^^^^^^^^^^^^
+ValueError: kv53.989

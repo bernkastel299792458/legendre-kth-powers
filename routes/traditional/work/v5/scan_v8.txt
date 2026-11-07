@@ -1,0 +1,7 @@
+  [V8_T1_mid_v4b] k=34: fails; L1=1012; first S fail=1037.4794921875; H ok from 3969.0; worst S=1.704 at L=1787.4794921875
+  [V8_T1_mid_v4b] k=35: fails; L1=1043; first S fail=1093.2734375; H ok from 3969.0; worst S=1.354 at L=1818.2734375
+RESULT [V8_T1_mid_v4b] min k (samples) = 36
+  [V8_T2_+CS_TheoremR] k=32: fails; L1=951; first S fail=975.9814453125; H ok from 4711.0; worst S=2.735 at L=1125.9814453125
+  [V8_T2_+CS_TheoremR] k=34: fails; L1=1012; first S fail=1037.4794921875; H ok from 3969.0; worst S=1.691 at L=1287.4794921875
+  [V8_T2_+CS_TheoremR] k=35: fails; L1=1043; first S fail=1093.2734375; H ok from 3969.0; worst S=1.331 at L=1318.2734375
+RESULT [V8_T2_+CS_TheoremR] min k (samples) = 36

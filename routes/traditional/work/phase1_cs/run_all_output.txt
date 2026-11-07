@@ -1,0 +1,17 @@
+sha256 c477eafb3bb3f158  ../audit_rza/repair/REPORT.md
+sha256 94dba36415035404  src/v2/InghamPostArXiv.tex
+sha256 ceb01acbc06e2c54  src/v1/Main.tex
+sha256 dfe061f47fa3fcf1  src/2101.12263/KLN.tex
+sha256 2a79d56dbd6da46d  src/2204.01980/x/main.tex
+sha256 28c6ea1f910dcf74  src/2603.25961/x/OnADoubleMobiusSum-20.tex
+sha256 f6f1ea9d05b1c7b8  src/2603.25961/x/OnADoubleMobiusSum-20.sagetex.sout
+zeta_half_max.py       -> zeta_half_max_out.txt        ok
+cs_thm1.py             -> cs_thm1_out.txt              ok
+run_thm1_tables.py     -> run_thm1_tables_out.txt      ok
+run_kln_tables.py      -> run_kln_tables_out.txt       ok
+check_misc.py          -> check_misc_out.txt           ok
+run_b4_05161.py        -> run_b4_05161_out.txt         ok
+run_low_sigma.py       -> run_low_sigma_out.txt        ok
+cs_bounds.py           -> cs_bounds_selftest_out.txt   ok
+ALL OK
+exit 0

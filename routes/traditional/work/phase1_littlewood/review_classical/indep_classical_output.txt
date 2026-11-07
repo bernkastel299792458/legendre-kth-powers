@@ -1,0 +1,146 @@
+====================================================================================================
+INDEPENDENT CHECK of the local classical region (mpmath, dps=30)
+====================================================================================================
+w(0) = 5.6727875988616  closed form sec^2(th tan th + 3 th cot th - 3) = 5.6727875988616
+w''(0) = -50.0697014947  d = 1.05923293888
+w from exponential pieces vs formula, max diff on 50 pts: 7.89e-30
+W closed form vs quadrature at z = -0.95, 0.05, 1, 128.6, 700: ['3.94e-30', '9.55e-29', '1.38e-30', '3.08e-32', '0.0']
+kappa = 0.504074505239 (433/859 = 0.504074505239 )  sum|kappa| = 3.7753201397
+a0 = 1.0  a1 = 1.74124032598 (865534/497079 = 1.74124032598 )  a = 3.52441805025 (2919857/828465 = 3.52441805025 )
+min_k a_k = 2.803e-5   P(x) >= 0 check: min over 2001 pts in [0,pi] of sum a_k cos kx = 1.487e-7
+eta0 = 0.00759983979882  sigma0 = 0.993069086787  KC = a kappa w(0)/2 = 5.03905010405
+
+--- Lemma 3 / Lemma 5
+min_{x in [0,1]} sum kappa_m x^m (4001 pts) = 0.504075
+r = (2sig0-1)/eta0 = 129.75776  C(r,r) = 51.02881  eta0^2 C/((2sig0-1)^2 w0) = 0.0005342595  < 11/20000 = 0.00055: True
+B-tilde(Y)(1+Y^2) min over Y in [0,20] (step 1e-3) and log grid to 1e8: 0.000996961 at Y = 9.54993e+7 ; limit Y->inf of Y^2 Btilde = sum m b_m - eps0 sum|b_m|/m = 0.000996961 ; sum m b_m = 1.0 /859
+(for reference) BTY's split with c0 = 151/153, same eps0: min B(y)(1+y^2) on [0,20] = 8.23996e-5
+closed-form consistency R5 vs F(iy)+F(2s-1-iy) at y = 0.37, sig0, eta0: 0.000227318401601 0.000227318401601
+  sigma=0.99306909 eta=0.00759984: min over 1241 y in [0,1e7] of [ReF(iy)+ReF(2s-1-iy)](1+(y/d)^2)/(eta w0 d) = 0.0011971 at y = 1.0e+7
+  sigma=0.99306909 eta=0.00379992: min over 1241 y in [0,1e7] of [ReF(iy)+ReF(2s-1-iy)](1+(y/d)^2)/(eta w0 d) = 0.0011971 at y = 1.0e+7
+  sigma=0.99306909 eta=0.001: min over 1241 y in [0,1e7] of [ReF(iy)+ReF(2s-1-iy)](1+(y/d)^2)/(eta w0 d) = 0.0011971 at y = 1.0e+7
+  sigma=0.9999 eta=0.00759984: min over 1241 y in [0,1e7] of [ReF(iy)+ReF(2s-1-iy)](1+(y/d)^2)/(eta w0 d) = 0.00116461 at y = 1.0e+7
+  sigma=0.99965 eta=0.0034: min over 1241 y in [0,1e7] of [ReF(iy)+ReF(2s-1-iy)](1+(y/d)^2)/(eta w0 d) = 0.00116578 at y = 1.0e+7
+  sigma=0.993169 eta=0.007538: min over 1241 y in [0,1e7] of [ReF(iy)+ReF(2s-1-iy)](1+(y/d)^2)/(eta w0 d) = 0.00119662 at y = 1.0e+7
+  sigma=0.99706 eta=0.00326: min over 1241 y in [0,1e7] of [ReF(iy)+ReF(2s-1-iy)](1+(y/d)^2)/(eta w0 d) = 0.00117796 at y = 1.0e+7
+  interior of strip (sig0, eta0): min of Re[F(z)+F(2s-1-conj z)](1+y^2) over a 9 x 400 grid = 0.000202404
+
+--- Ford's bound C(nu,nu) vs sup_y |xi^3 W_0(xi)|, xi = nu + iy (closed form W, dps 40)
+  nu = 64.878879: sup|xi^3 W0| = 50.069701   C(nu,nu) = 52.101198   |w''(0)| = 50.069701
+  nu = 194.63664: sup|xi^3 W0| = 50.069701   C(nu,nu) = 50.696711   |w''(0)| = 50.069701
+  nu = 129.75776: sup|xi^3 W0| = 50.069701   C(nu,nu) = 51.02881   |w''(0)| = 50.069701
+  nu = 130.66974: sup|xi^3 W0| = 50.069701   C(nu,nu) = 51.021728   |w''(0)| = 50.069701
+  nu = 128.58172: sup|xi^3 W0| = 50.069701   C(nu,nu) = 51.038099   |w''(0)| = 50.069701
+
+--- Lemma 11 / Lemma 10
+min h(u) on (0, 54] (step 0.01): 0.0119231 at u = 0.01 ; h(54) = 0.0996735 ; first u > 54 with h < 0 ~ 55.4
+sum_{p<=31} log p m_p = 0.2353197119  kappa * sum = 0.1186186673  > 0.1186: True ; 15 log 31 = 51.5098
+  p=2: min over 2001-pt grid of G_p(1,x) = 0.2342030029  (m_p = 0.23416332)
+  p=3: min over 2001-pt grid of G_p(1,x) = 0.05007672818  (m_p = 0.05006283)
+  p=5: min over 2001-pt grid of G_p(1,x) = 0.007356499068  (m_p = 0.00735649)
+  p=31: min over 2001-pt grid of G_p(1,x) = 1.3516885e-5  (m_p = 0.00001346)
+
+--- Lemma 12 constant
+kappa/2 sum a_k log(k/2pi) = -1.23931736335 ; k=0 part (monotone bound) = -0.329146309898 ; C_UP = -1.68706367259
+   k=0 part at sigma = 0.99306909 exactly: -0.3358504497
+   k=0 part at sigma = 0.99317 exactly: -0.3358469662
+   k=0 part at sigma = 0.9967 exactly: -0.3357248516
+max_k |sum_m kappa_m(-log pi/2 + Re psi/2) - kappa/2 log(kt/2pi)| at t = H, sigma = sigma0: 2.148e-26
+
+--- error constants
+Re psi(1/4 + iy/2) = 0 at y = 2.032058432
+  m=0: x_m=0.49306909  C_m=52.1011976  J(x_m)=23.6417948  sp_m=0.99306909  C(sp/eta0,sp/eta0)=51.021728
+  m=1: x_m=1.4792073  C_m=50.6967114  J(x_m)=1.51571987  sp_m=1.9792073  C(sp/eta0,sp/eta0)=50.533657
+  m=2: x_m=2.4653454  C_m=50.4399959  J(x_m)=0.422662762  sp_m=2.9653454  C(sp/eta0,sp/eta0)=50.37632
+  m=3: x_m=3.4514836  C_m=50.3323951  J(x_m)=0.195582803  sp_m=3.9514836  C(sp/eta0,sp/eta0)=50.298658
+  m=4: x_m=4.4376218  C_m=50.2732413  J(x_m)=0.116053047  sp_m=4.9376218  C(sp/eta0,sp/eta0)=50.252383
+  m=5: x_m=5.42376  C_m=50.2358298  J(x_m)=0.0790300659  sp_m=5.92376  C(sp/eta0,sp/eta0)=50.221667
+  m=6: x_m=6.4098981  C_m=50.2100349  J(x_m)=0.0584841563  sp_m=6.9098981  C(sp/eta0,sp/eta0)=50.199793
+min over y in [2, 1e10] of log y - |Re psi(1/4+iy/2)| = 0.67632 at y = 2.0
+Q_ERR = 278.2003317  P_ERR = 396.478949 (k=0: 273.3206 , k>=1 log k: 123.15835 ) [neglecting the ~1e-20 terms]
+BTY-style (one x0 for all m) for comparison: Q = 907.6606
+
+--- dL14/deta at fixed mu (finite differences of the direct quadrature)
+  eta=0.00759984 mu=0.88: dL14/deta = 4.1603816   (claimed bound 48.55; KC log H - w0|C_UP| = 135.2)
+  eta=0.00759984 mu=1.0: dL14/deta = 4.1541429   (claimed bound 48.55; KC log H - w0|C_UP| = 135.2)
+  eta=0.0045 mu=0.95: dL14/deta = 4.0786927   (claimed bound 48.55; KC log H - w0|C_UP| = 135.2)
+  eta=0.0033 mu=0.88: dL14/deta = 4.0499467   (claimed bound 48.55; KC log H - w0|C_UP| = 135.2)
+
+--- profile
+81 bands, CSV == profile json: True, contiguous: True, range (28.7296, 60.0], all status proved: True
+min Z = 4.614  max Z = 5.129  all < 5.558691: True  all >= 4.58: True  log H = 28.7296334  V_LO < log H: True
+bands where Z decreases with height: [(57.0, '5.129', '5.126'), (58.0, '5.126', '5.122')]
+
+--- margin at test heights (s = 1, eta = A/v, sigma = 1 - y(v)); independent vs cl_core.cell_margin([v, v+1e-7])
+v= 28.730 Z=4.614: y=0.0068294349 mu=0.9053114 eta=0.007543741 logT=31.5028
+    L14 direct quad = 1.02393465088; via W-split quad = 1.02393465088; cl_core G(mu)+rest at same point = [1.02393 +/- 6.55e-6]
+    terms: L14 1.02393465 | -eta w0 C_UP 0.0721962734 | -err -0.00360147 | -main -1.09212183
+    margin indep = 0.00040753033 (rel 0.0003732);  cl_core cell = 0.00038942342 (rel 0.0003566);  code cell L14 lower = [1.023916580 +/- 4.52e-10], code err = [0.0036015044 +/- 6.38e-11]
+v= 29.000 Z=4.617: y=0.0067684975 mu=0.9062544 eta=0.00746865 logT=31.7727
+    L14 direct quad = 1.02375250963; via W-split quad = 1.02375250963; cl_core G(mu)+rest at same point = [1.02375 +/- 4.33e-6]
+    terms: L14 1.02375251 | -eta w0 C_UP 0.0714776268 | -err -0.00352628 | -main -1.09141219
+    margin indep = 0.00029156105 (rel 0.0002671);  cl_core cell = 0.00026761804 (rel 0.0002452);  code cell L14 lower = [1.023728602 +/- 3.27e-11], code err = [0.0035263155 +/- 6.84e-11]
+v= 30.000 Z=4.63: y=0.0065436952 mu=0.9089193 eta=0.007199424 logT=32.7726
+    L14 direct quad = 1.02300204745; via W-split quad = 1.02300204745; cl_core G(mu)+rest at same point = [1.02300 +/- 3.62e-6]
+    terms: L14 1.02300205 | -eta w0 C_UP 0.0689010359 | -err -0.00326233 | -main -1.08834775
+    margin indep = 0.00029289518 (rel 0.0002691);  cl_core cell = 0.00027416407 (rel 0.0002519);  code cell L14 lower = [1.022983348 +/- 6.96e-11], code err = [0.0032623649 +/- 7.11e-11]
+v= 31.500 Z=4.647: y=0.0062372436 mu=0.9130108 eta=0.006831511 logT=34.2726
+    L14 direct quad = 1.02204188947; via W-split quad = 1.02204188947; cl_core G(mu)+rest at same point = [1.02204 +/- 3.16e-6]
+    terms: L14 1.02204189 | -eta w0 C_UP 0.0653799781 | -err -0.00292036 | -main -1.08436628
+    margin indep = 0.00013513126 (rel 0.0001246);  cl_core cell = 0.00011798711 (rel 0.0001088);  code cell L14 lower = [1.022024772 +/- 4.38e-10], code err = [0.0029203830 +/- 3.75e-11]
+v= 31.850 Z=4.651: y=0.006170235 mu=0.9140238 eta=0.006750629 logT=34.6226
+    L14 direct quad = 1.02184698336; via W-split quad = 1.02184698336; cl_core G(mu)+rest at same point = [1.02185 +/- 4.74e-6]
+    terms: L14 1.02184698 | -eta w0 C_UP 0.0646059059 | -err -0.00284781 | -main -1.08343369
+    margin indep = 0.00017129062 (rel 0.0001581);  cl_core cell = 0.00015244581 (rel 0.0001407);  code cell L14 lower = [1.021828165 +/- 2.83e-10], code err = [0.0028478321 +/- 5.12e-11]
+v= 31.899 Z=4.651: y=0.006161515 mu=0.9141362 eta=0.006740259 logT=34.6716
+    L14 direct quad = 1.0218196072; via W-split quad = 1.0218196072; cl_core G(mu)+rest at same point = [1.02182 +/- 2.10e-6]
+    terms: L14 1.02181961 | -eta w0 C_UP 0.0645066649 | -err -0.00283888 | -main -1.08343369
+    margin indep = 5.360252e-5 (rel 4.947e-5);  cl_core cell = 3.3046312e-5 (rel 3.05e-5);  code cell L14 lower = [1.021799077 +/- 4.34e-11], code err = [0.0028389029 +/- 5.38e-11]
+v= 32.000 Z=4.653: y=0.0061409947 mu=0.9143695 eta=0.006716097 logT=34.7726
+    L14 direct quad = 1.02175186672; via W-split quad = 1.02175186672; cl_core G(mu)+rest at same point = [1.02175 +/- 3.05e-6]
+    terms: L14 1.02175187 | -eta w0 C_UP 0.0642754263 | -err -0.00281697 | -main -1.082968
+    margin indep = 0.00024222451 (rel 0.0002237);  cl_core cell = 0.00021708756 (rel 0.0002005);  code cell L14 lower = [1.021726756 +/- 4.57e-10], code err = [0.0028169941 +/- 2.17e-11]
+v= 35.000 Z=4.683: y=0.0056232422 mu=0.9216775 eta=0.006101095 logT=37.7726
+    L14 direct quad = 1.02022233022; via W-split quad = 1.02022233022; cl_core G(mu)+rest at same point = [1.02022 +/- 3.14e-6]
+    terms: L14 1.02022233 | -eta w0 C_UP 0.0583896396 | -err -0.00230135 | -main -1.07603034
+    margin indep = 0.00028017629 (rel 0.0002604);  cl_core cell = 0.00025446207 (rel 0.0002365);  code cell L14 lower = [1.020196635 +/- 3.36e-10], code err = [0.0023013680 +/- 4.32e-11]
+v= 40.000 Z=4.723: y=0.0049302951 mu=0.9314314 eta=0.005293246 logT=42.7726
+    L14 direct quad = 1.01825117467; via W-split quad = 1.01825117467; cl_core G(mu)+rest at same point = [1.018251 +/- 6.27e-7]
+    terms: L14 1.01825117 | -eta w0 C_UP 0.0506582357 | -err -0.00170918 | -main -1.06691724
+    margin indep = 0.00028289393 (rel 0.0002652);  cl_core cell = 0.00026404713 (rel 0.0002475);  code cell L14 lower = [1.018232341 +/- 4.83e-10], code err = [0.0017091932 +/- 5.00e-11]
+v= 45.000 Z=4.754: y=0.004388366 mu=0.9388031 eta=0.004674426 logT=47.7726
+    L14 direct quad = 1.01674021115; via W-split quad = 1.01674021115; cl_core G(mu)+rest at same point = [1.016740 +/- 4.85e-7]
+    terms: L14 1.01674021 | -eta w0 C_UP 0.0447359131 | -err -0.00131916 | -main -1.05996006
+    margin indep = 0.00019681331 (rel 0.0001857);  cl_core cell = 0.00018211618 (rel 0.0001718);  code cell L14 lower = [1.016725523 +/- 2.59e-10], code err = [0.0013191640 +/- 3.72e-11]
+v= 49.900 Z=4.78: y=0.0039585502 mu=0.9442013 eta=0.004192485 logT=52.6726
+    L14 direct quad = 1.01552351591; via W-split quad = 1.01552351591; cl_core G(mu)+rest at same point = [1.015523 +/- 6.93e-7]
+    terms: L14 1.01552352 | -eta w0 C_UP 0.0401235688 | -err -0.00105221 | -main -1.05419458
+    margin indep = 0.00040019187 (rel 0.0003796);  cl_core cell = 0.0003858779 (rel 0.000366);  code cell L14 lower = [1.015509208 +/- 2.40e-10], code err = [0.0010522166 +/- 3.72e-11]
+v= 54.500 Z=4.835: y=0.0034042425 mu=0.8970434 eta=0.003794958 logT=57.2726
+    L14 direct quad = 1.00738726204; via W-split quad = 1.00738726204; cl_core G(mu)+rest at same point = [1.007387 +/- 3.80e-7]
+    terms: L14 1.00738726 | -eta w0 C_UP 0.0363190948 | -err -0.000850327 | -main -1.04220271
+    margin indep = 0.00065321974 (rel 0.0006268);  cl_core cell = 0.00063327381 (rel 0.0006076);  code cell L14 lower = [1.007367321 +/- 2.07e-10], code err = [0.00085033149 +/- 3.53e-12]
+v= 57.500 Z=5.129: y=0.0029847477 mu=0.8802543 eta=0.003390779 logT=60.2726
+    L14 direct quad = 1.00343604841; via W-split quad = 1.00343604841; cl_core G(mu)+rest at same point = [1.003436 +/- 1.24e-7]
+    terms: L14 1.00343605 | -eta w0 C_UP 0.0324509528 | -err -0.000639082 | -main -0.982462489
+    margin indep = 0.05278533 (rel 0.05373);  cl_core cell = 0.052763993 (rel 0.05371);  code cell L14 lower = [1.003414714 +/- 2.85e-10], code err = [0.00063908554 +/- 4.38e-12]
+v= 59.990 Z=5.122: y=0.0028663328 mu=0.8807346 eta=0.00325448 logT=62.7626
+    L14 direct quad = 1.00295001495; via W-split quad = 1.00295001495; cl_core G(mu)+rest at same point = [1.0029500 +/- 7.85e-8]
+    terms: L14 1.00295001 | -eta w0 C_UP 0.0311465222 | -err -0.000588949 | -main -0.983805175
+    margin indep = 0.049702313 (rel 0.05052);  cl_core cell = 0.049683705 (rel 0.0505);  code cell L14 lower = [1.002931410 +/- 4.98e-10], code err = [0.00058895219 +/- 2.61e-12]
+
+Summary (v, indep margin, cl_core cell margin):
+    28.730   4.0753e-04   3.8942e-04
+    29.000   2.9156e-04   2.6762e-04
+    30.000   2.9290e-04   2.7416e-04
+    31.500   1.3513e-04   1.1799e-04
+    31.850   1.7129e-04   1.5245e-04
+    31.899   5.3603e-05   3.3046e-05
+    32.000   2.4222e-04   2.1709e-04
+    35.000   2.8018e-04   2.5446e-04
+    40.000   2.8289e-04   2.6405e-04
+    45.000   1.9681e-04   1.8212e-04
+    49.900   4.0019e-04   3.8588e-04
+    54.500   6.5322e-04   6.3327e-04
+    57.500   5.2785e-02   5.2764e-02
+    59.990   4.9702e-02   4.9684e-02

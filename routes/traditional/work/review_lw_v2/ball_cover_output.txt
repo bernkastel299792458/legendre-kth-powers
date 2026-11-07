@@ -1,0 +1,2 @@
+﻿tested 8784 cells (incl. bisected); not covered: 0
+float(28.73) - 28.73 = 4.263256414560601e-16

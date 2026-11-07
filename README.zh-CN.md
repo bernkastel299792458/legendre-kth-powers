@@ -20,8 +20,7 @@ Lean 定理，241 个模块的全新目录重建及对应依赖审计全部通�
 | 研究路线 | 当前报告的成果 | 主要前提 | 审查入口 |
 |---|---|---|---|
 | **B. 假定 QRH(7/8) 成立的路线** | 固定指数 **k = 6** | **七项明确输入**，包括 QRH(7/8)、CS **arXiv:2507.15184v2** 推论 1 及指定表格行；见[完整陈述](routes/qrh/documentation/inputs.md) | [QRH 路线审查包](routes/qrh/README.md) · [中文论文 PDF](routes/qrh/paper/current/main.pdf) |
-| **A. 传统显式估计路线** | 所有整数 **k ≥ 70** | 列明的显式估计，包括 Bellotti–Trudgian–Yang 预印本的零点自由区域常数 **4.896**；不假定 QRH | [传统路线论文，英文](routes/traditional/proof/manuscript.md) |
-| **A. 传统路线，仅用经评审文献输入的版本** | 所有整数 **k ≥ 74** | 列明的经同行评审文献输入，以 **5.558691** 替代 4.896；不假定 QRH | [传统路线审查包](routes/traditional/proof/README.md) |
+| A. 传统显式估计路线 | 所有整数 k ≥ 37（v5，进行中） | 经评审的文献输入，加上本项目自己的引理（只经过 AI 审阅）；不假定 QRH。Arb 证书链，尚无合并的 v5 论文。早先 v4 的 k ≥ 70 / 74 目前不成立 | [传统路线入口](routes/traditional/README.md) |
 
 “仅用经评审文献输入”描述的是所用文献的状态，不表示本项目的新证明已经通过同行评审。
 两条路线的数学前提不同，比较指数时必须同时说明这些前提。
@@ -54,8 +53,9 @@ CS v2 仍是预印本依赖，全部七项仍明确保留在最终 Lean 定理�
 
 ### 结论与方法
 
-[v4 论文](routes/traditional/proof/manuscript.md)给出计算机辅助论证，覆盖所有整数 **k ≥ 70**；
-若将文献输入限制为经同行评审的结果，则覆盖所有整数 **k ≥ 74**。
+**进展（v5，2026-11-07）：** Arb 证书链给出所有整数 k ≥ 37 的结论，依据是经评审的文献输入和本项目自己的引理（只经过 AI 审阅）；合并论文在准备中。见 [v5 工作区](routes/traditional/work/README.md)。
+
+早先 v4 的 k ≥ 70 / 74 目前不成立：它用到了 Bellotti 零点密度估计印刷版的 Table 2，本项目发现该文 §4 有计数缺口。这是本项目的判断，未经原作者确认。以下内容描述 v4。
 
 这条路线结合显式零点自由区域、混合零点密度估计、平滑显式公式、有限区间证书和解析无限尾部。
 它**不假定 QRH(7/8)**。
@@ -90,7 +90,7 @@ Lean 项目保留的历史名称 `LegendreK67` 不代表当前仍声称证明了
 |---|---|---|
 | 阅读论证 | [英文论文](routes/traditional/proof/manuscript.md) | [当前论文](routes/qrh/paper/current/main.pdf) · [证明导读](routes/qrh/documentation/blueprint/README.md) |
 | 检查输入 | [论文第 3 节](routes/traditional/proof/manuscript.md) · [文献来源](routes/traditional/SOURCES.md) | [七项输入](routes/qrh/documentation/inputs.md) · [BibTeX](routes/qrh/paper/current/references.bib) |
-| 复现计算 | [审查包复算说明](routes/traditional/proof/README.md#如何复核) | [复现说明](routes/qrh/REPRODUCING.md) |
+| 复现计算 | [v5 证书](routes/traditional/work/v5/README.md) · [v4 审查包复算说明](routes/traditional/proof/README.md#如何复核) | [复现说明](routes/qrh/REPRODUCING.md) |
 | 理解 Lean 范围 | [逻辑拼接的范围](routes/traditional/proof/README.md#lean-证明了什么) | [准确结论与验收证据](routes/qrh/FORMALIZATION_STATUS.md) |
 | 审查证据 | [清单](routes/traditional/proof/REVIEW_CHECKLIST.md) · [AI 审阅与答复](routes/traditional/review/) | [范围审阅](routes/qrh/audit/PUBLICATION_SCOPE_REVIEW.md) · [历史审阅](routes/qrh/audit/source_reviews/README.md) |
 

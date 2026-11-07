@@ -1,0 +1,70 @@
+==============================================================================
+[RIGOROUS] 1. Coefficients D1..D4 of sum_{n<=x} d(n)^2 = x(D1 L^3+D2 L^2+D3 L+D4)+D0(x)
+   = residue at s=1 of zeta(s)^4/zeta(2s) x^s/s  (Ramanujan: sum d^2 n^-s = zeta^4/zeta(2s))
+   D1 = [0.10132118364233777144 +/- 3.88e-21]
+   D2 = [0.74434127639145664044 +/- 9.95e-22]
+   D3 = [0.82326520826948502016 +/- 3.19e-21]
+   D4 = [0.46032337225872143039 +/- 3.77e-21]
+   1/pi^2 = [0.10132118364233777144 +/- 3.88e-21]
+   CS (Lemma 11) intervals: 0.744341<D2<0.744342, 0.823265<D3<0.823266, 0.460323<D4<0.460324
+   in CS intervals: True True True
+   NB: CHT21 arXiv v1 (1911.07369v1) Thm 2 prints D2=0.745..., D3=0.824..., D4=0.461... and error
+       O*(9.73 x^{3/4} log x + 0.73 x^{1/2}); CS quote |D0(x)| <= 9.73 x^{3/4} log x only.
+==============================================================================
+[RIGOROUS] 2. Lemma 13 (D6) constant 154: |c0| + int_2^oo |D0(u)|/u^2 du
+   c0 = [0.3550062798 +/- 1.75e-11]
+   9.73*int_2^oo u^{-5/4} log u du = [153.5958589 +/- 2.41e-8]
+   0.73*int_2^oo u^{-3/2} du       = [1.032375901 +/- 4.68e-10]
+   |c0| + 9.73-part            = [153.9508652 +/- 3.84e-9]  (<=154: True)
+   |c0| + 9.73-part + 0.73-part = [154.9832411 +/- 4.37e-9]  (<=154: False)
+   coefficient check D1+D2/3 = [0.3494349424 +/- 3.95e-11] (paper 0.349436), D2+D3/2 = [1.155973881 +/- 4.74e-10] (1.155975), D3+D4 = [1.283588581 +/- 4.72e-10] (1.28359)
+==============================================================================
+[RIGOROUS] 3. Lemma 14 (D7): exact lower-order coefficients vs paper (0.12441, 0.364, 0.3)
+   m0 - e^-2 = [0.101501462427 +/- 4.60e-13]  (expected 0.75 e^-2 = [0.101501462427 +/- 4.60e-13])
+   L^3: [0.01028424831 +/- 4.58e-12]   (paper 3/(2e pi)^2 = [0.01028424831 +/- 4.58e-12])
+   L^2: [0.1204047146 +/- 2.36e-11]   (paper 0.12441)  ok: True
+   L^1: [0.3408336964 +/- 1.03e-11]   (paper 0.364)    ok: True
+   L^0: [0.2725869076 +/- 1.46e-11]   (paper 0.3)      ok: True
+   D0-part (9.73 + 19.46*1.25) e^-2 = [4.608843071 +/- 3.78e-10] (paper 4.61) ok: True
+   extra 0.73 x^{1/2} part: 0.73*(1+2.5) e^-2 = [0.345782 +/- 3.52e-7]  (-> + .../(sqrt(x0) log^3 x0))
+==============================================================================
+[RIGOROUS] 4. Lemma 12 sign conditions (interval subdivision of sigma)
+   sigma in [-3,0): inner brackets of (d2Aux) positive: True
+   sigma in [-3,0): x-independent constant <= 0 (enough for '17.52'): True (max upper end -11.88)
+   17.52 >= 9.73(1+3/3.75) = [17.514000 +/- 3e-11]
+   sigma in (0,1): x-independent constant <= 0: True (max upper end -4.66)
+==============================================================================
+[NUMERICAL] 5. Divisor sums up to N (floats)
+   sieve d(n) n<=5000000: 16.8s
+   max |Delta(x)|/sqrt(x), 1<=x<=N : 0.9607  (CS use <=1; BBR12 Thm 1.1 gives 0.961 for x>=1)
+D:\UGit\AI4Math\legendre_k67\work\phase1_cs\fourth_moment\lemma_checks.py:157: RuntimeWarning: divide by zero encountered in divide
+  rr = (np.maximum(np.abs(D0R), np.abs(D0L)) / (n ** 0.75 * logn))[sel]
+   max |D0(x)|/(x^{3/4} log x), 2<=x<=N : 1.8489  (CS: 9.73)
+     x=      10  D0(x)=7.607   D0/(x^0.5)=2.405
+     x=     100  D0(x)=52.72   D0/(x^0.5)=5.272
+     x=    1000  D0(x)=20.69   D0/(x^0.5)=0.6542
+     x=   10000  D0(x)=640.6   D0/(x^0.5)=6.406
+     x=  100000  D0(x)=3163   D0/(x^0.5)=10
+     x= 1000000  D0(x)=1.078e+04   D0/(x^0.5)=10.78
+     x= 5000000  D0(x)=1.605e+04   D0/(x^0.5)=7.178
+   Lemma 12 spot checks (ratio LHS/RHS must be <=1):
+     sigma=-3.00  max ratio = 0.9651
+     sigma=-2.00  max ratio = 0.9733
+     sigma=-1.00  max ratio = 0.9815
+     sigma=-0.20  max ratio = 0.9883
+     sigma= 0.00  max ratio = 0.9944
+     sigma= 0.30  max ratio = 0.9172
+     sigma= 0.80  max ratio = 0.5792
+     sigma= 0.95  max ratio = 0.2069
+   Lemma 9/10 spot checks:
+     D1(x0, 0.0): max ratio 0.9994
+     D1(x0,-0.5): max ratio 0.9977
+     D1(x0,-1.0): max ratio 0.9951
+     D3(x0) (Lemma 10, 2nd): max ratio 0.9699
+==============================================================================
+[NUMERICAL/RIGOROUS] 6. Lemma 16 (chi, Gamma) constants
+   max |log ratio| * 2 y^2 over grid x in[-1,1], y in[2,1000]: 0.5000 (Lemma claims <= 1)
+   [NUMERICAL] max |chi| on boundary grid of [-1/2,0]x[-100,100]: 15.915693 (claim 16)
+   [NUMERICAL] max |(z-1)chi(z)| on boundary grid of [1/2,1]x[-2pi,2pi]: 6.303048 (claim 6.31)
+   [NUMERICAL] max |chi| for x in [1/2,1], 2pi<=|y|<=42pi (grid): 1.000204 (claim 1.1)
+   1/log(1+1/n) <= n+1/2 (MV lemma), n=1..1e6: True

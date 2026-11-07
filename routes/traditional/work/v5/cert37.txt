@@ -1,0 +1,7 @@
+[k37_T1_refereed_own_lemmas] k=37 L1=1131463/1024 (1104.944); numeric facts OK
+[k37_T1_refereed_own_lemmas] Lemma T verified for L >= 10000000000
+[k37_T1_refereed_own_lemmas] H: covered down to 14368.934; using [38055/2, 10000000000], 49670 pieces, max delta 0.999998
+[k37_T1_refereed_own_lemmas] S: 5518 pieces cover [1131463/1024, 38055/2], max delta 0.860166
+[k37_T1_refereed_own_lemmas] CHAIN GENERATED k=37: L1=1131463/1024, L2=38055/2, L3=10000000000
+[k37_T1_refereed_own_lemmas] k=37: S 5518 pieces [1104.944, 19027.500] max delta (pure Arb) 0.860166; H 49670 pieces up to 10000000000, max delta 0.999998
+[k37_T1_refereed_own_lemmas] CHAIN VERIFIED

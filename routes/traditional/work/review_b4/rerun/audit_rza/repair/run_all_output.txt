@@ -1,0 +1,21 @@
+  ran repair_hweights.py 0 90                                        22.5 s (exit 0)
+  ran repair_hweights.py 0.0227 90                                   19.8 s (exit 0)
+  ran repair_hweights.py 0.04 90                                     14.4 s (exit 0)
+OK    h-weights with eps0=0 reproduce S11(68) (consistency of the weighted code)
+OK    own certificate |m(t)|<=sqrt(2/t), |m_2(t)|<=sqrt(3/t), t<=1e10
+OK    sign table re-run (sign_table_acd_rerun.txt) has no failing cell
+OK    sign table re-run (sign_table_b_rerun.txt) has no failing cell
+  ran rza_mpatterns.py                                                7.9 s (exit 0)
+OK    m_l(t) pattern constants (exact)
+  ran repair_hf_inputs.py 10                                         84.0 s (exit 0)
+OK    derived H2' = 0.0297612179 <= 0.029762 (used)
+  ran repair_bound.py 3e12 0.0227                                     2.3 s (exit 0)
+OK    certificate rza_3e12: b4 = 0.5159
+  ran repair_bound.py 1e12 0.04                                       2.5 s (exit 0)
+OK    certificate rza_1e12: b4 = 0.5247
+  ran repair_bound.py 3e12 0.0227                                     2.5 s (exit 0)
+OK    certificate hf_3e12: b4 = 0.5161
+  ran repair_bound.py 1e12 0.04                                       2.0 s (exit 0)
+OK    certificate hf_1e12: b4 = 0.5249
+DONE, 0 FAIL
+EXIT 0

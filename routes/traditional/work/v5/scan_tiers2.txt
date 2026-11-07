@@ -1,0 +1,24 @@
+  [bty+belfix+LW+CSB] k=50: fails; L1=1508; first S fail=1533.224609375; H ok from None; worst S=44.518 at L=29758.224609375
+  [bty+belfix+LW+CSB] k=60: fails; L1=1821; first S fail=None; H ok from 36846.0; worst S=0.521 at L=2995.80859375
+  [bty+belfix+LW+CSB] k=65: CLOSES; L1=1978; first S fail=None; H ok from 3344.0; worst S=0.173 at L=3252.74609375
+  [bty+belfix+LW+CSB] k=62: CLOSES; L1=1884; first S fail=None; H ok from 3969.0; worst S=0.335 at L=3083.53515625
+  [bty+belfix+LW+CSB] k=61: fails; L1=1852; first S fail=None; H ok from 36846.0; worst S=0.418 at L=3052.1640625
+RESULT [bty+belfix+LW+CSB] min k (samples) = 62
+  [ref+belfix+LW+CSB] k=53: fails; L1=1602; first S fail=1626.8056640625; H ok from 405931.0; worst S=4.227 at L=26751.8056640625
+  [ref+belfix+LW+CSB] k=64: CLOSES; L1=1946; first S fail=None; H ok from 3969.0; worst S=0.314 at L=2096.326171875
+  [ref+belfix+LW+CSB] k=58: fails; L1=1758; first S fail=1833.1484375; H ok from 172301.0; worst S=1.047 at L=1883.1484375
+  [ref+belfix+LW+CSB] k=61: fails; L1=1852; first S fail=None; H ok from 36846.0; worst S=0.572 at L=1977.1640625
+  [ref+belfix+LW+CSB] k=62: CLOSES; L1=1884; first S fail=None; H ok from 3969.0; worst S=0.468 at L=2008.53515625
+RESULT [ref+belfix+LW+CSB] min k (samples) = 62
+  [bty+belfix+LW] k=65: CLOSES; L1=1978; first S fail=None; H ok from 3344.0; worst S=0.717 at L=2052.74609375
+  [bty+belfix+LW] k=60: fails; L1=1821; first S fail=1845.80859375; H ok from 36846.0; worst S=2.196 at L=1895.80859375
+  [bty+belfix+LW] k=62: fails; L1=1884; first S fail=1933.53515625; H ok from 3969.0; worst S=1.404 at L=1958.53515625
+  [bty+belfix+LW] k=63: fails; L1=1915; first S fail=1989.9228515625; H ok from 3969.0; worst S=1.122 at L=1989.9228515625
+  [bty+belfix+LW] k=64: CLOSES; L1=1946; first S fail=None; H ok from 3969.0; worst S=0.897 at L=2021.326171875
+RESULT [bty+belfix+LW] min k (samples) = 64
+  [ref+belfix+LW] k=68: fails; L1=2072; first S fail=2097.0947265625; H ok from 3344.0; worst S=2.020 at L=2147.0947265625
+  [ref+belfix+LW] k=75: CLOSES; L1=2293; first S fail=None; H ok from 3344.0; worst S=0.456 at L=2367.7470703125
+  [ref+belfix+LW] k=71: fails; L1=2167; first S fail=2241.576171875; H ok from 3344.0; worst S=1.065 at L=2241.576171875
+  [ref+belfix+LW] k=73: CLOSES; L1=2230; first S fail=None; H ok from 3344.0; worst S=0.697 at L=2304.6337890625
+  [ref+belfix+LW] k=72: CLOSES; L1=2198; first S fail=None; H ok from 3344.0; worst S=0.861 at L=2273.09765625
+RESULT [ref+belfix+LW] min k (samples) = 72

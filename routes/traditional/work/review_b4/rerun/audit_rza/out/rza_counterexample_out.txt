@@ -1,0 +1,5 @@
+RZA v3 inequality (6.6) [exxp], rigorous Arb evaluation
+X=1000 eps=0.04: S_eps direct=[0.3707402897 +/- 1.41e-12] classic=[0.3707402897 +/- 1.41e-12] corrected-identity=[0.3707402897 +/- 1.41e-12] | RHS(6.6)=[0.2991542612 +/- 4.61e-11] | S_0(X)=[0.44017754 +/- 1.84e-9]  => (6.6) FALSE (certified: S_eps > RHS)
+X=1000 eps=0.01: S_eps direct=[0.4200767339 +/- 1.32e-11] classic=[0.4200767339 +/- 1.32e-11] corrected-identity=[0.4200767339 +/- 1.32e-11] | RHS(6.6)=[0.3939191080 +/- 1.93e-11] | S_0(X)=[0.44017754 +/- 1.84e-9]  => (6.6) FALSE (certified: S_eps > RHS)
+X=3000 eps=0.04: S_eps direct=- classic=[0.3565548095 +/- 4.14e-11] corrected-identity=[0.3565548095 +/- 4.14e-11] | RHS(6.6)=[0.2784589400 +/- 4.02e-11] | S_0(X)=[0.44018584 +/- 3.48e-9]  => (6.6) FALSE (certified: S_eps > RHS)
+X=3000 eps=0.02: S_eps direct=- classic=[0.3936352032 +/- 3.60e-11] corrected-identity=[0.3936352032 +/- 3.60e-11] | RHS(6.6)=[0.3417554205 +/- 3.20e-11] | S_0(X)=[0.44018584 +/- 3.48e-9]  => (6.6) FALSE (certified: S_eps > RHS)

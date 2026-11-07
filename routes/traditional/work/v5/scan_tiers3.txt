@@ -1,0 +1,18 @@
+  [T1_ref+LW] k=65: fails; L1=1978; first S fail=1977.74609375; H ok from 3969.0; worst S=3.805 at L=2052.74609375
+  [T1_ref+LW] k=70: fails; L1=2135; first S fail=2185.0673828125; H ok from 3344.0; worst S=1.318 at L=2210.0673828125
+  [T1_ref+LW] k=72: CLOSES; L1=2198; first S fail=None; H ok from 3344.0; worst S=0.861 at L=2273.09765625
+  [T1_ref+LW] k=71: fails; L1=2167; first S fail=2241.576171875; H ok from 3344.0; worst S=1.065 at L=2241.576171875
+RESULT [T1_ref+LW] min k (samples) = 72
+  [T2_ref+LW+CSB] k=58: fails; L1=1758; first S fail=1833.1484375; H ok from 5592.0; worst S=1.047 at L=1883.1484375
+  [T2_ref+LW+CSB] k=61: CLOSES; L1=1852; first S fail=None; H ok from 3969.0; worst S=0.572 at L=1977.1640625
+  [T2_ref+LW+CSB] k=59: CLOSES; L1=1789; first S fail=None; H ok from 4711.0; worst S=0.855 at L=1914.470703125
+RESULT [T2_ref+LW+CSB] min k (samples) = 59
+  [T3_bty+LW] k=60: fails; L1=1821; first S fail=1845.80859375; H ok from 4711.0; worst S=2.196 at L=1895.80859375
+  [T3_bty+LW] k=63: fails; L1=1915; first S fail=1989.9228515625; H ok from 3969.0; worst S=1.122 at L=1989.9228515625
+  [T3_bty+LW] k=64: CLOSES; L1=1946; first S fail=None; H ok from 3969.0; worst S=0.897 at L=2021.326171875
+RESULT [T3_bty+LW] min k (samples) = 64
+  [T4_bty+LW+CSB] k=58: CLOSES; L1=1758; first S fail=None; H ok from 5592.0; worst S=0.810 at L=2908.1484375
+  [T4_bty+LW+CSB] k=55: fails; L1=1664; first S fail=2264.2890625; H ok from 7879.0; worst S=1.583 at L=2764.2890625
+  [T4_bty+LW+CSB] k=56: fails; L1=1696; first S fail=2545.5576171875; H ok from 6638.0; worst S=1.262 at L=2795.5576171875
+  [T4_bty+LW+CSB] k=57: fails; L1=1727; first S fail=2826.8447265625; H ok from 6638.0; worst S=1.011 at L=2851.8447265625
+RESULT [T4_bty+LW+CSB] min k (samples) = 58

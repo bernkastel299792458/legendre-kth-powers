@@ -1,0 +1,4 @@
+[k36_T1_refereed_own_lemmas] k=36 L1=1099873/1024 (1074.095); numeric facts OK
+[k36_T1_refereed_own_lemmas] Lemma T verified for L >= 10000000000
+[k36_T1_refereed_own_lemmas] H: covered down to 5999.000; using [24037/4, 10000000000], 3873 pieces, max delta 0.491294
+[k36_T1_refereed_own_lemmas] S FAILED at [(1141.0302734375, (2, 1.000000789413993)), (1174.0, (2, 1.0193860198761857)), (1240.052734375, (2, 1.0000000349522724)), (1274.0, (2, 1.046053305281187)), (1324.0, (2, 1.0458540769907358))]

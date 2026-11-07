@@ -1,0 +1,19 @@
+  [LW] k=65: fails; L1=1978; first S fail=2052.74609375; H ok from 9352.0; worst S=1.326 at L=3252.74609375
+  [LW] k=67: CLOSES; L1=2041; first S fail=None; H ok from 7879.0; worst S=0.855 at L=3340.6298828125
+  [LW] k=66: fails; L1=2009; first S fail=2159.1806640625; H ok from 7879.0; worst S=1.065 at L=3284.1806640625
+RESULT [LW] min k (samples) = 67
+  [LW+CS] k=64: CLOSES; L1=1946; first S fail=None; H ok from 9352.0; worst S=0.649 at L=3246.326171875
+  [LW+CS] k=61: fails; L1=1852; first S fail=2827.1640625; H ok from 11100.0; worst S=1.249 at L=3102.1640625
+  [LW+CS] k=62: fails; L1=1884; first S fail=3133.53515625; H ok from 9352.0; worst S=1.004 at L=3133.53515625
+  [LW+CS] k=63: CLOSES; L1=1915; first S fail=None; H ok from 9352.0; worst S=0.807 at L=3189.9228515625
+RESULT [LW+CS] min k (samples) = 63
+  [pub+LW] k=67: fails; L1=2041; first S fail=2065.6298828125; H ok from 7879.0; worst S=3.124 at L=2115.6298828125
+  [pub+LW] k=70: fails; L1=2135; first S fail=2185.0673828125; H ok from 5592.0; worst S=1.679 at L=2235.0673828125
+  [pub+LW] k=72: fails; L1=2198; first S fail=2273.09765625; H ok from 5592.0; worst S=1.116 at L=2298.09765625
+  [pub+LW] k=73: CLOSES; L1=2230; first S fail=None; H ok from 4711.0; worst S=0.910 at L=2329.6337890625
+RESULT [pub+LW] min k (samples) = 73
+  [pub+LW+CS] k=66: CLOSES; L1=2009; first S fail=None; H ok from 7879.0; worst S=0.586 at L=2159.1806640625
+  [pub+LW+CS] k=62: fails; L1=1884; first S fail=1958.53515625; H ok from 9352.0; worst S=1.301 at L=2033.53515625
+  [pub+LW+CS] k=64: CLOSES; L1=1946; first S fail=None; H ok from 9352.0; worst S=0.873 at L=2096.326171875
+  [pub+LW+CS] k=63: fails; L1=1915; first S fail=1989.9228515625; H ok from 9352.0; worst S=1.066 at L=2064.9228515625
+RESULT [pub+LW+CS] min k (samples) = 64

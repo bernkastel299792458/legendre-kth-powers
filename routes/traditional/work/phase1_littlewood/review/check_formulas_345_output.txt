@@ -1,0 +1,16 @@
+W0 branch check: (-45.11408391 + 1.216462134j) (-44.89934182 + 1.117006289j)
+W0 branch check: (-45.83797812 - 0.6326641868j) (-45.83013456 - 0.6358031544j)
+
+3. |Re psi(1/4 + iy/2)| <= log(|y|/2+4) + 10/3
+  min slack over y in [0,200] (step 0.01) and y = 2*10^(3..39): 0.492174 (attained at y = 0)
+
+4. |W0(z)||z|^3 / C(nu, r) at the parameters used (must be < 1)
+  nu = -1.0, r = 40.0: C = 57.271738, max ratio = 0.89354
+  nu = -1.0, r = 60.0: C = 53.243705, max ratio = 0.961138
+  nu = -1.0, r = 90.0: C = 50.688408, max ratio = 0.961246
+  nu = -1.0, r = 160.0: C = 48.533235, max ratio = 0.984598
+  nu = 0.0, r = 60.0: C = 49.714984, max ratio = 0.960184
+
+5. (3.42): min over half-disc boundary of Re F*(z) / (eta^3/lam^3) vs -C(0, lam/eta)
+  lam = 0.494, eta = 0.006: min Re F* = -7.98152e-5,  -C(0,nu) eta^3/lam^3 = -8.70977e-5
+  lam = 0.27, eta = 0.0016: min Re F* = -9.41225e-6,  -C(0,nu) eta^3/lam^3 = -9.81527e-6

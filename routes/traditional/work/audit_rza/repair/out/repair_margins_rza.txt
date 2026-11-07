@@ -1,0 +1,7 @@
+variant=rza  F(0+)=[0.51587453 +/- 1.41e-9]  F(eps0)=[0.430419 +/- 2.88e-7]  margin at eps0=[0.08546 +/- 4.76e-6]
+  terms at eps0: T1..T7 = 0.05111, 0.2395, 0.0003798, 0.08761, 0.0002041, 0.006183, 0.04540
+  T3 (ax1 term)            kappa = 177.160 (binding at eps = 2.06e-14)
+  T4 (cross, sqrt part)    kappa = 1.975 (binding at eps = 0.0227)
+  T5 (cross, log part)     kappa = 5.898 (binding at eps = 2.06e-14)
+  T6 (square)              kappa = 14.821 (binding at eps = 0.0227)
+  T3..T6 jointly           kappa = 1.905 (binding at eps = 0.0227)

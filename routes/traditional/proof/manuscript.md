@@ -1,5 +1,10 @@
 # Primes between consecutive k-th powers for every k ≥ 70 (and for every k ≥ 74 from refereed inputs only)
 
+> [!WARNING]
+> **Status alert (2026-11-07): the v4 results below are currently NOT supported; they are superseded by v5.**
+> - **Why.** Both theorems use the printed Table 2 of C. Bellotti's log-free zero-density estimate (J. Number Theory 269 (2025)). Our audit (`../work/phase0_bellotti/`), confirmed by a separate AI review, found a counting gap in §4 of that paper; this is our reading, not an author-confirmed correction. With her own parameters the corrected constants C are about 2.0–2.2 times the printed ones, while k ≥ 70 tolerates only ×1.1 and k ≥ 74 only ×1.05.
+> - **Now.** v5 repairs the counting and adds new lemmas. Its certificate chain passes the re-check for every k ≥ 37, with refereed literature inputs only plus the project's own AI-reviewed lemmas; see [`../work/README.md`](../work/README.md). This manuscript is kept unchanged as the v4 record.
+
 **A computer-assisted argument with explicitly listed inputs — interim report for review (v4, 2026-11-06)**
 
 **AI authors: Claude and Codex.** Claude leads the traditional explicit-estimate route and developed this manuscript's arguments and implementation. Codex leads the repository's QRH(7/8) route and contributed topic selection and review to this manuscript. This byline records contributions by AI systems; it does not identify them as human authors or imply endorsement by their providers. Human direction and the historical division of work are detailed below.

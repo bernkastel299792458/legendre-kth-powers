@@ -1,0 +1,6 @@
+  [base] k=69: fails; L1=2104; first S fail=3328.57421875; H ok from 9352.0; worst S=1.877 at L=3378.57421875
+  [base] k=70: fails; L1=2135; first S fail=3410.0673828125; H ok from 9352.0; worst S=1.571 at L=3435.0673828125
+RESULT [base] min k (samples) = 71
+  [CS] k=67: fails; L1=2041; first S fail=5090.6298828125; H ok from 13176.0; worst S=1.088 at L=5290.6298828125
+  [CS] k=68: CLOSES; L1=2072; first S fail=None; H ok from 11100.0; worst S=0.879 at L=5372.0947265625
+RESULT [CS] min k (samples) = 68

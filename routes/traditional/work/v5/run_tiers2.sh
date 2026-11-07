@@ -1,0 +1,4 @@
+python -B scan5.py 30 70 "ROWS=inputs/bel_faithful_v1.csv;inputs/bel_reopt_v1.csv;inputs/bel_reopt_lam1_v1.csv" ROWS_KEEP_ORIG=0 BANDS=inputs/zfr_local_v1.csv KLNF=JY,CSB PROVISIONAL=1 TAG=bty+belfix+LW+CSB
+python -B scan5.py 30 76 "ROWS=inputs/bel_faithful_v1.csv;inputs/bel_reopt_v1.csv;inputs/bel_reopt_lam1_v1.csv" ROWS_KEEP_ORIG=0 BANDS=inputs/zfr_local_v1.csv KLNF=JY,CSB PROVISIONAL=1 Z1=5.558691 ROWS_STATUS=refereed,refereed-UNSURE-range TAG=ref+belfix+LW+CSB
+python -B scan5.py 55 76 "ROWS=inputs/bel_faithful_v1.csv;inputs/bel_reopt_v1.csv;inputs/bel_reopt_lam1_v1.csv" ROWS_KEEP_ORIG=0 BANDS=inputs/zfr_local_v1.csv PROVISIONAL=1 TAG=bty+belfix+LW
+python -B scan5.py 55 82 "ROWS=inputs/bel_faithful_v1.csv;inputs/bel_reopt_v1.csv;inputs/bel_reopt_lam1_v1.csv" ROWS_KEEP_ORIG=0 BANDS=inputs/zfr_local_v1.csv PROVISIONAL=1 Z1=5.558691 ROWS_STATUS=refereed,refereed-UNSURE-range TAG=ref+belfix+LW

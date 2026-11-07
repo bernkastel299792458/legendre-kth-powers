@@ -1,0 +1,7 @@
+RL0025 34 35 decoupled piece 0.0005 C_csv 58404.3 C_ref 58348.662 ratio 0.999047 allok True
+RL0263 300 400 joint piece 0.02 C_csv 455760 C_ref 425886.817 ratio 0.934454 allok True
+RL0264 300 400 joint piece 0.02 C_csv 44667.1 C_ref 41590.477 ratio 0.931121 allok True
+RL0265 400 500 joint piece 0.02 C_csv 333551 C_ref 310566.263 ratio 0.931091 allok True
+RL0266 400 500 joint piece 0.02 C_csv 64272.9 C_ref 59718.23 ratio 0.929135 allok True
+RL0265 400 500 decoupled piece 0.02 C_csv 333551 C_ref 335564.274 ratio 1.006036 allok True
+RL0266 400 500 decoupled piece 0.02 C_csv 64272.9 C_ref 64525.053 ratio 1.003923 allok True

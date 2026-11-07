@@ -1,0 +1,38 @@
+{
+ "config": {
+  "CS": "0",
+  "ROWS": "inputs/bel_faithful_v2.csv;inputs/bel_reopt_v1.csv;inputs/bel_reopt_lam1_v1.csv;inputs/bel_high_v1.csv;inputs/bel_reopt_v2.csv;inputs/bel_high_v2.csv;inputs/bel_low_v3c.csv",
+  "ROWS_KEEP_ORIG": "0",
+  "BANDS": "inputs/zfr_local_v2.csv",
+  "Z1": "5.558691",
+  "Z2": "21.233",
+  "Z3": "54.004",
+  "KLN": "17.4193,2.2311",
+  "MS": "2,3",
+  "L3": "10000000000",
+  "TAG": "",
+  "ROWS_STATUS": "refereed",
+  "KLNF": "JY",
+  "PROVISIONAL": "0",
+  "CSBP": "0",
+  "CBANDS": "inputs/zfr_classical_local_v1.csv",
+  "KROWS": "inputs/kln_low_v1.csv",
+  "KFORMS": "JY52"
+ },
+ "sha256": {
+  "inputs/bel_faithful_v2.csv": "333870769913cf28749fa3fe4dde1690a9e1bfccd0cffb72be41738c3bc45fad",
+  "inputs/bel_reopt_v1.csv": "8c1f0112a6ab357c40eab7c7d2745ccb2713b48908a73ce43ac8991c64923fda",
+  "inputs/bel_reopt_lam1_v1.csv": "e44c3da5107a93af867b78d3ab6141e289874dd63da450414b7a556ca99e03eb",
+  "inputs/bel_high_v1.csv": "b5edc835e344effc58e5de896055ee50f3d68ba092e91bc4ca61a0936000d6b0",
+  "inputs/bel_reopt_v2.csv": "d4c2ad5d07ff63d8dc11f0412ac4f3d245d400e40d7e19822b51f98f14869bba",
+  "inputs/bel_high_v2.csv": "9b551692f627d83ae00cf0bfb25199763117e188413c26ae91876bd89cd75db5",
+  "inputs/bel_low_v3c.csv": "a0fb30267057770a210c0bde59b6d3f0aa05f4414dec5da82a6092effad5d173",
+  "inputs/zfr_local_v2.csv": "ceacbca5a5dbdb9dae7a9835daef238487b0d0fa495392259897ed891288d345",
+  "inputs/zfr_classical_local_v1.csv": "f8a41422f6fe4988a5c314a32780adfaebd24f26a852492eb35df96105afa083",
+  "inputs/kln_low_v1.csv": "066da09a415961e390a6b46522f60aefd15a95d4b3b509743f26426c513f9546",
+  "D:\\UGit\\AI4Math\\legendre_k67\\work\\v5\\phi5.py": "4eda1bf0f55061b9cd9dfbc1ce777883c11969ddf970a7b298a5a5069924132f",
+  "D:\\UGit\\AI4Math\\legendre_k67\\work\\v5\\rig5.py": "a1a021a1bff3db47f1ba666b5b4bbf4384c3336a29f38210af608bd221bc92e8",
+  "D:\\UGit\\AI4Math\\legendre_k67\\work\\v5\\cfg5.py": "0a2d8cfb12aeb9082d80252ce7d1277bc47b33957ddf585bc8d36704786c1252",
+  "D:\\UGit\\AI4Math\\legendre_k67\\work\\v5\\tail5.py": "b6ab94ff90e633b9f739a516461287bb0376b3eba950024bbd92d3ce34fa2366"
+ }
+}

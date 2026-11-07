@@ -1,0 +1,125 @@
+==========================================================================================
+PART 1a. KLN (arXiv:2101.12263v1) Table 1, original formulas (H0=3.0610046e10, a1=.63, b4=.529)
+ sigma=0.97 {'U_gt_1': True, 'V_gt_1': True, 'J_coeffs_pos': True, 'delta_lt': True, 'b6<1': True, 'sig>1/2+d/logH0': True, 'mu_range': True}
+   A          computed 15.8500      printed 15.850   agrees to rounding
+   B          computed 2.60890      printed 2.609    agrees to rounding
+ sigma=0.98 {'U_gt_1': True, 'V_gt_1': True, 'J_coeffs_pos': True, 'delta_lt': True, 'b6<1': True, 'sig>1/2+d/logH0': True, 'mu_range': True}
+   A          computed 16.5441      printed 16.544   agrees to rounding
+   B          computed 2.53110      printed 2.532    DIFFERS by -0.000898
+ sigma=0.99 {'U_gt_1': True, 'V_gt_1': True, 'J_coeffs_pos': True, 'delta_lt': True, 'b6<1': True, 'sig>1/2+d/logH0': True, 'mu_range': True}
+   A          computed 17.2530      printed 17.253   agrees to rounding
+   B          computed 2.44578      printed 2.446    agrees to rounding
+PART 1b. Johnston-Yang (JMAA 527 (2023)) Table 3 (H0=3000175332800, a1=.77, a2=3.161, CT19 for (3.13))
+ sigma=0.98
+   C1         computed 16.2802      printed 16.281   DIFFERS by -0.000849
+   C2         computed 2.23104      printed 2.231    agrees to rounding
+ sigma=0.99
+   C1         computed 16.8479      printed 16.848   agrees to rounding
+   C2         computed 2.15028      printed 2.150    agrees to rounding
+ sigma=1
+   C1         computed 17.4192      printed 17.418   DIFFERS by 0.00122
+   C2         computed 2.06934      printed 2.069    agrees to rounding
+PART 1c. CS Table 4.  Text says H0=3.0610046e10; only the following reproduces it:
+         H0=3e12, a1=.63, a2=2.851, b4=0.54, CT19 for (3.13), KLN's (4.72) log-factor unchanged
+ -- H0=3.0610046e10 variant=CS_literal C8=KLN
+  [0.90625,0.93750]
+   A(sig2)    computed 13.4777      printed 12.88    EXCEEDS printed
+   B(sig1)    computed 3.12553      printed 2.807    EXCEEDS printed
+  [0.93750,0.96875]
+   A(sig2)    computed 15.4871      printed 14.81    EXCEEDS printed
+   B(sig1)    computed 2.87250      printed 2.558    EXCEEDS printed
+  [0.96875,0.97500]
+   A(sig2)    computed 15.9094      printed 15.21    EXCEEDS printed
+   B(sig1)    computed 2.61055      printed 2.301    EXCEEDS printed
+  [0.97500,0.98125]
+   A(sig2)    computed 16.3381      printed 15.62    EXCEEDS printed
+   B(sig1)    computed 2.55816      printed 2.249    EXCEEDS printed
+  [0.98125,0.98750]
+   A(sig2)    computed 16.7722      printed 16.04    EXCEEDS printed
+   B(sig1)    computed 2.51288      printed 2.204    EXCEEDS printed
+  [0.98750,0.99375]
+   A(sig2)    computed 17.2131      printed 16.46    EXCEEDS printed
+   B(sig1)    computed 2.46033      printed 2.153    EXCEEDS printed
+  [0.99375,1.00000]
+   A(sig2)    computed 17.6576      printed 16.89    EXCEEDS printed
+   B(sig1)    computed 2.40778      printed 2.101    EXCEEDS printed
+ -- H0=3e12 variant=CS_literal C8=CT19
+  [0.90625,0.93750]
+   A(sig2)    computed 12.8717      printed 12.88    OK (printed >= computed)
+   B(sig1)    computed 2.80657      printed 2.807    OK (printed >= computed)
+  [0.93750,0.96875]
+   A(sig2)    computed 14.8021      printed 14.81    OK (printed >= computed)
+   B(sig1)    computed 2.55746      printed 2.558    OK (printed >= computed)
+  [0.96875,0.97500]
+   A(sig2)    computed 15.2077      printed 15.21    OK (printed >= computed)
+   B(sig1)    computed 2.30031      printed 2.301    OK (printed >= computed)
+  [0.97500,0.98125]
+   A(sig2)    computed 15.6194      printed 15.62    OK (printed >= computed)
+   B(sig1)    computed 2.24888      printed 2.249    OK (printed >= computed)
+  [0.98125,0.98750]
+   A(sig2)    computed 16.0369      printed 16.04    OK (printed >= computed)
+   B(sig1)    computed 2.20371      printed 2.204    OK (printed >= computed)
+  [0.98750,0.99375]
+   A(sig2)    computed 16.4598      printed 16.46    OK (printed >= computed)
+   B(sig1)    computed 2.15212      printed 2.153    OK (printed >= computed)
+  [0.99375,1.00000]
+   A(sig2)    computed 16.8879      printed 16.89    OK (printed >= computed)
+   B(sig1)    computed 2.10054      printed 2.101    OK (printed >= computed)
+==========================================================================================
+PART 2. Corrected (B).  N(s,T) <= A T^{8(1-s)/3} (log T)^{6-4s} + B log^2 T, T >= 3e12, s in [s1,s2]
+ row [0.93750,0.96875]   paper: A=14.81 B=2.558 (alpha,delta,d)=(0.070,0.325,0.337)
+   (i)  log-factor corrected, b4=0.54, a1=.618:     A=15.9498 B=2.5575
+   (ii) + b4=0.5936 (RZA v3):                      A=17.4201 B=2.5575
+   (iii) re-optimised (alpha,delta,d)=(0.06960,0.3251,0.3126): A=17.3699 B=2.7496 [B with KLN(3.13): 2.7843]  checks=True eps_ok=True
+ row [0.96875,0.97500]   paper: A=15.21 B=2.301 (alpha,delta,d)=(0.067,0.325,0.337)
+   (i)  log-factor corrected, b4=0.54, a1=.618:     A=16.3946 B=2.3003
+   (ii) + b4=0.5936 (RZA v3):                      A=17.9268 B=2.3003
+   (iii) re-optimised (alpha,delta,d)=(0.06660,0.3252,0.3124): A=17.8742 B=2.4739 [B with KLN(3.13): 2.5087]  checks=True eps_ok=True
+ row [0.97500,0.98125]   paper: A=15.62 B=2.249 (alpha,delta,d)=(0.064,0.325,0.337)
+   (i)  log-factor corrected, b4=0.54, a1=.618:     A=16.8463 B=2.2489
+   (ii) + b4=0.5936 (RZA v3):                      A=18.4422 B=2.2489
+   (iii) re-optimised (alpha,delta,d)=(0.06370,0.3253,0.3122): A=18.3872 B=2.4199 [B with KLN(3.13): 2.4547]  checks=True eps_ok=True
+ row [0.98125,0.98750]   paper: A=16.04 B=2.204 (alpha,delta,d)=(0.061,0.325,0.336)
+   (i)  log-factor corrected, b4=0.54, a1=.618:     A=17.3006 B=2.2037
+   (ii) + b4=0.5936 (RZA v3):                      A=18.9616 B=2.2037
+   (iii) re-optimised (alpha,delta,d)=(0.06080,0.3253,0.3120): A=18.9084 B=2.3658 [B with KLN(3.13): 2.4007]  checks=True eps_ok=True
+ row [0.98750,0.99375]   paper: A=16.46 B=2.153 (alpha,delta,d)=(0.058,0.325,0.336)
+   (i)  log-factor corrected, b4=0.54, a1=.618:     A=17.7653 B=2.1521
+   (ii) + b4=0.5936 (RZA v3):                      A=19.4935 B=2.1521
+   (iii) re-optimised (alpha,delta,d)=(0.05790,0.3254,0.3118): A=19.4377 B=2.3117 [B with KLN(3.13): 2.3466]  checks=True eps_ok=True
+ row [0.99375,1.00000]   paper: A=16.89 B=2.101 (alpha,delta,d)=(0.056,0.325,0.336)
+   (i)  log-factor corrected, b4=0.54, a1=.618:     A=18.2359 B=2.1005
+   (ii) + b4=0.5936 (RZA v3):                      A=20.0332 B=2.1005
+   (iii) re-optimised (alpha,delta,d)=(0.05510,0.3255,0.3116): A=19.9747 B=2.2575 [B with KLN(3.13): 2.2924]  checks=True eps_ok=True
+------------------------------------------------------------------------------------------
+CORRECTED TABLE (B), T >= 3e12 (b4=0.5936, a1=0.618, a2=2.8245, eta=0.25345, mu=1.2363, H=H0-1, k=1)
+ sig1     sig2     A        B(CT19)  B(KLN3.13)  alpha   delta   d
+ 0.93750  0.96875  17.370   2.750    2.785       0.06960  0.3251  0.3126
+ 0.96875  0.97500  17.875   2.474    2.509       0.06660  0.3252  0.3124
+ 0.97500  0.98125  18.388   2.420    2.455       0.06370  0.3253  0.3122
+ 0.98125  0.98750  18.909   2.366    2.401       0.06080  0.3253  0.3120
+ 0.98750  0.99375  19.438   2.312    2.347       0.05790  0.3254  0.3118
+ 0.99375  1.00000  19.975   2.258    2.293       0.05510  0.3255  0.3116
+==========================================================================================
+PART 3. Extra rows for the project and larger T0 (KLN with H0 := T0 >= H = 3e12 - 1)
+ T>=3e12  [0.98,0.99] b4=0.5936 (alpha,delta,d)=(0.05960,0.3254,0.3119): A<=19.120 B<=2.378 checks=True
+ T>=3e12  [0.98,0.985] b4=0.5936 (alpha,delta,d)=(0.06190,0.3253,0.3121): A<=18.699 B<=2.377 checks=True
+ T>=3e12  [0.985,0.99] b4=0.5936 (alpha,delta,d)=(0.05960,0.3254,0.3119): A<=19.120 B<=2.334 checks=True
+ T>=3e12  [0.99,1] b4=0.5936 (alpha,delta,d)=(0.05510,0.3255,0.3116): A<=19.975 B<=2.291 checks=True
+ T>=e30   [0.98,0.99] b4=0.5936 (alpha,delta,d)=(0.05910,0.3273,0.3136): A<=18.890 B<=2.351 checks=True
+ T>=e30   [0.98,0.985] b4=0.5936 (alpha,delta,d)=(0.06140,0.3272,0.3138): A<=18.474 B<=2.349 checks=True
+ T>=e30   [0.985,0.99] b4=0.5936 (alpha,delta,d)=(0.05910,0.3273,0.3136): A<=18.890 B<=2.307 checks=True
+ T>=e30   [0.99,1] b4=0.5936 (alpha,delta,d)=(0.05460,0.3275,0.3133): A<=19.736 B<=2.265 checks=True
+ T>=e32   [0.98,0.99] b4=0.5936 (alpha,delta,d)=(0.05840,0.3301,0.3161): A<=18.564 B<=2.313 checks=True
+ T>=e32   [0.98,0.985] b4=0.5936 (alpha,delta,d)=(0.06070,0.3300,0.3163): A<=18.155 B<=2.311 checks=True
+ T>=e32   [0.985,0.99] b4=0.5936 (alpha,delta,d)=(0.05840,0.3301,0.3161): A<=18.564 B<=2.269 checks=True
+ T>=e32   [0.99,1] b4=0.5936 (alpha,delta,d)=(0.05390,0.3303,0.3158): A<=19.396 B<=2.228 checks=True
+ T>=e35   [0.98,0.99] b4=0.5936 (alpha,delta,d)=(0.05740,0.3339,0.3195): A<=18.140 B<=2.264 checks=True
+ T>=e35   [0.98,0.985] b4=0.5936 (alpha,delta,d)=(0.05970,0.3338,0.3196): A<=17.740 B<=2.263 checks=True
+ T>=e35   [0.985,0.99] b4=0.5936 (alpha,delta,d)=(0.05740,0.3339,0.3195): A<=18.140 B<=2.221 checks=True
+ T>=e35   [0.99,1] b4=0.5936 (alpha,delta,d)=(0.05300,0.3342,0.3192): A<=18.955 B<=2.181 checks=True
+ T>=1e16  [0.98,0.99] b4=0.5103 (alpha,delta,d)=(0.05710,0.3359,0.3213): A<=15.458 B<=2.238 checks=True
+ T>=1e16  [0.98,0.985] b4=0.5103 (alpha,delta,d)=(0.05940,0.3358,0.3215): A<=15.139 B<=2.237 checks=True
+ T>=1e16  [0.985,0.99] b4=0.5103 (alpha,delta,d)=(0.05710,0.3359,0.3213): A<=15.458 B<=2.196 checks=True
+ T>=1e16  [0.99,1] b4=0.5103 (alpha,delta,d)=(0.05260,0.3362,0.3210): A<=16.105 B<=2.156 checks=True
+FAILS: []

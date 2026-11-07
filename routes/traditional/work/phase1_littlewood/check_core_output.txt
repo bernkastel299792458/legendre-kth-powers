@@ -1,0 +1,20 @@
+[OK] [rigorous] w(0) closed form = w_acb(0)  w(0) = [5.31485547279160 +/- 4.37e-15]
+[OK] [rigorous] a_0 = 1, a = sum_{k>=1} a_k = 2919857/828465  
+[OK] [rigorous] a_1 = 865534/497079  
+[OK] [rigorous] G(0) = int (a1 e^-u - a0) w = thesis c0 = 0.8219901343...  [0.821990134333 +/- 1.21e-13]
+[OK] w(u) >= 0 on [0, d] (grid of 2001 points)  
+[OK] Ford W0 bound |W0(z)||z|^3 <= C(nu, r) on sample points  max ratio = 0.9825
+[OK] int cos(0.1 u) sech^2 u du = pi w/sinh(pi w/2) = 1.9917989  |diff| = 2.3e-41
+[OK] int cos(1.0 u) sech^2 u du = pi w/sinh(pi w/2) = 1.3651389  |diff| = 2.3e-41
+[OK] int cos(5.0 u) sech^2 u du = pi w/sinh(pi w/2) = 0.012195765  |diff| = 3.59e-43
+[OK] int cos(20.0 u) sech^2 u du = pi w/sinh(pi w/2) = 2.8539498e-12  |diff| = 1.21e-48
+[OK] |Re psi(1/4+iy/2)| <= log(|y|/2+4) + 10/3 (sample points; proof via Binet, REPORT ¡ì4.5)  
+[OK] Binet: 0 <= 1/(e^t-1) - 1/t + 1/2 <= t/12 (sample points; classical)  
+[OK] [rigorous] 1/u - cot u <= 0.36u on (0,1]: value of (1/u-cot u)/u at u=1 is 1 - cot 1 =  [0.35790738 +/- 4.07e-9]
+[OK] Re W(iy) > 0 on sample points (Heath-Brown weight is an autocorrelation)  
+[OK] w'(0) = w(d) = w'(d) = w''(d) = 0 (Kadiri Prop 2.1 hypotheses)  ['0.0', '-8.45e-61', '5.13e-70', '1.11e-59']
+[OK] Ford Lemma 4.4: Re(cot w - 1/w + 4w/pi^2) >= 0 on |w| = pi/2, Re w >= 0 (401 points)  min = 1.816e-17
+[OK] Lemma 3.7 numerically at T = 1000: (1/2) int log|zeta| sech^2 = -0.183673 <= 2.60267  
+[OK] Lemma 3.7 numerically at T = 5000: (1/2) int log|zeta| sech^2 = -0.608509 <= 3.08035  
+[OK] main-term coefficient c = B l(t) at log t = 60 with the n=3 line  c = [3.3845975 +/- 4.91e-8] (proof/zfr_audit/thesis_19.62: optimised lambda + Lemma 3.6 gives 3.3839)
+FAILURES: 0

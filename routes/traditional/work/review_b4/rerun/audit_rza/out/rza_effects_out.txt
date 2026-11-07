@@ -1,0 +1,9 @@
+paper inputs: R=112 0.59353004 ; best R 0.59290601
+  W (APROD) true, Theta(1e12) recomputed     R=112: 0.61799334 (+2.45e-02)   best R=114: 0.61635201
+  c1 true (P0_LX)                            R=112: 0.59380738 (+2.77e-04)   best R=111: 0.59308129
+  log2mx/log2mm true                         R=112: 0.59353119 (+1.15e-06)   best R=111: 0.59290610
+  logmx/logmm ours                           R=112: 0.59353003 (-5.02e-09)   best R=111: 0.59290601
+  Euler products Arb (others)                R=112: 0.59353004 (+3.04e-11)   best R=111: 0.59290601
+  scans ours (Fmx*, mx*)                     R=112: 0.59353004 (+0.00e+00)   best R=111: 0.59290601
+  K_b in proof form                          R=112: 0.55870016 (-3.48e-02)   best R=141: 0.54653736
+K_b: paper code 4.1116950, proof form 2.2549050

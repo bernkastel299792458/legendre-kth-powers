@@ -1,0 +1,2 @@
+﻿cells compared: 29633; violations (code Zw < exact): 0; code strictly larger (conservative over-inclusion): 0
+above V1 constant used: [11.58828777451843944029314 +/- 3.88e-24]  exact min(21.233, Z_VK(V1)) = 11.58828777451843944028313612849869150734346822425

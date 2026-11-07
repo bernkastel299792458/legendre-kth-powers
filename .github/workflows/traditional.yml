@@ -1,4 +1,6 @@
-# Traditional explicit-estimate route; current review package gives k >= 70 / 74.
+# Traditional explicit-estimate route. This job replays the v4 review package (k >= 70 / 74, now
+# not supported because of Bellotti's Table 2; see routes/traditional/README.md). The v5 chains
+# (k >= 37) take hours and are re-checked with routes/traditional/work/v5/check5.py instead.
 # A green run replays the published numerical chains and builds the Lean assembly.
 # It does not prove the analytic estimates or the certificates inside Lean.
 # The action revisions match the QRH workflow's pinned official commits.

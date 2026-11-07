@@ -1,0 +1,27 @@
+== 1. object M(s): zeta(s) M(s) vs sum_n Psi Theta n^-s (n<=2e5) ==
+  U=3.5 V=40.2 W=6.3 s=2.0:  zeta*M=1.0263270910  DS=1.0263263318  diff=7.59e-07
+  U=3.5 V=40.2 W=6.3 s=1.5:  zeta*M=1.1233518796  DS=1.1226727858  diff=6.79e-04
+  U=10 V=120 W=15 s=2.0:  zeta*M=1.0062532447  DS=1.0062527588  diff=4.86e-07
+  U=10 V=120 W=15 s=1.5:  zeta*M=1.0482099981  DS=1.0477753724  diff=4.35e-04
+== 2/3. S_abs vs bound;  max_t |M(1/2+it)| <= S_abs ==
+  U=1 V=50 W=7:  S_abs=7.09334  bound=13.69272  ratio=1.930   max|M(1/2+it)| (t-grid)=3.6624  |M(1/2)|=0.0234
+  U=2.7 V=333.3 W=12.5:  S_abs=20.76645  bound=36.12905  ratio=1.740   max|M(1/2+it)| (t-grid)=5.8468  |M(1/2)|=0.1392
+  U=10 V=300 W=20:  S_abs=30.35422  bound=50.33330  ratio=1.658   max|M(1/2+it)| (t-grid)=7.0491  |M(1/2)|=0.1308
+  U=30 V=3000 W=50:  S_abs=111.16422  bound=173.30284  ratio=1.559   max|M(1/2+it)| (t-grid)=9.5440  |M(1/2)|=0.1666
+  U=100 V=20000 W=100:  S_abs=334.80640  bound=505.71908  ratio=1.510
+  U=5 V=20000 W=400:  S_abs=383.97508  bound=555.17749  ratio=1.446
+  U=1.0 V=7.5 W=7.5:  S_abs=3.70155  bound=7.76751  ratio=2.098   max|M(1/2+it)| (t-grid)=2.5783  |M(1/2)|=0.1647
+  U=1 V=8 W=1.5:  S_abs=1.92556  bound=5.08454  ratio=2.641   max|M(1/2+it)| (t-grid)=1.9088  |M(1/2)|=0.1874
+  U=60 V=20000 W=1000:  S_abs=751.93038  bound=1064.22033  ratio=1.415
+  U=1000 V=100000 W=50:  S_abs=641.69446  bound=1000.56440  ratio=1.559
+  U=7 V=7.01 W=7:  S_abs=6.86623  bound=11.67616  ratio=1.701   max|M(1/2+it)| (t-grid)=4.1999  |M(1/2)|=0.0480
+== intermediate A_delta, B_delta bounds (U,V,W)=(10,3000,200) ==
+  max A_d/bound = 0.9143, max B_d/bound = 0.9001 (must be <= 1)
+== 4. c ==
+  argmax_m<=1e6 Q(m)/sqrt m = 7;  c = Q(7)/sqrt7 in [1.3296349489225820760710 +/- 5.27e-23];  second best = 1.3189318930; gap 1.070e-02
+  D.2 (12/pi^2)sqrt y + 1.5 log y + 2.4 >= Q(m) for all m<=1e6: True; min slack 2.6159 at m=1
+  referee's bound >= Q on sample: True;  bound/sqrt(y) at 1e6: 1.23367
+== 5. P* ==
+  prod_{p<=1e7} = 1.4724117;  with tail factor exp(2/sqrt(1e7)): 1.4733432
+  4 c^2 P* <= 10.41907
+done 31s

@@ -1,0 +1,72 @@
+[k63_LW_CS_bty] k=63 L1=1960881/1024 (1914.923); numeric facts OK
+[k63_LW_CS_bty] Lemma T verified for L >= 100000000
+[k63_LW_CS_bty] H: covered down to 8755.586; using [52137/4, 100000000], 2502 pieces, max delta 0.506183
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\Bernkastel\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bernkastel\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bernkastel\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\connection.py", line 1167, in rebuild_pipe_connection
+    handle = dh.detach()
+             ^^^^^^^^^^^
+  File "C:\Users\Bernkastel\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\reduction.py", line 131, in detach
+    return _winapi.DuplicateHandle(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] ¾Ü¾ø·ÃÎÊ¡£
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\Bernkastel\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bernkastel\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bernkastel\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\connection.py", line 1167, in rebuild_pipe_connection
+    handle = dh.detach()
+             ^^^^^^^^^^^
+  File "C:\Users\Bernkastel\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\reduction.py", line 131, in detach
+    return _winapi.DuplicateHandle(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] ¾Ü¾ø·ÃÎÊ¡£
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\Bernkastel\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bernkastel\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bernkastel\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\connection.py", line 1167, in rebuild_pipe_connection
+    handle = dh.detach()
+             ^^^^^^^^^^^
+  File "C:\Users\Bernkastel\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\reduction.py", line 131, in detach
+    return _winapi.DuplicateHandle(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] ¾Ü¾ø·ÃÎÊ¡£
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\Bernkastel\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 113, in spawn_main
+    new_handle = reduction.duplicate(pipe_handle,
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bernkastel\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\reduction.py", line 79, in duplicate
+    return _winapi.DuplicateHandle(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] ¾Ü¾ø·ÃÎÊ¡£
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "C:\Users\Bernkastel\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bernkastel\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\spawn.py", line 132, in _main
+    self = reduction.pickle.load(from_parent)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Bernkastel\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\connection.py", line 1167, in rebuild_pipe_connection
+    handle = dh.detach()
+             ^^^^^^^^^^^
+  File "C:\Users\Bernkastel\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\reduction.py", line 131, in detach
+    return _winapi.DuplicateHandle(
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+PermissionError: [WinError 5] ¾Ü¾ø·ÃÎÊ¡£

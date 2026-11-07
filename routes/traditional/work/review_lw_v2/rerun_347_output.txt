@@ -1,0 +1,1 @@
+band 347 (2377171.0, 2496030.0] Z=11.937 lines_tried=(14, 13, 12, 3, 4, 5) h0=47.54: ok=True cells=160064 minrel=1.553861e-08 argmin=(2486338.696465164, 2486339.4390368853, 14) used=[13, 14] depths={6: 160064} | summary cells=160064 minrel=1.553861e-08 lines=[13, 14] -> REPRODUCED=True (433s)

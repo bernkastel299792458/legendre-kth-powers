@@ -11,7 +11,7 @@ In the "Role" column, (I1)–(I10) are the inputs of `proof/manuscript.md` §3.1
 | E. S. Lee, *Minimal zero-free regions for results on primes between consecutive perfect kth powers*, Acta Arith. 225 (2026) 149–162 | [doi:10.4064/aa260304-20-7](https://doi.org/10.4064/aa260304-20-7), [arXiv:2602.14340](https://arxiv.org/abs/2602.14340), code: [EthanSLee/PrimesBetweenConsecutivePowers](https://github.com/EthanSLee/PrimesBetweenConsecutivePowers) | framework, inequality (3.2); k ≥ 86 |
 | M. Cully-Hugill, E. S. Lee, *Explicit interval estimates for prime numbers*, Math. Comp. 91 (2022); Corrigendum, Math. Comp. 93 (2024) | [arXiv:2103.05986](https://arxiv.org/abs/2103.05986) (v3 used) | (I8): lower range, Lemma 6 |
 | M. Cully-Hugill, D. R. Johnston, *On the error term in the explicit formula of Riemann–von Mangoldt* I and II | [arXiv:2111.10001](https://arxiv.org/abs/2111.10001), [arXiv:2402.04272](https://arxiv.org/abs/2402.04272) | (I6): Prop. H, Lemma T |
-| C. Bellotti, *An explicit log-free zero density estimate for the Riemann zeta-function*, J. Number Theory 269 (2025) | [arXiv:2405.12545](https://arxiv.org/abs/2405.12545) (v1, v2 compared) | (I4): Table 2 |
+| C. Bellotti, *An explicit log-free zero density estimate for the Riemann zeta-function*, J. Number Theory 269 (2025) | [arXiv:2405.12545](https://arxiv.org/abs/2405.12545) (v1, v2 compared) | (I4) in v4: printed Table 2. We found a counting gap in §4 (`work/phase0_bellotti/REPORT.md`), so v4 is not supported. v5 uses her method with repaired counting and recomputed rows |
 | D. R. Johnston, A. Yang, *Some explicit estimates for the error term in the prime number theorem*, J. Math. Anal. Appl. 527 (2023) | [arXiv:2204.01980](https://arxiv.org/abs/2204.01980) | (I3): 17.418 / 2.231 |
 | H. Kadiri, A. Lumley, N. Ng, *Explicit zero density for the Riemann zeta function*, J. Math. Anal. Appl. 465 (2018) | [arXiv:2101.12263](https://arxiv.org/abs/2101.12263) | (I3) framework; (I10) |
 | G. A. Hiary, D. Patel, A. Yang, *An improved explicit estimate for ζ(1/2+it)*, J. Number Theory 256 (2024) | [arXiv:2207.02366](https://arxiv.org/abs/2207.02366) | (I10) |
@@ -22,6 +22,29 @@ In the "Role" column, (I1)–(I10) are the inputs of `proof/manuscript.md` §3.1
 | S. Broadbent, H. Kadiri, A. Lumley, N. Ng, K. Wilk, *Sharper bounds for the Chebyshev function θ(x)*, Math. Comp. 90 (2021) | [arXiv:2002.11068](https://arxiv.org/abs/2002.11068) | (I7) |
 | D. Platt, T. Trudgian, *The Riemann hypothesis is true up to 3·10^12*, Bull. London Math. Soc. 53 (2021) | [arXiv:2004.09765](https://arxiv.org/abs/2004.09765) | (I1) H_R |
 | C. Bellotti, P.-J. Wong, *Improved estimates for the argument and zero-counting function of the Riemann zeta-function* | [arXiv:2412.15470](https://arxiv.org/abs/2412.15470) | (I2) N(T) |
+
+## Additional inputs used by v5 (`work/`)
+
+The v5 chains (k ≥ 37) use the refereed inputs above, apart from BTY's Theorem 1 and Bellotti's printed table, and also the following. Statements and the exact use of each are listed in the workstream reports.
+
+| Work | Links | Role in v5 |
+|---|---|---|
+| D. R. Heath-Brown, *Zero-free regions for Dirichlet L-functions, and the least prime in an arithmetic progression*, Proc. London Math. Soc. (3) 64 (1992) 265–338 | — | Lemma B (Lemma 3.2), Theorem C (weight w, Re W ≥ 0) |
+| J. Thorner, A. Zaman, *An explicit version of Bombieri's log-free density estimate and Sárközy's theorem for shifted primes*, Forum Math. 36 (2024) | [arXiv:2208.11123](https://arxiv.org/abs/2208.11123) | Lemma B: an inequality proved inside Prop. 2.11 |
+| D. Patel, A. Yang, *An explicit sub-Weyl bound for ζ(1/2+it)*, J. Number Theory (2024) | — | 66.7·t^{27/164} in c₁ and in Lemma B-W |
+| O. Ramaré, S. Zuniga Alterman, identity factory for Möbius sums (Math. Comp. 2026) | [arXiv:2312.05138](https://arxiv.org/abs/2312.05138) (v3 read) | Lemma A, input (A3); audited in `work/audit_rza/` |
+| K. Ford, *Zero-free regions for the Riemann zeta function*, Number Theory for the Millennium II (2002), with the author's corrections | [arXiv:1910.08205](https://arxiv.org/abs/1910.08205) | Theorem C and the local Littlewood bands (zero detector, W₀ bound) |
+| H. Kadiri, *Une région explicite sans zéros pour la fonction ζ de Riemann*, Acta Arith. 117 (2005) | — | explicit formula in Theorem C and the Littlewood bands |
+| R. S. Lehman, *On the difference π(x) − li(x)*, Acta Arith. 11 (1966) | — | sums over zeros in Theorem C |
+| H. Rademacher, *On the Phragmén–Lindelöf theorem and some applications*, Math. Z. 72 (1959) | — | Lemma B-W (statement as usually quoted) |
+| O. Ramaré, *An explicit density estimate for Dirichlet L-series*, Math. Comp. 85 (2016) | — | ζ(σ) ≤ e^{γ(σ−1)}/(σ−1) (Lemma 5.4), local Littlewood bands |
+| J. B. Rosser, *Explicit bounds for some functions of prime numbers*, Amer. J. Math. 63 (1941) | — | N(T), local Littlewood bands |
+| C. Bellotti, T. Trudgian, A. Yang (preprint, above) | [arXiv:2603.21490](https://arxiv.org/abs/2603.21490) | the **method** of Lemmas 3–15, re-checked step by step for Theorem C; Theorem 1 (4.896) is **not** used |
+| A. Yang, PhD thesis (above) | — | the **method** of Ch. 3 for the local Littlewood bands, with the changed steps re-proved; 19.62 is not used |
+
+Used only in exploratory scans (not in the k ≥ 37 chain): Chourasiya–Simonič, [arXiv:2507.15184](https://arxiv.org/abs/2507.15184) (v2, preprint; audited in `work/phase1_cs/`).
+
+Checked but not needed: Chirre–Helfgott, [arXiv:2512.15709](https://arxiv.org/abs/2512.15709) (short intervals from finite RH verification; raises L₁ for k = 35 only to about 1066); Revers, [arXiv:2602.05614](https://arxiv.org/abs/2602.05614) (ζ(1/2+it) constant; effect below 1%).
 
 ## Withdrawn input
 

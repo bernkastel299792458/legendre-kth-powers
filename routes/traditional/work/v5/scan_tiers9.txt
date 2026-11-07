@@ -1,0 +1,4 @@
+  [V7_T1_with_mid_v4] k=37: CLOSES; L1=1105; first S fail=None; H ok from 15639.0; worst S=0.856 at L=1829.9443359375
+  [V7_T1_with_mid_v4] k=35: fails; L1=1043; first S fail=1093.2734375; H ok from 18563.0; worst S=1.434 at L=12518.2734375
+  [V7_T1_with_mid_v4] k=36: fails; L1=1074; first S fail=1149.0947265625; H ok from 15639.0; worst S=1.076 at L=1774.0947265625
+RESULT [V7_T1_with_mid_v4] min k (samples) = 37

@@ -1,0 +1,13 @@
+v=1e+03: local Z requirement 17.0165 (line n=5); Bellotti Z_VK=71.0464; Ford-57.54 equiv=75.6982
+v=1e+04: local Z requirement 14.6164 (line n=8); Bellotti Z_VK=48.3942; Ford-57.54 equiv=51.5629
+v=1e+05: local Z requirement 13.0499 (line n=10); Bellotti Z_VK=30.2464; Ford-57.54 equiv=32.2268
+v=1e+06: local Z requirement 12.1855 (line n=13); Bellotti Z_VK=17.9026; Ford-57.54 equiv=19.0748
+v=2.4e+06: local Z requirement 11.9308 (line n=13); Bellotti Z_VK=14.513; Ford-57.54 equiv=15.4632
+v=6e+06: local Z requirement 11.6882 (line n=14); Bellotti Z_VK=11.5916; Ford-57.54 equiv=12.3506
+v=1e+07: local Z requirement 11.5032 (line n=15); Bellotti Z_VK=10.2057; Ford-57.54 equiv=10.874
+v=1e+08: local Z requirement 11.1857 (line n=17); Bellotti Z_VK=5.66022; Ford-57.54 equiv=6.03083
+v=1e+09: local Z requirement 11.0518 (line n=19); Bellotti Z_VK=3.074; Ford-57.54 equiv=3.27527
+v=1e+10: local Z requirement 10.8798 (line n=22); Bellotti Z_VK=1.64203; Ford-57.54 equiv=1.74954
+v=1e+12: local Z requirement 10.7415 (line n=26); Bellotti Z_VK=0.451116; Ford-57.54 equiv=0.480654
+v=1e+15: local Z requirement 11.44 (line n=30); Bellotti Z_VK=0.0607438; Ford-57.54 equiv=0.0647211
+v=1e+20: local Z requirement 15.2515 (line n=30); Bellotti Z_VK=0.00192053; Ford-57.54 equiv=0.00204628

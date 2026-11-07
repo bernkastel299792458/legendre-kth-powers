@@ -1,0 +1,4 @@
+B [{"argmax": 6, "n_candidates": 1, "sup_exact": "[1.903653956429171 +/- 1.32e-16]", "claimed": "1.90380793763037", "claimed_ok": true, "sup_upper": "1.903653956429171", "float_max": 1.903653956429171, "name": "Z1", "N": 10000000}]
+C [{"argmax": 2, "n_candidates": 1, "sup_exact": "[2.676448443131898 +/- 1.82e-16]", "claimed": "2.67710025", "claimed_ok": true, "sup_upper": "2.676448443131898", "float_max": 2.676448443131898, "name": "Z2", "N": 1000000}]
+D [{"argmax": 4963335, "n_candidates": 1683, "sup_exact": "[2.253270039695282 +/- 5.43e-17]", "claimed": "2.2526506709", "claimed_ok": false, "sup_upper": "2.253270039695282", "float_max": 2.2532700396953356, "name": "Xi1", "N": 5000000}, {"argmax": 4869267, "n_candidates": 1688, "sup_exact": "[1.587891073413550 +/- 3.39e-16]", "claimed": "1.587160669", "claimed_ok": false, "sup_upper": "1.587891073413550", "float_max": 1.587891073413565, "name": "Xi2", "N": 5000000}]
+time 11.2 s

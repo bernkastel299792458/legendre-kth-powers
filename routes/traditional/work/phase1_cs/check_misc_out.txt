@@ -1,0 +1,11 @@
+OK    [RIG] zeta(1+eps) <= e^{gamma eps}/eps for 0 < eps <= 0.04: h(eps)/eps >= [0.093769121164659992659101783327428383271 +/- 5.31e-41] > 0 (Stieltjes series, Berndt tail bound)
+OK    [RIG] gamma < log 5 (so e^{(gamma-log5) eps} <= 1 in CS Lemma 7)
+OK    [grid] log(1+u^2) <= min(u^{4/3}, u^2) on (0,200]  (max diff -5e-13)
+OK    [RIG, by hand] 8H^3-12H^2+18H-9 >= 5 > 0 for H >= 1 (derivative 24H^2-24H+18 > 0)
+OK    [RIG] 6/L + 6/L^2 = [0.30350 +/- 8.92e-7] <= 0.31 at L = log 1e9 (decreasing in L)
+OK    [RIG] derived C6 constant [38.931380 +/- 1.08e-7] <= 220 (paper's 220 is conservative)
+OK    [RIG] 2/(3.006 zeta(3/2)) <= 1, so (pi/log2)log(1+u^{-3/2}) dominates the b7 correction
+OK    [RIG, by hand] K2's second term = 2^{1/3}(4kappa/3)(A0/T0)^3 from 1-e^{-u0} <= u0
+OK    [sanity] sum_{n<=x} d(n)^2 <= x(log x+1)^3 at sampled x <= 2e6
+OK    D2=0.7443412764, D3=0.8232652083, D4=0.4603233723 (exact residue computation, fourth_moment/lemma_checks_out.txt); cs_kln.C8_CT19 uses upper values 0.74434128, 0.82326521, 0.46032338
+FAILS: []

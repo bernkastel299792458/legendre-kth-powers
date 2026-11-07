@@ -1,0 +1,6 @@
+  CERTIFIED: S_eps(X) <= 0.5158778644 for all X >= 3e12, 0 < eps <= 0.0227   (cells: 4013)
+b4 (rounded up to 4 digits) = 0.5159
+  CERTIFIED: S_eps(X) <= 0.5246401396 for all X >= 1e12, 0 < eps <= 0.04   (cells: 4014)
+b4 (rounded up to 4 digits) = 0.5247
+  CERTIFIED: S_eps(X) <= 0.5160930996 for all X >= 3e12, 0 < eps <= 0.0227   (cells: 4013)
+b4 (rounded up to 4 digits) = 0.5161

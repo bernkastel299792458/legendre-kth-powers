@@ -1,0 +1,26 @@
+sanity: zd(1) = [0.577215664901533 +/- 1.40e-16]  gamma = [0.577215664901533 +/- 1.40e-16]  zd(1.1) = [0.584448464950810 +/- 1.74e-16]  zeta(1.1)-10 = [0.584448464950810 +/- 1.74e-16]
+tasks: 948 cases: 234774
+  progress 0/948  1s
+  progress 50/948  6s
+  progress 100/948  22s
+  progress 150/948  52s
+  progress 200/948  79s
+  progress 250/948  101s
+  progress 300/948  137s
+  progress 350/948  161s
+  progress 400/948  184s
+  progress 450/948  214s
+  progress 500/948  223s
+  progress 550/948  265s
+  progress 600/948  276s
+  progress 650/948  302s
+  progress 700/948  337s
+  progress 750/948  343s
+  progress 800/948  390s
+  progress 850/948  404s
+  progress 900/948  431s
+[b1] X<47, (q,P43) not in {1,11,13,17}, e in [0,1/10]: Delta/X^e <= 0
+    CERTIFIED : 117387 cases, 352226 cells; max certified upper bound -5.23799513094e-5 at (N,q,X*)=(44, 37, '45'); max point value (lower bd) -0.00784587711400 at (46, 19, '47')
+[b2] X<47, (q,P43) not in {1,11,13,17}, e in [1/10,1]: Delta/X^e <= 0
+    CERTIFIED : 117387 cases, 4279360 cells; max certified upper bound -5.67771827489e-10 at (N,q,X*)=(45, 481, '46'); max point value (lower bd) -0.000150347878955 at (46, 19, '47')
+total time 476s

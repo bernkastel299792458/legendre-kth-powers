@@ -1,0 +1,27 @@
+  ran repair_hweights.py 0 90                                        14.5 s (exit 0)
+  ran repair_hweights.py 0.0227 90                                   13.9 s (exit 0)
+  ran repair_hweights.py 0.04 90                                     14.5 s (exit 0)
+OK    h-weights with eps0=0 reproduce S11(68) (consistency of the weighted code)
+OK    own certificate |m(t)|<=sqrt(2/t), |m_2(t)|<=sqrt(3/t), t<=1e10
+OK    sign table re-run (sign_table_acd_rerun.txt) has no failing cell
+OK    sign table re-run (sign_table_b_rerun.txt) has no failing cell
+  ran rza_mpatterns.py                                                6.0 s (exit 0)
+OK    m_l(t) pattern constants (exact)
+  ran repair_hf_inputs.py 10                                         61.7 s (exit 0)
+OK    derived H2' = 0.0297612179 <= 0.029762 (used)
+  ran repair_e12.py                                                  11.7 s (exit 0)
+OK    E_1^(2) = 0.232 without Helfgott's book: odd-squarefree sup 0.099326 (own to 1e8 + CDE 2007), E2 = 0.231259
+  ran repair_bound.py 3e12 0.0227                                     1.0 s (exit 0)
+OK    certificate rza_3e12: b4 = 0.5159
+  ran repair_bound.py 1e12 0.04                                       0.9 s (exit 0)
+OK    certificate rza_1e12: b4 = 0.5247
+  ran repair_bound.py 3e12 0.0227                                     0.9 s (exit 0)
+OK    certificate hf_3e12: b4 = 0.5161
+  ran repair_bound.py 1e12 0.04                                       1.0 s (exit 0)
+OK    certificate hf_1e12: b4 = 0.5249
+  ran repair_margins.py                                               1.1 s (exit 0)
+OK    robustness factors (rza) written
+  ran repair_margins.py                                               1.1 s (exit 0)
+OK    robustness factors (hf) written
+DONE, 0 FAIL
+EXIT 0

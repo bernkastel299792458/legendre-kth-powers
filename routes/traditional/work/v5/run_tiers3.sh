@@ -1,0 +1,4 @@
+python -B scan5.py 55 75 "ROWS=inputs/bel_faithful_v2.csv;inputs/bel_reopt_v1.csv;inputs/bel_reopt_lam1_v1.csv;inputs/bel_high_v1.csv" ROWS_KEEP_ORIG=0 BANDS=inputs/zfr_local_v1.csv Z1=5.558691 ROWS_STATUS=refereed SMAX=200000 TAG=T1_ref+LW
+python -B scan5.py 52 64 "ROWS=inputs/bel_faithful_v2.csv;inputs/bel_reopt_v1.csv;inputs/bel_reopt_lam1_v1.csv;inputs/bel_high_v1.csv" ROWS_KEEP_ORIG=0 BANDS=inputs/zfr_local_v1.csv Z1=5.558691 ROWS_STATUS=refereed KLNF=JY,CSB SMAX=200000 TAG=T2_ref+LW+CSB
+python -B scan5.py 55 66 "ROWS=inputs/bel_faithful_v2.csv;inputs/bel_reopt_v1.csv;inputs/bel_reopt_lam1_v1.csv;inputs/bel_high_v1.csv" ROWS_KEEP_ORIG=0 BANDS=inputs/zfr_local_v1.csv SMAX=200000 TAG=T3_bty+LW
+python -B scan5.py 52 64 "ROWS=inputs/bel_faithful_v2.csv;inputs/bel_reopt_v1.csv;inputs/bel_reopt_lam1_v1.csv;inputs/bel_high_v1.csv" ROWS_KEEP_ORIG=0 BANDS=inputs/zfr_local_v1.csv KLNF=JY,CSB SMAX=200000 TAG=T4_bty+LW+CSB

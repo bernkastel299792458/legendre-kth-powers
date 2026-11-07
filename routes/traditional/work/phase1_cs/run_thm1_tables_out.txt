@@ -1,0 +1,30 @@
+==========================================================================================
+PART 1. Reproduction of Table 1 (b4 = 0.54 as in the paper), K1 by 100000-step Riemann sums
+ row [0.93750,0.96875]  hyp=True
+   B1 computed 35.34570     printed 35.350 OK (printed >= computed)
+   B2 computed 5.179541     printed 5.1800 OK (printed >= computed)
+   B3 computed 91.85087     printed 91.860 OK (printed >= computed)
+   K1 in [3.0496246, 3.0499799]
+ row [0.96875,1.00000]  hyp=True
+   B1 computed 46.05446     printed 46.060 OK (printed >= computed)
+   B2 computed 4.896862     printed 4.8970 OK (printed >= computed)
+   B3 computed 86.83800     printed 86.840 OK (printed >= computed)
+   K1 in [3.4398440, 3.4402479]
+==========================================================================================
+PART 2. Corrected rows, T >= H_RH = 3e12 (T0 = H0 = H = H_RH, h = 1)
+ row [0.93750,0.96875] paper params, b4=0.59360: B1=38.5045 B2=5.17954 B3=91.8509
+   re-optimised (d,kappa,delta,log10A0)=(0.2901,0.09060,0.2700,11.42): B1=38.5043 B2=5.17779 B3=91.8198 hyp=True
+ row [0.96875,1.00000] paper params, b4=0.59360: B1=50.5974 B2=4.89686 B3=86.8380
+   re-optimised (d,kappa,delta,log10A0)=(0.2946,0.07370,0.3033,11.45): B1=50.5797 B2=4.82183 B3=85.5074 hyp=True
+------------------------------------------------------------------------------------------
+CORRECTED TABLE (A): N(s,T) <= B1 T^{3(1-s)/(2-s)} (log T)^{(7-5s)/(2-s)} + B2 log^2 T + B3 log T, T >= 3e12
+ sig1     sig2     B1      B2      B3      d       kappa   delta   log10A0
+ 0.93750  0.96875  38.51   5.178   91.82   0.2901  0.09060  0.2700  11.42
+ 0.96875  1.00000  50.58   4.822   85.51   0.2946  0.07370  0.3033  11.45
+==========================================================================================
+PART 3. Larger T0 (H = H0 = H_RH): constants valid for T >= T0; parameters re-optimised
+ row [0.96875,1.00000] T0=e^30 b4=0.5936 (d,k,de,lA)=(0.2960,0.07340,0.3050,11.77): B1<=49.99  A3=0.83951 A4=3.9561 A5=60.923 hyp=True
+ row [0.96875,1.00000] T0=e^32 b4=0.5936 (d,k,de,lA)=(0.2980,0.07280,0.3074,12.37): B1<=49.21  A3=0.83302 A4=3.9255 A5=60.452 hyp=True
+ row [0.96875,1.00000] T0=e^35 b4=0.5936 (d,k,de,lA)=(0.3005,0.07180,0.3104,13.53): B1<=48.26  A3=0.82498 A4=3.8876 A5=59.869 hyp=True
+ row [0.96875,1.00000] T0=e^37 b4=0.5103 (d,k,de,lA)=(0.3020,0.07140,0.3121,14.37): B1<=41.05  A3=0.82024 A4=3.8653 A5=59.525 hyp=True
+FAILS: []

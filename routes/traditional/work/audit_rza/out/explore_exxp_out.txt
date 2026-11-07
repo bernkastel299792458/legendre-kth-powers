@@ -1,0 +1,12 @@
+X=   1000 eps=0.0100  S_eps=0.420077  identity(corrected)=0.420077  paper RHS (6.6)=0.393919  PAPER (6.6) FAILS
+X=   1000 eps=0.0200  S_eps=0.401891  identity(corrected)=0.401891  paper RHS (6.6)=0.355824  PAPER (6.6) FAILS
+X=   1000 eps=0.0400  S_eps=0.370740  identity(corrected)=0.370740  paper RHS (6.6)=0.299154  PAPER (6.6) FAILS
+X=   1000 eps=0.1000  S_eps=0.311047  identity(corrected)=0.311047  paper RHS (6.6)=0.225797  PAPER (6.6) FAILS
+X=  10000 eps=0.0100  S_eps=0.411458  identity(corrected)=0.411458  paper RHS (6.6)=0.377479  PAPER (6.6) FAILS
+X=  10000 eps=0.0200  S_eps=0.385366  identity(corrected)=0.385366  paper RHS (6.6)=0.327510  PAPER (6.6) FAILS
+X=  10000 eps=0.0400  S_eps=0.342148  identity(corrected)=0.342148  paper RHS (6.6)=0.258035  PAPER (6.6) FAILS
+X=  10000 eps=0.1000  S_eps=0.266879  identity(corrected)=0.266879  paper RHS (6.6)=0.184285  PAPER (6.6) FAILS
+X=  50000 eps=0.0100  S_eps=0.404891  identity(corrected)=0.404891  paper RHS (6.6)=0.365842  PAPER (6.6) FAILS
+X=  50000 eps=0.0200  S_eps=0.373647  identity(corrected)=0.373647  paper RHS (6.6)=0.308711  PAPER (6.6) FAILS
+X=  50000 eps=0.0400  S_eps=0.323145  identity(corrected)=0.323145  paper RHS (6.6)=0.233025  PAPER (6.6) FAILS
+X=  50000 eps=0.1000  S_eps=0.241198  identity(corrected)=0.241198  paper RHS (6.6)=0.163758  PAPER (6.6) FAILS

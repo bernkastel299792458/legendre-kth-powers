@@ -1,0 +1,70 @@
+X=1000000.5: m-sums done (18.8 s), 607926 squarefree l
+ eps=0.0001  zeta=10000.577223  S_eps(X) classic=0.4402239654  via (R.1)=0.4402239654  RZA(6.6) RHS=0.4396231208
+   OK   (R.1) identity reproduces S_eps(X)
+   OK   RZA (6.6) RHS < S_eps(X), i.e. (6.6) false here (expected)
+   OK   R1(a) w <= b (l/X)^{2eps} for all l
+   OK   R1(b) w <= X^-eps b h^eps (l/X)^eps for all l
+   OK   A1 sqrt-part bound on |Delta| (max ratio 0.1513, at Y>=1e3: 0.0403)
+   OK   Delta <= 0 for Y < 10.9 (max -1.270e-04)
+   OK   eps Delta Y^-eps >= -P/zeta for Y < 10.9
+   OK   m Delta <= (19/210)|Delta| on 10.9<=Y<47
+   OK   Step 3 cross: -9.585e-05 <= 2eps X^-eps ax1 = 3.207e-06
+   OK   Step 3 square: 6.938783e-09 <= (G(X)-G(X/10.9))/zeta^2 = 2.385169e-08
+   OK   Step 4 cross (l<=X/10.9): -3.9985e-06 <= T4 = 4.4602e-04
+   OK   Step 5 square (sqrt part only): 3.0225e-10 <= 1.2841e-07
+   OK   Step 7 tail: 0.001333 <= Z^-2eps * 0.001335, and S0**=0.001335 <= Tail0(Lemma 5.1)=0.061945
+   OK   Step 7 bulk: 0.438791 <= X^-eps B0^(1-t) B1^t = 0.438821  (B0=0.439404, B1=0.444880)
+   pieces: M=0.440124 cross_big=-9.59e-05 cross_small=-4.00e-06 sq=7.24e-09  2/z-G(X/10.9)/z^2=0.000200
+ eps=0.001  zeta=1000.577288  S_eps(X) classic=0.4356254500  via (R.1)=0.4356254500  RZA(6.6) RHS=0.4297406862
+   OK   (R.1) identity reproduces S_eps(X)
+   OK   RZA (6.6) RHS < S_eps(X), i.e. (6.6) false here (expected)
+   OK   R1(a) w <= b (l/X)^{2eps} for all l
+   OK   R1(b) w <= X^-eps b h^eps (l/X)^eps for all l
+   OK   A1 sqrt-part bound on |Delta| (max ratio 0.1512, at Y>=1e3: 0.0402)
+   OK   Delta <= 0 for Y < 10.9 (max -1.263e-04)
+   OK   eps Delta Y^-eps >= -P/zeta for Y < 10.9
+   OK   m Delta <= (19/210)|Delta| on 10.9<=Y<47
+   OK   Step 3 cross: -9.458e-04 <= 2eps X^-eps ax1 = 3.168e-05
+   OK   Step 3 square: 6.837806e-07 <= (G(X)-G(X/10.9))/zeta^2 = 2.354183e-06
+   OK   Step 4 cross (l<=X/10.9): -3.9374e-05 <= T4 = 4.4345e-03
+   OK   Step 5 square (sqrt part only): 2.9726e-08 <= 1.2804e-05
+   OK   Step 7 tail: 0.001312 <= Z^-2eps * 0.001335, and S0**=0.001335 <= Tail0(Lemma 5.1)=0.061945
+   OK   Step 7 bulk: 0.433314 <= X^-eps B0^(1-t) B1^t = 0.433612  (B0=0.439404, B1=0.444880)
+   pieces: M=0.434626 cross_big=-9.46e-04 cross_small=-3.94e-05 sq=7.14e-07  2/z-G(X/10.9)/z^2=0.001986
+ eps=0.01  zeta=100.577943  S_eps(X) classic=0.3932178501  via (R.1)=0.3932178501  RZA(6.6) RHS=0.3453815942
+   OK   (R.1) identity reproduces S_eps(X)
+   OK   RZA (6.6) RHS < S_eps(X), i.e. (6.6) false here (expected)
+   OK   R1(a) w <= b (l/X)^{2eps} for all l
+   OK   R1(b) w <= X^-eps b h^eps (l/X)^eps for all l
+   OK   A1 sqrt-part bound on |Delta| (max ratio 0.1493, at Y>=1e3: 0.0395)
+   OK   Delta <= 0 for Y < 10.9 (max -1.193e-04)
+   OK   eps Delta Y^-eps >= -P/zeta for Y < 10.9
+   OK   m Delta <= (19/210)|Delta| on 10.9<=Y<47
+   OK   Step 3 cross: -8.270e-03 <= 2eps X^-eps ax1 = 2.797e-04
+   OK   Step 3 square: 5.906014e-05 <= (G(X)-G(X/10.9))/zeta^2 = 2.065840e-04
+   OK   Step 4 cross (l<=X/10.9): -3.3755e-04 <= T4 = 4.1860e-02
+   OK   Step 5 square (sqrt part only): 2.5169e-06 <= 1.2443e-03
+   OK   Step 7 tail: 0.001120 <= Z^-2eps * 0.001335, and S0**=0.001335 <= Tail0(Lemma 5.1)=0.061945
+   OK   Step 7 bulk: 0.382156 <= X^-eps B0^(1-t) B1^t = 0.384799  (B0=0.439404, B1=0.444880)
+   pieces: M=0.383276 cross_big=-8.27e-03 cross_small=-3.38e-04 sq=6.16e-05  2/z-G(X/10.9)/z^2=0.018695
+ eps=0.0227  zeta=44.631730  S_eps(X) classic=0.3433436323  via (R.1)=0.3433436323  RZA(6.6) RHS=0.2620741381
+   OK   (R.1) identity reproduces S_eps(X)
+   OK   RZA (6.6) RHS < S_eps(X), i.e. (6.6) false here (expected)
+   OK   R1(a) w <= b (l/X)^{2eps} for all l
+   OK   R1(b) w <= X^-eps b h^eps (l/X)^eps for all l
+   OK   A1 sqrt-part bound on |Delta| (max ratio 0.1468, at Y>=1e3: 0.0384)
+   OK   Delta <= 0 for Y < 10.9 (max -1.096e-04)
+   OK   eps Delta Y^-eps >= -P/zeta for Y < 10.9
+   OK   m Delta <= (19/210)|Delta| on 10.9<=Y<47
+   OK   Step 3 cross: -1.554e-02 <= 2eps X^-eps ax1 = 5.328e-04
+   OK   Step 3 square: 2.475710e-04 <= (G(X)-G(X/10.9))/zeta^2 = 8.855681e-04
+   OK   Step 4 cross (l<=X/10.9): -6.1662e-04 <= T4 = 8.7614e-02
+   OK   Step 5 square (sqrt part only): 1.0258e-05 <= 6.1576e-03
+   OK   Step 7 tail: 0.000896 <= Z^-2eps * 0.001335, and S0**=0.001335 <= Tail0(Lemma 5.1)=0.061945
+   OK   Step 7 bulk: 0.320043 <= X^-eps B0^(1-t) B1^t = 0.325120  (B0=0.439404, B1=0.444880)
+   pieces: M=0.320938 cross_big=-1.55e-02 cross_small=-6.17e-04 sq=2.58e-04  2/z-G(X/10.9)/z^2=0.039185
+DONE, 0 FAIL
+
+real	0m22.488s
+user	0m0.047s
+sys	0m0.000s

@@ -24,8 +24,7 @@ and the new arguments in its manuscript.
 | Research track | Reported result | Main premises | Review package |
 |---|---|---|---|
 | **B. Assuming QRH(7/8)** | Fixed exponent **k = 6** | **Seven named inputs**, including QRH(7/8), CS **arXiv:2507.15184v2** Corollary 1 and its specified rows; [complete statements](routes/qrh/documentation/inputs.md). | [QRH route package](routes/qrh/README.md) · [Chinese paper, PDF](routes/qrh/paper/current/main.pdf) |
-| **A. Traditional explicit estimates** | Every integer **k >= 70** | The listed explicit estimates, including the **4.896** zero-free-region constant from the Bellotti–Trudgian–Yang preprint. No QRH assumption. | [Traditional manuscript, English](routes/traditional/proof/manuscript.md) |
-| **A. Traditional, refereed-input variant** | Every integer **k >= 74** | The listed refereed literature inputs, using **5.558691** in place of 4.896. No QRH assumption. | [Traditional review package](routes/traditional/proof/README.md) |
+| A. Traditional explicit estimates | Every integer k >= 37 (v5, in progress) | Refereed literature inputs plus the project's own lemmas, which have had AI review only. No QRH assumption. Arb certificate chain; no consolidated v5 manuscript yet. The earlier v4 claim (k >= 70 / 74) is not supported. | [Traditional route](routes/traditional/README.md) |
 
 “Refereed-input” describes the sources used by that variant; it does not mean
 that this project's new proof has been peer-reviewed. The two tracks answer
@@ -64,9 +63,15 @@ k=6 paper, assumptions, Lean sources and verification records.
 
 ### Result and method
 
-The [v4 manuscript](routes/traditional/proof/manuscript.md) gives computer-assisted arguments for
-all integer exponents **k >= 70**, and for **k >= 74** when restricting the
-literature inputs to refereed results.
+**Progress (v5, 2026-11-07).** An Arb certificate chain gives every integer
+exponent k >= 37 from refereed literature inputs and the project's own
+AI-reviewed lemmas; a consolidated manuscript is in preparation. See the
+[v5 workspace](routes/traditional/work/README.md).
+
+The earlier v4 claim (k >= 70 / 74) is not supported as stated. It used the
+printed Table 2 of Bellotti's log-free zero-density estimate, and the project
+found a counting gap in §4 of that paper. This is our reading, not an
+author-confirmed correction. The text below describes v4.
 
 The method combines explicit zero-free regions, hybrid zero-density bounds,
 a smoothed explicit formula, finite-range certificates, and an analytic
@@ -106,7 +111,7 @@ The historical Lean package name `LegendreK67` is not a current k = 67 claim.
 |---|---|---|
 | Read the argument | [English manuscript](routes/traditional/proof/manuscript.md) | [Current paper](routes/qrh/paper/current/main.pdf) · [Proof guide](routes/qrh/documentation/blueprint/README.md) |
 | Inspect dependencies | [Manuscript §3](routes/traditional/proof/manuscript.md) · [Sources](routes/traditional/SOURCES.md) | [Seven inputs](routes/qrh/documentation/inputs.md) · [BibTeX](routes/qrh/paper/current/references.bib) |
-| Reproduce computations | [Review package](routes/traditional/proof/README.md#如何复核) | [Reproduction instructions](routes/qrh/REPRODUCING.md) |
+| Reproduce computations | [v5 certificates](routes/traditional/work/v5/README.md) · [v4 review package](routes/traditional/proof/README.md#如何复核) | [Reproduction instructions](routes/qrh/REPRODUCING.md) |
 | Understand Lean coverage | [Assembly scope](routes/traditional/proof/README.md#lean-证明了什么) | [Exact theorem and acceptance evidence](routes/qrh/FORMALIZATION_STATUS.md) |
 | Review the evidence | [Checklist](routes/traditional/proof/REVIEW_CHECKLIST.md) · [AI reviews and responses](routes/traditional/review/) | [Scope review](routes/qrh/audit/PUBLICATION_SCOPE_REVIEW.md) · [Historical reviews](routes/qrh/audit/source_reviews/README.md) |
 

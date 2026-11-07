@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "D:\UGit\AI4Math\legendre_k67\work\phase2_lemmas\certify_lemmaD_demo.py", line 21, in <module>
+    assert src.count(old) == 1
+           ^^^^^^^^^^^^^^^^^^^
+AssertionError
+
+real	0m3.063s
+user	0m0.000s
+sys	0m0.046s

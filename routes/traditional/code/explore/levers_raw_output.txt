@@ -1,0 +1,144 @@
+  [Z2_20.08] k=65: fails; L1=1978; first S fail=2052.74609375; H ok from 9352.0; worst S=1.764 at L=4102.74609375
+  [Z2_20.08] k=67: fails; L1=2041; first S fail=3965.6298828125; H ok from 7879.0; worst S=1.152 at L=4215.6298828125
+  [Z2_20.08] k=68: CLOSES; L1=2072; first S fail=None; H ok from 7879.0; worst S=0.923 at L=4272.0947265625
+RESULT [Z2_20.08] {'Z1': '4.896', 'Z2': '20.08', 'Z3': '54.004', 'CF': '1', 'CBAND': 'all', 'BF': '1', 'JY': '1', 'CS': '0', 'HR': '3000175332800', 'MS': '2,3', 'L3': '10000000000'}: min k (samples) = 68
+  [Z2_19.5] k=62: fails; L1=1884; first S fail=1908.53515625; H ok from 11100.0; worst S=2.859 at L=3433.53515625
+  [Z2_19.5] k=66: fails; L1=2009; first S fail=2159.1806640625; H ok from 7879.0; worst S=1.194 at L=3659.1806640625
+  [Z2_19.5] k=68: CLOSES; L1=2072; first S fail=None; H ok from 6638.0; worst S=0.772 at L=3772.0947265625
+  [Z2_19.5] k=67: CLOSES; L1=2041; first S fail=None; H ok from 7879.0; worst S=0.960 at L=3715.6298828125
+RESULT [Z2_19.5] {'Z1': '4.896', 'Z2': '19.5', 'Z3': '54.004', 'CF': '1', 'CBAND': 'all', 'BF': '1', 'JY': '1', 'CS': '0', 'HR': '3000175332800', 'MS': '2,3', 'L3': '10000000000'}: min k (samples) = 67
+  [Z2_19] k=62: fails; L1=1884; first S fail=1908.53515625; H ok from 9352.0; worst S=2.575 at L=3108.53515625
+  [Z2_19] k=66: fails; L1=2009; first S fail=2159.1806640625; H ok from 6638.0; worst S=1.069 at L=3309.1806640625
+  [Z2_19] k=68: CLOSES; L1=2072; first S fail=None; H ok from 6638.0; worst S=0.689 at L=3422.0947265625
+  [Z2_19] k=67: CLOSES; L1=2041; first S fail=None; H ok from 6638.0; worst S=0.858 at L=3365.6298828125
+RESULT [Z2_19] {'Z1': '4.896', 'Z2': '19', 'Z3': '54.004', 'CF': '1', 'CBAND': 'all', 'BF': '1', 'JY': '1', 'CS': '0', 'HR': '3000175332800', 'MS': '2,3', 'L3': '10000000000'}: min k (samples) = 67
+  [Z1_4.7] k=62: fails; L1=1884; first S fail=1933.53515625; H ok from 15639.0; worst S=3.548 at L=5758.53515625
+  [Z1_4.7] k=66: fails; L1=2009; first S fail=4784.1806640625; H ok from 13176.0; worst S=1.464 at L=6134.1806640625
+  [Z1_4.7] k=68: CLOSES; L1=2072; first S fail=None; H ok from 11100.0; worst S=0.941 at L=6322.0947265625
+  [Z1_4.7] k=67: fails; L1=2041; first S fail=5515.6298828125; H ok from 13176.0; worst S=1.174 at L=6240.6298828125
+RESULT [Z1_4.7] {'Z1': '4.7', 'Z2': '21.233', 'Z3': '54.004', 'CF': '1', 'CBAND': 'all', 'BF': '1', 'JY': '1', 'CS': '0', 'HR': '3000175332800', 'MS': '2,3', 'L3': '10000000000'}: min k (samples) = 68
+  [Z1_4.5] k=62: fails; L1=1884; first S fail=3258.53515625; H ok from 15639.0; worst S=2.419 at L=7033.53515625
+  [Z1_4.5] k=66: CLOSES; L1=2009; first S fail=None; H ok from 13176.0; worst S=0.966 at L=7484.1806640625
+  [Z1_4.5] k=64: fails; L1=1946; first S fail=5071.326171875; H ok from 15639.0; worst S=1.528 at L=7246.326171875
+  [Z1_4.5] k=65: fails; L1=1978; first S fail=6002.74609375; H ok from 13176.0; worst S=1.215 at L=7377.74609375
+RESULT [Z1_4.5] {'Z1': '4.5', 'Z2': '21.233', 'Z3': '54.004', 'CF': '1', 'CBAND': 'all', 'BF': '1', 'JY': '1', 'CS': '0', 'HR': '3000175332800', 'MS': '2,3', 'L3': '10000000000'}: min k (samples) = 66
+  [B_x0.9] k=62: fails; L1=1884; first S fail=1908.53515625; H ok from 15639.0; worst S=4.097 at L=5133.53515625
+  [B_x0.9] k=66: fails; L1=2009; first S fail=3609.1806640625; H ok from 13176.0; worst S=1.716 at L=5484.1806640625
+  [B_x0.9] k=68: fails; L1=2072; first S fail=4947.0947265625; H ok from 11100.0; worst S=1.117 at L=5647.0947265625
+  [B_x0.9] k=69: CLOSES; L1=2104; first S fail=None; H ok from 9352.0; worst S=0.901 at L=5728.57421875
+RESULT [B_x0.9] {'Z1': '4.896', 'Z2': '21.233', 'Z3': '54.004', 'CF': '1', 'CBAND': 'all', 'BF': '0.9', 'JY': '1', 'CS': '0', 'HR': '3000175332800', 'MS': '2,3', 'L3': '10000000000'}: min k (samples) = 69
+  [JY_x0.5] k=62: fails; L1=1884; first S fail=1958.53515625; H ok from 15639.0; worst S=4.605 at L=5133.53515625
+  [JY_x0.5] k=66: fails; L1=2009; first S fail=3059.1806640625; H ok from 13176.0; worst S=1.927 at L=5484.1806640625
+  [JY_x0.5] k=68: fails; L1=2072; first S fail=4772.0947265625; H ok from 11100.0; worst S=1.254 at L=5647.0947265625
+  [JY_x0.5] k=69: fails; L1=2104; first S fail=5728.57421875; H ok from 9352.0; worst S=1.011 at L=5728.57421875
+RESULT [JY_x0.5] {'Z1': '4.896', 'Z2': '21.233', 'Z3': '54.004', 'CF': '1', 'CBAND': 'all', 'BF': '1', 'JY': '0.5', 'CS': '0', 'HR': '3000175332800', 'MS': '2,3', 'L3': '10000000000'}: min k (samples) = 70
+  [HR_3e13] k=62: fails; L1=1884; first S fail=2058.53515625; H ok from 15639.0; worst S=4.605 at L=5133.53515625
+  [HR_3e13] k=66: fails; L1=2009; first S fail=3059.1806640625; H ok from 13176.0; worst S=1.927 at L=5484.1806640625
+  [HR_3e13] k=68: fails; L1=2072; first S fail=4772.0947265625; H ok from 11100.0; worst S=1.254 at L=5647.0947265625
+  [HR_3e13] k=69: fails; L1=2104; first S fail=5728.57421875; H ok from 9352.0; worst S=1.011 at L=5728.57421875
+RESULT [HR_3e13] {'Z1': '4.896', 'Z2': '21.233', 'Z3': '54.004', 'CF': '1', 'CBAND': 'all', 'BF': '1', 'JY': '1', 'CS': '0', 'HR': '3e13', 'MS': '2,3', 'L3': '10000000000'}: min k (samples) = 70
+  [HR_3e14] k=62: fails; L1=1884; first S fail=2208.53515625; H ok from 15639.0; worst S=4.605 at L=5133.53515625
+  [HR_3e14] k=66: fails; L1=2009; first S fail=3059.1806640625; H ok from 13176.0; worst S=1.927 at L=5484.1806640625
+  [HR_3e14] k=68: fails; L1=2072; first S fail=4772.0947265625; H ok from 11100.0; worst S=1.254 at L=5647.0947265625
+  [HR_3e14] k=69: fails; L1=2104; first S fail=5728.57421875; H ok from 9352.0; worst S=1.011 at L=5728.57421875
+RESULT [HR_3e14] {'Z1': '4.896', 'Z2': '21.233', 'Z3': '54.004', 'CF': '1', 'CBAND': 'all', 'BF': '1', 'JY': '1', 'CS': '0', 'HR': '3e14', 'MS': '2,3', 'L3': '10000000000'}: min k (samples) = 70
+  [M_upto6] k=65: fails; L1=1978; first S fail=2052.74609375; H ok from 13176.0; worst S=2.389 at L=5402.74609375
+  [M_upto6] k=67: fails; L1=2041; first S fail=3965.6298828125; H ok from 13176.0; worst S=1.554 at L=5565.6298828125
+  [M_upto6] k=68: fails; L1=2072; first S fail=4772.0947265625; H ok from 11100.0; worst S=1.254 at L=5647.0947265625
+  [M_upto6] k=69: fails; L1=2104; first S fail=5728.57421875; H ok from 9352.0; worst S=1.011 at L=5728.57421875
+RESULT [M_upto6] {'Z1': '4.896', 'Z2': '21.233', 'Z3': '54.004', 'CF': '1', 'CBAND': 'all', 'BF': '1', 'JY': '1', 'CS': '0', 'HR': '3000175332800', 'MS': '2,3,4,5,6', 'L3': '10000000000'}: min k (samples) = 70
+  [R1_nearterm] k=57: fails; L1=1727; first S fail=1901.8447265625; H ok from 13176.0; worst S=5.034 at L=3576.8447265625
+  [R1_nearterm] k=63: fails; L1=1915; first S fail=3439.9228515625; H ok from 9352.0; worst S=1.367 at L=3964.9228515625
+  [R1_nearterm] k=66: CLOSES; L1=2009; first S fail=None; H ok from 6638.0; worst S=0.713 at L=4159.1806640625
+  [R1_nearterm] k=64: fails; L1=1946; first S fail=3946.326171875; H ok from 7879.0; worst S=1.104 at L=4021.326171875
+  [R1_nearterm] k=65: CLOSES; L1=1978; first S fail=None; H ok from 7879.0; worst S=0.882 at L=4102.74609375
+RESULT [R1_nearterm] {'Z1': '4.896', 'Z2': '20.08', 'Z3': '54.004', 'CF': '0.5', 'CBAND': 'all', 'BF': '1', 'JY': '1', 'CS': '1', 'HR': '3000175332800', 'MS': '2,3,4', 'L3': '10000000000'}: min k (samples) = 65
+  [R2_localLW] k=57: fails; L1=1727; first S fail=1901.8447265625; H ok from 13176.0; worst S=3.918 at L=3201.8447265625
+  [R2_localLW] k=63: fails; L1=1915; first S fail=3439.9228515625; H ok from 7879.0; worst S=1.066 at L=3539.9228515625
+  [R2_localLW] k=66: CLOSES; L1=2009; first S fail=None; H ok from 6638.0; worst S=0.556 at L=3709.1806640625
+  [R2_localLW] k=64: CLOSES; L1=1946; first S fail=None; H ok from 6638.0; worst S=0.858 at L=3596.326171875
+RESULT [R2_localLW] {'Z1': '4.896', 'Z2': '19.5', 'Z3': '54.004', 'CF': '0.5', 'CBAND': 'all', 'BF': '1', 'JY': '1', 'CS': '1', 'HR': '3000175332800', 'MS': '2,3,4', 'L3': '10000000000'}: min k (samples) = 64
+  [R3_optimistic] k=55: fails; L1=1664; first S fail=1839.2890625; H ok from 9352.0; worst S=1.782 at L=3214.2890625
+  [R3_optimistic] k=62: CLOSES; L1=1884; first S fail=None; H ok from 5592.0; worst S=0.364 at L=3633.53515625
+  [R3_optimistic] k=58: CLOSES; L1=1758; first S fail=None; H ok from 6638.0; worst S=0.902 at L=3383.1484375
+  [R3_optimistic] k=56: fails; L1=1696; first S fail=2045.5576171875; H ok from 7879.0; worst S=1.420 at L=3270.5576171875
+  [R3_optimistic] k=57: fails; L1=1727; first S fail=2801.8447265625; H ok from 7879.0; worst S=1.132 at L=3326.8447265625
+RESULT [R3_optimistic] {'Z1': '4.7', 'Z2': '19', 'Z3': '54.004', 'CF': '0.2', 'CBAND': 'all', 'BF': '1', 'JY': '0.5', 'CS': '1', 'HR': '3000175332800', 'MS': '2,3,4,5', 'L3': '10000000000'}: min k (samples) = 58
+  [R4_opt_plus_RH] k=55: fails; L1=1664; first S fail=1989.2890625; H ok from 9352.0; worst S=1.782 at L=3214.2890625
+  [R4_opt_plus_RH] k=62: CLOSES; L1=1884; first S fail=None; H ok from 5592.0; worst S=0.364 at L=3633.53515625
+  [R4_opt_plus_RH] k=58: CLOSES; L1=1758; first S fail=None; H ok from 6638.0; worst S=0.902 at L=3383.1484375
+  [R4_opt_plus_RH] k=56: fails; L1=1696; first S fail=2045.5576171875; H ok from 7879.0; worst S=1.420 at L=3270.5576171875
+  [R4_opt_plus_RH] k=57: fails; L1=1727; first S fail=2801.8447265625; H ok from 7879.0; worst S=1.132 at L=3326.8447265625
+RESULT [R4_opt_plus_RH] {'Z1': '4.7', 'Z2': '19', 'Z3': '54.004', 'CF': '0.2', 'CBAND': 'all', 'BF': '1', 'JY': '0.5', 'CS': '1', 'HR': '3e14', 'MS': '2,3,4,5', 'L3': '10000000000'}: min k (samples) = 58
+  [R5_idealized] k=45: fails; L1=1353; first S fail=None; H ok from None; worst S=0.908 at L=1677.66015625
+  [R5_idealized] k=57: CLOSES; L1=1727; first S fail=None; H ok from 4711.0; worst S=0.034 at L=2126.8447265625
+  [R5_idealized] k=51: fails; L1=1539; first S fail=None; H ok from 36846.0; worst S=0.175 at L=1889.3984375
+  [R5_idealized] k=54: CLOSES; L1=1633; first S fail=None; H ok from 7879.0; worst S=0.082 at L=2008.0380859375
+  [R5_idealized] k=52: CLOSES; L1=1571; first S fail=None; H ok from 15639.0; worst S=0.134 at L=1945.5927734375
+RESULT [R5_idealized] {'Z1': '4.5', 'Z2': '18', 'Z3': '54.004', 'CF': '0.01', 'CBAND': 'all', 'BF': '1', 'JY': '0.01', 'CS': '1', 'HR': '1e15', 'MS': '2,3,4,5,6', 'L3': '10000000000'}: min k (samples) = 52
+  f=0.5 scope=all JY=1 k=62: fails; L1=1884; first S fail=1933.53515625; H closes from 13284.0; worst S below that=2.303 at L=5133.53515625; tail=True
+  f=0.5 scope=all JY=1 k=66: CLOSES; L1=2009; first S fail=None; H closes from 8853.0; worst S below that=0.964 at L=5484.1806640625; tail=True
+  f=0.5 scope=all JY=1 k=64: fails; L1=1946; first S fail=1996.326171875; H closes from 11604.0; worst S below that=1.484 at L=5296.326171875; tail=True
+  f=0.5 scope=all JY=1 k=65: fails; L1=1978; first S fail=2052.74609375; H closes from 10136.0; worst S below that=1.195 at L=5402.74609375; tail=True
+RESULT f=0.5 scope=all JY=1: smallest k closing (samples) = 66
+  f=0.2 scope=all JY=1 k=57: fails; L1=1727; first S fail=1726.8447265625; H closes from 13284.0; worst S below that=4.775 at L=1801.8447265625; tail=True
+  f=0.2 scope=all JY=1 k=63: fails; L1=1915; first S fail=1989.9228515625; H closes from 7733.0; worst S below that=1.205 at L=1989.9228515625; tail=True
+  f=0.2 scope=all JY=1 k=66: CLOSES; L1=2009; first S fail=None; H closes from 6755.0; worst S below that=0.604 at L=2084.1806640625; tail=True
+  f=0.2 scope=all JY=1 k=64: CLOSES; L1=1946; first S fail=None; H closes from 7733.0; worst S below that=0.959 at L=2021.326171875; tail=True
+RESULT f=0.2 scope=all JY=1: smallest k closing (samples) = 64
+  f=0.1 scope=all JY=1 k=55: fails; L1=1664; first S fail=1664.2890625; H closes from 11604.0; worst S below that=6.832 at L=1739.2890625; tail=True
+  f=0.1 scope=all JY=1 k=62: fails; L1=1884; first S fail=1933.53515625; H closes from 6755.0; worst S below that=1.410 at L=1958.53515625; tail=True
+  f=0.1 scope=all JY=1 k=66: CLOSES; L1=2009; first S fail=None; H closes from 5154.0; worst S below that=0.570 at L=2084.1806640625; tail=True
+  f=0.1 scope=all JY=1 k=64: CLOSES; L1=1946; first S fail=None; H closes from 5901.0; worst S below that=0.900 at L=2021.326171875; tail=True
+  f=0.1 scope=all JY=1 k=63: fails; L1=1915; first S fail=1989.9228515625; H closes from 5901.0; worst S below that=1.126 at L=1989.9228515625; tail=True
+RESULT f=0.1 scope=all JY=1: smallest k closing (samples) = 64
+  f=0.1 scope=70-110 JY=1 k=62: fails; L1=1884; first S fail=1908.53515625; H closes from 15208.0; worst S below that=3.638 at L=4383.53515625; tail=True
+  f=0.1 scope=70-110 JY=1 k=66: fails; L1=2009; first S fail=2159.1806640625; H closes from 13284.0; worst S below that=1.538 at L=4659.1806640625; tail=True
+  f=0.1 scope=70-110 JY=1 k=68: CLOSES; L1=2072; first S fail=None; H closes from 10136.0; worst S below that=1.000 at L=4822.0947265625; tail=True
+  f=0.1 scope=70-110 JY=1 k=67: fails; L1=2041; first S fail=3965.6298828125; H closes from 11604.0; worst S below that=1.240 at L=4740.6298828125; tail=True
+RESULT f=0.1 scope=70-110 JY=1: smallest k closing (samples) = 68
+  f=0.1 scope=all JY=0.1 k=55: fails; L1=1664; first S fail=1739.2890625; H closes from 11604.0; worst S below that=2.077 at L=4564.2890625; tail=True
+  f=0.1 scope=all JY=0.1 k=62: CLOSES; L1=1884; first S fail=None; H closes from 6755.0; worst S below that=0.461 at L=5133.53515625; tail=True
+  f=0.1 scope=all JY=0.1 k=58: fails; L1=1758; first S fail=4208.1484375; H closes from 8853.0; worst S below that=1.089 at L=4808.1484375; tail=True
+  f=0.1 scope=all JY=0.1 k=60: CLOSES; L1=1821; first S fail=None; H closes from 7733.0; worst S below that=0.708 at L=4970.80859375; tail=True
+  f=0.1 scope=all JY=0.1 k=59: CLOSES; L1=1789; first S fail=None; H closes from 7733.0; worst S below that=0.878 at L=4889.470703125; tail=True
+RESULT f=0.1 scope=all JY=0.1: smallest k closing (samples) = 59
+  f=0.01 scope=all JY=1 k=50: fails; L1=1508; first S fail=1508.224609375; H closes from None; worst S below that=34.643 at L=29758.224609375; tail=False
+  f=0.01 scope=all JY=1 k=60: fails; L1=1821; first S fail=1845.80859375; H closes from 4502.0; worst S below that=2.202 at L=1895.80859375; tail=True
+  f=0.01 scope=all JY=1 k=65: CLOSES; L1=1978; first S fail=None; H closes from 4502.0; worst S below that=0.719 at L=2052.74609375; tail=True
+  f=0.01 scope=all JY=1 k=62: fails; L1=1884; first S fail=1933.53515625; H closes from 4502.0; worst S below that=1.407 at L=1958.53515625; tail=True
+  f=0.01 scope=all JY=1 k=63: fails; L1=1915; first S fail=1989.9228515625; H closes from 4502.0; worst S below that=1.125 at L=1989.9228515625; tail=True
+  f=0.01 scope=all JY=1 k=64: CLOSES; L1=1946; first S fail=None; H closes from 4502.0; worst S below that=0.899 at L=2021.326171875; tail=True
+RESULT f=0.01 scope=all JY=1: smallest k closing (samples) = 64
+  f=0.01 scope=all JY=0.01 k=50: fails; L1=1508; first S fail=1533.224609375; H closes from None; worst S below that=34.643 at L=29758.224609375; tail=False
+  f=0.01 scope=all JY=0.01 k=60: CLOSES; L1=1821; first S fail=None; H closes from 4502.0; worst S below that=0.068 at L=4495.80859375; tail=True
+  f=0.01 scope=all JY=0.01 k=55: CLOSES; L1=1664; first S fail=None; H closes from 5901.0; worst S below that=0.209 at L=4564.2890625; tail=True
+  f=0.01 scope=all JY=0.01 k=52: fails; L1=1571; first S fail=None; H closes from 15208.0; worst S below that=0.722 at L=1720.5927734375; tail=False
+  f=0.01 scope=all JY=0.01 k=53: fails; L1=1602; first S fail=None; H closes from 10136.0; worst S below that=0.439 at L=1726.8056640625; tail=False
+  f=0.01 scope=all JY=0.01 k=54: CLOSES; L1=1633; first S fail=None; H closes from 7733.0; worst S below that=0.281 at L=1758.0380859375; tail=True
+RESULT f=0.01 scope=all JY=0.01: smallest k closing (samples) = 54
+  f=1.5 scope=all JY=1 k=77: CLOSES; L1=2356; first S fail=None; H closes from 6755.0; worst S below that=0.270 at L=6005.9130859375; tail=True
+  f=1.5 scope=all JY=1 k=73: CLOSES; L1=2230; first S fail=None; H closes from 8853.0; worst S below that=0.640 at L=6054.6337890625; tail=True
+  f=1.5 scope=all JY=1 k=71: CLOSES; L1=2167; first S fail=None; H closes from 10136.0; worst S below that=0.987 at L=5891.576171875; tail=True
+  f=1.5 scope=all JY=1 k=70: fails; L1=2135; first S fail=5010.0673828125; H closes from 10136.0; worst S below that=1.224 at L=5810.0673828125; tail=True
+RESULT f=1.5 scope=all JY=1: smallest k closing (samples) = 71
+  f=2 scope=all JY=1 k=77: CLOSES; L1=2356; first S fail=None; H closes from 7733.0; worst S below that=0.360 at L=6005.9130859375; tail=True
+  f=2 scope=all JY=1 k=73: CLOSES; L1=2230; first S fail=None; H closes from 10136.0; worst S below that=0.853 at L=6054.6337890625; tail=True
+  f=2 scope=all JY=1 k=71: fails; L1=2167; first S fail=4541.576171875; H closes from 11604.0; worst S below that=1.316 at L=5891.576171875; tail=True
+  f=2 scope=all JY=1 k=72: fails; L1=2198; first S fail=5248.09765625; H closes from 10136.0; worst S below that=1.062 at L=5973.09765625; tail=True
+RESULT f=2 scope=all JY=1: smallest k closing (samples) = 73
+  f=1 scope=all JY=1 k=78: CLOSES; L1=2388; first S fail=None; H closes from 5901.0; worst S below that=0.428 at L=3712.5166015625; tail=True
+  f=1 scope=all JY=1 k=74: CLOSES; L1=2261; first S fail=None; H closes from 7733.0; worst S below that=0.932 at L=3536.18359375; tail=True
+  f=1 scope=all JY=1 k=72: fails; L1=2198; first S fail=2273.09765625; H closes from 7733.0; worst S below that=1.375 at L=3423.09765625; tail=True
+  f=1 scope=all JY=1 k=73: fails; L1=2230; first S fail=3104.6337890625; H closes from 7733.0; worst S below that=1.132 at L=3479.6337890625; tail=True
+RESULT f=1 scope=all JY=1: smallest k closing (samples) = 74
+  f=1.5 scope=all JY=1 k=80: CLOSES; L1=2451; first S fail=None; H closes from 6755.0; worst S below that=0.435 at L=3825.759765625; tail=True
+  f=1.5 scope=all JY=1 k=75: fails; L1=2293; first S fail=3142.7470703125; H closes from 7733.0; worst S below that=1.151 at L=3567.7470703125; tail=True
+  f=1.5 scope=all JY=1 k=77: CLOSES; L1=2356; first S fail=None; H closes from 6755.0; worst S below that=0.780 at L=3680.9130859375; tail=True
+  f=1.5 scope=all JY=1 k=76: CLOSES; L1=2324; first S fail=None; H closes from 7733.0; worst S below that=0.947 at L=3624.3232421875; tail=True
+RESULT f=1.5 scope=all JY=1: smallest k closing (samples) = 76
+  f=2 scope=all JY=1 k=80: CLOSES; L1=2451; first S fail=None; H closes from 6755.0; worst S below that=0.580 at L=3825.759765625; tail=True
+  f=2 scope=all JY=1 k=75: fails; L1=2293; first S fail=2517.7470703125; H closes from 8853.0; worst S below that=1.535 at L=3567.7470703125; tail=True
+  f=2 scope=all JY=1 k=77: fails; L1=2356; first S fail=3530.9130859375; H closes from 7733.0; worst S below that=1.040 at L=3680.9130859375; tail=True
+  f=2 scope=all JY=1 k=78: CLOSES; L1=2388; first S fail=None; H closes from 7733.0; worst S below that=0.856 at L=3712.5166015625; tail=True
+RESULT f=2 scope=all JY=1: smallest k closing (samples) = 78

@@ -1,0 +1,32 @@
+(a) arc integral vs closed form
+  r=0.02 X=5.0 r1=1/2+r-0.001: arc=5.84997694  closed=5.84070216
+  r=0.02 X=5.0 r1=1/2+r-1e-06: arc=5.84071142  closed=5.84070216
+  r=0.02 X=8.0 r1=1/2+r-0.001: arc=8.73459233  closed=8.72531754
+  r=0.02 X=8.0 r1=1/2+r-1e-06: arc=8.72532680  closed=8.72531754
+  r=0.05 X=5.0 r1=1/2+r-0.001: arc=5.30813161  closed=5.30171266
+  r=0.05 X=5.0 r1=1/2+r-1e-06: arc=5.30171907  closed=5.30171266
+  r=0.05 X=8.0 r1=1/2+r-0.001: arc=8.03540434  closed=8.02898539
+  r=0.05 X=8.0 r1=1/2+r-1e-06: arc=8.02899179  closed=8.02898539
+  r=0.2 X=5.0 r1=1/2+r-0.001: arc=3.92345947  closed=3.92112824
+  r=0.2 X=5.0 r1=1/2+r-1e-06: arc=3.92113057  closed=3.92112824
+  r=0.2 X=8.0 r1=1/2+r-0.001: arc=6.06631661  closed=6.06398539
+  r=0.2 X=8.0 r1=1/2+r-1e-06: arc=6.06398771  closed=6.06398539
+(b) boundary bound
+  max_{|y|<=3} |zeta(1/2+iy)| (grid 1e-3) = 1.460355  (<= 1.461 needed)
+  ell=29.07: eta=0.03440 A_eta=6.6090  HPY range ok=True  PY side condition A e^(105(2/984+eta))=303.03 >= 66.7: True
+  ell=35.35: eta=0.02829 A_eta=8.0368  HPY range ok=True  PY side condition A e^(105(2/984+eta))=193.98 >= 66.7: True
+  ell=40.35: eta=0.02478 A_eta=9.1736  HPY range ok=True  PY side condition A e^(105(2/984+eta))=153.23 >= 66.7: True
+  ell=60.35: eta=0.01657 A_eta=13.7205  HPY range ok=True  PY side condition A e^(105(2/984+eta))=96.75 >= 66.7: True
+  ell=110.35: eta=0.00906 A_eta=25.0880  HPY range ok=True  PY side condition A e^(105(2/984+eta))=80.42 >= 66.7: True
+  ell=170.35: eta=0.00587 A_eta=38.7290  HPY range ok=True  PY side condition A e^(105(2/984+eta))=88.80 >= 66.7: True
+  min over eta>0 of (0.618/(e eta)) e^(105(2/984+eta)) = 80.327 (at eta = 1/105): side condition always holds
+(c) A_eta rounding in lemmaB_weyl
+  log T=28.73: A_eta - 0.618/(e eta) = -5.573e-17  (certainly >= 0: False)
+  log T=29.0: A_eta - 0.618/(e eta) = 2.556e-16  (certainly >= 0: True)
+  log T=35.0: A_eta - 0.618/(e eta) = 4.326e-16  (certainly >= 0: True)
+  log T=40.0: A_eta - 0.618/(e eta) = -8.996e-18  (certainly >= 0: False)
+  log T=80.0: A_eta - 0.618/(e eta) = 4.370e-16  (certainly >= 0: True)
+  log T=110.0: A_eta - 0.618/(e eta) = 4.209e-16  (certainly >= 0: True)
+(d) -J sanity at moderate t (float)
+  t=2000.0 r=0.05: -J = -0.4095   BTZW = 6.0981
+  t=10000.0 r=0.05: -J = -0.3950   BTZW = 6.5096

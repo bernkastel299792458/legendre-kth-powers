@@ -1,0 +1,36 @@
+   check of double-sum code at s=2: zeta(2)Q = 1.0007736384, direct sum_n<=N = 1.0007736284
+U=50 V=2500 X=4.042e+05 Y=8 Delta=3.912 N=1.82e+07
+   brute-force S = 1.322233
+   eps=0.020: ZQ=9.101675  (A1) RHS=11.019798  ratio=1.2107 OK | (A2) with exact ZQ: 9.6320 OK | Lemma A bound: 11.8828 OK
+   eps=0.040: ZQ=4.614768  (A1) RHS=5.459251  ratio=1.1830 OK | (A2) with exact ZQ: 5.2425 OK | Lemma A bound: 6.4380 OK
+   eps=0.060: ZQ=3.150569  (A1) RHS=3.647072  ratio=1.1576 OK | (A2) with exact ZQ: 3.8368 OK | Lemma A bound: 4.6937 OK
+   eps=0.080: ZQ=2.439510  (A1) RHS=2.768417  ratio=1.1348 OK | (A2) with exact ZQ: 3.1746 OK | Lemma A bound: 3.8714 OK
+   eps=0.100: ZQ=2.027891  (A1) RHS=2.260651  ratio=1.1148 OK | (A2) with exact ZQ: 2.8114 OK | Lemma A bound: 3.4198 OK
+   eps=0.130: ZQ=1.666900  (A1) RHS=1.816277  ratio=1.0896 OK | (A2) with exact ZQ: 2.5309 OK | Lemma A bound: 3.0698 OK
+   check of double-sum code at s=2: zeta(2)Q = 1.0002860492, direct sum_n<=N = 1.0002860483
+U=100 V=1e+04 X=3.981e+06 Y=16 Delta=4.605 N=1.79e+08
+   brute-force S = 1.337351
+   eps=0.020: ZQ=8.086276  (A1) RHS=9.506052  ratio=1.1756 OK | (A2) with exact ZQ: 8.7672 OK | Lemma A bound: 10.5112 OK
+   eps=0.040: ZQ=4.096670  (A1) RHS=4.708410  ratio=1.1493 OK | (A2) with exact ZQ: 4.8665 OK | Lemma A bound: 5.8156 OK
+   eps=0.060: ZQ=2.804677  (A1) RHS=3.156874  ratio=1.1256 OK | (A2) with exact ZQ: 3.6355 OK | Lemma A bound: 4.3328 OK
+   eps=0.080: ZQ=2.183460  (A1) RHS=2.412059  ratio=1.1047 OK | (A2) with exact ZQ: 3.0731 OK | Lemma A bound: 3.6547 OK
+   eps=0.100: ZQ=1.828020  (A1) RHS=1.986617  ratio=1.0868 OK | (A2) with exact ZQ: 2.7828 OK | Lemma A bound: 3.3038 OK
+   eps=0.130: ZQ=1.521201  (A1) RHS=1.620098  ratio=1.0650 OK | (A2) with exact ZQ: 2.5939 OK | Lemma A bound: 3.0742 OK
+   check of double-sum code at s=2: zeta(2)Q = 1.0001092076, direct sum_n<=N = 1.0001092074
+U=200 V=4e+04 X=1.771e+07 Y=22.22 Delta=5.298 N=7.97e+08
+   brute-force S = 1.262078
+   eps=0.020: ZQ=7.270170  (A1) RHS=8.347947  ratio=1.1482 OK | (A2) with exact ZQ: 7.9806 OK | Lemma A bound: 9.3446 OK
+   eps=0.040: ZQ=3.683620  (A1) RHS=4.138421  ratio=1.1235 OK | (A2) with exact ZQ: 4.4644 OK | Lemma A bound: 5.2133 OK
+   eps=0.060: ZQ=2.532027  (A1) RHS=2.788643  ratio=1.1013 OK | (A2) with exact ZQ: 3.3624 OK | Lemma A bound: 3.9180 OK
+   eps=0.080: ZQ=1.984325  (A1) RHS=2.147670  ratio=1.0823 OK | (A2) with exact ZQ: 2.8666 OK | Lemma A bound: 3.3349 OK
+   eps=0.100: ZQ=1.674871  (A1) RHS=1.786081  ratio=1.0664 OK | (A2) with exact ZQ: 2.6190 OK | Lemma A bound: 3.0432 OK
+   eps=0.130: ZQ=1.412214  (A1) RHS=1.479708  ratio=1.0478 OK | (A2) with exact ZQ: 2.4758 OK | Lemma A bound: 2.8738 OK
+   check of double-sum code at s=2: zeta(2)Q = 1.0002725122, direct sum_n<=N = 1.0002725118
+U=60 V=2.789e+04 X=7.013e+06 Y=15 Delta=6.142 N=3.16e+08
+   brute-force S = 1.135743
+   eps=0.020: ZQ=6.718848  (A1) RHS=7.524918  ratio=1.1200 OK | (A2) with exact ZQ: 7.1716 OK | Lemma A bound: 8.1731 OK
+   eps=0.040: ZQ=3.485762  (A1) RHS=3.831989  ratio=1.0993 OK | (A2) with exact ZQ: 4.0113 OK | Lemma A bound: 4.5607 OK
+   eps=0.060: ZQ=2.441564  (A1) RHS=2.640602  ratio=1.0815 OK | (A2) with exact ZQ: 3.0194 OK | Lemma A bound: 3.4270 OK
+   eps=0.080: ZQ=1.941140  (A1) RHS=2.070344  ratio=1.0666 OK | (A2) with exact ZQ: 2.5718 OK | Lemma A bound: 2.9157 OK
+   eps=0.100: ZQ=1.655850  (A1) RHS=1.745636  ratio=1.0542 OK | (A2) with exact ZQ: 2.3468 OK | Lemma A bound: 2.6590 OK
+   eps=0.130: ZQ=1.410706  (A1) RHS=1.466983  ratio=1.0399 OK | (A2) with exact ZQ: 2.2138 OK | Lemma A bound: 2.5080 OK

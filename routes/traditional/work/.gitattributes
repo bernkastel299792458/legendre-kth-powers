@@ -1,0 +1,2 @@
+# Preserve exact bytes: v5 certificates record the SHA256 of these inputs and modules.
+* -text

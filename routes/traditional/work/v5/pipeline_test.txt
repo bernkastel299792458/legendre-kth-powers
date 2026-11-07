@@ -1,0 +1,13 @@
+  [base] k=69: fails; L1=2104; first S fail=5728.57421875; H ok from 9352.0; worst S=1.011 at L=5728.57421875
+  [base] k=70: CLOSES; L1=2135; first S fail=None; H ok from 9352.0; worst S=0.816 at L=5810.0673828125
+RESULT [base] min k (samples) = 70
+  [CS] k=67: fails; L1=2041; first S fail=5090.6298828125; H ok from 13176.0; worst S=1.088 at L=5290.6298828125
+  [CS] k=68: CLOSES; L1=2072; first S fail=None; H ok from 11100.0; worst S=0.879 at L=5372.0947265625
+RESULT [CS] min k (samples) = 68
+[k68_CS_unaudited] k=68 L1=2121825/1024 (2072.095); numeric facts OK
+[k68_CS_unaudited] Lemma T verified for L >= 100000000
+[k68_CS_unaudited] H: covered down to 9893.559; using [2532751/256, 100000000], 11973 pieces, max delta 1.000000
+[k68_CS_unaudited] S: 2935 pieces cover [2121825/1024, 2532751/256], max delta 0.881623
+[k68_CS_unaudited] CHAIN GENERATED k=68: L1=2121825/1024, L2=2532751/256, L3=100000000
+[k68_CS_unaudited] k=68: S 2935 pieces [2072.095, 9893.559] max delta (pure Arb) 0.881623; H 11973 pieces up to 100000000, max delta 1.000000
+[k68_CS_unaudited] CHAIN VERIFIED

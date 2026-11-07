@@ -1,0 +1,9 @@
+(B) NON-RIGOROUS float values (composite Gauss-Legendre, step 1/8, 8 nodes)
+  (492s)
+  T=   3000  M2(T)~7.0312763e+05  int_0^T P2=7.0136839e+05  diff=1.759e+03  CS(main4thPM1) bound=6.8580e+07  CS(row1e4) bound=nan
+  T=   5000  M2(T)~1.4897398e+06  int_0^T P2=1.4975725e+06  diff=-7.833e+03  CS(main4thPM1) bound=1.4266e+08  CS(row1e4) bound=nan
+  T=   6000  M2(T)~1.9527636e+06  int_0^T P2=1.9559164e+06  diff=-3.153e+03  CS(main4thPM1) bound=1.8501e+08  CS(row1e4) bound=nan
+  T=  10000  M2(T)~4.0856119e+06  int_0^T P2=4.0939276e+06  diff=-8.316e+03  CS(main4thPM1) bound=3.8095e+08  CS(row1e4) bound=1.7487e+09
+  T=  20000  M2(T)~1.0927436e+07  int_0^T P2=1.0932335e+07  diff=-4.899e+03  CS(main4thPM1) bound=9.9927e+08  CS(row1e4) bound=2.3135e+09
+  M2(1e4,2e4) ~ 6.841824e+06  (paper bound 9.9857e8);  M2(1e4) ~ 4.085612e+06 (paper bound 3.8095e8)
+  M2(3e3,6e3) ~ 1.249636e+06 ; M2(3e3) ~ 7.031276e+05

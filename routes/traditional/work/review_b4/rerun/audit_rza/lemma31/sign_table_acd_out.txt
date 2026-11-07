@@ -1,0 +1,16 @@
+sanity: zd(1) = [0.577215664901533 +/- 1.40e-16]  gamma = [0.577215664901533 +/- 1.40e-16]  zd(1.1) = [0.584448464950810 +/- 1.74e-16]  zeta(1.1)-10 = [0.584448464950810 +/- 1.74e-16]
+tasks: 242 cases: 323
+  progress 0/242  1s
+  progress 50/242  2s
+  progress 100/242  2s
+  progress 150/242  2s
+  progress 200/242  3s
+[a] X<10.9, e in [0,4/25], all q: Delta/X^e <= 0
+    CERTIFIED : 91 cases, 520 cells; max certified upper bound -7.21303519253e-7 at (N,q,X*)=(10, 1, '109/10'); max point value (lower bd) -3.39417124153e-6 at (10, 1, '109/10')
+[c] X<=47, (q,P43)=1, e in [0,1]: Delta/X^e <= 0.014
+    CERTIFIED : 47 cases, 1508 cells; max certified upper bound 0.0139698644983 at (N,q,X*)=(47, 1, '47'); max point value (lower bd) 0.00302134004254 at (29, 1, '30')
+[c_tight] X<=47, (q,P43)=1, e in [0,1]: Delta/X^e <= 0.0031
+    CERTIFIED : 47 cases, 2219 cells; max certified upper bound 0.00309944626785 at (N,q,X*)=(20, 1, '20'); max point value (lower bd) 0.00302134004254 at (30, 1, '30')
+[d0] X<47, (q,P43) in {11,13,17}, e in [0,1]: Delta/X^e <= 0 (stronger than 0.00005)
+    CERTIFIED : 138 cases, 7479 cells; max certified upper bound -1.51077463158e-7 at (N,q,X*)=(33, 11, '33'); max point value (lower bd) -8.42164788031e-5 at (42, 13, '43')
+total time 5s

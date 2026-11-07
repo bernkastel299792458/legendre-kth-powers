@@ -1,0 +1,16 @@
+rza: Tail0=0.0619451185798 Bulk0=0.453929416779 Bulk1=0.459815861394 F(0+)=0.515874535359
+    grid sup F = 0.515874535359 at eps=1.0e-14 ; F(eps0) = 0.42585143 ; F(1e-3)=0.50932073 F(1e-2)=0.46212556
+    slope dF/deps near 1e-6: -6.45988
+    robustness no G-term (9.1 -> 0)     sup 0.5158745354 at eps=1.0e-14
+    robustness T4 x2                    sup 0.5158745354 at eps=1.0e-14
+    robustness T4 x2, T5 x10, T6 x10    sup 0.570948751 at eps=0.0227
+    robustness Hoelder lambda x3        sup 0.5158745354 at eps=1.0e-14
+    robustness T4 x3                    sup 0.6010795508 at eps=0.0227
+hf: Tail0=0.0612793846876 Bulk0=0.45481176789 Bulk1=0.46072426462 F(0+)=0.516091152578
+    grid sup F = 0.516091152578 at eps=1.0e-14 ; F(eps0) = 0.42570084 ; F(1e-3)=0.50948442 F(1e-2)=0.4621111
+    slope dF/deps near 1e-6: -6.60306
+    robustness no G-term (9.1 -> 0)     sup 0.5160911526 at eps=1.0e-14
+    robustness T4 x2                    sup 0.5160911526 at eps=1.0e-14
+    robustness T4 x2, T5 x10, T6 x10    sup 0.5704249273 at eps=0.0227
+    robustness Hoelder lambda x3        sup 0.5160911526 at eps=1.0e-14
+    robustness T4 x3                    sup 0.6009289559 at eps=0.0227

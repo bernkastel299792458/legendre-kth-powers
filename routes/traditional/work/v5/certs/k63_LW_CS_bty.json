@@ -1,0 +1,21 @@
+{
+ "config": {
+  "CS": "1",
+  "ROWS": "",
+  "ROWS_KEEP_ORIG": "1",
+  "BANDS": "inputs/zfr_local_v1.csv",
+  "Z1": "4.896",
+  "Z2": "21.233",
+  "Z3": "54.004",
+  "KLN": "17.418,2.231",
+  "MS": "2,3",
+  "L3": "100000000",
+  "TAG": ""
+ },
+ "sha256": {
+  "inputs/zfr_local_v1.csv": "45b22a982d005b823ad606c8b98d893d91a4764e28776154f920895fadf0584c",
+  "D:\\UGit\\AI4Math\\legendre_k67\\work\\v5\\phi5.py": "30b21195cd602a4f7da7db6f9af873c7da98ff94aeb94b3d1ac2da6f26857f80",
+  "D:\\UGit\\AI4Math\\legendre_k67\\work\\v5\\rig5.py": "10a03608b208aa028fa254b252e3050fa643f95f9f1ffdc511f527d32cc08f71",
+  "D:\\UGit\\AI4Math\\legendre_k67\\work\\v5\\cfg5.py": "c3986da242d6cfbaf191c433f3c59537f6359a4518bb8c4fb809200f7555637a"
+ }
+}

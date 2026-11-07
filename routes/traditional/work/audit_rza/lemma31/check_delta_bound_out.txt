@@ -1,0 +1,22 @@
+sieve done
+q=1   eps=0.0001   max|D|/bound_L = 0.2142 at X=1 ; max|D|/bound_I = 0.4142 at X=1 ; max ratio_L for X>=1e5: 0.0033
+q=1   eps=0.01     max|D|/bound_L = 0.2114 at X=1 ; max|D|/bound_I = 0.4093 at X=1 ; max ratio_L for X>=1e5: 0.0033
+q=1   eps=0.04     max|D|/bound_L = 0.2031 at X=1 ; max|D|/bound_I = 0.3949 at X=1 ; max ratio_L for X>=1e5: 0.0032
+q=1   eps=0.1      max|D|/bound_L = 0.1874 at X=1 ; max|D|/bound_I = 0.3673 at X=1 ; max ratio_L for X>=1e5: 0.0030
+q=2   eps=0.0001   max|D|/bound_L = 0.2086 at X=1 ; max|D|/bound_I = 0.2426 at X=1 ; max ratio_L for X>=1e5: 0.0014
+q=2   eps=0.01     max|D|/bound_L = 0.2043 at X=1 ; max|D|/bound_I = 0.2381 at X=1 ; max ratio_L for X>=1e5: 0.0014
+q=2   eps=0.04     max|D|/bound_L = 0.1921 at X=1 ; max|D|/bound_I = 0.2252 at X=1 ; max ratio_L for X>=1e5: 0.0014
+q=2   eps=0.1      max|D|/bound_L = 0.1701 at X=1 ; max|D|/bound_I = 0.2017 at X=1 ; max ratio_L for X>=1e5: 0.0013
+q=3   eps=0.0001   max|D|/bound_L = 0.1358 at X=1 ; max|D|/bound_I = 0.2626 at X=1 ; max ratio_L for X>=1e5: 0.0011
+q=3   eps=0.01     max|D|/bound_L = 0.1333 at X=1 ; max|D|/bound_I = 0.2581 at X=1 ; max ratio_L for X>=1e5: 0.0011
+q=3   eps=0.04     max|D|/bound_L = 0.1260 at X=1 ; max|D|/bound_I = 0.2451 at X=1 ; max ratio_L for X>=1e5: 0.0010
+q=3   eps=0.1      max|D|/bound_L = 0.1129 at X=1 ; max|D|/bound_I = 0.2214 at X=1 ; max ratio_L for X>=1e5: 0.0010
+q=6   eps=0.0001   max|D|/bound_L = 0.1322 at X=1 ; max|D|/bound_I = 0.1589 at X=2 ; max ratio_L for X>=1e5: 0.0034
+q=6   eps=0.01     max|D|/bound_L = 0.1288 at X=1 ; max|D|/bound_I = 0.1555 at X=2 ; max ratio_L for X>=1e5: 0.0033
+q=6   eps=0.04     max|D|/bound_L = 0.1192 at X=1 ; max|D|/bound_I = 0.1458 at X=2 ; max ratio_L for X>=1e5: 0.0031
+q=6   eps=0.1      max|D|/bound_L = 0.1025 at X=1 ; max|D|/bound_I = 0.1286 at X=2 ; max ratio_L for X>=1e5: 0.0028
+q=30  eps=0.0001   max|D|/bound_L = 0.0914 at X=1 ; max|D|/bound_I = 0.1264 at X=5 ; max ratio_L for X>=1e5: 0.0080
+q=30  eps=0.01     max|D|/bound_L = 0.0890 at X=3 ; max|D|/bound_I = 0.1236 at X=5 ; max ratio_L for X>=1e5: 0.0079
+q=30  eps=0.04     max|D|/bound_L = 0.0824 at X=4 ; max|D|/bound_I = 0.1155 at X=5 ; max ratio_L for X>=1e5: 0.0074
+q=30  eps=0.1      max|D|/bound_L = 0.0713 at X=4 ; max|D|/bound_I = 0.1013 at X=5 ; max ratio_L for X>=1e5: 0.0066
+all ratios < 1: True

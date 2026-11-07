@@ -1,0 +1,4 @@
+X>=1e12 eps<=1/25  Theta=0.5246 | lam=2: sup=0.5254 at eps=0.0000 | lam=4: sup=0.5254 at eps=0.0000 | lam=6: sup=0.5254 at eps=0.0000 | lam=10: sup=0.5294 at eps=0.0080
+X>=1e12 eps<=1/44  Theta=0.5246 | lam=2: sup=0.5254 at eps=0.0000 | lam=4: sup=0.5254 at eps=0.0000 | lam=6: sup=0.5254 at eps=0.0000 | lam=10: sup=0.5294 at eps=0.0080
+X>=3e12 eps<=1/25  Theta=0.5159 | lam=2: sup=0.5166 at eps=0.0000 | lam=4: sup=0.5166 at eps=0.0000 | lam=6: sup=0.5166 at eps=0.0000 | lam=10: sup=0.5181 at eps=0.0047
+X>=3e12 eps<=1/44  Theta=0.5159 | lam=2: sup=0.5166 at eps=0.0000 | lam=4: sup=0.5166 at eps=0.0000 | lam=6: sup=0.5166 at eps=0.0000 | lam=10: sup=0.5181 at eps=0.0046

@@ -1,0 +1,400 @@
+RO0003 [28.7296,29] a0=0.9927 lam=13.308 C_csv=5912.95 C_ref=5895.56 ratio=0.99706 ok
+RO0007 [28.7296,29] a0=0.985 lam=10.647 C_csv=14211.3 C_ref=14213.7 ratio=1.00017 FAIL C_csv < C_ref
+RO0011 [28.7296,29] a0=0.98 lam=9.394 C_csv=13133.0 C_ref=13156.8 ratio=1.00181 FAIL C_csv < C_ref
+RO0015 [28.7296,29] a0=0.98 lam=9.394 C_csv=7227.23 C_ref=7229.3 ratio=1.00029 FAIL C_csv < C_ref
+RO0019 [28.7296,29] a0=0.9927 lam=12.847 C_csv=4191.60 C_ref=4177.25 ratio=0.99658 ok
+RO0023 [28.7296,29] a0=0.985 lam=10.047 C_csv=7207.21 C_ref=7194.58 ratio=0.99825 ok
+RO0027 [28.7296,29] a0=0.98 lam=9.377 C_csv=15204.3 C_ref=15232.8 ratio=1.00187 FAIL C_csv < C_ref
+RO0031 [29,30] a0=0.9927 lam=13.434 C_csv=7483.19 C_ref=7464.36 ratio=0.99748 ok
+RO0035 [29,30] a0=0.9927 lam=13.434 C_csv=4638.78 C_ref=4594.09 ratio=0.99037 ok
+RO0039 [29,30] a0=0.985 lam=10.747 C_csv=6807.01 C_ref=6788.5 ratio=0.99728 ok
+RO0043 [29,30] a0=0.98 lam=9.482 C_csv=10253.2 C_ref=10266.1 ratio=1.00126 FAIL C_csv < C_ref
+RO0047 [29,30] a0=0.9927 lam=12.908 C_csv=8554.95 C_ref=8528.12 ratio=0.99686 ok
+RO0051 [29,30] a0=0.985 lam=10.142 C_csv=9196.41 C_ref=9187.4 ratio=0.99902 ok
+RO0055 [29,30] a0=0.985 lam=10.142 C_csv=6452.64 C_ref=6419.9 ratio=0.99493 ok
+RO0059 [29,30] a0=0.98 lam=9.466 C_csv=7164.29 C_ref=7139.81 ratio=0.99658 ok
+RO0063 [30,31] a0=0.9925 lam=13.897 C_csv=6374.31 C_ref=6335.59 ratio=0.99393 ok
+RO0067 [30,31] a0=0.985 lam=11.117 C_csv=15643.9 C_ref=15646.1 ratio=1.00014 FAIL C_csv < C_ref
+RO0071 [30,31] a0=0.98 lam=9.809 C_csv=14206.5 C_ref=14234.6 ratio=1.00198 FAIL C_csv < C_ref
+RO0075 [30,31] a0=0.98 lam=9.809 C_csv=7201.10 C_ref=7203.22 ratio=1.00029 FAIL C_csv < C_ref
+RO0079 [30,31] a0=0.9925 lam=13.353 C_csv=4511.14 C_ref=4465.02 ratio=0.98978 ok
+RO0083 [30,31] a0=0.985 lam=10.491 C_csv=7674.59 C_ref=7662.58 ratio=0.99843 ok
+RO0087 [30,31] a0=0.98 lam=9.792 C_csv=16763.7 C_ref=16799.9 ratio=1.00216 FAIL C_csv < C_ref
+RO0091 [31,32] a0=0.9923 lam=13.255 C_csv=8841.08 C_ref=8819.03 ratio=0.99751 ok
+RO0095 [31,32] a0=0.9923 lam=13.255 C_csv=4637.89 C_ref=4624.3 ratio=0.99707 ok
+RO0099 [31,32] a0=0.985 lam=10.770 C_csv=7576.72 C_ref=7558.12 ratio=0.99754 ok
+RO0103 [31,32] a0=0.98 lam=9.573 C_csv=11651.4 C_ref=11668.3 ratio=1.00145 FAIL C_csv < C_ref
+RO0107 [31,32] a0=0.9923 lam=13.798 C_csv=10444.8 C_ref=10413.1 ratio=0.99697 ok
+RO0111 [31,32] a0=0.985 lam=10.118 C_csv=10687.5 C_ref=10677.8 ratio=0.99909 ok
+RO0115 [31,32] a0=0.985 lam=10.118 C_csv=6356.94 C_ref=6345.92 ratio=0.99827 ok
+RO0119 [31,32] a0=0.98 lam=8.928 C_csv=7950.53 C_ref=7952.9 ratio=1.00030 FAIL C_csv < C_ref
+RO0123 [32,33] a0=0.9921 lam=13.683 C_csv=7364.17 C_ref=7338.21 ratio=0.99648 ok
+RO0127 [32,33] a0=0.985 lam=11.117 C_csv=19047.8 C_ref=19057 ratio=1.00048 FAIL C_csv < C_ref
+RO0131 [32,33] a0=0.98 lam=9.362 C_csv=16689.4 C_ref=16730.2 ratio=1.00244 FAIL C_csv < C_ref
+RO0135 [32,33] a0=0.98 lam=9.882 C_csv=7160.77 C_ref=7162.17 ratio=1.00020 FAIL C_csv < C_ref
+RO0139 [32,33] a0=0.9921 lam=13.056 C_csv=5076.76 C_ref=5060.96 ratio=0.99689 ok
+RO0143 [32,33] a0=0.985 lam=10.445 C_csv=8743.20 C_ref=8719.18 ratio=0.99725 ok
+RO0147 [32,33] a0=0.98 lam=9.792 C_csv=20503.0 C_ref=20558.5 ratio=1.00271 FAIL C_csv < C_ref
+RO0151 [33,34] a0=0.9919 lam=13.103 C_csv=10524.5 C_ref=10511 ratio=0.99872 ok
+RO0155 [33,34] a0=0.9919 lam=14.111 C_csv=4755.49 C_ref=4687.75 ratio=0.98575 ok
+RO0159 [33,34] a0=0.985 lam=10.805 C_csv=8403.84 C_ref=8399.22 ratio=0.99945 ok
+RO0163 [33,34] a0=0.98 lam=9.655 C_csv=13266.2 C_ref=13291.4 ratio=1.00190 FAIL C_csv < C_ref
+RO0167 [33,34] a0=0.9919 lam=13.464 C_csv=12869.1 C_ref=12843.9 ratio=0.99804 ok
+RO0171 [33,34] a0=0.985 lam=10.771 C_csv=12477.1 C_ref=12467.3 ratio=0.99921 ok
+RO0175 [33,34] a0=0.985 lam=10.771 C_csv=6178.27 C_ref=6166.75 ratio=0.99814 ok
+RO0179 [33,34] a0=0.98 lam=9.504 C_csv=8846.25 C_ref=8848.61 ratio=1.00027 FAIL C_csv < C_ref
+RO0183 [34,35] a0=0.9918 lam=13.500 C_csv=8359.69 C_ref=8333.36 ratio=0.99685 ok
+RO0187 [34,35] a0=0.985 lam=11.117 C_csv=22834.9 C_ref=22853.6 ratio=1.00082 FAIL C_csv < C_ref
+RO0191 [34,35] a0=0.98 lam=9.450 C_csv=19287.2 C_ref=19343.3 ratio=1.00291 FAIL C_csv < C_ref
+RO0195 [34,35] a0=0.98 lam=9.450 C_csv=7189.50 C_ref=7172.47 ratio=0.99763 ok
+RO0199 [34,35] a0=0.9918 lam=12.805 C_csv=5682.19 C_ref=5634.05 ratio=0.99153 ok
+RO0203 [34,35] a0=0.985 lam=10.404 C_csv=9786.50 C_ref=9775.97 ratio=0.99892 ok
+RO0207 [34,35] a0=0.98 lam=9.248 C_csv=24679.9 C_ref=24763 ratio=1.00337 FAIL C_csv < C_ref
+RO0211 [35,36] a0=0.9916 lam=12.970 C_csv=12107.9 C_ref=12092.3 ratio=0.99871 ok
+RO0215 [35,36] a0=0.9916 lam=12.970 C_csv=4731.00 C_ref=4720.68 ratio=0.99782 ok
+RO0219 [35,36] a0=0.985 lam=10.809 C_csv=9210.03 C_ref=9191.86 ratio=0.99803 ok
+RO0223 [35,36] a0=0.98 lam=9.728 C_csv=14783.3 C_ref=14813.1 ratio=1.00202 FAIL C_csv < C_ref
+RO0227 [35,36] a0=0.9916 lam=13.182 C_csv=15397.0 C_ref=15376.3 ratio=0.99865 ok
+RO0231 [35,36] a0=0.985 lam=10.710 C_csv=14228.0 C_ref=14220.6 ratio=0.99948 ok
+RO0235 [35,36] a0=0.985 lam=10.710 C_csv=6264.04 C_ref=6253.17 ratio=0.99827 ok
+RO0239 [35,36] a0=0.98 lam=9.520 C_csv=9664.37 C_ref=9668.65 ratio=1.00044 FAIL C_csv < C_ref
+RO0243 [36,37] a0=0.9914 lam=13.341 C_csv=9545.77 C_ref=9525.59 ratio=0.99789 ok
+RO0247 [36,37] a0=0.985 lam=11.117 C_csv=27648.5 C_ref=27680.1 ratio=1.00114 FAIL C_csv < C_ref
+RO0251 [36,37] a0=0.98 lam=9.529 C_csv=22406.0 C_ref=22472.1 ratio=1.00295 FAIL C_csv < C_ref
+RO0255 [36,37] a0=0.98 lam=9.529 C_csv=6973.49 C_ref=6974.78 ratio=1.00019 FAIL C_csv < C_ref
+RO0259 [36,37] a0=0.9914 lam=12.590 C_csv=6354.63 C_ref=6304.23 ratio=0.99207 ok
+RO0263 [36,37] a0=0.985 lam=10.368 C_csv=10992.3 C_ref=10982.8 ratio=0.99914 ok
+RO0267 [36,37] a0=0.98 lam=9.277 C_csv=30055.6 C_ref=30179.6 ratio=1.00413 FAIL C_csv < C_ref
+RO0271 [37,38] a0=0.9912 lam=12.854 C_csv=14434.4 C_ref=14419.9 ratio=0.99899 ok
+RO0275 [37,38] a0=0.9912 lam=12.854 C_csv=4782.57 C_ref=4772.76 ratio=0.99795 ok
+RO0279 [37,38] a0=0.985 lam=10.825 C_csv=10220.3 C_ref=10209.4 ratio=0.99893 ok
+RO0283 [37,38] a0=0.98 lam=9.794 C_csv=16839.2 C_ref=16876.1 ratio=1.00219 FAIL C_csv < C_ref
+RO0287 [37,38] a0=0.9912 lam=12.939 C_csv=19282.2 C_ref=19260.3 ratio=0.99887 ok
+RO0291 [37,38] a0=0.985 lam=10.656 C_csv=16698.7 C_ref=16694.5 ratio=0.99975 ok
+RO0295 [37,38] a0=0.985 lam=10.656 C_csv=6240.15 C_ref=6229.69 ratio=0.99832 ok
+RO0299 [37,38] a0=0.98 lam=9.534 C_csv=10740.6 C_ref=10747.5 ratio=1.00064 FAIL C_csv < C_ref
+RO0303 [38,39] a0=0.9910 lam=13.202 C_csv=10913.4 C_ref=10898.7 ratio=0.99866 ok
+RO0307 [38,39] a0=0.985 lam=11.117 C_csv=33820.4 C_ref=33866.3 ratio=1.00136 FAIL C_csv < C_ref
+RO0311 [38,39] a0=0.98 lam=9.601 C_csv=26131.8 C_ref=26215.7 ratio=1.00321 FAIL C_csv < C_ref
+RO0315 [38,39] a0=0.98 lam=9.601 C_csv=7047.62 C_ref=7048.57 ratio=1.00013 FAIL C_csv < C_ref
+RO0319 [38,39] a0=0.9910 lam=12.403 C_csv=7068.48 C_ref=7052.69 ratio=0.99777 ok
+RO0323 [38,39] a0=0.985 lam=10.336 C_csv=12361.4 C_ref=12353.4 ratio=0.99935 ok
+RO0327 [38,39] a0=0.98 lam=9.302 C_csv=37037.1 C_ref=37201.3 ratio=1.00443 FAIL C_csv < C_ref
+RO0331 [39,40] a0=0.9909 lam=12.867 C_csv=16455.7 C_ref=16438 ratio=0.99893 ok
+RO0335 [39,40] a0=0.9909 lam=12.752 C_csv=4822.42 C_ref=4813.07 ratio=0.99806 ok
+RO0339 [39,40] a0=0.985 lam=10.839 C_csv=11044.0 C_ref=11039 ratio=0.99955 ok
+RO0343 [39,40] a0=0.98 lam=9.854 C_csv=18579.6 C_ref=18619 ratio=1.00212 FAIL C_csv < C_ref
+RO0347 [39,40] a0=0.9909 lam=12.730 C_csv=23049.4 C_ref=23037.2 ratio=0.99947 ok
+RO0351 [39,40] a0=0.985 lam=10.608 C_csv=18897.2 C_ref=18896.7 ratio=0.99998 ok
+RO0355 [39,40] a0=0.985 lam=10.608 C_csv=6233.38 C_ref=6223.48 ratio=0.99841 ok
+RO0359 [39,40] a0=0.98 lam=9.547 C_csv=11617.0 C_ref=11626 ratio=1.00078 FAIL C_csv < C_ref
+RO0363 [40,41] a0=0.9907 lam=13.079 C_csv=12100.8 C_ref=12087.1 ratio=0.99886 ok
+RO0367 [40,41] a0=0.985 lam=10.588 C_csv=39802.0 C_ref=39881.5 ratio=1.00200 FAIL C_csv < C_ref
+RO0371 [40,41] a0=0.98 lam=9.667 C_csv=29479.4 C_ref=29579.6 ratio=1.00340 FAIL C_csv < C_ref
+RO0375 [40,41] a0=0.98 lam=9.667 C_csv=6769.40 C_ref=6769.89 ratio=1.00007 FAIL C_csv < C_ref
+RO0379 [40,41] a0=0.9907 lam=12.240 C_csv=7695.96 C_ref=7680.57 ratio=0.99800 ok
+RO0383 [40,41] a0=0.985 lam=10.880 C_csv=13530.6 C_ref=13522.1 ratio=0.99937 ok
+RO0387 [40,41] a0=0.98 lam=9.792 C_csv=43881.2 C_ref=44077 ratio=1.00446 FAIL C_csv < C_ref
+RO0391 [41,42] a0=0.9906 lam=12.661 C_csv=18780.4 C_ref=18769.8 ratio=0.99943 ok
+RO0395 [41,42] a0=0.9906 lam=12.661 C_csv=4865.27 C_ref=4856.34 ratio=0.99816 ok
+RO0399 [41,42] a0=0.985 lam=10.853 C_csv=11858.1 C_ref=11848.4 ratio=0.99918 ok
+RO0403 [41,42] a0=0.98 lam=9.909 C_csv=20324.0 C_ref=20370.3 ratio=1.00228 FAIL C_csv < C_ref
+RO0407 [41,42] a0=0.9906 lam=12.546 C_csv=27382.6 C_ref=27371.3 ratio=0.99959 ok
+RO0411 [41,42] a0=0.985 lam=11.152 C_csv=21231.1 C_ref=21232 ratio=1.00004 FAIL C_csv < C_ref
+RO0415 [41,42] a0=0.985 lam=10.565 C_csv=6181.04 C_ref=6171.66 ratio=0.99848 ok
+RO0419 [41,42] a0=0.98 lam=9.559 C_csv=12487.0 C_ref=12484.1 ratio=0.99977 ok
+RO0423 [42,43] a0=0.9905 lam=12.992 C_csv=13156.3 C_ref=13149.8 ratio=0.99951 ok
+RO0427 [42,43] a0=0.985 lam=10.612 C_csv=46118.9 C_ref=46215.1 ratio=1.00209 FAIL C_csv < C_ref
+RO0431 [42,43] a0=0.98 lam=9.728 C_csv=32763.8 C_ref=32888.1 ratio=1.00380 FAIL C_csv < C_ref
+RO0435 [42,43] a0=0.98 lam=9.728 C_csv=7687.98 C_ref=7654.88 ratio=0.99569 ok
+RO0439 [42,43] a0=0.9905 lam=12.852 C_csv=8253.81 C_ref=8237.65 ratio=0.99804 ok
+RO0443 [42,43] a0=0.985 lam=10.823 C_csv=14626.1 C_ref=14622.5 ratio=0.99975 ok
+RO0447 [42,43] a0=0.98 lam=9.347 C_csv=51096.5 C_ref=51371.5 ratio=1.00538 FAIL C_csv < C_ref
+RO0451 [43,44] a0=0.9903 lam=12.580 C_csv=21392.5 C_ref=21384.9 ratio=0.99965 ok
+RO0455 [43,44] a0=0.9903 lam=13.279 C_csv=4901.57 C_ref=4892.52 ratio=0.99815 ok
+RO0459 [43,44] a0=0.985 lam=10.865 C_csv=12723.6 C_ref=12714.7 ratio=0.99930 ok
+RO0463 [43,44] a0=0.98 lam=9.959 C_csv=22255.7 C_ref=22307.8 ratio=1.00234 FAIL C_csv < C_ref
+RO0467 [43,44] a0=0.9903 lam=12.384 C_csv=32791.4 C_ref=32786.7 ratio=0.99986 ok
+RO0471 [43,44] a0=0.985 lam=10.526 C_csv=23870.8 C_ref=23879.7 ratio=1.00037 FAIL C_csv < C_ref
+RO0475 [43,44] a0=0.985 lam=10.526 C_csv=6172.05 C_ref=6163.12 ratio=0.99855 ok
+RO0479 [43,44] a0=0.98 lam=9.569 C_csv=13392.1 C_ref=13405.2 ratio=1.00098 FAIL C_csv < C_ref
+RO0483 [44,45] a0=0.9901 lam=12.873 C_csv=14882.3 C_ref=14873.1 ratio=0.99938 ok
+RO0487 [44,45] a0=0.985 lam=11.117 C_csv=56387.5 C_ref=56519.1 ratio=1.00233 FAIL C_csv < C_ref
+RO0491 [44,45] a0=0.98 lam=9.783 C_csv=37784.3 C_ref=37928.4 ratio=1.00381 FAIL C_csv < C_ref
+RO0495 [44,45] a0=0.98 lam=9.783 C_csv=7011.09 C_ref=7011.57 ratio=1.00007 FAIL C_csv < C_ref
+RO0499 [44,45] a0=0.9901 lam=12.672 C_csv=9105.21 C_ref=9088.92 ratio=0.99821 ok
+RO0503 [44,45] a0=0.985 lam=10.771 C_csv=16216.0 C_ref=16211 ratio=0.99969 ok
+RO0507 [44,45] a0=0.98 lam=9.366 C_csv=63083.7 C_ref=63452.4 ratio=1.00584 FAIL C_csv < C_ref
+RO0511 [45,46] a0=0.9900 lam=12.507 C_csv=24276.3 C_ref=24272.2 ratio=0.99983 ok
+RO0515 [45,46] a0=0.9900 lam=13.165 C_csv=4956.53 C_ref=4947.84 ratio=0.99825 ok
+RO0519 [45,46] a0=0.985 lam=10.876 C_csv=13589.2 C_ref=13585.1 ratio=0.99970 ok
+RO0523 [45,46] a0=0.98 lam=10.006 C_csv=24251.4 C_ref=24316.1 ratio=1.00267 FAIL C_csv < C_ref
+RO0527 [45,46] a0=0.9900 lam=12.240 C_csv=39247.5 C_ref=39254.2 ratio=1.00017 FAIL C_csv < C_ref
+RO0531 [45,46] a0=0.985 lam=10.491 C_csv=26762.6 C_ref=26777.5 ratio=1.00056 FAIL C_csv < C_ref
+RO0535 [45,46] a0=0.985 lam=10.491 C_csv=6149.06 C_ref=6140.57 ratio=0.99862 ok
+RO0539 [45,46] a0=0.98 lam=9.579 C_csv=14317.4 C_ref=14332.6 ratio=1.00106 FAIL C_csv < C_ref
+RO0543 [46,47] a0=0.9899 lam=12.755 C_csv=16192.1 C_ref=16182.1 ratio=0.99938 ok
+RO0547 [46,47] a0=0.985 lam=11.092 C_csv=66144.0 C_ref=66333.8 ratio=1.00287 FAIL C_csv < C_ref
+RO0551 [46,47] a0=0.98 lam=9.812 C_csv=42077.8 C_ref=42254.6 ratio=1.00420 FAIL C_csv < C_ref
+RO0555 [46,47] a0=0.98 lam=9.812 C_csv=7017.97 C_ref=7005.36 ratio=0.99820 ok
+RO0559 [46,47] a0=0.9899 lam=12.512 C_csv=9757.16 C_ref=9741.68 ratio=0.99841 ok
+RO0563 [46,47] a0=0.985 lam=10.725 C_csv=17539.0 C_ref=17539.8 ratio=1.00005 FAIL C_csv < C_ref
+RO0567 [46,47] a0=0.98 lam=9.384 C_csv=74806.7 C_ref=75278.9 ratio=1.00631 FAIL C_csv < C_ref
+RO0571 [47,48] a0=0.9899 lam=12.960 C_csv=24548.1 C_ref=24548 ratio=0.99999 ok
+RO0575 [47,48] a0=0.9899 lam=12.960 C_csv=4965.29 C_ref=4938.32 ratio=0.99457 ok
+RO0579 [47,48] a0=0.985 lam=10.800 C_csv=13547.6 C_ref=13547.4 ratio=0.99998 ok
+RO0583 [47,48] a0=0.98 lam=9.969 C_csv=24236.2 C_ref=24294.4 ratio=1.00240 FAIL C_csv < C_ref
+RO0587 [47,48] a0=0.9899 lam=12.111 C_csv=40537.5 C_ref=40550.6 ratio=1.00032 FAIL C_csv < C_ref
+RO0591 [47,48] a0=0.985 lam=10.460 C_csv=27165.5 C_ref=27187.1 ratio=1.00079 FAIL C_csv < C_ref
+RO0595 [47,48] a0=0.985 lam=10.460 C_csv=6125.30 C_ref=6067.12 ratio=0.99050 ok
+RO0599 [47,48] a0=0.98 lam=9.588 C_csv=14402.7 C_ref=14417.6 ratio=1.00103 FAIL C_csv < C_ref
+RO0603 [48,49] a0=0.9899 lam=12.537 C_csv=14901.6 C_ref=14893.9 ratio=0.99948 ok
+RO0607 [48,49] a0=0.985 lam=10.970 C_csv=56818.9 C_ref=56953.9 ratio=1.00238 FAIL C_csv < C_ref
+RO0611 [48,49] a0=0.98 lam=9.751 C_csv=37495.8 C_ref=37634.4 ratio=1.00370 FAIL C_csv < C_ref
+RO0615 [48,49] a0=0.98 lam=9.751 C_csv=7023.31 C_ref=7011.16 ratio=0.99827 ok
+RO0619 [48,49] a0=0.9899 lam=12.369 C_csv=9261.78 C_ref=9208.94 ratio=0.99429 ok
+RO0623 [48,49] a0=0.985 lam=10.682 C_csv=16308.5 C_ref=16304 ratio=0.99973 ok
+RO0627 [48,49] a0=0.98 lam=9.792 C_csv=64471.2 C_ref=64814.2 ratio=1.00532 FAIL C_csv < C_ref
+RO0631 [49,50] a0=0.9899 lam=12.730 C_csv=22247.4 C_ref=22239.9 ratio=0.99966 ok
+RO0635 [49,50] a0=0.9899 lam=12.730 C_csv=4856.90 C_ref=4848.97 ratio=0.99837 ok
+RO0639 [49,50] a0=0.985 lam=11.139 C_csv=12655.0 C_ref=12652.6 ratio=0.99981 ok
+RO0643 [49,50] a0=0.98 lam=9.901 C_csv=22252.0 C_ref=22297.1 ratio=1.00203 FAIL C_csv < C_ref
+RO0647 [49,50] a0=0.9899 lam=12.627 C_csv=35896.8 C_ref=35907.5 ratio=1.00030 FAIL C_csv < C_ref
+RO0651 [49,50] a0=0.985 lam=10.905 C_csv=24821.6 C_ref=24834.2 ratio=1.00051 FAIL C_csv < C_ref
+RO0655 [49,50] a0=0.985 lam=10.905 C_csv=6151.45 C_ref=6095.1 ratio=0.99084 ok
+RO0659 [49,50] a0=0.98 lam=9.596 C_csv=13599.3 C_ref=13611 ratio=1.00086 FAIL C_csv < C_ref
+RO0663 [50,51] a0=0.9892 lam=12.336 C_csv=19075.5 C_ref=19072.7 ratio=0.99985 ok
+RO0667 [50,51] a0=0.985 lam=10.438 C_csv=91885.6 C_ref=92212.9 ratio=1.00356 FAIL C_csv < C_ref
+RO0671 [50,51] a0=0.98 lam=9.692 C_csv=51550.1 C_ref=51772.9 ratio=1.00432 FAIL C_csv < C_ref
+RO0675 [50,51] a0=0.9892 lam=12.240 C_csv=28833.0 C_ref=28827.8 ratio=0.99982 ok
+RO0679 [50,51] a0=0.9892 lam=12.240 C_csv=5180.64 C_ref=5170.84 ratio=0.99811 ok
+RO0683 [50,51] a0=0.985 lam=10.643 C_csv=13661.7 C_ref=13654.8 ratio=0.99949 ok
+RO0687 [50,51] a0=0.98 lam=9.415 C_csv=16804.7 C_ref=16827 ratio=1.00133 FAIL C_csv < C_ref
+RO0691 [51,52] a0=0.9892 lam=12.510 C_csv=18315.5 C_ref=18304 ratio=0.99937 ok
+RO0695 [51,52] a0=0.985 lam=11.009 C_csv=84544.5 C_ref=84772 ratio=1.00269 FAIL C_csv < C_ref
+RO0699 [51,52] a0=0.98 lam=9.830 C_csv=48607.0 C_ref=48814.4 ratio=1.00427 FAIL C_csv < C_ref
+RO0703 [51,52] a0=0.9892 lam=12.485 C_csv=27531.9 C_ref=27529.3 ratio=0.99990 ok
+RO0707 [51,52] a0=0.9892 lam=12.485 C_csv=5301.23 C_ref=5252.2 ratio=0.99075 ok
+RO0711 [51,52] a0=0.985 lam=10.856 C_csv=13287.9 C_ref=13280.2 ratio=0.99942 ok
+RO0715 [51,52] a0=0.98 lam=9.604 C_csv=16336.7 C_ref=16341.6 ratio=1.00030 FAIL C_csv < C_ref
+RO0719 [52,53] a0=0.9892 lam=12.683 C_csv=17617.5 C_ref=17605.2 ratio=0.99930 ok
+RO0723 [52,53] a0=0.985 lam=11.161 C_csv=78362.0 C_ref=78552.4 ratio=1.00243 FAIL C_csv < C_ref
+RO0727 [52,53] a0=0.98 lam=9.966 C_csv=46003.9 C_ref=46187.6 ratio=1.00399 FAIL C_csv < C_ref
+RO0731 [52,53] a0=0.98 lam=9.966 C_csv=7051.57 C_ref=7027.24 ratio=0.99655 ok
+RO0735 [52,53] a0=0.9892 lam=12.123 C_csv=10772.4 C_ref=10758.5 ratio=0.99871 ok
+RO0739 [52,53] a0=0.985 lam=10.608 C_csv=19185.7 C_ref=19185 ratio=0.99997 ok
+RO0743 [52,53] a0=0.98 lam=9.429 C_csv=92824.6 C_ref=93420.1 ratio=1.00642 FAIL C_csv < C_ref
+RO0747 [53,54] a0=0.9892 lam=12.297 C_csv=27980.4 C_ref=27976.4 ratio=0.99986 ok
+RO0751 [53,54] a0=0.9892 lam=12.297 C_csv=5140.93 C_ref=5132.84 ratio=0.99843 ok
+RO0755 [53,54] a0=0.985 lam=10.878 C_csv=13996.7 C_ref=13991.1 ratio=0.99960 ok
+RO0759 [53,54] a0=0.98 lam=9.753 C_csv=25597.6 C_ref=25655.7 ratio=1.00227 FAIL C_csv < C_ref
+RO0763 [53,54] a0=0.9892 lam=12.357 C_csv=52060.5 C_ref=52109.6 ratio=1.00094 FAIL C_csv < C_ref
+RO0767 [53,54] a0=0.985 lam=10.812 C_csv=31108.3 C_ref=31127 ratio=1.00060 FAIL C_csv < C_ref
+RO0771 [53,54] a0=0.985 lam=10.812 C_csv=6101.33 C_ref=6093.52 ratio=0.99872 ok
+RO0775 [53,54] a0=0.98 lam=9.611 C_csv=15501.4 C_ref=15488.7 ratio=0.99918 ok
+RO0779 [54,55] a0=0.9892 lam=12.462 C_csv=16381.0 C_ref=16371.6 ratio=0.99943 ok
+RO0783 [54,55] a0=0.985 lam=11.024 C_csv=68242.7 C_ref=68382.8 ratio=1.00205 FAIL C_csv < C_ref
+RO0787 [54,55] a0=0.98 lam=9.884 C_csv=41564.2 C_ref=41711.2 ratio=1.00354 FAIL C_csv < C_ref
+RO0791 [54,55] a0=0.98 lam=9.884 C_csv=7155.58 C_ref=7131.88 ratio=0.99669 ok
+RO0795 [54,55] a0=0.9892 lam=12.017 C_csv=10277.0 C_ref=10264 ratio=0.99874 ok
+RO0799 [54,55] a0=0.985 lam=11.016 C_csv=18039.0 C_ref=18034.6 ratio=0.99976 ok
+RO0803 [54,55] a0=0.98 lam=9.792 C_csv=81124.1 C_ref=81577.4 ratio=1.00559 FAIL C_csv < C_ref
+RO0807 [55,56] a0=0.9892 lam=12.626 C_csv=25627.6 C_ref=25619.2 ratio=0.99967 ok
+RO0811 [55,56] a0=0.9892 lam=12.626 C_csv=5142.14 C_ref=5133.91 ratio=0.99840 ok
+RO0815 [55,56] a0=0.985 lam=11.170 C_csv=13191.4 C_ref=13188.2 ratio=0.99976 ok
+RO0819 [55,56] a0=0.98 lam=9.680 C_csv=23768.9 C_ref=23812.5 ratio=1.00183 FAIL C_csv < C_ref
+RO0823 [55,56] a0=0.9892 lam=12.240 C_csv=46598.9 C_ref=46620.4 ratio=1.00046 FAIL C_csv < C_ref
+RO0827 [55,56] a0=0.985 lam=10.771 C_csv=28753.2 C_ref=28768.6 ratio=1.00054 FAIL C_csv < C_ref
+RO0831 [55,56] a0=0.985 lam=10.771 C_csv=6093.71 C_ref=6086.24 ratio=0.99877 ok
+RO0835 [55,56] a0=0.98 lam=9.617 C_csv=14744.6 C_ref=14757.9 ratio=1.00090 FAIL C_csv < C_ref
+RO0839 [56,57] a0=0.9892 lam=12.258 C_csv=15336.4 C_ref=15327.8 ratio=0.99944 ok
+RO0843 [56,57] a0=0.985 lam=10.896 C_csv=60365.1 C_ref=60487.1 ratio=1.00202 FAIL C_csv < C_ref
+RO0847 [56,57] a0=0.98 lam=9.806 C_csv=37952.8 C_ref=38061.6 ratio=1.00287 FAIL C_csv < C_ref
+RO0851 [56,57] a0=0.98 lam=9.806 C_csv=7047.64 C_ref=7046.25 ratio=0.99980 ok
+RO0855 [56,57] a0=0.9892 lam=12.463 C_csv=9920.83 C_ref=9835.08 ratio=0.99136 ok
+RO0859 [56,57] a0=0.985 lam=10.545 C_csv=17063.8 C_ref=17060 ratio=0.99978 ok
+RO0863 [56,57] a0=0.98 lam=9.792 C_csv=72094.5 C_ref=72453.4 ratio=1.00498 FAIL C_csv < C_ref
+RO0867 [57,58] a0=0.9892 lam=12.415 C_csv=23659.8 C_ref=23656.5 ratio=0.99986 ok
+RO0871 [57,58] a0=0.9892 lam=12.415 C_csv=5185.63 C_ref=5145.57 ratio=0.99227 ok
+RO0875 [57,58] a0=0.985 lam=11.035 C_csv=12498.0 C_ref=12491.3 ratio=0.99946 ok
+RO0879 [57,58] a0=0.98 lam=9.932 C_csv=22208.5 C_ref=22248.9 ratio=1.00182 FAIL C_csv < C_ref
+RO0883 [57,58] a0=0.9892 lam=12.134 C_csv=42224.1 C_ref=42248.4 ratio=1.00058 FAIL C_csv < C_ref
+RO0887 [57,58] a0=0.985 lam=10.734 C_csv=26788.1 C_ref=26804 ratio=1.00059 FAIL C_csv < C_ref
+RO0891 [57,58] a0=0.985 lam=10.734 C_csv=6075.08 C_ref=6027.97 ratio=0.99225 ok
+RO0895 [57,58] a0=0.98 lam=9.623 C_csv=14114.6 C_ref=14125.5 ratio=1.00078 FAIL C_csv < C_ref
+RO0899 [58,59] a0=0.9892 lam=12.571 C_csv=14442.7 C_ref=14429.5 ratio=0.99908 ok
+RO0903 [58,59] a0=0.985 lam=11.175 C_csv=54117.7 C_ref=54211.7 ratio=1.00174 FAIL C_csv < C_ref
+RO0907 [58,59] a0=0.98 lam=9.733 C_csv=34938.7 C_ref=35038.9 ratio=1.00287 FAIL C_csv < C_ref
+RO0911 [58,59] a0=0.98 lam=9.733 C_csv=7081.73 C_ref=7059.83 ratio=0.99691 ok
+RO0915 [58,59] a0=0.9892 lam=12.346 C_csv=9471.04 C_ref=9458.69 ratio=0.99870 ok
+RO0919 [58,59] a0=0.985 lam=10.922 C_csv=16249.2 C_ref=16216 ratio=0.99796 ok
+RO0923 [58,59] a0=0.98 lam=9.792 C_csv=64957.5 C_ref=65236.4 ratio=1.00429 FAIL C_csv < C_ref
+RO0927 [59,60] a0=0.9892 lam=12.219 C_csv=22010.9 C_ref=22006.2 ratio=0.99979 ok
+RO0931 [59,60] a0=0.9892 lam=12.219 C_csv=5248.63 C_ref=5209.45 ratio=0.99253 ok
+RO0935 [59,60] a0=0.985 lam=10.910 C_csv=11899.1 C_ref=11884.4 ratio=0.99876 ok
+RO0939 [59,60] a0=0.98 lam=9.854 C_csv=20874.9 C_ref=20908.9 ratio=1.00163 FAIL C_csv < C_ref
+RO0943 [59,60] a0=0.9892 lam=12.036 C_csv=38689.1 C_ref=38697.5 ratio=1.00022 FAIL C_csv < C_ref
+RO0947 [59,60] a0=0.985 lam=10.699 C_csv=25138.7 C_ref=25150.5 ratio=1.00047 FAIL C_csv < C_ref
+RO0951 [59,60] a0=0.985 lam=10.699 C_csv=6117.30 C_ref=6071.63 ratio=0.99253 ok
+RO0955 [59,60] a0=0.98 lam=9.629 C_csv=13611.1 C_ref=13574.3 ratio=0.99729 ok
+RO0959 [60,61] a0=0.9876 lam=11.452 C_csv=16422.2 C_ref=16413.6 ratio=0.99948 ok
+RO0963 [60,61] a0=0.985 lam=11.043 C_csv=18431.5 C_ref=18428.3 ratio=0.99983 ok
+RO0967 [60,61] a0=0.98 lam=9.975 C_csv=22765.3 C_ref=22805.8 ratio=1.00178 FAIL C_csv < C_ref
+RO0971 [60,61] a0=0.9876 lam=11.750 C_csv=15451.6 C_ref=15441.4 ratio=0.99934 ok
+RO0975 [60,61] a0=0.985 lam=10.880 C_csv=17335.4 C_ref=17331.1 ratio=0.99975 ok
+RO0979 [60,61] a0=0.98 lam=9.792 C_csv=21392.8 C_ref=21424 ratio=1.00146 FAIL C_csv < C_ref
+RO0983 [61,62] a0=0.9876 lam=11.591 C_csv=15965.3 C_ref=15959.2 ratio=0.99962 ok
+RO0987 [61,62] a0=0.985 lam=11.177 C_csv=17915.9 C_ref=17914.8 ratio=0.99994 ok
+RO0991 [61,62] a0=0.98 lam=9.780 C_csv=22102.5 C_ref=22139.5 ratio=1.00168 FAIL C_csv < C_ref
+RO0995 [61,62] a0=0.9876 lam=11.487 C_csv=15134.4 C_ref=15100.4 ratio=0.99775 ok
+RO0999 [61,62] a0=0.985 lam=10.666 C_csv=16944.6 C_ref=16940.7 ratio=0.99977 ok
+RO1003 [61,62] a0=0.98 lam=9.634 C_csv=20885.8 C_ref=20915.6 ratio=1.00142 FAIL C_csv < C_ref
+RO1007 [62,63] a0=0.9876 lam=11.729 C_csv=24904.9 C_ref=24900.9 ratio=0.99984 ok
+RO1011 [62,63] a0=0.985 lam=10.920 C_csv=28148.0 C_ref=28156.7 ratio=1.00031 FAIL C_csv < C_ref
+RO1015 [62,63] a0=0.98 lam=9.897 C_csv=35239.9 C_ref=35335.5 ratio=1.00271 FAIL C_csv < C_ref
+RO1019 [62,63] a0=0.9876 lam=11.675 C_csv=140301 C_ref=140686 ratio=1.00274 FAIL C_csv < C_ref
+RO1023 [62,63] a0=0.985 lam=10.841 C_csv=53070.9 C_ref=53142.6 ratio=1.00135 FAIL C_csv < C_ref
+RO1027 [62,63] a0=0.98 lam=9.792 C_csv=68422.4 C_ref=68718 ratio=1.00432 FAIL C_csv < C_ref
+RO1031 [63,64] a0=0.9876 lam=11.867 C_csv=46534.1 C_ref=46562.9 ratio=1.00062 FAIL C_csv < C_ref
+RO1035 [63,64] a0=0.9876 lam=11.867 C_csv=5492.13 C_ref=5484.65 ratio=0.99864 ok
+RO1039 [63,64] a0=0.985 lam=11.049 C_csv=16983.0 C_ref=16981.2 ratio=0.99989 ok
+RO1043 [63,64] a0=0.98 lam=9.710 C_csv=20911.1 C_ref=20944.1 ratio=1.00158 FAIL C_csv < C_ref
+RO1047 [63,64] a0=0.9876 lam=11.863 C_csv=23057.9 C_ref=23052 ratio=0.99974 ok
+RO1051 [63,64] a0=0.985 lam=10.636 C_csv=154833 C_ref=155385 ratio=1.00357 FAIL C_csv < C_ref
+RO1055 [63,64] a0=0.98 lam=9.639 C_csv=65499.7 C_ref=65774.8 ratio=1.00420 FAIL C_csv < C_ref
+RO1059 [64,65] a0=0.9876 lam=12.005 C_csv=44596.1 C_ref=44619.1 ratio=1.00052 FAIL C_csv < C_ref
+RO1063 [64,65] a0=0.9876 lam=12.005 C_csv=5496.96 C_ref=5489.4 ratio=0.99862 ok
+RO1067 [64,65] a0=0.985 lam=11.177 C_csv=16566.3 C_ref=16560.9 ratio=0.99968 ok
+RO1071 [64,65] a0=0.98 lam=9.822 C_csv=20377.2 C_ref=20401.9 ratio=1.00121 FAIL C_csv < C_ref
+RO1075 [64,65] a0=0.9876 lam=11.605 C_csv=22463.2 C_ref=22457.7 ratio=0.99975 ok
+RO1079 [64,65] a0=0.985 lam=10.805 C_csv=144517 C_ref=145029 ratio=1.00354 FAIL C_csv < C_ref
+RO1083 [64,65] a0=0.98 lam=9.792 C_csv=62847.8 C_ref=63101.8 ratio=1.00404 FAIL C_csv < C_ref
+RO1087 [65,66] a0=0.9876 lam=11.709 C_csv=42811.5 C_ref=42832.1 ratio=1.00048 FAIL C_csv < C_ref
+RO1091 [65,66] a0=0.9876 lam=11.709 C_csv=5500.69 C_ref=5493.38 ratio=0.99867 ok
+RO1095 [65,66] a0=0.985 lam=10.929 C_csv=16165.2 C_ref=16162.9 ratio=0.99986 ok
+RO1099 [65,66] a0=0.98 lam=9.935 C_csv=19873.0 C_ref=19896.3 ratio=1.00117 FAIL C_csv < C_ref
+RO1103 [65,66] a0=0.9876 lam=11.787 C_csv=21924.8 C_ref=21902.6 ratio=0.99899 ok
+RO1107 [65,66] a0=0.985 lam=10.974 C_csv=135478 C_ref=135935 ratio=1.00337 FAIL C_csv < C_ref
+RO1111 [65,66] a0=0.98 lam=9.644 C_csv=60403.1 C_ref=60649 ratio=1.00407 FAIL C_csv < C_ref
+RO1115 [66,67] a0=0.9876 lam=11.842 C_csv=41165.2 C_ref=41190.6 ratio=1.00062 FAIL C_csv < C_ref
+RO1119 [66,67] a0=0.9876 lam=11.842 C_csv=5569.53 C_ref=5532.66 ratio=0.99338 ok
+RO1123 [66,67] a0=0.985 lam=11.052 C_csv=15796.4 C_ref=15790.1 ratio=0.99960 ok
+RO1127 [66,67] a0=0.98 lam=9.752 C_csv=30948.9 C_ref=31010.3 ratio=1.00198 FAIL C_csv < C_ref
+RO1131 [66,67] a0=0.9876 lam=11.541 C_csv=108642 C_ref=108900 ratio=1.00237 FAIL C_csv < C_ref
+RO1135 [66,67] a0=0.985 lam=10.771 C_csv=45580.7 C_ref=45625.7 ratio=1.00099 FAIL C_csv < C_ref
+RO1139 [66,67] a0=0.985 lam=10.771 C_csv=6089.38 C_ref=6083.06 ratio=0.99896 ok
+RO1143 [66,67] a0=0.98 lam=9.792 C_csv=18800.3 C_ref=18821 ratio=1.00110 FAIL C_csv < C_ref
+RO1147 [67,68] a0=0.9876 lam=11.974 C_csv=21452.0 C_ref=21443.8 ratio=0.99962 ok
+RO1151 [67,68] a0=0.985 lam=10.815 C_csv=123481 C_ref=123820 ratio=1.00275 FAIL C_csv < C_ref
+RO1155 [67,68] a0=0.98 lam=9.861 C_csv=57640.6 C_ref=57838.1 ratio=1.00343 FAIL C_csv < C_ref
+RO1159 [67,68] a0=0.98 lam=9.861 C_csv=7113.10 C_ref=7111.27 ratio=0.99974 ok
+RO1163 [67,68] a0=0.9876 lam=11.715 C_csv=13451.1 C_ref=13441.2 ratio=0.99926 ok
+RO1167 [67,68] a0=0.985 lam=10.934 C_csv=23543.0 C_ref=23545.2 ratio=1.00009 FAIL C_csv < C_ref
+RO1171 [67,68] a0=0.98 lam=9.940 C_csv=162498 C_ref=163649 ratio=1.00708 FAIL C_csv < C_ref
+RO1175 [68,69] a0=0.9876 lam=11.689 C_csv=38266.3 C_ref=38284.7 ratio=1.00048 FAIL C_csv < C_ref
+RO1179 [68,69] a0=0.9876 lam=11.689 C_csv=5541.45 C_ref=5505.87 ratio=0.99358 ok
+RO1183 [68,69] a0=0.985 lam=10.935 C_csv=15122.6 C_ref=15107.8 ratio=0.99902 ok
+RO1187 [68,69] a0=0.98 lam=9.685 C_csv=29219.0 C_ref=29272.1 ratio=1.00182 FAIL C_csv < C_ref
+RO1191 [68,69] a0=0.9876 lam=11.890 C_csv=97585.9 C_ref=97758.9 ratio=1.00177 FAIL C_csv < C_ref
+RO1195 [68,69] a0=0.985 lam=11.098 C_csv=42663.6 C_ref=42709.2 ratio=1.00107 FAIL C_csv < C_ref
+RO1199 [68,69] a0=0.985 lam=11.098 C_csv=6102.93 C_ref=6063.48 ratio=0.99354 ok
+RO1203 [68,69] a0=0.98 lam=9.792 C_csv=18133.9 C_ref=18152.7 ratio=1.00104 FAIL C_csv < C_ref
+RO1207 [69,70] a0=0.9876 lam=11.816 C_csv=20362.9 C_ref=20354.1 ratio=0.99957 ok
+RO1211 [69,70] a0=0.985 lam=11.054 C_csv=110075 C_ref=110339 ratio=1.00240 FAIL C_csv < C_ref
+RO1215 [69,70] a0=0.98 lam=9.791 C_csv=53416.2 C_ref=53598.8 ratio=1.00342 FAIL C_csv < C_ref
+RO1219 [69,70] a0=0.98 lam=9.791 C_csv=7154.88 C_ref=7116.49 ratio=0.99464 ok
+RO1223 [69,70] a0=0.9876 lam=11.649 C_csv=13016.6 C_ref=13007 ratio=0.99927 ok
+RO1227 [69,70] a0=0.985 lam=10.898 C_csv=22542.6 C_ref=22528.6 ratio=0.99938 ok
+RO1231 [69,70] a0=0.98 lam=9.652 C_csv=144840 C_ref=145778 ratio=1.00648 FAIL C_csv < C_ref
+RO1235 [70,71] a0=0.9860 lam=11.173 C_csv=82792.6 C_ref=82927.2 ratio=1.00163 FAIL C_csv < C_ref
+RO1239 [70,71] a0=0.985 lam=10.824 C_csv=87557.0 C_ref=87742.7 ratio=1.00212 FAIL C_csv < C_ref
+RO1243 [70,71] a0=0.98 lam=9.896 C_csv=115430 C_ref=116055 ratio=1.00542 FAIL C_csv < C_ref
+RO1247 [70,71] a0=0.9860 lam=11.055 C_csv=81793.7 C_ref=81930 ratio=1.00167 FAIL C_csv < C_ref
+RO1251 [70,71] a0=0.985 lam=11.055 C_csv=86500.1 C_ref=86667.8 ratio=1.00194 FAIL C_csv < C_ref
+RO1255 [70,71] a0=0.98 lam=9.792 C_csv=113985 C_ref=114613 ratio=1.00551 FAIL C_csv < C_ref
+RO1259 [71,72] a0=0.9860 lam=11.292 C_csv=79050.6 C_ref=79169.5 ratio=1.00150 FAIL C_csv < C_ref
+RO1263 [71,72] a0=0.985 lam=10.939 C_csv=83560.2 C_ref=83712 ratio=1.00182 FAIL C_csv < C_ref
+RO1267 [71,72] a0=0.98 lam=9.724 C_csv=109759 C_ref=110363 ratio=1.00550 FAIL C_csv < C_ref
+RO1271 [71,72] a0=0.9860 lam=11.213 C_csv=78415.9 C_ref=78536.9 ratio=1.00154 FAIL C_csv < C_ref
+RO1275 [71,72] a0=0.985 lam=10.863 C_csv=82888.1 C_ref=83042.4 ratio=1.00186 FAIL C_csv < C_ref
+RO1279 [71,72] a0=0.98 lam=9.932 C_csv=108874 C_ref=109466 ratio=1.00543 FAIL C_csv < C_ref
+RO1283 [72,73] a0=0.9860 lam=11.411 C_csv=75621.4 C_ref=75742.6 ratio=1.00160 FAIL C_csv < C_ref
+RO1287 [72,73] a0=0.985 lam=11.054 C_csv=79903.7 C_ref=80039.3 ratio=1.00170 FAIL C_csv < C_ref
+RO1291 [72,73] a0=0.98 lam=9.560 C_csv=104692 C_ref=105216 ratio=1.00501 FAIL C_csv < C_ref
+RO1295 [72,73] a0=0.9860 lam=11.371 C_csv=75333.3 C_ref=75441.8 ratio=1.00144 FAIL C_csv < C_ref
+RO1299 [72,73] a0=0.985 lam=11.016 C_csv=79582.6 C_ref=79721.4 ratio=1.00174 FAIL C_csv < C_ref
+RO1303 [72,73] a0=0.98 lam=9.792 C_csv=104238 C_ref=104761 ratio=1.00502 FAIL C_csv < C_ref
+RO1307 [73,74] a0=0.9860 lam=11.169 C_csv=72499.7 C_ref=72596.2 ratio=1.00133 FAIL C_csv < C_ref
+RO1311 [73,74] a0=0.985 lam=10.831 C_csv=76536.0 C_ref=76680 ratio=1.00188 FAIL C_csv < C_ref
+RO1315 [73,74] a0=0.98 lam=9.928 C_csv=99999.6 C_ref=100479 ratio=1.00479 FAIL C_csv < C_ref
+RO1319 [74,75] a0=0.9860 lam=11.284 C_csv=69615.1 C_ref=69700.5 ratio=1.00123 FAIL C_csv < C_ref
+RO1323 [74,75] a0=0.985 lam=10.942 C_csv=73470.4 C_ref=73581.5 ratio=1.00151 FAIL C_csv < C_ref
+RO1327 [74,75] a0=0.98 lam=9.759 C_csv=95710.1 C_ref=96148.6 ratio=1.00458 FAIL C_csv < C_ref
+RO1331 [75,76] a0=0.9860 lam=11.399 C_csv=66942.7 C_ref=67036.7 ratio=1.00140 FAIL C_csv < C_ref
+RO1335 [75,76] a0=0.985 lam=11.053 C_csv=70633.7 C_ref=70733 ratio=1.00141 FAIL C_csv < C_ref
+RO1339 [75,76] a0=0.98 lam=9.858 C_csv=91782.4 C_ref=92184.6 ratio=1.00438 FAIL C_csv < C_ref
+RO1343 [76,77] a0=0.9860 lam=11.164 C_csv=64501.6 C_ref=64571.6 ratio=1.00108 FAIL C_csv < C_ref
+RO1347 [76,77] a0=0.985 lam=10.836 C_csv=68002.3 C_ref=68106.2 ratio=1.00153 FAIL C_csv < C_ref
+RO1351 [76,77] a0=0.98 lam=9.695 C_csv=88168.1 C_ref=88541.5 ratio=1.00424 FAIL C_csv < C_ref
+RO1355 [77,78] a0=0.9860 lam=11.275 C_csv=62222.0 C_ref=62284.4 ratio=1.00100 FAIL C_csv < C_ref
+RO1359 [77,78] a0=0.985 lam=10.944 C_csv=65562.8 C_ref=65664 ratio=1.00154 FAIL C_csv < C_ref
+RO1363 [77,78] a0=0.98 lam=9.792 C_csv=84800.7 C_ref=85169.8 ratio=1.00435 FAIL C_csv < C_ref
+RO1367 [78,79] a0=0.9860 lam=11.386 C_csv=60109.3 C_ref=60164.4 ratio=1.00092 FAIL C_csv < C_ref
+RO1371 [78,79] a0=0.985 lam=11.051 C_csv=63327.8 C_ref=63401.9 ratio=1.00117 FAIL C_csv < C_ref
+RO1375 [78,79] a0=0.98 lam=9.888 C_csv=81722.6 C_ref=82056.6 ratio=1.00409 FAIL C_csv < C_ref
+RO1379 [79,80] a0=0.9860 lam=11.159 C_csv=58123.9 C_ref=58190.9 ratio=1.00115 FAIL C_csv < C_ref
+RO1383 [79,80] a0=0.9860 lam=11.159 C_csv=5911.84 C_ref=5879.45 ratio=0.99452 ok
+RO1387 [79,80] a0=0.985 lam=10.840 C_csv=17305.4 C_ref=17280.1 ratio=0.99854 ok
+RO1391 [79,80] a0=0.98 lam=9.728 C_csv=21226.9 C_ref=21248.5 ratio=1.00102 FAIL C_csv < C_ref
+RO1395 [80,82] a0=0.9850 lam=10.944 C_csv=22462.7 C_ref=22460.4 ratio=0.99990 ok
+RO1399 [80,82] a0=0.98 lam=9.822 C_csv=27786.7 C_ref=27833.4 ratio=1.00168 FAIL C_csv < C_ref
+RO1403 [82,84] a0=0.9850 lam=10.843 C_csv=21629.8 C_ref=21616.4 ratio=0.99938 ok
+RO1407 [82,84] a0=0.98 lam=9.758 C_csv=26707.0 C_ref=26742.6 ratio=1.00133 FAIL C_csv < C_ref
+RO1411 [84,86] a0=0.9850 lam=11.045 C_csv=20861.4 C_ref=20847.6 ratio=0.99934 ok
+RO1415 [84,86] a0=0.98 lam=9.698 C_csv=25718.8 C_ref=25756.6 ratio=1.00147 FAIL C_csv < C_ref
+RO1419 [86,88] a0=0.9850 lam=10.942 C_csv=20153.0 C_ref=20148.6 ratio=0.99978 ok
+RO1423 [86,88] a0=0.98 lam=9.875 C_csv=24833.2 C_ref=24858 ratio=1.00100 FAIL C_csv < C_ref
+RO1427 [88,90] a0=0.9850 lam=10.845 C_csv=19515.8 C_ref=19511.1 ratio=0.99976 ok
+RO1431 [88,90] a0=0.98 lam=9.812 C_csv=24012.9 C_ref=24038.5 ratio=1.00107 FAIL C_csv < C_ref
+RO1435 [90,92] a0=0.9850 lam=11.036 C_csv=23002.6 C_ref=22989.7 ratio=0.99944 ok
+RO1439 [90,92] a0=0.98 lam=9.753 C_csv=28414.0 C_ref=28458.8 ratio=1.00158 FAIL C_csv < C_ref
+RO1443 [92,94] a0=0.9850 lam=10.938 C_csv=22271.1 C_ref=22267.9 ratio=0.99986 ok
+RO1447 [92,94] a0=0.98 lam=9.921 C_csv=27491.1 C_ref=27530.1 ratio=1.00142 FAIL C_csv < C_ref
+RO1451 [94,96] a0=0.9850 lam=11.123 C_csv=21610.1 C_ref=21605.6 ratio=0.99979 ok
+RO1455 [94,96] a0=0.98 lam=9.640 C_csv=26651.5 C_ref=26679.3 ratio=1.00104 FAIL C_csv < C_ref
+RO1459 [96,98] a0=0.9850 lam=11.025 C_csv=20997.6 C_ref=20992.5 ratio=0.99976 ok
+RO1463 [96,98] a0=0.98 lam=9.800 C_csv=25862.9 C_ref=25890.3 ratio=1.00106 FAIL C_csv < C_ref
+RO1467 [98,100] a0=0.9850 lam=10.932 C_csv=20473.4 C_ref=20427 ratio=0.99774 ok
+RO1471 [98,100] a0=0.98 lam=9.743 C_csv=25141.1 C_ref=25165.9 ratio=1.00099 FAIL C_csv < C_ref
+RO1475 [100,102] a0=0.9850 lam=11.107 C_csv=23575.5 C_ref=23550.1 ratio=0.99892 ok
+RO1479 [100,102] a0=0.98 lam=9.900 C_csv=29106.4 C_ref=29129.4 ratio=1.00079 FAIL C_csv < C_ref
+RO1483 [102,104] a0=0.9850 lam=11.013 C_csv=22924.7 C_ref=22921.4 ratio=0.99985 ok
+RO1487 [102,104] a0=0.98 lam=9.842 C_csv=28299.8 C_ref=28320.9 ratio=1.00075 FAIL C_csv < C_ref
+RO1491 [104,106] a0=0.9850 lam=10.924 C_csv=22386.2 C_ref=22338.9 ratio=0.99789 ok
+RO1495 [104,106] a0=0.98 lam=9.786 C_csv=27567.4 C_ref=27572.1 ratio=1.00017 FAIL C_csv < C_ref
+RO1499 [106,108] a0=0.9850 lam=11.090 C_csv=21800.7 C_ref=21796.5 ratio=0.99981 ok
+RO1503 [106,108] a0=0.98 lam=9.935 C_csv=26850.2 C_ref=26877.3 ratio=1.00101 FAIL C_csv < C_ref
+RO1507 [108,110] a0=0.9850 lam=11.001 C_csv=21333.5 C_ref=21289.4 ratio=0.99794 ok
+RO1511 [108,110] a0=0.98 lam=9.878 C_csv=26202.0 C_ref=26227.3 ratio=1.00096 FAIL C_csv < C_ref
+RO1515 [110,114] a0=0.9850 lam=11.163 C_csv=23871.0 C_ref=23867.7 ratio=0.99986 ok
+RO1519 [114,118] a0=0.9850 lam=10.988 C_csv=22854.4 C_ref=22810.1 ratio=0.99806 ok
+RO1523 [118,122] a0=0.9850 lam=11.057 C_csv=21922.7 C_ref=21881.1 ratio=0.99810 ok
+RO1527 [122,126] a0=0.9850 lam=10.896 C_csv=24033.9 C_ref=23990.7 ratio=0.99820 ok
+RO1531 [126,130] a0=0.9850 lam=10.961 C_csv=23099.9 C_ref=23095.6 ratio=0.99981 ok
+RO1535 [130,134] a0=0.9850 lam=11.024 C_csv=24767.8 C_ref=24725.9 ratio=0.99831 ok
+RO1539 [134,138] a0=0.9850 lam=11.084 C_csv=23926.1 C_ref=23886.3 ratio=0.99834 ok
+RO1543 [138,142] a0=0.9850 lam=10.935 C_csv=23204.5 C_ref=23129.3 ratio=0.99676 ok
+RO1547 [142,146] a0=0.9850 lam=10.992 C_csv=24667.2 C_ref=24662.7 ratio=0.99982 ok
+RO1551 [146,150] a0=0.9850 lam=11.047 C_csv=23948.6 C_ref=23943.7 ratio=0.99980 ok
+RO1555 [150,154] a0=0.9850 lam=10.909 C_csv=25191.0 C_ref=25115.7 ratio=0.99701 ok
+RO1559 [154,158] a0=0.9850 lam=10.962 C_csv=24447.5 C_ref=24443 ratio=0.99981 ok
+RO1563 [158,162] a0=0.9850 lam=11.013 C_csv=23831.6 C_ref=23826.7 ratio=0.99980 ok
+RO1567 [162,166] a0=0.9850 lam=11.062 C_csv=25107.3 C_ref=25102.8 ratio=0.99982 ok
+RO1571 [166,170.2] a0=0.9850 lam=11.110 C_csv=24582.5 C_ref=24516.7 ratio=0.99732 ok
+RO1575 [170.2,180] a0=0.9850 lam=11.166 C_csv=25686.6 C_ref=25687.1 ratio=1.00002 FAIL C_csv < C_ref
+RO1579 [180,200] a0=0.9850 lam=10.985 C_csv=24384.6 C_ref=24352.8 ratio=0.99869 ok
+RO1583 [200,250] a0=0.9850 lam=10.979 C_csv=22163.6 C_ref=22244.7 ratio=1.00366 FAIL C_csv < C_ref
+RO1587 [250,300] a0=0.9850 lam=11.050 C_csv=18793.0 C_ref=18843.8 ratio=1.00271 FAIL C_csv < C_ref
+RO1591 [300,400] a0=0.9850 lam=11.057 C_csv=16848.3 C_ref=16937.1 ratio=1.00527 FAIL C_csv < C_ref
+RO1595 [400,500] a0=0.9850 lam=10.989 C_csv=15522.5 C_ref=15581.8 ratio=1.00382 FAIL C_csv < C_ref
+SUMMARY ../phase0_bellotti/rows_reopt.csv mode=decoupled: 399 rows checked, 197 with problems, max ratio C_ref/C_csv = 1.007084, 125s

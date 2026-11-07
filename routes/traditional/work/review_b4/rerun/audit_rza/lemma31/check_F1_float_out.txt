@@ -1,0 +1,6 @@
+q=1    min_{2<=N<=1e7} F_1(N) = 0.693147 at N=2 ; min over N>=1e5: 0.999957 ; max F_1/(q/phi(q)) = 1.003021
+q=2    min_{2<=N<=1e7} F_1(N) = 0.693147 at N=2 ; min over N>=1e5: 1.99995 ; max F_1/(q/phi(q)) = 1.000008
+q=3    min_{2<=N<=1e7} F_1(N) = 0.693147 at N=2 ; min over N>=1e5: 1.49995 ; max F_1/(q/phi(q)) = 1.000014
+q=6    min_{2<=N<=1e7} F_1(N) = 0.693147 at N=2 ; min over N>=1e5: 2.99966 ; max F_1/(q/phi(q)) = 0.999999
+q=30   min_{2<=N<=1e7} F_1(N) = 0.693147 at N=2 ; min over N>=1e5: 3.74853 ; max F_1/(q/phi(q)) = 0.999993
+q=210  min_{2<=N<=1e7} F_1(N) = 0.693147 at N=2 ; min over N>=1e5: 4.37082 ; max F_1/(q/phi(q)) = 0.999978

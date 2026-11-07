@@ -1,0 +1,30 @@
+[INFO] parameters  --  Z_MIN = [4.58000 +/- 1e-10], eta0 = 0.007599839799, sigma0 = 0.9930690868, 2 sigma0 - 1 = 0.9861381736, U_CUT = 54, theta = 1.1338
+[OK  ] w(0): definition = closed form = 5.67278759...  --  5.67278759886
+[INFO] a kappa w(0)/2 = KC  --  5.03905010405
+[OK  ] w'(0) = w(d) = w'(d) = w''(d) = 0 (Kadiri Prop. 2.1 hypotheses)
+[OK  ] w'' < 0 on [0,0.2], w' < 0 on [0.2,d-0.2], w''' < 0 on [d-0.2,d]  =>  w decreasing, 0 <= w <= w(0)
+[OK  ] Lemma 3: sum kappa_m x^m > 0 on [0,1] (Sturm, exact)
+[OK  ] Lemma 5: eta0^2 C(r,r)/((2 sigma0-1)^2 w(0)) < eps0, r = (2 sigma0-1)/eta0  --  value 0.000534259, r = 129.758, eps0 = 11/20000
+[INFO] Lemma 5: with delta_m = d m for ONE d = 2 sigma - 1, B(y) = d^-2 Btilde(y/d); BTY's split c0 m <= delta_m <= m is not needed, so c0 = 1 below
+[OK  ] Lemma 5: B(y) = N(y^2)/prod(...) with these eps0, c0 has N > 0 on [0, inf) (Sturm)  =>  (21)  --  #roots = 0, N(0) = 1.3224e+05
+[OK  ] Lemma 5, |Im z| -> inf: coefficient sum m b_m = 1/859 > 0 (corrected argument, audit I3)
+[OK  ] Lemma 5 (22): w(0) + (C(-1,T0/eta0)+C(0,T0/eta0)) eta0^2/T0 < 5.7 and 2*5.7*sum|kappa| < 44  --  5.6727876
+[OK  ] Lemma 6: k = 0: 88 eta0 log T0/T0 < 1e-8; k != 0: 44 eta [B27/2pi + 4 B28 + 2 B29] < 1e-8 (worst t = H, eta (log t + c) decreasing); sum_k a_k 1e-8 < 1e-7  --  1.540e-9, 1.586e-10
+[OK  ] Lemma 13: H/eta0 > 1e10, C(-1,1e10) w(0)M/H^2 + C/H^3 < 1e-12, a sum|kappa| 1e-12 < 1e-10  --  50.0697
+[OK  ] Lemma 12 / Kadiri (24): |Re psi(x+iy) - log y| < 1e-10 for 1 <= x <= (M+3)/2, y >= H/2  --  5.56e-14
+[OK  ] Lemma 11': h(u) = w(eta0 u) sum kappa_m e^(-d_m u) - kappa w(0) >= 0 on [0, 54] (h(0) = 0, h' > 0 on [0,0.5], h > 0 on [0.5, U]) => f(u) >= kappa eta w(0)  --  h'(0) = 1.18844, min h on [0.5,U] >= 9.915e-02
+[OK  ] Lemma 10': primes p <= 31 only, m <= 15 (15 log 31 < U_CUT); m_p certified in proof/zfr_audit/bty_4.896 part 3 (m_5 replaced by 0.00735649); kappa * sum log p m_p > 0.1186  --  sum = 0.235319712, kappa*sum = 0.11861867
+[INFO] C_UP = kappa/2 sum_k a_k log(k/2pi) + [k=0 digamma] + tiny - 0.1186 (BTY's -1.568 - 0.1186 analogue)  --  C_UP = -1.687063673;  BTY: -1.568 - 0.1186 = -1.6866;  s38 = -0.0406317
+[INFO] x_m = sigma0(1+2m) - m - 1/2, C_m = C(x_m/eta0, x_m/eta0)  --  m=0: x=0.493069 C=52.1012; m=1: x=1.47921 C=50.6967; m=2: x=2.46535 C=50.4400; m=3: x=3.45148 C=50.3324; m=4: x=4.43762 C=50.2732; m=5: x=5.42376 C=50.2358; m=6: x=6.40990 C=50.2100
+[INFO] J(x_m) = int |Re psi((1/2+iy)/2)|/(x_m^2+y^2)^(3/2) dy (rigorous upper sums; audit: 23.600 at x = 0.4935)  --  m=0: 23.6510; m=1: 1.51634; m=2: 0.422930; m=3: 0.195744; m=4: 0.116165; m=5: 0.0791155; m=6: 0.0585533
+[OK  ] I_1 + I_3 <= 2[(6+log 3)/(2Y^2) + (2 log Y + 1)/(4Y^2)], Y = H - 2, using U(x) <= 6 + log(1+|x|)  --  4.04e-24
+[INFO] Err = sum_k a_k sum_m |kappa_m| (T1 + T2) <= eta^3 (P_ERR + Q_ERR log t)  --  P_ERR = 396.56333 (k=0 part 273.405), Q_ERR = 278.20033;  BTY corrected: 187 eta^2 + 8396 eta^3, i.e. Q ~ 187/A0 = 856.46
+[OK  ] dQ/deta <= |dL14/deta| + w(0)|C_UP| + 1e-10 - KC log H < 0 (so Q is minimal at eta_max)  --  |dL14/deta| <= 48.5493, bound = -86.6504
+[OK  ] G'(mu) > 0 on [0.879, 1] (121 ball evaluations)
+[INFO] w''(0) and max|w'''| on [0, d]  --  -50.069701, 139.711
+[OK  ] W_big(z) = w(0)/z + w''(0)/z^3 +- max|w'''|/z^4 contains the quadrature value of W(z) at 4 points  --  R_MIN = 128.582
+[INFO] L14 at eta=[0.00740 +/- 3e-10], mu=[0.912 +/- 1e-8]: quadrature vs ours (G + Ford balls) vs BTY corrected Lemma 14  --  1.024259619 | [1.02426 +/- 2.88e-6] | 1.023724182
+[INFO] L14 at eta=[0.00600 +/- 3e-10], mu=[0.950 +/- 3e-8]: quadrature vs ours (G + Ford balls) vs BTY corrected Lemma 14  --  1.023727495 | [1.02373 +/- 3.58e-6] | 1.023211372
+[INFO] L14 at eta=[0.00450 +/- 1e-10], mu=[0.990 +/- 3e-8]: quadrature vs ours (G + Ford balls) vs BTY corrected Lemma 14  --  1.023146685 | [1.023147 +/- 6.48e-7] | 1.022634307
+[OK  ] L14 consistency (quadrature value inside our enclosure at 3 points)
+FAILURES: 0

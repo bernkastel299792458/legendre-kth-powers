@@ -1,0 +1,19 @@
+[110,112] Zeff=4.15 best a0=0.99 B=6.92 C=145.8 C*T0^(B nu)=772.5 | old best 1561 (lemA,lemB,lemC, B=9.34) ratio 0.495 | a0=0.96: B=7.53 C=214.6 | 0.7B*: B=4.84 C=313.1
+[120,122] Zeff=4.09 best a0=0.99 B=6.82 C=145.6 C*T0^(B nu)=770.3 | old best 1535 (lemA,lemB,lemC, B=9.09) ratio 0.502 | a0=0.96: B=7.41 C=215.1 | 0.7B*: B=4.77 C=311.5
+[140,142] Zeff=3.95 best a0=0.99 B=6.61 C=145.9 C*T0^(B nu)=777 | old best 1506 (lemA,lemB,lemC, B=8.70) ratio 0.516 | a0=0.96: B=7.16 C=217 | 0.7B*: B=4.63 C=311.6
+[160,162] Zeff=3.80 best a0=0.99 B=6.40 C=147.6 C*T0^(B nu)=795.6 | old best 1527 (lemA,lemB,lemC, B=8.40) ratio 0.521 | a0=0.96: B=6.92 C=219.5 | 0.7B*: B=4.48 C=316.2
+[180,182] Zeff=3.68 best a0=0.99 B=6.24 C=149 C*T0^(B nu)=813.3 | old best 1543 (lemA,lemB,lemC, B=8.14) ratio 0.527 | a0=0.96: B=6.73 C=221.9 | 0.7B*: B=4.37 C=320.1
+[198,200] Zeff=3.58 best a0=0.99 B=6.12 C=150.1 C*T0^(B nu)=827.7 | old best 1634 (lemA,lemB,lemC, B=8.14) ratio 0.507 | a0=0.96: B=6.59 C=224 | 0.7B*: B=4.28 C=323.3
+[200,205] Zeff=3.57 best a0=0.99 B=6.10 C=150.6 C*T0^(B nu)=830.2 | old best 3.511e+04 (lemB,lemC, B=8.24) ratio 0.024 | a0=0.96: B=6.58 C=224.3 | 0.7B*: B=4.27 C=324.3
+[220,225] Zeff=3.49 best a0=0.99 B=5.99 C=151.8 C*T0^(B nu)=843.5 | old best 3.705e+04 (lemB,lemC, B=8.24) ratio 0.023 | a0=0.96: B=6.46 C=226.5 | 0.7B*: B=4.19 C=327.5
+[250,255] Zeff=3.39 best a0=0.99 B=5.85 C=153.7 C*T0^(B nu)=864.7 | old best 3.587e+04 (lemB,lemC, B=7.81) ratio 0.024 | a0=0.96: B=6.30 C=229.5 | 0.7B*: B=4.10 C=332.5
+[280,285] Zeff=3.30 best a0=0.99 B=5.74 C=155.4 C*T0^(B nu)=882.5 | old best 3.803e+04 (lemB,lemC, B=7.81) ratio 0.023 | a0=0.96: B=6.17 C=232.4 | 0.7B*: B=4.02 C=337
+[300,305] Zeff=3.26 best a0=0.99 B=5.67 C=156.6 C*T0^(B nu)=894.3 | old best 3.655e+04 (lemB,lemC, B=7.50) ratio 0.024 | a0=0.96: B=6.10 C=234.2 | 0.7B*: B=3.97 C=340.1
+[320,325] Zeff=3.21 best a0=0.99 B=5.62 C=157.7 C*T0^(B nu)=904.8 | old best 3.764e+04 (lemB,lemC, B=7.50) ratio 0.024 | a0=0.96: B=6.04 C=235.9 | 0.7B*: B=3.93 C=342.8
+[345,350] Zeff=3.17 best a0=0.99 B=5.55 C=159 C*T0^(B nu)=917 | old best 3.889e+04 (lemB,lemC, B=7.50) ratio 0.024 | a0=0.96: B=5.97 C=237.9 | 0.7B*: B=3.89 C=346.2
+[350,355] Zeff=3.16 best a0=0.99 B=5.54 C=159.1 C*T0^(B nu)=919.5 | old best 3.919e+04 (rows_reopt_v2.csv, [300,400], lemB,lemC, B=7.50) ratio 0.023 | a0=0.96: B=5.96 C=238.2 | 0.7B*: B=3.88 C=346.5
+[400,410] Zeff=3.06 best a0=0.99 B=5.42 C=161.9 C*T0^(B nu)=949.2 | old best 3.779e+04 (rows_reopt_v2.csv, [400,500], lemB,lemC, B=7.03) ratio 0.025 | a0=0.96: B=5.83 C=242.3 | 0.7B*: B=3.80 C=354.3
+[450,460] Zeff=2.95 best a0=0.99 B=5.28 C=165.7 C*T0^(B nu)=992.4 | old best 4.133e+04 (rows_reopt_v2.csv, [400,500], lemB,lemC, B=7.03) ratio 0.024 | a0=0.96: B=5.68 C=247.0 | 0.7B*: B=3.70 C=365.9
+[500,510] Zeff=2.86 best a0=0.99 B=5.18 C=168.6 C*T0^(B nu)=1027 | old best 4.243e+04 (rows_high_v2.csv, [500,625], lemB,lemC, B=6.75) ratio 0.024 | a0=0.96: infeasible | 0.7B*: B=3.63 C=374.3
+[550,560] Zeff=2.79 best a0=0.99 B=5.10 C=171.1 C*T0^(B nu)=1059 | old best 4.504e+04 (rows_high_v2.csv, [500,625], lemB,lemC, B=6.75) ratio 0.024 | a0=0.96: B=5.48 C=254.8 | 0.7B*: B=3.57 C=381.7
+[590,600] Zeff=2.75 best a0=0.99 B=5.05 C=172.8 C*T0^(B nu)=1080 | old best 4.678e+04 (rows_high_v2.csv, [500,625], lemB,lemC, B=6.75) ratio 0.023 | a0=0.96: B=5.43 C=257.4 | 0.7B*: B=3.53 C=386.5

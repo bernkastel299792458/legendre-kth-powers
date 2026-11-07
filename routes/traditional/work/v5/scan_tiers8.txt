@@ -1,0 +1,11 @@
+  [V6_T1_refereed+own_lemmas] k=37: fails; L1=1105; first S fail=7504.9443359375; H ok from 15639.0; worst S=2.610 at L=7504.9443359375
+  [V6_T1_refereed+own_lemmas] k=41: CLOSES; L1=1229; first S fail=None; H ok from 11100.0; worst S=0.818 at L=8303.607421875
+  [V6_T1_refereed+own_lemmas] k=39: fails; L1=1167; first S fail=7916.724609375; H ok from 11100.0; worst S=1.457 at L=7916.724609375
+  [V6_T1_refereed+own_lemmas] k=40: fails; L1=1198; first S fail=8122.6533203125; H ok from 11100.0; worst S=1.089 at L=8122.6533203125
+RESULT [V6_T1_refereed+own_lemmas] min k (samples) = 41
+  [V6_T2_+CS_TheoremR] k=33: fails; L1=982; first S fail=1006.7158203125; H ok from 22033.0; worst S=8.389 at L=6706.7158203125
+  [V6_T2_+CS_TheoremR] k=37: fails; L1=1105; first S fail=7504.9443359375; H ok from 15639.0; worst S=2.610 at L=7504.9443359375
+  [V6_T2_+CS_TheoremR] k=39: fails; L1=1167; first S fail=7916.724609375; H ok from 11100.0; worst S=1.457 at L=7916.724609375
+  [V6_T2_+CS_TheoremR] k=40: fails; L1=1198; first S fail=8122.6533203125; H ok from 11100.0; worst S=1.089 at L=8122.6533203125
+  [V6_T2_+CS_TheoremR] k=41: CLOSES; L1=1229; first S fail=None; H ok from 11100.0; worst S=0.818 at L=8303.607421875
+RESULT [V6_T2_+CS_TheoremR] min k (samples) = 41

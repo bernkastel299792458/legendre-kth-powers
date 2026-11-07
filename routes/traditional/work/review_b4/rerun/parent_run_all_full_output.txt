@@ -1,0 +1,44 @@
+source v3 sha256: 28c6ea1f910dcf745db596fd9e4475652e2264a9ba59af483947c17d8fac8f38
+  v1 eprint sha256: 09a60af773e27cfa9ff835c2efc7d470e6e1dc6ec27fd43769879739d1014994
+  v2 eprint sha256: 8ed03aeb59b039750bc0103a48702d2acec9ea4c0d80e08785e1f959b9fbdec8
+  v3 eprint sha256: 7aa4b8fee86298ee0b1d639718e0bee96882f298d7a29abe0cbe27930b5f3d53
+  ran rza_assembly.py                 0.8 s  (exit 0)
+OK    paper replay: all nine printed Theorem 1.2 values reproduced from the paper's own inputs
+  ran rza_euler.py                   47.8 s  (exit 0)
+OK    Euler factors: every printed closed form equals the generic Thm 4.1/4.2 factor (except P0_LX)
+ISSUE P0_LX: paper's 0.694045937 = product of the PRINTED factor ...
+ISSUE ... but the correct factor (1+f)(1-1/p) gives 0.8210653 (c1 = 0.71336, not 0.60300)
+ISSUE W = prod(1-2/p^2+1/p^3) = 0.4282495 (paper APROD = 0.40282372 is WRONG; = (6/pi^2) prod(1-1/(p(p+1))))
+ISSUE ASUM: paper's 2.046752376 already contains gamma (double counted; unused downstream)
+  ran rza_thm11.py                   21.5 s  (exit 0)
+OK    S11(80), S12(80) reproduced exactly (paper 0.333415398793, 41346.25411)
+  ran rza_thm11_ext.py 160           12.8 s  (exit 0)
+OK    S11(J) to J=160 + consistency with Helfgott's lim S_0 (needs the true W)
+  ran rza_scans.py --only A         589.5 s  (exit 0)
+  ran rza_scans.py --only B,C,D      12.3 s  (exit 0)
+  ran rza_scans.py --only E,F       251.9 s  (exit 0)
+  ran rza_scans.py --only G,H,I      28.7 s  (exit 0)
+OK    Lemma 4.5: sup over X <= 4e9 of sigma1,sigma2,Sigma1 / X at X=42 (scan A, cached unless --full)
+OK    Lemma 4.6 (max at 6) and Lemma 4.8 (max at 2) constants hold
+ISSUE Lemma 4.10: claimed maxima (at 978118, 478671) are not the maxima (2.25327 > 2.25265); harmless
+OK    Lemma 4.11: logmx = 1.29424 holds with the TRUE c1 = 0.71336
+ISSUE Lemma 4.13: log2mx, log2mm are K_1's numbers; true 2.15300, -0.13571
+OK    G(1e8; 1.1) = 9.103954 >= 9.1
+OK    Lemma 4.3 (Ramare) constants hold on X <= 1e8 (partial check)
+OK    Lemmas 2.2/2.3 hold for X <= 1e8 (partial check)
+  ran rza_mpatterns.py                4.2 s  (exit 0)
+ISSUE Lemma 6.2 proof: max m_l(t) <= 57731/570570 FALSE for classes 11, 13 (69/455, 53/385); repairable via Delta<=0 (lemma31 4d)
+  ran rza_counterexample.py           2.8 s  (exit 0)
+ISSUE INEQUALITY (6.6) OF THE PROOF OF THM 1.2 IS FALSE (rigorous Arb counterexamples X=1000, 3000)
+  ran rza_audited.py                 17.2 s  (exit 0)
+OK    corrected-input replay written (rza_audited_out.txt)
+  ran rza_effects.py                  0.6 s  (exit 0)
+OK    one-at-a-time effects on the 0.5936 row written (rza_effects_out.txt)
+  ran explore_repair.py               0.5 s  (exit 0)
+  ran explore_exxp.py                 7.4 s  (exit 0)
+DONE, 0 FAIL
+
+real	16m39.335s
+user	0m0.000s
+sys	0m0.000s
+EXIT 0
