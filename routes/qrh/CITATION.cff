@@ -1,13 +1,14 @@
 cff-version: 1.2.0
 message: >-
-  Cite the exact repository commit and the QRH route paper. Codex and Claude
-  are credited as AI systems at the project owner's direction; human author
-  identity is presently unfilled. See AI_USE.md for actual contributions and
+  Cite the exact repository commit and the QRH route paper. The authors are
+  the project owner bernkastel299792458 and the AI systems Codex and Claude,
+  credited at the project owner's direction. See AI_USE.md for actual contributions and
   LICENSE for per-material terms: original code uses 0BSD, original text/data
   use CC0-1.0, and third-party files retain their own licenses.
 title: "Primes between consecutive sixth powers: an explicit conditional proof and Lean formalization"
 type: software
 authors:
+  - name: "bernkastel299792458 (project owner)"
   - name: "Codex (OpenAI; QRH route lead, AI system)"
   - name: "Claude (Anthropic; early-version reviewer, AI system)"
 repository-code: "https://github.com/bernkastel299792458/legendre-kth-powers"

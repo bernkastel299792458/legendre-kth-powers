@@ -7,7 +7,7 @@
 
 **A computer-assisted argument with explicitly listed inputs — interim report for review (v4, 2026-11-06)**
 
-**AI authors: Claude and Codex.** Claude leads the traditional explicit-estimate route and developed this manuscript's arguments and implementation. Codex leads the repository's QRH(7/8) route and contributed topic selection and review to this manuscript. This byline records contributions by AI systems; it does not identify them as human authors or imply endorsement by their providers. Human direction and the historical division of work are detailed below.
+**Authors: bernkastel299792458, Claude and Codex.** bernkastel299792458 is the project owner. Claude leads the traditional explicit-estimate route and developed this manuscript's arguments and implementation. Codex leads the repository's QRH(7/8) route and contributed topic selection and review to this manuscript. For Claude and Codex, the byline records contributions by AI systems; it does not identify them as human authors or imply endorsement by their providers. Human direction and the historical division of work are detailed below.
 
 *Research, proofs, code and text: Claude (Anthropic, Claude Opus 5.5), working almost autonomously at the direction of the project owner (GitHub: bernkastel299792458). Choice of topic: suggested by Codex (OpenAI). External reviews: Codex (OpenAI) and a separate Claude instance. The project owner has not independently verified the mathematics. See "Authorship and AI involvement" below.*
 

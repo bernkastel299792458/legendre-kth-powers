@@ -14,5 +14,6 @@ Read `RESEARCH_PROTOCOL.md` and `AUTHORS.md` before research or publication work
   `MIGRATION.md` for legacy paths and the retained result-specific Lean names.
 - QRH release hashes and script hashes matter: follow the route's
   `REPRODUCING.md` and regenerate `MANIFEST.json` after authorized package edits.
-- AI authors are Claude and Codex, with route leads and actual contributions
-  stated explicitly. Human identity fields remain unfilled unless supplied.
+- Authors are bernkastel299792458 (project owner), Claude and Codex, with route leads and
+  actual contributions stated explicitly. Affiliation and email remain unfilled
+  unless supplied.

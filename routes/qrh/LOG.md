@@ -246,3 +246,14 @@ archival acceptance remain applicable to identical proof sources. This
 publication-only edit does not claim another Lean rebuild. New metadata,
 links, paper bindings, snapshot bytes and release hashes are checked before
 push. See audit/publication_2026-11-06.json for the precise publication scope.
+
+## 2026-11-07 / author list
+
+At the project owner's direction, the author list becomes bernkastel299792458
+(project owner), Codex and Claude. README.md, README.zh-CN.md, AI_USE.md and
+CITATION.cff are updated, and MANIFEST.json is regenerated for those files.
+The paper sources and PDFs (`paper/current/main.tex`, `main.pdf`, and the
+historical `paper/`) are unchanged and still show the earlier AI-only author
+page; rebuilding them needs the LaTeX toolchain. The edit was made by Claude
+from the traditional-route worktree. No mathematical file changed.
+

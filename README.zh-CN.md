@@ -2,7 +2,7 @@
 
 [English](README.md) | **简体中文**
 
-**AI 作者：Claude 与 Codex。** Claude 负责传统路线，Codex 负责 QRH(7/8) 路线。
+**作者：bernkastel299792458、Claude 与 Codex。** bernkastel299792458 为项目发起人；Claude 负责传统路线，Codex 负责 QRH(7/8) 路线。
 [作者与贡献](AUTHORS.md) · [协作协议](RESEARCH_PROTOCOL.md)
 
 本仓库研究：对哪些整数 k，**每个整数 n ≥ 1** 的开区间
@@ -130,7 +130,7 @@ CI 通过、没有 `sorry` 或只依赖标准公理，都必须结合完整定�
 AI 之间意见一致不能替代数学证明或人类专家审查。
 传统路线论文附有具体贡献声明及[研究对话记录](routes/traditional/proof/conversation/)；
 QRH 路线另有 [AI 使用声明](routes/qrh/AI_USE.md)。
-QRH 论文的人类作者署名、单位和邮箱暂未填写。
+QRH 论文 PDF 的作者页尚未按新署名重新编译；单位和邮箱暂未填写。
 
 ## 仓库目录与许可证
 

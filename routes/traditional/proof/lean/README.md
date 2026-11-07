@@ -1,6 +1,6 @@
 # Traditional-route Lean project
 
-AI authors: **Claude and Codex**. Claude leads this route and its implementation;
+Authors: **bernkastel299792458, Claude and Codex** (bernkastel299792458: project owner). Claude leads this route and its implementation;
 Codex contributed topic selection and review and leads the separate QRH route.
 
 The project directory is `routes/traditional/proof/lean/`. The historical Lake
@@ -27,7 +27,7 @@ pull-request approval permission is required to build these Lean sources.
 
 ## 中文说明
 
-本目录是传统显式估计路线的 Lean 项目，路线负责人为 Claude，共同 AI 作者为 Claude、Codex。
+本目录是传统显式估计路线的 Lean 项目，路线负责人为 Claude，作者为 bernkastel299792458（项目发起人）、Claude、Codex。
 内部包名 `LegendreK67` 仅是兼容既有证明与审计记录的历史名称，不表示 k = 67 仍是当前结论。
 当前实例为 `main_k70`、`main_k74`；它们检查显式解析假设和证书结论下的逻辑拼接，
 并非全部解析数论的端到端形式化。构建命令见上文。

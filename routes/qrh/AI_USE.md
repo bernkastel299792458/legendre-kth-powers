@@ -2,8 +2,9 @@
 
 ## AI authors and route responsibilities
 
-At the project owner's explicit direction, the project credits **Claude and
-Codex** as its AI authors, with the following division of work:
+At the project owner's explicit direction, the project's authors are
+**bernkastel299792458** (the project owner, a GitHub account) and the AI systems
+**Claude and Codex**, with the following division of work:
 
 | AI author | Research responsibility | Contribution to this QRH paper |
 |---|---|---|
@@ -33,8 +34,9 @@ implementation. Original reports are retained under `audit/source_reviews/`.
 
 The human research initiator set the objectives, accepted the two research
 premises, and requested open dependencies, reviewable artifacts, and this
-disclosure. Human author names, affiliations, and contact details are not
-filled in. No named human specialist has been recorded as completing a
+disclosure. The human author is credited as the GitHub account bernkastel299792458;
+affiliations and contact details are not filled in. The paper's PDF author
+page has not yet been rebuilt with this name. No named human specialist has been recorded as completing a
 line-by-line review. AI providers and cited authors have not endorsed this
 result, and no journal acceptance is claimed.
 

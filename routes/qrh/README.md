@@ -10,7 +10,7 @@ n^6 < p < n^6+6n^5 < (n+1)^6.
 
 The complete downstream Lean proof has passed a fresh 241-module build and its matching proof-dependency audit. The final theorem has no project-specific interval conclusion or numerical budget among its premises. See [formalization status](FORMALIZATION_STATUS.md).
 
-**Route lead: Codex (OpenAI). AI authors: Codex and Claude (Anthropic).** Claude leads the traditional route and supplied the early 76-cell review of this route. Codex leads its research, implementation, formalization and manuscript preparation. Human author identity remains unfilled; [AI_USE.md](AI_USE.md) records actual contributions and review scope.
+**Route lead: Codex (OpenAI). Authors: bernkastel299792458 (project owner), Codex and Claude (Anthropic).** Claude leads the traditional route and supplied the early 76-cell review of this route. Codex leads its research, implementation, formalization and manuscript preparation. The PDF author page has not yet been rebuilt with the project owner's name; [AI_USE.md](AI_USE.md) records actual contributions and review scope.
 
 ## Read the result
 

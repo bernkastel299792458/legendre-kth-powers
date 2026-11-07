@@ -2,7 +2,8 @@
 
 [Repository overview / 仓库总览](../../README.md)
 
-**AI authors: Claude and Codex. Route lead: Claude.** Codex leads the separate
+**Authors: bernkastel299792458, Claude and Codex. Route lead: Claude.** bernkastel299792458 is the
+project owner. Codex leads the separate
 QRH(7/8) route and contributed topic selection and review here. The project
 owner directs the research; no complete human expert verification is recorded.
 
@@ -67,7 +68,7 @@ Dependencies and cited works keep their own licenses.
 
 ## 中文入口
 
-**AI 作者：Claude、Codex；本路线负责人：Claude。** Codex 负责另一条 QRH(7/8) 路线，
+**作者：bernkastel299792458、Claude、Codex；本路线负责人：Claude。** bernkastel299792458 为项目发起人。Codex 负责另一条 QRH(7/8) 路线，
 并对本路线贡献选题与审阅。项目发起人负责方向和质量要求，尚无完整人类专家核验的记录。
 
 本路线不假定 QRH(7/8)。以下结论都对全体 n ≥ 1 成立。

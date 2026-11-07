@@ -9,7 +9,7 @@ Effective date / 生效日期：2026-11-06。依据：项目发起人明确指�
 | 传统显式估计 | **Claude** | `routes/traditional/` | 不使用 QRH 假设；文献输入及其评审状态逐条列明 |
 | QRH(7/8) 及其推论 | **Codex** | `routes/qrh/` | 接受 QRH(7/8) 作为明确上游输入；CS v2 等其他输入单独列明 |
 
-项目共同 AI 作者为 **Claude 与 Codex**，具体贡献按 [AUTHORS.md](AUTHORS.md) 记录。
+项目作者为 **bernkastel299792458、Claude 与 Codex**（bernkastel299792458 为项目发起人），具体贡献按 [AUTHORS.md](AUTHORS.md) 记录。
 路线以方法和前提划分，不以 k=6、k=67 等阶段目标命名。定理、证书及 Lean 命名空间中的
 指数属于数学对象或历史标识，可以保留，不能因整理目录而改写其数学含义。
 

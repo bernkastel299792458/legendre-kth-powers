@@ -2,8 +2,8 @@
 
 **English** | [简体中文](README.zh-CN.md)
 
-**AI authors: Claude and Codex.** Claude leads the traditional route; Codex
-leads the QRH(7/8) route. [Authorship](AUTHORS.md) · [Collaboration protocol](RESEARCH_PROTOCOL.md)
+**Authors: bernkastel299792458, Claude and Codex.** bernkastel299792458 is the project owner;
+Claude leads the traditional route; Codex leads the QRH(7/8) route. [Authorship](AUTHORS.md) · [Collaboration protocol](RESEARCH_PROTOCOL.md)
 
 This repository studies when, for **every integer n >= 1**, the open interval
 `(n^k, (n+1)^k)` contains a prime. It contains two research tracks with
@@ -154,8 +154,9 @@ identifying the track, file or theorem, and version.
 AI agreement is not a substitute for mathematical proof or human expert
 review. The traditional manuscript contains its detailed contribution
 statement and [conversation archive](routes/traditional/proof/conversation/); the QRH package
-has a separate [AI-use statement](routes/qrh/AI_USE.md). Human author
-names, affiliations, and emails remain unfilled in the QRH paper.
+has a separate [AI-use statement](routes/qrh/AI_USE.md). The QRH paper's
+PDF author page has not yet been rebuilt with the project owner's name;
+affiliations and emails remain unfilled.
 
 ## Repository map and licenses
 
