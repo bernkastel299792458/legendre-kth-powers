@@ -25,6 +25,12 @@ The human project owner sets objectives, assigns responsibilities, requests
 audits, and decides publication scope. The owner has not independently
 verified the mathematics. AI cross-checking is not human expert peer review.
 
+**Commit attribution.** New commits are authored by
+[@bernkastel299792458](https://github.com/bernkastel299792458) and carry
+`Co-authored-by` trailers for [@codex](https://github.com/codex) and
+[@claude](https://github.com/claude), so GitHub shows all three authors.
+Earlier commits keep their original author records.
+
 ## 中文说明
 
 项目按用户指定署名 **bernkastel299792458、Claude 与 Codex**，并按研究路线列明职责：
@@ -40,6 +46,10 @@ Claude 与 Codex 是 AI 系统署名，不冒充人类作者，也不表示 Open
 
 项目发起人负责目标、分工、质量要求和发布决策，没有独立核验数学内容。
 各路线仍须明确数学前提、证明范围、计算证据及未完成的形式化义务。
+
+**提交署名：** 新提交以 [@bernkastel299792458](https://github.com/bernkastel299792458) 为作者，
+并用 `Co-authored-by` 标注 [@codex](https://github.com/codex) 与 [@claude](https://github.com/claude)，
+GitHub 上会同时显示三者。较早的提交保留原有作者记录。
 
 详细记录：[传统论文的贡献声明](routes/traditional/proof/manuscript.md)、
 [QRH 的 AI 使用声明](routes/qrh/AI_USE.md)、[协作协议](RESEARCH_PROTOCOL.md)。
