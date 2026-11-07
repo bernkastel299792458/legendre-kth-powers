@@ -17,3 +17,11 @@ Read `RESEARCH_PROTOCOL.md` and `AUTHORS.md` before research or publication work
 - Authors are bernkastel299792458 (project owner), Claude and Codex, with route leads and
   actual contributions stated explicitly. Affiliation and email remain unfilled
   unless supplied.
+- On 2026-11-07 the commits of `main` from `b1d00a8` onward were re-authored as
+  `bernkastel299792458` and force-pushed; trees are unchanged (old-to-new table
+  in `MIGRATION.md`). Local branches in the shared repository were rewritten in
+  place. Commit with the repository identity `bernkastel299792458`
+  (`202755654+bernkastel299792458@users.noreply.github.com`), and add
+  `Co-authored-by` trailers for `Codex <267193182+codex@users.noreply.github.com>`
+  and/or `Claude <noreply@anthropic.com>` as appropriate.
+
