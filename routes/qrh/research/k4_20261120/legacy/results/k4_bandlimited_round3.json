@@ -1,0 +1,178 @@
+{
+  "schema": "k4-gaussian-bandlimited-minorant-round3-v1",
+  "status": "PASS: scalar premises for the documented continuous-interval argument",
+  "statement": "For every real x with 109.46<=log(x)<=112.5, (x,x+4*x^(3/4)) contains a prime, subject to the named classical/literature inputs and the accompanying analytic proof.",
+  "scope": "New local segment only; this certificate makes no claim for log(x)>112.5 and is not an end-to-end formalization.",
+  "precision_bits": 256,
+  "python_flint": "0.9.0",
+  "exact_parameters": {
+    "L_min": "5473/50",
+    "L_max": "225/2",
+    "r": "9/10",
+    "eta": "1",
+    "H": "3000000000000",
+    "clearance_used": "64",
+    "off_line_bound_used": "1/2",
+    "n_min_inclusive": "766422943599",
+    "n_max_inclusive": "1638823955138"
+  },
+  "auxiliary_balls": {
+    "d_at_L_min": "[2.609525219333355838307468328093293986592160291175974646e-12 +/- 2.78e-67]",
+    "d_at_L_max": "[1.220387335519575528979991038672898090848356549168492331e-12 +/- 2.50e-67]",
+    "c_at_L_min": "[109.4600000000026095252193333558383074683280932939865922 +/- 3.98e-53]",
+    "c_at_L_max": "[112.5000000000012203873355195755289799910386728980908484 +/- 4.35e-53]",
+    "K_max": "[2949883119253.538400482250823833922753832161849266157577 +/- 3.06e-43]",
+    "H_minus_K_max": "[50116880746.46159951774917616607724616783815073384242331 +/- 4.25e-45]",
+    "mass_coefficient": "[0.1723781977278350199430805697272703914511478408436272055 +/- 4.05e-56]",
+    "absolute_mass_coefficient": "[4.481833140923710518520094812909030177729843861934307344 +/- 5.21e-56]",
+    "spectral_L1_upper": "[11.45453123901463707521770385837711751192877402405902781 +/- 1.84e-54]"
+  },
+  "uniform_budget_balls": {
+    "pole_lower": "[123571131220.8359269137173493343148892002423124258038678 +/- 1.99e-44]",
+    "low_zeros_upper": "[2016.037085442557819967761272075031801818591547313394963 +/- 4.03e-52]",
+    "high_zeros_upper": "[1.594767404087137882577954747206731077418084458667232566e-395 +/- 3.19e-450]",
+    "archimedean_absolute_upper": "[67.16311301882980081438374432670555922834027813492364428 +/- 3.51e-54]",
+    "positive_prime_powers_upper": "[9129.554555650142433599667639466159284638597160645922059 +/- 9.15e-53]",
+    "all_costs_upper": "[11212.75475411153005438181265586789664568552898609424067 +/- 3.41e-51]",
+    "positive_margin_lower": "[123571120008.0811728021872949525022333323456667402748817 +/- 1.42e-44]",
+    "relative_cost_upper": "[9.073927416002236264856516489801222679760401080693417172e-8 +/- 1.25e-63]"
+  },
+  "scale_diagnostics": {
+    "Selberg_bandwidth_H_times_log_interval_equal_2pi_L": "[113.1122027972246233493350027308936318632106438685551207 +/- 9.13e-54]",
+    "meaning": "Positive mass of a genuinely bandlimited interval minorant requires H*ell>2*pi under the stated Poisson summation hypotheses; this is not an impossibility theorem for all regularized kernels.",
+    "H_times_half_width_at_L_120": "[0.5614573781303053981657976013795009366661789263484895071 +/- 4.05e-56]"
+  },
+  "structural_model_diagnostic": {
+    "L": "120",
+    "beta_right": "8749/10000",
+    "positive_right_count": "100000000",
+    "height_width": "100000000",
+    "unregularized_transform_at_H": "[1.672918510003875568384118329793880441111480647971456103e-13 +/- 5.10e-69]",
+    "global_spectral_Lipschitz_upper": "[1.081759272954506716316995403365339501280741856916645384e-25 +/- 9.58e-81]",
+    "complex_move_error_upper": "[1.264287108080213790840019799338228431144656154570741090e-25 +/- 3.47e-80]",
+    "transform_real_lower_over_window": "[1.672810334075315830604406416462703887362014345354619782e-13 +/- 2.57e-68]",
+    "pole_upper": "[95789991878221.38662953656975799132526824707547016046605 +/- 3.32e-42]",
+    "normalized_quartet_batch_lower": "[12.05581885458389423724145971059640994365995665782743217 +/- 3.74e-54]",
+    "scope": "Extends the existing model diagnostic to this specific noncompact regularized minorant family at r=9/10. Does not exclude other minorants or use the model as actual zeta data."
+  },
+  "checks": {
+    "positive_interval_width": {
+      "expression_ball": "[3.040000000000000000000000000000000000000000000000000000 +/- 1e-59]",
+      "passed": true,
+      "reason": "Exact closed L interval."
+    },
+    "positive_minorant_mass": {
+      "expression_ball": "[0.1723781977278350199430805697272703914511478408436272055 +/- 4.05e-56]",
+      "passed": true,
+      "reason": "Equivalent to r^2>3/4; exact r=9/10."
+    },
+    "decreasing_d": {
+      "expression_ball": "[1.389137883813780309327477289420395895743803742007482316e-12 +/- 4.73e-67]",
+      "passed": true,
+      "reason": "d'(L)=-epsilon/[8(1+epsilon)]<0."
+    },
+    "increasing_c": {
+      "expression_ball": "[3.039999999998610862116186219690672522710579604104256196 +/- 2.59e-55]",
+      "passed": true,
+      "reason": "c'(L)=1+d'(L)>7/8."
+    },
+    "center_outside_negative_reflection": {
+      "expression_ball": "[109.4600000000000000000000000000000000000000000000000000 +/- 3e-57]",
+      "passed": true,
+      "reason": "For u>=0, u+c>d; the reflected prime weight is nonpositive."
+    },
+    "spectral_support_below_verified_RH_by_64": {
+      "expression_ball": "[50116880682.46159951774917616607724616783815073384242331 +/- 4.25e-45]",
+      "passed": true,
+      "reason": "K increases with L; whole support has at least 64 height clearance."
+    },
+    "gaussian_pole_lower_positive": {
+      "expression_ball": "[2.103681694267391285770297782394155139478763917884379791e-13 +/- 1.22e-68]",
+      "passed": true,
+      "reason": "exp(-v^2)cosh(v/2)<=1 and its loss inside |v|<d is at most 2d^3."
+    },
+    "counting_relaxation": {
+      "expression_ball": "[1499999999996.957000000000000000000000000000000000000000 +/- 3e-47]",
+      "passed": true,
+      "reason": "Rosser implies N(T)<(T/2+3.043)log(T)<Tlog(T), T>=H."
+    },
+    "H_above_e": {
+      "expression_ball": "[27.72963340459665789961114269313489619586070842136802516 +/- 4.14e-54]",
+      "passed": true,
+      "reason": "log(T)<=T used only for T>=H."
+    },
+    "high_tail_below_1e_minus_300": {
+      "expression_ball": "[1.000000000000000000000000000000000000000000000000000000e-300 +/- 3e-359]",
+      "passed": true,
+      "reason": "Analytic Stieltjes tail includes every positive-height zero above H."
+    },
+    "prime_extraction_margin": {
+      "expression_ball": "[123571120008.0811728021872949525022333323456667402748817 +/- 1.42e-44]",
+      "passed": true,
+      "reason": "S>=pole-low-high-|arch|>positive prime-power contribution."
+    },
+    "total_relative_error_below_1e_minus_6": {
+      "expression_ball": "[9.092607258399776373514348351019877732023959891930658283e-7 +/- 2.13e-62]",
+      "passed": true,
+      "reason": "Convenient strict rational envelope, not an optimal bound."
+    },
+    "integer_min_in_interval": {
+      "expression_ball": "[5.031472962378633233418049232863554515775461912229235241e-12 +/- 2.68e-68]",
+      "passed": true,
+      "reason": "Checks the lower included integer independently of the exp floor."
+    },
+    "preceding_integer_below_interval": {
+      "expression_ball": "[1.875774762985376200798918010467149060682969566461095613e-13 +/- 3.70e-69]",
+      "passed": true,
+      "reason": "Checks that the preceding integer lies strictly below the segment."
+    },
+    "integer_max_in_interval": {
+      "expression_ball": "[2.086049406111867692855914538802381702383412877478528213e-12 +/- 2.53e-67]",
+      "passed": true,
+      "reason": "Checks the upper included integer independently of the exp floor."
+    },
+    "following_integer_above_interval": {
+      "expression_ball": "[3.547252649307902771153579370573471240099594179647489732e-13 +/- 1.07e-68]",
+      "passed": true,
+      "reason": "Checks that the following integer lies strictly above the segment."
+    },
+    "model_B_spline_inner_piece": {
+      "expression_ball": "[1.238542621869694601834202398620499063333821073651510493 +/- 5.97e-56]",
+      "passed": true,
+      "reason": "At L=120, H is in the |t|<2a piece used to evaluate h0(H)."
+    },
+    "model_complex_transform_real_positive": {
+      "expression_ball": "[1.672810334075315830604406416462703887362014345354619782e-13 +/- 2.57e-68]",
+      "passed": true,
+      "reason": "Uniform over H<gamma<H+1e8 and |beta-1/2|=0.3749."
+    },
+    "model_batch_ratio_above_twelve": {
+      "expression_ball": "[0.05581885458389423724145971059640994365995665782743217374 +/- 5.00e-57]",
+      "passed": true,
+      "reason": "Admissible model quartets force this particular kernel's absolute-value budget above 12; not a statement about actual zeta zeros."
+    }
+  },
+  "sources": [
+    {
+      "url": "https://arxiv.org/pdf/1708.04122v2",
+      "location": "Lemma 6, p.17",
+      "use": "Guinand-Weil formula; angular Fourier normalization rederived in the document."
+    },
+    {
+      "url": "https://arxiv.org/pdf/2004.09765v1",
+      "location": "Theorem 1",
+      "use": "RH verified beyond H=3e12."
+    },
+    {
+      "url": "https://arxiv.org/html/2204.02588v3",
+      "location": "Lemma 2.1, Remark 2.2",
+      "use": "Classical Rosser total count constants only; no FKS density estimate."
+    }
+  ],
+  "QRH_assumption_used": false,
+  "CS_density_assumption_used": false,
+  "literature_inputs_independently_reproved": false,
+  "script_sha256": "924c95379de0cafd32a086372e6ef53f319680952ac0ffd19e8b995b4ecc7f62",
+  "proof_document": "research/K4_BANDLIMITED_ROUND3.md",
+  "proof_sha256": "0f52d2524623af5b6103768f38d4d6ecce2a568e91004f1ee9bed2d098850453"
+}

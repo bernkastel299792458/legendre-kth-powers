@@ -9,9 +9,18 @@
 `(n^k, (n+1)^k)` 中都存在素数。项目包含两条研究路线，分别采用不同的数学前提，
 各有自己的审查包和验证记录。
 
-**状态（2026-11-06）：** 公开审查稿，研究工作主要由 AI 系统完成。
-两条路线均尚无完整人类专家审阅记录。QRH 路线的全范围后续推导已由七项明确输入连接成
-Lean 定理，241 个模块的全新目录重建及对应依赖审计全部通过；传统路线的验证范围见下文。
+## 路线 A 的四次幂结果 · 2026-11-21
+
+我们提出了一份以 QRH(7/8) 为前提的计算机辅助证明稿，主张在所需辅助解析估计成立时，对每个正整数 $n$ 都存在素数 $p$ 满足
+
+$$
+n^4 < p < n^4+4n^3 < (n+1)^4.
+$$
+
+小端由 44,721 个素数见证和九条已发表的区间估计覆盖。令 $L=4\log n$，中间的 682 个闭格与 $L\ge167.8$ 的无穷尾接合。此前最难的 $116\le L\le120$ 使用旋转检测多项式保留零点的余弦相位，40 格的完整误差上界均低于 0.974019，判据要求小于 1。数值证书已从冻结副本重放。
+
+
+[证明与完整假设](routes/qrh/research/k4_20261120/PROOF_K4.md) · [逐格重放记录](routes/qrh/research/k4_20261120/REPLAY_K4.txt) · [核验程序](routes/qrh/research/k4_20261120/verify_k4.py) · [输入表重建](routes/qrh/research/k4_20261120/INPUTS_K4.md)
 
 ## 成果总览
 
@@ -19,13 +28,14 @@ Lean 定理，241 个模块的全新目录重建及对应依赖审计全部通�
 
 | 研究路线 | 当前报告的成果 | 主要前提 | 审查入口 |
 |---|---|---|---|
-| **B. 假定 QRH(7/8) 成立的路线** | 固定指数 **k = 6** | **七项明确输入**，包括 QRH(7/8)、CS **arXiv:2507.15184v2** 推论 1 及指定表格行；见[完整陈述](routes/qrh/documentation/inputs.md) | [QRH 路线审查包](routes/qrh/README.md) · [中文论文 PDF](routes/qrh/paper/current/main.pdf) |
-| A. 传统显式估计路线 | 所有整数 k ≥ 37（v5，进行中） | 经评审的文献输入，加上本项目自己的引理（只经过 AI 审阅）；不假定 QRH。Arb 证书链，尚无合并的 v5 论文。早先 v4 的 k ≥ 70 / 74 目前不成立 | [传统路线入口](routes/traditional/README.md) |
+| **A. QRH(7/8)** | **k = 4** | 以 QRH(7/8) 为前提的证明稿，辅助输入清单和部分误差论证待修订 | [四次幂证明](routes/qrh/research/k4_20261120/PROOF_K4.md) |
+| **A. 假定 QRH(7/8) 成立的路线** | 固定指数 **k = 6** | **七项明确输入**，包括 QRH(7/8)、CS **arXiv:2507.15184v2** 推论 1 及指定表格行；见[完整陈述](routes/qrh/documentation/inputs.md) | [QRH 路线审查包](routes/qrh/README.md) · [中文论文 PDF](routes/qrh/paper/current/main.pdf) |
+| B. 传统显式估计路线 | 所有整数 k ≥ 37（v5，进行中） | 经评审的文献输入，加上本项目自己的引理（只经过 AI 审阅）；不假定 QRH。Arb 证书链，尚无合并的 v5 论文。早先 v4 的 k ≥ 70 / 74 目前不成立 | [传统路线入口](routes/traditional/README.md) |
 
 “仅用经评审文献输入”描述的是所用文献的状态，不表示本项目的新证明已经通过同行评审。
 两条路线的数学前提不同，比较指数时必须同时说明这些前提。
 
-## 路线 B：假定 QRH(7/8) 成立
+## 路线 A：假定 QRH(7/8) 成立
 
 本路线以 [OpenAI 官方 quasi-RH 发布](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/README.md)
 为研究起点，将其中 ζ 非平凡零点的 7/8 实部界作为明确输入。
@@ -46,10 +56,10 @@ CS v2 仍是预印本依赖，全部七项仍明确保留在最终 Lean 定理�
 论文完整讲解最终采用的梯形权与连续平移证明；原多项式稿件及证书保留为历史版本。
 旧稿的 CS 系数 6% 灵敏度结果保留原适用范围。
 
-当前全范围结论为 k=6；k=4 和 k=3 分别仍是阶段目标与长期目标。
+六次幂定理已有从七项输入出发的下游 Lean 证明。QRH 路线的下一研究目标是三次幂。
 [数学审查入口](routes/qrh/REVIEW_THIS_RELEASE.md)汇总完整 k=6 论文、前提、Lean 源码与核验记录。
 
-## 路线 A：传统显式估计
+## 路线 B：传统显式估计
 
 ### 结论与方法
 
@@ -86,6 +96,13 @@ Lean 项目保留的历史名称 `LegendreK67` 不代表当前仍声称证明了
 
 ## 阅读、复现与审查
 
+四次幂证明的完整重放命令如下。环境版本见[证明稿](routes/qrh/research/k4_20261120/PROOF_K4.md)。
+
+```sh
+python -B -X utf8 routes/qrh/research/k4_20261120/verify_k4.py
+```
+
+
 | 目的 | 传统路线 | QRH 路线 |
 |---|---|---|
 | 阅读论证 | [英文论文](routes/traditional/proof/manuscript.md) | [当前论文](routes/qrh/paper/current/main.pdf) · [证明导读](routes/qrh/documentation/blueprint/README.md) |
@@ -101,7 +118,7 @@ python -m pip install -r routes/traditional/proof/code/requirements.txt
 python routes/traditional/proof/code/verify_all.py
 ```
 
-**QRH 路线数值重放**，使用 **Python 3.12.10**，从仓库根目录运行。
+**六次幂数值重放**，使用 **Python 3.12.10**，从仓库根目录运行。
 冻结的尾部检查器会比较包含 Python 补丁版本在内的元数据。
 
 ```sh

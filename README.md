@@ -10,11 +10,18 @@ This repository studies when, for **every integer n >= 1**, the open interval
 different mathematical premises, separate review packages, and separate
 verification records.
 
-**Status — 2026-11-06:** public review drafts, produced largely by AI systems.
-Neither track has a recorded complete human expert review. The QRH track
-has completed its full downstream Lean proof from seven named inputs: all
-241 modules passed an isolated rebuild and the matching dependency audit. The
-traditional track retains the verification scope stated below.
+## Track A result for fourth powers · 2026-11-21
+
+We present a proposed computer-assisted proof for consecutive fourth powers under QRH(7/8) and auxiliary analytic estimates. The claim is that for every positive integer $n$ there exists a prime $p$ satisfying
+
+$$
+n^4 < p < n^4+4n^3 < (n+1)^4.
+$$
+
+The lower range uses 44,721 prime witnesses and nine published interval bounds. With $L=4\log n$, 682 closed cells join this range to the infinite tail beginning at $L=167.8$. In the former gap $116\le L\le120$, rotating the detector retains the cosine phase of the zeta zeros. All 40 cells have total error below 0.974019, against a threshold of 1. The numerical certificate was replayed from a frozen copy.
+
+
+[Proof and hypotheses](routes/qrh/research/k4_20261120/PROOF_K4.md) · [Cell-by-cell replay](routes/qrh/research/k4_20261120/REPLAY_K4.txt) · [Verifier](routes/qrh/research/k4_20261120/verify_k4.py) · [Rebuilding the inputs](routes/qrh/research/k4_20261120/INPUTS_K4.md)
 
 ## Results at a glance
 
@@ -23,15 +30,16 @@ and the new arguments in its manuscript.
 
 | Research track | Reported result | Main premises | Review package |
 |---|---|---|---|
-| **B. Assuming QRH(7/8)** | Fixed exponent **k = 6** | **Seven named inputs**, including QRH(7/8), CS **arXiv:2507.15184v2** Corollary 1 and its specified rows; [complete statements](routes/qrh/documentation/inputs.md). | [QRH route package](routes/qrh/README.md) · [Chinese paper, PDF](routes/qrh/paper/current/main.pdf) |
-| A. Traditional explicit estimates | Every integer k >= 37 (v5, in progress) | Refereed literature inputs plus the project's own lemmas, which have had AI review only. No QRH assumption. Arb certificate chain; no consolidated v5 manuscript yet. The earlier v4 claim (k >= 70 / 74) is not supported. | [Traditional route](routes/traditional/README.md) |
+| **A. QRH(7/8)** | **k = 4** | Proposed proof under QRH(7/8); auxiliary inputs and error arguments under revision | [Fourth-power proof](routes/qrh/research/k4_20261120/PROOF_K4.md) |
+| **A. Assuming QRH(7/8)** | Fixed exponent **k = 6** | **Seven named inputs**, including QRH(7/8), CS **arXiv:2507.15184v2** Corollary 1 and its specified rows; [complete statements](routes/qrh/documentation/inputs.md). | [QRH route package](routes/qrh/README.md) · [Chinese paper, PDF](routes/qrh/paper/current/main.pdf) |
+| B. Traditional explicit estimates | Every integer k >= 37 (v5, in progress) | Refereed literature inputs plus the project's own lemmas, which have had AI review only. No QRH assumption. Arb certificate chain; no consolidated v5 manuscript yet. The earlier v4 claim (k >= 70 / 74) is not supported. | [Traditional route](routes/traditional/README.md) |
 
 “Refereed-input” describes the sources used by that variant; it does not mean
 that this project's new proof has been peer-reviewed. The two tracks answer
 the question under different premises, so their exponents should be read
 with those premises attached.
 
-## Track B — assuming QRH(7/8)
+## Track A — assuming QRH(7/8)
 
 This route accepts the zeta bound in [OpenAI's official quasi-RH release](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/preprints/The-Quasi-Riemann-Hypothesis-September-30-2026/README.md)
 as an explicit research premise. [Family 003](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/003.md)
@@ -55,11 +63,11 @@ The paper explains the actual final trapezoid proof and continuous propagation;
 the original polynomial-weight paper and its certificates remain historical.
 The old 6% CS-coefficient sensitivity result retains its original scope.
 
-The full-range result is k=6; k=4 and k=3 remain the stage and long-term targets.
+The k=6 result has a downstream Lean proof from its seven named inputs. The next research target on the QRH route is k=3.
 The [review entry point](routes/qrh/REVIEW_THIS_RELEASE.md) links the complete
 k=6 paper, assumptions, Lean sources and verification records.
 
-## Track A — traditional explicit estimates
+## Track B — traditional explicit estimates
 
 ### Result and method
 
@@ -107,6 +115,13 @@ The historical Lean package name `LegendreK67` is not a current k = 67 claim.
 
 ## Read, reproduce, and review
 
+To replay the fourth-power certificate, use the versions specified in the [manuscript](routes/qrh/research/k4_20261120/PROOF_K4.md) and run
+
+```sh
+python -B -X utf8 routes/qrh/research/k4_20261120/verify_k4.py
+```
+
+
 | Purpose | Traditional track | QRH track |
 |---|---|---|
 | Read the argument | [English manuscript](routes/traditional/proof/manuscript.md) | [Current paper](routes/qrh/paper/current/main.pdf) · [Proof guide](routes/qrh/documentation/blueprint/README.md) |
@@ -122,7 +137,7 @@ python -m pip install -r routes/traditional/proof/code/requirements.txt
 python routes/traditional/proof/code/verify_all.py
 ```
 
-For the **QRH numerical replay**, use **Python 3.12.10** and run from the
+For the **Sixth-power numerical replay**, use **Python 3.12.10** and run from the
 repository root. The frozen tail checker includes the Python patch version
 in its metadata comparison.
 

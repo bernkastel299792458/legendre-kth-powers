@@ -1,5 +1,7 @@
 # QRH(7/8): primes between consecutive sixth powers
 
+**Fourth powers.** The new [conditional proof draft for every positive integer](research/k4_20261120/PROOF_K4.md) includes a [numerical replay](research/k4_20261120/REPLAY_K4.txt). The Lean theorem documented below concerns sixth powers.
+
 [中文版](README.zh-CN.md) · [Mathematical review guide](REVIEW_THIS_RELEASE.md)
 
 Assuming the seven precise inputs listed below, **every integer n ≥ 1** has a prime

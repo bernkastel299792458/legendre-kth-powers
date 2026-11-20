@@ -1,0 +1,2 @@
+# These byte-for-byte historical certificates use CRLF and have published hashes.
+*.json -text

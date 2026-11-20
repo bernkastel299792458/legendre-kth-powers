@@ -1,5 +1,7 @@
 # QRH(7/8) 路线：相邻六次幂之间的素数
 
+**四次幂。** 新的[条件性证明稿](research/k4_20261120/PROOF_K4.md)覆盖全部正整数，并附有[数值重放记录](research/k4_20261120/REPLAY_K4.txt)。下文的 Lean 定理适用于六次幂。
+
 [English](README.md) · [数学审查入口](REVIEW_THIS_RELEASE.md)
 
 在下述七项明确输入成立时，对每个整数 **n ≥ 1**，存在素数
