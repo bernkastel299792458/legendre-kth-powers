@@ -44,6 +44,14 @@ This route accepts the zeta bound in [OpenAI's official quasi-RH release](https:
 as an explicit research premise. [Family 003](https://github.com/openai/math/blob/4eaee87548250b2682affda7d05d947c05554bae/lean/docs/003.md)
 describes the upstream formalization; this project studies its prime-interval consequences.
 
+### Fourth powers · Current conditional proof draft
+
+The manuscript seeks a prime in $(n^4,n^4+4n^3)$ for every positive integer $n$. This interval lies between consecutive fourth powers. QRH(7/8) bounds the real parts of the nontrivial zeta zeros. The argument also needs explicit bounds on the contributions of zeros and higher prime powers in the explicit formula.
+
+Write $L=4\log n$. Prime witnesses and published interval estimates cover the lower range. A chain of 682 closed intervals connects it to the infinite tail starting at $L=167.8$. In the former gap $116\le L\le120$, the calculation retains the cosine phase of the zero terms. All 40 cells have a total error bound below 0.974019, meeting the criterion of less than 1. The numerical certificate has been replayed. The full conditional conclusion still depends on justifying the ranges of the auxiliary analytic estimates and the error bounds. [Fourth-power manuscript](routes/qrh/research/k4_20261120/PROOF_K4.md) · [Cell-by-cell computations](routes/qrh/research/k4_20261120/REPLAY_K4.txt)
+
+### Sixth powers · Lean theorem from seven named inputs
+
 Under **seven precise inputs** — QRH(7/8), CS v2, Rosser, the integrated explicit
 formula, finite-height RH, CHJII and CHL — every integer n≥1 has a prime
 `n^6 < p < n^6+6n^5 < (n+1)^6`. The [input register](routes/qrh/documentation/inputs.md)
@@ -62,7 +70,7 @@ The paper explains the actual final trapezoid proof and continuous propagation;
 the original polynomial-weight paper and its certificates remain historical.
 The old 6% CS-coefficient sensitivity result retains its original scope.
 
-The k=6 result has a downstream Lean proof from its seven named inputs. The next research target on the QRH route is k=3.
+The next research target on this route is k=3.
 The [review entry point](routes/qrh/REVIEW_THIS_RELEASE.md) links the complete
 k=6 paper, assumptions, Lean sources and verification records.
 
