@@ -23,7 +23,9 @@ $$
 
 ## 经典 RH 动态与三次幂推论
 
-本项目跟踪 Levent Alpöge 与 Claude 发布的 Lean 形式化及其独立内核核验。**当经典 RH 成立时，对每个正整数 $n$，相邻立方 $n^3$ 与 $(n+1)^3$ 之间都存在素数。** 这一推论来自 Dudek 的显式短区间定理，小整数情形可逐项验证。[原始公告、核验日志与完整推导](docs/rh-tracking.md)
+本项目跟踪 Levent Alpöge 与 Claude 合作提出的黎曼猜想证明，以及他们将这一论证推广到狄利克雷 $L$ 函数的工作。截至 2026 年 11 月 21 日，两个独立实现的证明检查器均已接受他们公开的完整 Lean 形式化证明。[作者公告](https://alpo.ge/remark.pdf) · [Lean 证明源码（镜像）](https://github.com/jsmorph/rh/tree/main/lean) · [独立核验记录](https://math.mit.edu/~drew/grh/)
+
+**当经典 RH 成立时，对每个正整数 $n$，相邻立方 $n^3$ 与 $(n+1)^3$ 之间都存在素数。** 这一推论来自 Dudek 的显式短区间定理，小整数情形可逐项验证。[原始公告、核验日志与完整推导](docs/rh-tracking.md)
 
 ## 成果总览
 

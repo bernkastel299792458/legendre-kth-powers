@@ -24,7 +24,9 @@ The lower range uses 44,721 prime witnesses and nine published interval bounds. 
 
 ## Tracking classical RH · Consequence for cubes
 
-We are tracking Levent Alpöge’s Lean formalization with Claude and the independent kernel checks. **Under classical RH, every positive integer $n$ has a prime strictly between $n^3$ and $(n+1)^3$.** This follows from Dudek’s explicit short-interval theorem, with the small cases checked directly. [Announcement, verification logs and full deduction](docs/rh-tracking.md)
+We are following Levent Alpöge’s work with Claude on a proposed proof of the Riemann hypothesis and its extension to Dirichlet $L$-functions. As of 21 November 2026, two independently implemented proof checkers have accepted the complete Lean formalization of their proof. [Author’s announcement](https://alpo.ge/remark.pdf) · [Lean proof source (mirror)](https://github.com/jsmorph/rh/tree/main/lean) · [Independent verification](https://math.mit.edu/~drew/grh/)
+
+**Under classical RH, every positive integer $n$ has a prime strictly between $n^3$ and $(n+1)^3$.** This follows from Dudek’s explicit short-interval theorem, with the small cases checked directly. [Announcement, verification logs and full deduction](docs/rh-tracking.md)
 
 ## Results at a glance
 
