@@ -22,6 +22,10 @@ The lower range uses 44,721 prime witnesses and nine published interval bounds. 
 
 [Proof and hypotheses](routes/qrh/research/k4_20261120/PROOF_K4.md) · [Cell-by-cell replay](routes/qrh/research/k4_20261120/REPLAY_K4.txt) · [Verifier](routes/qrh/research/k4_20261120/verify_k4.py) · [Rebuilding the inputs](routes/qrh/research/k4_20261120/INPUTS_K4.md)
 
+## Tracking classical RH · Consequence for cubes
+
+We are tracking Levent Alpöge’s Lean formalization with Claude and the independent kernel checks. **Under classical RH, every positive integer $n$ has a prime strictly between $n^3$ and $(n+1)^3$.** This follows from Dudek’s explicit short-interval theorem, with the small cases checked directly. [Announcement, verification logs and full deduction](docs/rh-tracking.md)
+
 ## Results at a glance
 
 Every row below concerns **all positive integers n**, under the stated inputs
@@ -70,7 +74,6 @@ The paper explains the actual final trapezoid proof and continuous propagation;
 the original polynomial-weight paper and its certificates remain historical.
 The old 6% CS-coefficient sensitivity result retains its original scope.
 
-The next research target on this route is k=3.
 The [review entry point](routes/qrh/REVIEW_THIS_RELEASE.md) links the complete
 k=6 paper, assumptions, Lean sources and verification records.
 

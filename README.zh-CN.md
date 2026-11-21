@@ -21,6 +21,10 @@ $$
 
 [四次幂证明稿与假设](routes/qrh/research/k4_20261120/PROOF_K4.md) · [逐格重放记录](routes/qrh/research/k4_20261120/REPLAY_K4.txt) · [核验程序](routes/qrh/research/k4_20261120/verify_k4.py) · [输入表重建](routes/qrh/research/k4_20261120/INPUTS_K4.md)
 
+## 经典 RH 动态与三次幂推论
+
+本项目跟踪 Levent Alpöge 与 Claude 发布的 Lean 形式化及其独立内核核验。**当经典 RH 成立时，对每个正整数 $n$，相邻立方 $n^3$ 与 $(n+1)^3$ 之间都存在素数。** 这一推论来自 Dudek 的显式短区间定理，小整数情形可逐项验证。[原始公告、核验日志与完整推导](docs/rh-tracking.md)
+
 ## 成果总览
 
 下表每项结论均覆盖**所有正整数 n**，并以对应文献输入和本项目稿件中的新论证为基础。
@@ -63,7 +67,6 @@ CS v2 仍是预印本依赖，全部七项仍明确保留在最终 Lean 定理�
 论文完整讲解最终采用的梯形权与连续平移证明；原多项式稿件及证书保留为历史版本。
 旧稿的 CS 系数 6% 灵敏度结果保留原适用范围。
 
-路线 A 后续将研究三次幂。
 [数学审查入口](routes/qrh/REVIEW_THIS_RELEASE.md)汇总完整 k=6 论文、前提、Lean 源码与核验记录。
 
 ## 路线 B：传统显式估计
